@@ -29,5 +29,5 @@ game.scene.add('menu', MainMenuScene)
 
 
 // start title
-//game.scene.start('preloader');
-game.scene.start('menu');
+game.scene.start('preloader');
+//game.scene.start('menu');

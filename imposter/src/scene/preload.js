@@ -56,6 +56,10 @@ class Preloader extends Phaser.Scene {
         this.load.image('logo', logo);
         this.load.audio('audio', audio)
 
+
+
+
+
         for (var i = 0; i < 100; i++) {
             this.load.image('logo_' + i, logo);
         }
@@ -86,9 +90,9 @@ class Preloader extends Phaser.Scene {
         // var background = this.add.tilemap(500, 280, 'background');
 
         var welcomeText = this.make.text({
-            x: width / 2 - 80,
+            x: width / 2 - 180,
             y: height / 2 + 40,
-            text: 'Welcome Imposter',
+            text: 'Welcome Imposter & click to start',
             style: {
                 font: '20px monospace',
                 fill: '#ffffff'
@@ -101,28 +105,22 @@ class Preloader extends Phaser.Scene {
 
         var sprite = this.add.image(500, 280, 'logo').setAlpha(0);
 
+        //chạy intro logo
         var intro = this.tweens.add({
             targets: [sprite, welcomeText],
             alphaTopLeft: { value: 1, duration: 5000, ease: 'Power1' },
             alphaBottomRight: { value: 1, duration: 5000, ease: 'Power1' },
-            onComplete: function () {
-                console.log('menu');
-                this.game.scene.add('menu');
-            }
+            // onComplete: function () {
+            //     console.log('menu');
+            //     // this.run();
+            //     this.load.sc
+            // }
         });
-
-
-
-
-
+        this.input.on('pointerdown', () => this.scene.start('menu', MainMenuScene))
 
     }
-    update() {
-
-        //this.scene.start('menu', MainMenuScene);
 
 
-    }
 
 
 
