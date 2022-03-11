@@ -47,10 +47,7 @@ export default class MainMenuScene extends Phaser.Scene {
         // this.sound.play('audio', { loop: true })
 
 
-        var hoverSprite = new Phaser.GameObjects.Sprite(this, 100, 100, cat)
 
-        hoverSprite.setScale(2);
-        hoverSprite.setVisible(false);
 
         //create audio, disable pauseonblur
 
@@ -71,37 +68,28 @@ export default class MainMenuScene extends Phaser.Scene {
         playButton.setInteractive({ useHandCursor: true });
 
         playButton.on("pointerover", () => {
-            hoverSprite.setVisible(true);
-
-            hoverSprite.x = playButton.x - playButton.width;
-            hoverSprite.y = playButton.y;
-
+            //đổi màu chữ
+            playButton.setTintFill('#00FF00')
         })
+
+
 
         playButton.on("pointerout", () => {
-            hoverSprite.setVisible(false);
-        })
-
-        playButton.on("pointerup", () => {
             // this.scene.start(play);
+            playButton.clearTint()
         })
 
         optionsButton.setInteractive({ useHandCursor: true });
 
         optionsButton.on("pointerover", () => {
-            hoverSprite.setVisible(true);
-            hoverSprite.play("walk");
-            hoverSprite.x = optionsButton.x - optionsButton.width;
-            hoverSprite.y = optionsButton.y;
-
+            optionsButton.setTintFill('#00FF00')
         })
+
+
 
         optionsButton.on("pointerout", () => {
-            hoverSprite.setVisible(false);
-        })
-
-        optionsButton.on("pointerup", () => {
             //this.scene.launch();
+            optionsButton.clearTint();
         })
 
     }
