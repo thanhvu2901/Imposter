@@ -26,6 +26,11 @@ game.scene.add("menu", MainMenuScene);
 game.scene.add("theskeld", TheSkeld);
 
 // start title
+<<<<<<< HEAD
 // game.scene.start("preloader");
 game.scene.start("theskeld");
 //game.scene.start('menu');
+=======
+game.scene.start('preloader');
+// game.scene.start('menu');
+>>>>>>> d2289b5e5f336e354453ddbabab769c3c2aaa0df
