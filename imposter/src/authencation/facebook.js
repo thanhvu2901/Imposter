@@ -1,12 +1,11 @@
-import phaser from 'phaser';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import firebaseConfig from './firebaseConfig.js';
-
+import Phaser from 'phaser';
 class Demo extends Phaser.Scene {
     constructor() {
         super({
-            key: 'examples'
+            key: 'facebookLogin'
         })
     }
 
