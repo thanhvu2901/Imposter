@@ -30,7 +30,8 @@
 	"dependencies": {
 		"assets": "^3.0.1",
 		"firebase": "^9.6.8",
-		"phaser": "^3.22.0"
+		"phaser": "^3.22.0",
+		"png-js": "^1.0.0"
 	},
 	"parcelCleanPaths": [
 		"dist"

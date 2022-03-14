@@ -1,20 +1,45 @@
-import Phaser from 'phaser'
+import Phaser from "phaser";
 
-import background from '../assets/img/background.jpg'
-import logo from '../assets/img/logo.png'
-import play from '../assets/img/play_button.png'
-import options from '../assets/img/options_button.png'
-import cat from '../assets/img/cat.png'
-import audio from '../assets/audio/audio.mp3'
-import MainMenuScene from './menu';
-import setting from '../assets/img/setting.png'
+import background from "../assets/img/background.jpg";
+import logo from "../assets/img/logo.png";
+import play from "../assets/img/play_button.png";
+import options from "../assets/img/options_button.png";
+import cat from "../assets/img/cat.png";
+import audio from "../assets/audio/audio.mp3";
+import MainMenuScene from "./menu";
+import playerSprite from "../assets/img/player.png";
+import shipImg from "../assets/img/theSkeld.png";
+import idle from "../assets/img/idle.png";
+import { movePlayer } from "../animation/movement";
+import { animateMovement } from "../animation/animation";
+import {
+  PLAYER_SPRITE_WIDTH,
+  PLAYER_SPRITE_HEIGHT,
+  PLAYER_HEIGHT,
+  PLAYER_WIDTH,
+  PLAYER_START_X,
+  PLAYER_START_Y,
+  PLAYER_SPEED,
+} from "../consts/constants";
+// const PLAYER_SPRITE_WIDTH = 84;
+// const PLAYER_SPRITE_HEIGHT = 128;
+// const PLAYER_HEIGHT = 80;
+// const PLAYER_WIDTH = 60;
+// const PLAYER_START_X = 330;
+// const PLAYER_START_Y = 100;
+// const PLAYER_SPEED = 10;
+// const SHIP_WIDTH = 4320;
+// const SHIP_HEIGHT = 2502;
+
+var player = {};
+let pressedKeys = [];
+
 class Preloader extends Phaser.Scene {
   constructor() {
-    super({ key: 'preloader' });
+    super({ key: "preloader" });
   }
   preload() {
-    this.load.image('logo', logo);
-
+    this.load.image("logo", logo);
 
     var progressBar = this.add.graphics();
     var progressBox = this.add.graphics();
@@ -121,10 +146,93 @@ class Preloader extends Phaser.Scene {
 
   }
 
+    this.load.on("progress", function (value) {
+    progressBar.clear();
+    progressBar.fillStyle(0xffffff, 1);
+    progressBar.fillRect(320, 280, 320 * value, 30);
+    percentText.setText(parseInt(value * 100) + "%");
+  });
 
+this.load.on("complete", function () {
+  console.log("complete");
+  progressBar.destroy();
+  progressBox.destroy();
+  percentText.destroy();
+  loadingText.destroy();
+});
 
+this.load.image("ship", shipImg);
+this.load.spritesheet("player", playerSprite, {
+  frameWidth: PLAYER_SPRITE_WIDTH,
+  frameHeight: PLAYER_SPRITE_HEIGHT,
+});
+this.load.spritesheet("idle", idle, {
+  frameWidth: PLAYER_SPRITE_WIDTH,
+  frameHeight: PLAYER_SPRITE_HEIGHT,
+});
+  }
+create() {
+  var width = this.cameras.main.width;
+  var height = this.cameras.main.height;
+  // var background = this.add.tilemap(500, 280, 'background');
 
+  var welcomeText = this.make.text({
+    x: width / 2 - 80,
+    y: height / 2 + 40,
+    text: "Welcome Imposter",
+    style: {
+      font: "20px monospace",
+      fill: "#ffffff",
+    },
+    alpha: 0,
+  });
+  //welcomeText.setOrigin(0.5, 0.5);
 
+  // var sprite = this.add.image(500, 280, "logo").setAlpha(0);
+
+  // var intro = this.tweens.add({
+  //   targets: [sprite, welcomeText],
+  //   alphaTopLeft: { value: 1, duration: 5000, ease: "Power1" },
+  //   alphaBottomRight: { value: 1, duration: 5000, ease: "Power1" },
+  //   onComplete: function () {
+  //     console.log("menu");
+  //     this.game.scene.add("menu");
+  //   },
+  // });
+
+  const ship = this.add.image(0, 0, "ship");
+  player.sprite = this.add.sprite(PLAYER_START_X, PLAYER_START_Y, "player");
+  player.sprite.displayHeight = PLAYER_HEIGHT;
+  player.sprite.displayWidth = PLAYER_WIDTH;
+
+  this.anims.create({
+    key: "running",
+    frames: this.anims.generateFrameNumbers("player"),
+    frameRate: 24,
+    reapeat: -1,
+  });
+  this.anims.create({
+    key: "idle",
+    frames: this.anims.generateFrameNumbers("idle"),
+    frameRate: 1,
+    reapeat: 0,
+  });
+
+  this.input.keyboard.on("keydown", (e) => {
+    if (!pressedKeys.includes(e.code)) {
+      pressedKeys.push(e.code);
+    }
+  });
+  this.input.keyboard.on("keyup", (e) => {
+    pressedKeys = pressedKeys.filter((key) => key !== e.code);
+  });
+}
+update() {
+  //this.scene.start('menu', MainMenuScene);
+  this.scene.scene.cameras.main.centerOn(player.sprite.x, player.sprite.y);
+  movePlayer(pressedKeys, player.sprite);
+  animateMovement(pressedKeys, player.sprite);
+}
 }
 
 export default Preloader;
