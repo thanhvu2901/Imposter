@@ -1,11 +1,6 @@
 import Phaser from 'phaser'
 
-import logo from '../assets/img/logo.png'
-import background from '../assets/img/background.jpg'
-import play from '../assets/img/play_button.png'
-import options from '../assets/img/options_button.png'
-import cat from '../assets/img/cat.png'
-import audio from '../assets/audio/audio.mp3'
+import Game from './game.js'
 //import CSSString from 'url(assets/input/cursors/sword.cur), pointer'
 export default class MainMenuScene extends Phaser.Scene {
     constructor() {
@@ -17,14 +12,7 @@ export default class MainMenuScene extends Phaser.Scene {
     init() {
 
     }
-    // preload() {
-    //     this.load.image('background', background);
-    //     this.load.image('play', play);
-    //     this.load.image('cat', cat);
-    //     this.load.image('options', options);
-    //     this.load.image('logo', logo);
-    //     this.load.audio('audio', audio)
-    // }
+
     create() { //creating the menu screen
 
         //create images (z order)
@@ -70,6 +58,10 @@ export default class MainMenuScene extends Phaser.Scene {
         playButton.on("pointerover", () => {
             //đổi màu chữ
             playButton.setTintFill('#00FF00')
+        })
+        playButton.on("pointerdown", () => {
+            console.log('start game');
+            this.scene.start('game', Game);
         })
 
 
