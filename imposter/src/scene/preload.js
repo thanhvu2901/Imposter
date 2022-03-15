@@ -7,6 +7,7 @@ import options from "../assets/img/options_button.png";
 import cat from "../assets/img/cat.png";
 import audio from "../assets/audio/audio.mp3";
 import MainMenuScene from "./menu";
+import setting from '../assets/img/setting.png'
 
 class Preloader extends Phaser.Scene {
   constructor() {
@@ -56,12 +57,12 @@ class Preloader extends Phaser.Scene {
     this.load.image('options', options);
     this.load.image('logo', logo);
     this.load.audio('audio', audio)
-    //this.load.image('setting', setting)
+    this.load.image('setting', setting)
 
 
 
 
-    for (var i = 0; i < 100; i++) {
+    for (var i = 0; i < 50; i++) {
       this.load.image('logo_' + i, logo);
     }
 

@@ -4,6 +4,7 @@ import Preloader from "./scene/preload.js";
 import MainMenuScene from "./scene/menu.js";
 import TheSkeld from "./scene/state/ingame/theskeld.js";
 import Game from './scene/game.js'
+import Options from "./scene/state/inmenu/options.js";
 var preloader = new Preloader();
 
 const config = {
@@ -25,6 +26,7 @@ game.scene.add("preloader", preloader);
 game.scene.add("menu", MainMenuScene);
 game.scene.add("theskeld", TheSkeld);
 game.scene.add('game', Game);
+game.scene.add('options', Options);
 // start title
 
 // game.scene.start("preloader");

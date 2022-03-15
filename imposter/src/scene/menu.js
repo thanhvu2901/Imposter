@@ -1,7 +1,7 @@
 import Phaser from 'phaser'
 
 import Game from './game.js'
-//import CSSString from 'url(assets/input/cursors/sword.cur), pointer'
+import Options from './state/inmenu/options.js'
 export default class MainMenuScene extends Phaser.Scene {
     constructor() {
         super({
@@ -53,8 +53,8 @@ export default class MainMenuScene extends Phaser.Scene {
                 pointerdown - just click
         */
 
+        // **************************button play********************
         playButton.setInteractive({ useHandCursor: true });
-
         playButton.on("pointerover", () => {
             //đổi màu chữ
             playButton.setTintFill('#00FF00')
@@ -63,25 +63,26 @@ export default class MainMenuScene extends Phaser.Scene {
             console.log('start game');
             this.scene.start('game', Game);
         })
-
-
-
         playButton.on("pointerout", () => {
             // this.scene.start(play);
             playButton.clearTint()
         })
 
+
+
+        // ******************************button options********************
         optionsButton.setInteractive({ useHandCursor: true });
 
         optionsButton.on("pointerover", () => {
             optionsButton.setTintFill('#00FF00')
         })
-
-
-
         optionsButton.on("pointerout", () => {
-            //this.scene.launch();
             optionsButton.clearTint();
+        })
+
+        optionsButton.on("pointerdown", () => {
+            console.log('options in pointer down');
+            this.scene.start('options', Options.create);
         })
 
     }
