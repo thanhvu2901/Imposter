@@ -20,18 +20,18 @@ let pressedKeys = [];
 
 class Game extends Phaser.Scene {
 
-    preload() {
+    // preload() {
 
-        this.load.image("ship", shipImg);
-        this.load.spritesheet("player", playerSprite, {
-            frameWidth: PLAYER_SPRITE_WIDTH,
-            frameHeight: PLAYER_SPRITE_HEIGHT,
-        });
-        this.load.spritesheet("idle", idle, {
-            frameWidth: PLAYER_SPRITE_WIDTH,
-            frameHeight: PLAYER_SPRITE_HEIGHT,
-        });
-    }
+    //     this.load.image("ship", shipImg);
+    //     this.load.spritesheet("player", playerSprite, {
+    //         frameWidth: PLAYER_SPRITE_WIDTH,
+    //         frameHeight: PLAYER_SPRITE_HEIGHT,
+    //     });
+    //     this.load.spritesheet("idle", idle, {
+    //         frameWidth: PLAYER_SPRITE_WIDTH,
+    //         frameHeight: PLAYER_SPRITE_HEIGHT,
+    //     });
+    // }
 
     create() {
         const ship = this.add.image(0, 0, "ship");

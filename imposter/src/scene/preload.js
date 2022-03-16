@@ -1,4 +1,5 @@
 import Phaser from "phaser";
+import { io } from 'socket.io-client'
 
 import background from "../assets/img/background.jpg";
 import logo from "../assets/img/logo.png";
@@ -8,6 +9,20 @@ import cat from "../assets/img/cat.png";
 import audio from "../assets/audio/audio.mp3";
 import MainMenuScene from "./menu";
 import setting from '../assets/img/setting.png'
+import playerSprite from "../assets/img/player.png";
+import shipImg from "../assets/img/theSkeld.png";
+import idle from "../assets/img/idle.png";
+import {
+  PLAYER_SPRITE_WIDTH,
+  PLAYER_SPRITE_HEIGHT,
+  PLAYER_HEIGHT,
+  PLAYER_WIDTH,
+  PLAYER_START_X,
+  PLAYER_START_Y,
+  PLAYER_SPEED,
+} from "../consts/constants";
+//element
+let socket;
 
 class Preloader extends Phaser.Scene {
   constructor() {
@@ -59,12 +74,19 @@ class Preloader extends Phaser.Scene {
     this.load.audio('audio', audio)
     this.load.image('setting', setting)
 
+    this.load.image("ship", shipImg);
+    this.load.spritesheet("player", playerSprite, {
+      frameWidth: PLAYER_SPRITE_WIDTH,
+      frameHeight: PLAYER_SPRITE_HEIGHT,
+    });
+    this.load.spritesheet("idle", idle, {
+      frameWidth: PLAYER_SPRITE_WIDTH,
+      frameHeight: PLAYER_SPRITE_HEIGHT,
+    });
 
 
 
-    for (var i = 0; i < 50; i++) {
-      this.load.image('logo_' + i, logo);
-    }
+
 
 
     this.load.on('progress', function (value) {
@@ -84,6 +106,8 @@ class Preloader extends Phaser.Scene {
 
     });
 
+    //setup socket
+    socket = io('localhost:3000')
 
   }
   create() {
