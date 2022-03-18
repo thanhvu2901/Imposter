@@ -1,43 +1,41 @@
 import Phaser from "phaser";
-import playerSprite from "../assets/img/player.png";
-import shipImg from "../assets/img/theSkeld.png";
-import idle from "../assets/img/idle.png";
-import { movePlayer } from "../animation/movement";
-import { animateMovement } from "../animation/animation";
 
+import { movePlayer } from "../animation/movement.js";
+import { animateMovement } from "../animation/animation.js";
+import { io } from 'socket.io-client';
 import {
-    PLAYER_SPRITE_WIDTH,
-    PLAYER_SPRITE_HEIGHT,
+
     PLAYER_HEIGHT,
     PLAYER_WIDTH,
     PLAYER_START_X,
     PLAYER_START_Y,
-    PLAYER_SPEED,
+
 } from "../consts/constants";
 
 var player = {};
 let pressedKeys = [];
-
+let otherPlayer = {};
+let socket;
 class Game extends Phaser.Scene {
-
-    // preload() {
-
-    //     this.load.image("ship", shipImg);
-    //     this.load.spritesheet("player", playerSprite, {
-    //         frameWidth: PLAYER_SPRITE_WIDTH,
-    //         frameHeight: PLAYER_SPRITE_HEIGHT,
-    //     });
-    //     this.load.spritesheet("idle", idle, {
-    //         frameWidth: PLAYER_SPRITE_WIDTH,
-    //         frameHeight: PLAYER_SPRITE_HEIGHT,
-    //     });
-    // }
-
+    constructor() {
+        super({ key: 'game' });
+    }
+    preload() {
+        socket = io('localhost:3000')  //==> dời qua preload
+    }
     create() {
         const ship = this.add.image(0, 0, "ship");
         player.sprite = this.add.sprite(PLAYER_START_X, PLAYER_START_Y, "player");
         player.sprite.displayHeight = PLAYER_HEIGHT;
         player.sprite.displayWidth = PLAYER_WIDTH;
+
+        otherPlayer.sprite = this.add.sprite(
+            PLAYER_START_X,
+            PLAYER_START_Y,
+            "otherPlayer",
+        );
+        otherPlayer.sprite.displayHeight = PLAYER_HEIGHT;
+        otherPlayer.sprite.displayWidth = PLAYER_WIDTH;
 
         this.anims.create({
             key: "running",
@@ -60,12 +58,46 @@ class Game extends Phaser.Scene {
         this.input.keyboard.on("keyup", (e) => {
             pressedKeys = pressedKeys.filter((key) => key !== e.code);
         });
+
+
+        socket.on('move', ({ x, y }) => {
+            console.log('revieved move');
+            if (otherPlayer.sprite.x > x) {
+                otherPlayer.sprite.flipX = true;
+            } else if (otherPlayer.sprite.x < x) {
+                otherPlayer.sprite.flipX = false;
+            }
+            otherPlayer.sprite.x = x;
+            otherPlayer.sprite.y = y;
+            otherPlayer.moving = true;
+        });
+        socket.on('moveEnd', () => {
+            console.log('revieved moveend');
+            otherPlayer.moving = false;
+        });
+
     }
 
     update() {
         this.scene.scene.cameras.main.centerOn(player.sprite.x, player.sprite.y);
-        movePlayer(pressedKeys, player.sprite);
+        const playerMoved = movePlayer(pressedKeys, player.sprite);
+        if (playerMoved) {
+            socket.emit('move', { x: player.sprite.x, y: player.sprite.y });
+            player.movedLastFrame = true;
+        } else {
+            if (player.movedLastFrame) {
+                console.log('player move');
+                socket.emit('moveEnd');
+            }
+            player.movedLastFrame = false;
+        }
         animateMovement(pressedKeys, player.sprite);
+        // Aninamte other player
+        if (otherPlayer.moving && !otherPlayer.sprite.anims.isPlaying) {
+            otherPlayer.sprite.play('running');
+        } else if (!otherPlayer.moving && otherPlayer.sprite.anims.isPlaying) {
+            otherPlayer.sprite.stop('running');
+        }
     }
 }
 

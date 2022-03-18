@@ -15,14 +15,8 @@ import idle from "../assets/img/idle.png";
 import {
   PLAYER_SPRITE_WIDTH,
   PLAYER_SPRITE_HEIGHT,
-  PLAYER_HEIGHT,
-  PLAYER_WIDTH,
-  PLAYER_START_X,
-  PLAYER_START_Y,
-  PLAYER_SPEED,
 } from "../consts/constants";
 //element
-let socket;
 
 class Preloader extends Phaser.Scene {
   constructor() {
@@ -79,14 +73,16 @@ class Preloader extends Phaser.Scene {
       frameWidth: PLAYER_SPRITE_WIDTH,
       frameHeight: PLAYER_SPRITE_HEIGHT,
     });
+
     this.load.spritesheet("idle", idle, {
       frameWidth: PLAYER_SPRITE_WIDTH,
       frameHeight: PLAYER_SPRITE_HEIGHT,
     });
 
-
-
-
+    this.load.spritesheet('otherPlayer', playerSprite, {
+      frameWidth: PLAYER_SPRITE_WIDTH,
+      frameHeight: PLAYER_SPRITE_HEIGHT,
+    });
 
 
     this.load.on('progress', function (value) {
@@ -107,7 +103,7 @@ class Preloader extends Phaser.Scene {
     });
 
     //setup socket
-    socket = io('localhost:3000')
+    // socket = io('localhost:3000')
 
   }
   create() {
