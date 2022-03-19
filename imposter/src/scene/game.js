@@ -1,7 +1,10 @@
 import Phaser from "phaser";
 import playerSprite from "../assets/img/player.png";
-import shipImg from "../assets/img/theSkeld.png";
+import tileImg from "../assets/img/theSkeld.png";
+import theskeld from "../assets/tilemaps/theskeld.json";
 import idle from "../assets/img/idle.png";
+import playerpng from "../assets/player/player_sprite/player_base.png";
+import playerjson from "../assets/player/player_sprite/player_base.json";
 import { movePlayer } from "../animation/movement";
 import { animateMovement } from "../animation/animation";
 
@@ -22,7 +25,8 @@ class Game extends Phaser.Scene {
 
     preload() {
 
-        this.load.image("ship", shipImg);
+        this.load.image("tiles", tileImg);
+        this.load.tilemapTiledJSON("tilemap", theskeld);
         this.load.spritesheet("player", playerSprite, {
             frameWidth: PLAYER_SPRITE_WIDTH,
             frameHeight: PLAYER_SPRITE_HEIGHT,
@@ -31,10 +35,17 @@ class Game extends Phaser.Scene {
             frameWidth: PLAYER_SPRITE_WIDTH,
             frameHeight: PLAYER_SPRITE_HEIGHT,
         });
+        this.load.atlas("playerbase", playerpng, playerjson);
     }
 
     create() {
-        const ship = this.add.image(0, 0, "ship");
+        // const ship = this.add.image(0, 0, "ship");
+        const ship = this.make.tilemap({key: "tilemap"});
+        const tileset = ship.addTilesetImage("theSkeld", "tiles");
+        ship.createLayer("Background", tileset);
+
+        this.add.image(PLAYER_START_X, PLAYER_START_Y, "playerbase");
+
         player.sprite = this.add.sprite(PLAYER_START_X, PLAYER_START_Y, "player");
         player.sprite.displayHeight = PLAYER_HEIGHT;
         player.sprite.displayWidth = PLAYER_WIDTH;
