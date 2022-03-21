@@ -37,8 +37,15 @@ class Game extends Phaser.Scene {
     // const ship = this.add.image(0, 0, "ship");
     const ship = this.make.tilemap({ key: "tilemap" });
     const tileset = ship.addTilesetImage("theSkeld", "tiles");
-    ship.createLayer("Background", tileset);
+    const ship_collides = ship.createLayer("Background", tileset);
+    ship_collides.setCollisionByProperty({collides: true});
 
+    const debug = this.add.graphics().setAlpha(0.7);
+    ship_collides.renderDebug(debug, {
+      tileColor: null,
+      collidingTileColor: new Phaser.Display.Color(243, 243, 48, 255),
+      faceColor: new Phaser.Display.Color(40, 39, 37, 355)
+    })
     player = this.physics.add.sprite(128, 128, "playerbase", "idle.png");
     cursors = this.input.keyboard.createCursorKeys();
 
