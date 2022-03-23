@@ -12,10 +12,14 @@ import setting from '../assets/img/setting.png'
 import playerSprite from "../assets/img/player.png";
 import shipImg from "../assets/img/theSkeld.png";
 import idle from "../assets/img/idle.png";
+import facebook from '../assets/img/fb.png'
+import SubMenu from "./submenu";
 import {
   PLAYER_SPRITE_WIDTH,
   PLAYER_SPRITE_HEIGHT,
 } from "../consts/constants";
+import Login from "./login";
+
 //element
 
 class Preloader extends Phaser.Scene {
@@ -67,7 +71,7 @@ class Preloader extends Phaser.Scene {
     this.load.image('logo', logo);
     this.load.audio('audio', audio)
     this.load.image('setting', setting)
-
+    this.load.image('facebook', facebook)
     this.load.image("ship", shipImg);
     this.load.spritesheet("player", playerSprite, {
       frameWidth: PLAYER_SPRITE_WIDTH,
@@ -138,8 +142,9 @@ class Preloader extends Phaser.Scene {
       //     this.load.sc
       // }
     });
-    this.input.on('pointerdown', () => this.scene.start('menu', MainMenuScene))
-
+    //this.input.on('pointerdown', () => this.scene.start('login', Login))
+    //this.input.on('pointerdown', () => this.scene.start('menu', MainMenuScene))
+    this.input.on('pointerdown', () => this.scene.start('submenu', SubMenu))
 
 
     this.load.on("progress", function (value) {
