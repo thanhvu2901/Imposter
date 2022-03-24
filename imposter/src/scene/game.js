@@ -6,7 +6,7 @@ import playerjson from "../assets/player/player_sprite/player_base.json";
 import { debugDraw } from "../scene/debugDraw";
 
 import { movePlayer } from "../animation/movement.js";
-import { animateMovement } from "../animation/animation.js";
+
 import { io } from 'socket.io-client';
 import {
 
@@ -14,7 +14,7 @@ import {
   PLAYER_WIDTH,
   PLAYER_START_X,
   PLAYER_START_Y,
-
+  PLAYER_SPEED
 } from "../consts/constants";
 
 var player;
@@ -22,6 +22,7 @@ var cursors;
 let pressedKeys = [];
 let otherPlayer = {};
 let socket;
+
 class Game extends Phaser.Scene {
   constructor() {
     super({ key: 'game' });
@@ -42,12 +43,13 @@ class Game extends Phaser.Scene {
 
     debugDraw(ship_tileset, this);
     //add player
-    player = this.physics.add.sprite(128, 128, "playerbase", "idle.png");
-    // otherPlayer = this.physics.add.sprite(140, 128, "playerbase2", "idle.png");
+    player = this.physics.add.sprite(250, 328, "playerbase", "idle.png");
+    otherPlayer = this.physics.add.sprite(140, 128, "playerbase", "idle.png");
 
     //cursor to direct
     cursors = this.input.keyboard.createCursorKeys();
 
+    // tạo object và gán các thuộc tính
     this.anims.create({
       key: "player-idle",
       frames: [{ key: "playerbase", frame: "idle.png" },
@@ -94,11 +96,29 @@ class Game extends Phaser.Scene {
     this.physics.add.collider(player, ship_tileset);
 
     this.cameras.main.startFollow(player, true);
+
+    //listen from other 
+    socket.on('move', ({ x, y }) => {
+      console.log('revieved move');
+      if (otherPlayer.x > x) {
+        otherPlayer.flipX = true;
+      } else if (otherPlayer.x < x) {
+        otherPlayer.flipX = false;
+      }
+      otherPlayer.x = x;
+      otherPlayer.y = y;
+      otherPlayer.moving = true;
+    });
+    socket.on('moveEnd', () => {
+      console.log('revieved moveend');
+      otherPlayer.moving = false
+    });
+
   }
 
   update() {
-    // this.scene.scene.cameras.main.centerOn(player.sprite.x, player.sprite.y);
 
+    let playerMoved = false;
     player.setVelocity(0);
     if (
       !cursors.left.isDown &&
@@ -115,23 +135,44 @@ class Game extends Phaser.Scene {
       player.setVelocityX(-PLAYER_SPEED);
       player.scaleX = -1;
       player.body.offset.x = 40;
+      playerMoved = true;
     } else if (cursors.right.isDown) {
       player.anims.play("player-walk", true);
       player.setVelocityX(PLAYER_SPEED);
       player.scaleX = 1;
       player.body.offset.x = 0;
+      playerMoved = true;
     }
 
     if (cursors.up.isDown) {
       player.anims.play("player-walk", true);
       player.setVelocityY(-PLAYER_SPEED);
+      playerMoved = true;
     } else if (cursors.down.isDown) {
       player.anims.play("player-walk", true);
       player.setVelocityY(PLAYER_SPEED);
+      playerMoved = true;
+    }
 
+    //emit
+    //  this.scene.scene.cameras.main.centerOn(player.sprite.x, player.sprite.y);
+    //const playerMoved = movePlayer(pressedKeys, player.sprite);
+    if (playerMoved) {
+      socket.emit('move', { x: player.x, y: player.y });
+      //console.log(player.x);
+      player.movedLastFrame = true;
+    } else {
+      if (player.movedLastFrame) {
+        socket.emit('moveEnd');
+      }
+      player.movedLastFrame = false;
+    }
 
-
-
+    // update running other player
+    if (otherPlayer.moving && !otherPlayer.anims.isPlaying) {
+      otherPlayer.play('running');
+    } else if (!otherPlayer.moving && otherPlayer.anims.isPlaying) {
+      otherPlayer.stop('running');
     }
   }
 }

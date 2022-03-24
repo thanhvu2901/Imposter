@@ -14,7 +14,7 @@ const config = {
   type: [Phaser.AUTO, Phaser.CANVAS],
   width: 1024,
   height: 768,
-  physics:{
+  physics: {
     default: "arcade",
     arcade: {
       debug: true

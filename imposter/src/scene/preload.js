@@ -143,8 +143,8 @@ class Preloader extends Phaser.Scene {
       // }
     });
     //this.input.on('pointerdown', () => this.scene.start('login', Login))
-    //this.input.on('pointerdown', () => this.scene.start('menu', MainMenuScene))
-    this.input.on('pointerdown', () => this.scene.start('submenu', SubMenu))
+    this.input.on('pointerdown', () => this.scene.start('menu', MainMenuScene))
+    //this.input.on('pointerdown', () => this.scene.start('submenu', SubMenu))
 
 
     this.load.on("progress", function (value) {

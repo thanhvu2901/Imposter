@@ -1,5 +1,5 @@
 import { PLAYER_SPEED, SHIP_HEIGHT, SHIP_WIDTH } from "../consts/constants";
-import { mapBounds } from "../../mapBounds";
+//import { mapBounds } from "../../mapBounds";
 
 const isWithinMovementBoundaries = (x, y) => {
   return !mapBounds[y] ? true : !mapBounds[y].includes(x);
