@@ -14,6 +14,12 @@ const config = {
   type: [Phaser.AUTO, Phaser.CANVAS],
   width: 1024,
   height: 768,
+  physics:{
+    default: "arcade",
+    arcade: {
+      debug: true
+    }
+  },
   scale: {
     mode: Phaser.Scale.FIT,
     autoCenter: Phaser.Scale.CENTER_BOTH,
