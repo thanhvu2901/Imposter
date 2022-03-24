@@ -44,7 +44,11 @@ class Game extends Phaser.Scene {
     debugDraw(ship_tileset, this);
     //add player
     player = this.physics.add.sprite(250, 328, "playerbase", "idle.png");
-    otherPlayer = this.physics.add.sprite(140, 128, "playerbase", "idle.png");
+
+    // tạo theo số lượng other player vào
+    otherPlayer = this.physics.add.sprite(250, 228, "playerbase", "idle.png");
+    //****************** */
+
 
     //cursor to direct
     cursors = this.input.keyboard.createCursorKeys();
@@ -111,7 +115,8 @@ class Game extends Phaser.Scene {
     });
     socket.on('moveEnd', () => {
       console.log('revieved moveend');
-      otherPlayer.moving = false
+      otherPlayer.moving = false;
+      otherPlayer.anims.play('player-idle')
     });
 
   }
@@ -127,6 +132,7 @@ class Game extends Phaser.Scene {
       !cursors.down.isDown
     ) {
       player.anims.play("player-idle");
+
     }
 
     // when move 
@@ -170,9 +176,9 @@ class Game extends Phaser.Scene {
 
     // update running other player
     if (otherPlayer.moving && !otherPlayer.anims.isPlaying) {
-      otherPlayer.play('running');
+      otherPlayer.play('player-walk');
     } else if (!otherPlayer.moving && otherPlayer.anims.isPlaying) {
-      otherPlayer.stop('running');
+      otherPlayer.stop('player-walk');
     }
   }
 }
