@@ -13,12 +13,16 @@ import playerSprite from "../assets/img/player.png";
 import shipImg from "../assets/img/theSkeld.png";
 import idle from "../assets/img/idle.png";
 import facebook from '../assets/img/fb.png'
+import fix from '../assets/img/fix_wiring/Fix_Wiring.png'
+
 import SubMenu from "./submenu";
+
 import {
   PLAYER_SPRITE_WIDTH,
   PLAYER_SPRITE_HEIGHT,
 } from "../consts/constants";
 import Login from "./login";
+import FixWiring from "./state/minigame/fix_wiring";
 
 //element
 
@@ -73,6 +77,9 @@ class Preloader extends Phaser.Scene {
     this.load.image('setting', setting)
     this.load.image('facebook', facebook)
     this.load.image("ship", shipImg);
+    this.load.image('fix', fix)
+
+
     this.load.spritesheet("player", playerSprite, {
       frameWidth: PLAYER_SPRITE_WIDTH,
       frameHeight: PLAYER_SPRITE_HEIGHT,
@@ -143,8 +150,8 @@ class Preloader extends Phaser.Scene {
       // }
     });
     //this.input.on('pointerdown', () => this.scene.start('login', Login))
-    // this.input.on('pointerdown', () => this.scene.start('menu', MainMenuScene))
-    this.input.on('pointerdown', () => this.scene.start('submenu', SubMenu))
+    //this.input.on('pointerdown', () => this.scene.start('menu', MainMenuScene))
+    this.input.on('pointerdown', () => this.scene.start('fixWiring', FixWiring))
 
 
     this.load.on("progress", function (value) {
