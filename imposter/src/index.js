@@ -3,6 +3,7 @@ import Phaser from "phaser";
 import Preloader from "./scene/preload.js";
 import MainMenuScene from "./scene/menu.js";
 import TheSkeld from "./scene/state/ingame/theskeld.js";
+import ChartCourse from "./scene/state/ingame/chartcourse.js";
 import Game from './scene/game.js'
 var preloader = new Preloader();
 
@@ -25,6 +26,7 @@ game.scene.add("preloader", preloader);
 game.scene.add("menu", MainMenuScene);
 game.scene.add("theskeld", TheSkeld);
 game.scene.add('game', Game);
+game.scene.add('Course',ChartCourse)
 // start title
 
 // game.scene.start("preloader");
@@ -32,5 +34,5 @@ game.scene.add('game', Game);
 //game.scene.start('menu');
 // game.scene.start('game');
 
-game.scene.start('preloader');
+game.scene.start('Course');
 
