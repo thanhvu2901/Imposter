@@ -1,6 +1,7 @@
 import Phaser from 'phaser'
 
 import Game from './game.js'
+import Login from './login.js';
 
 export default class SubMenu extends Phaser.Scene {
     constructor() {
@@ -27,55 +28,19 @@ export default class SubMenu extends Phaser.Scene {
         let facebookButton = this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 2 + 100, 'facebook').setDepth(1).setScale(0.2)
 
 
-
-
-
-
-
-
         //create audio, disable pauseonblur
 
-        this.sound.pauseOnBlur = false;
+        // this.sound.pauseOnBlur = false;
+        // **************************facebook login button********************
+        facebookButton.setInteractive({ useHandCursor: true });
 
-        /* 
-            PointerEvents:
-                pointerover - hovering
-                pointerout - not hovering
-                pointerup - click and release
-                pointerdown - just click
-        */
+        facebookButton.on("pointerdown", () => {
 
-        // **************************button play********************
-        // playButton.setInteractive({ useHandCursor: true });
-        // playButton.on("pointerover", () => {
-        //     //đổi màu chữ
-        //     playButton.setTintFill('#00FF00')
-        // })
-        // playButton.on("pointerdown", () => {
-        //     console.log('start game');
-        //     this.scene.start('game', Game);
-        // })
-        // playButton.on("pointerout", () => {
-        //     // this.scene.start(play);
-        //     playButton.clearTint()
-        // })
-
-
-
-        // // ******************************button options********************
-        // optionsButton.setInteractive({ useHandCursor: true });
-
-        // optionsButton.on("pointerover", () => {
-        //     optionsButton.setTintFill('#00FF00')
-        // })
-        // optionsButton.on("pointerout", () => {
-        //     optionsButton.clearTint();
-        // })
-
-        // optionsButton.on("pointerdown", () => {
-        //     console.log('options in pointer down');
-        //     this.scene.start('options', Options.create);
-        // })
-
+            this.scene.start('login', Login);
+        })
+        facebookButton.on("pointerout", () => {
+            // this.scene.start(play);
+            facebookButton.clearTint()
+        })
     }
 }

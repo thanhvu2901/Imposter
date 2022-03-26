@@ -18,10 +18,8 @@ class Login extends Phaser.Scene {
         const app = initializeApp(firebaseConfig);
         const provider = new FacebookAuthProvider();
         // provider.addScope('user_birthday');
-
-
-
-
+        //provider.addScope('gaming_profile');
+        // provider.addScope('gaming_user_picture')
 
         const auth = getAuth();
         signInWithPopup(auth, provider)
@@ -32,6 +30,9 @@ class Login extends Phaser.Scene {
                 // This gives you a Facebook Access Token. You can use it to access the Facebook API.
                 const credential = FacebookAuthProvider.credentialFromResult(result);
                 const accessToken = credential.accessToken;
+
+
+
 
                 // ...
             })
@@ -46,6 +47,16 @@ class Login extends Phaser.Scene {
 
                 // ...
             });
+        var user = app.auth().currentUser;
+        if (user != null) {
+            var name = user.displayName;
+            var email = user.email;
+            var photoUrl = user.photoURL;
+            var emailVerified = user.emailVerified;
+            var uid = user.uid;
+        }
+        console.log(user);
+
     }
 
 
