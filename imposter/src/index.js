@@ -36,13 +36,9 @@ game.scene.add("preloader", preloader);
 game.scene.add("menu", MainMenuScene);
 game.scene.add("theskeld", TheSkeld);
 game.scene.add('game', Game);
-<<<<<<< HEAD
 game.scene.add('options', Options);
 game.scene.add('login', Login);
 game.scene.add('submenu', SubMenu)
-=======
-game.scene.add('Course',ChartCourse)
->>>>>>> eb4438998677e1ae0890e1b697f4bc75f1968815
 // start title
 
 // game.scene.start("preloader");
@@ -51,9 +47,5 @@ game.scene.add('Course',ChartCourse)
 // game.scene.start('game');
 //game.scene.start('login');
 
-<<<<<<< HEAD
-game.scene.start('preloader');
-=======
 game.scene.start('Course');
 
->>>>>>> eb4438998677e1ae0890e1b697f4bc75f1968815
