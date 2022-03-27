@@ -8,6 +8,7 @@ import Game from './scene/game.js'
 import Options from "./scene/state/inmenu/options.js";
 import Login from "./scene/login.js";
 import SubMenu from "./scene/submenu.js";
+import AlignEngineOutput from "./scene/state/minigame/align_engine_output";
 var preloader = new Preloader();
 
 const config = {
@@ -29,7 +30,6 @@ const config = {
 };
 
 const game = new Phaser.Game(config);
-
 //game.scene.add(SceneKeys.Preloader, Preloader)
 
 game.scene.add("preloader", preloader);
@@ -39,6 +39,7 @@ game.scene.add('game', Game);
 game.scene.add('options', Options);
 game.scene.add('login', Login);
 game.scene.add('submenu', SubMenu)
+game.scene.add("align_engine_output", AlignEngineOutput)
 // start title
 
 // game.scene.start("preloader");
@@ -47,5 +48,10 @@ game.scene.add('submenu', SubMenu)
 // game.scene.start('game');
 //game.scene.start('login');
 
+<<<<<<< HEAD
 game.scene.start('Course');
 
+=======
+// game.scene.start('preloader');
+game.scene.start("align_engine_output")
+>>>>>>> 25830fbeea4904115707e6c10135e9671c002a5b
