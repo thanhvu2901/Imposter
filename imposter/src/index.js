@@ -8,6 +8,7 @@ import Game from './scene/game.js'
 import Options from "./scene/state/inmenu/options.js";
 import Login from "./scene/login.js";
 import SubMenu from "./scene/submenu.js";
+import fixWiring from "./scene/state/minigame/fix_wiring.js";
 var preloader = new Preloader();
 
 const config = {
@@ -36,13 +37,16 @@ game.scene.add("preloader", preloader);
 game.scene.add("menu", MainMenuScene);
 game.scene.add("theskeld", TheSkeld);
 game.scene.add('game', Game);
-<<<<<<< HEAD
+
 game.scene.add('options', Options);
 game.scene.add('login', Login);
 game.scene.add('submenu', SubMenu)
-=======
-game.scene.add('Course',ChartCourse)
->>>>>>> eb4438998677e1ae0890e1b697f4bc75f1968815
+
+
+game.scene.add('Course', ChartCourse)
+
+game.scene.add('fixWiring', fixWiring)
+
 // start title
 
 // game.scene.start("preloader");
@@ -51,9 +55,6 @@ game.scene.add('Course',ChartCourse)
 // game.scene.start('game');
 //game.scene.start('login');
 
-<<<<<<< HEAD
-game.scene.start('preloader');
-=======
+//game.scene.start('preloader');
 game.scene.start('Course');
 
->>>>>>> eb4438998677e1ae0890e1b697f4bc75f1968815
