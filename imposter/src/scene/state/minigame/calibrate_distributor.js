@@ -9,7 +9,7 @@ import calibratorGaugeBorder from "../../../assets/tasks/Calibrate Distributor/c
 import calibratorSpin1 from "../../../assets/tasks/Calibrate Distributor/calibratorSpin1.png";
 import calibratorSpin2 from "../../../assets/tasks/Calibrate Distributor/calibratorSpin2.png";
 import calibratorSpin3 from "../../../assets/tasks/Calibrate Distributor/calibratorSpin3.png";
-
+var spin1
 class CalibratorDistributor extends Phaser.Scene {
     preload() {
         this.load.image("CalibratorBaseWWires", CalibratorBaseWWires);
@@ -23,14 +23,14 @@ class CalibratorDistributor extends Phaser.Scene {
         this.load.image("calibratorSpin2", calibratorSpin2);
         this.load.image("calibratorSpin3", calibratorSpin3);
     }
-
+    
     create(){
         const current_object = this;
         this.add.image(512, 384, "CalibratorBaseWWires");
 
         var gauge1 = this.add.image(665, 210, "calibratorGauge");
         var button1 = this.add.image(665, 260, "calibratorButton");
-        var spin1 = this.add.image(375, 230, "calibratorSpin1");
+        spin1 = this.add.image(375, 230, "calibratorSpin1");
         var container1 = this.add.container(0, -1, [gauge1, button1, spin1]);
 
         container1.setInteractive();
@@ -61,6 +61,10 @@ class CalibratorDistributor extends Phaser.Scene {
     }
 
     update(){
+            spin1.rotation += 0.02
+            if(  spin1.rotation<0.05&&spin1.rotation>-0.1){
+                console.log("checked")
+            }
 
     }
 }
