@@ -9,6 +9,7 @@ import Options from "./scene/state/inmenu/options.js";
 import Login from "./scene/login.js";
 import SubMenu from "./scene/submenu.js";
 import AlignEngineOutput from "./scene/state/minigame/align_engine_output";
+import CalibrateDistributor from "./scene/state/minigame/calibrate_distributor";
 var preloader = new Preloader();
 
 const config = {
@@ -40,6 +41,7 @@ game.scene.add('options', Options);
 game.scene.add('login', Login);
 game.scene.add('submenu', SubMenu)
 game.scene.add("align_engine_output", AlignEngineOutput)
+game.scene.add("calibrate_distributor", CalibrateDistributor);
 // start title
 
 // game.scene.start("preloader");
@@ -48,10 +50,6 @@ game.scene.add("align_engine_output", AlignEngineOutput)
 // game.scene.start('game');
 //game.scene.start('login');
 
-<<<<<<< HEAD
-game.scene.start('Course');
-
-=======
 // game.scene.start('preloader');
-game.scene.start("align_engine_output")
->>>>>>> 25830fbeea4904115707e6c10135e9671c002a5b
+// game.scene.start("align_engine_output")
+game.scene.start("calibrate_distributor");
