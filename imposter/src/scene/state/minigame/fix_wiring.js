@@ -50,14 +50,18 @@ class FixWiring extends Phaser.Scene {
             path[i] = { vec: new Phaser.Math.Vector2() };
             curve[i] = new Phaser.Curves.Line([290, 226 + 10 + 103 * i, 306, 226 + 10 + 103 * i]);
 
-
+            var test=[
+                this.add.image(306, 236 + 103 * i, 'head1', 0).setInteractive(),'red'
+            ]
             //  var point0 = this.add.image(306, 226 + 10, 'head1', 0)
-            point[i] = this.add.image(306, 236 + 103 * i, 'head1', 0).setInteractive();
-            point[i].setDepth(0);
-
+            
+           // point[i]
+            test[0].setDepth(0);
             //  point0.setData('vector', curve.p0);
-            point[i].setData('vector', curve[i].p1);
-            this.input.setDraggable(point[i])
+            //point[i].setData('vector', curve[i].p1);
+            test[0].setData('vector', curve[i].p1);
+            point[i] = test
+            this.input.setDraggable(point[i][0])
 
             this.tweens.add({
                 targets: path[i],
@@ -70,6 +74,7 @@ class FixWiring extends Phaser.Scene {
 
             // điểm cuối
             endreg[i] = this.add.rectangle(745, 236 + 103 * i, 35, 20, parseInt(color_left[i], 16)).setDepth(1)
+            console.log(endreg[i].fillColor)
             tail[i] = this.add.image(720, 236 + 103 * i, 'head1',).setDepth(0)
 
             tail[i].setFlipX(true);
@@ -121,7 +126,7 @@ class FixWiring extends Phaser.Scene {
             'screen y: ' + this.input.y,
 
         ])
-
+        console.log(point[0][0].x,point[0][0].y,point[0][1])
         // console.log(graphics[0]);
         //console.log(endreg[0].color);
         graphics.clear();
