@@ -56,5 +56,6 @@ game.scene.add('fixWiring', fixWiring)
 //game.scene.start('login');
 
 //game.scene.start('preloader');
-game.scene.start('Course');
+//game.scene.start('Course');
+game.scene.start('fixWiring')
 
