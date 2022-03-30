@@ -82,7 +82,7 @@ class FixWiring extends Phaser.Scene {
 
         }
 
-        //
+        
         this.input.on('dragstart', function (pointer, gameObject) {
 
             gameObject.setFrame(1);
