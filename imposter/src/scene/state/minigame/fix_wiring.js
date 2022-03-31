@@ -54,6 +54,7 @@ class FixWiring extends Phaser.Scene {
             //  var point0 = this.add.image(306, 226 + 10, 'head1', 0)
 
             point[i] = [this.add.image(306, 236 + 103 * i, 'head1', 0).setInteractive(), reg[i].fillColor];
+
             point[i][0].setDepth(0);
 
             //  point0.setData('vector', curve.p0);
@@ -88,6 +89,8 @@ class FixWiring extends Phaser.Scene {
 
             gameObject.setFrame(1);
 
+
+
         });
 
         this.input.on('drag', function (pointer, gameObject, dragX, dragY) {
@@ -107,13 +110,17 @@ class FixWiring extends Phaser.Scene {
         });
 
         this.input.on('dragend', function (pointer, gameObject) {
-            if (gameObject.x > 720 && gameObject.y < 236) {
-                //bật đèn
-            } else {
+            // if (gameObject.x > 720 && gameObject.y < 236) {
+            //     //bật đèn
+            // } else {
 
-            }
+            // } 
+            console.log(gameObject);
+            console.log(gameObject.getTintFill());
+            // console.log(point[0][1]);
             gameObject.setFrame(0);
-            // console.log(gameObject.);
+
+
 
         });
 
