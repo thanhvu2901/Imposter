@@ -9,6 +9,7 @@ import Options from "./scene/state/inmenu/options.js";
 import Login from "./scene/login.js";
 import SubMenu from "./scene/submenu.js";
 import fixWiring from "./scene/state/minigame/fix_wiring.js";
+import InspectSample from "./scene/state/minigame/inspect_sample.js";
 var preloader = new Preloader();
 
 const config = {
@@ -46,7 +47,7 @@ game.scene.add('submenu', SubMenu)
 game.scene.add('Course', ChartCourse)
 
 game.scene.add('fixWiring', fixWiring)
-
+game.scene.add('inspectSample', InspectSample)
 // start title
 
 // game.scene.start("preloader");
@@ -57,5 +58,6 @@ game.scene.add('fixWiring', fixWiring)
 
 //game.scene.start('preloader');
 //game.scene.start('Course');
-game.scene.start('fixWiring')
+//game.scene.start('fixWiring')
+game.scene.start('inspectSample')
 

@@ -50,17 +50,19 @@ class FixWiring extends Phaser.Scene {
             path[i] = { vec: new Phaser.Math.Vector2() };
             curve[i] = new Phaser.Curves.Line([290, 226 + 10 + 103 * i, 306, 226 + 10 + 103 * i]);
 
-            var test=[
-                this.add.image(306, 236 + 103 * i, 'head1', 0).setInteractive(),'red'
-            ]
+
             //  var point0 = this.add.image(306, 226 + 10, 'head1', 0)
-            
-           // point[i]
-            test[0].setDepth(0);
+
+            point[i] = [this.add.image(306, 236 + 103 * i, 'head1', 0).setInteractive(), reg[i].fillColor];
+            point[i][0].setDepth(0);
+
             //  point0.setData('vector', curve.p0);
-            //point[i].setData('vector', curve[i].p1);
-            test[0].setData('vector', curve[i].p1);
-            point[i] = test
+            point[i][0].setData('vector', curve[i].p1);
+
+
+            //   console.log(point[i]);
+
+
             this.input.setDraggable(point[i][0])
 
             this.tweens.add({
@@ -74,7 +76,6 @@ class FixWiring extends Phaser.Scene {
 
             // điểm cuối
             endreg[i] = this.add.rectangle(745, 236 + 103 * i, 35, 20, parseInt(color_left[i], 16)).setDepth(1)
-            console.log(endreg[i].fillColor)
             tail[i] = this.add.image(720, 236 + 103 * i, 'head1',).setDepth(0)
 
             tail[i].setFlipX(true);
@@ -82,7 +83,7 @@ class FixWiring extends Phaser.Scene {
 
         }
 
-        
+        //
         this.input.on('dragstart', function (pointer, gameObject) {
 
             gameObject.setFrame(1);
@@ -95,13 +96,9 @@ class FixWiring extends Phaser.Scene {
             gameObject.y = dragY;
 
 
-            //Nếu không đúng thì reset
-            //    console.log(gameObject);
-            if (gameObject.x > 720 && gameObject.y < 236) {
-                console.log('fl');
-            } else {
-                gameObject.data.get('vector').set(dragX, dragY);
-            }
+
+            gameObject.data.get('vector').set(dragX, dragY);
+
 
 
 
@@ -110,7 +107,11 @@ class FixWiring extends Phaser.Scene {
         });
 
         this.input.on('dragend', function (pointer, gameObject) {
+            if (gameObject.x > 720 && gameObject.y < 236) {
+                //bật đèn
+            } else {
 
+            }
             gameObject.setFrame(0);
             // console.log(gameObject.);
 
@@ -126,15 +127,17 @@ class FixWiring extends Phaser.Scene {
             'screen y: ' + this.input.y,
 
         ])
-        console.log(point[0][0].x,point[0][0].y,point[0][1])
+
         // console.log(graphics[0]);
         //console.log(endreg[0].color);
+        //console.log(point[0][0].x, point[0][0].y, point[0][1])
         graphics.clear();
         for (let i = 0; i < 4; i++) {
 
 
             graphics.lineStyle(20, parseInt(color[i], 16));
             curve[i].draw(graphics);
+            //  console.log(point[i][0].x, point[i][0].y, point[i][1])
             //  console.log(curve[i].color);
             // console.log(curve[i].display.color);
             // for (let j = 0; j < 4; j++) {
