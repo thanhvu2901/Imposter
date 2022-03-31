@@ -7,7 +7,7 @@ let isDragging = false;
 let lineStartPosition = { x: 0, y: 0 };
 
 let line
-let text;
+let text, text3;
 let graphics
 let path = new Array;
 let curve = new Array;
@@ -15,6 +15,7 @@ let point = new Array;
 let endreg = new Array;
 let reg = new Array
 let tail = new Array
+let count = new Set();
 let color = ['0000FF', 'FF0000', 'FFFF00', 'FF00FF']
 let color_left = ['FF0000', 'FF00FF', '0000FF', 'FFFF00']
 class FixWiring extends Phaser.Scene {
@@ -77,9 +78,9 @@ class FixWiring extends Phaser.Scene {
 
             // điểm cuối
             endreg[i] = this.add.rectangle(745, 236 + 103 * i, 35, 20, parseInt(color_left[i], 16)).setDepth(1)
-          
-          
-            tail[i] =[ this.add.image(720, 236 + 103 * i, 'head1',).setDepth(0),endreg[i].fillColor]
+
+
+            tail[i] = [this.add.image(720, 236 + 103 * i, 'head1',).setDepth(0), endreg[i].fillColor]
 
             tail[i][0].setFlipX(true);
 
@@ -104,10 +105,10 @@ class FixWiring extends Phaser.Scene {
 
             gameObject.data.get('vector').set(dragX, dragY);
 
-            check(point[0],tail[2],1)
-            check(point[1],tail[0],2)
-            check(point[2],tail[3],3)
-            check(point[3],tail[1],4)
+            check(point[0], tail[2], 1)
+            check(point[1], tail[0], 2)
+            check(point[2], tail[3], 3)
+            check(point[3], tail[1], 4)
 
 
 
@@ -115,14 +116,7 @@ class FixWiring extends Phaser.Scene {
         });
 
         this.input.on('dragend', function (pointer, gameObject) {
-            // if (gameObject.x > 720 && gameObject.y < 236) {
-            //     //bật đèn
-            // } else {
 
-            // } 
-            console.log(gameObject);
-            console.log(gameObject.getTintFill());
-            // console.log(point[0][1]);
             gameObject.setFrame(0);
 
 
@@ -139,42 +133,38 @@ class FixWiring extends Phaser.Scene {
             'screen y: ' + this.input.y,
 
         ])
-       
+
         // console.log(graphics[0]);
         //console.log(endreg[0].color);
-     //   console.log(tail[0][0].x, tail[0][0].y, tail[0][1])
+        //   console.log(tail[0][0].x, tail[0][0].y, tail[0][1])
         graphics.clear();
         for (let i = 0; i < 4; i++) {
 
 
             graphics.lineStyle(20, parseInt(color[i], 16));
             curve[i].draw(graphics);
-            //  console.log(point[i][0].x, point[i][0].y, point[i][1])
-            //  console.log(curve[i].color);
-            // console.log(curve[i].display.color);
-            // for (let j = 0; j < 4; j++) {
-            //     if (reg[i].fillColor === endreg[j].fillColor) {
-            //         console.log('yes');
-            //     }
 
-            // }
 
         }
-        // console.log(graphics[0].lineStyle);
-
-
-
+        // console.log(graphics[0].lineStyle)set
+        if (count.size === 4) {
+            // console.log('done');
+            text3 = this.add.text(317, 327, 'TASK COMPLETE!!', { font: '50px Courier', fill: '#FFFFFF' }).setDepth(1);
+            return
+        }
     }
 
 
 
 }
-function check(point1, point2,num) {
-    if (point1[0].x >point2[0].x-20 && point1[0].x <point2[0].x + 20 && point1[0].y > point2[0].y - 20 && point1[0].y < point2[0].y + 20 && point1[1]==point2[1]) {
-        console.log("ok",num)
+function check(point1, point2, num) {
+    if (point1[0].x > point2[0].x - 20 && point1[0].x < point2[0].x + 20 && point1[0].y > point2[0].y - 20 && point1[0].y < point2[0].y + 20 && point1[1] == point2[1]) {
+        count.add(num)
 
     }
-  //  return false
+    //console.log(count);
+
+    //  return false
 }
 
 export default FixWiring;
