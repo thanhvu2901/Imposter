@@ -58,6 +58,6 @@ game.scene.add('inspectSample', InspectSample)
 
 //game.scene.start('preloader');
 //game.scene.start('Course');
-//game.scene.start('fixWiring')
-game.scene.start('inspectSample')
+game.scene.start('fixWiring')
+//game.scene.start('inspectSample')
 
