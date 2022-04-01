@@ -5,6 +5,7 @@ import MainMenuScene from "./scene/menu.js";
 import TheSkeld from "./scene/state/ingame/theskeld.js";
 import ChartCourse from "./scene/state/ingame/chartcourse.js";
 import Game from './scene/game.js'
+import FuelEngine from "./scene/state/ingame/fuelengine.js";
 var preloader = new Preloader();
 
 const config = {
@@ -27,6 +28,7 @@ game.scene.add("menu", MainMenuScene);
 game.scene.add("theskeld", TheSkeld);
 game.scene.add('game', Game);
 game.scene.add('Course',ChartCourse)
+game.scene.add('Fuel',FuelEngine)
 // start title
 
 // game.scene.start("preloader");
@@ -34,5 +36,5 @@ game.scene.add('Course',ChartCourse)
 //game.scene.start('menu');
 // game.scene.start('game');
 
-game.scene.start('Course');
+game.scene.start('Fuel');
 
