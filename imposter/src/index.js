@@ -10,6 +10,7 @@ import Login from "./scene/login.js";
 import SubMenu from "./scene/submenu.js";
 import fixWiring from "./scene/state/minigame/fix_wiring.js";
 import InspectSample from "./scene/state/minigame/inspect_sample.js";
+import StabilizeSteering from "./scene/state/minigame/stabilize_steering.js";
 var preloader = new Preloader();
 
 const config = {
@@ -48,6 +49,7 @@ game.scene.add('Course', ChartCourse)
 
 game.scene.add('fixWiring', fixWiring)
 game.scene.add('inspectSample', InspectSample)
+game.scene.add('stabilizeSteering', StabilizeSteering)
 // start title
 
 // game.scene.start("preloader");
@@ -58,6 +60,7 @@ game.scene.add('inspectSample', InspectSample)
 
 //game.scene.start('preloader');
 //game.scene.start('Course');
-game.scene.start('fixWiring')
+//game.scene.start('fixWiring')
 //game.scene.start('inspectSample')
+game.scene.start('stabilizeSteering');
 
