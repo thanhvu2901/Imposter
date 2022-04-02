@@ -1,5 +1,5 @@
 import Phaser from "phaser";
-import gas_can from "../../../assets/img/Fuel Engines/gascan.png";
+import engine_ from "../../../assets/img/Fuel Engines/engine_fuel.png";
 import base from "../../../assets/img/Fuel Engines/base.png";
 import button from "../../../assets/img//Fuel Engines/button.png";
 import wire from "../../../assets/img//Fuel Engines/wire.png";
@@ -11,21 +11,21 @@ var ship1;
 let x
 let y
 let button_
-let ispressed=false;
+let ispressed=false
 let isfull = false
 let r1
 let r2
 let step = 0
 let light_,light_1
-class FuelEngine extends Phaser.Scene {
+class FuelEngine_1 extends Phaser.Scene {
   
   constructor() {
-    super({ key: "Fuel" });
+    super({ key: "Fuel_1" });
    
   }
 
   preload() {
-    this.load.image("gas_can", gas_can);
+    this.load.image("fuel_", engine_);
     this.load.image("button", button);
     this.load.image("base", base);
     this.load.image("wire", wire);
@@ -37,9 +37,11 @@ class FuelEngine extends Phaser.Scene {
   x =   this.game.renderer.width / 2
   y =   this.game.renderer.height / 2
     text = this.add.text(10, 10, 'Cursors to move', { font: '16px Courier', fill: '#00ff00' }).setScrollFactor(0);
-     r1 = this.add.rectangle(x, y+150, 300, 0, 0xFFBB35);
-     r2 = this.add.rectangle(x-200, y-350, 300,100 , 0xFFBB35);
-    const gas = this.add.image(x,y , "gas_can")
+     r1 = this.add.rectangle(x-10, y+155, 80, 0, 0xFFBB35);
+     r2 = this.add.rectangle(x+49, y-195, 65,45 , 0xFFBB35);
+    const gas = this.add.image(x,y , "fuel_")
+    
+    r2.rotation=3.7
     const base_ = this.add.image(x+280,y+188 , "base");
      button_ = this.add.image(x+280,y+188 , "button");
     const wire_ = this.add.image(x+200,y+188 , "wire");
@@ -74,22 +76,24 @@ class FuelEngine extends Phaser.Scene {
    
       
   ]);
-  step++
-  if(step==6){
-    r2.x+=15
-  }
-  if(step==25){
-    r2.x+=25
-  }
-  if(step==35){
-    r2.x-=40
-    step=0
-  }
+//   step++
+//   if(step==6){
+//     r2.x+=15
+//   }
+//   if(step==25){
+//     r2.x+=25
+//   }
+//   if(step==35){
+//     r2.x-=40
+//     step=0
+//   }
   if(ispressed==true&&isfull==false){
     r1.height-=5;
+    r2.width-=0.96
+    
     console.log(y,r1.height)
   }
-  if(r1.height*-197/345==197){
+  if(r1.height*-197/310==197){
     console.log("ok")
     isfull=true
     light_1.clearTint()
@@ -99,4 +103,4 @@ class FuelEngine extends Phaser.Scene {
    
 }
 
-export default FuelEngine;
+export default FuelEngine_1;
