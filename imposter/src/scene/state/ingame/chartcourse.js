@@ -35,9 +35,17 @@ class ChartCourse extends Phaser.Scene {
      console.log(this)
    
   var line = new Phaser.Curves.Line([141, 233, 214, 328]);
+  var line1 = new Phaser.Curves.Line([214, 328, 360, 232]);
+  var line2 = new Phaser.Curves.Line([360, 232, 494, 327]);
   var group = this.add.group({ key: 'dashed', frameQuantity: 15 });
+  var group1 = this.add.group({ key: 'dashed', frameQuantity: 20 });
+  var group2 = this.add.group({ key: 'dashed', frameQuantity: 25 });
   var path= this.add.path()
+  var path1= this.add.path()
+  var path2= this.add.path()
   path.add(line)
+  path1.add(line1)
+  path2.add(line2)
   //Phaser.Actions.PlaceOnLine(group.getChildren(), line);
   
 //   var container = this.add.container(0,0,group.getChildren())
@@ -49,9 +57,9 @@ class ChartCourse extends Phaser.Scene {
 //   repeat:-1,
 //   delay:5000
 // });
-group.rotation+=90
+//group.rotation+=90
  for (var i = 0; i < group.children.entries.length; i++) {
-  var mover = this.add.follower(path, 0, 0, group.children.entries[i].texture.key);
+  const mover = this.add.follower(path, 0, 0, group.children.entries[i].texture.key);
 
   mover.startFollow({
     positionOnPath: true,
@@ -63,9 +71,42 @@ group.rotation+=90
     //    verticalAdjust: true,
         delay: i*100
   });
+  
+ // group.getChildren()[i].setVelocityXY = 40;
+}
+for (var i = 0; i < group.children.entries.length; i++) {
+  const mover = this.add.follower(path1, 0, 0, group.children.entries[i].texture.key);
+
+  mover.startFollow({
+    positionOnPath: true,
+       // duration: -1,
+        yoyo: false,
+        rotateToPath:90,
+        repeat: -1,
+       // rotateToPath: false,
+    //    verticalAdjust: true,
+        delay: i*100
+  });
+  
  // group.getChildren()[i].setVelocityXY = 40;
 }
 
+for (var i = 0; i < group.children.entries.length; i++) {
+  const mover = this.add.follower(path2, 0, 0, group.children.entries[i].texture.key);
+
+  mover.startFollow({
+    positionOnPath: true,
+       // duration: -1,
+        yoyo: false,
+        rotateToPath:90,
+        repeat: -1,
+       // rotateToPath: false,
+    //    verticalAdjust: true,
+        delay: i*100
+  });
+  
+ // group.getChildren()[i].setVelocityXY = 40;
+}
 
 ship1 = this.add.image(140, 232, "Space_ship");
 //  ring1= this.add.image(142,235,"ring")
