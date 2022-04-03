@@ -11,17 +11,26 @@ import calibratorSpin2 from "../../../assets/tasks/Calibrate Distributor/calibra
 import calibratorSpin3 from "../../../assets/tasks/Calibrate Distributor/calibratorSpin3.png";
 var spin1,
   gauge1,
+  border1,
   button1,
+  contact1,
   checkSpin1 = false;
 var spin2,
   gauge2,
+  border2,
   button2,
+  contact2,
   checkSpin2 = false;
 var spin3,
   gauge3,
+  border3,
   button3,
+  contact3,
   checkSpin3 = false;
 var pointer;
+var table;
+
+let r1,step = false;
 class CalibratorDistributor extends Phaser.Scene {
   preload() {
     this.load.image("CalibratorBaseWWires", CalibratorBaseWWires);
@@ -38,18 +47,23 @@ class CalibratorDistributor extends Phaser.Scene {
 
   create() {
     pointer = this.input.activePointer;
-    this.add.image(512, 384, "CalibratorBaseWWires");
+    table = this.add.image(512, 384, "CalibratorBaseWWires");
+    table.setDepth(-2);
 
     gauge1 = this.add.image(665, 210, "calibratorGauge");
+    border1 = this.add.image(665, 210, "calibratorGaugeBorder");
     button1 = this.add.image(665, 260, "calibratorButton");
     spin1 = this.add.sprite(375, 230, "calibratorSpin1");
+    contact1 = this.add.image(455, 231, "calibratorContactBase1Lit");
+    contact1.setDepth(-1);
+    contact1.visible = false;
     spin1.rotation = 1.3;
 
     gauge1.setInteractive();
     button1.setInteractive();
     button1.on("pointerdown", function () {
-      button1.setTint(0x44ffff);
       if (spin1.rotation < 0.06 && spin1.rotation > -0.12) {
+        contact1.visible = true;
         checkSpin1 = true;
       }
     });
@@ -58,16 +72,18 @@ class CalibratorDistributor extends Phaser.Scene {
     });
 
     gauge2 = this.add.image(665, 360, "calibratorGauge");
+    border2 = this.add.image(665, 360, "calibratorGaugeBorder");
     button2 = this.add.image(665, 410, "calibratorButton");
-    // spin2 = this.add.image(375, 380, "calibratorSpin2");
     spin2 = this.add.sprite(375, 380, "calibratorSpin2");
+    contact2 = this.add.image(454, 379, "calibratorContactBase2Lit");
+    contact2.setDepth(-1);
     spin2.rotation = 2.5;
 
     gauge2.setInteractive();
     button2.setInteractive();
     button2.on("pointerdown", function () {
-      button2.setTint(0x44ffff);
       if (spin2.rotation < 0.06 && spin2.rotation > -0.12) {
+        contact2.visible = true;
         checkSpin2 = true;
       }
     });
@@ -76,61 +92,70 @@ class CalibratorDistributor extends Phaser.Scene {
     });
 
     gauge3 = this.add.image(665, 510, "calibratorGauge");
+    border3 = this.add.image(665, 510, "calibratorGaugeBorder");
     button3 = this.add.image(665, 560, "calibratorButton");
-    // spin3 = this.add.image(375, 530, "calibratorSpin3");
     spin3 = this.add.sprite(375, 530, "calibratorSpin3");
+    contact3 = this.add.image(454, 531, "calibratorContactBase3Lit");
+    contact3.setDepth(-1);
     spin3.rotation = 2.7;
 
     gauge3.setInteractive();
     button3.setInteractive();
     button3.on("pointerdown", function () {
-      button3.setTint(0x44ffff);
       if (spin3.rotation < 0.06 && spin3.rotation > -0.12) {
+        contact3.visible = true;
         checkSpin3 = true;
       }
     });
     button3.on("pointerup", function () {
       button3.clearTint();
     });
+
+    // r1 = this.add.rectangle(605, 210, 15, 25, 0xf8ff00);
   }
 
   update() {
-    spin1.angle -= 2;
-    // Phaser.Actions.RotateAround(spin1, {x: 375, y: 230}, -1.5);
+    spin1.angle -= 1.8;
     if (spin1.rotation < 0.05 && spin1.rotation > -0.1) {
-      gauge1.setTintFill(0x44ff44);
+      contact1.visible = true;
+      gauge1.setTintFill(0xffd33c);
     } else {
       if (!checkSpin1) {
+        contact1.visible = false;
         gauge1.clearTint();
       }
     }
     if (checkSpin1) {
       spin1.angle = 0;
-      spin2.angle -= 2;
+      spin2.angle -= 1.8;
     }
 
     if (spin2.rotation < 0.05 && spin2.rotation > -0.1) {
-      gauge2.setTintFill(0x44ff44);
+      contact2.visible = true;
+      gauge2.setTintFill(0x0d5dff);
     } else {
       if (!checkSpin2) {
+        contact2.visible = false;
         gauge2.clearTint();
       }
     }
     if (checkSpin2) {
       spin2.angle = 0;
-      spin3.angle -= 2;
+      spin3.angle -= 1.8;
     }
 
     if (spin3.rotation < 0.05 && spin3.rotation > -0.1) {
-      gauge3.setTintFill(0x44ff44);
+      contact3.visible = true;
+      gauge3.setTintFill(0xa5ffff);
     } else {
       if (!checkSpin3) {
+        contact3.visible = false;
         gauge3.clearTint();
       }
     }
     if (checkSpin3) {
-        spin3.angle = 0;
-        this.add.text(390, 250, "Mission Completed");
+      spin3.angle = 0;
+      this.add.text(390, 250, "Mission Completed");
     }
   }
 }

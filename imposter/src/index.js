@@ -4,6 +4,7 @@ import Preloader from "./scene/preload.js";
 import MainMenuScene from "./scene/menu.js";
 import TheSkeld from "./scene/state/ingame/theskeld.js";
 import ChartCourse from "./scene/state/ingame/chartcourse.js";
+import SwipeCard from "./scene/state/minigame/swipe_card.js";
 import Game from './scene/game.js'
 import Options from "./scene/state/inmenu/options.js";
 import Login from "./scene/login.js";
@@ -42,6 +43,7 @@ game.scene.add('login', Login);
 game.scene.add('submenu', SubMenu)
 game.scene.add("align_engine_output", AlignEngineOutput)
 game.scene.add("calibrate_distributor", CalibrateDistributor);
+game.scene.add("swipe_card", SwipeCard);
 // start title
 
 // game.scene.start("preloader");
@@ -52,4 +54,5 @@ game.scene.add("calibrate_distributor", CalibrateDistributor);
 
 // game.scene.start('preloader');
 // game.scene.start("align_engine_output")
-game.scene.start("calibrate_distributor");
+// game.scene.start("calibrate_distributor");
+game.scene.start("swipe_card");
