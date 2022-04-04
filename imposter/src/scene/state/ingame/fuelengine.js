@@ -59,9 +59,6 @@ class FuelEngine extends Phaser.Scene {
    
     button_.setTint('0xBCBCBC')
     ispressed=true
-      
-   
-
 });
 
 

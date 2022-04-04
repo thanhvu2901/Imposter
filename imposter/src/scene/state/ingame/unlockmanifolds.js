@@ -28,6 +28,8 @@ let step = 0
 let light_,light_1
 let button=[]
 let cords
+let check=[]
+let ischeck=false
 class UnlockManifolds extends Phaser.Scene {
   
   constructor() {
@@ -70,7 +72,34 @@ cords.sort(function(){
 // button09 = this.add.image(x+85,y+45,"Button09")
 // button10 = this.add.image(x+170,y+45,"Button10")
 for(var i=0;i<10;i++){
-    button.push(this.add.image(cords[i][0],cords[i][1],`Button${i+1}`).setInteractive())
+  let temp
+  temp = [this.add.image(cords[i][0],cords[i][1],`Button${i+1}`).setInteractive(),i+1,false]
+    button.push( temp)
+    // temp[0].on('pointerup',() => {
+    //   temp[0].clearTint()
+    // })
+    // temp[0].on('pointerout',() => {
+    //   temp[0].clearTint()
+    // })
+    temp[0].on('pointerdown', function (pointer) {
+      if(temp[2]==false){
+      temp[0].setTint('0x51ff00')
+      temp[2]=true
+      check.push(temp[1])
+
+    }
+    else{
+      temp[0].clearTint()
+      temp[2]=false
+      check=check.filter((value)=>value!=temp[1])
+      
+    //  console.log(check.indexOf(temp[1]))
+      
+    }
+    console.log(check)
+   //   console.log(check.length)
+  })
+
 }
 glass = this.add.image(x,y,"Glass")
 wire = this.add.image(x-210,y+130,"Wire")
@@ -80,6 +109,35 @@ console.log(button)
   }
 
   update(){
+ 
+ if(check.length==10){
+ let order=true
+   for(var i =0;i<10;i++){
+    // console.log(check[i],i+1)
+     if(check[i]!=i+1){
+       console.log("failed")
+       check=[]
+      order=false
+       for(var j=0;j<10;j++){
+         button[j][0].clearTint()
+         button[j][2]=false
+       }
+       break
+     }
+  
+   }
+   if(order==true){
+     ischeck=true
+   }
+ }
+    if(ischeck==true){
+      for(var i=0;i<10;i++){
+        button[i][0].removeInteractive()
+        
+      }
+      console.log('success')
+      this.scene.stop()
+    }
   }
    
 }
