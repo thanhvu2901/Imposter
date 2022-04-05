@@ -9,6 +9,7 @@ import Options from "./scene/state/inmenu/options.js";
 import Login from "./scene/login.js";
 import SubMenu from "./scene/submenu.js";
 import fixWiring from "./scene/state/minigame/fix_wiring.js";
+import AlignEngineOutput from "./scene/state/minigame/align_engine_output";
 var preloader = new Preloader();
 
 const config = {
@@ -30,7 +31,6 @@ const config = {
 };
 
 const game = new Phaser.Game(config);
-
 //game.scene.add(SceneKeys.Preloader, Preloader)
 
 game.scene.add("preloader", preloader);
@@ -47,6 +47,7 @@ game.scene.add('Course', ChartCourse)
 
 game.scene.add('fixWiring', fixWiring)
 
+game.scene.add("align_engine_output", AlignEngineOutput)
 // start title
 
 // game.scene.start("preloader");
@@ -56,5 +57,7 @@ game.scene.add('fixWiring', fixWiring)
 //game.scene.start('login');
 
 //game.scene.start('preloader');
-game.scene.start('Course');
+//game.scene.start('Course');
 
+// game.scene.start('preloader');
+//game.scene.start("align_engine_output")
