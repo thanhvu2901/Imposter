@@ -14,6 +14,9 @@ import CleanO2Filter from "./scene/state/ingame/cleanO2Filter.js";
 import CleanAsteroids from "./scene/state/ingame/cleanAsteroids.js"
 import PrimeShields from "./scene/state/ingame/primeShields.js";
 
+import InspectSample from "./scene/state/minigame/inspect_sample.js";
+import StabilizeSteering from "./scene/state/minigame/stabilize_steering.js";
+import StartReactor from "./scene/state/minigame/start_reactor.js";
 var preloader = new Preloader();
 
 const config = {
@@ -59,6 +62,9 @@ game.scene.add("CleanAsteroids", CleanAsteroids);
 game.scene.add("PrimeShields", PrimeShields);
 
 
+game.scene.add('inspectSample', InspectSample)
+game.scene.add('stabilizeSteering', StabilizeSteering)
+game.scene.add('startReactor', StartReactor)
 // start title
 
 // game.scene.start("preloader");
@@ -74,6 +80,10 @@ game.scene.add("PrimeShields", PrimeShields);
 // game.scene.start('CleanAsteroids');
 //game.scene.start('PrimeShields');
 
+//game.scene.start('fixWiring')
+//game.scene.start('inspectSample')
+// game.scene.start('stabilizeSteering');
+//game.scene.start('startReactor')
 
 // game.scene.start('preloader');
 //game.scene.start("align_engine_output")
