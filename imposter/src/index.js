@@ -10,6 +10,10 @@ import Login from "./scene/login.js";
 import SubMenu from "./scene/submenu.js";
 import fixWiring from "./scene/state/minigame/fix_wiring.js";
 import AlignEngineOutput from "./scene/state/minigame/align_engine_output";
+import CleanO2Filter from "./scene/state/ingame/cleanO2Filter.js";
+import CleanAsteroids from "./scene/state/ingame/cleanAsteroids.js"
+import PrimeShields from "./scene/state/ingame/primeShields.js";
+
 var preloader = new Preloader();
 
 const config = {
@@ -48,6 +52,13 @@ game.scene.add('Course', ChartCourse)
 game.scene.add('fixWiring', fixWiring)
 
 game.scene.add("align_engine_output", AlignEngineOutput)
+game.scene.add("CleanO2Filter", CleanO2Filter);
+
+game.scene.add("CleanAsteroids", CleanAsteroids);
+
+game.scene.add("PrimeShields", PrimeShields);
+
+
 // start title
 
 // game.scene.start("preloader");
@@ -58,6 +69,11 @@ game.scene.add("align_engine_output", AlignEngineOutput)
 
 //game.scene.start('preloader');
 //game.scene.start('Course');
+// game.scene.start('Course');
+// game.scene.start('CleanO2Filter');
+// game.scene.start('CleanAsteroids');
+//game.scene.start('PrimeShields');
+
 
 // game.scene.start('preloader');
 //game.scene.start("align_engine_output")
