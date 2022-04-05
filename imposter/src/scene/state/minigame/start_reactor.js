@@ -29,7 +29,7 @@ let gen_arr = new Array;
 let input_arr = new Array;
 let can_input = false
 let level = 1
-
+let temp;
 class StartReactor extends Phaser.Scene {
     constructor() {
         super({
@@ -112,11 +112,12 @@ class StartReactor extends Phaser.Scene {
 
         //reg[6][0].setFillStyle('0x0000FF')
 
-        for (let i = 0; i < 5; i++) {
-            setTimeout(() => {
-                out_put()
+        for (let i = 0; i < 4; i++) {
+            setTimeout(function () {
+                out_put(i)
                 level++
-            }, 3000)
+
+            }, i * temp * 5000)
         }
 
 
@@ -157,38 +158,67 @@ class StartReactor extends Phaser.Scene {
 }
 
 
-function out_put() {
+function out_put(i) {
     // setTimeout(() => {
-    for (let i = 0; i < level; i++) {
-        console.log('level' + level);
-        if (i < level) {
-            setTimeout(() => {
+    //for (let i = 0; i < level; i++) {
+    // console.log('level' + level);
 
-
-                // setTimeout(() => {
-                //console.log('day là i' + i + ' lvel ' + level);
-                console.log(gen_arr[i]);
-                reg[gen_arr[i]][0].setFillStyle('0x0000FF')
-                //setTimeout(out_put, 2000)
-                //level++;
-                // }, 5000)
-
-            }, 3000)
+    // console.log(i);
+    if (i < level) {
+        console.log(level);
+        if (i == 0) {
+            input_arr.push(reg[gen_arr[0]])
+            // input_arr.push(reg[gen_arr[1]])
+            // console.log('input');
+            //level++;
         }
+        if (i == 1) {
+            input_arr.push(reg[gen_arr[1]])
+            // level++;
+        }
+        if (i == 2) {
+            input_arr.push(reg[gen_arr[2]])
+            //level++;
+        }
+        if (i == 3) {
+            input_arr.push(reg[gen_arr[3]])
+            // level++;
+        }
+        for (let j = 0; j < input_arr.length; j++) {
+            temp = j
+            setTimeout(() => input_arr[j][0].setFillStyle('0x0000FF'), j * 3000 + 1000)
+            // input_arr[j][0].setFillStyle('0x0000FF')
+
+            setTimeout(() => {
+                input_arr[j][0].setFillStyle('0x6666ff')
+                // level++;
+                // console.log('level' + level);
+
+            }, j * 3000 + 2000)
+
+        }
+
+
+        //console.log(input_arr);
+
+
+        // }, i * 3000)
+        //  level++;
+        //}
+
         // 
 
-        // if (check(element) === true) {
-        //     console.log(element);
-        //     //level++;
-        // }
+        //     // if (check(element) === true) {
+        //     //     console.log(element);
+        //     //     //level++;
+        //     // }
 
-        //reg[element][0].setFillStyle('0x6666ff')
+        //     //reg[element][0].setFillStyle('0x6666ff')
 
     }
 
 
     //}, 2000)
-
 
 
     //console.log('break');
