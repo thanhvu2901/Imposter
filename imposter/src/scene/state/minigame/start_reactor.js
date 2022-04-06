@@ -28,7 +28,9 @@ let gen_arr = new Array;
 let input_arr = new Array;
 let sequence_button = new Array
 let can_input = false
-let level = 1
+let level = 1;
+
+let loop = 0
 let delay = 0
 let count = 0;
 let isgameover = false
@@ -68,29 +70,27 @@ class StartReactor extends Phaser.Scene {
 
         this.add.image(this.game.renderer.width * 3 / 8, this.game.renderer.height / 2 + 10, 'sayScreen').setDepth(1)
 
-        num[2] = [this.add.image(this.game.renderer.width * 5 / 8, this.game.renderer.height / 2 - 40, 'btn2').setDepth(1).setInteractive(), 2]
-        num[5] = [this.add.image(this.game.renderer.width * 5 / 8, this.game.renderer.height / 2 + 10, 'btn5').setDepth(1).setInteractive(), 5]
-        num[8] = [this.add.image(this.game.renderer.width * 5 / 8, this.game.renderer.height / 2 + 60, 'btn8').setDepth(1).setInteractive(), 8]
+        num[2] = this.add.image(this.game.renderer.width * 5 / 8, this.game.renderer.height / 2 - 40, 'btn2').setDepth(1).setInteractive()
+        num[5] = this.add.image(this.game.renderer.width * 5 / 8, this.game.renderer.height / 2 + 10, 'btn5').setDepth(1).setInteractive()
+        num[8] = this.add.image(this.game.renderer.width * 5 / 8, this.game.renderer.height / 2 + 60, 'btn8').setDepth(1).setInteractive()
 
-        num[1] = [this.add.image(this.game.renderer.width * 5 / 8 - 50, this.game.renderer.height / 2 - 40, 'btn1').setDepth(1).setInteractive(), 1]
-        num[4] = [this.add.image(this.game.renderer.width * 5 / 8 - 50, this.game.renderer.height / 2 + 10, 'btn4').setDepth(1).setInteractive(), 4]
-        num[7] = [this.add.image(this.game.renderer.width * 5 / 8 - 50, this.game.renderer.height / 2 + 60, 'btn7').setDepth(1).setInteractive(), 7]
+        num[1] = this.add.image(this.game.renderer.width * 5 / 8 - 50, this.game.renderer.height / 2 - 40, 'btn1').setDepth(1).setInteractive()
+        num[4] = this.add.image(this.game.renderer.width * 5 / 8 - 50, this.game.renderer.height / 2 + 10, 'btn4').setDepth(1).setInteractive()
+        num[7] = this.add.image(this.game.renderer.width * 5 / 8 - 50, this.game.renderer.height / 2 + 60, 'btn7').setDepth(1).setInteractive()
 
-        num[3] = [this.add.image(this.game.renderer.width * 5 / 8 + 50, this.game.renderer.height / 2 - 40, 'btn3').setDepth(1).setInteractive(), 3]
-        num[6] = [this.add.image(this.game.renderer.width * 5 / 8 + 50, this.game.renderer.height / 2 + 10, 'btn6').setDepth(1).setInteractive(), 6]
-        num[9] = [this.add.image(this.game.renderer.width * 5 / 8 + 50, this.game.renderer.height / 2 + 60, 'btn9').setDepth(1).setInteractive(), 9]
+        num[3] = this.add.image(this.game.renderer.width * 5 / 8 + 50, this.game.renderer.height / 2 - 40, 'btn3').setDepth(1).setInteractive()
+        num[6] = this.add.image(this.game.renderer.width * 5 / 8 + 50, this.game.renderer.height / 2 + 10, 'btn6').setDepth(1).setInteractive()
+        num[9] = this.add.image(this.game.renderer.width * 5 / 8 + 50, this.game.renderer.height / 2 + 60, 'btn9').setDepth(1).setInteractive()
 
-        reg[2] = [this.add.rectangle(this.game.renderer.width * 3 / 8, this.game.renderer.height / 2 - 40, 45, 45, '0x6666ff').setDepth(2), 2]
-        reg[5] = [this.add.rectangle(this.game.renderer.width * 3 / 8, this.game.renderer.height / 2 + 10, 45, 45, '0x6666ff').setDepth(2), 5]
-        reg[8] = [this.add.rectangle(this.game.renderer.width * 3 / 8, this.game.renderer.height / 2 + 60, 45, 45, '0x6666ff').setDepth(2), 8]
-
-        reg[1] = [this.add.rectangle(this.game.renderer.width * 3 / 8 - 50, this.game.renderer.height / 2 - 40, 45, 45, '0x6666ff').setDepth(2), 1]
-        reg[4] = [this.add.rectangle(this.game.renderer.width * 3 / 8 - 50, this.game.renderer.height / 2 + 10, 45, 45, '0x6666ff').setDepth(2), 4]
-        reg[7] = [this.add.rectangle(this.game.renderer.width * 3 / 8 - 50, this.game.renderer.height / 2 + 60, 45, 45, '0x6666ff').setDepth(2), 7]
-
-        reg[3] = [this.add.rectangle(this.game.renderer.width * 3 / 8 + 50, this.game.renderer.height / 2 - 40, 45, 45, '0x6666ff').setDepth(2), 3]
-        reg[6] = [this.add.rectangle(this.game.renderer.width * 3 / 8 + 50, this.game.renderer.height / 2 + 10, 45, 45, '0x6666ff').setDepth(2), 6]
-        reg[9] = [this.add.rectangle(this.game.renderer.width * 3 / 8 + 50, this.game.renderer.height / 2 + 60, 45, 45, '0x6666ff').setDepth(2), 9]
+        reg[2] = this.add.rectangle(this.game.renderer.width * 3 / 8, this.game.renderer.height / 2 - 40, 45, 45, '0x6666ff').setDepth(2)
+        reg[5] = this.add.rectangle(this.game.renderer.width * 3 / 8, this.game.renderer.height / 2 + 10, 45, 45, '0x6666ff').setDepth(2)
+        reg[8] = this.add.rectangle(this.game.renderer.width * 3 / 8, this.game.renderer.height / 2 + 60, 45, 45, '0x6666ff').setDepth(2)
+        reg[1] = this.add.rectangle(this.game.renderer.width * 3 / 8 - 50, this.game.renderer.height / 2 - 40, 45, 45, '0x6666ff').setDepth(2)
+        reg[4] = this.add.rectangle(this.game.renderer.width * 3 / 8 - 50, this.game.renderer.height / 2 + 10, 45, 45, '0x6666ff').setDepth(2)
+        reg[7] = this.add.rectangle(this.game.renderer.width * 3 / 8 - 50, this.game.renderer.height / 2 + 60, 45, 45, '0x6666ff').setDepth(2)
+        reg[3] = this.add.rectangle(this.game.renderer.width * 3 / 8 + 50, this.game.renderer.height / 2 - 40, 45, 45, '0x6666ff').setDepth(2)
+        reg[6] = this.add.rectangle(this.game.renderer.width * 3 / 8 + 50, this.game.renderer.height / 2 + 10, 45, 45, '0x6666ff').setDepth(2)
+        reg[9] = this.add.rectangle(this.game.renderer.width * 3 / 8 + 50, this.game.renderer.height / 2 + 60, 45, 45, '0x6666ff').setDepth(2)
 
         for (let i = 0; i < 5; i++) {
 
@@ -102,20 +102,24 @@ class StartReactor extends Phaser.Scene {
             let rand = Math.floor(Math.random() * 9) + 1;
             gen_arr.push(rand)
         }
-        console.log(gen_arr);
-        let loop = 0
+        // console.log(gen_arr);
+
         //  greeting(loop) 
         for (let i = 1; i <= 9; i++) {
-            num[i][0].on('pointerdown', () => {
-                input_arr = []
+            num[i].on('pointerdown', () => {
                 input_arr.push(i);
-                if (validate_input() == true) {
-                    if (loop < 5) {
 
-                        out_put(loop += 1);
+                if (validate_input(input_arr) == true) {
+                    input_arr = [];
 
+                    if (level < 5) {
+                        loop += 1;
+                        level++;
+                        out_put(loop);
                     }
-                    else return
+                    else {
+                        console.log('done!');
+                    }
 
                 }
             })
@@ -136,21 +140,17 @@ class StartReactor extends Phaser.Scene {
 
 
 function out_put(i) {
-    console.log(i);
+
     if (i < level) {
-        //  console.log(level);
-        level += 1
-        // input_arr.push(reg[gen_arr[0]])
+
         sequence_button.push(reg[gen_arr[i]])
-        console.log(sequence_button);
-        //level++;
+
         for (let j = 0; j < sequence_button.length; j++) {
-            //temp = j
-            setTimeout(() => sequence_button[j][0].setFillStyle('0x0000FF'), j * 1000)
-            // input_arr[j][0].setFillStyle('0x0000FF')
+
+            setTimeout(() => sequence_button[j].setFillStyle('0x0000FF'), j * 1000)
 
             setTimeout(() => {
-                sequence_button[j][0].setFillStyle('0x6666ff')
+                sequence_button[j].setFillStyle('0x6666ff')
 
                 // console.log('level' + level);
 
@@ -160,19 +160,35 @@ function out_put(i) {
     }
 
 }
-function validate_input() {
+function validate_input(input) {
+    console.log(input + " vvv  " + gen_arr);
+    // console.log(input_arr[input_arr.length - 1] + ' &&' + gen_arr[input_arr.length - 1]);
+    for (let index = 0; index < input.length; index++) {
+        console.log(input[index] + "   " + gen_arr[index]);
+        if (input[index] !== gen_arr[index]) {
+            isgameover = true;
+            can_input = false
+            // gameover();
+            console.log('wrong');
+            input_arr = [];
+            loop = 0;
+            level = 1;
+            sequence_button = []
 
-    console.log(input_arr[input_arr.length - 1] + ' &&' + gen_arr[input_arr.length - 1]);
-    if (input_arr[input_arr.length - 1] != gen_arr[input_arr.length - 1]) {
-        isgameover = true;
-        can_input = false
-        // gameover();
-        console.log('wrong');
+            out_put(loop)
+        }
+        else {
+
+            if (index == level - 1) {
+
+                return true
+            }
+            console.log('passed');
+        }
+        //   return false;
+
     }
-    else {
-        console.log('passed');
-        return true
-    }
+
 
 
 }
