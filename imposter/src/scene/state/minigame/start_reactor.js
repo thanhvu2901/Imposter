@@ -17,19 +17,21 @@ import sayScreen from '../../../assets/tasks/Start Reactor/simonSaysScreen.png'
 
 import sslight from '../../../assets/tasks/Start Reactor/sslights/sslights1.png'
 
-let left, right;
+
 let num = new Array;
 let reg = new Array;
 let lightleft = new Array
 let lightright = new Array
-let count = 1;
-let x, y
+
 
 let gen_arr = new Array;
 let input_arr = new Array;
+let sequence_button = new Array
 let can_input = false
 let level = 1
-let temp;
+let delay = 0
+let count = 0;
+let isgameover = false
 class StartReactor extends Phaser.Scene {
     constructor() {
         super({
@@ -100,51 +102,26 @@ class StartReactor extends Phaser.Scene {
             let rand = Math.floor(Math.random() * 9) + 1;
             gen_arr.push(rand)
         }
+        console.log(gen_arr);
+        let loop = 0
+        //  greeting(loop) 
+        for (let i = 1; i <= 9; i++) {
+            num[i][0].on('pointerdown', () => {
+                input_arr = []
+                input_arr.push(i);
+                if (validate_input() == true) {
+                    if (loop < 5) {
 
-        //56374
+                        out_put(loop += 1);
 
-        //while (count < 5) {
-        //onled1
-        //count = 1;
-        // reg[5][0].setFillStyle('0x0000FF')
-        //console.log(check(5))
-        // let a = check(5);
+                    }
+                    else return
 
-        //reg[6][0].setFillStyle('0x0000FF')
-
-        for (let i = 0; i < 4; i++) {
-            setTimeout(function () {
-                out_put(i)
-
-
-            }, i * temp * 5000)
+                }
+            })
         }
 
-
-
-
-
-
-
-
-        // if (check(5) == reg[5][1]) {
-        //     if (count == 2) {
-        //         count++;
-        //         console.log('2');
-        //         continue;
-        //     }
-        //     else {
-        //         count = 1;
-        //     }
-        // }
-        // reg[3][0].setFillStyle('0x0000FF')
-
-        // reg[7][0].setFillStyle('0x0000FF')
-
-        // reg[4][0].setFillStyle('0x0000FF')
-
-
-
+        out_put(loop)
 
 
 
@@ -159,81 +136,45 @@ class StartReactor extends Phaser.Scene {
 
 
 function out_put(i) {
-    // setTimeout(() => {
-    //for (let i = 0; i < level; i++) {
-    // console.log('level' + level);
-
-    // console.log(i);
+    console.log(i);
     if (i < level) {
-        console.log(level);
-        if (i == 0) {
-            input_arr.push(reg[gen_arr[0]])
-            // input_arr.push(reg[gen_arr[1]])
-            // console.log('input');
-            //level++;
-        }
-        if (i == 1) {
-            input_arr.push(reg[gen_arr[1]])
-            // level++;
-        }
-        if (i == 2) {
-            input_arr.push(reg[gen_arr[2]])
-            //level++;
-        }
-        if (i == 3) {
-            input_arr.push(reg[gen_arr[3]])
-            // level++;
-        }
-        for (let j = 0; j < input_arr.length; j++) {
-            temp = j
-            setTimeout(() => input_arr[j][0].setFillStyle('0x0000FF'), j * 3000)
+        //  console.log(level);
+        level += 1
+        // input_arr.push(reg[gen_arr[0]])
+        sequence_button.push(reg[gen_arr[i]])
+        console.log(sequence_button);
+        //level++;
+        for (let j = 0; j < sequence_button.length; j++) {
+            //temp = j
+            setTimeout(() => sequence_button[j][0].setFillStyle('0x0000FF'), j * 1000)
             // input_arr[j][0].setFillStyle('0x0000FF')
 
             setTimeout(() => {
-                input_arr[j][0].setFillStyle('0x6666ff')
-                level++;
+                sequence_button[j][0].setFillStyle('0x6666ff')
+
                 // console.log('level' + level);
 
-            }, j * 3000 + 1000)
-
+            }, j * 1000 + 500)
         }
-
-
-        //console.log(input_arr);
-
-
-        // }, i * 3000)
-        //  level++;
-        //}
-
-        // 
-
-        //     // if (check(element) === true) {
-        //     //     console.log(element);
-        //     //     //level++;
-        //     // }
-
-        //     //reg[element][0].setFillStyle('0x6666ff')
 
     }
 
-
-    //}, 2000)
-
-
-    //console.log('break');
-    // }
 }
-async function check(x) {
-    await num[x][0].on('pointerdown', () => {
-        let icheck = num[x][1]
-        if (icheck == reg[x][1]) {
-            console.log('true');
-            return true
-        }
-        console.log('false');
-        return false;
-    })
+function validate_input() {
+
+    console.log(input_arr[input_arr.length - 1] + ' &&' + gen_arr[input_arr.length - 1]);
+    if (input_arr[input_arr.length - 1] != gen_arr[input_arr.length - 1]) {
+        isgameover = true;
+        can_input = false
+        // gameover();
+        console.log('wrong');
+    }
+    else {
+        console.log('passed');
+        return true
+    }
+
+
 }
 
 export default StartReactor
