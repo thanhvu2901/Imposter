@@ -115,7 +115,7 @@ class StartReactor extends Phaser.Scene {
         for (let i = 0; i < 4; i++) {
             setTimeout(function () {
                 out_put(i)
-                level++
+
 
             }, i * temp * 5000)
         }
@@ -186,15 +186,15 @@ function out_put(i) {
         }
         for (let j = 0; j < input_arr.length; j++) {
             temp = j
-            setTimeout(() => input_arr[j][0].setFillStyle('0x0000FF'), j * 3000 + 1000)
+            setTimeout(() => input_arr[j][0].setFillStyle('0x0000FF'), j * 3000)
             // input_arr[j][0].setFillStyle('0x0000FF')
 
             setTimeout(() => {
                 input_arr[j][0].setFillStyle('0x6666ff')
-                // level++;
+                level++;
                 // console.log('level' + level);
 
-            }, j * 3000 + 2000)
+            }, j * 3000 + 1000)
 
         }
 
