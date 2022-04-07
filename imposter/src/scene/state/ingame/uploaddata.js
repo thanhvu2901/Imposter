@@ -34,14 +34,14 @@ class UploadData extends Phaser.Scene {
           { key: 'Folder_4',x:x-128,y:y-30},
           { key: 'Folder_5',x:x-126,y:y-27 }
       ],
-      frameRate: 1,
+      frameRate: 8,
       repeat: -1
   });
     
-  test.frames[1].frame.x=7
-  test.frames[2].frame.x=12
+  test.frames[1].frame.x=6
+  test.frames[2].frame.x=11
   test.frames[2].frame.y=3
-  test.frames[3].frame.x=12
+  test.frames[3].frame.x=10
   test.frames[3].frame.y=5
 
   console.log(test.frames[2].frame.x)
