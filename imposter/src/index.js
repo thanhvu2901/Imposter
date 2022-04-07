@@ -8,6 +8,7 @@ import Game from './scene/game.js'
 import FuelEngine from "./scene/state/ingame/fuelengine.js";
 import FuelEngine_1 from "./scene/state/ingame/fuelengine_1.js";
 import UnlockManifolds from "./scene/state/ingame/unlockmanifolds.js";
+import UploadData from "./scene/state/ingame/uploaddata.js";
 var preloader = new Preloader();
 
 const config = {
@@ -33,6 +34,7 @@ game.scene.add('Course',ChartCourse)
 game.scene.add('Fuel',FuelEngine)
 game.scene.add('Fuel_1',FuelEngine_1)
 game.scene.add('Unlock',UnlockManifolds)
+game.scene.add('Upload',UploadData)
 // start title
 
 // game.scene.start("preloader");
@@ -40,5 +42,5 @@ game.scene.add('Unlock',UnlockManifolds)
 //game.scene.start('menu');
 // game.scene.start('game');
 
-game.scene.start('Unlock');
+game.scene.start('Upload');
 
