@@ -109,18 +109,29 @@ class StartReactor extends Phaser.Scene {
             num[i].on('pointerdown', () => {
                 input_arr.push(i);
 
+                lightright[count].setTint('0x00FF00')
+                count++;
                 if (validate_input(input_arr) == true) {
+                    lightleft[level - 1].setTint('0x00FF00')
+
                     input_arr = [];
 
                     if (level < 5) {
                         loop += 1;
                         level++;
+                        refresh(lightright, level)
                         out_put(loop);
                     }
                     else {
                         console.log('done!');
                     }
 
+                }
+                else {
+                    //  refresh(lightright, level)
+                    //refresh(lightleft, level)
+                    // count = 0;
+                    // count = count + 1;
                 }
             })
         }
@@ -190,7 +201,12 @@ function validate_input(input) {
     }
 
 
-
+}
+function refresh(light, level) {
+    for (let i = 0; i < level; i++) {
+        light[i].clearTint();
+    }
+    count = 0;
 }
 
 export default StartReactor
