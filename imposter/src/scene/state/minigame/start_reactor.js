@@ -105,13 +105,12 @@ class StartReactor extends Phaser.Scene {
         // console.log(gen_arr);
 
         //  greeting(loop) 
+        //add start
+
         for (let i = 1; i <= 9; i++) {
             num[i].on('pointerdown', () => {
                 input_arr.push(i);
-
-                lightright[count].setTint('0x00FF00')
-                count++;
-                if (validate_input(input_arr) == true) {
+                if (validate_input(input_arr) === true) {
                     lightleft[level - 1].setTint('0x00FF00')
 
                     input_arr = [];
@@ -127,12 +126,7 @@ class StartReactor extends Phaser.Scene {
                     }
 
                 }
-                else {
-                    //  refresh(lightright, level)
-                    //refresh(lightleft, level)
-                    // count = 0;
-                    // count = count + 1;
-                }
+
             })
         }
 
@@ -151,7 +145,8 @@ class StartReactor extends Phaser.Scene {
 
 
 function out_put(i) {
-
+    console.log(i);
+    console.log(level);
     if (i < level) {
 
         sequence_button.push(reg[gen_arr[i]])
@@ -177,18 +172,32 @@ function validate_input(input) {
     for (let index = 0; index < input.length; index++) {
         console.log(input[index] + "   " + gen_arr[index]);
         if (input[index] !== gen_arr[index]) {
-            isgameover = true;
-            can_input = false
+            // isgameover = true;
+            // can_input = false
             // gameover();
             console.log('wrong');
-            input_arr = [];
-            loop = 0;
-            level = 1;
-            sequence_button = []
 
-            out_put(loop)
+            // refresh(lightright, level - 1)
+            console.log('input false');
+            refresh(lightleft, level)
+            refresh(lightright, level - 1)
+            count = 0;
+            level = 1;
+            loop = 0;
+            sequence_button = []
+            input_arr = []
+            // //  count = 0;
+            // level = 1;
+            // loop = 0;
+            return out_put(loop)
+
+            //return false;
+
+
+            // out_put(loop)
         }
         else {
+            lightright[index].setTint('0x00FF00')
 
             if (index == level - 1) {
 
@@ -206,7 +215,7 @@ function refresh(light, level) {
     for (let i = 0; i < level; i++) {
         light[i].clearTint();
     }
-    count = 0;
+
 }
 
 export default StartReactor
