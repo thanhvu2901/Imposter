@@ -114,7 +114,7 @@ class StartReactor extends Phaser.Scene {
 
             num[i].on('pointerdown', () => {
                 num[i].setScale(0.9, 0.9)
-                console.log('pponter down');
+                //console.log('pponter down');
                 num[i].on('pointerup', () => {
                     //num[i].callback.bind(callbackContext)
                     //console.log('pointerup');
@@ -169,8 +169,8 @@ class StartReactor extends Phaser.Scene {
 
 
 function out_put(i) {
-    console.log(i);
-    console.log(level);
+    // console.log(i);
+    // console.log(level);
     if (i < level) {
 
         sequence_button.push(reg[gen_arr[i]])
@@ -182,30 +182,24 @@ function out_put(i) {
             setTimeout(() => {
                 sequence_button[j].setFillStyle('0x6666ff')
 
-                // console.log('level' + level);
+
 
             }, j * 1000 + 500)
 
-            // setTimeout(() => {
-            //     can_input = true;
-            // }, j * 2000 + 500)
+
         }
 
-        // can_input = true;
+
 
 
     }
 
 }
 function validate_input(input) {
-    console.log(input + " vvv  " + gen_arr);
+    // console.log(input + " vvv  " + gen_arr);
     for (let index = 0; index < input.length; index++) {
-        console.log(input[index] + "   " + gen_arr[index]);
+        // console.log(input[index] + "   " + gen_arr[index]);
         if (input[index] !== gen_arr[index]) {
-
-
-            console.log('input false');
-            ///var cam = Phaser.Cameras.Scene2D.Camera.
 
             refresh(lightleft, level)
             refresh(lightright, level - 1)
@@ -226,7 +220,7 @@ function validate_input(input) {
 
                 return true
             }
-            console.log('passed');
+            // console.log('passed');
         }
         //   return false;
 
