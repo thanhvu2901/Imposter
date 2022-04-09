@@ -34,6 +34,8 @@ let loop = 0
 let delay = 0
 let count = 0;
 let isgameover = false
+
+let ob;
 class StartReactor extends Phaser.Scene {
     constructor() {
         super({
@@ -102,13 +104,22 @@ class StartReactor extends Phaser.Scene {
             let rand = Math.floor(Math.random() * 9) + 1;
             gen_arr.push(rand)
         }
-        // console.log(gen_arr);
-
-        //  greeting(loop) 
-        //add start
 
         for (let i = 1; i <= 9; i++) {
+
+        }
+
+        for (let i = 1; i <= 9; i++) {
+
+
             num[i].on('pointerdown', () => {
+                num[i].setScale(0.9, 0.9)
+                console.log('pponter down');
+                num[i].on('pointerup', () => {
+                    //num[i].callback.bind(callbackContext)
+                    //console.log('pointerup');
+                    num[i].setScale(1, 1)
+                })
                 input_arr.push(i);
                 if (validate_input(input_arr) === true) {
                     lightleft[level - 1].setTint('0x00FF00')
@@ -122,12 +133,19 @@ class StartReactor extends Phaser.Scene {
                         out_put(loop);
                     }
                     else {
-                        console.log('done!');
+                        this.add.text(317, 327, 'TASK COMPLETE!!', { font: '50px Courier', fill: '#FFFFFF' }).setDepth(2);
                     }
 
                 }
+                else if (validate_input(input_arr) === false) {
+                    this.cameras.main.shake(500);
+                }
+                ////  else { console.log(this.cameras.main); }
 
             })
+
+
+
         }
 
         out_put(loop)
@@ -137,10 +155,16 @@ class StartReactor extends Phaser.Scene {
 
     }
     update() {
+        if (ob == true) {
+            this.cameras.main.shake(100);
+            ob = false
+        }
+
+
+
+
 
     }
-
-
 }
 
 
@@ -161,24 +185,28 @@ function out_put(i) {
                 // console.log('level' + level);
 
             }, j * 1000 + 500)
+
+            // setTimeout(() => {
+            //     can_input = true;
+            // }, j * 2000 + 500)
         }
+
+        // can_input = true;
+
 
     }
 
 }
 function validate_input(input) {
     console.log(input + " vvv  " + gen_arr);
-    // console.log(input_arr[input_arr.length - 1] + ' &&' + gen_arr[input_arr.length - 1]);
     for (let index = 0; index < input.length; index++) {
         console.log(input[index] + "   " + gen_arr[index]);
         if (input[index] !== gen_arr[index]) {
-            // isgameover = true;
-            // can_input = false
-            // gameover();
-            console.log('wrong');
 
-            // refresh(lightright, level - 1)
+
             console.log('input false');
+            ///var cam = Phaser.Cameras.Scene2D.Camera.
+
             refresh(lightleft, level)
             refresh(lightright, level - 1)
             count = 0;
@@ -186,15 +214,10 @@ function validate_input(input) {
             loop = 0;
             sequence_button = []
             input_arr = []
-            // //  count = 0;
-            // level = 1;
-            // loop = 0;
+
+            ob = true
             return out_put(loop)
 
-            //return false;
-
-
-            // out_put(loop)
         }
         else {
             lightright[index].setTint('0x00FF00')
@@ -217,5 +240,8 @@ function refresh(light, level) {
     }
 
 }
+
+
+
 
 export default StartReactor
