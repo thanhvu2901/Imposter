@@ -5,23 +5,21 @@ import playerpng from "../assets/player/player_sprite/player_base.png";
 import playerjson from "../assets/player/player_sprite/player_base.json";
 import { debugDraw } from "../scene/debugDraw";
 
-import { movePlayer } from "../animation/movement.js";
-
 import { io } from 'socket.io-client';
 import {
-
-  PLAYER_HEIGHT,
-  PLAYER_WIDTH,
-  PLAYER_START_X,
-  PLAYER_START_Y,
   PLAYER_SPEED
 } from "../consts/constants";
 
-var player;
-var cursors;
+let player
+let otherPlayer = new Array;
+let otherPlayerId = new Array;
+let cursors;
 let pressedKeys = [];
-let otherPlayer = {};
+let stt = 0;
+
 let socket;
+
+// otherPlayer.indexOf
 
 class Game extends Phaser.Scene {
   constructor() {
@@ -46,7 +44,12 @@ class Game extends Phaser.Scene {
     player = this.physics.add.sprite(250, 328, "playerbase", "idle.png");
 
     // tạo theo số lượng other player vào
-    otherPlayer = this.physics.add.sprite(250, 228, "playerbase", "idle.png");
+
+
+
+
+    //  otherPlayer[playerId] = this.physics.add.sprite(250, 228, "playerbase", "idle.png");
+
     //****************** */
 
 
@@ -101,23 +104,63 @@ class Game extends Phaser.Scene {
 
     this.cameras.main.startFollow(player, true);
 
-    //listen from other 
-    socket.on('move', ({ x, y }) => {
-      console.log('revieved move');
-      if (otherPlayer.x > x) {
-        otherPlayer.flipX = true;
-      } else if (otherPlayer.x < x) {
-        otherPlayer.flipX = false;
+
+    //nếu có player mới vào thì nhận và tạo mới trong map
+    // socket.emit('new',({socketId: socket.id}))
+
+
+
+    //tải lại mới khi có player mới vào có các player đã ở trong đó
+
+
+    // socket.on('otherPlayer', ({ listPlayer }) => {
+    //   // otherPlayer[playerId] = this.physics.add.sprite(250, 228, "playerbase", "idle.png");
+    //   // listplyer socket có khác với tại local khong
+    //   for (let i = 0; i < listPlayer.length; i++) {
+    //     otherPlayerId[i] = listPlayer[i]
+    //     otherPlayer[i] = this.physics.add.sprite(250, 328 + 10 * i, "playerbase", "idle.png");
+
+    //   }
+    //   console.log(otherPlayerId);
+    // })
+
+    socket.on('move', ({ x, y, playerId }) => {
+      console.log({ x, y, playerId });
+
+      let index = otherPlayerId.findIndex(Element => Element == playerId)
+      //id = index;
+      console.log(index);
+
+      if (otherPlayer[index].x > x) {
+        otherPlayer[index].flipX = true;
+      } else if (otherPlayer[index].x < x) {
+        otherPlayer[index].flipX = false;
       }
-      otherPlayer.x = x;
-      otherPlayer.y = y;
-      otherPlayer.moving = true;
+      otherPlayer[index].x = x;
+      otherPlayer[index].y = y;
+      otherPlayer[index].moving = true;
+
+      if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
+        otherPlayer[index].play('player-walk');
+      } else if (!otherPlayer[index].moving && otherPlayer[index].anims.isPlaying) {
+        otherPlayer[index].stop('player-walk');
+      }
     });
-    socket.on('moveEnd', () => {
-      console.log('revieved moveend');
-      otherPlayer.moving = false;
-      otherPlayer.anims.play('player-idle')
+
+    socket.on('moveEnd', ({ playerId }) => {
+      let index = otherPlayerId.findIndex(Element => Element == playerId)
+      //  console.log('revieved moveend');
+      //id = index;
+      otherPlayer[index].moving = false;
+      otherPlayer[index].anims.play('player-idle')
+      if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
+        otherPlayer[index].play('player-walk');
+      } else if (!otherPlayer[index].moving && otherPlayer[index].anims.isPlaying) {
+        otherPlayer[index].stop('player-walk');
+      }
+
     });
+
 
   }
 
@@ -160,10 +203,10 @@ class Game extends Phaser.Scene {
       playerMoved = true;
     }
 
-    //emit
-    //  this.scene.scene.cameras.main.centerOn(player.sprite.x, player.sprite.y);
-    //const playerMoved = movePlayer(pressedKeys, player.sprite);
+
+
     if (playerMoved) {
+
       socket.emit('move', { x: player.x, y: player.y });
       //console.log(player.x);
       player.movedLastFrame = true;
@@ -173,13 +216,21 @@ class Game extends Phaser.Scene {
       }
       player.movedLastFrame = false;
     }
+    socket.on("play", (data) => {
+      //emit lai lis
+      console.log('new');
+      console.log(data);
+      // console.log(listPlayer);
+      // console.log(newId);
+      // otherPlayerId.push(newId);
+      // otherPlayer[stt] = this.physics.add.sprite(250, 328 + 10 * stt, "playerbase", "idle.png");
+      // stt += 1;
 
-    // update running other player
-    if (otherPlayer.moving && !otherPlayer.anims.isPlaying) {
-      otherPlayer.play('player-walk');
-    } else if (!otherPlayer.moving && otherPlayer.anims.isPlaying) {
-      otherPlayer.stop('player-walk');
-    }
+      // console.log(otherPlayerId);
+      //console.log(listPlayer);
+
+    })
+
   }
 }
 

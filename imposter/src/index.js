@@ -67,7 +67,7 @@ game.scene.add('stabilizeSteering', StabilizeSteering)
 game.scene.add('startReactor', StartReactor)
 // start title
 
-// game.scene.start("preloader");
+game.scene.start("preloader");
 // game.scene.start("theskeld");
 //game.scene.start('menu');
 // game.scene.start('game');
@@ -83,7 +83,7 @@ game.scene.add('startReactor', StartReactor)
 //game.scene.start('fixWiring')
 //game.scene.start('inspectSample')
 // game.scene.start('stabilizeSteering');
-game.scene.start('startReactor')
+//game.scene.start('startReactor')
 
 // game.scene.start('preloader');
 //game.scene.start("align_engine_output")
