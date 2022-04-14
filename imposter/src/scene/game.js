@@ -30,6 +30,31 @@ class Game extends Phaser.Scene {
     this.load.tilemapTiledJSON("tilemap", theskeld);
     this.load.atlas("playerbase", playerpng, playerjson);
     socket = io('localhost:3000')
+
+    socket.on("play", (listPlayer) => {
+      //emit lai lis
+      // console.log('new');
+      // console.log(data);
+      console.log(listPlayer);
+      // console.log(newId);
+      // otherPlayerId.push(listPlayer);
+      // console.log(otherPlayerId);
+      console.log('this' + listPlayer[0]);
+      for (let i = 0; i < listPlayer.length; i++) {
+        otherPlayerId.push(listPlayer[i])
+      }
+
+      // console.log(otherPlayerId);
+      // console.log(otherPlayer);
+      // // 
+      // // stt += 1;  
+      // stt = otherPlayer.length;
+
+      // console.log(otherPlayerId);
+      //console.log(listPlayer);
+
+    })
+
   }
 
   create() {
@@ -45,6 +70,10 @@ class Game extends Phaser.Scene {
 
     // tạo theo số lượng other player vào
 
+    for (let i = 0; i < otherPlayerId.length; i++) {
+      otherPlayer[i] = this.physics.add.sprite(250, 328 + 30 * i, "playerbase", "idle.png");
+    }
+    stt = otherPlayer.length;
 
 
 
@@ -109,20 +138,17 @@ class Game extends Phaser.Scene {
     // socket.emit('new',({socketId: socket.id}))
 
 
-
     //tải lại mới khi có player mới vào có các player đã ở trong đó
 
 
-    // socket.on('otherPlayer', ({ listPlayer }) => {
-    //   // otherPlayer[playerId] = this.physics.add.sprite(250, 228, "playerbase", "idle.png");
-    //   // listplyer socket có khác với tại local khong
-    //   for (let i = 0; i < listPlayer.length; i++) {
-    //     otherPlayerId[i] = listPlayer[i]
-    //     otherPlayer[i] = this.physics.add.sprite(250, 328 + 10 * i, "playerbase", "idle.png");
+    socket.on('newPlayer', ({ socketId }) => {
+      // otherPlayer[playerId] = this.physics.add.sprite(250, 228, "playerbase", "idle.png");
+      // listplyer socket có khác với tại local khong
+      otherPlayerId.push(socketId);
 
-    //   }
-    //   console.log(otherPlayerId);
-    // })
+      otherPlayer[stt] = this.physics.add.sprite(250, 328 + 10 * stt, "playerbase", "idle.png");
+      stt += 1;
+    })
 
     socket.on('move', ({ x, y, playerId }) => {
       console.log({ x, y, playerId });
@@ -216,20 +242,7 @@ class Game extends Phaser.Scene {
       }
       player.movedLastFrame = false;
     }
-    socket.on("play", (data) => {
-      //emit lai lis
-      console.log('new');
-      console.log(data);
-      // console.log(listPlayer);
-      // console.log(newId);
-      // otherPlayerId.push(newId);
-      // otherPlayer[stt] = this.physics.add.sprite(250, 328 + 10 * stt, "playerbase", "idle.png");
-      // stt += 1;
 
-      // console.log(otherPlayerId);
-      //console.log(listPlayer);
-
-    })
 
   }
 }
