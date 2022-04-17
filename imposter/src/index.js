@@ -12,6 +12,7 @@ import fixWiring from "./scene/state/minigame/fix_wiring.js";
 import CleanO2Filter from "./scene/state/ingame/cleanO2Filter.js";
 import CleanAsteroids from "./scene/state/ingame/cleanAsteroids.js"
 import PrimeShields from "./scene/state/ingame/primeShields.js";
+import ChangeSkin from "./scene/state/skin/changeSkin.js";
 
 var preloader = new Preloader();
 
@@ -57,6 +58,7 @@ game.scene.add("CleanAsteroids", CleanAsteroids);
 
 game.scene.add("PrimeShields", PrimeShields);
 
+game.scene.add("ChangeSkin", ChangeSkin);
 
 // start title
 
@@ -70,6 +72,6 @@ game.scene.add("PrimeShields", PrimeShields);
 // game.scene.start('Course');
 // game.scene.start('CleanO2Filter');
 // game.scene.start('CleanAsteroids');
-game.scene.start('PrimeShields');
+// game.scene.start('PrimeShields');
 
-
+game.scene.start("ChangeSkin");
