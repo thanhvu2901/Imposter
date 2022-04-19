@@ -1,5 +1,4 @@
 import Phaser from "phaser";
-import { io } from 'socket.io-client'
 
 import background from "../assets/img/background.jpg";
 import logo from "../assets/img/logo.png";
@@ -113,8 +112,7 @@ class Preloader extends Phaser.Scene {
 
     });
 
-    //setup socket
-    // socket = io('localhost:3000')
+
 
   }
   create() {

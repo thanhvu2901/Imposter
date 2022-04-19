@@ -4,8 +4,8 @@ import theskeld from "../assets/tilemaps/theskeld.json";
 import playerpng from "../assets/player/player_sprite/player_base.png";
 import playerjson from "../assets/player/player_sprite/player_base.json";
 import { debugDraw } from "../scene/debugDraw";
+import { io } from "socket.io-client";
 
-import { io } from 'socket.io-client';
 import {
   PLAYER_SPEED
 } from "../consts/constants";
@@ -17,7 +17,9 @@ let cursors;
 let pressedKeys = [];
 let stt = 0;
 
-let socket;
+let roomId;
+
+let socket
 
 // otherPlayer.indexOf
 
@@ -25,39 +27,36 @@ class Game extends Phaser.Scene {
   constructor() {
     super({ key: 'game' });
   }
+
+  init(data) {
+    this.socket = data.socket
+    this.textInput = data.textInput
+  }
+
   preload() {
     this.load.image("tiles", tileImg);
     this.load.tilemapTiledJSON("tilemap", theskeld);
     this.load.atlas("playerbase", playerpng, playerjson);
-    socket = io('localhost:3000')
-
-    socket.on("play", (listPlayer) => {
-      //emit lai lis
-      // console.log('new');
-      // console.log(data);
+    // console.log(this.textInput);
+    this.socket.emit('joinRoom', this.textInput)
+    this.socket.on("play", (listPlayer) => {
       console.log(listPlayer);
-      // console.log(newId);
-      // otherPlayerId.push(listPlayer);
-      // console.log(otherPlayerId);
-      console.log('this' + listPlayer[0]);
       for (let i = 0; i < listPlayer.length; i++) {
         otherPlayerId.push(listPlayer[i])
       }
-
-      // console.log(otherPlayerId);
-      // console.log(otherPlayer);
-      // // 
-      // // stt += 1;  
-      // stt = otherPlayer.length;
-
-      // console.log(otherPlayerId);
-      //console.log(listPlayer);
-
     })
+
+
+
 
   }
 
   create() {
+    //this.socket.emit('joined') // chỉ cho joined
+    //console.log(this.textInput)
+    // roomId = this.textInput
+
+
     const ship = this.make.tilemap({ key: "tilemap" });
     const tileset = ship.addTilesetImage("theSkeld", "tiles");
 
@@ -134,14 +133,14 @@ class Game extends Phaser.Scene {
     this.cameras.main.startFollow(player, true);
 
 
-    //nếu có player mới vào thì nhận và tạo mới trong map
-    // socket.emit('new',({socketId: socket.id}))
+
 
 
     //tải lại mới khi có player mới vào có các player đã ở trong đó
 
+    this.socket.on('connectToRoom', (data) => { console.log(data); })
 
-    socket.on('newPlayer', ({ socketId }) => {
+    this.socket.on('newPlayer', ({ socketId }) => {
       // otherPlayer[playerId] = this.physics.add.sprite(250, 228, "playerbase", "idle.png");
       // listplyer socket có khác với tại local khong
       otherPlayerId.push(socketId);
@@ -150,7 +149,7 @@ class Game extends Phaser.Scene {
       stt += 1;
     })
 
-    socket.on('move', ({ x, y, playerId }) => {
+    this.socket.on('move', ({ x, y, playerId }) => {
       console.log({ x, y, playerId });
 
       let index = otherPlayerId.findIndex(Element => Element == playerId)
@@ -173,7 +172,7 @@ class Game extends Phaser.Scene {
       }
     });
 
-    socket.on('moveEnd', ({ playerId }) => {
+    this.socket.on('moveEnd', ({ playerId }) => {
       let index = otherPlayerId.findIndex(Element => Element == playerId)
       //  console.log('revieved moveend');
       //id = index;
@@ -233,12 +232,12 @@ class Game extends Phaser.Scene {
 
     if (playerMoved) {
 
-      socket.emit('move', { x: player.x, y: player.y });
+      this.socket.emit('move', { x: player.x, y: player.y });
       //console.log(player.x);
       player.movedLastFrame = true;
     } else {
       if (player.movedLastFrame) {
-        socket.emit('moveEnd');
+        this.socket.emit('moveEnd');
       }
       player.movedLastFrame = false;
     }
@@ -246,5 +245,16 @@ class Game extends Phaser.Scene {
 
   }
 }
+function hostCreateGame() {
+  var thisGameId = (Math.random() * 100000) | 0;
+  // create new room
+  this.socket.emit('newGameCreated', { gameId: thisGameId, mySocketId: this.socket.id })
+
+  //join room and wait
+  console.log(thisGameId.toString());
+}
+// function joinRoom(roomId) {
+//   this.socket.emit('joinRoom', roomId)
+// }
 
 export default Game;

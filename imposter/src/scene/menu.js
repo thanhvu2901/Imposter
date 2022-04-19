@@ -1,6 +1,7 @@
 import Phaser from 'phaser'
 
-import Game from './game.js'
+
+import JoinGame from './joinGame.js';
 import Options from './state/inmenu/options.js'
 export default class MainMenuScene extends Phaser.Scene {
     constructor() {
@@ -20,6 +21,8 @@ export default class MainMenuScene extends Phaser.Scene {
         this.add.image(this.game.renderer.width / 2, this.game.renderer.height * 0.20, 'logo').setDepth(1);
 
         this.add.image(0, 0, 'background').setOrigin(0.01).setDepth(0);
+
+
 
         let playButton = this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 2, 'play').setDepth(1);
 
@@ -61,7 +64,8 @@ export default class MainMenuScene extends Phaser.Scene {
         })
         playButton.on("pointerdown", () => {
             console.log('start game');
-            this.scene.start('game', Game);
+            //this.scene.start('game', Game);
+            this.scene.start('joinGame', JoinGame);
         })
         playButton.on("pointerout", () => {
             // this.scene.start(play);

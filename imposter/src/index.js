@@ -17,6 +17,7 @@ import PrimeShields from "./scene/state/ingame/primeShields.js";
 import InspectSample from "./scene/state/minigame/inspect_sample.js";
 import StabilizeSteering from "./scene/state/minigame/stabilize_steering.js";
 import StartReactor from "./scene/state/minigame/start_reactor.js";
+import JoinGame from "./scene/joinGame.js";
 var preloader = new Preloader();
 
 const config = {
@@ -65,15 +66,16 @@ game.scene.add("PrimeShields", PrimeShields);
 game.scene.add('inspectSample', InspectSample)
 game.scene.add('stabilizeSteering', StabilizeSteering)
 game.scene.add('startReactor', StartReactor)
+game.scene.add('joinGame', JoinGame)
 // start title
 
-game.scene.start("preloader");
+//game.scene.start("preloader");
 // game.scene.start("theskeld");
 //game.scene.start('menu');
 // game.scene.start('game');
 //game.scene.start('login');
 
-//game.scene.start('preloader');
+game.scene.start('preloader');
 //game.scene.start('Course');
 // game.scene.start('Course');
 //game.scene.start('CleanO2Filter');
@@ -87,3 +89,4 @@ game.scene.start("preloader");
 
 // game.scene.start('preloader');
 //game.scene.start("align_engine_output")
+//game.scene.start('joinGame')
