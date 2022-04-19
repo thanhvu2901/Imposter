@@ -1,57 +1,29 @@
 import Phaser from "phaser";
 import player from "../../../assets/skin/idle.png";
-import hat1 from "../../../assets/skin/Hats/hats0001.png";
-import hat2 from "../../../assets/skin/Hats/hats0002.png";
-import hat3 from "../../../assets/skin/Hats/hats0003.png";
-import hat4 from "../../../assets/skin/Hats/hats0004.png";
-import hat5 from "../../../assets/skin/Hats/hats0005.png";
-import hat6 from "../../../assets/skin/Hats/hats0006.png";
-import hat7 from "../../../assets/skin/Hats/hats0007.png";
-import hat8 from "../../../assets/skin/Hats/hats0008.png";
-import hat9 from "../../../assets/skin/Hats/hats0009.png";
-import hat10 from "../../../assets/skin/Hats/hats0010.png";
-import hat11 from "../../../assets/skin/Hats/hats0011.png";
-import hat12 from "../../../assets/skin/Hats/hats0012.png";
-import hat13 from "../../../assets/skin/Hats/hats0013.png";
-import hat14 from "../../../assets/skin/Hats/hats0014.png";
-import hat15 from "../../../assets/skin/Hats/hats0015.png";
-import hat16 from "../../../assets/skin/Hats/hats0016.png";
-import hat17 from "../../../assets/skin/Hats/hats0017.png";
-import hat18 from "../../../assets/skin/Hats/hats0018.png";
-import hat19 from "../../../assets/skin/Hats/hats0019.png";
-import hat20 from "../../../assets/skin/Hats/hats0020.png";
-import hat21 from "../../../assets/skin/Hats/hats0021.png";
-import hat22 from "../../../assets/skin/Hats/hats0022.png";
-import hat23 from "../../../assets/skin/Hats/hats0023.png";
-import hat24 from "../../../assets/skin/Hats/hats0024.png";
-import hat25 from "../../../assets/skin/Hats/hats0025.png";
-import hat26 from "../../../assets/skin/Hats/hats0026.png";
-import hat27 from "../../../assets/skin/Hats/hats0027.png";
-import hat28 from "../../../assets/skin/Hats/hats0028.png";
-import hat29 from "../../../assets/skin/Hats/hats0029.png";
-import hat30 from "../../../assets/skin/Hats/hats0030.png";
-import hat31 from "../../../assets/skin/Hats/hats0031.png";
-import hat32 from "../../../assets/skin/Hats/hats0032.png";
-import hat33 from "../../../assets/skin/Hats/hats0033.png";
-import hat34 from "../../../assets/skin/Hats/hats0034.png";
-import hat35 from "../../../assets/skin/Hats/hats0035.png";
-import hat36 from "../../../assets/skin/Hats/hats0036.png";
-import hat37 from "../../../assets/skin/Hats/hats0037.png";
-import hat38 from "../../../assets/skin/Hats/hats0038.png";
-import hat39 from "../../../assets/skin/Hats/hats0039.png";
-import hat40 from "../../../assets/skin/Hats/hats0040.png";
-import hat41 from "../../../assets/skin/Hats/hats0041.png";
-import hat42 from "../../../assets/skin/Hats/hats0042.png";
-import hat43 from "../../../assets/skin/Hats/hats0043.png";
-import hat44 from "../../../assets/skin/Hats/hats0044.png";
-import hat45 from "../../../assets/skin/Hats/hats0045.png";
-import hat46 from "../../../assets/skin/Hats/hats0046.png";
-import hat47 from "../../../assets/skin/Hats/hats0047.png";
-import hat48 from "../../../assets/skin/Hats/hats0048.png";
+import hat0 from "../../../assets/skin/Hats/hats0001.png";
+import hat1 from "../../../assets/skin/Hats/hats0005.png";
+import hat2 from "../../../assets/skin/Hats/hats0006.png";
+import hat3 from "../../../assets/skin/Hats/hats0007.png";
+import hat4 from "../../../assets/skin/Hats/hats0008.png";
+import hat5 from "../../../assets/skin/Hats/hats0010.png";
+import hat6 from "../../../assets/skin/Hats/hats0012.png";
+import hat7 from "../../../assets/skin/Hats/hats0013.png";
+import hat8 from "../../../assets/skin/Hats/hats0015.png";
+import hat9 from "../../../assets/skin/Hats/hats0020.png";
+import hat10 from "../../../assets/skin/Hats/hats0021.png";
+import hat11 from "../../../assets/skin/Hats/hats0024.png";
+import hat12 from "../../../assets/skin/Hats/hats0025.png";
+import hat13 from "../../../assets/skin/Hats/hats0028.png";
+import hat14 from "../../../assets/skin/Hats/hats0031.png";
+import hat15 from "../../../assets/skin/Hats/hats0042.png";
+import hat16 from "../../../assets/skin/Hats/hats0043.png";
+import hat17 from "../../../assets/skin/Hats/hats0045.png";
+import hat18 from "../../../assets/skin/Hats/hats0053.png";
+import hat19 from "../../../assets/skin/Hats/hats0055.png";
 import trouser0 from "../../../assets/skin/Trousers/trouser0.png";
 import trouser1 from "../../../assets/skin/Trousers/trouser1.png";
-import trouser2 from "../../../assets/skin/Trousers/trouser2.png";
-import trouser3 from "../../../assets/skin/Trousers/trouser3.png";
+import trouser3 from "../../../assets/skin/Trousers/trouser2.png";
+import trouser2 from "../../../assets/skin/Trousers/trouser3.png";
 import trouser4 from "../../../assets/skin/Trousers/trouser4.png";
 import trouser5 from "../../../assets/skin/Trousers/trouser5.png";
 import trouser6 from "../../../assets/skin/Trousers/trouser6.png";
@@ -64,6 +36,19 @@ import trouser12 from "../../../assets/skin/Trousers/trouser12.png";
 import trouser13 from "../../../assets/skin/Trousers/trouser13.png";
 import trouser14 from "../../../assets/skin/Trousers/trouser14.png";
 import trouser15 from "../../../assets/skin/Trousers/trouser15.png";
+import pet0 from "../../../assets/skin/Pets/pet0.png";
+import pet1 from "../../../assets/skin/Pets/pet1.png";
+import pet2 from "../../../assets/skin/Pets/pet2.png";
+import pet3 from "../../../assets/skin/Pets/pet3.png";
+import pet4 from "../../../assets/skin/Pets/pet4.png";
+import pet5 from "../../../assets/skin/Pets/pet5.png";
+import pet6 from "../../../assets/skin/Pets/pet6.png";
+import pet7 from "../../../assets/skin/Pets/pet7.png";
+import pet8 from "../../../assets/skin/Pets/pet8.png";
+import pet9 from "../../../assets/skin/Pets/pet9.png";
+import pet10 from "../../../assets/skin/Pets/pet10.png";
+import pet11 from "../../../assets/skin/Pets/pet11.png";
+
 
 const arrHats = [];
 const arrBackgroundHats = [];
@@ -75,6 +60,11 @@ const arrBackgroundTrousers = [];
 let trouserChosen;
 let statusChooseTrouser;
 let backgroundTrouserChosen;
+const arrPets= [];
+const arrBackgroundPets= [];
+let petChosen;
+let statusChoosePet=false;
+let backgroundPetChosen;
 class ChangeSkin extends Phaser.Scene {
   constructor() {
     super({ key: "ChangeSkin" });
@@ -82,6 +72,7 @@ class ChangeSkin extends Phaser.Scene {
 
   preload() {
     this.load.image("player", player);
+    this.load.image("hat0", hat0);
     this.load.image("hat1", hat1);
     this.load.image("hat2", hat2);
     this.load.image("hat3", hat3);
@@ -101,35 +92,6 @@ class ChangeSkin extends Phaser.Scene {
     this.load.image("hat17", hat17);
     this.load.image("hat18", hat18);
     this.load.image("hat19", hat19);
-    this.load.image("hat20", hat20);
-    this.load.image("hat21", hat21);
-    this.load.image("hat22", hat22);
-    this.load.image("hat23", hat23);
-    this.load.image("hat24", hat24);
-    this.load.image("hat25", hat25);
-    this.load.image("hat26", hat26);
-    this.load.image("hat27", hat27);
-    this.load.image("hat28", hat28);
-    this.load.image("hat29", hat29);
-    this.load.image("hat30", hat30);
-    this.load.image("hat31", hat31);
-    this.load.image("hat32", hat32);
-    this.load.image("hat33", hat33);
-    this.load.image("hat34", hat34);
-    this.load.image("hat35", hat35);
-    this.load.image("hat36", hat36);
-    this.load.image("hat37", hat37);
-    this.load.image("hat38", hat38);
-    this.load.image("hat39", hat39);
-    this.load.image("hat40", hat40);
-    this.load.image("hat41", hat41);
-    this.load.image("hat42", hat42);
-    this.load.image("hat43", hat43);
-    this.load.image("hat44", hat44);
-    this.load.image("hat45", hat45);
-    this.load.image("hat46", hat46);
-    this.load.image("hat47", hat47);
-    this.load.image("hat48", hat48);
     this.load.image("trouser0", trouser0);
     this.load.image("trouser1", trouser1);
     this.load.image("trouser2", trouser2);
@@ -146,6 +108,19 @@ class ChangeSkin extends Phaser.Scene {
     this.load.image("trouser13", trouser13);
     this.load.image("trouser14", trouser14);
     this.load.image("trouser15", trouser15);
+    this.load.image("pet0", pet0);
+    this.load.image("pet1", pet1);
+    this.load.image("pet2", pet2);
+    this.load.image("pet3", pet3);
+    this.load.image("pet4", pet4);
+    this.load.image("pet5", pet5);
+    this.load.image("pet6", pet6);
+    this.load.image("pet7", pet7);
+    this.load.image("pet8", pet8);
+    this.load.image("pet9", pet9);
+    this.load.image("pet10", pet10);
+    this.load.image("pet11", pet11);
+
   }
 
   create() {
@@ -157,6 +132,8 @@ class ChangeSkin extends Phaser.Scene {
     let groupHatsBackground = this.add.group();
     let groupTrousers = this.add.group();
     let groupTrousersBackground = this.add.group();
+    let groupPets= this.add.group();
+    let groupPetsBackground= this.add.group();
     this.add.rectangle(255, 180, 90, 50, 0xa1b1ae);
     this.add.rectangle(355, 180, 90, 50, 0xa1b1ae);
     this.add.rectangle(455, 180, 90, 50, 0xa1b1ae);
@@ -178,11 +155,13 @@ class ChangeSkin extends Phaser.Scene {
       function (pointer, gameObject, deltaX, deltaY, deltaZ) {
         if (gameObject === hatText) {
           groupTrousersBackground.clear(true, true);
-          groupTrousers.clear(true, true);          
+          groupTrousers.clear(true, true);
+          groupPets.clear(true, true);
+          groupPetsBackground.clear(true, true);      
           const changeX = 69;
           const changeY = 69;
           let countNameHat = 0;
-          for (let i = 0; i < 12; i++) {
+          for (let i = 0; i < 5; i++) {
             const x = 550;
             const y = 260;
             for (let j = 0; j < 4; j++) {
@@ -196,9 +175,9 @@ class ChangeSkin extends Phaser.Scene {
               arrHats[countNameHat] = current_object.add.sprite(
                 x + changeX * j,
                 y + changeY * i,
-                `hat${countNameHat + 1}`
+                `hat${countNameHat}`
               );
-              arrHats[countNameHat].scale = 0.85;
+              arrHats[countNameHat].scale = 0.7;
               arrHats[countNameHat].setInteractive();
               groupHatsBackground.add(arrBackgroundHats[countNameHat]);
               groupHats.add(arrHats[countNameHat]);
@@ -209,6 +188,8 @@ class ChangeSkin extends Phaser.Scene {
         } else if (gameObject === skinText) {
           groupHatsBackground.clear(true, true);
           groupHats.clear(true, true);
+          groupPets.clear(true, true);
+          groupPetsBackground.clear(true, true);
           const changeX = 69;
           const changeY = 69;
           let countNameTrouser = 0;
@@ -229,7 +210,7 @@ class ChangeSkin extends Phaser.Scene {
                 y + changeY * i,
                 `trouser${countNameTrouser}`
               );
-              arrTrousers[countNameTrouser].scale = 0.85;
+              arrTrousers[countNameTrouser].scale = 0.7;
               arrTrousers[countNameTrouser].setInteractive();
               groupTrousersBackground.add(
                 arrBackgroundTrousers[countNameTrouser]
@@ -239,6 +220,40 @@ class ChangeSkin extends Phaser.Scene {
             }
           }
           // let boundaryImages = current_object.add.tileSprite(300, 300, "groupHats");
+        } else if(gameObject===petText){
+          groupHatsBackground.clear(true, true);
+          groupHats.clear(true, true);
+          groupTrousersBackground.clear(true, true);
+          groupTrousers.clear(true, true);     
+          const changeX = 69;
+          const changeY = 69;
+          let countNamePet = 0;
+          for (let i = 0; i < 3; i++) {
+            const x = 550;
+            const y = 260;
+            for (let j = 0; j < 4; j++) {
+              arrBackgroundPets[countNamePet] =
+                current_object.add.rectangle(
+                  x + changeX * j,
+                  y + changeY * i,
+                  64,
+                  64,
+                  0xa1b1ae
+                );
+              arrPets[countNamePet] = current_object.add.sprite(
+                x + changeX * j,
+                y + changeY * i,
+                `pet${countNamePet}`
+              );
+              arrPets[countNamePet].scale = 0.7;
+              arrPets[countNamePet].setInteractive();
+              groupPetsBackground.add(
+                arrBackgroundPets[countNamePet]
+              );
+              groupPets.add(arrPets[countNamePet]);
+              countNamePet++;
+            }
+          }
         }
       }
     );
@@ -257,9 +272,8 @@ class ChangeSkin extends Phaser.Scene {
             }
             backgroundHatChosen = arrBackgroundHats[i];
             arrBackgroundHats[i].setFillStyle("0x505655");
-            hatChosen = current_object.add.sprite(345, 350, `hat${i + 1}`);
+            hatChosen = current_object.add.sprite(345, 350, `hat${i}`);
             hatChosen.scale = 1.5;
-            // current_object.add.image(350, 460, "player");
             statusChooseHat = true;
             break;
           }
@@ -277,8 +291,24 @@ class ChangeSkin extends Phaser.Scene {
             arrBackgroundTrousers[i].setFillStyle("0x505655");
             trouserChosen = current_object.add.sprite(360, 510, `trouser${i}`);
             trouserChosen.scale = 1.9;
-            // current_object.add.image(350, 460, "player");
             statusChooseTrouser = true;
+            break;
+          }
+        }
+        for (let i = 0; i < groupPets.getLength(); i++) {
+          if (
+            gameObject === arrPets[i] ||
+            gameObject === arrBackgroundPets[i]
+          ) {
+            if (statusChoosePet) {
+              // petChosen.destroy();
+              backgroundPetChosen.setFillStyle("0xa1b1ae");
+            }
+            backgroundPetChosen = arrBackgroundPets[i];
+            arrBackgroundPets[i].setFillStyle("0x505655");
+            // petChosen = current_object.add.sprite(360, 510, `pet${i}`);
+            // petChosen.scale = 1.9;
+            statusChoosePet = true;
             break;
           }
         }
