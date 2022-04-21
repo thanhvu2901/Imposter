@@ -8,7 +8,8 @@ import Folder_4 from "../../../assets/img/Upload Data/folderOpen0005.png";
 import File from "../../../assets/img/Upload Data/fileFill.png";
 import player from "../../../assets/img/Upload Data/player.png";
 import Bar from "../../../assets/img/Upload Data/progressBar.png";
-let x,y,file1,folder1,folder,player1,bar,rect
+import vent from  "../../../assets/img/jump vent/vent.png";
+let x,y,file1,folder1,folder,player1,bar,rect,vent_hole
 let move=0
 class UploadData extends Phaser.Scene {
   constructor() {
@@ -28,6 +29,7 @@ class UploadData extends Phaser.Scene {
     this.load.image("File_1", File);
     this.load.image("Bar", Bar);
     this.load.spritesheet("player",player,{ frameWidth: 84, frameHeight:128 })
+    this.load.spritesheet("vent",vent,{ frameWidth: 59, frameHeight:55})
   }
 
   create() {
@@ -41,6 +43,12 @@ class UploadData extends Phaser.Scene {
       frameRate: 24,
       repeat:-1
   });
+ let hole= this.anims.create({
+    key: 'hole',
+    frames: this.anims.generateFrameNumbers('vent',{ frames: [ 0,1,2,3,4,5 ] }),
+    frameRate: 6,
+    repeat:-1
+});
   let test=  this.anims.create({
       key: 'open',
       frames: [
@@ -73,7 +81,11 @@ class UploadData extends Phaser.Scene {
   test.frames[3].frame.x=10
   test.frames[3].frame.y=5
 
-  console.log(test.frames[2].frame.x)
+
+  hole.frames[0].frame.y=10
+  //hole.frames[1].frame.x=11
+  hole.frames[2].frame.y=3
+ // console.log(test.frames[2].frame.x)
   
     const ship = this.add.image(x,y, "Base");
     const file = this.add.image(x-130,y-45, "File");
@@ -84,7 +96,7 @@ class UploadData extends Phaser.Scene {
     folder1 = this.add.sprite(x+137,y-30, "Folder_1")
     bar =  this.add.image(x,y+40, "Bar");
     rect =this.add.rexRoundRectangle(x-180, y+40, 10, 10, 0, 0x00ff55);
-
+  vent_hole=this.add.sprite(x,y,"vent").play('hole')
    // this.add.rectangle()
 
     //  32px radius on the corners
@@ -122,14 +134,14 @@ console.log(rect)
    
     folder.play('open')
     
-    console.log("dcmms")
+  
   }
 
   if(file1.x==x-50){
    
     folder.play('close')
     
-    console.log("dcmms")
+
   }
 
   }
