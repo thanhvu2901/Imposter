@@ -8,8 +8,22 @@ import Folder_4 from "../../../assets/img/Upload Data/folderOpen0005.png";
 import File from "../../../assets/img/Upload Data/fileFill.png";
 import player from "../../../assets/img/Upload Data/player.png";
 import Bar from "../../../assets/img/Upload Data/progressBar.png";
-import vent from  "../../../assets/img/jump vent/vent.png";
-let x,y,file1,folder1,folder,player1,bar,rect,vent_hole
+import vent1 from  "../../../assets/img/jump vent/vent1.png";
+import vent2 from  "../../../assets/img/jump vent/vent2.png";
+import vent3 from  "../../../assets/img/jump vent/vent3.png";
+import vent4 from  "../../../assets/img/jump vent/vent4.png";
+import vent5 from  "../../../assets/img/jump vent/vent5.png";
+import vent6 from  "../../../assets/img/jump vent/vent6.png";
+
+import jump1 from  "../../../assets/img/jump vent/Vent0001.png";
+import jump2 from  "../../../assets/img/jump vent/vent0002.png";
+import jump3 from  "../../../assets/img/jump vent/Vent0003.png";
+import jump4 from  "../../../assets/img/jump vent/Vent0004.png";
+import jump5 from  "../../../assets/img/jump vent/vent0005.png";
+import jump6 from  "../../../assets/img/jump vent/Vent0006.png";
+import jump7 from  "../../../assets/img/jump vent/Vent0007.png";
+
+let x,y,file1,folder1,folder,player1,bar,rect,vent_hole,vent_jump
 let move=0
 class UploadData extends Phaser.Scene {
   constructor() {
@@ -29,7 +43,23 @@ class UploadData extends Phaser.Scene {
     this.load.image("File_1", File);
     this.load.image("Bar", Bar);
     this.load.spritesheet("player",player,{ frameWidth: 84, frameHeight:128 })
-    this.load.spritesheet("vent",vent,{ frameWidth: 59, frameHeight:55})
+  //  this.load.spritesheet("vent",vent,{ frameWidth: 59, frameHeight:55})
+  this.load.image("vent_1", vent1);
+  this.load.image("vent_2", vent2);
+  this.load.image("vent_3", vent3);
+  this.load.image("vent_4", vent4);
+  this.load.image("vent_5", vent5);
+  this.load.image("vent_6", vent6);
+
+  this.load.image("jump_1", jump1);
+  this.load.image("jump_2", jump2);
+  this.load.image("jump_3", jump3);
+  this.load.image("jump_4", jump4);
+  this.load.image("jump_5", jump5);
+  this.load.image("jump_6", jump6);
+  this.load.image("jump_7", jump7);
+
+
   }
 
   create() {
@@ -45,9 +75,28 @@ class UploadData extends Phaser.Scene {
   });
  let hole= this.anims.create({
     key: 'hole',
-    frames: this.anims.generateFrameNumbers('vent',{ frames: [ 0,1,2,3,4,5 ] }),
-    frameRate: 6,
+    frames: [{key:'vent_1'},
+    {key:'vent_2'},
+    {key:'vent_3'},
+    {key:'vent_4'},
+    {key:'vent_5'},
+    {key:'vent_6'}
+    ],
+    frameRate: 12,
     repeat:-1
+});
+let jump= this.anims.create({
+  key: 'jump',
+  frames: [{key:'jump_1'},
+  {key:'jump_2'},
+  {key:'jump_3'},
+  {key:'jump_4'},
+  {key:'jump_5'},
+  {key:'jump_6'},
+  {key:'jump_7'}
+  ],
+  frameRate: 6,
+  repeat:-1
 });
   let test=  this.anims.create({
       key: 'open',
@@ -82,9 +131,13 @@ class UploadData extends Phaser.Scene {
   test.frames[3].frame.y=5
 
 
-  hole.frames[0].frame.y=10
+  hole.frames[0].frame.y=8
   //hole.frames[1].frame.x=11
-  hole.frames[2].frame.y=3
+  hole.frames[2].frame.y=3.5
+  hole.frames[3].frame.y=7
+  hole.frames[4].frame.y=7
+  hole.frames[4].frame.x=3
+  hole.frames[5].frame.y=7
  // console.log(test.frames[2].frame.x)
   
     const ship = this.add.image(x,y, "Base");
@@ -96,7 +149,9 @@ class UploadData extends Phaser.Scene {
     folder1 = this.add.sprite(x+137,y-30, "Folder_1")
     bar =  this.add.image(x,y+40, "Bar");
     rect =this.add.rexRoundRectangle(x-180, y+40, 10, 10, 0, 0x00ff55);
-  vent_hole=this.add.sprite(x,y,"vent").play('hole')
+ // vent_hole=this.add.sprite(x,y,"vent_1").play('hole')
+  vent_jump = this.add.sprite(x,y,"jump_1").play('jump')
+  vent_jump.setScale(0.35)
    // this.add.rectangle()
 
     //  32px radius on the corners

@@ -1,4 +1,4 @@
-export const animateMovement = (keys, player) => {
+export const animateMovement = (keys, player,jump) => {
     const runningKeys = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'];
     if (
       keys.some((key) => runningKeys.includes(key)) &&

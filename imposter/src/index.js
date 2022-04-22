@@ -13,8 +13,8 @@ var preloader = new Preloader();
 
 const config = {
   type: Phaser.AUTO,
-  width: 1024,
-  height: 768,
+  width: 1280,
+  height: 720,
   scale: {
     mode: Phaser.Scale.FIT,
     autoCenter: Phaser.Scale.CENTER_BOTH,
@@ -40,7 +40,7 @@ game.scene.add('Upload',UploadData)
 // game.scene.start("preloader");
 // game.scene.start("theskeld");
 //game.scene.start('menu');
-// game.scene.start('game');
+ game.scene.start('game');
 
-game.scene.start('Upload');
+//game.scene.start('Upload');
 
