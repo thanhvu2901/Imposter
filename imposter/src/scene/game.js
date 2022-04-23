@@ -129,7 +129,7 @@ class Game extends Phaser.Scene {
         vent_butt.on('pointerdown', function (pointer) {
             console.log('a;;p')
             vent_hole.play('hole')
-            
+       //     player.sprite.play("jump")
             vent_press=true
          //   Pause(1000)
         })
