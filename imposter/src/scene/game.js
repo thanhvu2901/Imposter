@@ -158,6 +158,16 @@ class Game extends Phaser.Scene {
     //   }
       
     // });
+    objectsLayer.objects.forEach((object) => {
+      const { name, x, y, width, height, properties } = object;
+    //  console.log(x, y);
+      console.log( width,  height);
+      // if (player.x <= x + 100 && player.x >= x - 100 && player.y <= y+ 100 && player.y >= y- 100 && name == "table") {
+      //   console.log("collide with table")
+      // } 
+   //   this.add.rectangle( x, y, 20, 20, 0x6666ff);
+      this.add.circle(x,y,100,0x6666ff)
+    });
   }
 
   update() {
@@ -341,14 +351,16 @@ class Game extends Phaser.Scene {
 
     objectsLayer.objects.forEach((object) => {
       const { name, x, y, width, height, properties } = object;
-      console.log(x, y);
-      console.log(x + width, y + height);
-      if (player.x == x && player.y == y && name == "table") {
+    //  console.log(x, y);
+  //  console.log(name)
+    //  console.log( width,  height);
+      if (player.x <= x + 100 && player.x >= x - 100 && player.y <= y+ 100 && player.y >= y- 100 && name == "table") {
         console.log("collide with table")
+     
       } 
       
     });
-    console.log("player.x: " + player.x + " player.y: " + player.y);
+   // console.log("player.x: " + player.x + " player.y: " + player.y);
   }
 }
 
