@@ -17,44 +17,33 @@ let cursors;
 let pressedKeys = [];
 let stt = 0;
 
-let roomId;
-
-let socket
 
 // otherPlayer.indexOf
 
 class Game extends Phaser.Scene {
   constructor() {
+
     super({ key: 'game' });
+    //this.state = {};
+    this.state = {}
   }
 
   init(data) {
     this.socket = data.socket
     this.textInput = data.textInput
+
   }
 
   preload() {
     this.load.image("tiles", tileImg);
     this.load.tilemapTiledJSON("tilemap", theskeld);
     this.load.atlas("playerbase", playerpng, playerjson);
-    // console.log(this.textInput);
-    this.socket.emit('joinRoom', this.textInput)
-    this.socket.on("play", (listPlayer) => {
-      console.log(listPlayer);
-      for (let i = 0; i < listPlayer.length; i++) {
-        otherPlayerId.push(listPlayer[i])
-      }
-    })
-
-
-
 
   }
 
   create() {
-    //this.socket.emit('joined') // chỉ cho joined
-    //console.log(this.textInput)
-    // roomId = this.textInput
+
+
 
 
     const ship = this.make.tilemap({ key: "tilemap" });
@@ -137,16 +126,44 @@ class Game extends Phaser.Scene {
 
 
     //tải lại mới khi có player mới vào có các player đã ở trong đó
+    console.log(this.textInput);
+    this.socket.emit("joinRoom", this.textInput);
 
-    this.socket.on('connectToRoom', (data) => { console.log(data); })
+    this.socket.on("setState", (states) => {
 
-    this.socket.on('newPlayer', ({ socketId }) => {
+      // this.physics.resume();
+      // STATE
+      this.state.roomKey = states.roomKey
+      // this.state.players = Object(state).players;
+      // this.state.numPlayers = Object(state).numPlayers;
+
+      console.log("state: " + this.state.roomKey);
+    });
+
+    this.socket.on("currentPlayers", ({ players, numPlayers }) => {
+      console.log(players);
+      for (let i = 0; i < numPlayers; i++) {
+
+        if (this.socket.id !== Object.keys(players)[i]) {
+          otherPlayerId.push(Object.keys(players)[i])
+          otherPlayer[stt] = this.physics.add.sprite(Object.values(players)[i].x, Object.values(players)[i].y, "playerbase", "idle.png");
+          stt = stt + 1;
+        }
+      }
+      console.log(otherPlayerId);
+    })
+
+
+    this.socket.on('newPlayer', ({ playerInfo, numPlayers }) => {
       // otherPlayer[playerId] = this.physics.add.sprite(250, 228, "playerbase", "idle.png");
       // listplyer socket có khác với tại local khong
-      otherPlayerId.push(socketId);
-
+      otherPlayerId.push(playerInfo.playerId);
+      console.log(otherPlayerId);
       otherPlayer[stt] = this.physics.add.sprite(250, 328 + 10 * stt, "playerbase", "idle.png");
+      console.log("stt" + stt);
       stt += 1;
+      console.log('new players ' + otherPlayer[stt]);
+      console.log("stt" + stt);
     })
 
     this.socket.on('move', ({ x, y, playerId }) => {
@@ -174,8 +191,6 @@ class Game extends Phaser.Scene {
 
     this.socket.on('moveEnd', ({ playerId }) => {
       let index = otherPlayerId.findIndex(Element => Element == playerId)
-      //  console.log('revieved moveend');
-      //id = index;
       otherPlayer[index].moving = false;
       otherPlayer[index].anims.play('player-idle')
       if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
@@ -185,6 +200,8 @@ class Game extends Phaser.Scene {
       }
 
     });
+
+
 
 
   }
@@ -232,12 +249,11 @@ class Game extends Phaser.Scene {
 
     if (playerMoved) {
 
-      this.socket.emit('move', { x: player.x, y: player.y });
-      //console.log(player.x);
+      this.socket.emit('move', { x: player.x, y: player.y, roomId: this.state.roomKey });
       player.movedLastFrame = true;
     } else {
       if (player.movedLastFrame) {
-        this.socket.emit('moveEnd');
+        this.socket.emit('moveEnd', { roomId: this.state.roomKey });
       }
       player.movedLastFrame = false;
     }
@@ -253,8 +269,6 @@ function hostCreateGame() {
   //join room and wait
   console.log(thisGameId.toString());
 }
-// function joinRoom(roomId) {
-//   this.socket.emit('joinRoom', roomId)
-// }
+
 
 export default Game;

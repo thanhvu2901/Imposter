@@ -1,4 +1,5 @@
 import Phaser from 'phaser'
+import Game from './game.js';
 
 
 import JoinGame from './joinGame.js';
