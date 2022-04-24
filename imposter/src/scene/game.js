@@ -7,14 +7,13 @@ import { debugDraw } from "../scene/debugDraw";
 
 import { movePlayer } from "../animation/movement.js";
 
-import { io } from 'socket.io-client';
+import { io } from "socket.io-client";
 import {
-
   PLAYER_HEIGHT,
   PLAYER_WIDTH,
   PLAYER_START_X,
   PLAYER_START_Y,
-  PLAYER_SPEED
+  PLAYER_SPEED,
 } from "../consts/constants";
 
 var player;
@@ -22,16 +21,17 @@ var cursors;
 let pressedKeys = [];
 let otherPlayer = {};
 let socket;
+var objectsLayer;
 
 class Game extends Phaser.Scene {
   constructor() {
-    super({ key: 'game' });
+    super({ key: "game" });
   }
   preload() {
     this.load.image("tiles", tileImg);
     this.load.tilemapTiledJSON("tilemap", theskeld);
     this.load.atlas("playerbase", playerpng, playerjson);
-    socket = io('localhost:3000')
+    socket = io("localhost:3000");
   }
 
   create() {
@@ -49,18 +49,16 @@ class Game extends Phaser.Scene {
     otherPlayer = this.physics.add.sprite(250, 228, "playerbase", "idle.png");
     //****************** */
 
-
     //cursor to direct
     cursors = this.input.keyboard.createCursorKeys();
 
     // tạo object và gán các thuộc tính
     this.anims.create({
       key: "player-idle",
-      frames: [{ key: "playerbase", frame: "idle.png" },
-      ],
+      frames: [{ key: "playerbase", frame: "idle.png" }],
     });
 
-    //animation player 
+    //animation player
     this.anims.create({
       key: "player-walk",
       frames: this.anims.generateFrameNames("playerbase", {
@@ -86,7 +84,6 @@ class Game extends Phaser.Scene {
       frameRate: 24,
     });
 
-
     //input to control
     this.input.keyboard.on("keydown", (e) => {
       if (!pressedKeys.includes(e.code)) {
@@ -101,9 +98,9 @@ class Game extends Phaser.Scene {
 
     this.cameras.main.startFollow(player, true);
 
-    //listen from other 
-    socket.on('move', ({ x, y }) => {
-      console.log('revieved move');
+    //listen from other
+    socket.on("move", ({ x, y }) => {
+      console.log("revieved move");
       if (otherPlayer.x > x) {
         otherPlayer.flipX = true;
       } else if (otherPlayer.x < x) {
@@ -113,16 +110,24 @@ class Game extends Phaser.Scene {
       otherPlayer.y = y;
       otherPlayer.moving = true;
     });
-    socket.on('moveEnd', () => {
-      console.log('revieved moveend');
+    socket.on("moveEnd", () => {
+      console.log("revieved moveend");
       otherPlayer.moving = false;
-      otherPlayer.anims.play('player-idle')
+      otherPlayer.anims.play("player-idle");
     });
 
+    objectsLayer = ship.getObjectLayer("GameObjects");
+    // objectsLayer.objects.forEach((object) => {
+    //   const { name, x, y, width, height, properties } = object;
+    //   if (properties.name == "collides" && properties.type == "bool" && properties.value == true) {
+    //     // this.physics.add.collider(player, object);
+        
+    //   }
+      
+    // });
   }
 
   update() {
-
     let playerMoved = false;
     player.setVelocity(0);
     if (
@@ -132,10 +137,9 @@ class Game extends Phaser.Scene {
       !cursors.down.isDown
     ) {
       player.anims.play("player-idle");
-
     }
 
-    // when move 
+    // when move
     if (cursors.left.isDown) {
       player.anims.play("player-walk", true);
       player.setVelocityX(-PLAYER_SPEED);
@@ -164,22 +168,34 @@ class Game extends Phaser.Scene {
     //  this.scene.scene.cameras.main.centerOn(player.sprite.x, player.sprite.y);
     //const playerMoved = movePlayer(pressedKeys, player.sprite);
     if (playerMoved) {
-      socket.emit('move', { x: player.x, y: player.y });
+      socket.emit("move", { x: player.x, y: player.y });
       //console.log(player.x);
       player.movedLastFrame = true;
     } else {
       if (player.movedLastFrame) {
-        socket.emit('moveEnd');
+        socket.emit("moveEnd");
       }
       player.movedLastFrame = false;
     }
 
     // update running other player
     if (otherPlayer.moving && !otherPlayer.anims.isPlaying) {
-      otherPlayer.play('player-walk');
+      otherPlayer.play("player-walk");
     } else if (!otherPlayer.moving && otherPlayer.anims.isPlaying) {
-      otherPlayer.stop('player-walk');
+      otherPlayer.stop("player-walk");
     }
+    // console.log(objectsLayer);
+
+    objectsLayer.objects.forEach((object) => {
+      const { name, x, y, width, height, properties } = object;
+      console.log(x, y);
+      console.log(x + width, y + height);
+      if (player.x == x && player.y == y && name == "table") {
+        console.log("collide with table")
+      } 
+      
+    });
+    console.log("player.x: " + player.x + " player.y: " + player.y);
   }
 }
 
