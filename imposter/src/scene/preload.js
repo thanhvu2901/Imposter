@@ -1,5 +1,4 @@
 import Phaser from "phaser";
-import { io } from 'socket.io-client'
 
 import background from "../assets/img/background.jpg";
 import logo from "../assets/img/logo.png";
@@ -13,12 +12,17 @@ import playerSprite from "../assets/img/player.png";
 import shipImg from "../assets/img/theSkeld.png";
 import idle from "../assets/img/idle.png";
 import facebook from '../assets/img/fb.png'
+import fix from '../assets/img/fix_wiring/Fix_Wiring.png'
+import useBtn from '../assets/img/useButton.png'
+import closeBtn from '../assets/img/closeButton.png'
 import SubMenu from "./submenu";
+
 import {
   PLAYER_SPRITE_WIDTH,
   PLAYER_SPRITE_HEIGHT,
 } from "../consts/constants";
 import Login from "./login";
+import FixWiring from "./state/minigame/fix_wiring";
 
 //element
 
@@ -66,13 +70,16 @@ class Preloader extends Phaser.Scene {
     // những thứ cần preload
     this.load.image('background', background);
     this.load.image('play', play);
-    this.load.image('cat', cat);
+
     this.load.image('options', options);
     this.load.image('logo', logo);
     this.load.audio('audio', audio)
     this.load.image('setting', setting)
     this.load.image('facebook', facebook)
     this.load.image("ship", shipImg);
+    this.load.image('fix', fix)
+    this.load.image('useBtn', useBtn)
+    this.load.image('closeBtn', closeBtn)
     this.load.spritesheet("player", playerSprite, {
       frameWidth: PLAYER_SPRITE_WIDTH,
       frameHeight: PLAYER_SPRITE_HEIGHT,
@@ -106,8 +113,7 @@ class Preloader extends Phaser.Scene {
 
     });
 
-    //setup socket
-    // socket = io('localhost:3000')
+
 
   }
   create() {
@@ -142,9 +148,9 @@ class Preloader extends Phaser.Scene {
       //     this.load.sc
       // }
     });
-    //this.input.on('pointerdown', () => this.scene.start('login', Login))
-    // this.input.on('pointerdown', () => this.scene.start('menu', MainMenuScene))
-    this.input.on('pointerdown', () => this.scene.start('submenu', SubMenu))
+    // this.input.on('pointerdown', () => this.scene.start('login', Login))
+    this.input.on('pointerdown', () => this.scene.start('menu', MainMenuScene))
+    //this.input.on('pointerdown', () => this.scene.start('fixWiring', FixWiring))
 
 
     this.load.on("progress", function (value) {
