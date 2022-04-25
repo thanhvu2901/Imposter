@@ -13,7 +13,6 @@ import UploadData from "./scene/state/ingame/uploaddata.js";
 var preloader = new Preloader();
 
 const config = {
-<<<<<<< HEAD
 
   type: [Phaser.AUTO, Phaser.CANVAS],
   width: 1024,
@@ -24,11 +23,6 @@ const config = {
       debug: true
     }
   },
-=======
-  type: Phaser.AUTO,
-  width: 1280,
-  height: 720,
->>>>>>> a98536c1c8ae1a1c555228f20572c7832fe7bcf5
   scale: {
     mode: Phaser.Scale.FIT,
     autoCenter: Phaser.Scale.CENTER_BOTH,
@@ -53,13 +47,7 @@ game.scene.add('Upload',UploadData)
 // game.scene.start("preloader");
 // game.scene.start("theskeld");
 //game.scene.start('menu');
-<<<<<<< HEAD
 game.scene.start('game');
 //game.scene.start('login');
 // game.scene.start('Upload');
-=======
- game.scene.start('game');
-
-//game.scene.start('Upload');
->>>>>>> a98536c1c8ae1a1c555228f20572c7832fe7bcf5
 
