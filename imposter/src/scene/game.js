@@ -20,8 +20,12 @@ var player;
 var cursors;
 let pressedKeys = [];
 let otherPlayer = {};
+<<<<<<< HEAD
 let objectsGroup = [];
 let socket;
+=======
+let socket,r;
+>>>>>>> d48a65e6295000196c21747576df1de5aa9bb9a1
 var objectsLayer;
 
 class Game extends Phaser.Scene {
@@ -120,16 +124,40 @@ class Game extends Phaser.Scene {
     objectsLayer = ship.getObjectLayer("GameObjects");
     objectsLayer.objects.forEach((object) => {
       const { name, x, y, width, height, properties } = object;
+<<<<<<< HEAD
       //  console.log(x, y);
       console.log(width, height);
       var circle = this.add.circle(x, y, 130, 0x6666ff);
       var obj = ship.createFromObjects("GameObjects", { name: name });
       console.log(obj);
       this.physics.add.collider(player, circle);
+=======
+    //  console.log(x, y);
+      console.log( width,  height);
+      // if (player.x <= x + 100 && player.x >= x - 100 && player.y <= y+ 100 && player.y >= y- 100 && name == "table") {
+      //   console.log("collide with table")
+      // } 
+   //   this.add.rectangle( x, y, 20, 20, 0x6666ff);
+    r=this.add.circle(x,y,100)
+  
+  // player.setBounce(1, 1);
+ //  player.body.setBoundsRectangle(new Phaser.Geom.Rectangle(x,y,100,100));
+ //r.setStatic(true)
+
+this.physics.add.existing(r)
+
+r.body.immovable=true
+//r.body.moves=false
+r.body.setCircle(100)
+this.physics.add.overlap(player, r,null, null, this);
+this.physics.add.collider(player,r)
+// player.body.setBoundsRectangle(r)
+>>>>>>> d48a65e6295000196c21747576df1de5aa9bb9a1
     });
   }
 
   update() {
+   // this.physics.world.collide(player, circle);
     let playerMoved = false;
     player.setVelocity(0);
     if (
