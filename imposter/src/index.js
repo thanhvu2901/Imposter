@@ -24,7 +24,7 @@ var preloader = new Preloader();
 const config = {
 
   type: [Phaser.AUTO, Phaser.CANVAS],
-  width: 1024,
+  width: 1080,
   height: 768,
   physics: {
     default: "arcade",
@@ -36,7 +36,7 @@ const config = {
     mode: Phaser.Scale.FIT,
     autoCenter: Phaser.Scale.CENTER_BOTH,
   },
-  // scene: titleScene
+
 };
 
 const game = new Phaser.Game(config);
@@ -77,7 +77,7 @@ game.scene.add('waitingRoom', waitingRoom)
 // game.scene.start('game');
 //game.scene.start('login');
 
-//game.scene.start('preloader');
+game.scene.start('preloader');
 //game.scene.start('Course');
 // game.scene.start('Course');
 //game.scene.start('CleanO2Filter');
@@ -92,4 +92,4 @@ game.scene.add('waitingRoom', waitingRoom)
 // game.scene.start('preloader');
 //game.scene.start("align_engine_output")
 //game.scene.start('joinGame')
-game.scene.start('waitingRoom')
+//game.scene.start('waitingRoom')

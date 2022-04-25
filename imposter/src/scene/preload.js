@@ -13,7 +13,8 @@ import shipImg from "../assets/img/theSkeld.png";
 import idle from "../assets/img/idle.png";
 import facebook from '../assets/img/fb.png'
 import fix from '../assets/img/fix_wiring/Fix_Wiring.png'
-
+import useBtn from '../assets/img/useButton.png'
+import closeBtn from '../assets/img/closeButton.png'
 import SubMenu from "./submenu";
 
 import {
@@ -69,7 +70,7 @@ class Preloader extends Phaser.Scene {
     // những thứ cần preload
     this.load.image('background', background);
     this.load.image('play', play);
-    this.load.image('cat', cat);
+
     this.load.image('options', options);
     this.load.image('logo', logo);
     this.load.audio('audio', audio)
@@ -77,8 +78,8 @@ class Preloader extends Phaser.Scene {
     this.load.image('facebook', facebook)
     this.load.image("ship", shipImg);
     this.load.image('fix', fix)
-
-
+    this.load.image('useBtn', useBtn)
+    this.load.image('closeBtn', closeBtn)
     this.load.spritesheet("player", playerSprite, {
       frameWidth: PLAYER_SPRITE_WIDTH,
       frameHeight: PLAYER_SPRITE_HEIGHT,

@@ -1,4 +1,4 @@
-import Phaser from "phaser";
+import Phaser, { Scene } from "phaser";
 import tileImg from "../assets/img/theSkeld.png";
 import theskeld from "../assets/tilemaps/theskeld.json";
 import playerpng from "../assets/player/player_sprite/player_base.png";
@@ -43,16 +43,17 @@ class Game extends Phaser.Scene {
 
   create() {
 
-
-
-
     const ship = this.make.tilemap({ key: "tilemap" });
     const tileset = ship.addTilesetImage("theSkeld", "tiles");
 
     const ship_tileset = ship.createLayer("Background", tileset);
     ship_tileset.setCollisionByProperty({ collides: true });
 
+    const useBtn = this.add.image(1000, 700, 'useBtn').setScrollFactor(0).setInteractive({ useHandCursor: true });
+
     debugDraw(ship_tileset, this);
+
+
     //add player
     player = this.physics.add.sprite(250, 328, "playerbase", "idle.png");
 
@@ -65,13 +66,18 @@ class Game extends Phaser.Scene {
 
 
 
-    //  otherPlayer[playerId] = this.physics.add.sprite(250, 228, "playerbase", "idle.png");
-
     //****************** */
 
 
     //cursor to direct
     cursors = this.input.keyboard.createCursorKeys();
+
+    //input button
+    useBtn.on('pointerdown', () => {
+
+      this.scene.launch('fixWiring')
+
+    })
 
     // tạo object và gán các thuộc tính
     this.anims.create({
@@ -105,8 +111,6 @@ class Game extends Phaser.Scene {
       repeat: -1,
       frameRate: 24,
     });
-
-
     //input to control
     this.input.keyboard.on("keydown", (e) => {
       if (!pressedKeys.includes(e.code)) {
@@ -134,8 +138,6 @@ class Game extends Phaser.Scene {
       // this.physics.resume();
       // STATE
       this.state.roomKey = states.roomKey
-      // this.state.players = Object(state).players;
-      // this.state.numPlayers = Object(state).numPlayers;
 
       console.log("state: " + this.state.roomKey);
     });
@@ -155,7 +157,6 @@ class Game extends Phaser.Scene {
 
 
     this.socket.on('newPlayer', ({ playerInfo, numPlayers }) => {
-      // otherPlayer[playerId] = this.physics.add.sprite(250, 228, "playerbase", "idle.png");
       // listplyer socket có khác với tại local khong
       otherPlayerId.push(playerInfo.playerId);
       console.log(otherPlayerId);
@@ -245,8 +246,6 @@ class Game extends Phaser.Scene {
       playerMoved = true;
     }
 
-
-
     if (playerMoved) {
 
       this.socket.emit('move', { x: player.x, y: player.y, roomId: this.state.roomKey });
@@ -257,17 +256,7 @@ class Game extends Phaser.Scene {
       }
       player.movedLastFrame = false;
     }
-
-
   }
-}
-function hostCreateGame() {
-  var thisGameId = (Math.random() * 100000) | 0;
-  // create new room
-  this.socket.emit('newGameCreated', { gameId: thisGameId, mySocketId: this.socket.id })
-
-  //join room and wait
-  console.log(thisGameId.toString());
 }
 
 
