@@ -72,7 +72,7 @@ game.scene.add('joinGame', JoinGame)
 game.scene.add('waitingRoom', waitingRoom)
 // start title
 
-//game.scene.start("preloader");
+game.scene.start("preloader");
 // game.scene.start("theskeld");
 //game.scene.start('menu');
 // game.scene.start('game');
@@ -94,4 +94,4 @@ game.scene.add('waitingRoom', waitingRoom)
 // game.scene.start('preloader');
 //game.scene.start("align_engine_output")
 //game.scene.start('joinGame')
-game.scene.start('waitingRoom')
+//game.scene.start('waitingRoom')

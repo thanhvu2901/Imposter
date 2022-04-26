@@ -66,7 +66,7 @@ export default class JoinGame extends Phaser.Scene {
         });
         socket.on('join', () => {
             this.scene.stop('joinGame')
-            this.scene.launch('game', { socket: socket, textInput: textInput })
+            this.scene.launch('waitingRoom', { socket: socket, textInput: textInput })
         })
 
         socket.on("keyNotValid", function () {
@@ -77,19 +77,9 @@ export default class JoinGame extends Phaser.Scene {
         socket.on("keyIsValid", () => {
 
             this.scene.stop("joinGame");
-            this.scene.launch('game', { socket: socket, textInput: textInput })
+            this.scene.launch('waitingRoom', { socket: socket, textInput: textInput })
         });
 
-        // socket.on('joined', () => {
-        //     // this.scene.start('game', Game);
-        //     this.scene.launch('game', { socket: socket })
-        // })
-
-
-
-        // socket.on('move', ({ x, y, playerId }) => {
-        //     console.log(x);
-        // })
     }
 
 }
