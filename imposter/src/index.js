@@ -4,6 +4,7 @@ import Preloader from "./scene/preload.js";
 import MainMenuScene from "./scene/menu.js";
 import TheSkeld from "./scene/state/ingame/theskeld.js";
 import ChartCourse from "./scene/state/ingame/chartcourse.js";
+import SwipeCard from "./scene/state/minigame/swipe_card.js";
 import Game from './scene/game.js'
 import Options from "./scene/state/inmenu/options.js";
 import Login from "./scene/login.js";
@@ -17,12 +18,14 @@ import PrimeShields from "./scene/state/ingame/primeShields.js";
 import InspectSample from "./scene/state/minigame/inspect_sample.js";
 import StabilizeSteering from "./scene/state/minigame/stabilize_steering.js";
 import StartReactor from "./scene/state/minigame/start_reactor.js";
+import JoinGame from "./scene/joinGame.js";
+import waitingRoom from "./scene/waitingRoom.js";
 var preloader = new Preloader();
 
 const config = {
 
   type: [Phaser.AUTO, Phaser.CANVAS],
-  width: 1024,
+  width: 1080,
   height: 768,
   physics: {
     default: "arcade",
@@ -34,7 +37,7 @@ const config = {
     mode: Phaser.Scale.FIT,
     autoCenter: Phaser.Scale.CENTER_BOTH,
   },
-  // scene: titleScene
+
 };
 
 const game = new Phaser.Game(config);
@@ -65,15 +68,18 @@ game.scene.add("PrimeShields", PrimeShields);
 game.scene.add('inspectSample', InspectSample)
 game.scene.add('stabilizeSteering', StabilizeSteering)
 game.scene.add('startReactor', StartReactor)
+game.scene.add('joinGame', JoinGame)
+game.scene.add('waitingRoom', waitingRoom)
 // start title
 
-// game.scene.start("preloader");
+game.scene.start("preloader");
 // game.scene.start("theskeld");
 //game.scene.start('menu');
 // game.scene.start('game');
 //game.scene.start('login');
+// game.scene.start('Upload');
 
-//game.scene.start('preloader');
+// game.scene.start('preloader');
 //game.scene.start('Course');
 // game.scene.start('Course');
 //game.scene.start('CleanO2Filter');
@@ -83,7 +89,9 @@ game.scene.add('startReactor', StartReactor)
 //game.scene.start('fixWiring')
 //game.scene.start('inspectSample')
 // game.scene.start('stabilizeSteering');
-game.scene.start('startReactor')
+//game.scene.start('startReactor')
 
 // game.scene.start('preloader');
 //game.scene.start("align_engine_output")
+//game.scene.start('joinGame')
+//game.scene.start('waitingRoom')
