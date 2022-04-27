@@ -32,7 +32,7 @@ const config = {
   },
   scale: {
     mode: Phaser.Scale.FIT,
-    autoCenter: Phaser.Scale.CENTER_BOTH,
+    autoCenter: Phaser.Scale.CENTER_BOTH
   },
   // scene: titleScene
 };
@@ -85,5 +85,5 @@ game.scene.add('startReactor', StartReactor)
 // game.scene.start('stabilizeSteering');
 //game.scene.start('startReactor')
 
-// game.scene.start('preloader');
+game.scene.start('preloader');
 //game.scene.start("align_engine_output")

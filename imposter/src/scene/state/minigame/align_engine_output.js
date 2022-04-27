@@ -1,9 +1,17 @@
 import Phaser from "Phaser";
-import Align_Base from "../../../assets/img/align_egine_output/engineAlign_base.png";
+import Align_Base from "../../../assets/img/align_egine_output/base.png";
 import Align_Slider from "../../../assets/img/align_egine_output/engineAlign_slider.png";
 import Align_Engine from "../../../assets/img/align_egine_output/engineAlign_engine.png";
 
+
+let x;
+let y;
 class AlignEngineOutput extends Phaser.Scene {
+    init(data) {
+        x = data.x;
+        y = data.y;
+    }
+
     preload() {
         this.load.image("Align_Base", Align_Base);
         this.load.image("Align_Slider", Align_Slider);
@@ -13,7 +21,7 @@ class AlignEngineOutput extends Phaser.Scene {
     create() {
         let check_y = 0;
         const current_object = this
-        // const current_scene = this.scene;
+        const current_scene = this.scene;
         this.add.image(512, 384, "Align_Base");
         let slider = this.add.image(0, 0, "Align_Slider");
         let engine = this.add.sprite(455, 384, "Align_Engine");
@@ -43,15 +51,13 @@ class AlignEngineOutput extends Phaser.Scene {
                 if( Math.floor(check_y) == 414)
                 {
                     current_object.add.text(390, 250, "Mission Completed");
-                    // current_scene.stop("align_engine_output")
+                    current_scene.start("game", {x: x, y: y, mission: "AlignEngineOutput"});
+                    current_scene.stop("align_engine_output");
                 }
                 gameObject.x = 660;
                 gameObject.y = dragY;
             }
         });
-
-
-
     }
 
     update() {
