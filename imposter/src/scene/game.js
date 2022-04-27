@@ -20,7 +20,7 @@ let otherPlayer = new Array();
 let otherPlayerId = new Array();
 let cursors;
 let pressedKeys = [];
-
+let stt = 0;
 let socket, r;
 var objectsLayer;
 
@@ -34,6 +34,8 @@ class Game extends Phaser.Scene {
   init(data) {
     this.socket = data.socket;
     this.textInput = data.textInput;
+    this.numPlayers = data.numPlayers;
+    this.idPlayers = data.idPlayers;
   }
 
   preload() {
@@ -43,6 +45,7 @@ class Game extends Phaser.Scene {
   }
 
   create() {
+
     const ship = this.make.tilemap({ key: "tilemap" });
     const tileset = ship.addTilesetImage("theSkeld", "tiles");
 
@@ -57,20 +60,29 @@ class Game extends Phaser.Scene {
     debugDraw(ship_tileset, this);
 
     //add player
-    player = this.physics.add.sprite(250, 328, "playerbase", "idle.png");
+    player = this.physics.add.sprite(115, -700, "playerbase", "idle.png");
 
     // tạo theo số lượng other player vào
 
-    for (let i = 0; i < otherPlayerId.length; i++) {
+    this.state.roomKey = this.textInput
+
+    console.log(this.numPlayers);
+    for (let i = 0; i < this.numPlayers - 1; i++) {
       otherPlayer[i] = this.physics.add.sprite(
-        250,
-        328 + 30 * i,
+        115,
+        -740 + 30 * i,
         "playerbase",
         "idle.png"
       );
     }
-    stt = otherPlayer.length;
+    this.idPlayers.forEach(element => {
+      if (element != this.socket.id) { otherPlayerId.push(element) }
+    });
+    console.log(otherPlayerId);
+    // console.log(this.idPlayers);
 
+
+    stt = otherPlayer.length;
     //****************** */
 
     //cursor to direct
@@ -128,48 +140,8 @@ class Game extends Phaser.Scene {
 
     //tải lại mới khi có player mới vào có các player đã ở trong đó
     console.log(this.textInput);
-    this.socket.emit("joinRoom", this.textInput);
 
-    this.socket.on("setState", (states) => {
-      // this.physics.resume();
-      // STATE
-      this.state.roomKey = states.roomKey;
 
-      console.log("state: " + this.state.roomKey);
-    });
-
-    this.socket.on("currentPlayers", ({ players, numPlayers }) => {
-      console.log(players);
-      for (let i = 0; i < numPlayers; i++) {
-        if (this.socket.id !== Object.keys(players)[i]) {
-          otherPlayerId.push(Object.keys(players)[i]);
-          otherPlayer[stt] = this.physics.add.sprite(
-            Object.values(players)[i].x,
-            Object.values(players)[i].y,
-            "playerbase",
-            "idle.png"
-          );
-          stt = stt + 1;
-        }
-      }
-      console.log(otherPlayerId);
-    });
-
-    this.socket.on("newPlayer", ({ playerInfo, numPlayers }) => {
-      // listplyer socket có khác với tại local khong
-      otherPlayerId.push(playerInfo.playerId);
-      console.log(otherPlayerId);
-      otherPlayer[stt] = this.physics.add.sprite(
-        250,
-        328 + 10 * stt,
-        "playerbase",
-        "idle.png"
-      );
-      console.log("stt" + stt);
-      stt += 1;
-      console.log("new players " + otherPlayer[stt]);
-      console.log("stt" + stt);
-    });
 
     this.socket.on("move", ({ x, y, playerId }) => {
       console.log({ x, y, playerId });
@@ -196,36 +168,10 @@ class Game extends Phaser.Scene {
         otherPlayer[index].stop("player-walk");
       }
     });
-    socket.on("moveEnd", () => {
-      console.log("revieved moveend");
-      otherPlayer.moving = false;
-      otherPlayer.anims.play("player-idle");
-    });
 
-    objectsLayer = ship.getObjectLayer("GameObjects");
-    objectsLayer.objects.forEach((object) => {
-      const { name, x, y, width, height, properties } = object;
-      //  console.log(x, y);
-      console.log(width, height);
-      // if (player.x <= x + 100 && player.x >= x - 100 && player.y <= y+ 100 && player.y >= y- 100 && name == "table") {
-      //   console.log("collide with table")
-      // }
-      //   this.add.rectangle( x, y, 20, 20, 0x6666ff);
-      r = this.add.circle(x, y, 100);
 
-      // player.setBounce(1, 1);
-      //  player.body.setBoundsRectangle(new Phaser.Geom.Rectangle(x,y,100,100));
-      //r.setStatic(true)
 
-      this.physics.add.existing(r);
 
-      r.body.immovable = true;
-      //r.body.moves=false
-      r.body.setCircle(100);
-      this.physics.add.overlap(player, r, null, null, this);
-      this.physics.add.collider(player, r);
-      // player.body.setBoundsRectangle(r)
-    });
     this.socket.on("moveEnd", ({ playerId }) => {
       let index = otherPlayerId.findIndex((Element) => Element == playerId);
       otherPlayer[index].moving = false;
