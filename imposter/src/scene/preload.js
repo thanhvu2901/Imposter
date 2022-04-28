@@ -39,7 +39,7 @@ class Preloader extends Phaser.Scene {
     var progressBar = this.add.graphics();
     var progressBox = this.add.graphics();
     progressBox.fillStyle(0x222222, 0.9);
-    progressBox.fillRect(320, 280, 320, 30);
+    progressBox.fillRect(380, 280, 380, 30);
 
     var width = this.cameras.main.width;
     var height = this.cameras.main.height;
@@ -104,7 +104,7 @@ class Preloader extends Phaser.Scene {
 
       progressBar.clear();
       progressBar.fillStyle(0xffffff, 1);
-      progressBar.fillRect(320, 280, 320 * value, 30);
+      progressBar.fillRect(380, 280, 380 * value, 30);
       percentText.setText(parseInt(value * 100) + '%');
     });
 
@@ -139,7 +139,7 @@ class Preloader extends Phaser.Scene {
     //welcomeText.setOrigin(0.5, 0.5);
 
 
-    var sprite = this.add.image(500, 280, 'logo').setAlpha(0);
+    var sprite = this.add.image(530, 280, 'logo').setAlpha(0);
 
     //chạy intro logo
     var intro = this.tweens.add({
@@ -160,7 +160,7 @@ class Preloader extends Phaser.Scene {
     this.load.on("progress", function (value) {
       progressBar.clear();
       progressBar.fillStyle(0xffffff, 1);
-      progressBar.fillRect(320, 280, 320 * value, 30);
+      progressBar.fillRect(380, 280, 380 * value, 30);
       percentText.setText(parseInt(value * 100) + "%");
     });
 
