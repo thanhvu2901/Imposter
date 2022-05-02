@@ -1,11 +1,9 @@
 import Phaser from "phaser";
-
 import background from "../assets/img/background.jpg";
 import logo from "../assets/img/logo.png";
 import play from "../assets/img/play_button.png";
 import options from "../assets/img/options_button.png";
-import cat from "../assets/img/cat.png";
-import audio from "../assets/audio/audio.mp3";
+
 import MainMenuScene from "./menu";
 import setting from '../assets/img/setting.png'
 import playerSprite from "../assets/img/player.png";
@@ -17,6 +15,18 @@ import useBtn from '../assets/img/useButton.png'
 import closeBtn from '../assets/img/closeButton.png'
 import customizeBtn from '../assets/img/customize.png'
 import startBtn from '../assets/img/startButton.png'
+import footStep1 from '../assets/audio/amination/FootstepMetal01.mp3'
+import footStep2 from '../assets/audio/amination/FootstepMetal02.mp3'
+import footStep3 from '../assets/audio/amination/FootstepMetal03.mp3'
+import footStep4 from '../assets/audio/amination/FootstepMetal04.mp3'
+import footStep5 from '../assets/audio/amination/FootstepMetal05.mp3'
+import footStep6 from '../assets/audio/amination/FootstepMetal06.mp3'
+import footStep7 from '../assets/audio/amination/FootstepMetal07.mp3'
+import footStep8 from '../assets/audio/amination/FootstepMetal08.mp3'
+import killAudio from '../assets/audio/kill/impostor_kill.wav'
+
+
+
 import SubMenu from "./submenu";
 
 import {
@@ -75,7 +85,7 @@ class Preloader extends Phaser.Scene {
 
     this.load.image('options', options);
     this.load.image('logo', logo);
-    this.load.audio('audio', audio)
+
     this.load.image('setting', setting)
     this.load.image('facebook', facebook)
     this.load.image("ship", shipImg);
@@ -84,6 +94,28 @@ class Preloader extends Phaser.Scene {
     this.load.image('closeBtn', closeBtn)
     this.load.image('startBtn', startBtn);
     this.load.image('customizeBtn', customizeBtn)
+
+    //audio
+    this.load.audio('footstep1', footStep1)
+    this.load.audio('footstep2', footStep2)
+    this.load.audio('footstep3', footStep3)
+    this.load.audio('footstep4', footStep4)
+    this.load.audio('footstep5', footStep5)
+    this.load.audio('footstep6', footStep6)
+    this.load.audio('footstep7', footStep7)
+    this.load.audio('footstep8', footStep8)
+    this.load.audio('killAudio', killAudio)
+    // this.load.audioSprite('footStep',
+    //   [footStep2, footStep3, footStep4, footStep5, footStep6, footStep7, footStep8], {
+
+    //   loop: true,
+
+    //   //duration: 5000
+    // }
+
+    // )
+
+
     this.load.spritesheet("player", playerSprite, {
       frameWidth: PLAYER_SPRITE_WIDTH,
       frameHeight: PLAYER_SPRITE_HEIGHT,

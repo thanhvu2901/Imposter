@@ -67,10 +67,7 @@ export default class JoinGame extends Phaser.Scene {
 
         socket.on("roomCreated", function (roomKey) {
             this.roomKey = roomKey;
-            // // scene.roomKeyText.setText(scene.roomKey);
-
-            console.log(roomKey);
-            //this.scene.launch('game', { socket: socket })
+            console.log(roomKey);       
             textInput = roomKey
             socket.emit('ok')
 

@@ -42,9 +42,15 @@ class Game extends Phaser.Scene {
     this.load.image("tiles", tileImg);
     this.load.tilemapTiledJSON("tilemap", theskeld);
     this.load.atlas("playerbase", playerpng, playerjson);
+
+
   }
 
   create() {
+
+
+    let music = this.sound.add('footStep')
+    music.play({ loop: true })
 
     const ship = this.make.tilemap({ key: "tilemap" });
     const tileset = ship.addTilesetImage("theSkeld", "tiles");
@@ -107,10 +113,12 @@ class Game extends Phaser.Scene {
         end: 12,
         prefix: "Walk",
         suffix: ".png",
+        
       }),
       repeat: -1,
       frameRate: 16,
     });
+
 
     //player death
     this.anims.create({
@@ -161,6 +169,7 @@ class Game extends Phaser.Scene {
 
       if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
         otherPlayer[index].play("player-walk");
+
       } else if (
         !otherPlayer[index].moving &&
         otherPlayer[index].anims.isPlaying
@@ -207,6 +216,8 @@ class Game extends Phaser.Scene {
       player.scaleX = -1;
       player.body.offset.x = 40;
       playerMoved = true;
+
+
     } else if (cursors.right.isDown) {
       player.anims.play("player-walk", true);
       player.setVelocityX(PLAYER_SPEED);

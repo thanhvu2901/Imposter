@@ -42,6 +42,8 @@ export default class waitingRoom extends Phaser.Scene {
       .image(800, 700, "customizeBtn")
       .setScrollFactor(0)
       .setInteractive({ useHandCursor: true });
+    //set room 
+
     const start = this.add
       .image(960, 700, "startBtn")
       .setScrollFactor(0)
@@ -208,8 +210,6 @@ export default class waitingRoom extends Phaser.Scene {
     })
     this.socket.on('go', ({ numPlayers, idPlayers }) => {
       this.scene.stop('waitingRoom')
-      //this.sys.game.destroy(true);
-      //this.scene.remove('waitingRoom')
       console.log(numPlayers);
       this.scene.launch('game', { socket: this.socket, textInput: this.textInput, numPlayers: numPlayers, idPlayers: idPlayers })
       this.game.scene.stop('waitingRoom')
