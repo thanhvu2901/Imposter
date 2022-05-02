@@ -14,6 +14,7 @@ import AlignEngineOutput from "./scene/state/minigame/align_engine_output";
 import CleanO2Filter from "./scene/state/ingame/cleanO2Filter.js";
 import CleanAsteroids from "./scene/state/ingame/cleanAsteroids.js"
 import PrimeShields from "./scene/state/ingame/primeShields.js";
+import ChangeSkin from "./scene/state/skin/changeSkin.js";
 
 import InspectSample from "./scene/state/minigame/inspect_sample.js";
 import StabilizeSteering from "./scene/state/minigame/stabilize_steering.js";
@@ -64,6 +65,7 @@ game.scene.add("CleanAsteroids", CleanAsteroids);
 
 game.scene.add("PrimeShields", PrimeShields);
 
+game.scene.add("ChangeSkin", ChangeSkin);
 
 game.scene.add('inspectSample', InspectSample)
 game.scene.add('stabilizeSteering', StabilizeSteering)
@@ -95,3 +97,6 @@ game.scene.start("preloader");
 //game.scene.start("align_engine_output")
 //game.scene.start('joinGame')
 //game.scene.start('waitingRoom')
+// game.scene.start('PrimeShields');
+
+// game.scene.start("ChangeSkin");
