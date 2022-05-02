@@ -1,5 +1,6 @@
 //import mission 
 import AlignEngineOutput from "../services/missions/align_engine_output";
+import KillPlayer from "../services/missions/kill_player";
 
 
 class MapMissionsExporter {
@@ -18,7 +19,8 @@ class MapMissionsExporter {
     {
         return {
             "theSkeld": {
-                "AlignEngineOutput": AlignEngineOutput
+                "AlignEngineOutput": AlignEngineOutput,
+                "KillPlayer": KillPlayer
             }
         }
     }  
