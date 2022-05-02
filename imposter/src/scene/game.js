@@ -54,7 +54,7 @@ class Game extends Phaser.Scene {
       .setScrollFactor(0)
       .setInteractive({ useHandCursor: true });
 
-    debugDraw(ship_tileset, this);
+    // debugDraw(ship_tileset, this);
 
     //add player
     player = this.physics.add.sprite(250, 328, "playerbase", "idle.png");
@@ -202,30 +202,21 @@ class Game extends Phaser.Scene {
       otherPlayer.anims.play("player-idle");
     });
 
-    objectsLayer = ship.getObjectLayer("GameObjects");
-    objectsLayer.objects.forEach((object) => {
-      const { name, x, y, width, height, properties } = object;
-      //  console.log(x, y);
-      console.log(width, height);
-      // if (player.x <= x + 100 && player.x >= x - 100 && player.y <= y+ 100 && player.y >= y- 100 && name == "table") {
-      //   console.log("collide with table")
-      // }
-      //   this.add.rectangle( x, y, 20, 20, 0x6666ff);
-      r = this.add.circle(x, y, 100);
+    // objectsLayer = ship.getObjectLayer("GameObjects");
+    // objectsLayer.objects.forEach((object) => {
+    //   const { name, x, y, width, height, properties } = object;
+    //   //  console.log(x, y);
+    //   console.log(width, height);
+    //   r = this.add.circle(x, y, 100);
 
-      // player.setBounce(1, 1);
-      //  player.body.setBoundsRectangle(new Phaser.Geom.Rectangle(x,y,100,100));
-      //r.setStatic(true)
+    //   this.physics.add.existing(r);
 
-      this.physics.add.existing(r);
-
-      r.body.immovable = true;
-      //r.body.moves=false
-      r.body.setCircle(100);
-      this.physics.add.overlap(player, r, null, null, this);
-      this.physics.add.collider(player, r);
-      // player.body.setBoundsRectangle(r)
-    });
+    //   r.body.immovable = true;
+    //   //r.body.moves=false
+    //   r.body.setCircle(100);
+    //   this.physics.add.overlap(player, r, null, null, this);
+    //   this.physics.add.collider(player, r);
+    // });
     this.socket.on("moveEnd", ({ playerId }) => {
       let index = otherPlayerId.findIndex((Element) => Element == playerId);
       otherPlayer[index].moving = false;
