@@ -15,6 +15,8 @@ import facebook from '../assets/img/fb.png'
 import fix from '../assets/img/fix_wiring/Fix_Wiring.png'
 import useBtn from '../assets/img/useButton.png'
 import closeBtn from '../assets/img/closeButton.png'
+import customizeBtn from '../assets/img/customize.png'
+import startBtn from '../assets/img/startButton.png'
 import SubMenu from "./submenu";
 
 import {
@@ -80,6 +82,8 @@ class Preloader extends Phaser.Scene {
     this.load.image('fix', fix)
     this.load.image('useBtn', useBtn)
     this.load.image('closeBtn', closeBtn)
+    this.load.image('startBtn', startBtn);
+    this.load.image('customizeBtn', customizeBtn)
     this.load.spritesheet("player", playerSprite, {
       frameWidth: PLAYER_SPRITE_WIDTH,
       frameHeight: PLAYER_SPRITE_HEIGHT,
