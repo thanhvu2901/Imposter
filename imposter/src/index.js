@@ -96,7 +96,5 @@ game.scene.start("preloader");
 // game.scene.start('preloader');
 //game.scene.start("align_engine_output")
 //game.scene.start('joinGame')
-//game.scene.start('waitingRoom')
-// game.scene.start('PrimeShields');
-
+// game.scene.start('waitingRoom')
 // game.scene.start("ChangeSkin");
