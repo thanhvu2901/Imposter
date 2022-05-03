@@ -43,10 +43,10 @@ export default class waitingRoom extends Phaser.Scene {
       .image(800, 700, "customizeBtn")
       .setScrollFactor(0)
       .setInteractive({ useHandCursor: true });
-    const start = this.add
-      .image(960, 700, "startBtn")
-      .setScrollFactor(0)
-      .setInteractive({ useHandCursor: true });
+    //set room 
+
+    //if host
+
 
     lobby_tileset.setCollisionByProperty({ collides: true });
     debugDraw(lobby_tileset, this);
@@ -120,9 +120,29 @@ export default class waitingRoom extends Phaser.Scene {
       // this.physics.resume();
       // STATE
       this.state.roomKey = states.roomKey;
+      this.state.host = Object.keys((states).players)[0]
+      console.log("state: " + this.state.host);
 
-      console.log("state: " + this.state.roomKey);
+      if (this.socket.id == this.state.host) {
+        const start = this.add
+          .image(960, 700, "startBtn")
+          .setScrollFactor(0)
+          .setInteractive({ useHandCursor: true });
+
+        start.on('pointerdown', () => {
+
+          // custom by host   
+          let imposter = 2;
+          let player = 4;
+          let roomId = this.textInput
+          this.socket.emit('letgo', ({ roomId, imposter, player }))
+          console.log('after click');
+          //this.scene.launch('game', { socket: this.socket, textInput: this.textInput, numPlayers: numPlayers })
+        })
+      }
     });
+
+
 
     this.socket.on("currentPlayers", ({ players, numPlayers }) => {
       console.log(players);
@@ -208,7 +228,7 @@ export default class waitingRoom extends Phaser.Scene {
       //this.scene.launch('game', { socket: this.socket, textInput: this.textInput, numPlayers: numPlayers })
     })
 
-    customize.on('pointerdown', ()=>{
+    customize.on('pointerdown', () => {
       this.input.on('pointerdown', () => this.scene.start('ChangeSkin', ChangeSkin))
       console.log("customize success")
     })
@@ -216,20 +236,29 @@ export default class waitingRoom extends Phaser.Scene {
       this.scene.stop('waitingRoom')
       //this.sys.game.destroy(true);
       //this.scene.remove('waitingRoom')
-      console.log(numPlayers);
-      this.scene.launch('game', { socket: this.socket, textInput: this.textInput, numPlayers: numPlayers, idPlayers: idPlayers })
-      this.game.scene.stop('waitingRoom')
-    })
-  }
+      this.socket.on('gogame', ({ numPlayers, idPlayers }) => {
+        console.log(numPlayers);
+        this.scene.stop('waitingRoom')
+
+        this.scene.launch('game', { socket: this.socket, textInput: this.textInput, numPlayers: numPlayers, idPlayers: idPlayers })
+        this.game.scene.stop('waitingRoom')
+      })
+
+
+
+
+
+
+    }
 
   update() {
-    let playerMoved = false;
-    player.setVelocity(0);
-    if (
+      let playerMoved = false;
+      player.setVelocity(0);
+      if(
       !cursors.left.isDown &&
-      !cursors.right.isDown &&
-      !cursors.up.isDown &&
-      !cursors.down.isDown
+        !cursors.right.isDown &&
+        !cursors.up.isDown &&
+        !cursors.down.isDown
     ) {
       player.anims.play("player-idle");
     }

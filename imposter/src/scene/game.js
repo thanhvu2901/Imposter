@@ -6,7 +6,7 @@ import playerjson from "../assets/player/player_sprite/player_base.json";
 import { debugDraw } from "../scene/debugDraw";
 import { io } from "socket.io-client";
 import { movePlayer } from "../animation/movement.js";
-
+import footStep from '../assets/audio/amination/Walk.mp3'
 import {
   PLAYER_HEIGHT,
   PLAYER_WIDTH,
@@ -42,9 +42,12 @@ class Game extends Phaser.Scene {
     this.load.image("tiles", tileImg);
     this.load.tilemapTiledJSON("tilemap", theskeld);
     this.load.atlas("playerbase", playerpng, playerjson);
+
+    this.load.audio('walk', footStep)
   }
 
   create() {
+
 
     const ship = this.make.tilemap({ key: "tilemap" });
     const tileset = ship.addTilesetImage("theSkeld", "tiles");
@@ -52,10 +55,6 @@ class Game extends Phaser.Scene {
     const ship_tileset = ship.createLayer("Background", tileset);
     ship_tileset.setCollisionByProperty({ collides: true });
 
-    const useBtn = this.add
-      .image(1000, 700, "useBtn")
-      .setScrollFactor(0)
-      .setInteractive({ useHandCursor: true });
 
     debugDraw(ship_tileset, this);
 
@@ -89,9 +88,7 @@ class Game extends Phaser.Scene {
     cursors = this.input.keyboard.createCursorKeys();
 
     //input button
-    useBtn.on("pointerdown", () => {
-      this.scene.launch("fixWiring");
-    });
+
 
     // tạo object và gán các thuộc tính
     this.anims.create({
@@ -112,6 +109,7 @@ class Game extends Phaser.Scene {
       frameRate: 16,
     });
 
+
     //player death
     this.anims.create({
       key: "player-dead",
@@ -127,10 +125,12 @@ class Game extends Phaser.Scene {
     //input to control
     this.input.keyboard.on("keydown", (e) => {
       if (!pressedKeys.includes(e.code)) {
+        this.sound.play('walk', { loop: true })
         pressedKeys.push(e.code);
       }
     });
     this.input.keyboard.on("keyup", (e) => {
+      this.sound.stopByKey('walk')
       pressedKeys = pressedKeys.filter((key) => key !== e.code);
     });
 
@@ -161,6 +161,7 @@ class Game extends Phaser.Scene {
 
       if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
         otherPlayer[index].play("player-walk");
+
       } else if (
         !otherPlayer[index].moving &&
         otherPlayer[index].anims.isPlaying
@@ -198,9 +199,9 @@ class Game extends Phaser.Scene {
       !cursors.down.isDown
     ) {
       player.anims.play("player-idle");
+
     }
 
-    // when move
     if (cursors.left.isDown) {
       player.anims.play("player-walk", true);
       player.setVelocityX(-PLAYER_SPEED);
@@ -213,16 +214,18 @@ class Game extends Phaser.Scene {
       player.scaleX = 1;
       player.body.offset.x = 0;
       playerMoved = true;
-    }
 
+    }
     if (cursors.up.isDown) {
       player.anims.play("player-walk", true);
       player.setVelocityY(-PLAYER_SPEED);
       playerMoved = true;
+
     } else if (cursors.down.isDown) {
       player.anims.play("player-walk", true);
       player.setVelocityY(PLAYER_SPEED);
       playerMoved = true;
+
     }
 
     if (playerMoved) {
