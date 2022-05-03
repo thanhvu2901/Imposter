@@ -55,10 +55,6 @@ class Game extends Phaser.Scene {
     const ship_tileset = ship.createLayer("Background", tileset);
     ship_tileset.setCollisionByProperty({ collides: true });
 
-    const useBtn = this.add
-      .image(1000, 700, "useBtn")
-      .setScrollFactor(0)
-      .setInteractive({ useHandCursor: true });
 
     debugDraw(ship_tileset, this);
 
@@ -92,9 +88,7 @@ class Game extends Phaser.Scene {
     cursors = this.input.keyboard.createCursorKeys();
 
     //input button
-    useBtn.on("pointerdown", () => {
-      this.scene.launch("fixWiring");
-    });
+
 
     // tạo object và gán các thuộc tính
     this.anims.create({

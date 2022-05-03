@@ -46,9 +46,7 @@ export default class JoinGame extends Phaser.Scene {
         let randomRoom = this.add.text(this.game.renderer.width * 0.4, this.game.renderer.height * 0.3 + 210, 'Random Room', { font: '32px Courier', fill: '#ffffff' }).setInteractive({ cursor: 'pointer' })
 
         create.on('pointerdown', () => {
-
             socket.emit("getRoomCode");
-
 
         });
 
@@ -67,7 +65,7 @@ export default class JoinGame extends Phaser.Scene {
 
         socket.on("roomCreated", function (roomKey) {
             this.roomKey = roomKey;
-            console.log(roomKey);       
+            console.log(roomKey);
             textInput = roomKey
             socket.emit('ok')
 

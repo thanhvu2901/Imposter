@@ -44,10 +44,8 @@ export default class waitingRoom extends Phaser.Scene {
       .setInteractive({ useHandCursor: true });
     //set room 
 
-    const start = this.add
-      .image(960, 700, "startBtn")
-      .setScrollFactor(0)
-      .setInteractive({ useHandCursor: true });
+    //if host
+
 
     lobby_tileset.setCollisionByProperty({ collides: true });
     debugDraw(lobby_tileset, this);
@@ -121,9 +119,29 @@ export default class waitingRoom extends Phaser.Scene {
       // this.physics.resume();
       // STATE
       this.state.roomKey = states.roomKey;
+      this.state.host = Object.keys((states).players)[0]
+      console.log("state: " + this.state.host);
 
-      console.log("state: " + this.state.roomKey);
+      if (this.socket.id == this.state.host) {
+        const start = this.add
+          .image(960, 700, "startBtn")
+          .setScrollFactor(0)
+          .setInteractive({ useHandCursor: true });
+
+        start.on('pointerdown', () => {
+
+          // custom by host   
+          let imposter = 2;
+          let player = 4;
+          let roomId = this.textInput
+          this.socket.emit('letgo', ({ roomId, imposter, player }))
+          console.log('after click');
+          //this.scene.launch('game', { socket: this.socket, textInput: this.textInput, numPlayers: numPlayers })
+        })
+      }
     });
+
+
 
     this.socket.on("currentPlayers", ({ players, numPlayers }) => {
       console.log(players);
@@ -157,63 +175,19 @@ export default class waitingRoom extends Phaser.Scene {
       console.log("new players " + otherPlayer[stt]);
       console.log("stt" + stt);
     });
-
-    // this.socket.on("move", ({ x, y, playerId }) => {
-    //   console.log({ x, y, playerId });
-
-    //   let index = otherPlayerId.findIndex((Element) => Element == playerId);
-    //   //id = index;
-    //   console.log(index);
-
-    //   if (otherPlayer[index].x > x) {
-    //     otherPlayer[index].flipX = true;
-    //   } else if (otherPlayer[index].x < x) {
-    //     otherPlayer[index].flipX = false;
-    //   }
-    //   otherPlayer[index].x = x;
-    //   otherPlayer[index].y = y;
-    //   otherPlayer[index].moving = true;
-
-    //   if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
-    //     otherPlayer[index].play("player-walk");
-    //   } else if (
-    //     !otherPlayer[index].moving &&
-    //     otherPlayer[index].anims.isPlaying
-    //   ) {
-    //     otherPlayer[index].stop("player-walk");
-    //   }
-    // });
-
-
-
-
-
-    // this.socket.on("moveEnd", ({ playerId }) => {
-    //   let index = otherPlayerId.findIndex((Element) => Element == playerId);
-    //   otherPlayer[index].moving = false;
-    //   otherPlayer[index].anims.play("player-idle");
-    //   if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
-    //     otherPlayer[index].play("player-walk");
-    //   } else if (
-    //     !otherPlayer[index].moving &&
-    //     otherPlayer[index].anims.isPlaying
-    //   ) {
-    //     otherPlayer[index].stop("player-walk");
-    //   }
-    // });
-
-    start.on('pointerdown', () => {
-      //this.scene.stop('waitingRoom')
-      this.socket.emit('letgo', (this.textInput))
-      console.log('after click');
-      //this.scene.launch('game', { socket: this.socket, textInput: this.textInput, numPlayers: numPlayers })
-    })
-    this.socket.on('go', ({ numPlayers, idPlayers }) => {
-      this.scene.stop('waitingRoom')
+    this.socket.on('gogame', ({ numPlayers, idPlayers }) => {
       console.log(numPlayers);
+      this.scene.stop('waitingRoom')
+
       this.scene.launch('game', { socket: this.socket, textInput: this.textInput, numPlayers: numPlayers, idPlayers: idPlayers })
       this.game.scene.stop('waitingRoom')
     })
+
+
+
+
+
+
   }
 
   update() {
