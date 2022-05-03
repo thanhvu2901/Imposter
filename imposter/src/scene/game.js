@@ -21,22 +21,23 @@ let otherPlayerId = new Array();
 let cursors;
 let pressedKeys = [];
 let stt = 0;
-let socket, r;
+let socket;
+let tables = [];
+let tableObject, ventObject;
 var objectsLayer;
 
 class Game extends Phaser.Scene {
   constructor() {
     super({ key: "game" });
-    //this.state = {};
     this.state = {};
   }
 
-  init(data) {
-    this.socket = data.socket;
-    this.textInput = data.textInput;
-    this.numPlayers = data.numPlayers;
-    this.idPlayers = data.idPlayers;
-  }
+  // init(data) {
+  //   this.socket = data.socket;
+  //   this.textInput = data.textInput;
+  //   this.numPlayers = data.numPlayers;
+  //   this.idPlayers = data.idPlayers;
+  // }
 
   preload() {
     this.load.image("tiles", tileImg);
@@ -45,9 +46,8 @@ class Game extends Phaser.Scene {
   }
 
   create() {
-
     const ship = this.make.tilemap({ key: "tilemap" });
-    const tileset = ship.addTilesetImage("theSkeld", "tiles");
+    const tileset = ship.addTilesetImage("theSkeld", "tiles", 17, 17);
 
     const ship_tileset = ship.createLayer("Background", tileset);
     ship_tileset.setCollisionByProperty({ collides: true });
@@ -64,25 +64,25 @@ class Game extends Phaser.Scene {
 
     // tạo theo số lượng other player vào
 
-    this.state.roomKey = this.textInput
+    this.state.roomKey = this.textInput;
 
-    console.log(this.numPlayers);
-    for (let i = 0; i < this.numPlayers - 1; i++) {
-      otherPlayer[i] = this.physics.add.sprite(
-        115,
-        -740 + 30 * i,
-        "playerbase",
-        "idle.png"
-      );
-    }
-    this.idPlayers.forEach(element => {
-      if (element != this.socket.id) { otherPlayerId.push(element) }
-    });
-    console.log(otherPlayerId);
-    // console.log(this.idPlayers);
+    // console.log(this.numPlayers);
+    // for (let i = 0; i < this.numPlayers - 1; i++) {
+    //   otherPlayer[i] = this.physics.add.sprite(
+    //     115,
+    //     -740 + 30 * i,
+    //     "playerbase",
+    //     "idle.png"
+    //   );
+    // }
+    // this.idPlayers.forEach((element) => {
+    //   if (element != this.socket.id) {
+    //     otherPlayerId.push(element);
+    //   }
+    // });
+    // console.log(otherPlayerId);
 
-
-    stt = otherPlayer.length;
+    // stt = otherPlayer.length;
     //****************** */
 
     //cursor to direct
@@ -109,7 +109,7 @@ class Game extends Phaser.Scene {
         suffix: ".png",
       }),
       repeat: -1,
-      frameRate: 16,
+      frameRate: 24,
     });
 
     //player death
@@ -121,7 +121,7 @@ class Game extends Phaser.Scene {
         prefix: "Dead",
         suffix: ".png",
       }),
-      repeat: -1,
+      repeat: 0,
       frameRate: 24,
     });
     //input to control
@@ -139,76 +139,88 @@ class Game extends Phaser.Scene {
     this.cameras.main.startFollow(player, true);
 
     //tải lại mới khi có player mới vào có các player đã ở trong đó
-    console.log(this.textInput);
+    // console.log(this.textInput);
 
+    // this.socket.on("move", ({ x, y, playerId }) => {
+    //   console.log({ x, y, playerId });
 
+    //   let index = otherPlayerId.findIndex((Element) => Element == playerId);
+    //   //id = index;
+    //   console.log(index);
 
-    this.socket.on("move", ({ x, y, playerId }) => {
-      console.log({ x, y, playerId });
+    //   if (otherPlayer[index].x > x) {
+    //     otherPlayer[index].flipX = true;
+    //   } else if (otherPlayer[index].x < x) {
+    //     otherPlayer[index].flipX = false;
+    //   }
+    //   otherPlayer[index].x = x;
+    //   otherPlayer[index].y = y;
+    //   otherPlayer[index].moving = true;
 
-      let index = otherPlayerId.findIndex((Element) => Element == playerId);
-      //id = index;
-      console.log(index);
-
-      if (otherPlayer[index].x > x) {
-        otherPlayer[index].flipX = true;
-      } else if (otherPlayer[index].x < x) {
-        otherPlayer[index].flipX = false;
-      }
-      otherPlayer[index].x = x;
-      otherPlayer[index].y = y;
-      otherPlayer[index].moving = true;
-
-      if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
-        otherPlayer[index].play("player-walk");
-      } else if (
-        !otherPlayer[index].moving &&
-        otherPlayer[index].anims.isPlaying
-      ) {
-        otherPlayer[index].stop("player-walk");
-      }
-    });
-
-<<<<<<< HEAD
-    // objectsLayer = ship.getObjectLayer("GameObjects");
-    // objectsLayer.objects.forEach((object) => {
-    //   const { name, x, y, width, height, properties } = object;
-    //   //  console.log(x, y);
-    //   console.log(width, height);
-    //   r = this.add.circle(x, y, 100);
-
-    //   this.physics.add.existing(r);
-
-    //   r.body.immovable = true;
-    //   //r.body.moves=false
-    //   r.body.setCircle(100);
-    //   this.physics.add.overlap(player, r, null, null, this);
-    //   this.physics.add.collider(player, r);
+    //   if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
+    //     otherPlayer[index].play("player-walk");
+    //   } else if (
+    //     !otherPlayer[index].moving &&
+    //     otherPlayer[index].anims.isPlaying
+    //   ) {
+    //     otherPlayer[index].stop("player-walk");
+    //   }
     // });
-=======
 
+    objectsLayer = ship.getObjectLayer("GameObjects");
+    objectsLayer.objects.forEach((object) => {
+      const { name, x, y, width, height, properties } = object;
 
+      switch (name) {
+        case "table":
+          tableObject = new Phaser.GameObjects.Ellipse(this, object.x, object.y, object.width, object.height);
+          // tableObject.setFillStyle(0xffffff, 0.5);
+          console.log(tableObject);
 
->>>>>>> eab64a4b680669ed109d7fa06d3f57d89b6d6608
-    this.socket.on("moveEnd", ({ playerId }) => {
-      let index = otherPlayerId.findIndex((Element) => Element == playerId);
-      otherPlayer[index].moving = false;
-      otherPlayer[index].anims.play("player-idle");
-      if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
-        otherPlayer[index].play("player-walk");
-      } else if (
-        !otherPlayer[index].moving &&
-        otherPlayer[index].anims.isPlaying
-      ) {
-        otherPlayer[index].stop("player-walk");
+          this.physics.add.existing(tableObject);
+
+          tableObject.body.immovable = true;
+          tableObject.setOrigin(0, 0);
+          //r.body.moves=false
+          // tableObject.body.setCircle(120);
+          this.physics.add.overlap(player, tableObject, null, null, this);
+          this.physics.add.collider(player, tableObject);
+          break;
+        case "vent":
+          ventObject = new Phaser.GameObjects.Rectangle(this, object.x, object.y, object.width, object.height, 0xff0000, 1);
+          this.physics.add.existing(ventObject);
+          // ventObject.
+          // ventObject = this.add.rectangle(object.x, object.y, object.width, object.height, 0xffffff);
+          // ventObject.setFillStyle(0xbfbfbf, 0.5);
+          console.log(ventObject);
+
+        default:
+          break;
       }
     });
+
+    console.log(objectsLayer);
+
+    // this.socket.on("moveEnd", ({ playerId }) => {
+    //   let index = otherPlayerId.findIndex((Element) => Element == playerId);
+    //   otherPlayer[index].moving = false;
+    //   otherPlayer[index].anims.play("player-idle");
+    //   if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
+    //     otherPlayer[index].play("player-walk");
+    //   } else if (
+    //     !otherPlayer[index].moving &&
+    //     otherPlayer[index].anims.isPlaying
+    //   ) {
+    //     otherPlayer[index].stop("player-walk");
+    //   }
+    // });
+
   }
 
   update() {
-    // this.physics.world.collide(player, circle);
     let playerMoved = false;
     player.setVelocity(0);
+
     if (
       !cursors.left.isDown &&
       !cursors.right.isDown &&
@@ -217,6 +229,7 @@ class Game extends Phaser.Scene {
     ) {
       player.anims.play("player-idle");
     }
+
 
     // when move
     if (cursors.left.isDown) {
@@ -243,19 +256,19 @@ class Game extends Phaser.Scene {
       playerMoved = true;
     }
 
-    if (playerMoved) {
-      this.socket.emit("move", {
-        x: player.x,
-        y: player.y,
-        roomId: this.state.roomKey,
-      });
-      player.movedLastFrame = true;
-    } else {
-      if (player.movedLastFrame) {
-        this.socket.emit("moveEnd", { roomId: this.state.roomKey });
-      }
-      player.movedLastFrame = false;
-    }
+    // if (playerMoved) {
+    //   this.socket.emit("move", {
+    //     x: player.x,
+    //     y: player.y,
+    //     roomId: this.state.roomKey,
+    //   });
+    //   player.movedLastFrame = true;
+    // } else {
+    //   if (player.movedLastFrame) {
+    //     this.socket.emit("moveEnd", { roomId: this.state.roomKey });
+    //   }
+    //   player.movedLastFrame = false;
+    // }
   }
 }
 
