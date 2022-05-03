@@ -4,9 +4,15 @@ import theskeld from "../assets/tilemaps/theskeld.json";
 import playerpng from "../assets/player/player_sprite/player_base.png";
 import playerjson from "../assets/player/player_sprite/player_base.json";
 import { debugDraw } from "../scene/debugDraw";
-import { io } from "socket.io-client";
-import { movePlayer } from "../animation/movement.js";
 import footStep from '../assets/audio/amination/Walk.mp3'
+import MapMissionsExporter from "../helper/map_mission_exporter";
+import Mission from "../services/missions/mission";
+import UseButton from "../assets/tasks/Align Engine Output/Use.webp.png";
+import AlignEngineOutput_mission_marked from "../assets/tasks/Align Engine Output/mission_marked.png";
+import KillButton from "../assets/img/killButton.png";
+
+
+import { io } from "socket.io-client";
 import {
   PLAYER_HEIGHT,
   PLAYER_WIDTH,
@@ -14,6 +20,7 @@ import {
   PLAYER_START_Y,
   PLAYER_SPEED,
 } from "../consts/constants";
+import MissionKill from "../services/missions/mission_kill";
 
 let player;
 let otherPlayer = new Array();
@@ -23,7 +30,15 @@ let pressedKeys = [];
 let stt = 0;
 let socket, r;
 var objectsLayer;
-
+let map_missions;
+let export_missions;
+let current_x, current_y, mission_name;
+let useButton;
+let current_scene;
+let launch_scene = false;
+let killButton;
+let canKill = false;
+let listOtherPlayer = [];
 class Game extends Phaser.Scene {
   constructor() {
     super({ key: "game" });
@@ -36,23 +51,52 @@ class Game extends Phaser.Scene {
     this.textInput = data.textInput;
     this.numPlayers = data.numPlayers;
     this.idPlayers = data.idPlayers;
+    current_x = data.x;
+    current_y = data.y;
+    mission_name = data.mission;
   }
 
   preload() {
     this.load.image("tiles", tileImg);
     this.load.tilemapTiledJSON("tilemap", theskeld);
+    this.load.image("UseButton", UseButton);
+    this.load.image("KillButton", KillButton);
     this.load.atlas("playerbase", playerpng, playerjson);
 
     this.load.audio('walk', footStep)
+
+    this.load.image(
+      "AlignEngineOutput_mission_marked",
+      AlignEngineOutput_mission_marked
+    );
   }
 
   create() {
-
-
+    current_scene = this.scene;
     const ship = this.make.tilemap({ key: "tilemap" });
     const tileset = ship.addTilesetImage("theSkeld", "tiles");
 
     const ship_tileset = ship.createLayer("Background", tileset);
+
+    //add use button
+    useButton = this.add
+      .image(900, 700, "UseButton")
+      .setScrollFactor(0, 0)
+      .setInteractive();
+    //disable button
+    useButton.alpha = 0.5;
+
+    //add kill button
+    killButton = this.add
+      .image(750, 700, "KillButton")
+      .setScrollFactor(0, 0)
+      .setInteractive();
+    killButton.alpha = 0.5;
+
+    //initialize missions of this map
+    map_missions = new MapMissionsExporter("theSkeld");
+    export_missions = map_missions.create();
+
     ship_tileset.setCollisionByProperty({ collides: true });
 
 
@@ -61,6 +105,12 @@ class Game extends Phaser.Scene {
     //add player
     player = this.physics.add.sprite(115, -700, "playerbase", "idle.png");
 
+    if (current_x && current_y) {
+      map_missions.completed(mission_name);
+      player.x = current_x + 2;
+      player.y = current_y + 2;
+      // player.setPosition(current_x, current_y);
+    }
     // tạo theo số lượng other player vào
 
     this.state.roomKey = this.textInput
@@ -192,6 +242,7 @@ class Game extends Phaser.Scene {
     // this.physics.world.collide(player, circle);
     let playerMoved = false;
     player.setVelocity(0);
+
     if (
       !cursors.left.isDown &&
       !cursors.right.isDown &&
@@ -199,7 +250,6 @@ class Game extends Phaser.Scene {
       !cursors.down.isDown
     ) {
       player.anims.play("player-idle");
-
     }
 
     if (cursors.left.isDown) {
