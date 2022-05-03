@@ -169,7 +169,7 @@ class Game extends Phaser.Scene {
         prefix: "Dead",
         suffix: ".png",
       }),
-      repeat: -1,
+      repeat: 0,
       frameRate: 24,
     });
     //input to control
@@ -291,6 +291,68 @@ class Game extends Phaser.Scene {
       }
       player.movedLastFrame = false;
     }
+
+    // update running other player
+    // if (otherPlayer.moving && !otherPlayer.anims.isPlaying) {
+    //   otherPlayer.play("player-walk");
+    // } else if (!otherPlayer.moving && otherPlayer.anims.isPlaying) {
+    //   otherPlayer.stop("player-walk");
+    // }
+
+    const mission = new Mission(
+      "theSkeld",
+      map_missions,
+      export_missions,
+      this.scene,
+      player.x,
+      player.y
+    );
+    const check_mission = mission.check_mission();
+    if (check_mission) {
+      //blink blink marker
+      useButton.alpha = 1;
+    }
+
+    useButton.on("pointerup", function (e) {
+      if (check_mission) {
+        launch_scene = true;
+      }
+    });
+
+    if (launch_scene && launch_scene) {
+      this.scene.pause("game");
+      this.scene.launch(check_mission.scene, {
+        x: check_mission.x,
+        y: check_mission.y,
+      });
+      launch_scene = false;
+    }
+
+    const killPlayer = new MissionKill(
+      "theSkeld",
+      map_missions,
+      export_missions,
+      this.scene,
+      player.x,
+      player.y,
+      listOtherPlayer
+    );
+    const checkMissionKill = killPlayer.check_mission();
+    if (checkMissionKill) {
+      killButton.alpha = 1;
+      canKill = true;
+    } else if (!checkMissionKill) {
+      killButton.alpha = 0.5;
+      canKill = false;
+    }
+    killButton.on("pointerup", function (e) {
+      if (canKill) {
+        otherPlayer.anims.play("player-dead");
+        listOtherPlayer = listOtherPlayer.filter((otherPlayer) => {
+          return otherPlayer !== checkMissionKill;
+        });
+      }
+    });
   }
 }
 
