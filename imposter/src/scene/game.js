@@ -169,9 +169,9 @@ class Game extends Phaser.Scene {
 
     objectsLayer = ship.getObjectLayer("GameObjects");
     objectsLayer.objects.forEach((object) => {
-      const { name, x, y, width, height, properties } = object;
+      const { name, x, y, width, height, properties, type } = object;
 
-      switch (name) {
+      switch (type) {
         case "table":
           tableObject = new Phaser.GameObjects.Ellipse(this, object.x, object.y, object.width, object.height);
           // tableObject.setFillStyle(0xffffff, 0.5);
