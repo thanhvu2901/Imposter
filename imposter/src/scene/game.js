@@ -38,7 +38,6 @@ let current_scene;
 let launch_scene = false;
 let killButton;
 let canKill = false;
-let listOtherPlayer = [];
 class Game extends Phaser.Scene {
   constructor() {
     super({ key: "game" });
@@ -335,9 +334,9 @@ class Game extends Phaser.Scene {
       this.scene,
       player.x,
       player.y,
-      listOtherPlayer
+      otherPlayer
     );
-    const checkMissionKill = killPlayer.check_mission();
+    let checkMissionKill = killPlayer.check_mission();
     if (checkMissionKill) {
       killButton.alpha = 1;
       canKill = true;
@@ -347,10 +346,11 @@ class Game extends Phaser.Scene {
     }
     killButton.on("pointerup", function (e) {
       if (canKill) {
-        otherPlayer.anims.play("player-dead");
-        listOtherPlayer = listOtherPlayer.filter((otherPlayer) => {
-          return otherPlayer !== checkMissionKill;
+        checkMissionKill.anims.play("player-dead");
+        otherPlayer = otherPlayer.filter((player) => {
+          return player !== checkMissionKill;
         });
+        canKill= false;
       }
     });
   }
