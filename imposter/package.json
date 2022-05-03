@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"description": "A template project for Phaser3 using Parceljs",
 	"scripts": {
-		"start": "parcel src/index.html -p 3000",
+		"start": "parcel src/index.html -p 8000",
 		"lint": "eslint ./src --ext .js,.jsx,.ts,.tsx"
 	},
 	"author": "supertommy",
