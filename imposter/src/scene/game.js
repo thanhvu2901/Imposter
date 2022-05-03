@@ -133,7 +133,7 @@ class Game extends Phaser.Scene {
         prefix: "Dead",
         suffix: ".png",
       }),
-      repeat: -1,
+      repeat: 0,
       frameRate: 24,
     });
 
@@ -277,7 +277,7 @@ class Game extends Phaser.Scene {
     }
     killButton.on("pointerup", function (e) {
       if (canKill) {
-        otherPlayer.anims.play("player-dead", true);
+        otherPlayer.anims.play("player-dead");
         listOtherPlayer = listOtherPlayer.filter((otherPlayer) => {
           return otherPlayer !== checkMissionKill;
         });
