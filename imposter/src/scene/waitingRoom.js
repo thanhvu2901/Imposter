@@ -221,44 +221,30 @@ export default class waitingRoom extends Phaser.Scene {
     //   }
     // });
 
-    start.on('pointerdown', () => {
-      //this.scene.stop('waitingRoom')
-      this.socket.emit('letgo', (this.textInput))
-      console.log('after click');
-      //this.scene.launch('game', { socket: this.socket, textInput: this.textInput, numPlayers: numPlayers })
-    })
+
 
     customize.on('pointerdown', () => {
       this.input.on('pointerdown', () => this.scene.start('ChangeSkin', ChangeSkin))
       console.log("customize success")
     })
-    this.socket.on('go', ({ numPlayers, idPlayers }) => {
+
+    this.socket.on('gogame', ({ numPlayers, idPlayers }) => {
+      console.log(numPlayers);
       this.scene.stop('waitingRoom')
-      //this.sys.game.destroy(true);
-      //this.scene.remove('waitingRoom')
-      this.socket.on('gogame', ({ numPlayers, idPlayers }) => {
-        console.log(numPlayers);
-        this.scene.stop('waitingRoom')
 
-        this.scene.launch('game', { socket: this.socket, textInput: this.textInput, numPlayers: numPlayers, idPlayers: idPlayers })
-        this.game.scene.stop('waitingRoom')
-      })
+      this.scene.launch('game', { socket: this.socket, textInput: this.textInput, numPlayers: numPlayers, idPlayers: idPlayers })
+      this.game.scene.stop('waitingRoom')
+    })
 
-
-
-
-
-
-    }
-
+  }
   update() {
-      let playerMoved = false;
-      player.setVelocity(0);
-      if(
+    let playerMoved = false;
+    player.setVelocity(0);
+    if (
       !cursors.left.isDown &&
-        !cursors.right.isDown &&
-        !cursors.up.isDown &&
-        !cursors.down.isDown
+      !cursors.right.isDown &&
+      !cursors.up.isDown &&
+      !cursors.down.isDown
     ) {
       player.anims.play("player-idle");
     }

@@ -144,7 +144,7 @@ class Game extends Phaser.Scene {
 
 
     this.socket.on("move", ({ x, y, playerId }) => {
-      console.log({ x, y, playerId });
+      //console.log({ x, y, playerId });
 
       let index = otherPlayerId.findIndex((Element) => Element == playerId);
       //id = index;
