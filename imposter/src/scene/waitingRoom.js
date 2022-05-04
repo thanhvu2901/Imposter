@@ -224,8 +224,12 @@ export default class waitingRoom extends Phaser.Scene {
 
 
     customize.on('pointerdown', () => {
-      this.input.on('pointerdown', () => this.scene.start('ChangeSkin', ChangeSkin))
-      console.log("customize success")
+      // this.scene.pause("waitingRoom");
+      // this.scene.moveAbove('waitingRoom')
+      this.scene.launch('ChangeSkin', { socket: this.socket })
+      this.scene.bringToTop('ChangeSkin')
+
+
     })
 
     this.socket.on('gogame', ({ numPlayers, idPlayers }) => {
