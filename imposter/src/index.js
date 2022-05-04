@@ -14,6 +14,7 @@ import AlignEngineOutput from "./scene/state/minigame/align_engine_output";
 import CleanO2Filter from "./scene/state/ingame/cleanO2Filter.js";
 import CleanAsteroids from "./scene/state/ingame/cleanAsteroids.js"
 import PrimeShields from "./scene/state/ingame/primeShields.js";
+import ChangeSkin from "./scene/state/skin/changeSkin.js";
 
 import InspectSample from "./scene/state/minigame/inspect_sample.js";
 import StabilizeSteering from "./scene/state/minigame/stabilize_steering.js";
@@ -35,7 +36,7 @@ const config = {
   },
   scale: {
     mode: Phaser.Scale.FIT,
-    autoCenter: Phaser.Scale.CENTER_BOTH,
+    autoCenter: Phaser.Scale.CENTER_BOTH
   },
 
 };
@@ -64,6 +65,7 @@ game.scene.add("CleanAsteroids", CleanAsteroids);
 
 game.scene.add("PrimeShields", PrimeShields);
 
+game.scene.add("ChangeSkin", ChangeSkin);
 
 game.scene.add('inspectSample', InspectSample)
 game.scene.add('stabilizeSteering', StabilizeSteering)
@@ -75,7 +77,11 @@ game.scene.add('waitingRoom', waitingRoom)
 //game.scene.start("preloader");
 // game.scene.start("theskeld");
 //game.scene.start('menu');
+<<<<<<< HEAD
 game.scene.start('game');
+=======
+//game.scene.start('game');
+>>>>>>> 98db4fc4e9f7cafcaca97a0aa882aea0a2dbbdb4
 //game.scene.start('login');
 // game.scene.start('Upload');
 
@@ -91,7 +97,11 @@ game.scene.start('game');
 // game.scene.start('stabilizeSteering');
 //game.scene.start('startReactor')
 
-// game.scene.start('preloader');
+game.scene.start('preloader');
 //game.scene.start("align_engine_output")
 //game.scene.start('joinGame')
 // game.scene.start('waitingRoom')
+<<<<<<< HEAD
+=======
+// game.scene.start("ChangeSkin");
+>>>>>>> 98db4fc4e9f7cafcaca97a0aa882aea0a2dbbdb4

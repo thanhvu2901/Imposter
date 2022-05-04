@@ -4,9 +4,15 @@ import theskeld from "../assets/tilemaps/theskeld.json";
 import playerpng from "../assets/player/player_sprite/player_base.png";
 import playerjson from "../assets/player/player_sprite/player_base.json";
 import { debugDraw } from "../scene/debugDraw";
-import { io } from "socket.io-client";
-import { movePlayer } from "../animation/movement.js";
+import footStep from '../assets/audio/amination/Walk.mp3'
+import MapMissionsExporter from "../helper/map_mission_exporter";
+import Mission from "../services/missions/mission";
+import UseButton from "../assets/tasks/Align Engine Output/Use.webp.png";
+import AlignEngineOutput_mission_marked from "../assets/tasks/Align Engine Output/mission_marked.png";
+import KillButton from "../assets/img/killButton.png";
 
+
+import { io } from "socket.io-client";
 import {
   PLAYER_HEIGHT,
   PLAYER_WIDTH,
@@ -14,6 +20,7 @@ import {
   PLAYER_START_Y,
   PLAYER_SPEED,
 } from "../consts/constants";
+import MissionKill from "../services/missions/mission_kill";
 
 let player;
 let otherPlayer = new Array();
@@ -25,43 +32,97 @@ let socket;
 let tables = [];
 let tableObject, ventObject;
 var objectsLayer;
-
+let map_missions;
+let export_missions;
+let current_x, current_y, mission_name;
+let useButton;
+let current_scene;
+let launch_scene = false;
+let killButton;
+let canKill = false;
 class Game extends Phaser.Scene {
   constructor() {
     super({ key: "game" });
     this.state = {};
   }
 
+<<<<<<< HEAD
   // init(data) {
   //   this.socket = data.socket;
   //   this.textInput = data.textInput;
   //   this.numPlayers = data.numPlayers;
   //   this.idPlayers = data.idPlayers;
   // }
+=======
+  init(data) {
+    this.socket = data.socket;
+    this.textInput = data.textInput;
+    this.numPlayers = data.numPlayers;
+    this.idPlayers = data.idPlayers;
+    current_x = data.x;
+    current_y = data.y;
+    mission_name = data.mission;
+  }
+>>>>>>> 98db4fc4e9f7cafcaca97a0aa882aea0a2dbbdb4
 
   preload() {
     this.load.image("tiles", tileImg);
     this.load.tilemapTiledJSON("tilemap", theskeld);
+    this.load.image("UseButton", UseButton);
+    this.load.image("KillButton", KillButton);
     this.load.atlas("playerbase", playerpng, playerjson);
+
+    this.load.audio('walk', footStep)
+
+    this.load.image(
+      "AlignEngineOutput_mission_marked",
+      AlignEngineOutput_mission_marked
+    );
   }
 
   create() {
+<<<<<<< HEAD
+=======
+    current_scene = this.scene;
+>>>>>>> 98db4fc4e9f7cafcaca97a0aa882aea0a2dbbdb4
     const ship = this.make.tilemap({ key: "tilemap" });
     const tileset = ship.addTilesetImage("theSkeld", "tiles", 17, 17);
 
     const ship_tileset = ship.createLayer("Background", tileset);
+
+    //add use button
+    useButton = this.add
+      .image(900, 700, "UseButton")
+      .setScrollFactor(0, 0)
+      .setInteractive();
+    //disable button
+    useButton.alpha = 0.5;
+
+    //add kill button
+    killButton = this.add
+      .image(750, 700, "KillButton")
+      .setScrollFactor(0, 0)
+      .setInteractive();
+    killButton.alpha = 0.5;
+
+    //initialize missions of this map
+    map_missions = new MapMissionsExporter("theSkeld");
+    export_missions = map_missions.create();
+
     ship_tileset.setCollisionByProperty({ collides: true });
 
-    const useBtn = this.add
-      .image(1000, 700, "useBtn")
-      .setScrollFactor(0)
-      .setInteractive({ useHandCursor: true });
 
     // debugDraw(ship_tileset, this);
 
     //add player
     player = this.physics.add.sprite(115, -700, "playerbase", "idle.png");
 
+    if (current_x && current_y) {
+      map_missions.completed(mission_name);
+      player.x = current_x + 2;
+      player.y = current_y + 2;
+      // player.setPosition(current_x, current_y);
+    }
     // tạo theo số lượng other player vào
 
     this.state.roomKey = this.textInput;
@@ -89,9 +150,7 @@ class Game extends Phaser.Scene {
     cursors = this.input.keyboard.createCursorKeys();
 
     //input button
-    useBtn.on("pointerdown", () => {
-      this.scene.launch("fixWiring");
-    });
+
 
     // tạo object và gán các thuộc tính
     this.anims.create({
@@ -112,6 +171,7 @@ class Game extends Phaser.Scene {
       frameRate: 24,
     });
 
+
     //player death
     this.anims.create({
       key: "player-dead",
@@ -127,10 +187,12 @@ class Game extends Phaser.Scene {
     //input to control
     this.input.keyboard.on("keydown", (e) => {
       if (!pressedKeys.includes(e.code)) {
+        this.sound.play('walk', { loop: true })
         pressedKeys.push(e.code);
       }
     });
     this.input.keyboard.on("keyup", (e) => {
+      this.sound.stopByKey('walk')
       pressedKeys = pressedKeys.filter((key) => key !== e.code);
     });
 
@@ -139,6 +201,7 @@ class Game extends Phaser.Scene {
     this.cameras.main.startFollow(player, true);
 
     //tải lại mới khi có player mới vào có các player đã ở trong đó
+<<<<<<< HEAD
     // console.log(this.textInput);
 
     // this.socket.on("move", ({ x, y, playerId }) => {
@@ -196,6 +259,36 @@ class Game extends Phaser.Scene {
 
         default:
           break;
+=======
+    console.log(this.textInput);
+
+
+
+    this.socket.on("move", ({ x, y, playerId }) => {
+      //console.log({ x, y, playerId });
+
+      let index = otherPlayerId.findIndex((Element) => Element == playerId);
+      //id = index;
+      console.log(index);
+
+      if (otherPlayer[index].x > x) {
+        otherPlayer[index].flipX = true;
+      } else if (otherPlayer[index].x < x) {
+        otherPlayer[index].flipX = false;
+      }
+      otherPlayer[index].x = x;
+      otherPlayer[index].y = y;
+      otherPlayer[index].moving = true;
+
+      if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
+        otherPlayer[index].play("player-walk");
+
+      } else if (
+        !otherPlayer[index].moving &&
+        otherPlayer[index].anims.isPlaying
+      ) {
+        otherPlayer[index].stop("player-walk");
+>>>>>>> 98db4fc4e9f7cafcaca97a0aa882aea0a2dbbdb4
       }
     });
 
@@ -230,8 +323,11 @@ class Game extends Phaser.Scene {
       player.anims.play("player-idle");
     }
 
+<<<<<<< HEAD
 
     // when move
+=======
+>>>>>>> 98db4fc4e9f7cafcaca97a0aa882aea0a2dbbdb4
     if (cursors.left.isDown) {
       player.anims.play("player-walk", true);
       player.setVelocityX(-PLAYER_SPEED);
@@ -244,18 +340,21 @@ class Game extends Phaser.Scene {
       player.scaleX = 1;
       player.body.offset.x = 0;
       playerMoved = true;
-    }
 
+    }
     if (cursors.up.isDown) {
       player.anims.play("player-walk", true);
       player.setVelocityY(-PLAYER_SPEED);
       playerMoved = true;
+
     } else if (cursors.down.isDown) {
       player.anims.play("player-walk", true);
       player.setVelocityY(PLAYER_SPEED);
       playerMoved = true;
+
     }
 
+<<<<<<< HEAD
     // if (playerMoved) {
     //   this.socket.emit("move", {
     //     x: player.x,
@@ -269,6 +368,84 @@ class Game extends Phaser.Scene {
     //   }
     //   player.movedLastFrame = false;
     // }
+=======
+    if (playerMoved) {
+      this.socket.emit("move", {
+        x: player.x,
+        y: player.y,
+        roomId: this.state.roomKey,
+      });
+      player.movedLastFrame = true;
+    } else {
+      if (player.movedLastFrame) {
+        this.socket.emit("moveEnd", { roomId: this.state.roomKey });
+      }
+      player.movedLastFrame = false;
+    }
+
+    // update running other player
+    // if (otherPlayer.moving && !otherPlayer.anims.isPlaying) {
+    //   otherPlayer.play("player-walk");
+    // } else if (!otherPlayer.moving && otherPlayer.anims.isPlaying) {
+    //   otherPlayer.stop("player-walk");
+    // }
+
+    const mission = new Mission(
+      "theSkeld",
+      map_missions,
+      export_missions,
+      this.scene,
+      player.x,
+      player.y
+    );
+    const check_mission = mission.check_mission();
+    if (check_mission) {
+      //blink blink marker
+      useButton.alpha = 1;
+    }
+
+    useButton.on("pointerup", function (e) {
+      if (check_mission) {
+        launch_scene = true;
+      }
+    });
+
+    if (launch_scene && launch_scene) {
+      this.scene.pause("game");
+      this.scene.launch(check_mission.scene, {
+        x: check_mission.x,
+        y: check_mission.y,
+      });
+      launch_scene = false;
+    }
+
+    const killPlayer = new MissionKill(
+      "theSkeld",
+      map_missions,
+      export_missions,
+      this.scene,
+      player.x,
+      player.y,
+      otherPlayer
+    );
+    let checkMissionKill = killPlayer.check_mission();
+    if (checkMissionKill) {
+      killButton.alpha = 1;
+      canKill = true;
+    } else if (!checkMissionKill) {
+      killButton.alpha = 0.5;
+      canKill = false;
+    }
+    killButton.on("pointerup", function (e) {
+      if (canKill) {
+        checkMissionKill.anims.play("player-dead");
+        otherPlayer = otherPlayer.filter((player) => {
+          return player !== checkMissionKill;
+        });
+        canKill= false;
+      }
+    });
+>>>>>>> 98db4fc4e9f7cafcaca97a0aa882aea0a2dbbdb4
   }
 }
 

@@ -1,11 +1,9 @@
 import Phaser from "phaser";
-
 import background from "../assets/img/background.jpg";
 import logo from "../assets/img/logo.png";
 import play from "../assets/img/play_button.png";
 import options from "../assets/img/options_button.png";
-import cat from "../assets/img/cat.png";
-import audio from "../assets/audio/audio.mp3";
+
 import MainMenuScene from "./menu";
 import setting from '../assets/img/setting.png'
 import playerSprite from "../assets/img/player.png";
@@ -17,6 +15,11 @@ import useBtn from '../assets/img/useButton.png'
 import closeBtn from '../assets/img/closeButton.png'
 import customizeBtn from '../assets/img/customize.png'
 import startBtn from '../assets/img/startButton.png'
+
+
+
+
+
 import SubMenu from "./submenu";
 
 import {
@@ -39,7 +42,7 @@ class Preloader extends Phaser.Scene {
     var progressBar = this.add.graphics();
     var progressBox = this.add.graphics();
     progressBox.fillStyle(0x222222, 0.9);
-    progressBox.fillRect(320, 280, 320, 30);
+    progressBox.fillRect(380, 280, 380, 30);
 
     var width = this.cameras.main.width;
     var height = this.cameras.main.height;
@@ -75,7 +78,7 @@ class Preloader extends Phaser.Scene {
 
     this.load.image('options', options);
     this.load.image('logo', logo);
-    this.load.audio('audio', audio)
+
     this.load.image('setting', setting)
     this.load.image('facebook', facebook)
     this.load.image("ship", shipImg);
@@ -84,6 +87,12 @@ class Preloader extends Phaser.Scene {
     this.load.image('closeBtn', closeBtn)
     this.load.image('startBtn', startBtn);
     this.load.image('customizeBtn', customizeBtn)
+
+    //audio
+
+
+
+
     this.load.spritesheet("player", playerSprite, {
       frameWidth: PLAYER_SPRITE_WIDTH,
       frameHeight: PLAYER_SPRITE_HEIGHT,
@@ -104,7 +113,7 @@ class Preloader extends Phaser.Scene {
 
       progressBar.clear();
       progressBar.fillStyle(0xffffff, 1);
-      progressBar.fillRect(320, 280, 320 * value, 30);
+      progressBar.fillRect(380, 280, 380 * value, 30);
       percentText.setText(parseInt(value * 100) + '%');
     });
 
@@ -139,7 +148,7 @@ class Preloader extends Phaser.Scene {
     //welcomeText.setOrigin(0.5, 0.5);
 
 
-    var sprite = this.add.image(500, 280, 'logo').setAlpha(0);
+    var sprite = this.add.image(530, 280, 'logo').setAlpha(0);
 
     //chạy intro logo
     var intro = this.tweens.add({
@@ -152,15 +161,15 @@ class Preloader extends Phaser.Scene {
       //     this.load.sc
       // }
     });
-    // this.input.on('pointerdown', () => this.scene.start('login', Login))
+    //this.input.on('pointerdown', () => this.scene.start('login', Login))
     this.input.on('pointerdown', () => this.scene.start('menu', MainMenuScene))
-    //this.input.on('pointerdown', () => this.scene.start('fixWiring', FixWiring))
+    // this.input.on('pointerdown', () => this.scene.start('fixWiring', FixWiring))
 
 
     this.load.on("progress", function (value) {
       progressBar.clear();
       progressBar.fillStyle(0xffffff, 1);
-      progressBar.fillRect(320, 280, 320 * value, 30);
+      progressBar.fillRect(380, 280, 380 * value, 30);
       percentText.setText(parseInt(value * 100) + "%");
     });
 

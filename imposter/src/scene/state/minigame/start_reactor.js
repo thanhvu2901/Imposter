@@ -62,15 +62,48 @@ class StartReactor extends Phaser.Scene {
         this.load.image('sslight', sslight)
 
     }
-    create() {
-        this.add.image(this.game.renderer.width * 3 / 8, this.game.renderer.height / 2, 'base').setDepth(0)
-        this.add.image(this.game.renderer.width * 5 / 8, this.game.renderer.height / 2, 'base').setDepth(0)
+    async create() {
+        let check = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+        x = this.game.renderer.width
+        y = this.game.renderer.height
+        cords_1 = [[x * 5 / 8 - 50, y / 2 - 40], [x * 5 / 8, y / 2 - 40], [x * 5 / 8 + 50, y / 2 - 40], [x * 5 / 8 - 50, y / 2 + 10], [x * 5 / 8, y / 2 + 10], [x * 5 / 8 + 50, y / 2 + 10], [x * 5 / 8 - 50, y / 2 + 60], [x * 5 / 8, y / 2 + 60], [x * 5 / 8 + 50, y / 2 + 60]]
+        cords_2 = [[x * 3 / 8 - 50, y / 2 - 40], [x * 3 / 8, y / 2 - 40], [x * 3 / 8 + 50, y / 2 - 40], [x * 3 / 8 - 50, y / 2 + 10], [x * 3 / 8, y / 2 + 10], [x * 3 / 8 + 50, y / 2 + 10], [x * 3 / 8 - 50, y / 2 + 60], [x * 3 / 8, y / 2 + 60], [x * 3 / 8 + 50, y / 2 + 60]]
+        this.add.image(x * 3 / 8, y / 2, 'base').setDepth(0)
+        this.add.image(x * 5 / 8, y / 2, 'base').setDepth(0)
 
-        this.add.image(this.game.renderer.width * 3 / 8, this.game.renderer.height / 2 - 90, 'light').setDepth(1)
-        this.add.image(this.game.renderer.width * 5 / 8, this.game.renderer.height / 2 - 90, 'light').setDepth(1)
+        this.add.image(x * 3 / 8, y / 2 - 90, 'light').setDepth(1)
+        this.add.image(x * 5 / 8, y / 2 - 90, 'light').setDepth(1)
 
 
-        this.add.image(this.game.renderer.width * 3 / 8, this.game.renderer.height / 2 + 10, 'sayScreen').setDepth(1)
+        this.add.image(x * 3 / 8, y / 2 + 10, 'sayScreen').setDepth(1)
+        for (let i = 0; i < 9; i++) {
+            let temp
+            temp = [this.add.image(cords_1[i][0], cords_1[i][1], `btn${i + 1}`).setInteractive(), i + 1]
+            button.push(temp)
+            temp[0].on('pointerdown', function (pointer) {
+
+                temp[0].setTint('0x51ff00')
+
+
+            })
+            temp[0].on('pointerup', function (pointer) {
+
+                temp[0].clearTint()
+
+
+            })
+
+
+
+
+        }
+        for (let j = 0; j < 9; j++) {
+            let temp
+            temp = [this.add.rectangle(cords_2[j][0], cords_2[j][1], 45, 45, '0x6666ff').setDepth(0), j + 1]
+            exbutton.push(temp)
+        }
+        // Shuffle array
+        const shuffled = check.sort(() => 0.5 - Math.random());
 
         num[2] = this.add.image(this.game.renderer.width * 5 / 8, this.game.renderer.height / 2 - 40, 'btn2').setDepth(1).setInteractive()
         num[5] = this.add.image(this.game.renderer.width * 5 / 8, this.game.renderer.height / 2 + 10, 'btn5').setDepth(1).setInteractive()
@@ -96,8 +129,8 @@ class StartReactor extends Phaser.Scene {
 
         for (let i = 0; i < 5; i++) {
 
-            lightleft[i] = this.add.image(this.game.renderer.width * 3 / 8 - 68 + 34 * i, this.game.renderer.height / 2 - 93, 'sslight').setDepth(2)
-            lightright[i] = this.add.image(this.game.renderer.width * 5 / 8 - 68 + 34 * i, this.game.renderer.height / 2 - 93, 'sslight').setDepth(2)
+            lightleft[i] = this.add.image(x * 3 / 8 - 68 + 34 * i, y / 2 - 93, 'sslight').setDepth(2)
+            lightright[i] = this.add.image(x * 5 / 8 - 68 + 34 * i, y / 2 - 93, 'sslight').setDepth(2)
         }
 
         for (let i = 1; i <= 5; i++) {
@@ -105,9 +138,23 @@ class StartReactor extends Phaser.Scene {
             gen_arr.push(rand)
         }
 
-        for (let i = 1; i <= 9; i++) {
+        //56374
 
-        }
+        //while (count < 5) {
+        //onled1
+        //count = 1;
+        // reg[5][0].setFillStyle('0x0000FF')
+        //console.log(check(5))
+        // let a = check(5);
+
+        //reg[6][0].setFillStyle('0x0000FF')
+
+        // for (let i = 0; i < 5; i++) {
+        //     setTimeout(() => {
+        //         out_put()
+        //         level++
+        //     }, 3000)
+        // }
 
         for (let i = 1; i <= 9; i++) {
 
@@ -149,7 +196,6 @@ class StartReactor extends Phaser.Scene {
         }
 
         out_put(loop)
-
 
 
 
@@ -234,6 +280,64 @@ function refresh(light, level) {
     }
 
 }
+function load_1(x) {
+
+
+    exbutton[x][0].setDepth(2)
+
+
+}
+const Pause = (ms) => {
+    return new Promise(resolve => setTimeout(resolve, ms))
+}
+// function out_put() {
+//     // setTimeout(() => {
+//     for (let i = 0; i < level; i++) {
+//         console.log('level' + level);
+//         if (i < level) {
+//             setTimeout(() => {
+
+
+//                 // setTimeout(() => {
+//                 //console.log('day là i' + i + ' lvel ' + level);
+//                 console.log(gen_arr[i]);
+//                 reg[gen_arr[i]][0].setFillStyle('0x0000FF')
+//                 //setTimeout(out_put, 2000)
+//                 //level++;
+//                 // }, 5000)
+
+//             }, 3000)
+//         }
+//         // 
+
+//         // if (check(element) === true) {
+//         //     console.log(element);
+//         //     //level++;
+//         // }
+
+//         //reg[element][0].setFillStyle('0x6666ff')
+
+//     }
+
+
+//     //}, 2000)
+
+
+
+//     //console.log('break');
+//     // }
+// }
+// async function check(x) {
+//     await num[x][0].on('pointerdown', () => {
+//         let icheck = num[x][1]
+//         if (icheck == reg[x][1]) {
+//             console.log('true');
+//             return true
+//         }
+//         console.log('false');
+//         return false;
+//     })
+// }
 
 
 

@@ -22,12 +22,12 @@ export default class JoinGame extends Phaser.Scene {
     create() {
 
 
-        let create = this.add.text(this.game.renderer.width / 2 - 50, this.game.renderer.height * 0.2, 'Create new room!!').setInteractive({ cursor: 'pointer' })
+        let create = this.add.text(this.game.renderer.width * 0.4, this.game.renderer.height * 0.3, 'Create new room ', { font: '32px Courier', fill: '#ffffff' }).setInteractive({ cursor: 'pointer' })
 
 
-        let check = this.add.text(this.game.renderer.width / 2 - 50, this.game.renderer.height * 0.2 + 60, 'Enter room ID V')
-        var textEntry = this.add.text(this.game.renderer.width / 2 - 50, this.game.renderer.height * 0.2 + 80, '', { font: '32px Courier', fill: '#ffff00' });
-
+        let check = this.add.text(this.game.renderer.width * 0.4, this.game.renderer.height * 0.3 + 60, 'Enter room ID:', { font: '32px Courier', fill: '#ffffff' })
+        var textEntry = this.add.text(this.game.renderer.width * 0.4, this.game.renderer.height * 0.3 + 105, '', { font: '32px Courier', fill: '#000000' });
+        textEntry.setDepth(1)
         this.input.keyboard.on('keydown', function (event) {
 
             if (event.keyCode === 8 && textEntry.text.length > 0) {
@@ -39,13 +39,14 @@ export default class JoinGame extends Phaser.Scene {
             }
 
         });
+        let reg = this.add.rectangle(this.game.renderer.width * 0.4 + 90, this.game.renderer.height * 0.3 + 120, 180, 34, 0xFFFFFF).setDepth(0)
 
-        let joinRoombtn = this.add.text(this.game.renderer.width / 2 - 50, this.game.renderer.height * 0.2 + 120, 'Join room').setInteractive({ cursor: 'pointer' })
+        let joinRoombtn = this.add.text(this.game.renderer.width * 0.4, this.game.renderer.height * 0.3 + 150, 'Join room', { font: '32px Courier', fill: '#ffffff' }).setInteractive({ cursor: 'pointer' })
+
+        let randomRoom = this.add.text(this.game.renderer.width * 0.4, this.game.renderer.height * 0.3 + 210, 'Random Room', { font: '32px Courier', fill: '#ffffff' }).setInteractive({ cursor: 'pointer' })
 
         create.on('pointerdown', () => {
-
             socket.emit("getRoomCode");
-
 
         });
 
@@ -53,13 +54,18 @@ export default class JoinGame extends Phaser.Scene {
             socket.emit("isKeyValid", textInput);
         })
 
+        randomRoom.on('pointerdown', () => {
+            //emit random and get 1 room random
+            socket.emit('getRandomRoom')
+        })
+        socket.on('randomRoom', (randomRoomId) => {
+            this.scene.stop('joinGame')
+            this.scene.launch('waitingRoom', { socket: socket, textInput: randomRoomId })
+        })
 
         socket.on("roomCreated", function (roomKey) {
             this.roomKey = roomKey;
-            // // scene.roomKeyText.setText(scene.roomKey);
-
             console.log(roomKey);
-            //this.scene.launch('game', { socket: socket })
             textInput = roomKey
             socket.emit('ok')
 
@@ -72,6 +78,7 @@ export default class JoinGame extends Phaser.Scene {
         socket.on("keyNotValid", function () {
             // scene.notValidText.setText("Invalid Room Key");
             console.log("Invalid Room Key");
+            alert('can not find the room!')
         });
 
         socket.on("keyIsValid", () => {
