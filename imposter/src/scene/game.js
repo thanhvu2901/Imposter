@@ -4,13 +4,12 @@ import theskeld from "../assets/tilemaps/theskeld.json";
 import playerpng from "../assets/player/player_sprite/player_base.png";
 import playerjson from "../assets/player/player_sprite/player_base.json";
 import { debugDraw } from "../scene/debugDraw";
-import footStep from '../assets/audio/amination/Walk.mp3'
+import footStep from "../assets/audio/amination/Walk.mp3";
 import MapMissionsExporter from "../helper/map_mission_exporter";
 import Mission from "../services/missions/mission";
 import UseButton from "../assets/tasks/Align Engine Output/Use.webp.png";
 import AlignEngineOutput_mission_marked from "../assets/tasks/Align Engine Output/mission_marked.png";
 import KillButton from "../assets/img/killButton.png";
-
 
 import { io } from "socket.io-client";
 import {
@@ -46,14 +45,6 @@ class Game extends Phaser.Scene {
     this.state = {};
   }
 
-<<<<<<< HEAD
-  // init(data) {
-  //   this.socket = data.socket;
-  //   this.textInput = data.textInput;
-  //   this.numPlayers = data.numPlayers;
-  //   this.idPlayers = data.idPlayers;
-  // }
-=======
   init(data) {
     this.socket = data.socket;
     this.textInput = data.textInput;
@@ -63,7 +54,6 @@ class Game extends Phaser.Scene {
     current_y = data.y;
     mission_name = data.mission;
   }
->>>>>>> 98db4fc4e9f7cafcaca97a0aa882aea0a2dbbdb4
 
   preload() {
     this.load.image("tiles", tileImg);
@@ -72,7 +62,7 @@ class Game extends Phaser.Scene {
     this.load.image("KillButton", KillButton);
     this.load.atlas("playerbase", playerpng, playerjson);
 
-    this.load.audio('walk', footStep)
+    this.load.audio("walk", footStep);
 
     this.load.image(
       "AlignEngineOutput_mission_marked",
@@ -81,10 +71,7 @@ class Game extends Phaser.Scene {
   }
 
   create() {
-<<<<<<< HEAD
-=======
     current_scene = this.scene;
->>>>>>> 98db4fc4e9f7cafcaca97a0aa882aea0a2dbbdb4
     const ship = this.make.tilemap({ key: "tilemap" });
     const tileset = ship.addTilesetImage("theSkeld", "tiles", 17, 17);
 
@@ -110,7 +97,6 @@ class Game extends Phaser.Scene {
     export_missions = map_missions.create();
 
     ship_tileset.setCollisionByProperty({ collides: true });
-
 
     // debugDraw(ship_tileset, this);
 
@@ -151,7 +137,6 @@ class Game extends Phaser.Scene {
 
     //input button
 
-
     // tạo object và gán các thuộc tính
     this.anims.create({
       key: "player-idle",
@@ -171,7 +156,6 @@ class Game extends Phaser.Scene {
       frameRate: 24,
     });
 
-
     //player death
     this.anims.create({
       key: "player-dead",
@@ -187,12 +171,12 @@ class Game extends Phaser.Scene {
     //input to control
     this.input.keyboard.on("keydown", (e) => {
       if (!pressedKeys.includes(e.code)) {
-        this.sound.play('walk', { loop: true })
+        this.sound.play("walk", { loop: true });
         pressedKeys.push(e.code);
       }
     });
     this.input.keyboard.on("keyup", (e) => {
-      this.sound.stopByKey('walk')
+      this.sound.stopByKey("walk");
       pressedKeys = pressedKeys.filter((key) => key !== e.code);
     });
 
@@ -201,34 +185,7 @@ class Game extends Phaser.Scene {
     this.cameras.main.startFollow(player, true);
 
     //tải lại mới khi có player mới vào có các player đã ở trong đó
-<<<<<<< HEAD
-    // console.log(this.textInput);
-
-    // this.socket.on("move", ({ x, y, playerId }) => {
-    //   console.log({ x, y, playerId });
-
-    //   let index = otherPlayerId.findIndex((Element) => Element == playerId);
-    //   //id = index;
-    //   console.log(index);
-
-    //   if (otherPlayer[index].x > x) {
-    //     otherPlayer[index].flipX = true;
-    //   } else if (otherPlayer[index].x < x) {
-    //     otherPlayer[index].flipX = false;
-    //   }
-    //   otherPlayer[index].x = x;
-    //   otherPlayer[index].y = y;
-    //   otherPlayer[index].moving = true;
-
-    //   if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
-    //     otherPlayer[index].play("player-walk");
-    //   } else if (
-    //     !otherPlayer[index].moving &&
-    //     otherPlayer[index].anims.isPlaying
-    //   ) {
-    //     otherPlayer[index].stop("player-walk");
-    //   }
-    // });
+    console.log(this.textInput);
 
     objectsLayer = ship.getObjectLayer("GameObjects");
     objectsLayer.objects.forEach((object) => {
@@ -236,7 +193,13 @@ class Game extends Phaser.Scene {
 
       switch (type) {
         case "table":
-          tableObject = new Phaser.GameObjects.Ellipse(this, object.x, object.y, object.width, object.height);
+          tableObject = new Phaser.GameObjects.Ellipse(
+            this,
+            object.x,
+            object.y,
+            object.width,
+            object.height
+          );
           // tableObject.setFillStyle(0xffffff, 0.5);
           console.log(tableObject);
 
@@ -250,7 +213,15 @@ class Game extends Phaser.Scene {
           this.physics.add.collider(player, tableObject);
           break;
         case "vent":
-          ventObject = new Phaser.GameObjects.Rectangle(this, object.x, object.y, object.width, object.height, 0xff0000, 1);
+          ventObject = new Phaser.GameObjects.Rectangle(
+            this,
+            object.x,
+            object.y,
+            object.width,
+            object.height,
+            0xff0000,
+            1
+          );
           this.physics.add.existing(ventObject);
           // ventObject.
           // ventObject = this.add.rectangle(object.x, object.y, object.width, object.height, 0xffffff);
@@ -259,10 +230,8 @@ class Game extends Phaser.Scene {
 
         default:
           break;
-=======
-    console.log(this.textInput);
-
-
+      }
+    });
 
     this.socket.on("move", ({ x, y, playerId }) => {
       //console.log({ x, y, playerId });
@@ -282,13 +251,11 @@ class Game extends Phaser.Scene {
 
       if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
         otherPlayer[index].play("player-walk");
-
       } else if (
         !otherPlayer[index].moving &&
         otherPlayer[index].anims.isPlaying
       ) {
         otherPlayer[index].stop("player-walk");
->>>>>>> 98db4fc4e9f7cafcaca97a0aa882aea0a2dbbdb4
       }
     });
 
@@ -307,7 +274,6 @@ class Game extends Phaser.Scene {
     //     otherPlayer[index].stop("player-walk");
     //   }
     // });
-
   }
 
   update() {
@@ -323,11 +289,6 @@ class Game extends Phaser.Scene {
       player.anims.play("player-idle");
     }
 
-<<<<<<< HEAD
-
-    // when move
-=======
->>>>>>> 98db4fc4e9f7cafcaca97a0aa882aea0a2dbbdb4
     if (cursors.left.isDown) {
       player.anims.play("player-walk", true);
       player.setVelocityX(-PLAYER_SPEED);
@@ -340,35 +301,17 @@ class Game extends Phaser.Scene {
       player.scaleX = 1;
       player.body.offset.x = 0;
       playerMoved = true;
-
     }
     if (cursors.up.isDown) {
       player.anims.play("player-walk", true);
       player.setVelocityY(-PLAYER_SPEED);
       playerMoved = true;
-
     } else if (cursors.down.isDown) {
       player.anims.play("player-walk", true);
       player.setVelocityY(PLAYER_SPEED);
       playerMoved = true;
-
     }
 
-<<<<<<< HEAD
-    // if (playerMoved) {
-    //   this.socket.emit("move", {
-    //     x: player.x,
-    //     y: player.y,
-    //     roomId: this.state.roomKey,
-    //   });
-    //   player.movedLastFrame = true;
-    // } else {
-    //   if (player.movedLastFrame) {
-    //     this.socket.emit("moveEnd", { roomId: this.state.roomKey });
-    //   }
-    //   player.movedLastFrame = false;
-    // }
-=======
     if (playerMoved) {
       this.socket.emit("move", {
         x: player.x,
@@ -442,10 +385,9 @@ class Game extends Phaser.Scene {
         otherPlayer = otherPlayer.filter((player) => {
           return player !== checkMissionKill;
         });
-        canKill= false;
+        canKill = false;
       }
     });
->>>>>>> 98db4fc4e9f7cafcaca97a0aa882aea0a2dbbdb4
   }
 }
 

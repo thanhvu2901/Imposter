@@ -77,11 +77,7 @@ game.scene.add('waitingRoom', waitingRoom)
 //game.scene.start("preloader");
 // game.scene.start("theskeld");
 //game.scene.start('menu');
-<<<<<<< HEAD
-game.scene.start('game');
-=======
 //game.scene.start('game');
->>>>>>> 98db4fc4e9f7cafcaca97a0aa882aea0a2dbbdb4
 //game.scene.start('login');
 // game.scene.start('Upload');
 
@@ -101,7 +97,4 @@ game.scene.start('preloader');
 //game.scene.start("align_engine_output")
 //game.scene.start('joinGame')
 // game.scene.start('waitingRoom')
-<<<<<<< HEAD
-=======
 // game.scene.start("ChangeSkin");
->>>>>>> 98db4fc4e9f7cafcaca97a0aa882aea0a2dbbdb4
