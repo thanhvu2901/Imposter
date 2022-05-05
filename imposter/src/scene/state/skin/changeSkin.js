@@ -48,7 +48,7 @@ import pet8 from "../../../assets/skin/Pets/pet8.png";
 import pet9 from "../../../assets/skin/Pets/pet9.png";
 import pet10 from "../../../assets/skin/Pets/pet10.png";
 import pet11 from "../../../assets/skin/Pets/pet11.png";
-import { Socket } from "socket.io-client";
+
 
 
 const arrHats = [];
@@ -71,10 +71,10 @@ class ChangeSkin extends Phaser.Scene {
     super({ key: "ChangeSkin" });
   }
   init(data) {
-    let socket = data.socket
+    //   let socket = data.socket
   }
   preload() {
-    this.load.image("player", player);
+    this.load.image("playerchange", player);
     this.load.image("hat0", hat0);
     this.load.image("hat1", hat1);
     this.load.image("hat2", hat2);
@@ -130,7 +130,8 @@ class ChangeSkin extends Phaser.Scene {
     let current_object = this;
     const base = this.add.rectangle(500, 380, 600, 480, 0xaedfc0);
     const basePlayer = this.add.rectangle(350, 420, 280, 390, 0xa1b1ae);
-    const player = this.add.image(350, 460, "player");
+    const player = this.add.image(350, 460, "playerchange");
+
     let groupHats = this.add.group();
     let groupHatsBackground = this.add.group();
     let groupTrousers = this.add.group();
@@ -156,6 +157,7 @@ class ChangeSkin extends Phaser.Scene {
     closeBtn.on('pointerdown', () => {
       this.scene.stop('ChangeSkin')
     })
+
     this.input.on(
       "gameobjectdown",
       function (pointer, gameObject, deltaX, deltaY, deltaZ) {
