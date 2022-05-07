@@ -47,7 +47,7 @@ class Game extends Phaser.Scene {
     this.load.tilemapTiledJSON("tilemap", theskeld);
     this.load.image("UseButton", UseButton)
     this.load.atlas("playerbase", playerpng, playerjson);
-    this.load.image("AlignEngineOutput_mission_marked", AlignEngineOutput_mission_marked)
+    this.load.image("AlignEngineOutput_mission_marked", AlignEngineOutput_mission_marked);
     socket = io('localhost:3000')
   }
 
@@ -55,7 +55,6 @@ class Game extends Phaser.Scene {
     current_scene = this.scene;
     const ship = this.make.tilemap({ key: "tilemap" });
     const tileset = ship.addTilesetImage("theSkeld", "tiles");
-
     const ship_tileset = ship.createLayer("Background", tileset);
 
     //add use button
@@ -66,8 +65,8 @@ class Game extends Phaser.Scene {
 
     //initialize missions of this map
     map_missions = new MapMissionsExporter("theSkeld")
-    export_missions = map_missions.create()
-
+    export_missions = map_missions.create();
+    map_missions.show_mission(this);
     ship_tileset.setCollisionByProperty({ collides: true });
 
     debugDraw(ship_tileset, this);
@@ -158,7 +157,6 @@ class Game extends Phaser.Scene {
   update() {
     let playerMoved = false;  
     player.setVelocity(0)
-    
     if (
       !cursors.left.isDown &&
       !cursors.right.isDown &&
@@ -217,11 +215,8 @@ class Game extends Phaser.Scene {
 
     const mission = new Mission("theSkeld", map_missions, export_missions, this.scene, player.x, player.y); 
     const check_mission = mission.check_mission();
-    if(check_mission)
-    {
-      //blink blink marker
-      useButton.alpha = 1;
-    }
+    useButton.alpha = check_mission ? 1 : 0.5;
+    
 
     useButton.on("pointerup", function(e) {
       if(check_mission)
@@ -230,7 +225,7 @@ class Game extends Phaser.Scene {
       }
     })
 
-    if(launch_scene && launch_scene)
+    if(launch_scene)
     {
       this.scene.pause("game")
       this.scene.launch(check_mission.scene, {x: check_mission.x, y: check_mission.y});
