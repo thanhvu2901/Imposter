@@ -93,7 +93,7 @@ class Preloader extends Phaser.Scene {
 
 
 
-    this.load.spritesheet("player", playerSprite, {
+    this.load.spritesheet("player_1", playerSprite, {
       frameWidth: PLAYER_SPRITE_WIDTH,
       frameHeight: PLAYER_SPRITE_HEIGHT,
     });
