@@ -261,19 +261,19 @@ class Game extends Phaser.Scene {
 
     console.log(objectsLayer);
 
-    // this.socket.on("moveEnd", ({ playerId }) => {
-    //   let index = otherPlayerId.findIndex((Element) => Element == playerId);
-    //   otherPlayer[index].moving = false;
-    //   otherPlayer[index].anims.play("player-idle");
-    //   if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
-    //     otherPlayer[index].play("player-walk");
-    //   } else if (
-    //     !otherPlayer[index].moving &&
-    //     otherPlayer[index].anims.isPlaying
-    //   ) {
-    //     otherPlayer[index].stop("player-walk");
-    //   }
-    // });
+    this.socket.on("moveEnd", ({ playerId }) => {
+      let index = otherPlayerId.findIndex((Element) => Element == playerId);
+      otherPlayer[index].moving = false;
+      otherPlayer[index].anims.play("player-idle");
+      if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
+        otherPlayer[index].play("player-walk");
+      } else if (
+        !otherPlayer[index].moving &&
+        otherPlayer[index].anims.isPlaying
+      ) {
+        otherPlayer[index].stop("player-walk");
+      }
+    });
   }
 
   update() {
@@ -327,11 +327,11 @@ class Game extends Phaser.Scene {
     }
 
     // update running other player
-    if (otherPlayer.moving && !otherPlayer.anims.isPlaying) {
-      otherPlayer.play("player-walk");
-    } else if (!otherPlayer.moving && otherPlayer.anims.isPlaying) {
-      otherPlayer.stop("player-walk");
-    }
+    // if (otherPlayer.moving && !otherPlayer.anims.isPlaying) {
+    //   otherPlayer.play("player-walk");
+    // } else if (!otherPlayer.moving && otherPlayer.anims.isPlaying) {
+    //   otherPlayer.stop("player-walk");
+    // }
 
     const mission = new Mission(
       "theSkeld",
