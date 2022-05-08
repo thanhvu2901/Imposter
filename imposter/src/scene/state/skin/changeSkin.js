@@ -50,6 +50,7 @@ import pet10 from "../../../assets/skin/Pets/pet10.png";
 import pet11 from "../../../assets/skin/Pets/pet11.png";
 import closeChangeSkin from "../../../assets/skin/close.png";
 
+
 const arrHats = [];
 const arrBackgroundHats = [];
 let hatChosen;
@@ -75,9 +76,8 @@ class ChangeSkin extends Phaser.Scene {
     this.socket = data.socket;
     this.textInput = data.textInput;
   }
-
   preload() {
-    this.load.image("player", player);
+    this.load.image("playerchange", player);
     this.load.image("hat0", hat0);
     this.load.image("hat1", hat1);
     this.load.image("hat2", hat2);
@@ -158,6 +158,9 @@ class ChangeSkin extends Phaser.Scene {
     petText.setInteractive({ useHandCursor: true });
     gameText.setInteractive({ useHandCursor: true });
     closeBtn.setInteractive({ useHandCursor: true });
+    closeBtn.on('pointerdown', () => {
+      this.scene.stop('ChangeSkin')
+    })
 
     this.input.on(
       "gameobjectdown",

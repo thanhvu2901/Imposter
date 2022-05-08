@@ -114,19 +114,19 @@ class Game extends Phaser.Scene {
     this.state.roomKey = this.textInput;
 
     // console.log(this.numPlayers);
-    // for (let i = 0; i < this.numPlayers - 1; i++) {
-    //   otherPlayer[i] = this.physics.add.sprite(
-    //     115,
-    //     -740 + 30 * i,
-    //     "playerbase",
-    //     "idle.png"
-    //   );
-    // }
-    // this.idPlayers.forEach((element) => {
-    //   if (element != this.socket.id) {
-    //     otherPlayerId.push(element);
-    //   }
-    // });
+    for (let i = 0; i < this.numPlayers - 1; i++) {
+      otherPlayer[i] = this.physics.add.sprite(
+        115,
+        -740 + 30 * i,
+        "playerbase",
+        "idle.png"
+      );
+    }
+    this.idPlayers.forEach((element) => {
+      if (element != this.socket.id) {
+        otherPlayerId.push(element);
+      }
+    });
     // console.log(otherPlayerId);
 
     // stt = otherPlayer.length;
@@ -261,19 +261,19 @@ class Game extends Phaser.Scene {
 
     console.log(objectsLayer);
 
-    // this.socket.on("moveEnd", ({ playerId }) => {
-    //   let index = otherPlayerId.findIndex((Element) => Element == playerId);
-    //   otherPlayer[index].moving = false;
-    //   otherPlayer[index].anims.play("player-idle");
-    //   if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
-    //     otherPlayer[index].play("player-walk");
-    //   } else if (
-    //     !otherPlayer[index].moving &&
-    //     otherPlayer[index].anims.isPlaying
-    //   ) {
-    //     otherPlayer[index].stop("player-walk");
-    //   }
-    // });
+    this.socket.on("moveEnd", ({ playerId }) => {
+      let index = otherPlayerId.findIndex((Element) => Element == playerId);
+      otherPlayer[index].moving = false;
+      otherPlayer[index].anims.play("player-idle");
+      if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
+        otherPlayer[index].play("player-walk");
+      } else if (
+        !otherPlayer[index].moving &&
+        otherPlayer[index].anims.isPlaying
+      ) {
+        otherPlayer[index].stop("player-walk");
+      }
+    });
   }
 
   update() {
