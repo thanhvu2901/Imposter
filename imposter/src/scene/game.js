@@ -365,15 +365,7 @@ class Game extends Phaser.Scene {
     }
 
 
-    const killPlayer = new MissionKill(
-      "theSkeld",
-      map_missions,
-      export_missions,
-      this.scene,
-      player.x,
-      player.y,
-      otherPlayer
-    );
+
 
 
 
@@ -381,10 +373,19 @@ class Game extends Phaser.Scene {
       var kill = this.add
         .image(750, 700, "KillButton")
         .setScrollFactor(0, 0)
-        .setInteractive();
-      kill.alpha = 0.5;
+        .setInteractive()
+      kill.alpha = 0.5
 
 
+      const killPlayer = new MissionKill(
+        "theSkeld",
+        map_missions,
+        export_missions,
+        this.scene,
+        player.x,
+        player.y,
+        otherPlayer
+      );
 
       kill.on("pointerup", function (e) {
         if (canKill) {
@@ -400,7 +401,7 @@ class Game extends Phaser.Scene {
       let checkMissionKill = killPlayer.check_mission();
       // console.log(checkMissionKill);
       if (checkMissionKill) {
-        kill.alpha = 0.5;
+        kill.alpha = 1;
         canKill = true;
       } else if (!checkMissionKill) {
         console.log('can not kill');
