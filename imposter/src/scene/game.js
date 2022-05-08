@@ -368,7 +368,7 @@ class Game extends Phaser.Scene {
 
 
 
-
+    //
     if (isRole == 1) {
       var kill = this.add
         .image(750, 700, "KillButton")
