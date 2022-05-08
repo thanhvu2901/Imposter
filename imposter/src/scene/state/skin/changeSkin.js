@@ -66,13 +66,13 @@ const arrBackgroundPets = [];
 let petChosen;
 let statusChoosePet = false;
 let backgroundPetChosen;
-let playerChangedSkin= {};
+let playerChangedSkin = {};
 class ChangeSkin extends Phaser.Scene {
   constructor() {
     super({ key: "ChangeSkin" });
   }
 
-  init(data){
+  init(data) {
     this.socket = data.socket;
     this.textInput = data.textInput;
   }
@@ -133,8 +133,8 @@ class ChangeSkin extends Phaser.Scene {
     let current_object = this;
     const base = this.add.rectangle(500, 380, 600, 480, 0xaedfc0);
     const basePlayer = this.add.rectangle(350, 420, 280, 390, 0xa1b1ae);
-    const player = this.add.image(350, 460, "player");
-    const closeBtn= this.add.image(760, 180, "closeChangeSkin");
+    const player = this.add.image(350, 460, "playerchange");
+    const closeBtn = this.add.image(760, 180, "closeChangeSkin");
     let groupHats = this.add.group();
     let groupHatsBackground = this.add.group();
     let groupTrousers = this.add.group();
@@ -151,7 +151,7 @@ class ChangeSkin extends Phaser.Scene {
     const skinText = this.add.text(430, 165, "Skin", { font: "27px atari" });
     const petText = this.add.text(540, 165, "Pet", { font: "27px atari" });
     const gameText = this.add.text(625, 165, "Game", { font: "27px atari" });
-    closeBtn.scale= 0.8;
+    closeBtn.scale = 0.8;
     colorText.setInteractive({ useHandCursor: true });
     hatText.setInteractive({ useHandCursor: true });
     skinText.setInteractive({ useHandCursor: true });
@@ -324,9 +324,9 @@ class ChangeSkin extends Phaser.Scene {
       }
     );
 
-    closeBtn.on("pointerdown", ()=>{
+    closeBtn.on("pointerdown", () => {
       this.scene.stop("ChangeSkin");
-      this.scene.launch("waitingRoom", {socket: this.socket, textInput: this.textInput, playerChangedSkin: playerChangedSkin});
+      this.scene.launch("waitingRoom", { socket: this.socket, textInput: this.textInput, playerChangedSkin: playerChangedSkin });
     })
   }
 }
