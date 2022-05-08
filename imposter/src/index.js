@@ -21,7 +21,9 @@ import StabilizeSteering from "./scene/state/minigame/stabilize_steering.js";
 import StartReactor from "./scene/state/minigame/start_reactor.js";
 import JoinGame from "./scene/joinGame.js";
 import waitingRoom from "./scene/waitingRoom.js";
-import intro from "./scene/state/intro/intro.js";
+import introCrew from "./scene/state/intro/introCrew.js";
+import introImposter from "./scene/state/intro/introImposter.js";
+
 var preloader = new Preloader();
 
 const config = {
@@ -47,7 +49,8 @@ const game = new Phaser.Game(config);
 
 game.scene.add("preloader", preloader);
 game.scene.add("menu", MainMenuScene);
-game.scene.add('intro', intro)
+game.scene.add('introCrew', introCrew)
+game.scene.add('introImposter', introImposter)
 game.scene.add("theskeld", TheSkeld);
 game.scene.add('game', Game);
 
@@ -76,7 +79,7 @@ game.scene.add('joinGame', JoinGame)
 game.scene.add('waitingRoom', waitingRoom)
 // start title
 
-//game.scene.start("preloader");
+game.scene.start("preloader");
 // game.scene.start("theskeld");
 //game.scene.start('menu');
 //game.scene.start('game');
@@ -100,4 +103,7 @@ game.scene.add('waitingRoom', waitingRoom)
 //game.scene.start('joinGame')
 // game.scene.start('waitingRoom')
 //game.scene.start("ChangeSkin");
-game.scene.start("intro");
+
+/***intro */
+//game.scene.start("introCrew");
+//game.scene.start("introImposter");
