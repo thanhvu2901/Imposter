@@ -5,7 +5,6 @@ import playerpng from "../assets/player/player_sprite/player_base.png";
 import playerjson from "../assets/player/player_sprite/player_base.json";
 import { PLAYER_SPEED } from "../consts/constants";
 import { debugDraw } from "../scene/debugDraw";
-import ChangeSkin from "./state/skin/changeSkin.js";
 
 let player;
 let cursors;
