@@ -43,10 +43,6 @@ export default class waitingRoom extends Phaser.Scene {
       .image(800, 700, "customizeBtn")
       .setScrollFactor(0)
       .setInteractive({ useHandCursor: true });
-    //set room 
-
-    //if host
-
 
     lobby_tileset.setCollisionByProperty({ collides: true });
     debugDraw(lobby_tileset, this);
@@ -66,8 +62,7 @@ export default class waitingRoom extends Phaser.Scene {
       );
     }
     stt = otherPlayer.length;
-    // tạo object và gán các thuộc tính
-    // tạo object và gán các thuộc tính
+
     this.anims.create({
       key: "player-idle",
       frames: [{ key: "playerbase", frame: "idle.png" }],
@@ -123,6 +118,7 @@ export default class waitingRoom extends Phaser.Scene {
       this.state.host = Object.keys((states).players)[0]
       console.log("state: " + this.state.host);
 
+      //IF HOST
       if (this.socket.id == this.state.host) {
         const start = this.add
           .image(960, 700, "startBtn")
@@ -131,9 +127,11 @@ export default class waitingRoom extends Phaser.Scene {
 
         start.on('pointerdown', () => {
 
-          // custom by host   
+          // custom by host   *********SETTING input from customize *************
           let imposter = 2;
           let player = 4;
+
+
           let roomId = this.textInput
           this.socket.emit('letgo', ({ roomId, imposter, player }))
           console.log('after click');
@@ -203,10 +201,6 @@ export default class waitingRoom extends Phaser.Scene {
     //   }
     // });
 
-
-
-
-
     // this.socket.on("moveEnd", ({ playerId }) => {
     //   let index = otherPlayerId.findIndex((Element) => Element == playerId);
     //   otherPlayer[index].moving = false;
@@ -224,14 +218,18 @@ export default class waitingRoom extends Phaser.Scene {
 
 
     customize.on('pointerdown', () => {
-      this.input.on('pointerdown', () => this.scene.start('ChangeSkin', ChangeSkin))
-      console.log("customize success")
+      this.scene.launch('ChangeSkin', { socket: this.socket })
+      this.scene.bringToTop('ChangeSkin')
     })
 
     this.socket.on('gogame', ({ numPlayers, idPlayers }) => {
       //   console.log(numPlayers);
       this.scene.stop('waitingRoom')
 
+      // ********anouning ROLE****//
+
+
+      //*****start game */
       this.scene.launch('game', { socket: this.socket, textInput: this.textInput, numPlayers: numPlayers, idPlayers: idPlayers })
       this.game.scene.stop('waitingRoom')
     })

@@ -50,6 +50,7 @@ import pet10 from "../../../assets/skin/Pets/pet10.png";
 import pet11 from "../../../assets/skin/Pets/pet11.png";
 
 
+
 const arrHats = [];
 const arrBackgroundHats = [];
 let hatChosen;
@@ -60,18 +61,20 @@ const arrBackgroundTrousers = [];
 let trouserChosen;
 let statusChooseTrouser;
 let backgroundTrouserChosen;
-const arrPets= [];
-const arrBackgroundPets= [];
+const arrPets = [];
+const arrBackgroundPets = [];
 let petChosen;
-let statusChoosePet=false;
+let statusChoosePet = false;
 let backgroundPetChosen;
 class ChangeSkin extends Phaser.Scene {
   constructor() {
     super({ key: "ChangeSkin" });
   }
-
+  init(data) {
+    //   let socket = data.socket
+  }
   preload() {
-    this.load.image("player", player);
+    this.load.image("playerchange", player);
     this.load.image("hat0", hat0);
     this.load.image("hat1", hat1);
     this.load.image("hat2", hat2);
@@ -127,13 +130,14 @@ class ChangeSkin extends Phaser.Scene {
     let current_object = this;
     const base = this.add.rectangle(500, 380, 600, 480, 0xaedfc0);
     const basePlayer = this.add.rectangle(350, 420, 280, 390, 0xa1b1ae);
-    const player = this.add.image(350, 460, "player");    
+    const player = this.add.image(350, 460, "playerchange");
+
     let groupHats = this.add.group();
     let groupHatsBackground = this.add.group();
     let groupTrousers = this.add.group();
     let groupTrousersBackground = this.add.group();
-    let groupPets= this.add.group();
-    let groupPetsBackground= this.add.group();
+    let groupPets = this.add.group();
+    let groupPetsBackground = this.add.group();
     this.add.rectangle(255, 180, 90, 50, 0xa1b1ae);
     this.add.rectangle(355, 180, 90, 50, 0xa1b1ae);
     this.add.rectangle(455, 180, 90, 50, 0xa1b1ae);
@@ -149,6 +153,10 @@ class ChangeSkin extends Phaser.Scene {
     skinText.setInteractive();
     petText.setInteractive();
     gameText.setInteractive();
+    let closeBtn = this.add.image(830, 135, 'closeBtn').setInteractive({ useHandCursor: true })
+    closeBtn.on('pointerdown', () => {
+      this.scene.stop('ChangeSkin')
+    })
 
     this.input.on(
       "gameobjectdown",
@@ -157,7 +165,7 @@ class ChangeSkin extends Phaser.Scene {
           groupTrousersBackground.clear(true, true);
           groupTrousers.clear(true, true);
           groupPets.clear(true, true);
-          groupPetsBackground.clear(true, true);      
+          groupPetsBackground.clear(true, true);
           const changeX = 69;
           const changeY = 69;
           let countNameHat = 0;
@@ -220,11 +228,11 @@ class ChangeSkin extends Phaser.Scene {
             }
           }
           // let boundaryImages = current_object.add.tileSprite(300, 300, "groupHats");
-        } else if(gameObject===petText){
+        } else if (gameObject === petText) {
           groupHatsBackground.clear(true, true);
           groupHats.clear(true, true);
           groupTrousersBackground.clear(true, true);
-          groupTrousers.clear(true, true);     
+          groupTrousers.clear(true, true);
           const changeX = 69;
           const changeY = 69;
           let countNamePet = 0;
