@@ -48,7 +48,7 @@ import pet8 from "../../../assets/skin/Pets/pet8.png";
 import pet9 from "../../../assets/skin/Pets/pet9.png";
 import pet10 from "../../../assets/skin/Pets/pet10.png";
 import pet11 from "../../../assets/skin/Pets/pet11.png";
-
+import closeChangeSkin from "../../../assets/skin/close.png";
 
 const arrHats = [];
 const arrBackgroundHats = [];
@@ -60,14 +60,20 @@ const arrBackgroundTrousers = [];
 let trouserChosen;
 let statusChooseTrouser;
 let backgroundTrouserChosen;
-const arrPets= [];
-const arrBackgroundPets= [];
+const arrPets = [];
+const arrBackgroundPets = [];
 let petChosen;
-let statusChoosePet=false;
+let statusChoosePet = false;
 let backgroundPetChosen;
+let playerChangedSkin= {};
 class ChangeSkin extends Phaser.Scene {
   constructor() {
     super({ key: "ChangeSkin" });
+  }
+
+  init(data){
+    this.socket = data.socket;
+    this.textInput = data.textInput;
   }
 
   preload() {
@@ -120,20 +126,21 @@ class ChangeSkin extends Phaser.Scene {
     this.load.image("pet9", pet9);
     this.load.image("pet10", pet10);
     this.load.image("pet11", pet11);
-
+    this.load.image("closeChangeSkin", closeChangeSkin);
   }
 
   create() {
     let current_object = this;
     const base = this.add.rectangle(500, 380, 600, 480, 0xaedfc0);
     const basePlayer = this.add.rectangle(350, 420, 280, 390, 0xa1b1ae);
-    const player = this.add.image(350, 460, "player");    
+    const player = this.add.image(350, 460, "player");
+    const closeBtn= this.add.image(760, 180, "closeChangeSkin");
     let groupHats = this.add.group();
     let groupHatsBackground = this.add.group();
     let groupTrousers = this.add.group();
     let groupTrousersBackground = this.add.group();
-    let groupPets= this.add.group();
-    let groupPetsBackground= this.add.group();
+    let groupPets = this.add.group();
+    let groupPetsBackground = this.add.group();
     this.add.rectangle(255, 180, 90, 50, 0xa1b1ae);
     this.add.rectangle(355, 180, 90, 50, 0xa1b1ae);
     this.add.rectangle(455, 180, 90, 50, 0xa1b1ae);
@@ -144,11 +151,13 @@ class ChangeSkin extends Phaser.Scene {
     const skinText = this.add.text(430, 165, "Skin", { font: "27px atari" });
     const petText = this.add.text(540, 165, "Pet", { font: "27px atari" });
     const gameText = this.add.text(625, 165, "Game", { font: "27px atari" });
-    colorText.setInteractive();
-    hatText.setInteractive();
-    skinText.setInteractive();
-    petText.setInteractive();
-    gameText.setInteractive();
+    closeBtn.scale= 0.8;
+    colorText.setInteractive({ useHandCursor: true });
+    hatText.setInteractive({ useHandCursor: true });
+    skinText.setInteractive({ useHandCursor: true });
+    petText.setInteractive({ useHandCursor: true });
+    gameText.setInteractive({ useHandCursor: true });
+    closeBtn.setInteractive({ useHandCursor: true });
 
     this.input.on(
       "gameobjectdown",
@@ -157,7 +166,7 @@ class ChangeSkin extends Phaser.Scene {
           groupTrousersBackground.clear(true, true);
           groupTrousers.clear(true, true);
           groupPets.clear(true, true);
-          groupPetsBackground.clear(true, true);      
+          groupPetsBackground.clear(true, true);
           const changeX = 69;
           const changeY = 69;
           let countNameHat = 0;
@@ -178,7 +187,7 @@ class ChangeSkin extends Phaser.Scene {
                 `hat${countNameHat}`
               );
               arrHats[countNameHat].scale = 0.7;
-              arrHats[countNameHat].setInteractive();
+              arrHats[countNameHat].setInteractive({ useHandCursor: true });
               groupHatsBackground.add(arrBackgroundHats[countNameHat]);
               groupHats.add(arrHats[countNameHat]);
               countNameHat++;
@@ -211,7 +220,7 @@ class ChangeSkin extends Phaser.Scene {
                 `trouser${countNameTrouser}`
               );
               arrTrousers[countNameTrouser].scale = 0.7;
-              arrTrousers[countNameTrouser].setInteractive();
+              arrTrousers[countNameTrouser].setInteractive({ useHandCursor: true });
               groupTrousersBackground.add(
                 arrBackgroundTrousers[countNameTrouser]
               );
@@ -220,11 +229,11 @@ class ChangeSkin extends Phaser.Scene {
             }
           }
           // let boundaryImages = current_object.add.tileSprite(300, 300, "groupHats");
-        } else if(gameObject===petText){
+        } else if (gameObject === petText) {
           groupHatsBackground.clear(true, true);
           groupHats.clear(true, true);
           groupTrousersBackground.clear(true, true);
-          groupTrousers.clear(true, true);     
+          groupTrousers.clear(true, true);
           const changeX = 69;
           const changeY = 69;
           let countNamePet = 0;
@@ -232,24 +241,21 @@ class ChangeSkin extends Phaser.Scene {
             const x = 550;
             const y = 260;
             for (let j = 0; j < 4; j++) {
-              arrBackgroundPets[countNamePet] =
-                current_object.add.rectangle(
-                  x + changeX * j,
-                  y + changeY * i,
-                  64,
-                  64,
-                  0xa1b1ae
-                );
+              arrBackgroundPets[countNamePet] = current_object.add.rectangle(
+                x + changeX * j,
+                y + changeY * i,
+                64,
+                64,
+                0xa1b1ae
+              );
               arrPets[countNamePet] = current_object.add.sprite(
                 x + changeX * j,
                 y + changeY * i,
                 `pet${countNamePet}`
               );
               arrPets[countNamePet].scale = 0.7;
-              arrPets[countNamePet].setInteractive();
-              groupPetsBackground.add(
-                arrBackgroundPets[countNamePet]
-              );
+              arrPets[countNamePet].setInteractive({ useHandCursor: true });
+              groupPetsBackground.add(arrBackgroundPets[countNamePet]);
               groupPets.add(arrPets[countNamePet]);
               countNamePet++;
             }
@@ -275,6 +281,7 @@ class ChangeSkin extends Phaser.Scene {
             hatChosen = current_object.add.sprite(345, 350, `hat${i}`);
             hatChosen.scale = 1.5;
             statusChooseHat = true;
+            playerChangedSkin.hat = arrHats[i];
             break;
           }
         }
@@ -292,6 +299,7 @@ class ChangeSkin extends Phaser.Scene {
             trouserChosen = current_object.add.sprite(360, 510, `trouser${i}`);
             trouserChosen.scale = 1.9;
             statusChooseTrouser = true;
+            playerChangedSkin.trouser = arrTrousers[i];
             break;
           }
         }
@@ -301,19 +309,22 @@ class ChangeSkin extends Phaser.Scene {
             gameObject === arrBackgroundPets[i]
           ) {
             if (statusChoosePet) {
-              // petChosen.destroy();
               backgroundPetChosen.setFillStyle("0xa1b1ae");
             }
             backgroundPetChosen = arrBackgroundPets[i];
             arrBackgroundPets[i].setFillStyle("0x505655");
-            // petChosen = current_object.add.sprite(360, 510, `pet${i}`);
-            // petChosen.scale = 1.9;
             statusChoosePet = true;
+            playerChangedSkin.pet = arrPets[i];
             break;
           }
         }
       }
     );
+
+    closeBtn.on("pointerdown", ()=>{
+      this.scene.stop("ChangeSkin");
+      this.scene.launch("waitingRoom", {socket: this.socket, textInput: this.textInput, playerChangedSkin: playerChangedSkin});
+    })
   }
 }
 
