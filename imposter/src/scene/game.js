@@ -37,7 +37,8 @@ let current_x, current_y, mission_name;
 let useButton;
 let current_scene;
 let launch_scene = false;
-let killButton;
+let isRole = 0;
+
 let canKill = false;
 class Game extends Phaser.Scene {
   constructor() {
@@ -50,6 +51,7 @@ class Game extends Phaser.Scene {
     this.textInput = data.textInput;
     this.numPlayers = data.numPlayers;
     this.idPlayers = data.idPlayers;
+
     current_x = data.x;
     current_y = data.y;
     mission_name = data.mission;
@@ -85,12 +87,18 @@ class Game extends Phaser.Scene {
     //disable button
     useButton.alpha = 0.5;
 
-    //add kill button
-    killButton = this.add
-      .image(750, 700, "KillButton")
-      .setScrollFactor(0, 0)
-      .setInteractive();
-    killButton.alpha = 0.5;
+    //add kill button if imposter
+
+    this.socket.emit('whatRole', this.textInput)
+    this.socket.on('roleIs', (role) => {
+      //console.log(role);
+      // is imposterr
+      isRole = role
+    })
+
+
+
+
 
     //initialize missions of this map
     map_missions = new MapMissionsExporter("theSkeld");
@@ -201,7 +209,7 @@ class Game extends Phaser.Scene {
             object.height
           );
           // tableObject.setFillStyle(0xffffff, 0.5);
-          console.log(tableObject);
+          // console.log(tableObject);
 
           this.physics.add.existing(tableObject);
 
@@ -326,12 +334,6 @@ class Game extends Phaser.Scene {
       player.movedLastFrame = false;
     }
 
-    // update running other player
-    // if (otherPlayer.moving && !otherPlayer.anims.isPlaying) {
-    //   otherPlayer.play("player-walk");
-    // } else if (!otherPlayer.moving && otherPlayer.anims.isPlaying) {
-    //   otherPlayer.stop("player-walk");
-    // }
 
     const mission = new Mission(
       "theSkeld",
@@ -362,32 +364,52 @@ class Game extends Phaser.Scene {
       launch_scene = false;
     }
 
-    const killPlayer = new MissionKill(
-      "theSkeld",
-      map_missions,
-      export_missions,
-      this.scene,
-      player.x,
-      player.y,
-      otherPlayer
-    );
-    let checkMissionKill = killPlayer.check_mission();
-    if (checkMissionKill) {
-      killButton.alpha = 1;
-      canKill = true;
-    } else if (!checkMissionKill) {
-      killButton.alpha = 0.5;
-      canKill = false;
-    }
-    killButton.on("pointerup", function (e) {
-      if (canKill) {
-        checkMissionKill.anims.play("player-dead");
-        otherPlayer = otherPlayer.filter((player) => {
-          return player !== checkMissionKill;
-        });
+
+
+
+
+    //
+    if (isRole == 1) {
+      var kill = this.add
+        .image(750, 700, "KillButton")
+        .setScrollFactor(0, 0)
+        .setInteractive()
+      kill.alpha = 0.5
+
+
+      const killPlayer = new MissionKill(
+        "theSkeld",
+        map_missions,
+        export_missions,
+        this.scene,
+        player.x,
+        player.y,
+        otherPlayer
+      );
+
+      kill.on("pointerup", function (e) {
+        if (canKill) {
+          checkMissionKill.anims.play("player-dead");
+          //die và pop ra khỏi oth
+          // otherPlayer = otherPlayer.filter((player) => {
+          //   return player !== checkMissionKill;
+          // });
+          canKill = false;
+        }
+      });
+
+      let checkMissionKill = killPlayer.check_mission();
+      // console.log(checkMissionKill);
+      if (checkMissionKill) {
+        kill.alpha = 1;
+        canKill = true;
+      } else if (!checkMissionKill) {
+        console.log('can not kill');
+        kill.alpha = 0.5;
         canKill = false;
+
       }
-    });
+    }
   }
 }
 

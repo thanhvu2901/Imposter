@@ -228,7 +228,7 @@ export default class waitingRoom extends Phaser.Scene {
     })
 
     this.socket.on('gogame', ({ numPlayers, idPlayers }) => {
-      //   console.log(numPlayers);
+      console.log(numPlayers);
       this.scene.stop('waitingRoom')
 
       // ********anouning ROLE****//
