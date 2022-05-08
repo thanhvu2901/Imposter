@@ -114,19 +114,19 @@ class Game extends Phaser.Scene {
     this.state.roomKey = this.textInput;
 
     // console.log(this.numPlayers);
-    // for (let i = 0; i < this.numPlayers - 1; i++) {
-    //   otherPlayer[i] = this.physics.add.sprite(
-    //     115,
-    //     -740 + 30 * i,
-    //     "playerbase",
-    //     "idle.png"
-    //   );
-    // }
-    // this.idPlayers.forEach((element) => {
-    //   if (element != this.socket.id) {
-    //     otherPlayerId.push(element);
-    //   }
-    // });
+    for (let i = 0; i < this.numPlayers - 1; i++) {
+      otherPlayer[i] = this.physics.add.sprite(
+        115,
+        -740 + 30 * i,
+        "playerbase",
+        "idle.png"
+      );
+    }
+    this.idPlayers.forEach((element) => {
+      if (element != this.socket.id) {
+        otherPlayerId.push(element);
+      }
+    });
     // console.log(otherPlayerId);
 
     // stt = otherPlayer.length;
@@ -327,11 +327,11 @@ class Game extends Phaser.Scene {
     }
 
     // update running other player
-    // if (otherPlayer.moving && !otherPlayer.anims.isPlaying) {
-    //   otherPlayer.play("player-walk");
-    // } else if (!otherPlayer.moving && otherPlayer.anims.isPlaying) {
-    //   otherPlayer.stop("player-walk");
-    // }
+    if (otherPlayer.moving && !otherPlayer.anims.isPlaying) {
+      otherPlayer.play("player-walk");
+    } else if (!otherPlayer.moving && otherPlayer.anims.isPlaying) {
+      otherPlayer.stop("player-walk");
+    }
 
     const mission = new Mission(
       "theSkeld",
