@@ -128,8 +128,8 @@ export default class waitingRoom extends Phaser.Scene {
         start.on('pointerdown', () => {
 
           // custom by host   *********SETTING input from customize *************
-          let imposter = 2;
-          let player = 4;
+          let imposter = 1;
+          let player = 2;
 
 
           let roomId = this.textInput
@@ -223,7 +223,7 @@ export default class waitingRoom extends Phaser.Scene {
     })
 
     this.socket.on('gogame', ({ numPlayers, idPlayers }) => {
-      //   console.log(numPlayers);
+      console.log(numPlayers);
       this.scene.stop('waitingRoom')
 
       // ********anouning ROLE****//

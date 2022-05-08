@@ -37,7 +37,6 @@ let current_x, current_y, mission_name;
 let useButton;
 let current_scene;
 let launch_scene = false;
-let killButton;
 let canKill = false;
 class Game extends Phaser.Scene {
   constructor() {
@@ -50,6 +49,7 @@ class Game extends Phaser.Scene {
     this.textInput = data.textInput;
     this.numPlayers = data.numPlayers;
     this.idPlayers = data.idPlayers;
+
     current_x = data.x;
     current_y = data.y;
     mission_name = data.mission;
@@ -86,11 +86,55 @@ class Game extends Phaser.Scene {
     useButton.alpha = 0.5;
 
     //add kill button
-    killButton = this.add
-      .image(750, 700, "KillButton")
-      .setScrollFactor(0, 0)
-      .setInteractive();
-    killButton.alpha = 0.5;
+
+    this.socket.emit('whatRole', this.textInput)
+    this.socket.on('roleIs', (role) => {
+      //console.log(role);
+      // is imposterr
+      if (role == 1) {
+        let kill = this.add
+          .image(750, 700, "KillButton")
+          .setScrollFactor(0, 0)
+          .setInteractive();
+        kill.alpha = 0.5;
+
+
+        const killPlayer = new MissionKill(
+          "theSkeld",
+          map_missions,
+          export_missions,
+          this.scene,
+          player.x,
+          player.y,
+          otherPlayer
+        );
+        let checkMissionKill = killPlayer.check_mission();
+        if (checkMissionKill) {
+          kill.alpha = 1;
+          canKill = true;
+        } else if (!checkMissionKill) {
+          kill.alpha = 0.5;
+          canKill = false;
+        }
+        kill.on("pointerup", function (e) {
+          if (canKill) {
+            checkMissionKill.anims.play("player-dead");
+            //die và pop ra khỏi oth
+            // otherPlayer = otherPlayer.filter((player) => {
+            //   return player !== checkMissionKill;
+            // });
+            canKill = false;
+          }
+        });
+
+
+      }
+
+    })
+
+
+
+
 
     //initialize missions of this map
     map_missions = new MapMissionsExporter("theSkeld");
@@ -201,7 +245,7 @@ class Game extends Phaser.Scene {
             object.height
           );
           // tableObject.setFillStyle(0xffffff, 0.5);
-          console.log(tableObject);
+          // console.log(tableObject);
 
           this.physics.add.existing(tableObject);
 
@@ -261,19 +305,19 @@ class Game extends Phaser.Scene {
 
     console.log(objectsLayer);
 
-    // this.socket.on("moveEnd", ({ playerId }) => {
-    //   let index = otherPlayerId.findIndex((Element) => Element == playerId);
-    //   otherPlayer[index].moving = false;
-    //   otherPlayer[index].anims.play("player-idle");
-    //   if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
-    //     otherPlayer[index].play("player-walk");
-    //   } else if (
-    //     !otherPlayer[index].moving &&
-    //     otherPlayer[index].anims.isPlaying
-    //   ) {
-    //     otherPlayer[index].stop("player-walk");
-    //   }
-    // });
+    this.socket.on("moveEnd", ({ playerId }) => {
+      let index = otherPlayerId.findIndex((Element) => Element == playerId);
+      otherPlayer[index].moving = false;
+      otherPlayer[index].anims.play("player-idle");
+      if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
+        otherPlayer[index].play("player-walk");
+      } else if (
+        !otherPlayer[index].moving &&
+        otherPlayer[index].anims.isPlaying
+      ) {
+        otherPlayer[index].stop("player-walk");
+      }
+    });
   }
 
   update() {
@@ -327,11 +371,11 @@ class Game extends Phaser.Scene {
     }
 
     // update running other player
-    if (otherPlayer.moving && !otherPlayer.anims.isPlaying) {
-      otherPlayer.play("player-walk");
-    } else if (!otherPlayer.moving && otherPlayer.anims.isPlaying) {
-      otherPlayer.stop("player-walk");
-    }
+    // if (otherPlayer.moving && !otherPlayer.anims.isPlaying) {
+    //   otherPlayer.play("player-walk");
+    // } else if (!otherPlayer.moving && otherPlayer.anims.isPlaying) {
+    //   otherPlayer.stop("player-walk");
+    // }
 
     const mission = new Mission(
       "theSkeld",
@@ -362,32 +406,6 @@ class Game extends Phaser.Scene {
       launch_scene = false;
     }
 
-    const killPlayer = new MissionKill(
-      "theSkeld",
-      map_missions,
-      export_missions,
-      this.scene,
-      player.x,
-      player.y,
-      otherPlayer
-    );
-    let checkMissionKill = killPlayer.check_mission();
-    if (checkMissionKill) {
-      killButton.alpha = 1;
-      canKill = true;
-    } else if (!checkMissionKill) {
-      killButton.alpha = 0.5;
-      canKill = false;
-    }
-    killButton.on("pointerup", function (e) {
-      if (canKill) {
-        checkMissionKill.anims.play("player-dead");
-        otherPlayer = otherPlayer.filter((player) => {
-          return player !== checkMissionKill;
-        });
-        canKill = false;
-      }
-    });
   }
 }
 
