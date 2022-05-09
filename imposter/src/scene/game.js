@@ -10,7 +10,13 @@ import Mission from "../services/missions/mission";
 import UseButton from "../assets/tasks/Align Engine Output/Use.webp.png";
 import AlignEngineOutput_mission_marked from "../assets/tasks/Align Engine Output/mission_marked.png";
 import KillButton from "../assets/img/killButton.png";
-
+import vent1 from  "../assets/img/jump vent/vent1.png";
+import vent2 from  "../assets/img/jump vent/vent2.png";
+import vent3 from  "../assets/img/jump vent/vent3.png";
+import vent4 from  "../assets/img/jump vent/vent4.png";
+import vent5 from  "../assets/img/jump vent/vent5.png";
+import vent6 from  "../assets/img/jump vent/vent6.png";
+import vent_button from "../assets/img/vent_button.png"
 import { io } from "socket.io-client";
 import {
   PLAYER_HEIGHT,
@@ -29,7 +35,7 @@ let pressedKeys = [];
 let stt = 0;
 let socket;
 let tables = [];
-let tableObject, ventObject;
+let tableObject, ventObject,hole,vent_butt;
 var objectsLayer;
 let map_missions;
 let export_missions;
@@ -63,9 +69,14 @@ class Game extends Phaser.Scene {
     this.load.image("UseButton", UseButton);
     this.load.image("KillButton", KillButton);
     this.load.atlas("playerbase", playerpng, playerjson);
-
+    this.load.image("vent_1", vent1);
+    this.load.image("vent_2", vent2);
+    this.load.image("vent_3", vent3);
+    this.load.image("vent_4", vent4);
+    this.load.image("vent_5", vent5);
+    this.load.image("vent_6", vent6);
     this.load.audio("walk", footStep);
-
+    this.load.image("button",vent_button)
     this.load.image(
       "AlignEngineOutput_mission_marked",
       AlignEngineOutput_mission_marked
@@ -80,6 +91,7 @@ class Game extends Phaser.Scene {
     const ship_tileset = ship.createLayer("Background", tileset);
 
     //add use button
+    vent_butt=   this.add.image(1000,700,"button").setScrollFactor(0,0).setInteractive()
     useButton = this.add
       .image(900, 700, "UseButton")
       .setScrollFactor(0, 0)
@@ -152,6 +164,29 @@ class Game extends Phaser.Scene {
     });
 
     //animation player
+
+   hole= this.anims.create({
+      key: 'hole',
+      frames: [{key:'vent_1'},
+      {key:'vent_2'},
+      {key:'vent_3'},
+      {key:'vent_4'},
+      {key:'vent_5'},
+      {key:'vent_6'},
+      {key:'vent_1'}
+      ],
+      frameRate:23 ,
+      repeat:0
+  });
+  hole.frames[0].frame.y=8
+  //hole.frames[1].frame.x=11
+  hole.frames[2].frame.y=3.5
+  hole.frames[3].frame.y=7
+  hole.frames[4].frame.y=7
+  hole.frames[4].frame.x=3
+  hole.frames[5].frame.y=7
+
+
     this.anims.create({
       key: "player-walk",
       frames: this.anims.generateFrameNames("playerbase", {
@@ -235,9 +270,17 @@ class Game extends Phaser.Scene {
           ventObject.body.immovable = true;
           ventObject.setOrigin(0, 0);
           var cir = this.add.circle(object.x + object.width * 0.5, object.y + object.height * 0.5, object.width * 0.75, 0xff0000, 0.4);
+         let vent= this.add.sprite(object.x,object.y-10,"vent_1").setOrigin(0,0).setScale(1.2)
           this.physics.add.existing(cir);
           cir.body.immovable = true;
-          this.physics.add.overlap(player, cir, circleOverlap, null, this);
+          cir.body.setCircle(object.width * 0.75)
+          this.physics.add.overlap(player, cir, ()=>{
+            console.log(object.x,object.y)
+            vent_butt.on('pointerdown', function (pointer) {
+                vent.play("hole")
+      
+          })
+          });
           // cir.setOrigin(0, 0);
         default:
           break;
