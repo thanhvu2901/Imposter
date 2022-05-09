@@ -49,7 +49,8 @@ import pet9 from "../../../assets/skin/Pets/pet9.png";
 import pet10 from "../../../assets/skin/Pets/pet10.png";
 import pet11 from "../../../assets/skin/Pets/pet11.png";
 import closeChangeSkin from "../../../assets/skin/close.png";
-
+import plusIcon from "../../../assets/skin/Games/plus.png";
+import minusIcon from "../../../assets/skin/Games/minus.png";
 
 const arrHats = [];
 const arrBackgroundHats = [];
@@ -67,6 +68,8 @@ let petChosen;
 let statusChoosePet = false;
 let backgroundPetChosen;
 let playerChangedSkin = {};
+let numberImposter = 1;
+let numberPlayer = 5;
 class ChangeSkin extends Phaser.Scene {
   constructor() {
     super({ key: "ChangeSkin" });
@@ -127,6 +130,8 @@ class ChangeSkin extends Phaser.Scene {
     this.load.image("pet10", pet10);
     this.load.image("pet11", pet11);
     this.load.image("closeChangeSkin", closeChangeSkin);
+    this.load.image("plusIcon", plusIcon);
+    this.load.image("minusIcon", minusIcon);
   }
 
   create() {
@@ -158,18 +163,35 @@ class ChangeSkin extends Phaser.Scene {
     petText.setInteractive({ useHandCursor: true });
     gameText.setInteractive({ useHandCursor: true });
     closeBtn.setInteractive({ useHandCursor: true });
-    closeBtn.on('pointerdown', () => {
-      this.scene.stop('ChangeSkin')
-    })
+    let plusImposterIcon;
+    let plusPlayerIcon;
+    let minusImposterIcon;
+    let minusPlayerIcon;
+    let numberImposerText;
+    let numberPlayerText;
+    // group background, text, icons in Game
+    let groupGame = this.add.group();
+    closeBtn.on("pointerdown", () => {
+      this.scene.stop("ChangeSkin");
+    });
 
     this.input.on(
       "gameobjectdown",
       function (pointer, gameObject, deltaX, deltaY, deltaZ) {
         if (gameObject === hatText) {
+          basePlayer.visible=true;
+          player.visible=true;
+          if(hatChosen){
+            hatChosen.visible= true;
+          }
+          if(trouserChosen){
+            trouserChosen.visible= true;
+          }
           groupTrousersBackground.clear(true, true);
           groupTrousers.clear(true, true);
           groupPets.clear(true, true);
           groupPetsBackground.clear(true, true);
+          groupGame.clear(true, true);
           const changeX = 69;
           const changeY = 69;
           let countNameHat = 0;
@@ -198,10 +220,19 @@ class ChangeSkin extends Phaser.Scene {
           }
           // let boundaryImages = current_object.add.tileSprite(300, 300, "groupHats");
         } else if (gameObject === skinText) {
+          basePlayer.visible=true;
+          player.visible=true;
+          if(hatChosen){
+            hatChosen.visible= true;
+          }
+          if(trouserChosen){
+            trouserChosen.visible= true;
+          }
           groupHatsBackground.clear(true, true);
           groupHats.clear(true, true);
           groupPets.clear(true, true);
           groupPetsBackground.clear(true, true);
+          groupGame.clear(true, true);
           const changeX = 69;
           const changeY = 69;
           let countNameTrouser = 0;
@@ -223,7 +254,9 @@ class ChangeSkin extends Phaser.Scene {
                 `trouser${countNameTrouser}`
               );
               arrTrousers[countNameTrouser].scale = 0.7;
-              arrTrousers[countNameTrouser].setInteractive({ useHandCursor: true });
+              arrTrousers[countNameTrouser].setInteractive({
+                useHandCursor: true,
+              });
               groupTrousersBackground.add(
                 arrBackgroundTrousers[countNameTrouser]
               );
@@ -233,10 +266,19 @@ class ChangeSkin extends Phaser.Scene {
           }
           // let boundaryImages = current_object.add.tileSprite(300, 300, "groupHats");
         } else if (gameObject === petText) {
+          basePlayer.visible=true;
+          player.visible=true;
+          if(hatChosen){
+            hatChosen.visible= true;
+          }
+          if(trouserChosen){
+            trouserChosen.visible= true;
+          }
           groupHatsBackground.clear(true, true);
           groupHats.clear(true, true);
           groupTrousersBackground.clear(true, true);
           groupTrousers.clear(true, true);
+          groupGame.clear(true, true);
           const changeX = 69;
           const changeY = 69;
           let countNamePet = 0;
@@ -263,9 +305,84 @@ class ChangeSkin extends Phaser.Scene {
               countNamePet++;
             }
           }
+        } else if (gameObject === gameText) {
+          basePlayer.visible=false;
+          player.visible=false;
+          if(hatChosen){
+            hatChosen.visible= false;
+          }
+          if(trouserChosen){
+            trouserChosen.visible= false;
+          }
+          groupHatsBackground.clear(true, true);
+          groupHats.clear(true, true);
+          groupTrousersBackground.clear(true, true);
+          groupTrousers.clear(true, true);
+          groupPetsBackground.clear(true, true);
+          groupPets.clear(true, true);
+          let count = 0;
+          for (let i = 0; i < 2; i++) {
+            groupGame.add(current_object.add.rectangle(
+              470,
+              280 + i * 55,
+              400,
+              50,
+              0xa1b1ae
+            ))
+            if (i === 0) {
+              minusImposterIcon =
+                current_object.add.sprite(585, 280 + i * 55, "minusIcon");
+              plusImposterIcon = current_object.add.sprite(
+                650,
+                280 + i * 55,
+                "plusIcon"
+              );
+              groupGame.add(minusImposterIcon);
+              groupGame.add(plusImposterIcon);
+              minusImposterIcon.scale = 2.5;
+              plusImposterIcon.scale = 2.5;
+              minusImposterIcon.setInteractive({ useHandCursor: true });
+              plusImposterIcon.setInteractive({ useHandCursor: true });
+            } else if (i === 1) {
+              minusPlayerIcon = current_object.add.sprite(
+                585,
+                280 + i * 55,
+                "minusIcon"
+              );
+              groupGame.add(minusPlayerIcon);
+              plusPlayerIcon = current_object.add.sprite(
+                650,
+                280 + i * 55,
+                "plusIcon"
+              );
+              groupGame.add(plusPlayerIcon);
+              minusPlayerIcon.scale = 2.5;
+              plusPlayerIcon.scale = 2.5;
+              minusPlayerIcon.setInteractive({ useHandCursor: true });
+              plusPlayerIcon.setInteractive({ useHandCursor: true });
+            }
+          }
+          groupGame.add(current_object.add.text(
+            300,
+            265,
+            "# Impostors",
+            { font: "27px atari" }
+          ))
+          groupGame.add(current_object.add.text(300, 320, "# Players", {
+            font: "27px atari",
+          }))
+          numberImposerText= current_object.add.text(610, 265, `${numberImposter}`, {
+            font: "27px atari",
+          });
+          groupGame.add(numberImposerText)
+          numberPlayerText= current_object.add.text(610, 320, `${numberPlayer}`, {
+            font: "27px atari",
+          });
+          groupGame.add(numberPlayerText)
         }
       }
     );
+
 
     current_object.input.on(
       "gameobjectdown",
@@ -321,13 +438,84 @@ class ChangeSkin extends Phaser.Scene {
             break;
           }
         }
+        if (gameObject === minusImposterIcon) {
+          if (numberImposter === 2) {
+            numberImposter = 1;
+          }
+          numberImposerText.destroy();
+          numberPlayerText.destroy();
+          numberImposerText= current_object.add.text(610, 265, `${numberImposter}`, {
+            font: "27px atari",
+          });
+          numberPlayerText= current_object.add.text(610, 320, `${numberPlayer}`, {
+            font: "27px atari",
+          });
+        }
+        if (gameObject === plusImposterIcon) {
+          if (numberImposter === 1) {
+            numberImposter = 2;
+            numberPlayer=8;
+          }
+          numberImposerText.destroy();
+          numberPlayerText.destroy();
+          numberImposerText= current_object.add.text(610, 265, `${numberImposter}`, {
+            font: "27px atari",
+          });
+          numberPlayerText= current_object.add.text(610, 320, `${numberPlayer}`, {
+            font: "27px atari",
+          });
+        }
+        if (gameObject === minusPlayerIcon) {
+          if (numberImposter === 1 && numberPlayer > 5 && numberPlayer <= 12) {
+            numberPlayer--;
+          } else if (
+            numberImposter === 2 &&
+            numberPlayer > 8 &&
+            numberPlayer <= 12
+          ) {
+            numberPlayer--;
+          }
+          numberImposerText.destroy();
+          numberPlayerText.destroy();
+          numberImposerText= current_object.add.text(610, 265, `${numberImposter}`, {
+            font: "27px atari",
+          });
+          numberPlayerText= current_object.add.text(610, 320, `${numberPlayer}`, {
+            font: "27px atari",
+          });
+        }
+        if (gameObject === plusPlayerIcon) {
+          if (numberImposter === 1 && numberPlayer >= 5 && numberPlayer < 12) {
+            numberPlayer++;
+          } else if (
+            numberImposter === 2 &&
+            numberPlayer >= 8 &&
+            numberPlayer < 12
+          ) {
+            numberPlayer++;
+          }
+          numberImposerText.destroy();
+          numberPlayerText.destroy();
+          numberImposerText= current_object.add.text(610, 265, `${numberImposter}`, {
+            font: "27px atari",
+          });
+          numberPlayerText= current_object.add.text(610, 320, `${numberPlayer}`, {
+            font: "27px atari",
+          });
+        }
       }
     );
 
     closeBtn.on("pointerdown", () => {
       this.scene.stop("ChangeSkin");
-      this.scene.launch("waitingRoom", { socket: this.socket, textInput: this.textInput, playerChangedSkin: playerChangedSkin });
-    })
+      this.scene.launch("waitingRoom", {
+        socket: this.socket,
+        textInput: this.textInput,
+        playerChangedSkin: playerChangedSkin,
+        numberImposter: numberImposter,
+        numberPlayer: numberPlayer
+      });
+    });
   }
 }
 

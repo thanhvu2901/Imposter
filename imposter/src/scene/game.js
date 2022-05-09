@@ -38,7 +38,7 @@ let useButton;
 let current_scene;
 let launch_scene = false;
 let isRole = 0;
-
+let kill;
 let canKill = false;
 class Game extends Phaser.Scene {
   constructor() {
@@ -94,9 +94,14 @@ class Game extends Phaser.Scene {
       //console.log(role);
       // is imposterr
       isRole = role
+      if(isRole==1){
+        kill = this.add
+          .image(750, 700, "KillButton")
+          .setScrollFactor(0, 0)
+          .setInteractive()
+        kill.alpha = 0.5
+      }
     })
-
-
 
 
 
@@ -370,13 +375,6 @@ class Game extends Phaser.Scene {
 
     //
     if (isRole == 1) {
-      var kill = this.add
-        .image(750, 700, "KillButton")
-        .setScrollFactor(0, 0)
-        .setInteractive()
-      kill.alpha = 0.5
-
-
       const killPlayer = new MissionKill(
         "theSkeld",
         map_missions,
@@ -391,9 +389,9 @@ class Game extends Phaser.Scene {
         if (canKill) {
           checkMissionKill.anims.play("player-dead");
           //die và pop ra khỏi oth
-          // otherPlayer = otherPlayer.filter((player) => {
-          //   return player !== checkMissionKill;
-          // });
+          otherPlayer = otherPlayer.filter((player) => {
+            return player !== checkMissionKill;
+          });
           canKill = false;
         }
       });
@@ -404,7 +402,6 @@ class Game extends Phaser.Scene {
         kill.alpha = 1;
         canKill = true;
       } else if (!checkMissionKill) {
-        console.log('can not kill');
         kill.alpha = 0.5;
         canKill = false;
 
