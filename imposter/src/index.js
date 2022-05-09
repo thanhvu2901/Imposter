@@ -82,27 +82,9 @@ game.scene.add('waitingRoom', waitingRoom)
 game.scene.start("preloader");
 // game.scene.start("theskeld");
 //game.scene.start('menu');
-//game.scene.start('game');
+// game.scene.start('game');
 //game.scene.start('login');
 // game.scene.start('Upload');
-
-// game.scene.start('preloader');
-//game.scene.start('Course');
-// game.scene.start('Course');
-//game.scene.start('CleanO2Filter');
-// game.scene.start('CleanAsteroids');
-//game.scene.start('PrimeShields');
-
-//game.scene.start('fixWiring')
-//game.scene.start('inspectSample')
-// game.scene.start('stabilizeSteering');
-//game.scene.start('startReactor')
-
-//game.scene.start('preloader');
-//game.scene.start("align_engine_output")
-//game.scene.start('joinGame')
-// game.scene.start('waitingRoom')
-//game.scene.start("ChangeSkin");
 
 /***intro */
 //game.scene.start("introCrew");
