@@ -230,12 +230,15 @@ class Game extends Phaser.Scene {
             0xff0000,
             1
           );
-          this.physics.add.existing(ventObject);
-          // ventObject.
-          // ventObject = this.add.rectangle(object.x, object.y, object.width, object.height, 0xffffff);
-          // ventObject.setFillStyle(0xbfbfbf, 0.5);
-          console.log(ventObject);
 
+          this.physics.add.existing(ventObject);
+          ventObject.body.immovable = true;
+          ventObject.setOrigin(0, 0);
+          var cir = this.add.circle(object.x + object.width * 0.5, object.y + object.height * 0.5, object.width * 0.75, 0xff0000, 0.4);
+          this.physics.add.existing(cir);
+          cir.body.immovable = true;
+          this.physics.add.overlap(player, cir, circleOverlap, null, this);
+          // cir.setOrigin(0, 0);
         default:
           break;
       }
@@ -266,8 +269,6 @@ class Game extends Phaser.Scene {
         otherPlayer[index].stop("player-walk");
       }
     });
-
-    console.log(objectsLayer);
 
     this.socket.on("moveEnd", ({ playerId }) => {
       let index = otherPlayerId.findIndex((Element) => Element == playerId);
@@ -411,6 +412,10 @@ class Game extends Phaser.Scene {
       }
     }
   }
+}
+
+function circleOverlap() {
+  console.log("circle overlapped")
 }
 
 export default Game;
