@@ -16,7 +16,15 @@ import vent3 from  "../assets/img/jump vent/vent3.png";
 import vent4 from  "../assets/img/jump vent/vent4.png";
 import vent5 from  "../assets/img/jump vent/vent5.png";
 import vent6 from  "../assets/img/jump vent/vent6.png";
+import jump1 from  "../assets/img/jump vent/Vent0001.png";
+import jump2 from  "../assets/img/jump vent/vent0002.png";
+import jump3 from  "../assets/img/jump vent/Vent0003.png";
+import jump4 from  "../assets/img/jump vent/Vent0004.png";
+import jump5 from  "../assets/img/jump vent/vent0005.png";
+import jump6 from  "../assets/img/jump vent/Vent0006.png";
+import jump7 from  "../assets/img/jump vent/Vent0007.png";
 import vent_button from "../assets/img/vent_button.png"
+
 import { io } from "socket.io-client";
 import {
   PLAYER_HEIGHT,
@@ -44,8 +52,11 @@ let useButton;
 let current_scene;
 let launch_scene = false;
 let isRole = 0;
-
+let vent_map = new Map()
 let canKill = false;
+let vent_group
+let temp,is_vent=false,is_jump=false,is_hidden=false,keyboard
+let count =0
 class Game extends Phaser.Scene {
   constructor() {
     super({ key: "game" });
@@ -75,6 +86,13 @@ class Game extends Phaser.Scene {
     this.load.image("vent_4", vent4);
     this.load.image("vent_5", vent5);
     this.load.image("vent_6", vent6);
+    this.load.image("jump_1", jump1,36,40);
+    this.load.image("jump_2", jump2,36,40);
+    this.load.image("jump_3", jump3,36,40);
+    this.load.image("jump_4", jump4,36,40);
+    this.load.image("jump_5", jump5,36,40);
+    this.load.image("jump_6", jump6,36,40);
+    this.load.image("jump_7", jump7,36,40);
     this.load.audio("walk", footStep);
     this.load.image("button",vent_button)
     this.load.image(
@@ -87,11 +105,15 @@ class Game extends Phaser.Scene {
     current_scene = this.scene;
     const ship = this.make.tilemap({ key: "tilemap" });
     const tileset = ship.addTilesetImage("theSkeld", "tiles", 17, 17);
-
     const ship_tileset = ship.createLayer("Background", tileset);
 
+   vent_group = this.physics.add.staticGroup({
+      key: 'vent_1',
+      frameQuantity: 14,
+      immovable: true
+  });
     //add use button
-    vent_butt=   this.add.image(1000,700,"button").setScrollFactor(0,0).setInteractive()
+    vent_butt=   this.add.image(1000,700,"button").setScrollFactor(0,0).setInteractive().setAlpha(0.5)
     useButton = this.add
       .image(900, 700, "UseButton")
       .setScrollFactor(0, 0)
@@ -165,7 +187,7 @@ class Game extends Phaser.Scene {
 
     //animation player
 
-   hole= this.anims.create({
+  hole= this.anims.create({
       key: 'hole',
       frames: [{key:'vent_1'},
       {key:'vent_2'},
@@ -185,8 +207,19 @@ class Game extends Phaser.Scene {
   hole.frames[4].frame.y=7
   hole.frames[4].frame.x=3
   hole.frames[5].frame.y=7
-
-
+  let jump= this.anims.create({
+    key: "jump",
+    frames: [{key:'jump_1'},
+    {key:'jump_2'},
+    {key:'jump_3'},
+    {key:'jump_4'},
+    {key:'jump_5'},
+    {key:'jump_6'},
+    {key:'jump_7'}
+    ],
+    frameRate: 6,
+    repeat:0
+  });
     this.anims.create({
       key: "player-walk",
       frames: this.anims.generateFrameNames("playerbase", {
@@ -226,11 +259,13 @@ class Game extends Phaser.Scene {
     this.physics.add.collider(player, ship_tileset);
 
     this.cameras.main.startFollow(player, true);
-
+    this.input.keyboard.enabled
     //tải lại mới khi có player mới vào có các player đã ở trong đó
     console.log(this.textInput);
 
     objectsLayer = ship.getObjectLayer("GameObjects");
+    var children = vent_group.getChildren();
+    let i=0
     objectsLayer.objects.forEach((object) => {
       const { name, x, y, width, height, properties, type } = object;
 
@@ -270,22 +305,51 @@ class Game extends Phaser.Scene {
           ventObject.body.immovable = true;
           ventObject.setOrigin(0, 0);
           var cir = this.add.circle(object.x + object.width * 0.5, object.y + object.height * 0.5, object.width * 0.75, 0xff0000, 0.4);
-         let vent= this.add.sprite(object.x,object.y-10,"vent_1").setOrigin(0,0).setScale(1.2)
+      //   let vent= this.add.sprite(object.x,object.y-10,"vent_1").setOrigin(0,0).setScale(1.2)
+      children[i].setPosition(object.x, object.y-10).setOrigin(0,0).setScale(1.2).setCircle(object.width * 0.75);
+      i++
+    //     vent_map.set(object.name,vent)
           this.physics.add.existing(cir);
           cir.body.immovable = true;
-          cir.body.setCircle(object.width * 0.75)
-          this.physics.add.overlap(player, cir, ()=>{
-            console.log(object.x,object.y)
-            vent_butt.on('pointerdown', function (pointer) {
-                vent.play("hole")
-      
-          })
-          });
+         // cir.body.setCircle(object.width * 0.75)
+        //  this.physics.add.overlap(player, cir,circleOverlap(object.name));
           // cir.setOrigin(0, 0);
         default:
           break;
       }
     });
+    vent_group.refresh()
+    player.on("overlapstart", function() {
+      if(is_vent){
+      vent_butt.alpha=1
+      }
+      });
+      player.on("overlapend", function() {
+      is_vent=false
+      vent_butt.alpha=0.5
+      });
+    this.physics.add.overlap(player,vent_group , circleOverlap);
+ 
+    vent_butt.on('pointerdown', function (pointer) {
+      if(is_vent){
+      temp.play("hole")
+      player.anims.play("jump");
+      is_jump=true
+
+      if(is_hidden==true){
+        is_hidden=false
+
+      }else{
+        is_hidden=true
+        
+      }
+     
+      //player.play("jump",true)
+    }
+      
+    //  temp=null
+     
+    })
 
     this.socket.on("move", ({ x, y, playerId }) => {
       //console.log({ x, y, playerId });
@@ -329,6 +393,30 @@ class Game extends Phaser.Scene {
   }
 
   update() {
+    console.log(is_hidden)
+   // var touching = !player.body.touching.none;
+    var wasTouching = !player.body.wasTouching.none;
+    // If you want 'touching or embedded' then use:
+     var touching = !player.body.touching.none || player.body.embedded;
+    if (touching && !wasTouching) player.emit("overlapstart");
+    else if (!touching && wasTouching) player.emit("overlapend");
+
+    
+     if(is_vent==true&&is_jump==true){
+    count++
+      if(is_hidden==true){
+     
+//is_hidden=false
+      }
+     if(count==40){
+       check(player)
+      is_jump=false
+      count=0
+    }
+     }else if(is_vent==true&&is_jump==false){
+
+      player.anims.play("player-idle");
+     }
     let playerMoved = false;
     player.setVelocity(0);
 
@@ -336,29 +424,31 @@ class Game extends Phaser.Scene {
       !cursors.left.isDown &&
       !cursors.right.isDown &&
       !cursors.up.isDown &&
-      !cursors.down.isDown
+      !cursors.down.isDown&&
+      !is_vent
     ) {
+ //     console.log("outvent")
       player.anims.play("player-idle");
     }
 
-    if (cursors.left.isDown) {
+    if (cursors.left.isDown&&is_hidden==false) {
       player.anims.play("player-walk", true);
       player.setVelocityX(-PLAYER_SPEED);
       player.scaleX = -1;
       player.body.offset.x = 40;
       playerMoved = true;
-    } else if (cursors.right.isDown) {
+    } else if (cursors.right.isDown&&is_hidden==false) {
       player.anims.play("player-walk", true);
       player.setVelocityX(PLAYER_SPEED);
       player.scaleX = 1;
       player.body.offset.x = 0;
       playerMoved = true;
     }
-    if (cursors.up.isDown) {
+    if (cursors.up.isDown&&is_hidden==false) {
       player.anims.play("player-walk", true);
       player.setVelocityY(-PLAYER_SPEED);
       playerMoved = true;
-    } else if (cursors.down.isDown) {
+    } else if (cursors.down.isDown&&is_hidden==false) {
       player.anims.play("player-walk", true);
       player.setVelocityY(PLAYER_SPEED);
       playerMoved = true;
@@ -457,8 +547,19 @@ class Game extends Phaser.Scene {
   }
 }
 
-function circleOverlap() {
-  console.log("circle overlapped")
-}
+function circleOverlap(player,vent) {
+ // console.log(vent)
+temp=vent
+is_vent=true
 
+}
+function check(player){
+  if(is_hidden==true){
+    player.setActive(false).setVisible(false)
+
+  }else{
+
+    player.setActive(true).setVisible(true)
+  }
+  }
 export default Game;
