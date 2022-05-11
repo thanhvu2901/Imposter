@@ -161,7 +161,7 @@ class Game extends Phaser.Scene {
         suffix: ".png",
       }),
       repeat: -1,
-      frameRate: 24,
+      frameRate: 42,
     });
 
     //player death
