@@ -148,6 +148,11 @@ class Game extends Phaser.Scene {
       key: "player-idle",
       frames: [{ key: "playerbase", frame: "idle.png" }],
     });
+    this.anims.create({
+      key: "dead",
+      frames: [{ key: "dead", frame: "dead.png" }],
+
+    });
 
     //animation player
     this.anims.create({
@@ -167,12 +172,13 @@ class Game extends Phaser.Scene {
       key: "player-dead",
       frames: this.anims.generateFrameNames("playerbase", {
         start: 1,
-        end: 42,
+        end: 12,
         prefix: "Dead",
         suffix: ".png",
       }),
       repeat: 1,
       frameRate: 24,
+
     });
     //input to control
     this.input.keyboard.on("keydown", (e) => {
@@ -265,7 +271,7 @@ class Game extends Phaser.Scene {
       }
     });
 
-    console.log(objectsLayer);
+    // console.log(objectsLayer);
 
     this.socket.on("moveEnd", ({ playerId }) => {
       let index = otherPlayerId.findIndex((Element) => Element == playerId);
@@ -292,10 +298,17 @@ class Game extends Phaser.Scene {
       kill.on("pointerdown", function (e) {
         console.log(canKill);
         if (canKill) {
-          playerKilled.anims.play("player-dead");
+          playerKilled.anims.play("player-dead", { repeat: false });
+          //dánh
+          // playerKilled.on('animationcomplete', () => {
+          //   playerKilled.anims.play("dead", true);
+
+          // })
+          // this.socket.emit('killed', (otherPlayerId[indexKill]))
+
           console.log(otherPlayerId[indexKill]) // emit socket id player killed
           console.log('emitted');
-          // canKill = false;
+          canKill = false;
         }
         else {
           console.log('no kill');
@@ -305,6 +318,28 @@ class Game extends Phaser.Scene {
   }
 
   update() {
+    let index = 0
+    for (let other of otherPlayer) {
+      if (
+        Math.abs(Math.floor(player.x) - Math.floor(other.x)) <= 100 &&
+        Math.abs(Math.floor(player.y) - Math.floor(other.y)) <= 100
+      ) {
+        playerKilled = other; //lấy player đứng gần
+        indexKill = index;
+
+        canKill = true;
+        console.log('kill ' + index + "  " + canKill);
+        //console.log(canKill);
+      }
+
+      else {
+        index += 1;
+        canKill = false;
+      }
+      // kill.alpha = 0.5
+    }
+    //canKill = false
+
     let playerMoved = false;
     player.setVelocity(0);
 
@@ -384,29 +419,9 @@ class Game extends Phaser.Scene {
       launch_scene = false;
     }
 
-
-
-
-
     //
 
-    let index = 0
-    for (let other of otherPlayer) {
-      if (
-        Math.abs(Math.floor(player.x) - Math.floor(other.x)) <= 100 &&
-        Math.abs(Math.floor(player.y) - Math.floor(other.y)) <= 100
-      ) {
-        playerKilled = other; //lấy player đứng gần
-        indexKill = index;
 
-        canKill = true;
-        console.log('kill ' + index + "  " + canKill);
-        //console.log(canKill);
-      }
-      index += 1;
-      // kill.alpha = 0.5
-    }
-    //canKill = false
 
   }
 }

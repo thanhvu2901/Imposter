@@ -15,7 +15,7 @@ import useBtn from '../assets/img/useButton.png'
 import closeBtn from '../assets/img/closeButton.png'
 import customizeBtn from '../assets/img/customize.png'
 import startBtn from '../assets/img/startButton.png'
-
+import dead from '../assets/player/Dead.png'
 
 
 
@@ -87,7 +87,7 @@ class Preloader extends Phaser.Scene {
     this.load.image('closeBtn', closeBtn)
     this.load.image('startBtn', startBtn);
     this.load.image('customizeBtn', customizeBtn)
-
+    this.load.image('dead', dead)
     //audio
 
 
