@@ -94,7 +94,7 @@ class Game extends Phaser.Scene {
       //console.log(role);
       // is imposterr
       isRole = role
-      if(isRole==1){
+      if (isRole == 1) {
         kill = this.add
           .image(750, 700, "KillButton")
           .setScrollFactor(0, 0)
@@ -243,7 +243,7 @@ class Game extends Phaser.Scene {
           this.physics.add.existing(cir);
           cir.body.immovable = true;
           this.physics.add.overlap(player, cir, circleOverlap, null, this);
-          // cir.setOrigin(0, 0);
+        // cir.setOrigin(0, 0);
         default:
           break;
       }
