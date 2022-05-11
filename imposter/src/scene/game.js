@@ -13,13 +13,9 @@ import KillButton from "../assets/img/killButton.png";
 
 import { io } from "socket.io-client";
 import {
-  PLAYER_HEIGHT,
-  PLAYER_WIDTH,
-  PLAYER_START_X,
-  PLAYER_START_Y,
   PLAYER_SPEED,
 } from "../consts/constants";
-import MissionKill from "../services/missions/mission_kill";
+
 
 let player;
 let otherPlayer = new Array();
@@ -38,7 +34,8 @@ let useButton;
 let current_scene;
 let launch_scene = false;
 let isRole = 0;
-
+let playerKilled;
+let indexKill = 0;
 let canKill = false;
 class Game extends Phaser.Scene {
   constructor() {
@@ -70,6 +67,12 @@ class Game extends Phaser.Scene {
       "AlignEngineOutput_mission_marked",
       AlignEngineOutput_mission_marked
     );
+    this.socket.emit('whatRole', this.textInput)
+    this.socket.on('roleIs', (role) => {
+      //console.log(role);
+      // is imposterr
+      isRole = role
+    })
   }
 
   create() {
@@ -89,12 +92,7 @@ class Game extends Phaser.Scene {
 
     //add kill button if imposter
 
-    this.socket.emit('whatRole', this.textInput)
-    this.socket.on('roleIs', (role) => {
-      //console.log(role);
-      // is imposterr
-      isRole = role
-    })
+
 
 
 
@@ -173,7 +171,7 @@ class Game extends Phaser.Scene {
         prefix: "Dead",
         suffix: ".png",
       }),
-      repeat: 0,
+      repeat: 1,
       frameRate: 24,
     });
     //input to control
@@ -246,7 +244,7 @@ class Game extends Phaser.Scene {
 
       let index = otherPlayerId.findIndex((Element) => Element == playerId);
       //id = index;
-      console.log(index);
+      // console.log(index);
 
       if (otherPlayer[index].x > x) {
         otherPlayer[index].flipX = true;
@@ -282,6 +280,28 @@ class Game extends Phaser.Scene {
         otherPlayer[index].stop("player-walk");
       }
     });
+
+    if (isRole == 1) {
+      var kill = this.add
+        .image(750, 700, "KillButton")
+        .setScrollFactor(0, 0)
+        .setInteractive()
+      //kill.alpha = 0.5
+
+
+      kill.on("pointerdown", function (e) {
+        console.log(canKill);
+        if (canKill) {
+          playerKilled.anims.play("player-dead");
+          console.log(otherPlayerId[indexKill]) // emit socket id player killed
+          console.log('emitted');
+          // canKill = false;
+        }
+        else {
+          console.log('no kill');
+        }
+      });
+    }
   }
 
   update() {
@@ -369,47 +389,28 @@ class Game extends Phaser.Scene {
 
 
     //
-    if (isRole == 1) {
-      var kill = this.add
-        .image(750, 700, "KillButton")
-        .setScrollFactor(0, 0)
-        .setInteractive()
-      kill.alpha = 0.5
 
+    let index = 0
+    for (let other of otherPlayer) {
+      if (
+        Math.abs(Math.floor(player.x) - Math.floor(other.x)) <= 100 &&
+        Math.abs(Math.floor(player.y) - Math.floor(other.y)) <= 100
+      ) {
+        playerKilled = other; //lấy player đứng gần
+        indexKill = index;
 
-      const killPlayer = new MissionKill(
-        "theSkeld",
-        map_missions,
-        export_missions,
-        this.scene,
-        player.x,
-        player.y,
-        otherPlayer
-      );
-
-      kill.on("pointerup", function (e) {
-        if (canKill) {
-          checkMissionKill.anims.play("player-dead");
-          //die và pop ra khỏi oth
-          // otherPlayer = otherPlayer.filter((player) => {
-          //   return player !== checkMissionKill;
-          // });
-          canKill = false;
-        }
-      });
-
-      let checkMissionKill = killPlayer.check_mission();
-      // console.log(checkMissionKill);
-      if (checkMissionKill) {
-        kill.alpha = 1;
         canKill = true;
-      } else if (!checkMissionKill) {
-        console.log('can not kill');
-        kill.alpha = 0.5;
-        canKill = false;
-
+        console.log('kill ' + index + "  " + canKill);
+        //console.log(canKill);
       }
+      else {
+        canKill = false
+      }
+      index += 1;
+      // kill.alpha = 0.5
     }
+    //canKill = false
+
   }
 }
 

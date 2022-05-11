@@ -1,6 +1,6 @@
 //import mission 
 import AlignEngineOutput from "../services/missions/align_engine_output";
-import KillPlayer from "../services/missions/kill_player";
+
 
 
 class MapMissionsExporter {
@@ -9,34 +9,29 @@ class MapMissionsExporter {
         this.missions = this.missions();
     }
 
-    create()
-    {
+    create() {
         return this.missions[this.map]
     }
 
     //all mission we have defined
-    missions() 
-    {
+    missions() {
         return {
             "theSkeld": {
                 "AlignEngineOutput": AlignEngineOutput,
-                "KillPlayer": KillPlayer
+
             }
         }
-    }  
+    }
     // get all mission of a specific map
-    by_map_name()
-    {
+    by_map_name() {
         return this.missions[this.map]
     }
 
-    completed(mission_name)
-    {
+    completed(mission_name) {
         delete this.missions[this.map][mission_name];
     }
 
-    is_completed(mission_name)
-    {
+    is_completed(mission_name) {
         return this.missions[this.map][mission_name] ? true : false;
     }
 }
