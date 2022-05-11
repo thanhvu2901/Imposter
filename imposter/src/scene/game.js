@@ -403,9 +403,6 @@ class Game extends Phaser.Scene {
         console.log('kill ' + index + "  " + canKill);
         //console.log(canKill);
       }
-      else {
-        canKill = false
-      }
       index += 1;
       // kill.alpha = 0.5
     }
