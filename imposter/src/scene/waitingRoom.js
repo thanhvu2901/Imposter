@@ -15,7 +15,6 @@ let socket, r;
 var objectsLayer;
 let pressedKeys = [];
 let stt = 0
-let playerChangedSkin;
 export default class waitingRoom extends Phaser.Scene {
   constructor() {
     super({
@@ -27,6 +26,8 @@ export default class waitingRoom extends Phaser.Scene {
     this.socket = data.socket;
     this.textInput = data.textInput;
     this.playerChangedSkin= data.playerChangedSkin;
+    this.numberImposter= data.numberImposter;
+    this.numberPlayer= data.numberPlayer
   }
   preload() {
     this.load.image("dropShip", dropShip);
@@ -131,12 +132,16 @@ export default class waitingRoom extends Phaser.Scene {
           // custom by host   *********SETTING input from customize *************
           let imposter = 1;
           let player = 2;
+          // let imposter= this.numberImposter;
+          // let player= this.numberPlayer;
 
 
           let roomId = this.textInput
           this.socket.emit('letgo', ({ roomId, imposter, player }))
           console.log('after click');
-          console.log("changedskin: ", this.playerChangedSkin);
+          // console.log("changedskin: ", this.playerChangedSkin);
+          // console.log("number imposter: ", imposter);
+          // console.log("number player: ", player);
           //this.scene.launch('game', { socket: this.socket, textInput: this.textInput, numPlayers: numPlayers })
         })
       }
