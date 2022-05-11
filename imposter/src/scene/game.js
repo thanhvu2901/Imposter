@@ -303,6 +303,7 @@ class Game extends Phaser.Scene {
         console.log(canKill);
         if (canKill) {
           playerKilled.anims.play("player-dead", { repeat: false });
+          otherPlayer = otherPlayer.filter(player => { return player !== playerKilled });
           //dánh
           // playerKilled.on('animationcomplete', () => {
           //   playerKilled.anims.play("dead", true);
@@ -320,6 +321,7 @@ class Game extends Phaser.Scene {
       });
 
       let index = 0
+
       for (let other of otherPlayer) {
         if (
           Math.abs(Math.floor(player.x) - Math.floor(other.x)) <= 100 &&
@@ -330,16 +332,15 @@ class Game extends Phaser.Scene {
 
           canKill = true;
           console.log('kill ' + index + "  " + canKill);
-          //console.log(canKill);
+          break
         }
-        if (playerKilled) {
-          kill.alpha = 1;
-          canKill = true;
-        } else if (!playerKilled) {
-          kill.alpha = 0.5;
-          canKill = false;
-        } index += 1;
+
+        index += 1;
+
         // kill.alpha = 0.5
+      }
+      if (index === otherPlayer.length) {
+        canKill = false;
       }
     }
     //canKill = false
