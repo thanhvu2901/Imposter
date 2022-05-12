@@ -12,10 +12,7 @@ import AlignEngineOutput_mission_marked from "../assets/tasks/Align Engine Outpu
 import KillButton from "../assets/img/killButton.png";
 
 import { io } from "socket.io-client";
-import {
-  PLAYER_SPEED,
-} from "../consts/constants";
-
+import { PLAYER_SPEED } from "../consts/constants";
 
 let player;
 let otherPlayer = new Array();
@@ -38,6 +35,7 @@ let playerKilled;
 let indexKill = 0;
 let canKill = false;
 let alive = true;
+let kill;
 class Game extends Phaser.Scene {
   constructor() {
     super({ key: "game" });
@@ -68,12 +66,12 @@ class Game extends Phaser.Scene {
       "AlignEngineOutput_mission_marked",
       AlignEngineOutput_mission_marked
     );
-    this.socket.emit('whatRole', this.textInput)
-    this.socket.on('roleIs', (role) => {
+    this.socket.emit("whatRole", this.textInput);
+    this.socket.on("roleIs", (role) => {
       //console.log(role);
       // is imposterr
-      isRole = role
-    })
+      isRole = role;
+    });
   }
 
   create() {
@@ -93,9 +91,13 @@ class Game extends Phaser.Scene {
     useButton.alpha = 0.5;
 
     //add kill button if imposter
-
-
-
+    if (isRole == 1) {
+      kill = this.add
+        .image(750, 700, "KillButton")
+        .setScrollFactor(0, 0)
+        .setInteractive();
+      kill.alpha = 0.5;
+    }
 
     //initialize missions of this map
     map_missions = new MapMissionsExporter("theSkeld");
@@ -150,7 +152,6 @@ class Game extends Phaser.Scene {
     this.anims.create({
       key: "dead",
       frames: [{ key: "dead", frame: "dead.png" }],
-
     });
 
     //animation player
@@ -177,7 +178,6 @@ class Game extends Phaser.Scene {
       }),
       repeat: 1,
       frameRate: 24,
-
     });
     //input to control
     this.input.keyboard.on("keydown", (e) => {
@@ -237,7 +237,13 @@ class Game extends Phaser.Scene {
           this.physics.add.existing(ventObject);
           ventObject.body.immovable = true;
           ventObject.setOrigin(0, 0);
-          var cir = this.add.circle(object.x + object.width * 0.5, object.y + object.height * 0.5, object.width * 0.75, 0xff0000, 0.4);
+          var cir = this.add.circle(
+            object.x + object.width * 0.5,
+            object.y + object.height * 0.5,
+            object.width * 0.75,
+            0xff0000,
+            0.4
+          );
           this.physics.add.existing(cir);
           cir.body.immovable = true;
           this.physics.add.overlap(player, cir, circleOverlap, null, this);
@@ -290,55 +296,43 @@ class Game extends Phaser.Scene {
     });
 
     //update if killed
-    this.socket.on('updateOtherPlayer', (playerId) => {
+    this.socket.on("updateOtherPlayer", (playerId) => {
       console.log(this.socket.id);
       console.log(playerId);
       if (this.socket.id == playerId) {
         //run noitice died
-        console.log('this player killed');
+        console.log("this player killed");
         //player.stop("player-idle")
         alive = false;
 
         player.anims.play("player-dead");
-
-      }
-      else {
+      } else {
         let index = otherPlayerId.findIndex((Element) => Element == playerId);
         otherPlayer[index].anims.play("player-dead", true);
       }
-
-    })
-
+    });
   }
 
   update() {
     if (isRole == 1) {
-      var kill = this.add
-        .image(750, 700, "KillButton")
-        .setScrollFactor(0, 0)
-        .setInteractive()
-      kill.alpha = 0.5
-
-
       kill.on("pointerdown", () => {
         //console.log();
 
         if (canKill) {
-          this.sound.play('killAudio', false)
+          this.sound.play("killAudio", false);
           playerKilled.anims.play("player-dead", { repeat: false });
-          this.socket.emit('killed', (otherPlayerId[indexKill]))
-          //  otherPlayer = otherPlayer.filter(player => { return player !== playerKilled });
+          this.socket.emit("killed", otherPlayerId[indexKill]);
+           otherPlayer = otherPlayer.filter(player => { return player !== playerKilled });
 
-          console.log(otherPlayerId[indexKill]) // emit socket id player killed
-          console.log('emitted');
+          console.log(otherPlayerId[indexKill]); // emit socket id player killed
+          console.log("emitted");
           canKill = false;
-        }
-        else {
-          console.log('no kill');
+        } else {
+          console.log("no kill");
         }
       });
 
-      let index = 0
+      let index = 0;
 
       for (let other of otherPlayer) {
         if (
@@ -347,18 +341,15 @@ class Game extends Phaser.Scene {
         ) {
           playerKilled = other; //lấy player đứng gần
           indexKill = index;
-
+          kill.alpha = 1;
           canKill = true;
-          console.log('kill ' + index + "  " + canKill);
-          break
+          break;
         }
-
         index += 1;
-
-        // kill.alpha = 0.5
       }
       if (index === otherPlayer.length) {
         canKill = false;
+        kill.alpha= 0.5;
       }
     }
     //canKill = false
@@ -372,7 +363,6 @@ class Game extends Phaser.Scene {
         !cursors.up.isDown &&
         !cursors.down.isDown
       ) {
-
         player.anims.play("player-idle");
       }
 
@@ -444,14 +434,11 @@ class Game extends Phaser.Scene {
     }
 
     //
-
-
-
   }
 }
 
 function circleOverlap() {
-  console.log("circle overlapped")
+  console.log("circle overlapped");
 }
 
 export default Game;
