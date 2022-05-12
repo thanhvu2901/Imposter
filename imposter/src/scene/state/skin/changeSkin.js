@@ -179,13 +179,13 @@ class ChangeSkin extends Phaser.Scene {
       "gameobjectdown",
       function (pointer, gameObject, deltaX, deltaY, deltaZ) {
         if (gameObject === hatText) {
-          basePlayer.visible=true;
-          player.visible=true;
-          if(hatChosen){
-            hatChosen.visible= true;
+          basePlayer.visible = true;
+          player.visible = true;
+          if (hatChosen) {
+            hatChosen.visible = true;
           }
-          if(trouserChosen){
-            trouserChosen.visible= true;
+          if (trouserChosen) {
+            trouserChosen.visible = true;
           }
           groupTrousersBackground.clear(true, true);
           groupTrousers.clear(true, true);
@@ -220,13 +220,13 @@ class ChangeSkin extends Phaser.Scene {
           }
           // let boundaryImages = current_object.add.tileSprite(300, 300, "groupHats");
         } else if (gameObject === skinText) {
-          basePlayer.visible=true;
-          player.visible=true;
-          if(hatChosen){
-            hatChosen.visible= true;
+          basePlayer.visible = true;
+          player.visible = true;
+          if (hatChosen) {
+            hatChosen.visible = true;
           }
-          if(trouserChosen){
-            trouserChosen.visible= true;
+          if (trouserChosen) {
+            trouserChosen.visible = true;
           }
           groupHatsBackground.clear(true, true);
           groupHats.clear(true, true);
@@ -266,13 +266,13 @@ class ChangeSkin extends Phaser.Scene {
           }
           // let boundaryImages = current_object.add.tileSprite(300, 300, "groupHats");
         } else if (gameObject === petText) {
-          basePlayer.visible=true;
-          player.visible=true;
-          if(hatChosen){
-            hatChosen.visible= true;
+          basePlayer.visible = true;
+          player.visible = true;
+          if (hatChosen) {
+            hatChosen.visible = true;
           }
-          if(trouserChosen){
-            trouserChosen.visible= true;
+          if (trouserChosen) {
+            trouserChosen.visible = true;
           }
           groupHatsBackground.clear(true, true);
           groupHats.clear(true, true);
@@ -306,13 +306,14 @@ class ChangeSkin extends Phaser.Scene {
             }
           }
         } else if (gameObject === gameText) {
-          basePlayer.visible=false;
-          player.visible=false;
-          if(hatChosen){
-            hatChosen.visible= false;
+          console.log('game customs');
+          basePlayer.visible = false;
+          player.visible = false;
+          if (hatChosen) {
+            hatChosen.visible = false;
           }
-          if(trouserChosen){
-            trouserChosen.visible= false;
+          if (trouserChosen) {
+            trouserChosen.visible = false;
           }
           groupHatsBackground.clear(true, true);
           groupHats.clear(true, true);
@@ -371,11 +372,11 @@ class ChangeSkin extends Phaser.Scene {
           groupGame.add(current_object.add.text(300, 320, "# Players", {
             font: "27px atari",
           }))
-          numberImposerText= current_object.add.text(610, 265, `${numberImposter}`, {
+          numberImposerText = current_object.add.text(610, 265, `${numberImposter}`, {
             font: "27px atari",
           });
           groupGame.add(numberImposerText)
-          numberPlayerText= current_object.add.text(610, 320, `${numberPlayer}`, {
+          numberPlayerText = current_object.add.text(610, 320, `${numberPlayer}`, {
             font: "27px atari",
           });
           groupGame.add(numberPlayerText)
@@ -444,24 +445,24 @@ class ChangeSkin extends Phaser.Scene {
           }
           numberImposerText.destroy();
           numberPlayerText.destroy();
-          numberImposerText= current_object.add.text(610, 265, `${numberImposter}`, {
+          numberImposerText = current_object.add.text(610, 265, `${numberImposter}`, {
             font: "27px atari",
           });
-          numberPlayerText= current_object.add.text(610, 320, `${numberPlayer}`, {
+          numberPlayerText = current_object.add.text(610, 320, `${numberPlayer}`, {
             font: "27px atari",
           });
         }
         if (gameObject === plusImposterIcon) {
           if (numberImposter === 1) {
             numberImposter = 2;
-            numberPlayer=8;
+            numberPlayer = 8;
           }
           numberImposerText.destroy();
           numberPlayerText.destroy();
-          numberImposerText= current_object.add.text(610, 265, `${numberImposter}`, {
+          numberImposerText = current_object.add.text(610, 265, `${numberImposter}`, {
             font: "27px atari",
           });
-          numberPlayerText= current_object.add.text(610, 320, `${numberPlayer}`, {
+          numberPlayerText = current_object.add.text(610, 320, `${numberPlayer}`, {
             font: "27px atari",
           });
         }
@@ -477,10 +478,10 @@ class ChangeSkin extends Phaser.Scene {
           }
           numberImposerText.destroy();
           numberPlayerText.destroy();
-          numberImposerText= current_object.add.text(610, 265, `${numberImposter}`, {
+          numberImposerText = current_object.add.text(610, 265, `${numberImposter}`, {
             font: "27px atari",
           });
-          numberPlayerText= current_object.add.text(610, 320, `${numberPlayer}`, {
+          numberPlayerText = current_object.add.text(610, 320, `${numberPlayer}`, {
             font: "27px atari",
           });
         }
@@ -496,10 +497,10 @@ class ChangeSkin extends Phaser.Scene {
           }
           numberImposerText.destroy();
           numberPlayerText.destroy();
-          numberImposerText= current_object.add.text(610, 265, `${numberImposter}`, {
+          numberImposerText = current_object.add.text(610, 265, `${numberImposter}`, {
             font: "27px atari",
           });
-          numberPlayerText= current_object.add.text(610, 320, `${numberPlayer}`, {
+          numberPlayerText = current_object.add.text(610, 320, `${numberPlayer}`, {
             font: "27px atari",
           });
         }

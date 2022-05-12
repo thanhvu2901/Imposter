@@ -163,7 +163,7 @@ class Game extends Phaser.Scene {
         suffix: ".png",
       }),
       repeat: -1,
-      frameRate: 42,
+      frameRate: 32,
     });
 
     //player death
@@ -175,7 +175,7 @@ class Game extends Phaser.Scene {
         prefix: "Dead",
         suffix: ".png",
       }),
-      repeat: 1,
+      repeat: 0,
       frameRate: 24,
 
     });
@@ -325,7 +325,7 @@ class Game extends Phaser.Scene {
 
         if (canKill) {
           this.sound.play('killAudio', false)
-          playerKilled.anims.play("player-dead", { repeat: false });
+          playerKilled.anims.play("player-dead", true);
           this.socket.emit('killed', (otherPlayerId[indexKill]))
           //  otherPlayer = otherPlayer.filter(player => { return player !== playerKilled });
 
@@ -444,9 +444,6 @@ class Game extends Phaser.Scene {
     }
 
     //
-
-
-
   }
 }
 

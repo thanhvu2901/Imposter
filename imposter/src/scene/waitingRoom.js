@@ -25,9 +25,9 @@ export default class waitingRoom extends Phaser.Scene {
   init(data) {
     this.socket = data.socket;
     this.textInput = data.textInput;
-    this.playerChangedSkin= data.playerChangedSkin;
-    this.numberImposter= data.numberImposter;
-    this.numberPlayer= data.numberPlayer
+    this.playerChangedSkin = data.playerChangedSkin;
+    this.numberImposter = data.numberImposter;
+    this.numberPlayer = data.numberPlayer
   }
   preload() {
     this.load.image("dropShip", dropShip);
@@ -57,8 +57,8 @@ export default class waitingRoom extends Phaser.Scene {
 
     for (let i = 0; i < otherPlayerId.length; i++) {
       otherPlayer[i] = this.physics.add.sprite(
-        -45 + 2 * i,
-        26 + 2 * i,
+        -45 + 10 * i,
+        26 + 10 * i,
         "playerbase",
         "idle.png"
       );
@@ -130,8 +130,8 @@ export default class waitingRoom extends Phaser.Scene {
         start.on('pointerdown', () => {
 
           // custom by host   *********SETTING input from customize *************
-          let imposter = 1;
-          let player = 2;
+          let imposter = this.numberImposter;
+          let player = this.numberPlayer;
           // let imposter= this.numberImposter;
           // let player= this.numberPlayer;
 
@@ -163,7 +163,7 @@ export default class waitingRoom extends Phaser.Scene {
           stt = stt + 1;
         }
       }
-      console.log(otherPlayerId);
+      // console.log(otherPlayerId);
     });
 
     this.socket.on("newPlayer", ({ playerInfo, numPlayers }) => {
@@ -171,8 +171,8 @@ export default class waitingRoom extends Phaser.Scene {
       otherPlayerId.push(playerInfo.playerId);
       console.log(otherPlayerId);
       otherPlayer[stt] = this.physics.add.sprite(
-        -40 + 2 * stt,
-        30 + 2 * stt,
+        -40 + 10 * stt,
+        30 + 10 * stt,
         "playerbase",
         "idle.png"
       );
@@ -227,7 +227,7 @@ export default class waitingRoom extends Phaser.Scene {
     customize.on('pointerdown', () => {
       // this.input.on('pointerdown', () => this.scene.start('ChangeSkin'))
       this.scene.pause("waitingRoom");
-      this.scene.launch("ChangeSkin", {socket: this.socket, textInput: this.textInput});
+      this.scene.launch("ChangeSkin", { socket: this.socket, textInput: this.textInput });
       this.scene.bringToTop('ChangeSkin')
     })
 
