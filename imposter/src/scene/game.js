@@ -37,6 +37,7 @@ let isRole = 0;
 let playerKilled;
 let indexKill = 0;
 let canKill = false;
+let alive = true;
 class Game extends Phaser.Scene {
   constructor() {
     super({ key: "game" });
@@ -82,6 +83,7 @@ class Game extends Phaser.Scene {
 
     const ship_tileset = ship.createLayer("Background", tileset);
 
+    const socket = this.socket;
     //add use button
     useButton = this.add
       .image(900, 700, "UseButton")
@@ -287,6 +289,25 @@ class Game extends Phaser.Scene {
       }
     });
 
+    //update if killed
+    this.socket.on('updateOtherPlayer', (playerId) => {
+      console.log(this.socket.id);
+      console.log(playerId);
+      if (this.socket.id == playerId) {
+        //run noitice died
+        console.log('this player killed');
+        //player.stop("player-idle")
+        alive = false;
+        player.anims.play("player-dead");
+
+
+      }
+      else {
+        let index = otherPlayerId.findIndex((Element) => Element == playerId);
+        otherPlayer[index].anims.play("player-dead", true);
+      }
+
+    })
 
   }
 
@@ -299,17 +320,13 @@ class Game extends Phaser.Scene {
       kill.alpha = 0.5
 
 
-      kill.on("pointerdown", function (e) {
-        console.log(canKill);
+      kill.on("pointerdown", () => {
+        //console.log();
+
         if (canKill) {
           playerKilled.anims.play("player-dead", { repeat: false });
-          otherPlayer = otherPlayer.filter(player => { return player !== playerKilled });
-          //dánh
-          // playerKilled.on('animationcomplete', () => {
-          //   playerKilled.anims.play("dead", true);
-
-          // })
-          // this.socket.emit('killed', (otherPlayerId[indexKill]))
+          this.socket.emit('killed', (otherPlayerId[indexKill]))
+          //  otherPlayer = otherPlayer.filter(player => { return player !== playerKilled });
 
           console.log(otherPlayerId[indexKill]) // emit socket id player killed
           console.log('emitted');
@@ -344,56 +361,56 @@ class Game extends Phaser.Scene {
       }
     }
     //canKill = false
+    if (alive == true) {
+      let playerMoved = false;
+      player.setVelocity(0);
 
-    let playerMoved = false;
-    player.setVelocity(0);
-
-    if (
-      !cursors.left.isDown &&
-      !cursors.right.isDown &&
-      !cursors.up.isDown &&
-      !cursors.down.isDown
-    ) {
-      player.anims.play("player-idle");
-    }
-
-    if (cursors.left.isDown) {
-      player.anims.play("player-walk", true);
-      player.setVelocityX(-PLAYER_SPEED);
-      player.scaleX = -1;
-      player.body.offset.x = 40;
-      playerMoved = true;
-    } else if (cursors.right.isDown) {
-      player.anims.play("player-walk", true);
-      player.setVelocityX(PLAYER_SPEED);
-      player.scaleX = 1;
-      player.body.offset.x = 0;
-      playerMoved = true;
-    }
-    if (cursors.up.isDown) {
-      player.anims.play("player-walk", true);
-      player.setVelocityY(-PLAYER_SPEED);
-      playerMoved = true;
-    } else if (cursors.down.isDown) {
-      player.anims.play("player-walk", true);
-      player.setVelocityY(PLAYER_SPEED);
-      playerMoved = true;
-    }
-
-    if (playerMoved) {
-      this.socket.emit("move", {
-        x: player.x,
-        y: player.y,
-        roomId: this.state.roomKey,
-      });
-      player.movedLastFrame = true;
-    } else {
-      if (player.movedLastFrame) {
-        this.socket.emit("moveEnd", { roomId: this.state.roomKey });
+      if (
+        !cursors.left.isDown &&
+        !cursors.right.isDown &&
+        !cursors.up.isDown &&
+        !cursors.down.isDown
+      ) {
+        player.anims.play("player-idle");
       }
-      player.movedLastFrame = false;
-    }
 
+      if (cursors.left.isDown) {
+        player.anims.play("player-walk", true);
+        player.setVelocityX(-PLAYER_SPEED);
+        player.scaleX = -1;
+        player.body.offset.x = 40;
+        playerMoved = true;
+      } else if (cursors.right.isDown) {
+        player.anims.play("player-walk", true);
+        player.setVelocityX(PLAYER_SPEED);
+        player.scaleX = 1;
+        player.body.offset.x = 0;
+        playerMoved = true;
+      }
+      if (cursors.up.isDown) {
+        player.anims.play("player-walk", true);
+        player.setVelocityY(-PLAYER_SPEED);
+        playerMoved = true;
+      } else if (cursors.down.isDown) {
+        player.anims.play("player-walk", true);
+        player.setVelocityY(PLAYER_SPEED);
+        playerMoved = true;
+      }
+
+      if (playerMoved) {
+        this.socket.emit("move", {
+          x: player.x,
+          y: player.y,
+          roomId: this.state.roomKey,
+        });
+        player.movedLastFrame = true;
+      } else {
+        if (player.movedLastFrame) {
+          this.socket.emit("moveEnd", { roomId: this.state.roomKey });
+        }
+        player.movedLastFrame = false;
+      }
+    }
 
     const mission = new Mission(
       "theSkeld",
