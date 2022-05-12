@@ -298,8 +298,8 @@ class Game extends Phaser.Scene {
         console.log('this player killed');
         //player.stop("player-idle")
         alive = false;
-        player.anims.play("player-dead");
 
+        player.anims.play("player-dead");
 
       }
       else {
@@ -324,6 +324,7 @@ class Game extends Phaser.Scene {
         //console.log();
 
         if (canKill) {
+          this.sound.play('killAudio', false)
           playerKilled.anims.play("player-dead", { repeat: false });
           this.socket.emit('killed', (otherPlayerId[indexKill]))
           //  otherPlayer = otherPlayer.filter(player => { return player !== playerKilled });
@@ -371,6 +372,7 @@ class Game extends Phaser.Scene {
         !cursors.up.isDown &&
         !cursors.down.isDown
       ) {
+
         player.anims.play("player-idle");
       }
 

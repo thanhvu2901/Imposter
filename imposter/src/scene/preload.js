@@ -16,9 +16,7 @@ import closeBtn from '../assets/img/closeButton.png'
 import customizeBtn from '../assets/img/customize.png'
 import startBtn from '../assets/img/startButton.png'
 import dead from '../assets/player/Dead.png'
-
-
-
+import killAudio from '../assets/audio/kill/impostor_kill.wav'
 
 import SubMenu from "./submenu";
 
@@ -88,7 +86,9 @@ class Preloader extends Phaser.Scene {
     this.load.image('startBtn', startBtn);
     this.load.image('customizeBtn', customizeBtn)
     this.load.image('dead', dead)
+
     //audio
+    this.load.audio('killAudio', killAudio)
 
 
 
