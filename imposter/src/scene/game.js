@@ -24,7 +24,7 @@ import jump5 from  "../assets/img/jump vent/vent0005.png";
 import jump6 from  "../assets/img/jump vent/Vent0006.png";
 import jump7 from  "../assets/img/jump vent/Vent0007.png";
 import vent_button from "../assets/img/vent_button.png"
-
+import arrow from  "../assets/img/arrow.png"
 import { io } from "socket.io-client";
 import {
   PLAYER_HEIGHT,
@@ -54,7 +54,7 @@ let launch_scene = false;
 let isRole = 0;
 let vent_map = new Map()
 let canKill = false;
-let vent_group
+let vent_group,arrow_group,vent_cord=new Map(),vent_des=new Map()
 let temp,is_vent=false,is_jump=false,is_hidden=false,keyboard
 let count =0
 class Game extends Phaser.Scene {
@@ -95,6 +95,7 @@ class Game extends Phaser.Scene {
     this.load.image("jump_7", jump7,36,40);
     this.load.audio("walk", footStep);
     this.load.image("button",vent_button)
+    this.load.image("arrow",arrow)
     this.load.image(
       "AlignEngineOutput_mission_marked",
       AlignEngineOutput_mission_marked
@@ -112,6 +113,11 @@ class Game extends Phaser.Scene {
       frameQuantity: 14,
       immovable: true
   });
+  arrow_group = this.physics.add.staticGroup({
+    key: 'arrow',
+    frameQuantity: 15,
+    immovable: true
+});
     //add use button
     vent_butt=   this.add.image(1000,700,"button").setScrollFactor(0,0).setInteractive().setAlpha(0.5)
     useButton = this.add
@@ -143,7 +149,7 @@ class Game extends Phaser.Scene {
     // debugDraw(ship_tileset, this);
 
     //add player
-    player = this.physics.add.sprite(115, -700, "playerbase", "idle.png");
+    player = this.physics.add.sprite(-1528, 85, "playerbase", "idle.png");
 
     if (current_x && current_y) {
       map_missions.completed(mission_name);
@@ -265,7 +271,15 @@ class Game extends Phaser.Scene {
 
     objectsLayer = ship.getObjectLayer("GameObjects");
     var children = vent_group.getChildren();
-    let i=0
+    var children_1=arrow_group.getChildren()
+    let i=0,j=0
+    objectsLayer.objects.forEach((object) => {
+      if(object.type=="vent"){
+      
+        vent_cord.set(object.name,[object.x,object.y])
+        vent_des.set(object.name,[])
+      }
+          })
     objectsLayer.objects.forEach((object) => {
       const { name, x, y, width, height, properties, type } = object;
 
@@ -291,34 +305,51 @@ class Game extends Phaser.Scene {
           this.physics.add.collider(player, tableObject);
           break;
         case "vent":
-          ventObject = new Phaser.GameObjects.Rectangle(
-            this,
-            object.x,
-            object.y,
-            object.width,
-            object.height,
-            0xff0000,
-            1
-          );
+          // ventObject = new Phaser.GameObjects.Rectangle(
+          //   this,
+          //   object.x,
+          //   object.y,
+          //   object.width,
+          //   object.height,
+          //   0xff0000,
+          //   1
+          // );
 
-          this.physics.add.existing(ventObject);
-          ventObject.body.immovable = true;
-          ventObject.setOrigin(0, 0);
-          var cir = this.add.circle(object.x + object.width * 0.5, object.y + object.height * 0.5, object.width * 0.75, 0xff0000, 0.4);
+     //     this.physics.add.existing(ventObject);
+     //     ventObject.body.immovable = true;
+    //      ventObject.setOrigin(0, 0);
+     //     var cir = this.add.circle(object.x + object.width * 0.5, object.y + object.height * 0.5, object.width * 0.75, 0xff0000, 0.4);
       //   let vent= this.add.sprite(object.x,object.y-10,"vent_1").setOrigin(0,0).setScale(1.2)
       children[i].setPosition(object.x, object.y-10).setOrigin(0,0).setScale(1.2).setCircle(object.width * 0.75);
+   
       i++
     //     vent_map.set(object.name,vent)
-          this.physics.add.existing(cir);
-          cir.body.immovable = true;
+      //    this.physics.add.existing(cir);
+     //     cir.body.immovable = true;
          // cir.body.setCircle(object.width * 0.75)
         //  this.physics.add.overlap(player, cir,circleOverlap(object.name));
           // cir.setOrigin(0, 0);
+          break;
+          case "arrow":
+      
+          console.log(object.name.split(" ")[1])
+            children_1[j].setPosition(object.x, object.y).setScale(0.4).setAngle(object.rotation).setOrigin(0,1).setInteractive().on('pointerdown',()=>{
+
+              player.x=vent_cord.get(object.name.split(" ")[0])[0]
+              player.y=vent_cord.get(object.name.split(" ")[0])[1]
+          })
+         
+            j++
+            break
         default:
           break;
       }
     });
     vent_group.refresh()
+    arrow_group.refresh()
+    console.log(vent_cord)
+ 
+
     player.on("overlapstart", function() {
       if(is_vent){
       vent_butt.alpha=1
@@ -338,10 +369,10 @@ class Game extends Phaser.Scene {
 
       if(is_hidden==true){
         is_hidden=false
-
+        arrow_group.setVisible(false)
       }else{
         is_hidden=true
-        
+        arrow_group.setVisible(true)
       }
      
       //player.play("jump",true)
@@ -538,7 +569,7 @@ class Game extends Phaser.Scene {
         kill.alpha = 1;
         canKill = true;
       } else if (!checkMissionKill) {
-        console.log('can not kill');
+       // console.log('can not kill');
         kill.alpha = 0.5;
         canKill = false;
 
@@ -551,7 +582,10 @@ function circleOverlap(player,vent) {
  // console.log(vent)
 temp=vent
 is_vent=true
-
+console.log(getKey([vent.x,vent.y+10])[0],vent.x,vent.y+10)
+}
+function getKey(val) {
+  return [...vent_cord].find(([key, value]) => JSON.stringify(val) === JSON.stringify(value));
 }
 function check(player){
   if(is_hidden==true){
