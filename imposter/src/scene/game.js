@@ -55,7 +55,7 @@ let isRole = 0;
 let vent_map = new Map()
 let canKill = false;
 let vent_group,arrow_group,vent_cord=new Map(),vent_des=new Map()
-let temp,is_vent=false,is_jump=false,is_hidden=false,keyboard
+let temp,key,is_vent=false,is_jump=false,is_hidden=false,keyboard
 let count =0
 class Game extends Phaser.Scene {
   constructor() {
@@ -108,15 +108,16 @@ class Game extends Phaser.Scene {
     const tileset = ship.addTilesetImage("theSkeld", "tiles", 17, 17);
     const ship_tileset = ship.createLayer("Background", tileset);
 
+//khởi tạo nhóm các vent 
    vent_group = this.physics.add.staticGroup({
       key: 'vent_1',
       frameQuantity: 14,
       immovable: true
   });
-  arrow_group = this.physics.add.staticGroup({
+//khởi tạo nhóm các arrow
+  arrow_group = this.add.group({
     key: 'arrow',
-    frameQuantity: 15,
-    immovable: true
+    frameQuantity: 70
 });
     //add use button
     vent_butt=   this.add.image(1000,700,"button").setScrollFactor(0,0).setInteractive().setAlpha(0.5)
@@ -135,11 +136,6 @@ class Game extends Phaser.Scene {
       // is imposterr
       isRole = role
     })
-
-
-
-
-
     //initialize missions of this map
     map_missions = new MapMissionsExporter("theSkeld");
     export_missions = map_missions.create();
@@ -191,9 +187,8 @@ class Game extends Phaser.Scene {
       frames: [{ key: "playerbase", frame: "idle.png" }],
     });
 
-    //animation player
-
-  hole= this.anims.create({
+    //tạo animation cho vent
+    hole= this.anims.create({
       key: 'hole',
       frames: [{key:'vent_1'},
       {key:'vent_2'},
@@ -206,26 +201,29 @@ class Game extends Phaser.Scene {
       frameRate:23 ,
       repeat:0
   });
-  hole.frames[0].frame.y=8
-  //hole.frames[1].frame.x=11
-  hole.frames[2].frame.y=3.5
-  hole.frames[3].frame.y=7
-  hole.frames[4].frame.y=7
-  hole.frames[4].frame.x=3
-  hole.frames[5].frame.y=7
-  let jump= this.anims.create({
-    key: "jump",
-    frames: [{key:'jump_1'},
-    {key:'jump_2'},
-    {key:'jump_3'},
-    {key:'jump_4'},
-    {key:'jump_5'},
-    {key:'jump_6'},
-    {key:'jump_7'}
-    ],
-    frameRate: 6,
-    repeat:0
-  });
+    //chỉnh vị trí từng frame trong animation cho phù hợp
+    hole.frames[0].frame.y=8
+    //hole.frames[1].frame.x=11
+    hole.frames[2].frame.y=3.5
+    hole.frames[3].frame.y=7
+    hole.frames[4].frame.y=7
+    hole.frames[4].frame.x=3
+    hole.frames[5].frame.y=7
+    //animation player nhảy vent
+    let jump= this.anims.create({
+      key: "jump",
+      frames: [{key:'jump_1'},
+      {key:'jump_2'},
+      {key:'jump_3'},
+      {key:'jump_4'},
+      {key:'jump_5'},
+      {key:'jump_6'},
+      {key:'jump_7'}
+      ],
+      frameRate: 6,
+      repeat:0
+    });
+    //animation player
     this.anims.create({
       key: "player-walk",
       frames: this.anims.generateFrameNames("playerbase", {
@@ -268,18 +266,22 @@ class Game extends Phaser.Scene {
     this.input.keyboard.enabled
     //tải lại mới khi có player mới vào có các player đã ở trong đó
     console.log(this.textInput);
-
+    //các function liên quan đến objectlayer
     objectsLayer = ship.getObjectLayer("GameObjects");
-    var children = vent_group.getChildren();
-    var children_1=arrow_group.getChildren()
-    let i=0,j=0
+    //khởi tạo hashmap cho vent và arrow
     objectsLayer.objects.forEach((object) => {
       if(object.type=="vent"){
-      
+      //hash map cho vent sẽ có dạng ( vent_1,2,3, [vent.x, vent.y]) nghĩa là mỗi key là string vent sẽ có value là tọa dộ x y của vent trên map
         vent_cord.set(object.name,[object.x,object.y])
+      // hash map cho arrow để player di chuyển vent sẽ dạng là (vent,[arrow1,arrow2....]) nghĩa là mỗi key là string vent hiện tại sẽ có value là các arrow của vent đó
         vent_des.set(object.name,[])
       }
           })
+//lẩy mảng từ group các sprite
+     let children=vent_group.getChildren()
+     let children_1=arrow_group.getChildren()
+     let i=0,j=0
+    //khởi tạo object layer để gán sprite hoặc tạo vật cản cho player      
     objectsLayer.objects.forEach((object) => {
       const { name, x, y, width, height, properties, type } = object;
 
@@ -305,40 +307,27 @@ class Game extends Phaser.Scene {
           this.physics.add.collider(player, tableObject);
           break;
         case "vent":
-          // ventObject = new Phaser.GameObjects.Rectangle(
-          //   this,
-          //   object.x,
-          //   object.y,
-          //   object.width,
-          //   object.height,
-          //   0xff0000,
-          //   1
-          // );
-
-     //     this.physics.add.existing(ventObject);
-     //     ventObject.body.immovable = true;
-    //      ventObject.setOrigin(0, 0);
-     //     var cir = this.add.circle(object.x + object.width * 0.5, object.y + object.height * 0.5, object.width * 0.75, 0xff0000, 0.4);
-      //   let vent= this.add.sprite(object.x,object.y-10,"vent_1").setOrigin(0,0).setScale(1.2)
-      children[i].setPosition(object.x, object.y-10).setOrigin(0,0).setScale(1.2).setCircle(object.width * 0.75);
-   
+            //gán vị trí cho từng phần tử con của group vent 
+      children[i].setPosition(object.x, object.y-10).setOrigin(0,0).setScale(1.2)
       i++
-    //     vent_map.set(object.name,vent)
-      //    this.physics.add.existing(cir);
-     //     cir.body.immovable = true;
-         // cir.body.setCircle(object.width * 0.75)
-        //  this.physics.add.overlap(player, cir,circleOverlap(object.name));
-          // cir.setOrigin(0, 0);
           break;
           case "arrow":
       
-          console.log(object.name.split(" ")[1])
+         // console.log(object.name.split(" ")[1])
+         //gán vị trí cho từng phần tử con của group arrow// set angle với mục đích là xoay mũi tên tới vent gần nhất dựa vào propeties rotation của object trong Tiled
+         // sau đó gán interactive cho arrow để thực hiện di chuyển player tới vent gần nhất
             children_1[j].setPosition(object.x, object.y).setScale(0.4).setAngle(object.rotation).setOrigin(0,1).setInteractive().on('pointerdown',()=>{
-
-              player.x=vent_cord.get(object.name.split(" ")[0])[0]
+              //trước khi di chuyển player sang vent mới thì sẽ ẩn đi các arrow ở vent cũ
+             arrow_group.setVisible(false)
+              // ở đây ta split object name của vent thành mảng 2 phần tử do cấu trúc name của object là (vent "cần tới"- vent"hiện tại") và 2 vent này được ngăn cách bởi dấu cách
+              // như đã nói trên thì vent_cord là hash map lưu vị trí các vent dựa trên key value là name của vent, nên ta lấy vị trí [0] là vent "cần tới" dể gán tọa độ x y 
+              // cho player
+              player.x=vent_cord.get(object.name.split(" ")[0])[0]+20
               player.y=vent_cord.get(object.name.split(" ")[0])[1]
           })
-         
+          // vent_des là hash map lưu các arrow của vent đó và ở đây và ứng với mỗi vent thì sẽ có 3 - 4 arrow cho vent đó  
+          // ở đây ta lấy vị trí [1] là vent "hiện tại" là gốc của các arrow
+          vent_des.get(object.name.split(" ")[1]).push(children_1[j])
             j++
             break
         default:
@@ -346,40 +335,44 @@ class Game extends Phaser.Scene {
       }
     });
     vent_group.refresh()
-    arrow_group.refresh()
-    console.log(vent_cord)
+   
+    //ẩn hết các arrow của vent sau khi khởi tạo
+    arrow_group.setVisible(false)
  
-
-    player.on("overlapstart", function() {
+//bắt sự kiện khi player overlap với 1 object khác
+  player.on("overlapstart", function() {
+    //hiện nút nhảy vent với điều kiện là player overlap với vent
       if(is_vent){
       vent_butt.alpha=1
       }
       });
-      player.on("overlapend", function() {
+//bắt sự kiện khi player đi ra khỏi vùng overlap
+  player.on("overlapend", function() {
+    //ẩn nút nhảy vent
       is_vent=false
       vent_butt.alpha=0.5
       });
+
+    //thực hiện hàm circleOverlap khi player tới gần vent
     this.physics.add.overlap(player,vent_group , circleOverlap);
  
     vent_butt.on('pointerdown', function (pointer) {
+      //nếu tới gần vent thì sẽ đi vào vòng if
       if(is_vent){
       temp.play("hole")
       player.anims.play("jump");
       is_jump=true
-
+     //nếu player không trốn vent thì is_hidden sẽ chuyển thành true và ngược lại
       if(is_hidden==true){
         is_hidden=false
+        //ẩn hết arrow khi player rời khỏi vent
         arrow_group.setVisible(false)
       }else{
         is_hidden=true
-        arrow_group.setVisible(true)
+       
       }
-     
-      //player.play("jump",true)
     }
-      
-    //  temp=null
-     
+
     })
 
     this.socket.on("move", ({ x, y, playerId }) => {
@@ -424,7 +417,12 @@ class Game extends Phaser.Scene {
   }
 
   update() {
-    console.log(is_hidden)
+//nếu player đang trốn vent thì chạy hàm này để hiện arrow của vent đó
+    if(is_hidden==true){
+      playercur()
+    }
+    
+    //vì phaser chưa có phương thức xác định bắt sự kiện khi player tiếp xúc với sprite hoặc player rời xa sprite nên ta sử dụng emit để gửi sự kiện overlapstart và overlapend
    // var touching = !player.body.touching.none;
     var wasTouching = !player.body.wasTouching.none;
     // If you want 'touching or embedded' then use:
@@ -432,22 +430,21 @@ class Game extends Phaser.Scene {
     if (touching && !wasTouching) player.emit("overlapstart");
     else if (!touching && wasTouching) player.emit("overlapend");
 
-    
+    //để tránh xung đột với animation idle khi vào vent thì ta sẽ delay animation idle lại để player thực hiện nhảy vent và sau đó ẩn player đi 
      if(is_vent==true&&is_jump==true){
     count++
-      if(is_hidden==true){
-     
-//is_hidden=false
-      }
      if(count==40){
        check(player)
       is_jump=false
       count=0
     }
-     }else if(is_vent==true&&is_jump==false){
+     }
+     else if(is_vent==true&&is_jump==false){
 
       player.anims.play("player-idle");
      }
+
+
     let playerMoved = false;
     player.setVelocity(0);
 
@@ -461,7 +458,7 @@ class Game extends Phaser.Scene {
  //     console.log("outvent")
       player.anims.play("player-idle");
     }
-
+//nếu is_hidden bằng true có nghĩa là player đang trốn vent nên sẽ ko di chuyển bằng input được
     if (cursors.left.isDown&&is_hidden==false) {
       player.anims.play("player-walk", true);
       player.setVelocityX(-PLAYER_SPEED);
@@ -577,16 +574,25 @@ class Game extends Phaser.Scene {
     }
   }
 }
-
-function circleOverlap(player,vent) {
- // console.log(vent)
-temp=vent
-is_vent=true
-console.log(getKey([vent.x,vent.y+10])[0],vent.x,vent.y+10)
+// hiện arrow của vent khi player tới gần
+function playercur(){
+  vent_des.get(key).forEach(element => {
+    element.setVisible(true)
+  });
 }
+function circleOverlap(player,vent) {
+temp = vent
+is_vent=true
+//lấy key string của vent hiện tại dựa trên x y của sprite vent 
+key = getKey([vent.x,vent.y+10])[0]
+
+
+}
+//hàm lấy key từ hashmap dựa trên value của key
 function getKey(val) {
   return [...vent_cord].find(([key, value]) => JSON.stringify(val) === JSON.stringify(value));
 }
+//ẩn player dựa trên giá trị của is_hidden
 function check(player){
   if(is_hidden==true){
     player.setActive(false).setVisible(false)
