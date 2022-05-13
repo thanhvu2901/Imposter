@@ -28,7 +28,6 @@ let map_missions;
 let export_missions;
 let current_x, current_y, mission_name;
 let useButton;
-let current_scene;
 let launch_scene = false;
 let isRole = 0;
 let playerKilled;
@@ -75,7 +74,10 @@ class Game extends Phaser.Scene {
   }
 
   create() {
-    current_scene = this.scene;
+    //this.scene.pause('game')
+    let intro = this.scene.launch('introCrew', { isRole: isRole }).bringToTop('introCrew')
+    
+
     const ship = this.make.tilemap({ key: "tilemap" });
     const tileset = ship.addTilesetImage("theSkeld", "tiles", 17, 17);
 

@@ -134,8 +134,6 @@ export default class waitingRoom extends Phaser.Scene {
           let player = this.numberPlayer;
           // let imposter= this.numberImposter;
           // let player= this.numberPlayer;
-
-
           let roomId = this.textInput
           this.socket.emit('letgo', ({ roomId, imposter, player }))
           console.log('after click');
@@ -240,6 +238,7 @@ export default class waitingRoom extends Phaser.Scene {
 
       //*****start game */
       this.scene.launch('game', { socket: this.socket, textInput: this.textInput, numPlayers: numPlayers, idPlayers: idPlayers })
+      //this.scene.launch('introCrew',{ socket: this.socket, textInput: this.textInput, numPlayers: numPlayers, idPlayers: idPlayers })
       this.game.scene.stop('waitingRoom')
     })
 
