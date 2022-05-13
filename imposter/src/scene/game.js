@@ -355,7 +355,7 @@ class Game extends Phaser.Scene {
 
     //thực hiện hàm circleOverlap khi player tới gần vent
     this.physics.add.overlap(player,vent_group , circleOverlap);
- 
+ //bắt sự kiện button nhảy vent
     vent_butt.on('pointerdown', function (pointer) {
       //nếu tới gần vent thì sẽ đi vào vòng if
       if(is_vent){
