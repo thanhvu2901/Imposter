@@ -130,7 +130,7 @@ export default class waitingRoom extends Phaser.Scene {
         start.on('pointerdown', () => {
 
           // custom by host   *********SETTING input from customize *************
-          let imposter = this.numberImposter;
+          let imposter = this.numberImposter ?? 1;
           let player = this.numberPlayer;
           // let imposter= this.numberImposter;
           // let player= this.numberPlayer;

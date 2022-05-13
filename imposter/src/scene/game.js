@@ -325,6 +325,7 @@ class Game extends Phaser.Scene {
           otherPlayer = otherPlayer.filter(player => { return player !== playerKilled });
 
           console.log(otherPlayerId[indexKill]); // emit socket id player killed
+          otherPlayerId = otherPlayerId.filter(player => { return player !== otherPlayerId[indexKill] });
           console.log("emitted");
           canKill = false;
         } else {
