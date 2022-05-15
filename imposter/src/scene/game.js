@@ -325,29 +325,29 @@ class Game extends Phaser.Scene {
           this.physics.add.collider(player, tableObject);
           break;
         case "vent":
-          ventObject = new Phaser.GameObjects.Rectangle(
-            this,
-            object.x,
-            object.y,
-            object.width,
-            object.height,
-            0xff0000,
-            1
-          );
+          // ventObject = new Phaser.GameObjects.Rectangle(
+          //   this,
+          //   object.x,
+          //   object.y,
+          //   object.width,
+          //   object.height,
+          //   0xff0000,
+          //   1
+          // );
 
-          this.physics.add.existing(ventObject);
-          ventObject.body.immovable = true;
-          ventObject.setOrigin(0, 0);
-          var cir = this.add.circle(
-            object.x + object.width * 0.5,
-            object.y + object.height * 0.5,
-            object.width * 0.75,
-            0xff0000,
-            0.4
-          );
-          this.physics.add.existing(cir);
-          cir.body.immovable = true;
-          this.physics.add.overlap(player, cir, circleOverlap, null, this);
+          // this.physics.add.existing(ventObject);
+          // ventObject.body.immovable = true;
+          // ventObject.setOrigin(0, 0);
+          // var cir = this.add.circle(
+          //   object.x + object.width * 0.5,
+          //   object.y + object.height * 0.5,
+          //   object.width * 0.75,
+          //   0xff0000,
+          //   0.4
+          // );
+          // this.physics.add.existing(cir);
+          // cir.body.immovable = true;
+          // this.physics.add.overlap(player, cir, circleOverlap, null, this);
           // cir.setOrigin(0, 0);
           //gán vị trí cho từng phần tử con của group vent 
           children[i].setPosition(object.x, object.y - 10).setOrigin(0, 0).setScale(1.2)
@@ -674,8 +674,6 @@ class Game extends Phaser.Scene {
   };
 }
 
-function circleOverlap() {
-  //console.log("circle overlapped");
 
   // hiện arrow của vent khi player tới gần
   function playercur() {
@@ -705,5 +703,5 @@ function circleOverlap() {
       player.setActive(true).setVisible(true)
     }
   }
-}
+
 export default Game;
