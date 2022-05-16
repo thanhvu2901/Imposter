@@ -2,6 +2,7 @@ import { Runner } from "matter";
 import Phaser from "phaser";
 import audio from '../../../assets/audio/intro/Role_Reveal.mp3'
 import crew from '../../../assets/img/intro/intro.jpg'
+
 let isRole;
 class introCrew extends Phaser.Scene {
     constructor() {
@@ -43,13 +44,13 @@ class introCrew extends Phaser.Scene {
                 duration: 5000,
                 ease: 'Power1',
 
-                completeDelay: 2000,
-                // onComplete: console.log('done'),
+                // completeDelay: 2000,
+                // onComplete: Run(),
+                onCompleteParams: [sprite, text]
                 // callbackScope: this.scene.stop('introCrew')
 
             });
-            intro.complete(2000)
-            intro.callbacks
+
         }
 
 
@@ -59,11 +60,13 @@ class introCrew extends Phaser.Scene {
         }
         //setTimeout(console.log('after done'), 6000)
         //);
+        function Run() {
+            // this.scene.launch('game', { socket: this.socket, textInput: this.textInput, numPlayers: this.numPlayers, idPlayers: this.idPlayers })
+            // game.scene.stop('introCrew');
+            console.log(this.scene);
+        }
     }
-    Run() {
-        this.scene.launch('game', { socket: this.socket, textInput: this.textInput, numPlayers: this.numPlayers, idPlayers: this.idPlayers })
-        this.scene.stop('introCrew');
-    }
+
 }
 
 export default introCrew
