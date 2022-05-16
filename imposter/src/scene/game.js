@@ -106,9 +106,7 @@ class Game extends Phaser.Scene {
   }
 
   create() {
-    //this.scene.pause('game')
-    // let intro = this.scene.launch('introCrew', { isRole: isRole }).bringToTop('introCrew')
-
+    console.log(this.socket);
 
     const ship = this.make.tilemap({ key: "tilemap" });
     const tileset = ship.addTilesetImage("theSkeld", "tiles", 17, 17);
@@ -159,7 +157,7 @@ class Game extends Phaser.Scene {
     // debugDraw(ship_tileset, this);
 
     //add player
-    player = this.physics.add.sprite(-1528, 85, "playerbase", "idle.png");
+    player = this.physics.add.sprite(115, -700, "playerbase", "idle.png");
 
     if (current_x && current_y) {
       map_missions.completed(mission_name);
@@ -560,7 +558,6 @@ class Game extends Phaser.Scene {
         player.setVelocityY(PLAYER_SPEED);
         playerMoved = true;
       }
-
       if (playerMoved) {
         this.socket.emit("move", {
           x: player.x,
@@ -588,89 +585,90 @@ class Game extends Phaser.Scene {
           kill.alpha = 0.5;
         }
       }
-      //canKill = false
-      if (alive == true) {
-        let playerMoved = false;
-        player.setVelocity(0);
-
-        if (
-          !cursors.left.isDown &&
-          !cursors.right.isDown &&
-          !cursors.up.isDown &&
-          !cursors.down.isDown
-        ) {
-          player.anims.play("player-idle");
-        }
-
-        if (cursors.left.isDown) {
-          player.anims.play("player-walk", true);
-          player.setVelocityX(-PLAYER_SPEED);
-          player.scaleX = -1;
-          player.body.offset.x = 40;
-          playerMoved = true;
-        } else if (cursors.right.isDown) {
-          player.anims.play("player-walk", true);
-          player.setVelocityX(PLAYER_SPEED);
-          player.scaleX = 1;
-          player.body.offset.x = 0;
-          playerMoved = true;
-        }
-        if (cursors.up.isDown) {
-          player.anims.play("player-walk", true);
-          player.setVelocityY(-PLAYER_SPEED);
-          playerMoved = true;
-        } else if (cursors.down.isDown) {
-          player.anims.play("player-walk", true);
-          player.setVelocityY(PLAYER_SPEED);
-          playerMoved = true;
-        }
-
-        if (playerMoved) {
-          this.socket.emit("move", {
-            x: player.x,
-            y: player.y,
-            roomId: this.state.roomKey,
-          });
-          player.movedLastFrame = true;
-        } else {
-          if (player.movedLastFrame) {
-            this.socket.emit("moveEnd", { roomId: this.state.roomKey });
-          }
-          player.movedLastFrame = false;
-        }
-      }
-
-      const mission = new Mission(
-        "theSkeld",
-        map_missions,
-        export_missions,
-        this.scene,
-        player.x,
-        player.y
-      );
-      const check_mission = mission.check_mission();
-      if (check_mission) {
-        //blink blink marker
-        useButton.alpha = 1;
-      }
-
-      useButton.on("pointerup", function (e) {
-        if (check_mission) {
-          launch_scene = true;
-        }
-      });
-
-      if (launch_scene && launch_scene) {
-        this.scene.pause("game");
-        this.scene.launch(check_mission.scene, {
-          x: check_mission.x,
-          y: check_mission.y,
-        });
-        launch_scene = false;
-      }
-
-      //
     }
+    //canKill = false
+    if (alive == true) {
+      let playerMoved = false;
+      player.setVelocity(0);
+
+      if (
+        !cursors.left.isDown &&
+        !cursors.right.isDown &&
+        !cursors.up.isDown &&
+        !cursors.down.isDown
+      ) {
+        player.anims.play("player-idle");
+      }
+
+      if (cursors.left.isDown) {
+        player.anims.play("player-walk", true);
+        player.setVelocityX(-PLAYER_SPEED);
+        player.scaleX = -1;
+        player.body.offset.x = 40;
+        playerMoved = true;
+      } else if (cursors.right.isDown) {
+        player.anims.play("player-walk", true);
+        player.setVelocityX(PLAYER_SPEED);
+        player.scaleX = 1;
+        player.body.offset.x = 0;
+        playerMoved = true;
+      }
+      if (cursors.up.isDown) {
+        player.anims.play("player-walk", true);
+        player.setVelocityY(-PLAYER_SPEED);
+        playerMoved = true;
+      } else if (cursors.down.isDown) {
+        player.anims.play("player-walk", true);
+        player.setVelocityY(PLAYER_SPEED);
+        playerMoved = true;
+      }
+
+      if (playerMoved) {
+        this.socket.emit("move", {
+          x: player.x,
+          y: player.y,
+          roomId: this.state.roomKey,
+        });
+        player.movedLastFrame = true;
+      } else {
+        if (player.movedLastFrame) {
+          this.socket.emit("moveEnd", { roomId: this.state.roomKey });
+        }
+        player.movedLastFrame = false;
+      }
+    }
+
+    const mission = new Mission(
+      "theSkeld",
+      map_missions,
+      export_missions,
+      this.scene,
+      player.x,
+      player.y
+    );
+    const check_mission = mission.check_mission();
+    if (check_mission) {
+      //blink blink marker
+      useButton.alpha = 1;
+    }
+
+    useButton.on("pointerup", function (e) {
+      if (check_mission) {
+        launch_scene = true;
+      }
+    });
+
+    if (launch_scene && launch_scene) {
+      this.scene.pause("game");
+      this.scene.launch(check_mission.scene, {
+        x: check_mission.x,
+        y: check_mission.y,
+      });
+      launch_scene = false;
+    }
+
+    //
+
   };
 }
 
