@@ -238,7 +238,7 @@ export default class waitingRoom extends Phaser.Scene {
 
       //*****start game */
       // this.scene.launch('game', { socket: this.socket, textInput: this.textInput, numPlayers: numPlayers, idPlayers: idPlayers })
-      this.scene.launch('introCrew', { socket: this.socket, textInput: this.textInput, numPlayers: numPlayers, idPlayers: idPlayers, numberImposter: this.numberImposter })
+      this.scene.launch('introCrew', { socket: this.socket, textInput: this.textInput, numPlayers: numPlayers, idPlayers: idPlayers, numberImposter: this.numberImposter ?? 1 })
       this.game.scene.stop('waitingRoom')
     })
 
