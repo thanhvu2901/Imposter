@@ -587,121 +587,121 @@ class Game extends Phaser.Scene {
           kill.alpha = 0.5;
         }
       }
+    }
+    //canKill = false
+    if (alive == true) {
+      let playerMoved = false;
+      player.setVelocity(0);
 
-      //canKill = false
-      if (alive == true) {
-        let playerMoved = false;
-        player.setVelocity(0);
-
-        if (
-          !cursors.left.isDown &&
-          !cursors.right.isDown &&
-          !cursors.up.isDown &&
-          !cursors.down.isDown
-        ) {
-          player.anims.play("player-idle");
-        }
-
-        if (cursors.left.isDown) {
-          player.anims.play("player-walk", true);
-          player.setVelocityX(-PLAYER_SPEED);
-          player.scaleX = -1;
-          player.body.offset.x = 40;
-          playerMoved = true;
-        } else if (cursors.right.isDown) {
-          player.anims.play("player-walk", true);
-          player.setVelocityX(PLAYER_SPEED);
-          player.scaleX = 1;
-          player.body.offset.x = 0;
-          playerMoved = true;
-        }
-        if (cursors.up.isDown) {
-          player.anims.play("player-walk", true);
-          player.setVelocityY(-PLAYER_SPEED);
-          playerMoved = true;
-        } else if (cursors.down.isDown) {
-          player.anims.play("player-walk", true);
-          player.setVelocityY(PLAYER_SPEED);
-          playerMoved = true;
-        }
-
-        if (playerMoved) {
-          this.socket.emit("move", {
-            x: player.x,
-            y: player.y,
-            roomId: this.state.roomKey,
-          });
-          player.movedLastFrame = true;
-        } else {
-          if (player.movedLastFrame) {
-            this.socket.emit("moveEnd", { roomId: this.state.roomKey });
-          }
-          player.movedLastFrame = false;
-        }
+      if (
+        !cursors.left.isDown &&
+        !cursors.right.isDown &&
+        !cursors.up.isDown &&
+        !cursors.down.isDown
+      ) {
+        player.anims.play("player-idle");
       }
 
-      const mission = new Mission(
-        "theSkeld",
-        map_missions,
-        export_missions,
-        this.scene,
-        player.x,
-        player.y
-      );
-      const check_mission = mission.check_mission();
-      if (check_mission) {
-        //blink blink marker
-        useButton.alpha = 1;
+      if (cursors.left.isDown) {
+        player.anims.play("player-walk", true);
+        player.setVelocityX(-PLAYER_SPEED);
+        player.scaleX = -1;
+        player.body.offset.x = 40;
+        playerMoved = true;
+      } else if (cursors.right.isDown) {
+        player.anims.play("player-walk", true);
+        player.setVelocityX(PLAYER_SPEED);
+        player.scaleX = 1;
+        player.body.offset.x = 0;
+        playerMoved = true;
+      }
+      if (cursors.up.isDown) {
+        player.anims.play("player-walk", true);
+        player.setVelocityY(-PLAYER_SPEED);
+        playerMoved = true;
+      } else if (cursors.down.isDown) {
+        player.anims.play("player-walk", true);
+        player.setVelocityY(PLAYER_SPEED);
+        playerMoved = true;
       }
 
-      useButton.on("pointerup", function (e) {
-        if (check_mission) {
-          launch_scene = true;
-        }
-      });
-
-      if (launch_scene && launch_scene) {
-        this.scene.pause("game");
-        this.scene.launch(check_mission.scene, {
-          x: check_mission.x,
-          y: check_mission.y,
+      if (playerMoved) {
+        this.socket.emit("move", {
+          x: player.x,
+          y: player.y,
+          roomId: this.state.roomKey,
         });
-        launch_scene = false;
+        player.movedLastFrame = true;
+      } else {
+        if (player.movedLastFrame) {
+          this.socket.emit("moveEnd", { roomId: this.state.roomKey });
+        }
+        player.movedLastFrame = false;
       }
     }
+
+    const mission = new Mission(
+      "theSkeld",
+      map_missions,
+      export_missions,
+      this.scene,
+      player.x,
+      player.y
+    );
+    const check_mission = mission.check_mission();
+    if (check_mission) {
+      //blink blink marker
+      useButton.alpha = 1;
+    }
+
+    useButton.on("pointerup", function (e) {
+      if (check_mission) {
+        launch_scene = true;
+      }
+    });
+
+    if (launch_scene && launch_scene) {
+      this.scene.pause("game");
+      this.scene.launch(check_mission.scene, {
+        x: check_mission.x,
+        y: check_mission.y,
+      });
+      launch_scene = false;
+    }
+
     //
 
   };
 }
 
 
-  // hiện arrow của vent khi player tới gần
-  function playercur() {
-    vent_des.get(key).forEach(element => {
-      element.setVisible(true)
-    });
-  }
-  function circleOverlap(player, vent) {
-    temp = vent
-    is_vent = true
-    //lấy key string của vent hiện tại dựa trên x y của sprite vent 
-    key = getKey([vent.x, vent.y + 10])[0]
+// hiện arrow của vent khi player tới gần
+function playercur() {
+  vent_des.get(key).forEach(element => {
+    element.setVisible(true)
+  });
+}
+function circleOverlap(player, vent) {
+  temp = vent
+  is_vent = true
+  //lấy key string của vent hiện tại dựa trên x y của sprite vent 
+  key = getKey([vent.x, vent.y + 10])[0]
 
 
-  }
-  //hàm lấy key từ hashmap dựa trên value của key
-  function getKey(val) {
-    return [...vent_cord].find(([key, value]) => JSON.stringify(val) === JSON.stringify(value));
-  }
-  //ẩn player dựa trên giá trị của is_hidden
-  function check(player) {
-    if (is_hidden == true) {
-      player.setActive(false).setVisible(false)
+}
+//hàm lấy key từ hashmap dựa trên value của key
+function getKey(val) {
+  return [...vent_cord].find(([key, value]) => JSON.stringify(val) === JSON.stringify(value));
+}
+//ẩn player dựa trên giá trị của is_hidden
+function check(player) {
+  if (is_hidden == true) {
+    player.setActive(false).setVisible(false)
 
-    } else {
+  } else {
 
-      player.setActive(true).setVisible(true)
-    }
+    player.setActive(true).setVisible(true)
   }
+}
 
 export default Game;
