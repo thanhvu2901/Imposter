@@ -34,7 +34,7 @@ export default class waitingRoom extends Phaser.Scene {
     this.load.tilemapTiledJSON("lobby", lobby);
     this.load.atlas("playerbase", playerpng, playerjson);
 
-    console.log('preload');
+    // console.log('preload');
   }
 
   create() {

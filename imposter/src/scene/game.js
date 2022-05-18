@@ -125,25 +125,6 @@ class Game extends Phaser.Scene {
     const tileset = ship.addTilesetImage("theSkeld", "tiles", 17, 17);
     const ship_tileset = ship.createLayer("Background", tileset);
 
-    //khởi tạo nhóm các vent 
-    vent_group = this.physics.add.staticGroup({
-      key: 'vent_1',
-      frameQuantity: 14,
-      immovable: true
-    });
-    //khởi tạo nhóm các arrow
-    arrow_group = this.add.group({
-      key: 'arrow',
-      frameQuantity: 70
-    });
-    //add use button
-    vent_butt = this.add.image(1000, 700, "button").setScrollFactor(0, 0).setInteractive().setAlpha(0.5)
-    useButton = this.add
-      .image(900, 700, "UseButton")
-      .setScrollFactor(0, 0)
-      .setInteractive();
-    //disable button
-    useButton.alpha = 0.5;
 
     //add kill button if imposter
     if (this.isRole == 1) {
@@ -213,6 +194,25 @@ class Game extends Phaser.Scene {
       frames: [{ key: "dead", frame: "dead.png" }],
     });
 
+    //khởi tạo nhóm các vent 
+    vent_group = this.physics.add.staticGroup({
+      key: 'vent_1',
+      frameQuantity: 14,
+      immovable: true
+    });
+    //khởi tạo nhóm các arrow
+    arrow_group = this.add.group({
+      key: 'arrow',
+      frameQuantity: 70
+    });
+    //add use button
+    vent_butt = this.add.image(1000, 700, "button").setScrollFactor(0, 0).setInteractive().setAlpha(0.5)
+    useButton = this.add
+      .image(900, 700, "UseButton")
+      .setScrollFactor(0, 0)
+      .setInteractive();
+    //disable button
+    useButton.alpha = 0.5;
     //tạo animation cho vent
     hole = this.anims.create({
       key: 'hole',
@@ -668,21 +668,17 @@ class Game extends Phaser.Scene {
         }
       });
 
-      if (launch_scene && launch_scene) {
-        this.scene.pause("game");
-        console.log('bfore');
+      if (launch_scene) {
+        //this.scene.pause("game");
+
         this.scene.launch(check_mission.scene, {
           x: check_mission.x,
           y: check_mission.y,
         });
-        this.scene.resume('game')
         launch_scene = false;
-        console.log('after');
+
       }
     }
-
-
-
     //
   };
 }

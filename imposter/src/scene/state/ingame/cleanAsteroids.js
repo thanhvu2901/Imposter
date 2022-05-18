@@ -141,8 +141,8 @@ class CleanAsteroids extends Phaser.Scene {
         current_object.asteroid3.destroy();
         current_object.add.text(250, 300, "Task Complete");
 
-        current_scene.start("game", {x: x, y: y, mission: "CleanAsteroids"});
-        current_scene.stop("CleanAsteroids"); 
+        //current_scene.start("game", {x: x, y: y, mission: "CleanAsteroids"});
+        current_scene.stop("CleanAsteroids");
       }
     });
   }

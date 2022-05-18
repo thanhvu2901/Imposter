@@ -67,8 +67,8 @@ class StabilizeSteering extends Phaser.Scene {
     update() {
         if (done === true) {
             text = this.add.text(317, 327, 'TASK COMPLETE!!', { font: '50px Courier', fill: '#FFFFFF' }).setDepth(1);
-            current_scene.start("game", {x: x, y: y, mission: "StabilizeSteering"});
-            current_scene.stop("stabilizeSteering");   
+            //  current_scene.start("game", {x: x, y: y, mission: "StabilizeSteering"});
+            current_scene.stop("stabilizeSteering");
         }
     }
     getRndInteger(min, max) {

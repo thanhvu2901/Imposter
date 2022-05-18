@@ -84,8 +84,8 @@ class CleanO2Filter extends Phaser.Scene {
           current_object.add.image(140, 303, "rightComplete");
           current_object.add.text(290, 250, "Task Completed");
 
-          current_scene.start("game", {x: x, y: y, mission: "CleanO2Filter"});
-          current_scene.stop("CleanO2Filter"); 
+          // current_scene.start("game", {x: x, y: y, mission: "CleanO2Filter"});
+          current_scene.stop("CleanO2Filter");
         }
       }
       if (number_leaf !== TOTAL_LEAF) {
