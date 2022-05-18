@@ -122,9 +122,7 @@ class Game extends Phaser.Scene {
   }
 
   create() {
-    //this.scene.pause('game')
-    // let intro = this.scene.launch('introCrew', { isRole: isRole }).bringToTop('introCrew')
-
+    console.log(this.socket);
 
     const ship = this.make.tilemap({ key: "tilemap" });
     const tileset = ship.addTilesetImage("theSkeld", "tiles", 17, 17);
@@ -175,7 +173,7 @@ class Game extends Phaser.Scene {
     // debugDraw(ship_tileset, this);
 
     //add player
-    player = this.physics.add.sprite(-1528, 85, "playerbase", "idle.png");
+    player = this.physics.add.sprite(115, -700, "playerbase", "idle.png");
 
     if (current_x && current_y) {
       map_missions.completed(mission_name);
@@ -503,6 +501,7 @@ class Game extends Phaser.Scene {
   }
   update() {
     if (isRole == 1) {
+
       kill.on("pointerdown", () => {
         //console.log();
 
@@ -520,6 +519,7 @@ class Game extends Phaser.Scene {
           console.log("no kill");
         }
       });
+
       //nếu player đang trốn vent thì chạy hàm này để hiện arrow của vent đó
       if (is_hidden == true) {
         playercur()
@@ -584,7 +584,6 @@ class Game extends Phaser.Scene {
         player.setVelocityY(PLAYER_SPEED);
         playerMoved = true;
       }
-
       if (playerMoved) {
         this.socket.emit("move", {
           x: player.x,
@@ -698,6 +697,20 @@ class Game extends Phaser.Scene {
 
     //
   };
+}
+
+// hiện arrow của vent khi player tới gần
+function playercur() {
+  vent_des.get(key).forEach(element => {
+    element.setVisible(true)
+  });
+}
+function circleOverlap(player, vent) {
+  temp = vent
+  is_vent = true
+  //lấy key string của vent hiện tại dựa trên x y của sprite vent 
+  key = getKey([vent.x, vent.y + 10])[0]
+
 }
 // hiện arrow của vent khi player tới gần
 function playercur() {

@@ -230,15 +230,15 @@ export default class waitingRoom extends Phaser.Scene {
     })
 
     this.socket.on('gogame', ({ numPlayers, idPlayers }) => {
-      console.log(numPlayers);
+      //console.log(numPlayers);
       this.scene.stop('waitingRoom')
 
       // ********anouning ROLE****//
 
 
       //*****start game */
-      this.scene.launch('game', { socket: this.socket, textInput: this.textInput, numPlayers: numPlayers, idPlayers: idPlayers })
-      //this.scene.launch('introCrew',{ socket: this.socket, textInput: this.textInput, numPlayers: numPlayers, idPlayers: idPlayers })
+      // this.scene.launch('game', { socket: this.socket, textInput: this.textInput, numPlayers: numPlayers, idPlayers: idPlayers })
+      this.scene.launch('introCrew', { socket: this.socket, textInput: this.textInput, numPlayers: numPlayers, idPlayers: idPlayers, numberImposter: this.numberImposter ?? 1 })
       this.game.scene.stop('waitingRoom')
     })
 
