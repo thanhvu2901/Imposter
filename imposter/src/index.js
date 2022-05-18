@@ -11,6 +11,7 @@ import Login from "./scene/login.js";
 import SubMenu from "./scene/submenu.js";
 import fixWiring from "./scene/state/minigame/fix_wiring.js";
 import AlignEngineOutput from "./scene/state/minigame/align_engine_output";
+import DivertPower from "./scene/state/minigame/divert_power.js";
 import CleanO2Filter from "./scene/state/ingame/cleanO2Filter.js";
 import CleanAsteroids from "./scene/state/ingame/cleanAsteroids.js"
 import PrimeShields from "./scene/state/ingame/primeShields.js";
@@ -77,6 +78,8 @@ game.scene.add('stabilizeSteering', StabilizeSteering)
 game.scene.add('startReactor', StartReactor)
 game.scene.add('joinGame', JoinGame)
 game.scene.add('waitingRoom', waitingRoom)
+
+game.scene.add("divert_power", DivertPower)
 // start title
 
 game.scene.start("preloader");
@@ -89,3 +92,17 @@ game.scene.start("preloader");
 /***intro */
 //game.scene.start("introCrew");
 //game.scene.start("introImposter");
+//game.scene.start('preloader');
+// game.scene.start('Course');
+// game.scene.start('CleanO2Filter');
+// game.scene.start('CleanAsteroids');
+// game.scene.start('PrimeShields');
+
+// game.scene.start('fixWiring')
+// game.scene.start('inspectSample')
+// game.scene.start('stabilizeSteering');
+// game.scene.start('startReactor')
+
+game.scene.start('preloader');
+//game.scene.start("align_engine_output")
+

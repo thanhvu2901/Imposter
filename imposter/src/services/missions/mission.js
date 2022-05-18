@@ -19,7 +19,11 @@ class Mission {
         for (const mission_name in this.current_mission) {
             if (this.map_missions.is_completed(mission_name)) {
                 const mission = new DynamicMissionClass(missions, mission_name, this.scene, this.x, this.y);
-                return mission.perform();
+                const scene = mission.perform();
+                if (scene)
+                {
+                    return scene;
+                }
             }
         }
         return;

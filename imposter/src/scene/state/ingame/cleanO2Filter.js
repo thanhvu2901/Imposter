@@ -15,8 +15,15 @@ import rightComplete from "../../../assets/tasks/Clean O2 Filter/o2_arrowFinishe
 
 let leaf_1, leaf_2, leaf_3, leaf_4, leaf_5, leaf_6, leaf_7;
 const TOTAL_LEAF = 7;
+let x;
+let y;
 
 class CleanO2Filter extends Phaser.Scene {
+  init(data) {
+    x = data.x;
+    y = data.y;
+  }
+
   constructor() {
     super({ key: "CleanO2Filter" });
   }
@@ -40,6 +47,7 @@ class CleanO2Filter extends Phaser.Scene {
   create() {
     let current_object = this;
     let number_leaf = 0;
+    const current_scene = this.scene;
     const boardBase = this.add.image(303, 303, "boardBase");
     leaf_1 = this.add.image(260, 132, "leaf1");
     leaf_2 = this.add.image(360, 232, "leaf2");
@@ -75,6 +83,9 @@ class CleanO2Filter extends Phaser.Scene {
           current_object.add.image(80, 300, "leftComplete");
           current_object.add.image(140, 303, "rightComplete");
           current_object.add.text(290, 250, "Task Completed");
+
+          current_scene.start("game", {x: x, y: y, mission: "CleanO2Filter"});
+          current_scene.stop("CleanO2Filter"); 
         }
       }
       if (number_leaf !== TOTAL_LEAF) {

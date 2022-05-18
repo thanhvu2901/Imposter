@@ -28,6 +28,13 @@ import arrow from "../assets/img/arrow.png"
 import { io } from "socket.io-client";
 import { PLAYER_SPEED } from "../consts/constants";
 
+//marked mission
+
+import CleanO2Filter_mission_marked from "../assets/tasks/Clean O2 Filter/marked.png"
+import FixWiring_mission_marked from "../assets/tasks/Fix_Wiring/marked.png";
+import CleanAsteroids from "../assets/tasks/Clear Asteroids/marked.png";
+import StabilizeSteering from "../assets/tasks/Stabilize Steering/marked.png";
+
 let player;
 let otherPlayer = new Array();
 let otherPlayerId = new Array();
@@ -54,6 +61,10 @@ let vent_map = new Map()
 let vent_group, arrow_group, vent_cord = new Map(), vent_des = new Map()
 let temp, key, is_vent = false, is_jump = false, is_hidden = false, keyboard
 let count = 0
+let current_scene;
+
+let total_missions_completed = 0;
+let list_missions_completed = [];
 class Game extends Phaser.Scene {
   constructor() {
     super({ key: "game" });
@@ -97,6 +108,11 @@ class Game extends Phaser.Scene {
       "AlignEngineOutput_mission_marked",
       AlignEngineOutput_mission_marked
     );
+
+    this.load.image("CleanO2Filter_mission_marked", CleanO2Filter_mission_marked);
+    this.load.image("FixWiring_mission_marked", FixWiring_mission_marked);
+    this.load.image("CleanAsteroids", CleanAsteroids);
+    this.load.image("StabilizeSteering", StabilizeSteering);
     this.socket.emit("whatRole", this.textInput);
     this.socket.on("roleIs", (role) => {
       //console.log(role);
@@ -151,9 +167,9 @@ class Game extends Phaser.Scene {
       isRole = role
     })
     //initialize missions of this map
-    map_missions = new MapMissionsExporter("theSkeld");
+    map_missions = new MapMissionsExporter("theSkeld")
     export_missions = map_missions.create();
-
+    map_missions.show_mission(this);
     ship_tileset.setCollisionByProperty({ collides: true });
 
     // debugDraw(ship_tileset, this);
@@ -163,320 +179,328 @@ class Game extends Phaser.Scene {
 
     if (current_x && current_y) {
       map_missions.completed(mission_name);
-      player.x = current_x + 2;
-      player.y = current_y + 2;
-      // player.setPosition(current_x, current_y);
-    }
-    // tạo theo số lượng other player vào
+      player = this.physics.add.sprite(250, 328, "playerbase", "idle.png");
 
-    this.state.roomKey = this.textInput;
-
-    // console.log(this.numPlayers);
-    for (let i = 0; i < this.numPlayers - 1; i++) {
-      otherPlayer[i] = this.physics.add.sprite(
-        115,
-        -740 + 30 * i,
-        "playerbase",
-        "idle.png"
-      );
-    }
-    this.idPlayers.forEach((element) => {
-      if (element != this.socket.id) {
-        otherPlayerId.push(element);
+      if (current_x && current_y) {
+        map_missions.completed(mission_name);
+        list_missions_completed.push(mission_name);
+        total_missions_completed += 1;
+        map_missions.count_missions_completed(total_missions_completed);
+        map_missions.update_list_missions_completed(list_missions_completed)
+        player.x = current_x + 2;
+        player.y = current_y + 2;
+        // player.setPosition(current_x, current_y);
       }
-    });
-    // console.log(otherPlayerId);
+      // tạo theo số lượng other player vào
 
-    // stt = otherPlayer.length;
-    //****************** */
+      this.state.roomKey = this.textInput;
 
-    //cursor to direct
-    cursors = this.input.keyboard.createCursorKeys();
-
-    //input button
-
-    // tạo object và gán các thuộc tính
-    this.anims.create({
-      key: "player-idle",
-      frames: [{ key: "playerbase", frame: "idle.png" }],
-    });
-    this.anims.create({
-      key: "dead",
-      frames: [{ key: "dead", frame: "dead.png" }],
-    });
-
-    //tạo animation cho vent
-    hole = this.anims.create({
-      key: 'hole',
-      frames: [{ key: 'vent_1' },
-      { key: 'vent_2' },
-      { key: 'vent_3' },
-      { key: 'vent_4' },
-      { key: 'vent_5' },
-      { key: 'vent_6' },
-      { key: 'vent_1' }
-      ],
-      frameRate: 23,
-      repeat: 0
-    });
-    //chỉnh vị trí từng frame trong animation cho phù hợp
-    hole.frames[0].frame.y = 8
-    //hole.frames[1].frame.x=11
-    hole.frames[2].frame.y = 3.5
-    hole.frames[3].frame.y = 7
-    hole.frames[4].frame.y = 7
-    hole.frames[4].frame.x = 3
-    hole.frames[5].frame.y = 7
-    //animation player nhảy vent
-    let jump = this.anims.create({
-      key: "jump",
-      frames: [{ key: 'jump_1' },
-      { key: 'jump_2' },
-      { key: 'jump_3' },
-      { key: 'jump_4' },
-      { key: 'jump_5' },
-      { key: 'jump_6' },
-      { key: 'jump_7' }
-      ],
-      frameRate: 6,
-      repeat: 0
-    });
-    //animation player
-    this.anims.create({
-      key: "player-walk",
-      frames: this.anims.generateFrameNames("playerbase", {
-        start: 1,
-        end: 12,
-        prefix: "Walk",
-        suffix: ".png",
-      }),
-      repeat: -1,
-      frameRate: 32,
-    });
-
-    //player death
-    this.anims.create({
-      key: "player-dead",
-      frames: this.anims.generateFrameNames("playerbase", {
-        start: 1,
-        end: 12,
-        prefix: "Dead",
-        suffix: ".png",
-      }),
-      repeat: 0,
-      frameRate: 24,
-    });
-    //input to control
-    this.input.keyboard.on("keydown", (e) => {
-      if (!pressedKeys.includes(e.code)) {
-        this.sound.play("walk", { loop: true });
-        pressedKeys.push(e.code);
+      // console.log(this.numPlayers);
+      for (let i = 0; i < this.numPlayers - 1; i++) {
+        otherPlayer[i] = this.physics.add.sprite(
+          115,
+          -740 + 30 * i,
+          "playerbase",
+          "idle.png"
+        );
       }
-    });
-    this.input.keyboard.on("keyup", (e) => {
-      this.sound.stopByKey("walk");
-      pressedKeys = pressedKeys.filter((key) => key !== e.code);
-    });
-
-    this.physics.add.collider(player, ship_tileset);
-
-    this.cameras.main.startFollow(player, true);
-    this.input.keyboard.enabled
-    //tải lại mới khi có player mới vào có các player đã ở trong đó
-    console.log(this.textInput);
-    //các function liên quan đến objectlayer
-    objectsLayer = ship.getObjectLayer("GameObjects");
-    //khởi tạo hashmap cho vent và arrow
-    objectsLayer.objects.forEach((object) => {
-      if (object.type == "vent") {
-        //hash map cho vent sẽ có dạng ( vent_1,2,3, [vent.x, vent.y]) nghĩa là mỗi key là string vent sẽ có value là tọa dộ x y của vent trên map
-        vent_cord.set(object.name, [object.x, object.y])
-        // hash map cho arrow để player di chuyển vent sẽ dạng là (vent,[arrow1,arrow2....]) nghĩa là mỗi key là string vent hiện tại sẽ có value là các arrow của vent đó
-        vent_des.set(object.name, [])
-      }
-    })
-    //lẩy mảng từ group các sprite
-    let children = vent_group.getChildren()
-    let children_1 = arrow_group.getChildren()
-    let i = 0, j = 0
-    //khởi tạo object layer để gán sprite hoặc tạo vật cản cho player      
-    objectsLayer.objects.forEach((object) => {
-      const { name, x, y, width, height, properties, type } = object;
-
-      switch (type) {
-        case "table":
-          tableObject = new Phaser.GameObjects.Ellipse(
-            this,
-            object.x,
-            object.y,
-            object.width,
-            object.height
-          );
-          // tableObject.setFillStyle(0xffffff, 0.5);
-          // console.log(tableObject);
-
-          this.physics.add.existing(tableObject);
-
-          tableObject.body.immovable = true;
-          tableObject.setOrigin(0, 0);
-          //r.body.moves=false
-          // tableObject.body.setCircle(120);
-          this.physics.add.overlap(player, tableObject, null, null, this);
-          this.physics.add.collider(player, tableObject);
-          break;
-        case "vent":
-          // ventObject = new Phaser.GameObjects.Rectangle(
-          //   this,
-          //   object.x,
-          //   object.y,
-          //   object.width,
-          //   object.height,
-          //   0xff0000,
-          //   1
-          // );
-
-          // this.physics.add.existing(ventObject);
-          // ventObject.body.immovable = true;
-          // ventObject.setOrigin(0, 0);
-          // var cir = this.add.circle(
-          //   object.x + object.width * 0.5,
-          //   object.y + object.height * 0.5,
-          //   object.width * 0.75,
-          //   0xff0000,
-          //   0.4
-          // );
-          // this.physics.add.existing(cir);
-          // cir.body.immovable = true;
-          // this.physics.add.overlap(player, cir, circleOverlap, null, this);
-          // cir.setOrigin(0, 0);
-          //gán vị trí cho từng phần tử con của group vent 
-          children[i].setPosition(object.x, object.y - 10).setOrigin(0, 0).setScale(1.2)
-          i++
-          break;
-        case "arrow":
-
-          // console.log(object.name.split(" ")[1])
-          //gán vị trí cho từng phần tử con của group arrow// set angle với mục đích là xoay mũi tên tới vent gần nhất dựa vào propeties rotation của object trong Tiled
-          // sau đó gán interactive cho arrow để thực hiện di chuyển player tới vent gần nhất
-          children_1[j].setPosition(object.x, object.y).setScale(0.4).setAngle(object.rotation).setOrigin(0, 1).setInteractive().on('pointerdown', () => {
-            //trước khi di chuyển player sang vent mới thì sẽ ẩn đi các arrow ở vent cũ
-            arrow_group.setVisible(false)
-            // ở đây ta split object name của vent thành mảng 2 phần tử do cấu trúc name của object là (vent "cần tới"- vent"hiện tại") và 2 vent này được ngăn cách bởi dấu cách
-            // như đã nói trên thì vent_cord là hash map lưu vị trí các vent dựa trên key value là name của vent, nên ta lấy vị trí [0] là vent "cần tới" dể gán tọa độ x y 
-            // cho player
-            player.x = vent_cord.get(object.name.split(" ")[0])[0] + 20
-            player.y = vent_cord.get(object.name.split(" ")[0])[1]
-          })
-          // vent_des là hash map lưu các arrow của vent đó và ở đây và ứng với mỗi vent thì sẽ có 3 - 4 arrow cho vent đó  
-          // ở đây ta lấy vị trí [1] là vent "hiện tại" là gốc của các arrow
-          vent_des.get(object.name.split(" ")[1]).push(children_1[j])
-          j++
-          break
-        default:
-          break;
-      }
-    });
-    vent_group.refresh()
-
-    //ẩn hết các arrow của vent sau khi khởi tạo
-    arrow_group.setVisible(false)
-
-    //bắt sự kiện khi player overlap với 1 object khác
-    player.on("overlapstart", function () {
-      //hiện nút nhảy vent với điều kiện là player overlap với vent
-      if (is_vent) {
-        vent_butt.alpha = 1
-      }
-    });
-    //bắt sự kiện khi player đi ra khỏi vùng overlap
-    player.on("overlapend", function () {
-      //ẩn nút nhảy vent
-      is_vent = false
-      vent_butt.alpha = 0.5
-    });
-
-    //thực hiện hàm circleOverlap khi player tới gần vent
-    this.physics.add.overlap(player, vent_group, circleOverlap);
-    //bắt sự kiện button nhảy vent
-    vent_butt.on('pointerdown', function (pointer) {
-      //nếu tới gần vent thì sẽ đi vào vòng if
-      if (is_vent) {
-        temp.play("hole")
-        player.anims.play("jump");
-        is_jump = true
-        //nếu player không trốn vent thì is_hidden sẽ chuyển thành true và ngược lại
-        if (is_hidden == true) {
-          is_hidden = false
-          //ẩn hết arrow khi player rời khỏi vent
-          arrow_group.setVisible(false)
-        } else {
-          is_hidden = true
-
+      this.idPlayers.forEach((element) => {
+        if (element != this.socket.id) {
+          otherPlayerId.push(element);
         }
-      }
+      });
+      // console.log(otherPlayerId);
 
-    })
+      // stt = otherPlayer.length;
+      //****************** */
 
-    this.socket.on("move", ({ x, y, playerId }) => {
-      //console.log({ x, y, playerId });
+      //cursor to direct
+      cursors = this.input.keyboard.createCursorKeys();
 
-      let index = otherPlayerId.findIndex((Element) => Element == playerId);
-      //id = index;
-      // console.log(index);
+      //input button
 
-      if (otherPlayer[index].x > x) {
-        otherPlayer[index].flipX = true;
-      } else if (otherPlayer[index].x < x) {
-        otherPlayer[index].flipX = false;
-      }
-      otherPlayer[index].x = x;
-      otherPlayer[index].y = y;
-      otherPlayer[index].moving = true;
+      // tạo object và gán các thuộc tính
+      this.anims.create({
+        key: "player-idle",
+        frames: [{ key: "playerbase", frame: "idle.png" }],
+      });
+      this.anims.create({
+        key: "dead",
+        frames: [{ key: "dead", frame: "dead.png" }],
+      });
 
-      if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
-        otherPlayer[index].play("player-walk");
-      } else if (
-        !otherPlayer[index].moving &&
-        otherPlayer[index].anims.isPlaying
-      ) {
-        otherPlayer[index].stop("player-walk");
-      }
-    });
+      //tạo animation cho vent
+      hole = this.anims.create({
+        key: 'hole',
+        frames: [{ key: 'vent_1' },
+        { key: 'vent_2' },
+        { key: 'vent_3' },
+        { key: 'vent_4' },
+        { key: 'vent_5' },
+        { key: 'vent_6' },
+        { key: 'vent_1' }
+        ],
+        frameRate: 23,
+        repeat: 0
+      });
+      //chỉnh vị trí từng frame trong animation cho phù hợp
+      hole.frames[0].frame.y = 8
+      //hole.frames[1].frame.x=11
+      hole.frames[2].frame.y = 3.5
+      hole.frames[3].frame.y = 7
+      hole.frames[4].frame.y = 7
+      hole.frames[4].frame.x = 3
+      hole.frames[5].frame.y = 7
+      //animation player nhảy vent
+      let jump = this.anims.create({
+        key: "jump",
+        frames: [{ key: 'jump_1' },
+        { key: 'jump_2' },
+        { key: 'jump_3' },
+        { key: 'jump_4' },
+        { key: 'jump_5' },
+        { key: 'jump_6' },
+        { key: 'jump_7' }
+        ],
+        frameRate: 6,
+        repeat: 0
+      });
+      //animation player
+      this.anims.create({
+        key: "player-walk",
+        frames: this.anims.generateFrameNames("playerbase", {
+          start: 1,
+          end: 12,
+          prefix: "Walk",
+          suffix: ".png",
+        }),
+        repeat: -1,
+        frameRate: 32,
+      });
 
-    // console.log(objectsLayer);
+      //player death
+      this.anims.create({
+        key: "player-dead",
+        frames: this.anims.generateFrameNames("playerbase", {
+          start: 1,
+          end: 12,
+          prefix: "Dead",
+          suffix: ".png",
+        }),
+        repeat: 0,
+        frameRate: 24,
+      });
+      //input to control
+      this.input.keyboard.on("keydown", (e) => {
+        if (!pressedKeys.includes(e.code)) {
+          this.sound.play("walk", { loop: true });
+          pressedKeys.push(e.code);
+        }
+      });
+      this.input.keyboard.on("keyup", (e) => {
+        this.sound.stopByKey("walk");
+        pressedKeys = pressedKeys.filter((key) => key !== e.code);
+      });
 
-    this.socket.on("moveEnd", ({ playerId }) => {
-      let index = otherPlayerId.findIndex((Element) => Element == playerId);
-      otherPlayer[index].moving = false;
-      otherPlayer[index].anims.play("player-idle");
-      if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
-        otherPlayer[index].play("player-walk");
-      } else if (
-        !otherPlayer[index].moving &&
-        otherPlayer[index].anims.isPlaying
-      ) {
-        otherPlayer[index].stop("player-walk");
-      }
-    });
+      this.physics.add.collider(player, ship_tileset);
 
-    //update if killed
-    this.socket.on("updateOtherPlayer", (playerId) => {
-      console.log(this.socket.id);
-      console.log(playerId);
-      if (this.socket.id == playerId) {
-        //run noitice died
-        console.log("this player killed");
-        //player.stop("player-idle")
-        alive = false;
+      this.cameras.main.startFollow(player, true);
+      this.input.keyboard.enabled
+      //tải lại mới khi có player mới vào có các player đã ở trong đó
+      console.log(this.textInput);
+      //các function liên quan đến objectlayer
+      objectsLayer = ship.getObjectLayer("GameObjects");
+      //khởi tạo hashmap cho vent và arrow
+      objectsLayer.objects.forEach((object) => {
+        if (object.type == "vent") {
+          //hash map cho vent sẽ có dạng ( vent_1,2,3, [vent.x, vent.y]) nghĩa là mỗi key là string vent sẽ có value là tọa dộ x y của vent trên map
+          vent_cord.set(object.name, [object.x, object.y])
+          // hash map cho arrow để player di chuyển vent sẽ dạng là (vent,[arrow1,arrow2....]) nghĩa là mỗi key là string vent hiện tại sẽ có value là các arrow của vent đó
+          vent_des.set(object.name, [])
+        }
+      })
+      //lẩy mảng từ group các sprite
+      let children = vent_group.getChildren()
+      let children_1 = arrow_group.getChildren()
+      let i = 0, j = 0
+      //khởi tạo object layer để gán sprite hoặc tạo vật cản cho player      
+      objectsLayer.objects.forEach((object) => {
+        const { name, x, y, width, height, properties, type } = object;
 
-        player.anims.play("player-dead");
-      } else {
+        switch (type) {
+          case "table":
+            tableObject = new Phaser.GameObjects.Ellipse(
+              this,
+              object.x,
+              object.y,
+              object.width,
+              object.height
+            );
+            // tableObject.setFillStyle(0xffffff, 0.5);
+            // console.log(tableObject);
+
+            this.physics.add.existing(tableObject);
+
+            tableObject.body.immovable = true;
+            tableObject.setOrigin(0, 0);
+            //r.body.moves=false
+            // tableObject.body.setCircle(120);
+            this.physics.add.overlap(player, tableObject, null, null, this);
+            this.physics.add.collider(player, tableObject);
+            break;
+          case "vent":
+            // ventObject = new Phaser.GameObjects.Rectangle(
+            //   this,
+            //   object.x,
+            //   object.y,
+            //   object.width,
+            //   object.height,
+            //   0xff0000,
+            //   1
+            // );
+
+            // this.physics.add.existing(ventObject);
+            // ventObject.body.immovable = true;
+            // ventObject.setOrigin(0, 0);
+            // var cir = this.add.circle(
+            //   object.x + object.width * 0.5,
+            //   object.y + object.height * 0.5,
+            //   object.width * 0.75,
+            //   0xff0000,
+            //   0.4
+            // );
+            // this.physics.add.existing(cir);
+            // cir.body.immovable = true;
+            // this.physics.add.overlap(player, cir, circleOverlap, null, this);
+            // cir.setOrigin(0, 0);
+            //gán vị trí cho từng phần tử con của group vent 
+            children[i].setPosition(object.x, object.y - 10).setOrigin(0, 0).setScale(1.2)
+            i++
+            break;
+          case "arrow":
+
+            // console.log(object.name.split(" ")[1])
+            //gán vị trí cho từng phần tử con của group arrow// set angle với mục đích là xoay mũi tên tới vent gần nhất dựa vào propeties rotation của object trong Tiled
+            // sau đó gán interactive cho arrow để thực hiện di chuyển player tới vent gần nhất
+            children_1[j].setPosition(object.x, object.y).setScale(0.4).setAngle(object.rotation).setOrigin(0, 1).setInteractive().on('pointerdown', () => {
+              //trước khi di chuyển player sang vent mới thì sẽ ẩn đi các arrow ở vent cũ
+              arrow_group.setVisible(false)
+              // ở đây ta split object name của vent thành mảng 2 phần tử do cấu trúc name của object là (vent "cần tới"- vent"hiện tại") và 2 vent này được ngăn cách bởi dấu cách
+              // như đã nói trên thì vent_cord là hash map lưu vị trí các vent dựa trên key value là name của vent, nên ta lấy vị trí [0] là vent "cần tới" dể gán tọa độ x y 
+              // cho player
+              player.x = vent_cord.get(object.name.split(" ")[0])[0] + 20
+              player.y = vent_cord.get(object.name.split(" ")[0])[1]
+            })
+            // vent_des là hash map lưu các arrow của vent đó và ở đây và ứng với mỗi vent thì sẽ có 3 - 4 arrow cho vent đó  
+            // ở đây ta lấy vị trí [1] là vent "hiện tại" là gốc của các arrow
+            vent_des.get(object.name.split(" ")[1]).push(children_1[j])
+            j++
+            break
+          default:
+            break;
+        }
+      });
+      vent_group.refresh()
+
+      //ẩn hết các arrow của vent sau khi khởi tạo
+      arrow_group.setVisible(false)
+
+      //bắt sự kiện khi player overlap với 1 object khác
+      player.on("overlapstart", function () {
+        //hiện nút nhảy vent với điều kiện là player overlap với vent
+        if (is_vent) {
+          vent_butt.alpha = 1
+        }
+      });
+      //bắt sự kiện khi player đi ra khỏi vùng overlap
+      player.on("overlapend", function () {
+        //ẩn nút nhảy vent
+        is_vent = false
+        vent_butt.alpha = 0.5
+      });
+
+      //thực hiện hàm circleOverlap khi player tới gần vent
+      this.physics.add.overlap(player, vent_group, circleOverlap);
+      //bắt sự kiện button nhảy vent
+      vent_butt.on('pointerdown', function (pointer) {
+        //nếu tới gần vent thì sẽ đi vào vòng if
+        if (is_vent) {
+          temp.play("hole")
+          player.anims.play("jump");
+          is_jump = true
+          //nếu player không trốn vent thì is_hidden sẽ chuyển thành true và ngược lại
+          if (is_hidden == true) {
+            is_hidden = false
+            //ẩn hết arrow khi player rời khỏi vent
+            arrow_group.setVisible(false)
+          } else {
+            is_hidden = true
+
+          }
+        }
+
+      })
+
+      this.socket.on("move", ({ x, y, playerId }) => {
+        //console.log({ x, y, playerId });
+
         let index = otherPlayerId.findIndex((Element) => Element == playerId);
-        otherPlayer[index].anims.play("player-dead", true);
-      }
-    });
-  }
+        //id = index;
+        // console.log(index);
 
+        if (otherPlayer[index].x > x) {
+          otherPlayer[index].flipX = true;
+        } else if (otherPlayer[index].x < x) {
+          otherPlayer[index].flipX = false;
+        }
+        otherPlayer[index].x = x;
+        otherPlayer[index].y = y;
+        otherPlayer[index].moving = true;
+
+        if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
+          otherPlayer[index].play("player-walk");
+        } else if (
+          !otherPlayer[index].moving &&
+          otherPlayer[index].anims.isPlaying
+        ) {
+          otherPlayer[index].stop("player-walk");
+        }
+      });
+
+      // console.log(objectsLayer);
+
+      this.socket.on("moveEnd", ({ playerId }) => {
+        let index = otherPlayerId.findIndex((Element) => Element == playerId);
+        otherPlayer[index].moving = false;
+        otherPlayer[index].anims.play("player-idle");
+        if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
+          otherPlayer[index].play("player-walk");
+        } else if (
+          !otherPlayer[index].moving &&
+          otherPlayer[index].anims.isPlaying
+        ) {
+          otherPlayer[index].stop("player-walk");
+        }
+      });
+
+      //update if killed
+      this.socket.on("updateOtherPlayer", (playerId) => {
+        console.log(this.socket.id);
+        console.log(playerId);
+        if (this.socket.id == playerId) {
+          //run noitice died
+          console.log("this player killed");
+          //player.stop("player-idle")
+          alive = false;
+
+          player.anims.play("player-dead");
+        } else {
+          let index = otherPlayerId.findIndex((Element) => Element == playerId);
+          otherPlayer[index].anims.play("player-dead", true);
+        }
+      });
+    }
+  }
   update() {
     if (isRole == 1) {
       kill.on("pointerdown", () => {
@@ -654,6 +678,8 @@ class Game extends Phaser.Scene {
       //blink blink marker
       useButton.alpha = 1;
     }
+    useButton.alpha = check_mission ? 1 : 0.5;
+
 
     useButton.on("pointerup", function (e) {
       if (check_mission) {
@@ -671,11 +697,8 @@ class Game extends Phaser.Scene {
     }
 
     //
-
   };
 }
-
-
 // hiện arrow của vent khi player tới gần
 function playercur() {
   vent_des.get(key).forEach(element => {

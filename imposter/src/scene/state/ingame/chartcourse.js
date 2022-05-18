@@ -168,7 +168,6 @@ function check(ob1,ob2,ob3,game){
   let tempx=ob2.x;
   let tempy=ob2.y;
  if(ob1.x<=ob2.x+10&&ob1.x>=ob2.x-10&&ob1.y<=ob2.y+10&&ob1.y>=ob2.y-10){
-   console.log("halo")
    ob2.destroy()
  //  ob2=null;
    ob3=game.add.image(tempx,tempy,"dot2")

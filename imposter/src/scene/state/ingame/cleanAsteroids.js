@@ -15,11 +15,20 @@ import asteroid5X from "../../../assets/tasks/Clear Asteroids/weapons_asteroid5X
 
 let asteroid_1, asteroid_2, asteroid_3;
 const listItem = [];
-const TOTAL_DESTROY = 20;
+const TOTAL_DESTROY = 2;
 let destroyed = 0;
 let text;
 
+let x;
+let y;
+
 class CleanAsteroids extends Phaser.Scene {
+
+  init(data) {
+    x = data.x;
+    y = data.y;
+  }
+
   constructor() {
     super({ key: "CleanAsteroids" });
   }
@@ -42,6 +51,7 @@ class CleanAsteroids extends Phaser.Scene {
 
   create() {
     let current_object = this;
+    const current_scene = this.scene;
     const boardBase = this.add.image(300, 300, "boardBase");
     asteroid_1 = this.asteroid1 = this.add.sprite(550, 303, "asteroid1");
     asteroid_2 = this.asteroid2 = this.add.sprite(550, 135, "asteroid2");
@@ -130,6 +140,9 @@ class CleanAsteroids extends Phaser.Scene {
         current_object.asteroid2.destroy();
         current_object.asteroid3.destroy();
         current_object.add.text(250, 300, "Task Complete");
+
+        current_scene.start("game", {x: x, y: y, mission: "CleanAsteroids"});
+        current_scene.stop("CleanAsteroids"); 
       }
     });
   }

@@ -1,8 +1,7 @@
 import Base from "./base";
-import MissionMarked from "../../assets/tasks/Align Engine Output/mission_marked.png";
 
-const ALIGN_ENGINE_OUTPUT_X = -980
-const ALIGN_ENGINE_OUTPUT_Y = -385
+const ALIGN_ENGINE_OUTPUT_MARKED_X = -1384
+const ALIGN_ENGINE_OUTPUT_MARKED_Y = -500
 
 class AlignEngineOutput extends Base {
     constructor(scene, x, y) {
@@ -10,15 +9,13 @@ class AlignEngineOutput extends Base {
     }
 
     perform() {
-        if (
-            (Math.floor(this.x) <= ALIGN_ENGINE_OUTPUT_X) &&
-            (Math.floor(this.y) <= ALIGN_ENGINE_OUTPUT_Y)
-        ) {
-            const a = this.scene.scene.add.image(-1384, -500, "AlignEngineOutput_mission_marked");
-            // this.scene.pause("game")
-            // this.scene.start("align_engine_output", {x: this.x, y: this.y});
+        const check_mission = Base.prototype.is_mission_show(ALIGN_ENGINE_OUTPUT_MARKED_X, ALIGN_ENGINE_OUTPUT_MARKED_Y, this.x, this.y);
+        if (check_mission) {
+            this.scene.scene.add.image(-1384, -500, "AlignEngineOutput_mission_marked");
             return { scene: "align_engine_output", x: this.x, y: this.y }
+
         }
+        return;
     }
 
 }
