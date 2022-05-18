@@ -7,7 +7,13 @@ import { debugDraw } from "../scene/debugDraw";
 import MapMissionsExporter from "../helper/map_mission_exporter"
 import Mission from "../services/missions/mission";
 import UseButton from "../assets/tasks/Align Engine Output/Use.webp.png";
+
+//marked mission
 import AlignEngineOutput_mission_marked from "../assets/tasks/Align Engine Output/mission_marked.png"
+import CleanO2Filter_mission_marked from "../assets/tasks/Clean O2 Filter/marked.png"
+import FixWiring_mission_marked from "../assets/tasks/Fix_Wiring/marked.png";
+import CleanAsteroids from "../assets/tasks/Clear Asteroids/marked.png";
+import StabilizeSteering from "../assets/tasks/Stabilize Steering/marked.png";
 
 import { movePlayer } from "../animation/movement.js";
 
@@ -31,7 +37,9 @@ let export_missions;
 let current_x, current_y, mission_name;
 let useButton;
 let current_scene;
-let launch_scene = false;;
+let launch_scene = false;
+let total_missions_completed = 0;
+let list_missions_completed = [];
 class Game extends Phaser.Scene {
   init(data) {
     current_x = data.x;
@@ -47,7 +55,13 @@ class Game extends Phaser.Scene {
     this.load.tilemapTiledJSON("tilemap", theskeld);
     this.load.image("UseButton", UseButton)
     this.load.atlas("playerbase", playerpng, playerjson);
+    //load all image mission marked
     this.load.image("AlignEngineOutput_mission_marked", AlignEngineOutput_mission_marked);
+    this.load.image("CleanO2Filter_mission_marked", CleanO2Filter_mission_marked);
+    this.load.image("FixWiring_mission_marked", FixWiring_mission_marked);
+    this.load.image("CleanAsteroids", CleanAsteroids);
+    this.load.image("StabilizeSteering", StabilizeSteering);
+
     socket = io('localhost:3000')
   }
 
@@ -56,7 +70,6 @@ class Game extends Phaser.Scene {
     const ship = this.make.tilemap({ key: "tilemap" });
     const tileset = ship.addTilesetImage("theSkeld", "tiles");
     const ship_tileset = ship.createLayer("Background", tileset);
-
     //add use button
     useButton = this.add.image(900,700,"UseButton").setScrollFactor(0,0).setInteractive();
     //disable button
@@ -74,7 +87,11 @@ class Game extends Phaser.Scene {
     player = this.physics.add.sprite(250, 328, "playerbase", "idle.png");
   
     if(current_x && current_y) {
-      map_missions.completed(mission_name)
+      map_missions.completed(mission_name);
+      list_missions_completed.push(mission_name);
+      total_missions_completed += 1;
+      map_missions.count_missions_completed(total_missions_completed);
+      map_missions.update_list_missions_completed(list_missions_completed)
       player.x = current_x + 2;
       player.y = current_y + 2;
       // player.setPosition(current_x, current_y);
@@ -227,7 +244,8 @@ class Game extends Phaser.Scene {
 
     if(launch_scene)
     {
-      this.scene.pause("game")
+      this.scene.pause("game");
+      mission_name = check_mission.scene
       this.scene.launch(check_mission.scene, {x: check_mission.x, y: check_mission.y});
       launch_scene = false;
     }

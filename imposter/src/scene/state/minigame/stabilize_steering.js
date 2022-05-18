@@ -6,7 +6,16 @@ import target from '../../../assets/tasks/Stabilize Steering/nav_stabilize_targe
 
 let ibase, itarget, igraph, text;
 let done = false;
+let x;
+let y;
+let current_scene;
+
 class StabilizeSteering extends Phaser.Scene {
+    init(data) {
+        x = data.x;
+        y = data.y;
+    }
+
     constructor() {
         super({
             key:
@@ -25,6 +34,7 @@ class StabilizeSteering extends Phaser.Scene {
         ibase = this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 2, 'base')
         igraph = this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 2, 'graph')
         itarget = this.add.image(this.game.renderer.width / 2 + this.getRndInteger(-50, 50), this.game.renderer.height / 2 + this.getRndInteger(-50, 50), 'target').setInteractive()
+        current_scene = this.scene;
 
         this.input.setDraggable(itarget)
         this.input.on('dragstart', function (pointer, gameObject) {
@@ -57,6 +67,8 @@ class StabilizeSteering extends Phaser.Scene {
     update() {
         if (done === true) {
             text = this.add.text(317, 327, 'TASK COMPLETE!!', { font: '50px Courier', fill: '#FFFFFF' }).setDepth(1);
+            current_scene.start("game", {x: x, y: y, mission: "StabilizeSteering"});
+            current_scene.stop("stabilizeSteering");   
         }
     }
     getRndInteger(min, max) {

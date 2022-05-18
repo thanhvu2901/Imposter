@@ -17,9 +17,16 @@ let reg = new Array
 let tail = new Array
 let count = new Set();
 let color = ['0000FF', 'FF0000', 'FFFF00', 'FF00FF']
-let color_left = ['FF0000', 'FF00FF', '0000FF', 'FFFF00']
-class FixWiring extends Phaser.Scene {
+let color_left = ['FF0000', 'FF00FF', '0000FF', 'FFFF00'];
 
+let x;
+let y;
+let current_scene;
+class FixWiring extends Phaser.Scene {
+    init(data) {
+        x = data.x;
+        y = data.y;
+    }
 
     constructor() {
         super({
@@ -39,8 +46,7 @@ class FixWiring extends Phaser.Scene {
 
         var backdrop = this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 2, 'fix')
         text = this.add.text(10, 10, 'Cursors to move', { font: '16px Courier', fill: '#00ff00' }).setScrollFactor(0);
-
-
+        current_scene = this.scene;
 
         //********** */\
 
@@ -150,7 +156,9 @@ class FixWiring extends Phaser.Scene {
         if (count.size === 4) {
             // console.log('done');
             text3 = this.add.text(317, 327, 'TASK COMPLETE!!', { font: '50px Courier', fill: '#FFFFFF' }).setDepth(1);
-            return
+            current_scene.start("game", {x: x, y: y, mission: "FixWiring"});
+            current_scene.stop("fixWiring");
+            
         }
     }
 
