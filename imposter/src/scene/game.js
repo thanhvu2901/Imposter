@@ -50,7 +50,7 @@ let export_missions;
 let current_x, current_y, mission_name;
 let useButton;
 let launch_scene = false;
-let isRole = 0;
+
 let playerKilled;
 let indexKill = 0;
 let canKill = false;
@@ -76,10 +76,11 @@ class Game extends Phaser.Scene {
     this.textInput = data.textInput;
     this.numPlayers = data.numPlayers;
     this.idPlayers = data.idPlayers;
-
+    this.isRole = data.isRole
     current_x = data.x;
     current_y = data.y;
     mission_name = data.mission;
+
   }
 
   preload() {
@@ -113,13 +114,9 @@ class Game extends Phaser.Scene {
     this.load.image("FixWiring_mission_marked", FixWiring_mission_marked);
     this.load.image("CleanAsteroids", CleanAsteroids);
     this.load.image("StabilizeSteering", StabilizeSteering);
-    this.socket.emit("whatRole", this.textInput);
 
-    this.socket.on("roleIs", (role) => {
-      //console.log(role);
-      // is imposterr
-      isRole = role;
-    });
+    console.log('emit');
+
   }
 
   create() {
@@ -149,7 +146,7 @@ class Game extends Phaser.Scene {
     useButton.alpha = 0.5;
 
     //add kill button if imposter
-    if (isRole == 1) {
+    if (this.isRole == 1) {
       kill = this.add
         .image(750, 700, "KillButton")
         .setScrollFactor(0, 0)
@@ -489,7 +486,7 @@ class Game extends Phaser.Scene {
 
   }
   update() {
-    if (isRole == 1) {
+    if (this.isRole == 1) {
 
       kill.on("pointerdown", () => {
         //console.log();
@@ -649,38 +646,42 @@ class Game extends Phaser.Scene {
         }
         player.movedLastFrame = false;
       }
-    }
-
-    const mission = new Mission(
-      "theSkeld",
-      map_missions,
-      export_missions,
-      this.scene,
-      player.x,
-      player.y
-    );
-    const check_mission = mission.check_mission();
-    if (check_mission) {
-      //blink blink marker
-      useButton.alpha = 1;
-    }
-    useButton.alpha = check_mission ? 1 : 0.5;
-
-
-    useButton.on("pointerup", function (e) {
+      const mission = new Mission(
+        "theSkeld",
+        map_missions,
+        export_missions,
+        this.scene,
+        player.x,
+        player.y
+      );
+      const check_mission = mission.check_mission();
       if (check_mission) {
-        launch_scene = true;
+        //blink blink marker
+        useButton.alpha = 1;
       }
-    });
+      useButton.alpha = check_mission ? 1 : 0.5;
 
-    if (launch_scene && launch_scene) {
-      this.scene.pause("game");
-      this.scene.launch(check_mission.scene, {
-        x: check_mission.x,
-        y: check_mission.y,
+
+      useButton.on("pointerup", function (e) {
+        if (check_mission) {
+          launch_scene = true;
+        }
       });
-      launch_scene = false;
+
+      if (launch_scene && launch_scene) {
+        this.scene.pause("game");
+        console.log('bfore');
+        this.scene.launch(check_mission.scene, {
+          x: check_mission.x,
+          y: check_mission.y,
+        });
+        this.scene.resume('game')
+        launch_scene = false;
+        console.log('after');
+      }
     }
+
+
 
     //
   };

@@ -90,7 +90,7 @@ class introCrew extends Phaser.Scene {
 
 }
 function Run(game) {
-    game.scene.launch('game', { socket: game.socket, textInput: game.textInput, numPlayers: game.numPlayers, idPlayers: game.idPlayers })
+    game.scene.launch('game', { socket: game.socket, textInput: game.textInput, numPlayers: game.numPlayers, idPlayers: game.idPlayers, isRole: isRole })
     game.scene.stop('introCrew');
     // console.log(game.scene);
 }
