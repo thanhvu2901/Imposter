@@ -51,7 +51,7 @@ import pet11 from "../../../assets/skin/Pets/pet11.png";
 import closeChangeSkin from "../../../assets/skin/close.png";
 import plusIcon from "../../../assets/skin/Games/plus.png";
 import minusIcon from "../../../assets/skin/Games/minus.png";
-
+import eventsCenter from "../../eventsCenter";
 const arrHats = [];
 const arrBackgroundHats = [];
 let hatChosen;
@@ -171,9 +171,7 @@ class ChangeSkin extends Phaser.Scene {
     let numberPlayerText;
     // group background, text, icons in Game
     let groupGame = this.add.group();
-    closeBtn.on("pointerdown", () => {
-      this.scene.stop("ChangeSkin");
-    });
+
 
     this.input.on(
       "gameobjectdown",
@@ -508,14 +506,21 @@ class ChangeSkin extends Phaser.Scene {
     );
 
     closeBtn.on("pointerdown", () => {
-      this.scene.stop("ChangeSkin");
-      this.scene.launch("waitingRoom", {
-        socket: this.socket,
-        textInput: this.textInput,
+      //  console.log(this.socket); 
+      eventsCenter.emit('update', {
         playerChangedSkin: playerChangedSkin,
         numberImposter: numberImposter,
         numberPlayer: numberPlayer
-      });
+      })
+      // this.scene.resume("waitingRoom", {
+      //   socket: this.socket,
+      //   textInput: this.textInput,
+      //   playerChangedSkin: playerChangedSkin,
+      //   numberImposter: numberImposter,
+      //   numberPlayer: numberPlayer,
+      // });
+
+      this.scene.stop("ChangeSkin");
     });
   }
 }

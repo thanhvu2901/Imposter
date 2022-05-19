@@ -49,7 +49,7 @@ class AlignEngineOutput extends Phaser.Scene {
                 check_y = dragY;
                 if (Math.floor(check_y) == 414) {
                     current_object.add.text(390, 250, "Mission Completed");
-                    // current_scene.start("game", {x: x, y: y, mission: "AlignEngineOutput"});
+                    current_scene.resume("game", { x: x, y: y, mission: "AlignEngineOutput" });
                     current_scene.stop("align_engine_output");
                 }
                 gameObject.x = 660;

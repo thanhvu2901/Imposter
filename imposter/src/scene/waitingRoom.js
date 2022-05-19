@@ -5,7 +5,7 @@ import playerpng from "../assets/player/player_sprite/player_base.png";
 import playerjson from "../assets/player/player_sprite/player_base.json";
 import { PLAYER_SPEED } from "../consts/constants";
 import { debugDraw } from "../scene/debugDraw";
-
+import eventsCenter from "./eventsCenter";
 let player;
 let cursors;
 
@@ -25,9 +25,12 @@ export default class waitingRoom extends Phaser.Scene {
   init(data) {
     this.socket = data.socket;
     this.textInput = data.textInput;
+
     this.playerChangedSkin = data.playerChangedSkin;
     this.numberImposter = data.numberImposter;
     this.numberPlayer = data.numberPlayer
+    // this.test = data.test
+
   }
   preload() {
     this.load.image("dropShip", dropShip);
@@ -35,9 +38,12 @@ export default class waitingRoom extends Phaser.Scene {
     this.load.atlas("playerbase", playerpng, playerjson);
 
     // console.log('preload');
+
   }
 
   create() {
+
+
     const lobby = this.make.tilemap({ key: "lobby" });
     const tileset = lobby.addTilesetImage("Dropship", "dropShip");
     const lobby_tileset = lobby.createLayer("Background", tileset);
@@ -224,16 +230,17 @@ export default class waitingRoom extends Phaser.Scene {
 
 
 
+
     customize.on('pointerdown', () => {
       // this.input.on('pointerdown', () => this.scene.start('ChangeSkin'))
-      this.scene.pause("waitingRoom");
+      // this.scene.pause("waitingRoom");
       this.scene.launch("ChangeSkin", { socket: this.socket, textInput: this.textInput });
       this.scene.bringToTop('ChangeSkin')
     })
 
     this.socket.on('gogame', ({ numPlayers, idPlayers }) => {
       //console.log(numPlayers);
-      this.scene.stop('waitingRoom')
+      // this.scene.stop('waitingRoom')
 
       // ********anouning ROLE****//
 
@@ -244,6 +251,22 @@ export default class waitingRoom extends Phaser.Scene {
       this.game.scene.stop('waitingRoom')
     })
 
+    eventsCenter.on('update', (data) => {
+      this.playerChangedSkin = data.playerChangedSkin;
+      this.numberImposter = data.numberImposter;
+      this.numberPlayer = data.numberPlayer
+    })
+    // this.events.on('resume', (data) => {
+    //   console.log('resume');
+    //   console.log(data);
+    //   this.socket = data.socket;
+    //   this.textInput = data.textInput;
+    //   this.playerChangedSkin = data.playerChangedSkin;
+    //   this.numberImposter = data.numberImposter;
+    //   this.numberPlayer = data.numberPlayer
+    //   ///  console.log(dataResume.test);
+
+    // })
   }
   update() {
     let playerMoved = false;

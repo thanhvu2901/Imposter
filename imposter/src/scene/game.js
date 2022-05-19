@@ -34,7 +34,7 @@ import CleanO2Filter_mission_marked from "../assets/tasks/Clean O2 Filter/marked
 import FixWiring_mission_marked from "../assets/tasks/Fix_Wiring/marked.png";
 import CleanAsteroids from "../assets/tasks/Clear Asteroids/marked.png";
 import StabilizeSteering from "../assets/tasks/Stabilize Steering/marked.png";
-
+import eventsCenter from "./eventsCenter";
 let player;
 let otherPlayer = new Array();
 let otherPlayerId = new Array();
@@ -77,9 +77,8 @@ class Game extends Phaser.Scene {
     this.numPlayers = data.numPlayers;
     this.idPlayers = data.idPlayers;
     this.isRole = data.isRole
-    current_x = data.x;
-    current_y = data.y;
-    mission_name = data.mission;
+
+
 
   }
 
@@ -115,11 +114,24 @@ class Game extends Phaser.Scene {
     this.load.image("CleanAsteroids", CleanAsteroids);
     this.load.image("StabilizeSteering", StabilizeSteering);
 
-    console.log('emit');
+
 
   }
 
   create() {
+
+    // this.events.on('resume', (data) => {
+    //   current_x = data.x;
+    //   current_y = data.y;
+    //   mission_name = data.mission;
+    //   console.log('in resume');
+    // })
+
+    eventsCenter.on('updateMission', (data) => {
+      current_x = data.x;
+      current_y = data.y;
+      mission_name = data.mission;
+    })
 
     const ship = this.make.tilemap({ key: "tilemap" });
     const tileset = ship.addTilesetImage("theSkeld", "tiles", 17, 17);

@@ -1,7 +1,7 @@
 import Phaser from "phaser";
 import fix from '../../../assets/img/fix_wiring/Fix_Wiring.png'
 import head1 from '../../../assets/tasks/Fix_Wiring/electricity_wires1.png'
-
+import eventsCenter from '../../eventsCenter'
 
 let isDragging = false;
 let lineStartPosition = { x: 0, y: 0 };
@@ -159,7 +159,10 @@ class FixWiring extends Phaser.Scene {
             // console.log('done');
             text3 = this.add.text(317, 327, 'TASK COMPLETE!!', { font: '50px Courier', fill: '#FFFFFF' }).setDepth(1);
             count = new Set([]);
-            current_scene.start("game", { x: x, y: y, mission: "FixWiring" });
+            current_scene.resume("game", { x: x, y: y, mission: "FixWiring" });
+            eventsCenter.emit('updateMission',
+                { x: x, y: y, mission: "FixWiring" }
+            )
             current_scene.stop("fixWiring");
 
         }

@@ -43,6 +43,7 @@ const config = {
     autoCenter: Phaser.Scale.CENTER_BOTH
   },
 
+
 };
 
 const game = new Phaser.Game(config);
