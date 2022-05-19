@@ -159,7 +159,7 @@ class FixWiring extends Phaser.Scene {
             // console.log('done');
             text3 = this.add.text(317, 327, 'TASK COMPLETE!!', { font: '50px Courier', fill: '#FFFFFF' }).setDepth(1);
             count = new Set([]);
-            current_scene.resume("game", { x: x, y: y, mission: "FixWiring" });
+           // current_scene.resume("game", { x: x, y: y, mission: "FixWiring" });
             eventsCenter.emit('updateMission',
                 { x: x, y: y, mission: "FixWiring" }
             )

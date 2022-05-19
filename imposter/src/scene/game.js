@@ -159,6 +159,8 @@ class Game extends Phaser.Scene {
 
 
     if (current_x && current_y) {
+      console.log(mission_name);
+
       map_missions.completed(mission_name);
       list_missions_completed.push(mission_name);
       total_missions_completed += 1;
