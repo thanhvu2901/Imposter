@@ -78,8 +78,6 @@ class Game extends Phaser.Scene {
     this.idPlayers = data.idPlayers;
     this.isRole = data.isRole
 
-
-
   }
 
   preload() {
@@ -491,7 +489,8 @@ class Game extends Phaser.Scene {
         //player.stop("player-idle")
         alive = false;
 
-        player.anims.play("player-dead");
+        //*****************LOOP HERE********************** */
+        player.anims.play("player-dead",false);
       } else {
         let index = otherPlayerId.findIndex((Element) => Element == playerId);
         otherPlayer[index].anims.play("player-dead", true);
@@ -504,13 +503,11 @@ class Game extends Phaser.Scene {
 
       kill.on("pointerdown", () => {
         //console.log();
-
         if (canKill) {
           this.sound.play('killAudio', false)
           playerKilled.anims.play("player-dead", true);
           this.socket.emit('killed', (otherPlayerId[indexKill]))
           otherPlayer = otherPlayer.filter(player => { return player !== playerKilled });
-
           console.log(otherPlayerId[indexKill]); // emit socket id player killed
           otherPlayerId = otherPlayerId.filter(player => { return player !== otherPlayerId[indexKill] });
           console.log("emitted");
