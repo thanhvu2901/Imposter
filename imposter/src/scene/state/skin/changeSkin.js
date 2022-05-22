@@ -51,18 +51,18 @@ import closeChangeSkin from "../../../assets/skin/close.png";
 import plusIcon from "../../../assets/skin/Games/plus.png";
 import minusIcon from "../../../assets/skin/Games/minus.png";
 import eventsCenter from "../../eventsCenter";
-import player1 from "../../../assets/skin/Player/idle-1.png";
-import player2 from "../../../assets/skin/Player/idle-2.png";
-import player3 from "../../../assets/skin/Player/idle-3.png";
-import player4 from "../../../assets/skin/Player/idle-4.png";
-import player5 from "../../../assets/skin/Player/idle-5.png";
-import player6 from "../../../assets/skin/Player/idle-6.png";
-import player7 from "../../../assets/skin/Player/idle-7.png";
-import player8 from "../../../assets/skin/Player/idle-8.png";
-import player9 from "../../../assets/skin/Player/idle-9.png";
-import player10 from "../../../assets/skin/Player/idle-10.png";
-import player11 from "../../../assets/skin/Player/idle-11.png";
-import player12 from "../../../assets/skin/Player/idle-12.png";
+import player0 from "../../../assets/skin/Player/idle-1.png";
+import player1 from "../../../assets/skin/Player/idle-2.png";
+import player2 from "../../../assets/skin/Player/idle-3.png";
+import player3 from "../../../assets/skin/Player/idle-4.png";
+import player4 from "../../../assets/skin/Player/idle-5.png";
+import player5 from "../../../assets/skin/Player/idle-6.png";
+import player6 from "../../../assets/skin/Player/idle-7.png";
+import player7 from "../../../assets/skin/Player/idle-8.png";
+import player8 from "../../../assets/skin/Player/idle-9.png";
+import player9 from "../../../assets/skin/Player/idle-10.png";
+import player10 from "../../../assets/skin/Player/idle-11.png";
+import player11 from "../../../assets/skin/Player/idle-12.png";
 
 const arrHats = [];
 const arrBackgroundHats = [];
@@ -148,6 +148,7 @@ class ChangeSkin extends Phaser.Scene {
     this.load.image("closeChangeSkin", closeChangeSkin);
     this.load.image("plusIcon", plusIcon);
     this.load.image("minusIcon", minusIcon);
+    this.load.image("player0", player0);
     this.load.image("player1", player1);
     this.load.image("player2", player2);
     this.load.image("player3", player3);
@@ -159,14 +160,13 @@ class ChangeSkin extends Phaser.Scene {
     this.load.image("player9", player9);
     this.load.image("player10", player10);
     this.load.image("player11", player11);
-    this.load.image("player12", player12);
   }
 
   create() {
     let current_object = this;
     const base = this.add.rectangle(500, 380, 600, 480, 0xaedfc0);
     const basePlayer = this.add.rectangle(350, 420, 280, 385, 0xa1b1ae);
-    let player = this.add.image(350, 460, "player1");
+    let player = this.add.image(350, 460, "player0");
     const closeBtn = this.add.image(760, 180, "closeChangeSkin");
     let groupHats = this.add.group();
     let groupHatsBackground = this.add.group();
@@ -530,8 +530,8 @@ class ChangeSkin extends Phaser.Scene {
         for (let i = 0; i < arrColor.length; i++) {
           if (gameObject === arrColor[i]) {
             player.destroy();
-            player = current_object.add.sprite(350, 460, `player${i + 1}`);
-            playerChangedSkin.color = arrColor[i];
+            player = current_object.add.sprite(350, 460, `player${i}`);
+            playerChangedSkin.player = player;
             if(trouserChosen){
               trouserChosen= current_object.add.sprite(360, 510, trouserChosen.texture.key);
               trouserChosen.scale = 1.9;
