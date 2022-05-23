@@ -211,7 +211,7 @@ class Game extends Phaser.Scene {
       frameQuantity: 70
     });
     //add use button
-    vent_butt = this.add.image(1000, 700, "button").setScrollFactor(0, 0).setInteractive().setAlpha(0.5)
+    vent_butt = this.add.image(1000, 700, "button").setScrollFactor(0, 0).setInteractive().setAlpha(0.5).setDepth(1)
     useButton = this.add
       .image(900, 700, "UseButton")
       .setScrollFactor(0, 0)
