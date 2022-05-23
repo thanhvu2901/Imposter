@@ -22,14 +22,13 @@ export default class JoinGame extends Phaser.Scene {
     create() {
 
 
-        let create = this.add.text(this.game.renderer.width * 0.4, this.game.renderer.height * 0.3, 'Create new room ', { font: '32px Courier', fill: '#ffffff' }).setInteractive({ cursor: 'pointer' })
-
+        let createPublic = this.add.text(this.game.renderer.width * 0.4, this.game.renderer.height * 0.25, 'Create new room PUBLIC ', { font: '32px Courier', fill: '#ffffff' }).setInteractive({ cursor: 'pointer' })
+        let createPrivate = this.add.text(this.game.renderer.width * 0.4, this.game.renderer.height * 0.30, 'Create new room PRIVATE ', { font: '32px Courier', fill: '#ffffff' }).setInteractive({ cursor: 'pointer' })
 
         let check = this.add.text(this.game.renderer.width * 0.4, this.game.renderer.height * 0.3 + 60, 'Enter room ID:', { font: '32px Courier', fill: '#ffffff' })
         var textEntry = this.add.text(this.game.renderer.width * 0.4, this.game.renderer.height * 0.3 + 105, '', { font: '32px Courier', fill: '#000000' });
         textEntry.setDepth(1)
         this.input.keyboard.on('keydown', function (event) {
-
             if (event.keyCode === 8 && textEntry.text.length > 0) {
                 textEntry.text = textEntry.text.substr(0, textEntry.text.length - 1);
             }
@@ -45,8 +44,12 @@ export default class JoinGame extends Phaser.Scene {
 
         let randomRoom = this.add.text(this.game.renderer.width * 0.4, this.game.renderer.height * 0.3 + 210, 'Random Room', { font: '32px Courier', fill: '#ffffff' }).setInteractive({ cursor: 'pointer' })
 
-        create.on('pointerdown', () => {
+        createPublic.on('pointerdown', () => {
             socket.emit("getRoomCode");
+
+        });
+        createPrivate.on('pointerdown', () => {
+            socket.emit("getRoomCodePrivate");
 
         });
 
