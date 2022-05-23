@@ -3,6 +3,8 @@ import tileImg from "../assets/img/theSkeld.png";
 import theskeld from "../assets/tilemaps/theskeld.json";
 import playerpng from "../assets/player/player_sprite/player_base.png";
 import playerjson from "../assets/player/player_sprite/player_base.json";
+import player_ghost from "../assets/player/Base/ghost/ghost.png"
+import player_ghost_json from "../assets/player/Base/ghost/ghost.json"
 import { debugDraw } from "../scene/debugDraw";
 import footStep from "../assets/audio/amination/Walk.mp3";
 import MapMissionsExporter from "../helper/map_mission_exporter";
@@ -89,6 +91,8 @@ class Game extends Phaser.Scene {
     this.load.image("UseButton", UseButton);
     this.load.image("KillButton", KillButton);
     this.load.atlas("playerbase", playerpng, playerjson);
+    this.load.atlas("ghost", player_ghost, player_ghost_json)
+
     this.load.image("vent_1", vent1);
     this.load.image("vent_2", vent2);
     this.load.image("vent_3", vent3);
@@ -274,6 +278,18 @@ class Game extends Phaser.Scene {
       }),
       repeat: 0,
       frameRate: 24,
+    });
+    //player ghost
+    this.anims.create({
+      key: "player-ghost",
+      frames: this.anims.generateFrameNames("ghost", {
+        start: 1,
+        end: 48,
+        prefix: "ghost00",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 32,
     });
     //input to control
     this.input.keyboard.on("keydown", (e) => {
@@ -681,6 +697,9 @@ class Game extends Phaser.Scene {
         launch_scene = false;
 
       }
+    }
+    else {
+
     }
     //
   };

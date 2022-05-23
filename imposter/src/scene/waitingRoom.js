@@ -3,6 +3,10 @@ import dropShip from "../assets/img/Dropship.png";
 import lobby from "../assets/tilemaps/lobby.json";
 import playerpng from "../assets/player/player_sprite/player_base.png";
 import playerjson from "../assets/player/player_sprite/player_base.json";
+
+import player_ghost from "../assets/player/Base/ghost/ghost.png"
+import player_ghost_json from "../assets/player/Base/ghost/ghost.json"
+
 import { PLAYER_SPEED } from "../consts/constants";
 import { debugDraw } from "../scene/debugDraw";
 
@@ -33,6 +37,7 @@ export default class waitingRoom extends Phaser.Scene {
     this.load.image("dropShip", dropShip);
     this.load.tilemapTiledJSON("lobby", lobby);
     this.load.atlas("playerbase", playerpng, playerjson);
+    this.load.atlas("ghost", player_ghost, player_ghost_json)
 
     // console.log('preload');
   }
@@ -97,12 +102,8 @@ export default class waitingRoom extends Phaser.Scene {
       repeat: -1,
       frameRate: 24,
     });
-    //input to control
-    this.input.keyboard.on("keydown", (e) => {
-      if (!pressedKeys.includes(e.code)) {
-        pressedKeys.push(e.code);
-      }
-    });
+
+
     this.input.keyboard.on("keyup", (e) => {
       pressedKeys = pressedKeys.filter((key) => key !== e.code);
     });
