@@ -2,7 +2,7 @@ import Phaser from "phaser";
 import base from '../../../assets/tasks/Stabilize Steering/nav_stabilize_base.png'
 import graph from '../../../assets/tasks/Stabilize Steering/nav_stabilize_graph.png'
 import target from '../../../assets/tasks/Stabilize Steering/nav_stabilize_target.png'
-
+import Event_Center from "../../../helper/event_center";
 
 let ibase, itarget, igraph, text;
 let done = false;
@@ -67,7 +67,7 @@ class StabilizeSteering extends Phaser.Scene {
     update() {
         if (done === true) {
             text = this.add.text(317, 327, 'TASK COMPLETE!!', { font: '50px Courier', fill: '#FFFFFF' }).setDepth(1);
-            current_scene.start("game", {x: x, y: y, mission: "StabilizeSteering"});
+            Event_Center.emit("continue_scene_game", {x: x, y: y, mission: "StabilizeSteering"});
             current_scene.stop("stabilizeSteering");   
         }
     }

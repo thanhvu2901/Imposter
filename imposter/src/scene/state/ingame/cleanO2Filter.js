@@ -13,6 +13,8 @@ import rightArrow1 from "../../../assets/tasks/Clean O2 Filter/rightArrow-o2_arr
 import leftComplete from "../../../assets/tasks/Clean O2 Filter/o2_arrowFinishedLeft.png";
 import rightComplete from "../../../assets/tasks/Clean O2 Filter/o2_arrowFinishedRight.png";
 
+import Event_Center from "../../../helper/event_center";
+
 let leaf_1, leaf_2, leaf_3, leaf_4, leaf_5, leaf_6, leaf_7;
 const TOTAL_LEAF = 7;
 let x;
@@ -83,8 +85,7 @@ class CleanO2Filter extends Phaser.Scene {
           current_object.add.image(80, 300, "leftComplete");
           current_object.add.image(140, 303, "rightComplete");
           current_object.add.text(290, 250, "Task Completed");
-
-          current_scene.start("game", {x: x, y: y, mission: "CleanO2Filter"});
+          Event_Center.emit("continue_scene_game", {x: x, y: y, mission: "CleanO2Filter"}); 
           current_scene.stop("CleanO2Filter"); 
         }
       }

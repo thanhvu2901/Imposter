@@ -16,6 +16,7 @@ import CleanAsteroids from "../assets/tasks/Clear Asteroids/marked.png";
 import StabilizeSteering from "../assets/tasks/Stabilize Steering/marked.png";
 
 import { movePlayer } from "../animation/movement.js";
+import Event_Center from "../helper/event_center";
 
 import { io } from 'socket.io-client';
 import {
@@ -46,6 +47,7 @@ class Game extends Phaser.Scene {
     current_y = data.y;
     mission_name = data.mission;
   }
+
   constructor() {
     super({ key: 'game' });
   }
@@ -66,6 +68,23 @@ class Game extends Phaser.Scene {
   }
 
   create() {
+
+    Event_Center.on("continue_scene_game", (data) => {
+      current_x = data.x;
+      current_y = data.y;
+      mission_name = data.mission;
+      if(current_x && current_y) {
+        map_missions.completed(mission_name);
+        list_missions_completed.push(mission_name);
+        total_missions_completed += 1;
+        map_missions.count_missions_completed(total_missions_completed);
+        map_missions.update_list_missions_completed(list_missions_completed)
+        player.x = current_x + 2;
+        player.y = current_y + 2;
+        // player.setPosition(current_x, current_y);
+      }
+    })
+
     current_scene = this.scene;
     const ship = this.make.tilemap({ key: "tilemap" });
     const tileset = ship.addTilesetImage("theSkeld", "tiles");
@@ -86,16 +105,7 @@ class Game extends Phaser.Scene {
     //add player
     player = this.physics.add.sprite(250, 328, "playerbase", "idle.png");
   
-    if(current_x && current_y) {
-      map_missions.completed(mission_name);
-      list_missions_completed.push(mission_name);
-      total_missions_completed += 1;
-      map_missions.count_missions_completed(total_missions_completed);
-      map_missions.update_list_missions_completed(list_missions_completed)
-      player.x = current_x + 2;
-      player.y = current_y + 2;
-      // player.setPosition(current_x, current_y);
-    }
+
     // tạo theo số lượng other player vào
     otherPlayer = this.physics.add.sprite(250, 228, "playerbase", "idle.png");
     //****************** */
@@ -244,7 +254,6 @@ class Game extends Phaser.Scene {
 
     if(launch_scene)
     {
-      this.scene.pause("game");
       mission_name = check_mission.scene
       this.scene.launch(check_mission.scene, {x: check_mission.x, y: check_mission.y});
       launch_scene = false;

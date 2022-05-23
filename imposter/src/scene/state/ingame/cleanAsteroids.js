@@ -12,6 +12,8 @@ import asteroid4 from "../../../assets/tasks/Clear Asteroids/weapons_asteroid4.p
 import asteroid4X from "../../../assets/tasks/Clear Asteroids/weapons_asteroid4X.png";
 import asteroid5 from "../../../assets/tasks/Clear Asteroids/weapons_asteroid5.png";
 import asteroid5X from "../../../assets/tasks/Clear Asteroids/weapons_asteroid5X.png";
+import Event_Center from "../../../helper/event_center";
+
 
 let asteroid_1, asteroid_2, asteroid_3;
 const listItem = [];
@@ -140,8 +142,7 @@ class CleanAsteroids extends Phaser.Scene {
         current_object.asteroid2.destroy();
         current_object.asteroid3.destroy();
         current_object.add.text(250, 300, "Task Complete");
-
-        current_scene.start("game", {x: x, y: y, mission: "CleanAsteroids"});
+        Event_Center.emit("continue_scene_game", {x: x, y: y, mission: "CleanAsteroids"});
         current_scene.stop("CleanAsteroids"); 
       }
     });
