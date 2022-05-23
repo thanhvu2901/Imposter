@@ -536,6 +536,10 @@ class ChangeSkin extends Phaser.Scene {
               trouserChosen= current_object.add.sprite(360, 510, trouserChosen.texture.key);
               trouserChosen.scale = 1.9;
             }
+            if(hatChosen){
+              hatChosen = current_object.add.sprite(345, 350, hatChosen.texture.key);
+              hatChosen.scale = 1.5;
+            }
             break;
           }
         }
