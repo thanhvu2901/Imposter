@@ -470,7 +470,7 @@ class Game extends Phaser.Scene {
       }
     });
 
-    //update if killed
+    //update if killed ==>> ************************TO GHOST*******************
     this.socket.on("updateOtherPlayer", (playerId) => {
       console.log(this.socket.id);
       console.log(playerId);
