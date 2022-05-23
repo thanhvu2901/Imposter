@@ -19,6 +19,7 @@ import facebook from '../assets/img/fb.png'
 import fix from '../assets/img/fix_wiring/Fix_Wiring.png'
 import useBtn from '../assets/img/useButton.png'
 import closeBtn from '../assets/img/closeButton.png'
+import sabotage from '../assets/img/sabotage.png'
 import customizeBtn from '../assets/img/customize.png'
 import startBtn from '../assets/img/startButton.png'
 import dead from '../assets/player/Dead.png'
@@ -94,6 +95,7 @@ class Preloader extends Phaser.Scene {
     this.load.image('fix', fix)
     this.load.image('useBtn', useBtn)
     this.load.image('closeBtn', closeBtn)
+    this.load.image('sabotage', sabotage)
     this.load.image('startBtn', startBtn);
     this.load.image('customizeBtn', customizeBtn)
     this.load.image('dead', dead)

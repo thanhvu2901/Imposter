@@ -206,7 +206,8 @@ class Game extends Phaser.Scene {
       frameQuantity: 70
     });
     //add use button
-    vent_butt = this.add.image(1000, 700, "button").setScrollFactor(0, 0).setInteractive().setAlpha(0.5)
+    vent_butt = this.add.image(1000, 700, "button").setScrollFactor(0, 0).setInteractive().setAlpha(0)
+    let sabotage = this.add.image(1000, 700, "sabotage").setScrollFactor(0, 0).setInteractive().setAlpha(1)
     useButton = this.add
       .image(900, 700, "UseButton")
       .setScrollFactor(0, 0)
@@ -394,13 +395,15 @@ class Game extends Phaser.Scene {
       //hiện nút nhảy vent với điều kiện là player overlap với vent
       if (is_vent) {
         vent_butt.alpha = 1
+        sabotage.alpha = 0
       }
     });
     //bắt sự kiện khi player đi ra khỏi vùng overlap
     player.on("overlapend", function () {
       //ẩn nút nhảy vent
       is_vent = false
-      vent_butt.alpha = 0.5
+      vent_butt.alpha = 0
+      sabotage.alpha = 1
     });
 
     //thực hiện hàm circleOverlap khi player tới gần vent
