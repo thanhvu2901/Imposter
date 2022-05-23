@@ -50,6 +50,7 @@ const game = new Phaser.Game(config);
 
 game.scene.add("preloader", preloader);
 game.scene.add("menu", MainMenuScene);
+game.scene.add('joinGame', JoinGame)
 game.scene.add('introCrew', introCrew)
 game.scene.add('introImposter', introImposter)
 game.scene.add("theskeld", TheSkeld);
@@ -76,12 +77,12 @@ game.scene.add("ChangeSkin", ChangeSkin);
 game.scene.add('inspectSample', InspectSample)
 game.scene.add('stabilizeSteering', StabilizeSteering)
 game.scene.add('startReactor', StartReactor)
-game.scene.add('joinGame', JoinGame)
+
 game.scene.add('waitingRoom', waitingRoom)
 
 game.scene.add("divert_power", DivertPower)
 // start title
-
+//game.scene.start("joinGame");
 game.scene.start("preloader");
 // game.scene.start("theskeld");
 //game.scene.start('menu');
@@ -103,6 +104,6 @@ game.scene.start("preloader");
 // game.scene.start('stabilizeSteering');
 // game.scene.start('startReactor')
 
-game.scene.start('preloader');
+//game.scene.start('preloader');
 //game.scene.start("align_engine_output")
 
