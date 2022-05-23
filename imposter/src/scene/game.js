@@ -35,6 +35,7 @@ import FixWiring_mission_marked from "../assets/tasks/Fix_Wiring/marked.png";
 import CleanAsteroids from "../assets/tasks/Clear Asteroids/marked.png";
 import StabilizeSteering from "../assets/tasks/Stabilize Steering/marked.png";
 
+import Light from "../scene//state/ingame/ray-light"
 let player;
 let otherPlayer = new Array();
 let otherPlayerId = new Array();
@@ -57,7 +58,7 @@ let canKill = false;
 let alive = true;
 let kill;
 let vent_map = new Map()
-
+let light
 let vent_group, arrow_group, vent_cord = new Map(), vent_des = new Map()
 let temp, key, is_vent = false, is_jump = false, is_hidden = false, keyboard
 let count = 0
@@ -121,6 +122,10 @@ class Game extends Phaser.Scene {
 
   create() {
 
+    //this.scene.pause('game')
+    // let intro = this.scene.launch('introCrew', { isRole: isRole }).bringToTop('introCrew')
+
+    light =new Light(this)
     const ship = this.make.tilemap({ key: "tilemap" });
     const tileset = ship.addTilesetImage("theSkeld", "tiles", 17, 17);
     const ship_tileset = ship.createLayer("Background", tileset);
@@ -333,32 +338,8 @@ class Game extends Phaser.Scene {
           this.physics.add.collider(player, tableObject);
           break;
         case "vent":
-          // ventObject = new Phaser.GameObjects.Rectangle(
-          //   this,
-          //   object.x,
-          //   object.y,
-          //   object.width,
-          //   object.height,
-          //   0xff0000,
-          //   1
-          // );
-
-          // this.physics.add.existing(ventObject);
-          // ventObject.body.immovable = true;
-          // ventObject.setOrigin(0, 0);
-          // var cir = this.add.circle(
-          //   object.x + object.width * 0.5,
-          //   object.y + object.height * 0.5,
-          //   object.width * 0.75,
-          //   0xff0000,
-          //   0.4
-          // );
-          // this.physics.add.existing(cir);
-          // cir.body.immovable = true;
-          // this.physics.add.overlap(player, cir, circleOverlap, null, this);
-          // cir.setOrigin(0, 0);
           //gán vị trí cho từng phần tử con của group vent 
-          children[i].setPosition(object.x, object.y - 10).setOrigin(0, 0).setScale(1.2)
+          children[i].setPosition(object.x, object.y - 10).setOrigin(0, 0).setScale(1.2).setDepth(-1)
           i++
           break;
         case "arrow":
@@ -380,12 +361,18 @@ class Game extends Phaser.Scene {
           vent_des.get(object.name.split(" ")[1]).push(children_1[j])
           j++
           break
-        default:
+       case "bound": 
+       let temp = this.add.rectangle(object.x,object.y,object.width,object.height).setAngle(object.rotation).setOrigin(0,0).setDepth(29)
+         light.map(temp)
+          break;
+          default:
           break;
       }
     });
     vent_group.refresh()
-
+    light.createFOV()
+    light.draw()
+    
     //ẩn hết các arrow của vent sau khi khởi tạo
     arrow_group.setVisible(false)
 
@@ -486,8 +473,8 @@ class Game extends Phaser.Scene {
 
   }
   update() {
+    light.update(player)
     if (this.isRole == 1) {
-
       kill.on("pointerdown", () => {
         //console.log();
 
@@ -522,7 +509,7 @@ class Game extends Phaser.Scene {
       //để tránh xung đột với animation idle khi vào vent thì ta sẽ delay animation idle lại để player thực hiện nhảy vent và sau đó ẩn player đi 
       if (is_vent == true && is_jump == true) {
         count++
-        if (count == 40) {
+        if (count == 10) {
           check(player)
           is_jump = false
           count = 0

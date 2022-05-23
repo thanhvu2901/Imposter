@@ -42,7 +42,17 @@ const config = {
     mode: Phaser.Scale.FIT,
     autoCenter: Phaser.Scale.CENTER_BOTH
   },
-
+  
+  //enable Phaser-raycaster plugin
+  plugins: {
+    scene: [
+      {
+        key: 'PhaserRaycaster',
+        plugin: PhaserRaycaster,
+        mapping: 'raycasterPlugin'
+      }
+    ]
+  }
 };
 
 const game = new Phaser.Game(config);
