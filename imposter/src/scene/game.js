@@ -128,7 +128,7 @@ class Game extends Phaser.Scene {
     // debugDraw(ship_tileset, this);
 
     //add player
-    player = this.physics.add.sprite(115, -700, "playerbase", "idle.png");
+    player = this.physics.add.sprite(115, -700, "playerbase", "idle.png").setDepth(0.6);
 
 
     if (current_x && current_y) {
@@ -211,7 +211,7 @@ class Game extends Phaser.Scene {
       { key: 'vent_6' },
       { key: 'vent_1' }
       ],
-      frameRate: 23,
+      frameRate: 10,
       repeat: 0
     });
     //chỉnh vị trí từng frame trong animation cho phù hợp
@@ -233,7 +233,7 @@ class Game extends Phaser.Scene {
       { key: 'jump_6' },
       { key: 'jump_7' }
       ],
-      frameRate: 24,
+      frameRate: 36,
       repeat: 0
     });
     //animation player
@@ -254,7 +254,7 @@ class Game extends Phaser.Scene {
       key: "player-dead",
       frames: this.anims.generateFrameNames("playerbase", {
         start: 1,
-        end: 12,
+        end: 42,
         prefix: "Dead",
         suffix: ".png",
       }),
@@ -344,7 +344,7 @@ class Game extends Phaser.Scene {
           break;
         case "vent":
           //gán vị trí cho từng phần tử con của group vent 
-          children[i].setPosition(object.x, object.y - 10).setOrigin(0, 0).setScale(1.2).setDepth(-1)
+          children[i].setPosition(object.x, object.y - 10).setOrigin(0, 0).setScale(1.2).setDepth(0.5)
           i++
           break;
         case "arrow":
@@ -405,7 +405,7 @@ class Game extends Phaser.Scene {
       this.sound.play('vent', false)
       if (is_vent) {
         temp.play("hole")
-        player.anims.play("jump");
+        player.anims.play("jump",true);
         is_jump = true
         //nếu player không trốn vent thì is_hidden sẽ chuyển thành true và ngược lại
         if (is_hidden == true) {
@@ -593,7 +593,7 @@ class Game extends Phaser.Scene {
       }
     }
     //canKill = false
-    if (alive == true) {
+    if (alive == false) {
       let playerMoved = false;
       player.setVelocity(0);
 
