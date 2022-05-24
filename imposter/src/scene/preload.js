@@ -47,6 +47,8 @@ import jump7 from "../assets/img/jump vent/Vent0007.png";
 import vent_button from "../assets/img/vent_button.png"
 import UseButton from "../assets/tasks/Align Engine Output/Use.webp.png";
 
+import guideMap from "../assets/img/guideMap.png"
+
 import SubMenu from "./submenu";
 
 import {
@@ -121,6 +123,7 @@ class Preloader extends Phaser.Scene {
     this.load.image('startBtn', startBtn);
     this.load.image('customizeBtn', customizeBtn)
     this.load.image('dead', dead)
+    this.load.image('guideMap', guideMap)
 
     this.load.image("vent_1", vent1);
     this.load.image("vent_2", vent2);
