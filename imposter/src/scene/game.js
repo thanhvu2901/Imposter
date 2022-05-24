@@ -6,7 +6,7 @@ import playerjson from "../assets/player/player_sprite/player_base.json";
 import player_ghost from "../assets/player/Base/ghost/ghost.png"
 import player_ghost_json from "../assets/player/Base/ghost/ghost.json"
 import { debugDraw } from "../scene/debugDraw";
-import footStep from "../assets/audio/amination/Walk.mp3";
+
 import MapMissionsExporter from "../helper/map_mission_exporter";
 import Mission from "../services/missions/mission";
 import UseButton from "../assets/tasks/Align Engine Output/Use.webp.png";
@@ -108,7 +108,7 @@ class Game extends Phaser.Scene {
     this.load.image("jump_5", jump5, 36, 40);
     this.load.image("jump_6", jump6, 36, 40);
     this.load.image("jump_7", jump7, 36, 40);
-    this.load.audio("walk", footStep);
+
     this.load.image("button", vent_button)
     this.load.image("arrow", arrow)
     this.load.image(
@@ -305,10 +305,20 @@ class Game extends Phaser.Scene {
     //input to control
     this.input.keyboard.on("keydown", (e) => {
       if (!pressedKeys.includes(e.code)) {
-        this.sound.play("walk", { loop: true });
+
         pressedKeys.push(e.code);
       }
     });
+    this.input.keyboard.on('keydown', (e) => {
+      if (
+        e.code == 'ArrowDown' ||
+        e.code == 'ArrowUp' ||
+        e.code == 'ArrowRight' ||
+        e.code == 'ArrowLeft'
+      ) {
+        this.sound.play('walk', { loop: true })
+      }
+    })
     this.input.keyboard.on("keyup", (e) => {
       this.sound.stopByKey("walk");
       pressedKeys = pressedKeys.filter((key) => key !== e.code);
@@ -420,7 +430,9 @@ class Game extends Phaser.Scene {
     //bắt sự kiện button nhảy vent
     vent_butt.on('pointerdown', function (pointer) {
       //nếu tới gần vent thì sẽ đi vào vòng if
+      this.sound.play('vent', false)
       if (is_vent) {
+
         temp.play("hole")
         player.anims.play("jump");
         is_jump = true
@@ -431,7 +443,6 @@ class Game extends Phaser.Scene {
           arrow_group.setVisible(false)
         } else {
           is_hidden = true
-
         }
       }
 

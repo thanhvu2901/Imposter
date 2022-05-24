@@ -24,6 +24,8 @@ import customizeBtn from '../assets/img/customize.png'
 import startBtn from '../assets/img/startButton.png'
 import dead from '../assets/player/Dead.png'
 import killAudio from '../assets/audio/kill/impostor_kill.wav'
+import footStep from "../assets/audio/amination/Walk.mp3";
+import ventOpen from "../assets/audio/vent/Vent_open.mp3";
 
 import SubMenu from "./submenu";
 
@@ -102,8 +104,8 @@ class Preloader extends Phaser.Scene {
 
     //audio
     this.load.audio('killAudio', killAudio)
-
-
+    this.load.audio("walk", footStep);
+    this.load.audio("vent", ventOpen);
 
 
     this.load.spritesheet("player_1", playerSprite, {

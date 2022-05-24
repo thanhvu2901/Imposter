@@ -90,22 +90,23 @@ export default class waitingRoom extends Phaser.Scene {
       frameRate: 16,
     });
 
-    //player death
-    this.anims.create({
-      key: "player-dead",
-      frames: this.anims.generateFrameNames("playerbase", {
-        start: 1,
-        end: 42,
-        prefix: "Dead",
-        suffix: ".png",
-      }),
-      repeat: -1,
-      frameRate: 24,
-    });
+    this.input.keyboard.on('keydown', (e) => {
+      if (
+        e.code == 'ArrowDown' ||
+        e.code == 'ArrowUp' ||
+        e.code == 'ArrowRight' ||
+        e.code == 'ArrowLeft'
+      ) {
+        this.sound.play('walk', { loop: true })
+      }
+    })
 
 
     this.input.keyboard.on("keyup", (e) => {
+      this.sound.stopByKey("walk");
+      console.log(e.code);
       pressedKeys = pressedKeys.filter((key) => key !== e.code);
+
     });
 
     this.physics.add.collider(player, lobby_tileset);
