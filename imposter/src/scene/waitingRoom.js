@@ -4,10 +4,17 @@ import lobby from "../assets/tilemaps/lobby.json";
 
 import playerpng from "../assets/player/player_sprite/player_base.png";
 import playerjson from "../assets/player/player_sprite/player_base.json";
+
+// Player color
+import playerpng_red from "../assets/player/player_sprite/player_base_red.png";
+import playerjson_red from "../assets/player/player_sprite/player_base_red.json";
+import playerpng_blue from "../assets/player/player_sprite/player_base_blue.png";
+import playerjson_blue from "../assets/player/player_sprite/player_base_blue.json";
+
 import Archaeologist_Walk_png from "../assets/player/player_sprite/Archaeologist_Walk.png";
 import Archaeologist_Walk_json from "../assets/player/player_sprite/Archaeologist_Walk.json";
 
-import { PLAYER_SPEED } from "../consts/constants";
+import { PLAYER_SPEED, PLAYER_BLUE, PLAYER_RED } from "../consts/constants";
 import { debugDraw } from "../scene/debugDraw";
 import eventsCenter from "./eventsCenter";
 let player;
@@ -20,6 +27,7 @@ let socket, r;
 var objectsLayer;
 let pressedKeys = [];
 let stt = 0;
+var color = "";
 export default class waitingRoom extends Phaser.Scene {
   constructor() {
     super({
@@ -40,6 +48,11 @@ export default class waitingRoom extends Phaser.Scene {
     this.load.image("dropShip", dropShip);
     this.load.tilemapTiledJSON("lobby", lobby);
     this.load.atlas("playerbase", playerpng, playerjson);
+
+    //Player color
+    this.load.atlas(PLAYER_RED, playerpng_red, playerjson_red);
+    this.load.atlas(PLAYER_BLUE, playerpng_blue, playerjson_blue);
+
     this.load.atlas(
       "archaeologist_walk",
       Archaeologist_Walk_png,
@@ -68,13 +81,23 @@ export default class waitingRoom extends Phaser.Scene {
     //cursor to direct
     cursors = this.input.keyboard.createCursorKeys();
 
-    player = this.physics.add.sprite(-45, 26, "playerbase", "idle.png");
-    pants_skin = this.physics.add.sprite(
-      player.x,
-      player.y,
-      "archaeologist_walk",
-      "Archaeologist_Spawn0051.png"
-    );
+    var color_code = 1;
+    if (color_code == 1) {
+      console.log("blue");
+      player = this.physics.add.sprite(-45, 26, PLAYER_BLUE, "idle.png");
+      color = "blue"
+    } else {
+      player = this.physics.add.sprite(-45, 26, PLAYER_RED, "idle.png");
+      color = "red"
+      console.log("red");
+    }
+
+    // pants_skin = this.physics.add.sprite(
+    //   player.x,
+    //   player.y,
+    //   "archaeologist_walk",
+    //   "Archaeologist_Spawn0051.png"
+    // );
     // tạo theo số lượng other player vào
 
     for (let i = 0; i < otherPlayerId.length; i++) {
@@ -92,10 +115,48 @@ export default class waitingRoom extends Phaser.Scene {
       frames: [{ key: "playerbase", frame: "idle.png" }],
     });
 
+    //Red
+    this.anims.create({
+      key: "player-idle_red",
+      frames: [{ key: PLAYER_RED, frame: "idle.png" }],
+    });
+
+    //Blue
+    this.anims.create({
+      key: "player-idle_blue",
+      frames: [{ key: PLAYER_BLUE, frame: "idle.png" }],
+    });
+
     //animation player
     this.anims.create({
       key: "player-walk",
       frames: this.anims.generateFrameNames("playerbase", {
+        start: 1,
+        end: 12,
+        prefix: "Walk",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 16,
+    });
+
+    //Red
+    this.anims.create({
+      key: "player-walk_red",
+      frames: this.anims.generateFrameNames(PLAYER_RED, {
+        start: 1,
+        end: 12,
+        prefix: "Walk",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 16,
+    });
+
+    //Blue
+    this.anims.create({
+      key: "player-walk_blue",
+      frames: this.anims.generateFrameNames(PLAYER_BLUE, {
         start: 1,
         end: 12,
         prefix: "Walk",
@@ -129,6 +190,33 @@ export default class waitingRoom extends Phaser.Scene {
       repeat: -1,
       frameRate: 24,
     });
+
+    //Red
+    this.anims.create({
+      key: "player-dead_red",
+      frames: this.anims.generateFrameNames(PLAYER_RED, {
+        start: 1,
+        end: 42,
+        prefix: "Dead",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    //Blue
+    this.anims.create({
+      key: "player-dead_blue",
+      frames: this.anims.generateFrameNames(PLAYER_BLUE, {
+        start: 1,
+        end: 42,
+        prefix: "Dead",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
     //input to control
     this.input.keyboard.on("keydown", (e) => {
       if (!pressedKeys.includes(e.code)) {
@@ -295,30 +383,30 @@ export default class waitingRoom extends Phaser.Scene {
     //   ///  console.log(dataResume.test);
 
     // })
-    pants_skin.anims.play("archaeologist_walk");
   }
   update() {
     // pants_skin.setPosition(this.player.x, this.player.y);
     let playerMoved = false;
     player.setVelocity(0);
+    var suffix = (color == "blue" ? "blue" : "red");
     if (
       !cursors.left.isDown &&
       !cursors.right.isDown &&
       !cursors.up.isDown &&
       !cursors.down.isDown
     ) {
-      player.anims.play("player-idle");
+      player.anims.play("player-idle_" + suffix);
     }
 
     // when move
     if (cursors.left.isDown) {
-      player.anims.play("player-walk", true);
+      player.anims.play("player-walk_" + suffix, true);
       player.setVelocityX(-PLAYER_SPEED);
       player.scaleX = -1;
       player.body.offset.x = 40;
       playerMoved = true;
     } else if (cursors.right.isDown) {
-      player.anims.play("player-walk", true);
+      player.anims.play("player-walk_" + suffix, true);
       player.setVelocityX(PLAYER_SPEED);
       player.scaleX = 1;
       player.body.offset.x = 0;
@@ -326,11 +414,11 @@ export default class waitingRoom extends Phaser.Scene {
     }
 
     if (cursors.up.isDown) {
-      player.anims.play("player-walk", true);
+      player.anims.play("player-walk_" + suffix, true);
       player.setVelocityY(-PLAYER_SPEED);
       playerMoved = true;
     } else if (cursors.down.isDown) {
-      player.anims.play("player-walk", true);
+      player.anims.play("player-walk_" + suffix, true);
       player.setVelocityY(PLAYER_SPEED);
       playerMoved = true;
     }

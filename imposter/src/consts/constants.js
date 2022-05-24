@@ -7,3 +7,8 @@ export const PLAYER_START_Y = -50;
 export const PLAYER_SPEED = 250;
 export const SHIP_WIDTH = 4320;
 export const SHIP_HEIGHT = 2502;
+
+
+// Player colors
+export const PLAYER_BLUE = "player_base_blue";
+export const PLAYER_RED = "player_base_red";
