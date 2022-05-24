@@ -3,6 +3,10 @@ import tileImg from "../assets/img/theSkeld.png";
 import theskeld from "../assets/tilemaps/theskeld.json";
 import playerpng from "../assets/player/player_sprite/player_base.png";
 import playerjson from "../assets/player/player_sprite/player_base.json";
+
+import Archaeologist_Walk_png from "../assets/player/player_sprite/Archaeologist_Walk.png";
+import Archaeologist_Walk_json from "../assets/player/player_sprite/Archaeologist_Walk.json";
+
 import { debugDraw } from "../scene/debugDraw";
 import footStep from "../assets/audio/amination/Walk.mp3";
 import MapMissionsExporter from "../helper/map_mission_exporter";
@@ -85,7 +89,10 @@ class Game extends Phaser.Scene {
     this.load.tilemapTiledJSON("tilemap", theskeld);
     this.load.image("UseButton", UseButton);
     this.load.image("KillButton", KillButton);
+
     this.load.atlas("playerbase", playerpng, playerjson);
+    this.load.atlas("Archaeologist_Walk", Archaeologist_Walk_png, Archaeologist_Walk_json);
+
     this.load.image("vent_1", vent1);
     this.load.image("vent_2", vent2);
     this.load.image("vent_3", vent3);
