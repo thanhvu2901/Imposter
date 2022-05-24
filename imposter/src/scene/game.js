@@ -1,5 +1,5 @@
 import Phaser, { Scene } from "phaser";
-import tileImg from "../assets/img/theSkeld.png";
+
 import theskeld from "../assets/tilemaps/theskeld.json";
 import playerpng from "../assets/player/player_sprite/player_base.png";
 import playerjson from "../assets/player/player_sprite/player_base.json";
@@ -9,25 +9,11 @@ import { debugDraw } from "../scene/debugDraw";
 
 import MapMissionsExporter from "../helper/map_mission_exporter";
 import Mission from "../services/missions/mission";
-import UseButton from "../assets/tasks/Align Engine Output/Use.webp.png";
+
 import AlignEngineOutput_mission_marked from "../assets/tasks/Align Engine Output/mission_marked.png";
-import KillButton from "../assets/img/killButton.png";
-import vent1 from "../assets/img/jump vent/vent1.png";
-import vent2 from "../assets/img/jump vent/vent2.png";
-import vent3 from "../assets/img/jump vent/vent3.png";
-import vent4 from "../assets/img/jump vent/vent4.png";
-import vent5 from "../assets/img/jump vent/vent5.png";
-import vent6 from "../assets/img/jump vent/vent6.png";
-import jump1 from "../assets/img/jump vent/Vent0001.png";
-import jump2 from "../assets/img/jump vent/vent0002.png";
-import jump3 from "../assets/img/jump vent/Vent0003.png";
-import jump4 from "../assets/img/jump vent/Vent0004.png";
-import jump5 from "../assets/img/jump vent/vent0005.png";
-import jump6 from "../assets/img/jump vent/Vent0006.png";
-import jump7 from "../assets/img/jump vent/Vent0007.png";
-import vent_button from "../assets/img/vent_button.png"
-import arrow from "../assets/img/arrow.png"
-import { io } from "socket.io-client";
+
+
+
 import { PLAYER_SPEED } from "../consts/constants";
 
 //marked mission
@@ -88,29 +74,15 @@ class Game extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image("tiles", tileImg);
+
     this.load.tilemapTiledJSON("tilemap", theskeld);
-    this.load.image("UseButton", UseButton);
-    this.load.image("KillButton", KillButton);
+
+
     this.load.atlas("playerbase", playerpng, playerjson);
     this.load.atlas("ghost", player_ghost, player_ghost_json)
 
-    this.load.image("vent_1", vent1);
-    this.load.image("vent_2", vent2);
-    this.load.image("vent_3", vent3);
-    this.load.image("vent_4", vent4);
-    this.load.image("vent_5", vent5);
-    this.load.image("vent_6", vent6);
-    this.load.image("jump_1", jump1, 36, 40);
-    this.load.image("jump_2", jump2, 36, 40);
-    this.load.image("jump_3", jump3, 36, 40);
-    this.load.image("jump_4", jump4, 36, 40);
-    this.load.image("jump_5", jump5, 36, 40);
-    this.load.image("jump_6", jump6, 36, 40);
-    this.load.image("jump_7", jump7, 36, 40);
 
-    this.load.image("button", vent_button)
-    this.load.image("arrow", arrow)
+
     this.load.image(
       "AlignEngineOutput_mission_marked",
       AlignEngineOutput_mission_marked
@@ -121,7 +93,7 @@ class Game extends Phaser.Scene {
     this.load.image("CleanAsteroids", CleanAsteroids);
     this.load.image("StabilizeSteering", StabilizeSteering);
 
-    console.log('emit');
+
 
   }
 
@@ -261,7 +233,7 @@ class Game extends Phaser.Scene {
       { key: 'jump_6' },
       { key: 'jump_7' }
       ],
-      frameRate: 6,
+      frameRate: 24,
       repeat: 0
     });
     //animation player
@@ -274,7 +246,7 @@ class Game extends Phaser.Scene {
         suffix: ".png",
       }),
       repeat: -1,
-      frameRate: 32,
+      frameRate: 24,
     });
 
     //player death
@@ -428,20 +400,21 @@ class Game extends Phaser.Scene {
     //thực hiện hàm circleOverlap khi player tới gần vent
     this.physics.add.overlap(player, vent_group, circleOverlap);
     //bắt sự kiện button nhảy vent
-    vent_butt.on('pointerdown', function (pointer) {
+    vent_butt.on('pointerdown', () => {
       //nếu tới gần vent thì sẽ đi vào vòng if
       this.sound.play('vent', false)
       if (is_vent) {
-
         temp.play("hole")
         player.anims.play("jump");
         is_jump = true
         //nếu player không trốn vent thì is_hidden sẽ chuyển thành true và ngược lại
         if (is_hidden == true) {
           is_hidden = false
+
           //ẩn hết arrow khi player rời khỏi vent
           arrow_group.setVisible(false)
         } else {
+
           is_hidden = true
         }
       }

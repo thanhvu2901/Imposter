@@ -4,9 +4,6 @@ import lobby from "../assets/tilemaps/lobby.json";
 import playerpng from "../assets/player/player_sprite/player_base.png";
 import playerjson from "../assets/player/player_sprite/player_base.json";
 
-import player_ghost from "../assets/player/Base/ghost/ghost.png"
-import player_ghost_json from "../assets/player/Base/ghost/ghost.json"
-
 import { PLAYER_SPEED } from "../consts/constants";
 import { debugDraw } from "../scene/debugDraw";
 
@@ -15,8 +12,6 @@ let cursors;
 
 let otherPlayer = new Array();
 let otherPlayerId = new Array();
-let socket, r;
-var objectsLayer;
 let pressedKeys = [];
 let stt = 0
 export default class waitingRoom extends Phaser.Scene {
@@ -37,7 +32,7 @@ export default class waitingRoom extends Phaser.Scene {
     this.load.image("dropShip", dropShip);
     this.load.tilemapTiledJSON("lobby", lobby);
     this.load.atlas("playerbase", playerpng, playerjson);
-    this.load.atlas("ghost", player_ghost, player_ghost_json)
+
 
     // console.log('preload');
   }
@@ -114,7 +109,6 @@ export default class waitingRoom extends Phaser.Scene {
     this.cameras.main.startFollow(player, true);
 
     //tải lại mới khi có player mới vào có các player đã ở trong đó
-    console.log(this.textInput);
     this.socket.emit("joinRoom", this.textInput);
 
     this.socket.on("setState", (states) => {
@@ -122,7 +116,7 @@ export default class waitingRoom extends Phaser.Scene {
       // STATE
       this.state.roomKey = states.roomKey;
       this.state.host = Object.keys((states).players)[0]
-      console.log("state: " + this.state.host);
+
 
       //IF HOST
       if (this.socket.id == this.state.host) {
@@ -152,7 +146,7 @@ export default class waitingRoom extends Phaser.Scene {
 
 
     this.socket.on("currentPlayers", ({ players, numPlayers }) => {
-      console.log(players);
+
       for (let i = 0; i < numPlayers; i++) {
         if (this.socket.id !== Object.keys(players)[i]) {
           otherPlayerId.push(Object.keys(players)[i]);

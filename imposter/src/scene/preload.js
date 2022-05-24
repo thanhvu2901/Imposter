@@ -10,6 +10,9 @@ import Cpublic from "../assets/img/Public.png"
 import Cprivate from "../assets/img/Private.png"
 import options from "../assets/img/options_button.png";
 
+import arrow from "../assets/img/arrow.png"
+import tileImg from "../assets/img/theSkeld.png";
+
 import MainMenuScene from "./menu";
 import setting from '../assets/img/setting.png'
 import playerSprite from "../assets/img/player.png";
@@ -26,6 +29,23 @@ import dead from '../assets/player/Dead.png'
 import killAudio from '../assets/audio/kill/impostor_kill.wav'
 import footStep from "../assets/audio/amination/Walk.mp3";
 import ventOpen from "../assets/audio/vent/Vent_open.mp3";
+
+import KillButton from "../assets/img/killButton.png";
+import vent1 from "../assets/img/jump vent/vent1.png";
+import vent2 from "../assets/img/jump vent/vent2.png";
+import vent3 from "../assets/img/jump vent/vent3.png";
+import vent4 from "../assets/img/jump vent/vent4.png";
+import vent5 from "../assets/img/jump vent/vent5.png";
+import vent6 from "../assets/img/jump vent/vent6.png";
+import jump1 from "../assets/img/jump vent/Vent0001.png";
+import jump2 from "../assets/img/jump vent/vent0002.png";
+import jump3 from "../assets/img/jump vent/Vent0003.png";
+import jump4 from "../assets/img/jump vent/Vent0004.png";
+import jump5 from "../assets/img/jump vent/vent0005.png";
+import jump6 from "../assets/img/jump vent/Vent0006.png";
+import jump7 from "../assets/img/jump vent/Vent0007.png";
+import vent_button from "../assets/img/vent_button.png"
+import UseButton from "../assets/tasks/Align Engine Output/Use.webp.png";
 
 import SubMenu from "./submenu";
 
@@ -102,6 +122,25 @@ class Preloader extends Phaser.Scene {
     this.load.image('customizeBtn', customizeBtn)
     this.load.image('dead', dead)
 
+    this.load.image("vent_1", vent1);
+    this.load.image("vent_2", vent2);
+    this.load.image("vent_3", vent3);
+    this.load.image("vent_4", vent4);
+    this.load.image("vent_5", vent5);
+    this.load.image("vent_6", vent6);
+    this.load.image("jump_1", jump1, 36, 40);
+    this.load.image("jump_2", jump2, 36, 40);
+    this.load.image("jump_3", jump3, 36, 40);
+    this.load.image("jump_4", jump4, 36, 40);
+    this.load.image("jump_5", jump5, 36, 40);
+    this.load.image("jump_6", jump6, 36, 40);
+    this.load.image("jump_7", jump7, 36, 40);
+
+    this.load.image("button", vent_button)
+    this.load.image("KillButton", KillButton);
+    this.load.image("UseButton", UseButton);
+    this.load.image("arrow", arrow)
+    this.load.image("tiles", tileImg);
     //audio
     this.load.audio('killAudio', killAudio)
     this.load.audio("walk", footStep);
