@@ -259,7 +259,7 @@ class Game extends Phaser.Scene {
         suffix: ".png",
       }),
       repeat: 0,
-      frameRate: 24,
+      frameRate: 12,
     });
     //player ghost
     this.anims.create({
@@ -473,7 +473,7 @@ class Game extends Phaser.Scene {
         //player.stop("player-idle")
         alive = false;
 
-        player.anims.play("player-dead");
+        player.anims.play("player-dead", true);
       } else {
         let index = otherPlayerId.findIndex((Element) => Element == playerId);
         otherPlayer[index].anims.play("player-dead", true);
