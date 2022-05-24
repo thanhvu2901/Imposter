@@ -58,6 +58,7 @@ let indexKill = 0;
 let canKill = false;
 let alive = true;
 let kill;
+let sabotage;
 let vent_map = new Map()
 
 let vent_group, arrow_group, vent_cord = new Map(), vent_des = new Map()
@@ -137,6 +138,9 @@ class Game extends Phaser.Scene {
         .setScrollFactor(0, 0)
         .setInteractive();
       kill.alpha = 0.5;
+
+      sabotage = this.add.image(1000, 700, "sabotage").setScrollFactor(0, 0).setInteractive().setAlpha(1)
+
     }
     //initialize missions of this map
     map_missions = new MapMissionsExporter("theSkeld")
@@ -211,7 +215,7 @@ class Game extends Phaser.Scene {
     });
     //add use button
     vent_butt = this.add.image(1000, 700, "button").setScrollFactor(0, 0).setInteractive().setAlpha(0)
-    let sabotage = this.add.image(1000, 700, "sabotage").setScrollFactor(0, 0).setInteractive().setAlpha(1)
+
     useButton = this.add
       .image(900, 700, "UseButton")
       .setScrollFactor(0, 0)
@@ -291,6 +295,7 @@ class Game extends Phaser.Scene {
       repeat: -1,
       frameRate: 32,
     });
+
     //input to control
     this.input.keyboard.on("keydown", (e) => {
       if (!pressedKeys.includes(e.code)) {
