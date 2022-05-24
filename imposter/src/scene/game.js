@@ -3,6 +3,8 @@ import tileImg from "../assets/img/theSkeld.png";
 import theskeld from "../assets/tilemaps/theskeld.json";
 import playerpng from "../assets/player/player_sprite/player_base.png";
 import playerjson from "../assets/player/player_sprite/player_base.json";
+import player_ghost from "../assets/player/Base/ghost/ghost.png"
+import player_ghost_json from "../assets/player/Base/ghost/ghost.json"
 import { debugDraw } from "../scene/debugDraw";
 import footStep from "../assets/audio/amination/Walk.mp3";
 import MapMissionsExporter from "../helper/map_mission_exporter";
@@ -57,6 +59,7 @@ let indexKill = 0;
 let canKill = false;
 let alive = true;
 let kill;
+let sabotage;
 let vent_map = new Map()
 let light
 let vent_group, arrow_group, vent_cord = new Map(), vent_des = new Map()
@@ -90,6 +93,8 @@ class Game extends Phaser.Scene {
     this.load.image("UseButton", UseButton);
     this.load.image("KillButton", KillButton);
     this.load.atlas("playerbase", playerpng, playerjson);
+    this.load.atlas("ghost", player_ghost, player_ghost_json)
+
     this.load.image("vent_1", vent1);
     this.load.image("vent_2", vent2);
     this.load.image("vent_3", vent3);
@@ -125,7 +130,7 @@ class Game extends Phaser.Scene {
     //this.scene.pause('game')
     // let intro = this.scene.launch('introCrew', { isRole: isRole }).bringToTop('introCrew')
 
-    light =new Light(this)
+    light = new Light(this)
     const ship = this.make.tilemap({ key: "tilemap" });
     const tileset = ship.addTilesetImage("theSkeld", "tiles", 17, 17);
     const ship_tileset = ship.createLayer("Background", tileset);
@@ -138,6 +143,9 @@ class Game extends Phaser.Scene {
         .setScrollFactor(0, 0)
         .setInteractive();
       kill.alpha = 0.5;
+
+      sabotage = this.add.image(1000, 700, "sabotage").setScrollFactor(0, 0).setInteractive().setAlpha(1)
+
     }
     //initialize missions of this map
     map_missions = new MapMissionsExporter("theSkeld")
@@ -211,7 +219,8 @@ class Game extends Phaser.Scene {
       frameQuantity: 70
     });
     //add use button
-    vent_butt = this.add.image(1000, 700, "button").setScrollFactor(0, 0).setInteractive().setAlpha(0.5).setDepth(1)
+    vent_butt = this.add.image(1000, 700, "button").setScrollFactor(0, 0).setInteractive().setAlpha(0)
+
     useButton = this.add
       .image(900, 700, "UseButton")
       .setScrollFactor(0, 0)
@@ -279,6 +288,19 @@ class Game extends Phaser.Scene {
       repeat: 0,
       frameRate: 24,
     });
+    //player ghost
+    this.anims.create({
+      key: "player-ghost",
+      frames: this.anims.generateFrameNames("ghost", {
+        start: 1,
+        end: 48,
+        prefix: "ghost00",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 32,
+    });
+
     //input to control
     this.input.keyboard.on("keydown", (e) => {
       if (!pressedKeys.includes(e.code)) {
@@ -361,18 +383,18 @@ class Game extends Phaser.Scene {
           vent_des.get(object.name.split(" ")[1]).push(children_1[j])
           j++
           break
-       case "bound": 
-       let temp = this.add.rectangle(object.x,object.y,object.width,object.height).setAngle(object.rotation).setOrigin(0,0).setDepth(29)
-         light.map(temp)
+        case "bound":
+          let temp = this.add.rectangle(object.x, object.y, object.width, object.height).setAngle(object.rotation).setOrigin(0, 0).setDepth(29)
+          light.map(temp)
           break;
-          default:
+        default:
           break;
       }
     });
     vent_group.refresh()
     light.createFOV()
     light.draw()
-    
+
     //ẩn hết các arrow của vent sau khi khởi tạo
     arrow_group.setVisible(false)
 
@@ -381,13 +403,15 @@ class Game extends Phaser.Scene {
       //hiện nút nhảy vent với điều kiện là player overlap với vent
       if (is_vent) {
         vent_butt.alpha = 1
+        sabotage.alpha = 0
       }
     });
     //bắt sự kiện khi player đi ra khỏi vùng overlap
     player.on("overlapend", function () {
       //ẩn nút nhảy vent
       is_vent = false
-      vent_butt.alpha = 0.5
+      vent_butt.alpha = 0
+      sabotage.alpha = 1
     });
 
     //thực hiện hàm circleOverlap khi player tới gần vent
@@ -454,7 +478,7 @@ class Game extends Phaser.Scene {
       }
     });
 
-    //update if killed
+    //update if killed ==>> ************************TO GHOST*******************
     this.socket.on("updateOtherPlayer", (playerId) => {
       console.log(this.socket.id);
       console.log(playerId);
@@ -665,6 +689,9 @@ class Game extends Phaser.Scene {
         launch_scene = false;
 
       }
+    }
+    else {
+
     }
     //
   };

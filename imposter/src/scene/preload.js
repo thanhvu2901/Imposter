@@ -2,6 +2,12 @@ import Phaser from "phaser";
 import background from "../assets/img/background.jpg";
 import logo from "../assets/img/logo.png";
 import play from "../assets/img/play_button.png";
+import random from "../assets/img/Random.png"
+import joinRoom from "../assets/img/joinRoom.png"
+import createRoom from "../assets/img/Create.png"
+import enterRoom from "../assets/img/enterRoom.png"
+import Cpublic from "../assets/img/Public.png"
+import Cprivate from "../assets/img/Private.png"
 import options from "../assets/img/options_button.png";
 
 import MainMenuScene from "./menu";
@@ -13,6 +19,7 @@ import facebook from '../assets/img/fb.png'
 import fix from '../assets/img/fix_wiring/Fix_Wiring.png'
 import useBtn from '../assets/img/useButton.png'
 import closeBtn from '../assets/img/closeButton.png'
+import sabotage from '../assets/img/sabotage.png'
 import customizeBtn from '../assets/img/customize.png'
 import startBtn from '../assets/img/startButton.png'
 import dead from '../assets/player/Dead.png'
@@ -76,13 +83,19 @@ class Preloader extends Phaser.Scene {
 
     this.load.image('options', options);
     this.load.image('logo', logo);
-
+    this.load.image('random', random)
+    this.load.image('public', Cpublic)
+    this.load.image('private', Cprivate)
+    this.load.image('createRoom', createRoom)
+    this.load.image('joinRoom', joinRoom)
+    this.load.image('enterRoom', enterRoom)
     this.load.image('setting', setting)
     this.load.image('facebook', facebook)
     this.load.image("ship", shipImg);
     this.load.image('fix', fix)
     this.load.image('useBtn', useBtn)
     this.load.image('closeBtn', closeBtn)
+    this.load.image('sabotage', sabotage)
     this.load.image('startBtn', startBtn);
     this.load.image('customizeBtn', customizeBtn)
     this.load.image('dead', dead)
