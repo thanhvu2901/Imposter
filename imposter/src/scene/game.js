@@ -141,7 +141,7 @@ class Game extends Phaser.Scene {
       kill = this.add
         .image(750, 700, "KillButton")
         .setScrollFactor(0, 0)
-        .setInteractive();
+        .setInteractive().setDepth(1);
       kill.alpha = 0.5;
 
       sabotage = this.add.image(1000, 700, "sabotage").setScrollFactor(0, 0).setInteractive().setAlpha(1)
@@ -219,12 +219,13 @@ class Game extends Phaser.Scene {
       frameQuantity: 70
     });
     //add use button
-    vent_butt = this.add.image(1000, 700, "button").setScrollFactor(0, 0).setInteractive().setAlpha(0)
+    vent_butt = this.add.image(1000, 700, "button").setScrollFactor(0, 0).setInteractive().setAlpha(0).setDepth(1)
 
     useButton = this.add
       .image(900, 700, "UseButton")
       .setScrollFactor(0, 0)
-      .setInteractive();
+      .setInteractive()
+      .setDepth(1);
     //disable button
     useButton.alpha = 0.5;
     //tạo animation cho vent
