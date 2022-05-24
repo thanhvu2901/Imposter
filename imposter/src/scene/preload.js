@@ -1,12 +1,9 @@
 import Phaser from "phaser";
-import { io } from 'socket.io-client'
-
 import background from "../assets/img/background.jpg";
 import logo from "../assets/img/logo.png";
 import play from "../assets/img/play_button.png";
 import options from "../assets/img/options_button.png";
-import cat from "../assets/img/cat.png";
-import audio from "../assets/audio/audio.mp3";
+
 import MainMenuScene from "./menu";
 import setting from '../assets/img/setting.png'
 import playerSprite from "../assets/img/player.png";
@@ -14,6 +11,12 @@ import shipImg from "../assets/img/theSkeld.png";
 import idle from "../assets/img/idle.png";
 import facebook from '../assets/img/fb.png'
 import fix from '../assets/img/fix_wiring/Fix_Wiring.png'
+import useBtn from '../assets/img/useButton.png'
+import closeBtn from '../assets/img/closeButton.png'
+import customizeBtn from '../assets/img/customize.png'
+import startBtn from '../assets/img/startButton.png'
+import dead from '../assets/player/Dead.png'
+import killAudio from '../assets/audio/kill/impostor_kill.wav'
 
 import SubMenu from "./submenu";
 
@@ -37,7 +40,7 @@ class Preloader extends Phaser.Scene {
     var progressBar = this.add.graphics();
     var progressBox = this.add.graphics();
     progressBox.fillStyle(0x222222, 0.9);
-    progressBox.fillRect(320, 280, 320, 30);
+    progressBox.fillRect(380, 280, 380, 30);
 
     var width = this.cameras.main.width;
     var height = this.cameras.main.height;
@@ -70,17 +73,27 @@ class Preloader extends Phaser.Scene {
     // những thứ cần preload
     this.load.image('background', background);
     this.load.image('play', play);
-    this.load.image('cat', cat);
+
     this.load.image('options', options);
     this.load.image('logo', logo);
-    this.load.audio('audio', audio)
+
     this.load.image('setting', setting)
     this.load.image('facebook', facebook)
     this.load.image("ship", shipImg);
     this.load.image('fix', fix)
+    this.load.image('useBtn', useBtn)
+    this.load.image('closeBtn', closeBtn)
+    this.load.image('startBtn', startBtn);
+    this.load.image('customizeBtn', customizeBtn)
+    this.load.image('dead', dead)
+
+    //audio
+    this.load.audio('killAudio', killAudio)
 
 
-    this.load.spritesheet("player", playerSprite, {
+
+
+    this.load.spritesheet("player_1", playerSprite, {
       frameWidth: PLAYER_SPRITE_WIDTH,
       frameHeight: PLAYER_SPRITE_HEIGHT,
     });
@@ -100,7 +113,7 @@ class Preloader extends Phaser.Scene {
 
       progressBar.clear();
       progressBar.fillStyle(0xffffff, 1);
-      progressBar.fillRect(320, 280, 320 * value, 30);
+      progressBar.fillRect(380, 280, 380 * value, 30);
       percentText.setText(parseInt(value * 100) + '%');
     });
 
@@ -113,8 +126,7 @@ class Preloader extends Phaser.Scene {
 
     });
 
-    //setup socket
-    // socket = io('localhost:3000')
+
 
   }
   create() {
@@ -136,7 +148,7 @@ class Preloader extends Phaser.Scene {
     //welcomeText.setOrigin(0.5, 0.5);
 
 
-    var sprite = this.add.image(500, 280, 'logo').setAlpha(0);
+    var sprite = this.add.image(530, 280, 'logo').setAlpha(0);
 
     //chạy intro logo
     var intro = this.tweens.add({
@@ -157,7 +169,7 @@ class Preloader extends Phaser.Scene {
     this.load.on("progress", function (value) {
       progressBar.clear();
       progressBar.fillStyle(0xffffff, 1);
-      progressBar.fillRect(320, 280, 320 * value, 30);
+      progressBar.fillRect(380, 280, 380 * value, 30);
       percentText.setText(parseInt(value * 100) + "%");
     });
 

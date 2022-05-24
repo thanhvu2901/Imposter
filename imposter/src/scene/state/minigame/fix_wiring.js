@@ -46,6 +46,11 @@ class FixWiring extends Phaser.Scene {
 
         var backdrop = this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 2, 'fix')
         text = this.add.text(10, 10, 'Cursors to move', { font: '16px Courier', fill: '#00ff00' }).setScrollFactor(0);
+        let closeBtn = this.add.image(830, 135, 'closeBtn').setInteractive({ useHandCursor: true })
+
+        closeBtn.on('pointerdown', () => {
+            this.scene.stop('fixWiring')
+        })
         current_scene = this.scene;
 
         //********** */\
@@ -97,9 +102,6 @@ class FixWiring extends Phaser.Scene {
         this.input.on('dragstart', function (pointer, gameObject) {
 
             gameObject.setFrame(1);
-
-
-
         });
 
         this.input.on('drag', function (pointer, gameObject, dragX, dragY) {
@@ -158,7 +160,7 @@ class FixWiring extends Phaser.Scene {
             text3 = this.add.text(317, 327, 'TASK COMPLETE!!', { font: '50px Courier', fill: '#FFFFFF' }).setDepth(1);
             Event_Center.emit("continue_scene_game", {x: x, y: y, mission: "FixWiring"});
             current_scene.stop("fixWiring");
-            
+
         }
     }
 

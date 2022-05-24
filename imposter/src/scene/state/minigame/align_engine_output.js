@@ -34,29 +34,27 @@ class AlignEngineOutput extends Phaser.Scene {
         let engine = this.add.sprite(455, 384, "Align_Engine");
         engine.angle = 30
         let container = this.add.container(660, 384, [slider]);
-        this.add.line(0, 384, 450, 0, 770, 0,  0xff0000);
+        this.add.line(0, 384, 450, 0, 770, 0, 0xff0000);
         container.setSize(slider.width, slider.height);
         container.setInteractive();
         this.input.setDraggable(container);
         container.on('pointerover', function () {
 
             slider.setTint(0x44ff44);
-    
+
         });
-    
+
         container.on('pointerout', function () {
-    
+
             slider.clearTint();
-    
+
         });
-    
+
         this.input.on('drag', function (pointer, gameObject, dragX, dragY) {
-            if (dragY >= 344 && dragY <= 464)
-            {
+            if (dragY >= 344 && dragY <= 464) {
                 engine.angle = 30 - (dragY - 384);
                 check_y = dragY;
-                if( Math.floor(check_y) == 414)
-                {
+                if (Math.floor(check_y) == 414) {
                     current_object.add.text(390, 250, "Mission Completed");
                     Event_Center.emit("continue_scene_game", {x: x, y: y, mission: "AlignEngineOutput"});
                     current_scene.stop("align_engine_output");
@@ -68,7 +66,7 @@ class AlignEngineOutput extends Phaser.Scene {
     }
 
     update() {
-   }
+    }
 }
 
 export default AlignEngineOutput
