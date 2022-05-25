@@ -98,7 +98,12 @@ class Game extends Phaser.Scene {
   }
 
   create() {
-
+    this.input.keyboard.on('keyup', (event) => {
+      if(alive == true){
+      player.anims.play("player-idle");}
+  
+      }
+  );
     //this.scene.pause('game')
     // let intro = this.scene.launch('introCrew', { isRole: isRole }).bringToTop('introCrew')
 
@@ -128,7 +133,8 @@ class Game extends Phaser.Scene {
     // debugDraw(ship_tileset, this);
 
     //add player
-    player = this.physics.add.sprite(115, -700, "playerbase", "idle.png").setDepth(0.6);
+    player = this.physics.add.sprite(115, -700, "playerbase", "idle.png").setDepth(0.6)
+    player.body.setCircle(10);
 
 
     if (current_x && current_y) {
@@ -173,6 +179,7 @@ class Game extends Phaser.Scene {
     this.anims.create({
       key: "player-idle",
       frames: [{ key: "playerbase", frame: "idle.png" }],
+      repeat:0
     });
     this.anims.create({
       key: "dead",
@@ -185,6 +192,7 @@ class Game extends Phaser.Scene {
       frameQuantity: 14,
       immovable: true
     });
+    
     //khởi tạo nhóm các arrow
     arrow_group = this.add.group({
       key: 'arrow',
@@ -259,7 +267,7 @@ class Game extends Phaser.Scene {
         suffix: ".png",
       }),
       repeat: 0,
-      frameRate: 12,
+      frameRate: 24,
     });
     //player ghost
     this.anims.create({
@@ -314,6 +322,7 @@ class Game extends Phaser.Scene {
       }
     })
     //lẩy mảng từ group các sprite
+    
     let children = vent_group.getChildren()
     let children_1 = arrow_group.getChildren()
     let i = 0, j = 0
@@ -345,6 +354,8 @@ class Game extends Phaser.Scene {
         case "vent":
           //gán vị trí cho từng phần tử con của group vent 
           children[i].setPosition(object.x, object.y - 10).setOrigin(0, 0).setScale(1.2).setDepth(0.5)
+          children[i].body.setCircle(10)
+     
           i++
           break;
         case "arrow":
@@ -369,6 +380,7 @@ class Game extends Phaser.Scene {
         case "bound":
           let temp = this.add.rectangle(object.x, object.y, object.width, object.height).setAngle(object.rotation).setOrigin(0, 0).setDepth(29)
           light.map(temp)
+         
           break;
         default:
           break;
@@ -379,8 +391,8 @@ class Game extends Phaser.Scene {
     light.draw()
 
     //ẩn hết các arrow của vent sau khi khởi tạo
-    arrow_group.setVisible(false)
-
+    arrow_group.setVisible(false).setDepth(1)
+    
     //bắt sự kiện khi player overlap với 1 object khác
     player.on("overlapstart", function () {
       //hiện nút nhảy vent với điều kiện là player overlap với vent
@@ -396,7 +408,7 @@ class Game extends Phaser.Scene {
       vent_butt.alpha = 0
       sabotage.alpha = 1
     });
-
+player.eventNames.on
     //thực hiện hàm circleOverlap khi player tới gần vent
     this.physics.add.overlap(player, vent_group, circleOverlap);
     //bắt sự kiện button nhảy vent
@@ -404,15 +416,32 @@ class Game extends Phaser.Scene {
       //nếu tới gần vent thì sẽ đi vào vòng if
       this.sound.play('vent', false)
       if (is_vent) {
+        console.log(is_vent,is_hidden)
         temp.play("hole")
-        player.anims.play("jump",true);
+        player.anims.play("jump")
+        player.on("animationcomplete", (animation,frame) => {
+         if(animation.key="jump"){
+         if (is_hidden == true) {
+          player.setDepth(-10)
+        } else {
+          player.setDepth(0.6)
+          player.play("jump")
+          player.on("animationcomplete", (animation,frame) => {
+            if(animation.key="jump"){
+              player.anims.play("player-idle")
+            }
+          })
+        }}
+       },this);
+      
+
         is_jump = true
         //nếu player không trốn vent thì is_hidden sẽ chuyển thành true và ngược lại
         if (is_hidden == true) {
           is_hidden = false
-
-          //ẩn hết arrow khi player rời khỏi vent
           arrow_group.setVisible(false)
+          //ẩn hết arrow khi player rời khỏi vent
+         
         } else {
 
           is_hidden = true
@@ -485,7 +514,7 @@ class Game extends Phaser.Scene {
     light.update(player)
     if (this.isRole == 1) {
       kill.on("pointerdown", () => {
-        //console.log();
+    
 
         if (canKill) {
           this.sound.play('killAudio', false)
@@ -501,12 +530,10 @@ class Game extends Phaser.Scene {
           console.log("no kill");
         }
       });
-
       //nếu player đang trốn vent thì chạy hàm này để hiện arrow của vent đó
       if (is_hidden == true) {
         playercur()
       }
-
       //vì phaser chưa có phương thức xác định bắt sự kiện khi player tiếp xúc với sprite hoặc player rời xa sprite nên ta sử dụng emit để gửi sự kiện overlapstart và overlapend
       // var touching = !player.body.touching.none;
       var wasTouching = !player.body.wasTouching.none;
@@ -514,34 +541,13 @@ class Game extends Phaser.Scene {
       var touching = !player.body.touching.none || player.body.embedded;
       if (touching && !wasTouching) player.emit("overlapstart");
       else if (!touching && wasTouching) player.emit("overlapend");
-
-      //để tránh xung đột với animation idle khi vào vent thì ta sẽ delay animation idle lại để player thực hiện nhảy vent và sau đó ẩn player đi 
-      if (is_vent == true && is_jump == true) {
-        count++
-        if (count == 10) {
-          check(player)
-          is_jump = false
-          count = 0
-        }
-      }
-      else if (is_vent == true && is_jump == false) {
-
-        player.anims.play("player-idle");
-      }
+    }
+    //canKill = false
+    if (alive == true) {
       let playerMoved = false;
       player.setVelocity(0);
 
-      if (
-        !cursors.left.isDown &&
-        !cursors.right.isDown &&
-        !cursors.up.isDown &&
-        !cursors.down.isDown &&
-        !is_vent
-      ) {
-        //     console.log("outvent")
-        player.anims.play("player-idle");
-      }
-      //nếu is_hidden bằng true có nghĩa là player đang trốn vent nên sẽ ko di chuyển bằng input được
+ //nếu is_hidden bằng true có nghĩa là player đang trốn vent nên sẽ ko di chuyển bằng input được
       if (cursors.left.isDown && is_hidden == false) {
         player.anims.play("player-walk", true);
         player.setVelocityX(-PLAYER_SPEED);
@@ -564,15 +570,16 @@ class Game extends Phaser.Scene {
         player.setVelocityY(PLAYER_SPEED);
         playerMoved = true;
       }
+
       if (playerMoved) {
         this.socket.emit("move", {
           x: player.x,
           y: player.y,
           roomId: this.state.roomKey,
         });
+        player.movedLastFrame = true;
 
         let index = 0;
-
         for (let other of otherPlayer) {
           if (
             Math.abs(Math.floor(player.x) - Math.floor(other.x)) <= 100 &&
@@ -590,52 +597,7 @@ class Game extends Phaser.Scene {
           canKill = false;
           kill.alpha = 0.5;
         }
-      }
-    }
-    //canKill = false
-    if (alive == false) {
-      let playerMoved = false;
-      player.setVelocity(0);
 
-      if (
-        !cursors.left.isDown &&
-        !cursors.right.isDown &&
-        !cursors.up.isDown &&
-        !cursors.down.isDown
-      ) {
-        player.anims.play("player-idle");
-      }
-
-      if (cursors.left.isDown) {
-        player.anims.play("player-walk", true);
-        player.setVelocityX(-PLAYER_SPEED);
-        player.scaleX = -1;
-        player.body.offset.x = 40;
-        playerMoved = true;
-      } else if (cursors.right.isDown) {
-        player.anims.play("player-walk", true);
-        player.setVelocityX(PLAYER_SPEED);
-        player.scaleX = 1;
-        player.body.offset.x = 0;
-        playerMoved = true;
-      }
-      if (cursors.up.isDown) {
-        player.anims.play("player-walk", true);
-        player.setVelocityY(-PLAYER_SPEED);
-        playerMoved = true;
-      } else if (cursors.down.isDown) {
-        player.anims.play("player-walk", true);
-        player.setVelocityY(PLAYER_SPEED);
-        playerMoved = true;
-      }
-
-      if (playerMoved) {
-        this.socket.emit("move", {
-          x: player.x,
-          y: player.y,
-          roomId: this.state.roomKey,
-        });
-        player.movedLastFrame = true;
       } else {
         if (player.movedLastFrame) {
           this.socket.emit("moveEnd", { roomId: this.state.roomKey });
@@ -707,21 +669,9 @@ function circleOverlap(player, vent) {
   //lấy key string của vent hiện tại dựa trên x y của sprite vent 
   key = getKey([vent.x, vent.y + 10])[0]
 
-
 }
 //hàm lấy key từ hashmap dựa trên value của key
 function getKey(val) {
   return [...vent_cord].find(([key, value]) => JSON.stringify(val) === JSON.stringify(value));
 }
-//ẩn player dựa trên giá trị của is_hidden
-function check(player) {
-  if (is_hidden == true) {
-    player.setActive(false).setVisible(false)
-
-  } else {
-
-    player.setActive(true).setVisible(true)
-  }
-}
-
 export default Game;
