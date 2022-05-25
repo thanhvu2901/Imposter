@@ -17,23 +17,6 @@ import Mission from "../services/missions/mission";
 import AlignEngineOutput_mission_marked from "../assets/tasks/Align Engine Output/mission_marked.png";
 
 
-import KillButton from "../assets/img/killButton.png";
-import vent1 from "../assets/img/jump vent/vent1.png";
-import vent2 from "../assets/img/jump vent/vent2.png";
-import vent3 from "../assets/img/jump vent/vent3.png";
-import vent4 from "../assets/img/jump vent/vent4.png";
-import vent5 from "../assets/img/jump vent/vent5.png";
-import vent6 from "../assets/img/jump vent/vent6.png";
-import jump1 from "../assets/img/jump vent/Vent0001.png";
-import jump2 from "../assets/img/jump vent/vent0002.png";
-import jump3 from "../assets/img/jump vent/Vent0003.png";
-import jump4 from "../assets/img/jump vent/Vent0004.png";
-import jump5 from "../assets/img/jump vent/vent0005.png";
-import jump6 from "../assets/img/jump vent/Vent0006.png";
-import jump7 from "../assets/img/jump vent/Vent0007.png";
-import vent_button from "../assets/img/vent_button.png"
-import arrow from "../assets/img/arrow.png"
-
 import { PLAYER_SPEED } from "../consts/constants";
 
 //marked mission
@@ -44,7 +27,6 @@ import CleanAsteroids from "../assets/tasks/Clear Asteroids/marked.png";
 import StabilizeSteering from "../assets/tasks/Stabilize Steering/marked.png";
 
 import Light from "../scene//state/ingame/ray-light"
-import { movePlayer } from "../animation/movement.js";
 import Event_Center from "../helper/event_center";
 
 
@@ -175,7 +157,7 @@ class Game extends Phaser.Scene {
     // debugDraw(ship_tileset, this);
 
     //add player
-    player = this.physics.add.sprite(250, 328, "playerbase", "idle.png");
+    player = this.physics.add.sprite(115, -720, "playerbase", "idle.png");
 
 
     // tạo theo số lượng other player vào
