@@ -593,7 +593,7 @@ class Game extends Phaser.Scene {
       }
     }
     //canKill = false
-    if (alive == false) {
+    if (alive == true) {
       let playerMoved = false;
       player.setVelocity(0);
 
