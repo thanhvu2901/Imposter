@@ -5,6 +5,10 @@ import playerpng from "../assets/player/player_sprite/player_base.png";
 import playerjson from "../assets/player/player_sprite/player_base.json";
 import player_ghost from "../assets/player/Base/ghost/ghost.png"
 import player_ghost_json from "../assets/player/Base/ghost/ghost.json"
+
+import Archaeologist_Walk_png from "../assets/player/player_sprite/Archaeologist_Walk.png";
+import Archaeologist_Walk_json from "../assets/player/player_sprite/Archaeologist_Walk.json";
+
 import { debugDraw } from "../scene/debugDraw";
 
 import MapMissionsExporter from "../helper/map_mission_exporter";
@@ -13,6 +17,22 @@ import Mission from "../services/missions/mission";
 import AlignEngineOutput_mission_marked from "../assets/tasks/Align Engine Output/mission_marked.png";
 
 
+import KillButton from "../assets/img/killButton.png";
+import vent1 from "../assets/img/jump vent/vent1.png";
+import vent2 from "../assets/img/jump vent/vent2.png";
+import vent3 from "../assets/img/jump vent/vent3.png";
+import vent4 from "../assets/img/jump vent/vent4.png";
+import vent5 from "../assets/img/jump vent/vent5.png";
+import vent6 from "../assets/img/jump vent/vent6.png";
+import jump1 from "../assets/img/jump vent/Vent0001.png";
+import jump2 from "../assets/img/jump vent/vent0002.png";
+import jump3 from "../assets/img/jump vent/Vent0003.png";
+import jump4 from "../assets/img/jump vent/Vent0004.png";
+import jump5 from "../assets/img/jump vent/vent0005.png";
+import jump6 from "../assets/img/jump vent/Vent0006.png";
+import jump7 from "../assets/img/jump vent/Vent0007.png";
+import vent_button from "../assets/img/vent_button.png"
+import arrow from "../assets/img/arrow.png"
 
 import { PLAYER_SPEED } from "../consts/constants";
 
@@ -24,6 +44,13 @@ import CleanAsteroids from "../assets/tasks/Clear Asteroids/marked.png";
 import StabilizeSteering from "../assets/tasks/Stabilize Steering/marked.png";
 
 import Light from "../scene//state/ingame/ray-light"
+import { movePlayer } from "../animation/movement.js";
+import Event_Center from "../helper/event_center";
+
+
+
+
+import eventsCenter from "./eventsCenter";
 let player;
 let otherPlayer = new Array();
 let otherPlayerId = new Array();
@@ -67,9 +94,6 @@ class Game extends Phaser.Scene {
     this.numPlayers = data.numPlayers;
     this.idPlayers = data.idPlayers;
     this.isRole = data.isRole
-    current_x = data.x;
-    current_y = data.y;
-    mission_name = data.mission;
 
   }
 
@@ -81,6 +105,12 @@ class Game extends Phaser.Scene {
     this.load.atlas("playerbase", playerpng, playerjson);
     this.load.atlas("ghost", player_ghost, player_ghost_json)
 
+
+
+
+
+    this.load.atlas("playerbase", playerpng, playerjson);
+    this.load.atlas("Archaeologist_Walk", Archaeologist_Walk_png, Archaeologist_Walk_json);
 
 
     this.load.image(
@@ -103,6 +133,23 @@ class Game extends Phaser.Scene {
     // let intro = this.scene.launch('introCrew', { isRole: isRole }).bringToTop('introCrew')
 
     light = new Light(this)
+    Event_Center.on("continue_scene_game", (data) => {
+      current_x = data.x;
+      current_y = data.y;
+      mission_name = data.mission;
+      if (current_x && current_y) {
+        map_missions.completed(mission_name);
+        list_missions_completed.push(mission_name);
+        total_missions_completed += 1;
+        map_missions.count_missions_completed(total_missions_completed);
+        map_missions.update_list_missions_completed(list_missions_completed)
+        player.x = current_x + 2;
+        player.y = current_y + 2;
+        // player.setPosition(current_x, current_y);
+      }
+    })
+
+    current_scene = this.scene;
     const ship = this.make.tilemap({ key: "tilemap" });
     const tileset = ship.addTilesetImage("theSkeld", "tiles", 17, 17);
     const ship_tileset = ship.createLayer("Background", tileset);
@@ -128,19 +175,9 @@ class Game extends Phaser.Scene {
     // debugDraw(ship_tileset, this);
 
     //add player
-    player = this.physics.add.sprite(115, -700, "playerbase", "idle.png");
+    player = this.physics.add.sprite(250, 328, "playerbase", "idle.png");
 
 
-    if (current_x && current_y) {
-      map_missions.completed(mission_name);
-      list_missions_completed.push(mission_name);
-      total_missions_completed += 1;
-      map_missions.count_missions_completed(total_missions_completed);
-      map_missions.update_list_missions_completed(list_missions_completed)
-      player.x = current_x + 2;
-      player.y = current_y + 2;
-      // player.setPosition(current_x, current_y);
-    }
     // tạo theo số lượng other player vào
 
     this.state.roomKey = this.textInput;
@@ -473,7 +510,8 @@ class Game extends Phaser.Scene {
         //player.stop("player-idle")
         alive = false;
 
-        player.anims.play("player-dead");
+        //*****************LOOP HERE********************** */
+        player.anims.play("player-dead", false);
       } else {
         let index = otherPlayerId.findIndex((Element) => Element == playerId);
         otherPlayer[index].anims.play("player-dead", true);
@@ -486,13 +524,11 @@ class Game extends Phaser.Scene {
     if (this.isRole == 1) {
       kill.on("pointerdown", () => {
         //console.log();
-
         if (canKill) {
           this.sound.play('killAudio', false)
           playerKilled.anims.play("player-dead", true);
           this.socket.emit('killed', (otherPlayerId[indexKill]))
           otherPlayer = otherPlayer.filter(player => { return player !== playerKilled });
-
           console.log(otherPlayerId[indexKill]); // emit socket id player killed
           otherPlayerId = otherPlayerId.filter(player => { return player !== otherPlayerId[indexKill] });
           console.log("emitted");

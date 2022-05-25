@@ -1,37 +1,48 @@
 import Phaser from "phaser";
 import dropShip from "../assets/img/Dropship.png";
 import lobby from "../assets/tilemaps/lobby.json";
+
 import playerpng from "../assets/player/player_sprite/player_base.png";
 import playerjson from "../assets/player/player_sprite/player_base.json";
+import Archaeologist_Walk_png from "../assets/player/player_sprite/Archaeologist_Walk.png";
+import Archaeologist_Walk_json from "../assets/player/player_sprite/Archaeologist_Walk.json";
 
 import { PLAYER_SPEED } from "../consts/constants";
 import { debugDraw } from "../scene/debugDraw";
-
+import eventsCenter from "./eventsCenter";
 let player;
+let pants_skin;
 let cursors;
 
 let otherPlayer = new Array();
 let otherPlayerId = new Array();
 let pressedKeys = [];
-let stt = 0
+let stt = 0;
 export default class waitingRoom extends Phaser.Scene {
   constructor() {
     super({
-      key: "waitingRoom"
+      key: "waitingRoom",
     });
     this.state = {};
   }
   init(data) {
     this.socket = data.socket;
     this.textInput = data.textInput;
+
     this.playerChangedSkin = data.playerChangedSkin;
     this.numberImposter = data.numberImposter;
-    this.numberPlayer = data.numberPlayer
+    this.numberPlayer = data.numberPlayer;
+    // this.test = data.test
   }
   preload() {
     this.load.image("dropShip", dropShip);
     this.load.tilemapTiledJSON("lobby", lobby);
     this.load.atlas("playerbase", playerpng, playerjson);
+    this.load.atlas(
+      "archaeologist_walk",
+      Archaeologist_Walk_png,
+      Archaeologist_Walk_json
+    );
 
 
     // console.log('preload');
@@ -41,7 +52,9 @@ export default class waitingRoom extends Phaser.Scene {
     const lobby = this.make.tilemap({ key: "lobby" });
     const tileset = lobby.addTilesetImage("Dropship", "dropShip");
     const lobby_tileset = lobby.createLayer("Background", tileset);
-    const text = this.add.text(5, 5, 'ID Room: ' + this.textInput).setScrollFactor(0)
+    const text = this.add
+      .text(5, 5, "ID Room: " + this.textInput)
+      .setScrollFactor(0);
 
     const customize = this.add
       .image(800, 700, "customizeBtn")
@@ -55,6 +68,12 @@ export default class waitingRoom extends Phaser.Scene {
     cursors = this.input.keyboard.createCursorKeys();
 
     player = this.physics.add.sprite(-45, 26, "playerbase", "idle.png");
+    pants_skin = this.physics.add.sprite(
+      player.x,
+      player.y,
+      "archaeologist_walk",
+      "Archaeologist_Spawn0051.png"
+    );
     // tạo theo số lượng other player vào
 
     for (let i = 0; i < otherPlayerId.length; i++) {
@@ -93,6 +112,19 @@ export default class waitingRoom extends Phaser.Scene {
         e.code == 'ArrowLeft'
       ) {
         this.sound.play('walk', { loop: true })
+        this.anims.create({
+          key: "archaeologist_walk",
+          frames: this.anims.generateFrameNames("archaeologist_walk", {
+            start: 1,
+            end: 12,
+            prefix: "Archaeologist_Walk",
+            suffix: ".png",
+          }),
+          repeat: -1,
+          frameRate: 16,
+        });
+
+
       }
     })
 
@@ -115,8 +147,8 @@ export default class waitingRoom extends Phaser.Scene {
       // this.physics.resume();
       // STATE
       this.state.roomKey = states.roomKey;
-      this.state.host = Object.keys((states).players)[0]
-
+      this.state.host = Object.keys(states.players)[0];
+      console.log("state: " + this.state.host);
 
       //IF HOST
       if (this.socket.id == this.state.host) {
@@ -125,25 +157,22 @@ export default class waitingRoom extends Phaser.Scene {
           .setScrollFactor(0)
           .setInteractive({ useHandCursor: true });
 
-        start.on('pointerdown', () => {
-
+        start.on("pointerdown", () => {
           // custom by host   *********SETTING input from customize *************
           let imposter = this.numberImposter ?? 1;
           let player = this.numberPlayer;
           // let imposter= this.numberImposter;
           // let player= this.numberPlayer;
-          let roomId = this.textInput
-          this.socket.emit('letgo', ({ roomId, imposter, player }))
-          console.log('after click');
+          let roomId = this.textInput;
+          this.socket.emit("letgo", { roomId, imposter, player });
+          console.log("after click");
           // console.log("changedskin: ", this.playerChangedSkin);
           // console.log("number imposter: ", imposter);
           // console.log("number player: ", player);
           //this.scene.launch('game', { socket: this.socket, textInput: this.textInput, numPlayers: numPlayers })
-        })
+        });
       }
     });
-
-
 
     this.socket.on("currentPlayers", ({ players, numPlayers }) => {
 
@@ -218,30 +247,54 @@ export default class waitingRoom extends Phaser.Scene {
     //   }
     // });
 
-
-
-    customize.on('pointerdown', () => {
+    customize.on("pointerdown", () => {
       // this.input.on('pointerdown', () => this.scene.start('ChangeSkin'))
-      this.scene.pause("waitingRoom");
-      this.scene.launch("ChangeSkin", { socket: this.socket, textInput: this.textInput });
-      this.scene.bringToTop('ChangeSkin')
-    })
+      // this.scene.pause("waitingRoom");
+      this.scene.launch("ChangeSkin", {
+        socket: this.socket,
+        textInput: this.textInput,
+      });
+      this.scene.bringToTop("ChangeSkin");
+    });
 
-    this.socket.on('gogame', ({ numPlayers, idPlayers }) => {
+    this.socket.on("gogame", ({ numPlayers, idPlayers }) => {
       //console.log(numPlayers);
-      this.scene.stop('waitingRoom')
+      // this.scene.stop('waitingRoom')
 
       // ********anouning ROLE****//
 
-
       //*****start game */
       // this.scene.launch('game', { socket: this.socket, textInput: this.textInput, numPlayers: numPlayers, idPlayers: idPlayers })
-      this.scene.launch('introCrew', { socket: this.socket, textInput: this.textInput, numPlayers: numPlayers, idPlayers: idPlayers, numberImposter: this.numberImposter ?? 1 })
-      this.game.scene.stop('waitingRoom')
-    })
+      this.scene.launch("introCrew", {
+        socket: this.socket,
+        textInput: this.textInput,
+        numPlayers: numPlayers,
+        idPlayers: idPlayers,
+        numberImposter: this.numberImposter ?? 1,
+      });
+      this.game.scene.stop("waitingRoom");
+    });
 
+    eventsCenter.on("update", (data) => {
+      this.playerChangedSkin = data.playerChangedSkin;
+      this.numberImposter = data.numberImposter;
+      this.numberPlayer = data.numberPlayer;
+    });
+    // this.events.on('resume', (data) => {
+    //   console.log('resume');
+    //   console.log(data);
+    //   this.socket = data.socket;
+    //   this.textInput = data.textInput;
+    //   this.playerChangedSkin = data.playerChangedSkin;
+    //   this.numberImposter = data.numberImposter;
+    //   this.numberPlayer = data.numberPlayer
+    //   ///  console.log(dataResume.test);
+
+    // })
+    pants_skin.anims.play("archaeologist_walk");
   }
   update() {
+    // pants_skin.setPosition(this.player.x, this.player.y);
     let playerMoved = false;
     player.setVelocity(0);
     if (

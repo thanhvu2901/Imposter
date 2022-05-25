@@ -54,6 +54,7 @@ const config = {
       }
     ]
   }
+
 };
 
 const game = new Phaser.Game(config);
@@ -94,6 +95,7 @@ game.scene.add('waitingRoom', waitingRoom)
 game.scene.add("divert_power", DivertPower)
 // start title
 //game.scene.start("joinGame");
+
 //game.scene.start("preloader");
 // game.scene.start("theskeld");
 //game.scene.start('menu');

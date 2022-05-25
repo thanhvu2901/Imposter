@@ -1,5 +1,4 @@
 import Phaser from "phaser";
-import player from "../../../assets/skin/idle.png";
 import hat0 from "../../../assets/skin/Hats/hats0001.png";
 import hat1 from "../../../assets/skin/Hats/hats0005.png";
 import hat2 from "../../../assets/skin/Hats/hats0006.png";
@@ -51,6 +50,19 @@ import pet11 from "../../../assets/skin/Pets/pet11.png";
 import closeChangeSkin from "../../../assets/skin/close.png";
 import plusIcon from "../../../assets/skin/Games/plus.png";
 import minusIcon from "../../../assets/skin/Games/minus.png";
+import eventsCenter from "../../eventsCenter";
+import player0 from "../../../assets/skin/Player/idle-1.png";
+import player1 from "../../../assets/skin/Player/idle-2.png";
+import player2 from "../../../assets/skin/Player/idle-3.png";
+import player3 from "../../../assets/skin/Player/idle-4.png";
+import player4 from "../../../assets/skin/Player/idle-5.png";
+import player5 from "../../../assets/skin/Player/idle-6.png";
+import player6 from "../../../assets/skin/Player/idle-7.png";
+import player7 from "../../../assets/skin/Player/idle-8.png";
+import player8 from "../../../assets/skin/Player/idle-9.png";
+import player9 from "../../../assets/skin/Player/idle-10.png";
+import player10 from "../../../assets/skin/Player/idle-11.png";
+import player11 from "../../../assets/skin/Player/idle-12.png";
 
 const arrHats = [];
 const arrBackgroundHats = [];
@@ -64,12 +76,17 @@ let statusChooseTrouser;
 let backgroundTrouserChosen;
 const arrPets = [];
 const arrBackgroundPets = [];
-let petChosen;
 let statusChoosePet = false;
 let backgroundPetChosen;
 let playerChangedSkin = {};
 let numberImposter = 1;
 let numberPlayer = 5;
+let arrColor = [];
+let backgroundColor;
+const colorPlayers = [
+  0x0000ff, 0xffff00, 0xff00ff, 0xffae00, 0x808080, 0xb7b2b2, 0x8b14c8,
+  0x00ffff, 0x051950, 0xff0000, 0x00ff00, 0x044104,
+];
 class ChangeSkin extends Phaser.Scene {
   constructor() {
     super({ key: "ChangeSkin" });
@@ -80,7 +97,6 @@ class ChangeSkin extends Phaser.Scene {
     this.textInput = data.textInput;
   }
   preload() {
-    this.load.image("playerchange", player);
     this.load.image("hat0", hat0);
     this.load.image("hat1", hat1);
     this.load.image("hat2", hat2);
@@ -132,13 +148,25 @@ class ChangeSkin extends Phaser.Scene {
     this.load.image("closeChangeSkin", closeChangeSkin);
     this.load.image("plusIcon", plusIcon);
     this.load.image("minusIcon", minusIcon);
+    this.load.image("player0", player0);
+    this.load.image("player1", player1);
+    this.load.image("player2", player2);
+    this.load.image("player3", player3);
+    this.load.image("player4", player4);
+    this.load.image("player5", player5);
+    this.load.image("player6", player6);
+    this.load.image("player7", player7);
+    this.load.image("player8", player8);
+    this.load.image("player9", player9);
+    this.load.image("player10", player10);
+    this.load.image("player11", player11);
   }
 
   create() {
     let current_object = this;
     const base = this.add.rectangle(500, 380, 600, 480, 0xaedfc0);
-    const basePlayer = this.add.rectangle(350, 420, 280, 390, 0xa1b1ae);
-    const player = this.add.image(350, 460, "playerchange");
+    const basePlayer = this.add.rectangle(350, 420, 280, 385, 0xa1b1ae);
+    let player = this.add.image(350, 460, "player0");
     const closeBtn = this.add.image(760, 180, "closeChangeSkin");
     let groupHats = this.add.group();
     let groupHatsBackground = this.add.group();
@@ -146,11 +174,13 @@ class ChangeSkin extends Phaser.Scene {
     let groupTrousersBackground = this.add.group();
     let groupPets = this.add.group();
     let groupPetsBackground = this.add.group();
-    this.add.rectangle(255, 180, 90, 50, 0xa1b1ae);
-    this.add.rectangle(355, 180, 90, 50, 0xa1b1ae);
-    this.add.rectangle(455, 180, 90, 50, 0xa1b1ae);
-    this.add.rectangle(555, 180, 90, 50, 0xa1b1ae);
-    this.add.rectangle(655, 180, 90, 50, 0xa1b1ae);
+    let groupColors = this.add.group();
+    let groupColorsBackground = this.add.group();
+    let backgroundColorText= this.add.rectangle(255, 180, 90, 50, 0x505655);
+    let backgroundHatText=this.add.rectangle(355, 180, 90, 50, 0xa1b1ae);
+    let backgroundSkinText=this.add.rectangle(455, 180, 90, 50, 0xa1b1ae);
+    let backgroundPetText=this.add.rectangle(555, 180, 90, 50, 0xa1b1ae);
+    let backgroundGameText=this.add.rectangle(655, 180, 90, 50, 0xa1b1ae);
     const colorText = this.add.text(225, 165, "Color", { font: "27px atari" });
     const hatText = this.add.text(335, 165, "Hat", { font: "27px atari" });
     const skinText = this.add.text(430, 165, "Skin", { font: "27px atari" });
@@ -171,14 +201,43 @@ class ChangeSkin extends Phaser.Scene {
     let numberPlayerText;
     // group background, text, icons in Game
     let groupGame = this.add.group();
-    closeBtn.on("pointerdown", () => {
-      this.scene.stop("ChangeSkin");
-    });
+    const changeX = 75;
+    const changeY = 75;
+    let countColor = 0;
+    backgroundColor = current_object.add.rectangle(
+      660,
+      420,
+      265,
+      385,
+      0xa1b1ae
+    );
+    groupColorsBackground.add(backgroundColor);
+    for (let i = 0; i < 4; i++) {
+      const x = 580;
+      const y = 280;
+      for (let j = 0; j < 3; j++) {
+        arrColor[countColor] = current_object.add.rectangle(
+          x + changeX * j,
+          y + changeY * i,
+          60,
+          60,
+          colorPlayers[countColor]
+        );
+        groupColors.add(arrColor[countColor]);
+        arrColor[countColor].setInteractive({ useHandCursor: true });
+        countColor++;
+      }
+    }
 
     this.input.on(
       "gameobjectdown",
       function (pointer, gameObject, deltaX, deltaY, deltaZ) {
-        if (gameObject === hatText) {
+        if (gameObject === colorText) {
+          backgroundColorText.setFillStyle("0x505655");
+          backgroundHatText.setFillStyle("0xa1b1ae");
+          backgroundSkinText.setFillStyle("0xa1b1ae");
+          backgroundPetText.setFillStyle("0xa1b1ae");
+          backgroundGameText.setFillStyle("0xa1b1ae");
           basePlayer.visible = true;
           player.visible = true;
           if (hatChosen) {
@@ -192,6 +251,56 @@ class ChangeSkin extends Phaser.Scene {
           groupPets.clear(true, true);
           groupPetsBackground.clear(true, true);
           groupGame.clear(true, true);
+          groupHatsBackground.clear(true, true);
+          groupHats.clear(true, true);
+          const changeX = 75;
+          const changeY = 75;
+          let countColor = 0;
+          backgroundColor = current_object.add.rectangle(
+            660,
+            420,
+            265,
+            385,
+            0xa1b1ae
+          );
+          groupColorsBackground.add(backgroundColor);
+          for (let i = 0; i < 4; i++) {
+            const x = 580;
+            const y = 280;
+            for (let j = 0; j < 3; j++) {
+              arrColor[countColor] = current_object.add.rectangle(
+                x + changeX * j,
+                y + changeY * i,
+                60,
+                60,
+                colorPlayers[countColor]
+              );
+              groupColors.add(arrColor[countColor]);
+              arrColor[countColor].setInteractive({ useHandCursor: true });
+              countColor++;
+            }
+          }
+        } else if (gameObject === hatText) {
+          backgroundColorText.setFillStyle("0xa1b1ae");
+          backgroundHatText.setFillStyle("0x505655");
+          backgroundSkinText.setFillStyle("0xa1b1ae");
+          backgroundPetText.setFillStyle("0xa1b1ae");
+          backgroundGameText.setFillStyle("0xa1b1ae");
+          basePlayer.visible = true;
+          player.visible = true;
+          if (hatChosen) {
+            hatChosen.visible = true;
+          }
+          if (trouserChosen) {
+            trouserChosen.visible = true;
+          }
+          groupTrousersBackground.clear(true, true);
+          groupTrousers.clear(true, true);
+          groupPets.clear(true, true);
+          groupPetsBackground.clear(true, true);
+          groupGame.clear(true, true);
+          groupColors.clear(true, true);
+          groupColorsBackground.clear(true, true);
           const changeX = 69;
           const changeY = 69;
           let countNameHat = 0;
@@ -220,6 +329,11 @@ class ChangeSkin extends Phaser.Scene {
           }
           // let boundaryImages = current_object.add.tileSprite(300, 300, "groupHats");
         } else if (gameObject === skinText) {
+          backgroundColorText.setFillStyle("0xa1b1ae");
+          backgroundHatText.setFillStyle("0xa1b1ae");
+          backgroundSkinText.setFillStyle("0x505655");
+          backgroundPetText.setFillStyle("0xa1b1ae");
+          backgroundGameText.setFillStyle("0xa1b1ae");
           basePlayer.visible = true;
           player.visible = true;
           if (hatChosen) {
@@ -233,6 +347,8 @@ class ChangeSkin extends Phaser.Scene {
           groupPets.clear(true, true);
           groupPetsBackground.clear(true, true);
           groupGame.clear(true, true);
+          groupColors.clear(true, true);
+          groupColorsBackground.clear(true, true);
           const changeX = 69;
           const changeY = 69;
           let countNameTrouser = 0;
@@ -266,6 +382,11 @@ class ChangeSkin extends Phaser.Scene {
           }
           // let boundaryImages = current_object.add.tileSprite(300, 300, "groupHats");
         } else if (gameObject === petText) {
+          backgroundColorText.setFillStyle("0xa1b1ae");
+          backgroundHatText.setFillStyle("0xa1b1ae");
+          backgroundSkinText.setFillStyle("0xa1b1ae");
+          backgroundPetText.setFillStyle("0x505655");
+          backgroundGameText.setFillStyle("0xa1b1ae");
           basePlayer.visible = true;
           player.visible = true;
           if (hatChosen) {
@@ -279,6 +400,8 @@ class ChangeSkin extends Phaser.Scene {
           groupTrousersBackground.clear(true, true);
           groupTrousers.clear(true, true);
           groupGame.clear(true, true);
+          groupColors.clear(true, true);
+          groupColorsBackground.clear(true, true);
           const changeX = 69;
           const changeY = 69;
           let countNamePet = 0;
@@ -306,7 +429,12 @@ class ChangeSkin extends Phaser.Scene {
             }
           }
         } else if (gameObject === gameText) {
-          console.log('game customs');
+          backgroundColorText.setFillStyle("0xa1b1ae");
+          backgroundHatText.setFillStyle("0xa1b1ae");
+          backgroundSkinText.setFillStyle("0xa1b1ae");
+          backgroundPetText.setFillStyle("0xa1b1ae");
+          backgroundGameText.setFillStyle("0x505655");
+          console.log("game customs");
           basePlayer.visible = false;
           player.visible = false;
           if (hatChosen) {
@@ -321,18 +449,19 @@ class ChangeSkin extends Phaser.Scene {
           groupTrousers.clear(true, true);
           groupPetsBackground.clear(true, true);
           groupPets.clear(true, true);
+          groupColors.clear(true, true);
+          groupColorsBackground.clear(true, true);
           let count = 0;
           for (let i = 0; i < 2; i++) {
-            groupGame.add(current_object.add.rectangle(
-              470,
-              280 + i * 55,
-              400,
-              50,
-              0xa1b1ae
-            ))
+            groupGame.add(
+              current_object.add.rectangle(470, 280 + i * 55, 400, 50, 0xa1b1ae)
+            );
             if (i === 0) {
-              minusImposterIcon =
-                current_object.add.sprite(585, 280 + i * 55, "minusIcon");
+              minusImposterIcon = current_object.add.sprite(
+                585,
+                280 + i * 55,
+                "minusIcon"
+              );
               plusImposterIcon = current_object.add.sprite(
                 650,
                 280 + i * 55,
@@ -363,31 +492,57 @@ class ChangeSkin extends Phaser.Scene {
               plusPlayerIcon.setInteractive({ useHandCursor: true });
             }
           }
-          groupGame.add(current_object.add.text(
-            300,
+          groupGame.add(
+            current_object.add.text(300, 265, "# Impostors", {
+              font: "27px atari",
+            })
+          );
+          groupGame.add(
+            current_object.add.text(300, 320, "# Players", {
+              font: "27px atari",
+            })
+          );
+          numberImposerText = current_object.add.text(
+            610,
             265,
-            "# Impostors",
-            { font: "27px atari" }
-          ))
-          groupGame.add(current_object.add.text(300, 320, "# Players", {
-            font: "27px atari",
-          }))
-          numberImposerText = current_object.add.text(610, 265, `${numberImposter}`, {
-            font: "27px atari",
-          });
-          groupGame.add(numberImposerText)
-          numberPlayerText = current_object.add.text(610, 320, `${numberPlayer}`, {
-            font: "27px atari",
-          });
-          groupGame.add(numberPlayerText)
+            `${numberImposter}`,
+            {
+              font: "27px atari",
+            }
+          );
+          groupGame.add(numberImposerText);
+          numberPlayerText = current_object.add.text(
+            610,
+            320,
+            `${numberPlayer}`,
+            {
+              font: "27px atari",
+            }
+          );
+          groupGame.add(numberPlayerText);
         }
       }
     );
 
-
     current_object.input.on(
       "gameobjectdown",
       function (pointer, gameObject, deltaX, deltaY, deltaZ) {
+        for (let i = 0; i < arrColor.length; i++) {
+          if (gameObject === arrColor[i]) {
+            player.destroy();
+            player = current_object.add.sprite(350, 460, `player${i}`);
+            playerChangedSkin.player = player;
+            if(trouserChosen){
+              trouserChosen= current_object.add.sprite(360, 510, trouserChosen.texture.key);
+              trouserChosen.scale = 1.9;
+            }
+            if(hatChosen){
+              hatChosen = current_object.add.sprite(345, 350, hatChosen.texture.key);
+              hatChosen.scale = 1.5;
+            }
+            break;
+          }
+        }
         for (let i = 0; i < groupHats.getLength(); i++) {
           if (
             gameObject === arrHats[i] ||
@@ -445,12 +600,22 @@ class ChangeSkin extends Phaser.Scene {
           }
           numberImposerText.destroy();
           numberPlayerText.destroy();
-          numberImposerText = current_object.add.text(610, 265, `${numberImposter}`, {
-            font: "27px atari",
-          });
-          numberPlayerText = current_object.add.text(610, 320, `${numberPlayer}`, {
-            font: "27px atari",
-          });
+          numberImposerText = current_object.add.text(
+            610,
+            265,
+            `${numberImposter}`,
+            {
+              font: "27px atari",
+            }
+          );
+          numberPlayerText = current_object.add.text(
+            610,
+            320,
+            `${numberPlayer}`,
+            {
+              font: "27px atari",
+            }
+          );
         }
         if (gameObject === plusImposterIcon) {
           if (numberImposter === 1) {
@@ -459,12 +624,22 @@ class ChangeSkin extends Phaser.Scene {
           }
           numberImposerText.destroy();
           numberPlayerText.destroy();
-          numberImposerText = current_object.add.text(610, 265, `${numberImposter}`, {
-            font: "27px atari",
-          });
-          numberPlayerText = current_object.add.text(610, 320, `${numberPlayer}`, {
-            font: "27px atari",
-          });
+          numberImposerText = current_object.add.text(
+            610,
+            265,
+            `${numberImposter}`,
+            {
+              font: "27px atari",
+            }
+          );
+          numberPlayerText = current_object.add.text(
+            610,
+            320,
+            `${numberPlayer}`,
+            {
+              font: "27px atari",
+            }
+          );
         }
         if (gameObject === minusPlayerIcon) {
           if (numberImposter === 1 && numberPlayer > 5 && numberPlayer <= 12) {
@@ -478,12 +653,22 @@ class ChangeSkin extends Phaser.Scene {
           }
           numberImposerText.destroy();
           numberPlayerText.destroy();
-          numberImposerText = current_object.add.text(610, 265, `${numberImposter}`, {
-            font: "27px atari",
-          });
-          numberPlayerText = current_object.add.text(610, 320, `${numberPlayer}`, {
-            font: "27px atari",
-          });
+          numberImposerText = current_object.add.text(
+            610,
+            265,
+            `${numberImposter}`,
+            {
+              font: "27px atari",
+            }
+          );
+          numberPlayerText = current_object.add.text(
+            610,
+            320,
+            `${numberPlayer}`,
+            {
+              font: "27px atari",
+            }
+          );
         }
         if (gameObject === plusPlayerIcon) {
           if (numberImposter === 1 && numberPlayer >= 5 && numberPlayer < 12) {
@@ -497,25 +682,42 @@ class ChangeSkin extends Phaser.Scene {
           }
           numberImposerText.destroy();
           numberPlayerText.destroy();
-          numberImposerText = current_object.add.text(610, 265, `${numberImposter}`, {
-            font: "27px atari",
-          });
-          numberPlayerText = current_object.add.text(610, 320, `${numberPlayer}`, {
-            font: "27px atari",
-          });
+          numberImposerText = current_object.add.text(
+            610,
+            265,
+            `${numberImposter}`,
+            {
+              font: "27px atari",
+            }
+          );
+          numberPlayerText = current_object.add.text(
+            610,
+            320,
+            `${numberPlayer}`,
+            {
+              font: "27px atari",
+            }
+          );
         }
       }
     );
 
     closeBtn.on("pointerdown", () => {
-      this.scene.stop("ChangeSkin");
-      this.scene.launch("waitingRoom", {
-        socket: this.socket,
-        textInput: this.textInput,
+      //  console.log(this.socket);
+      eventsCenter.emit("update", {
         playerChangedSkin: playerChangedSkin,
         numberImposter: numberImposter,
-        numberPlayer: numberPlayer
+        numberPlayer: numberPlayer,
       });
+      // this.scene.resume("waitingRoom", {
+      //   socket: this.socket,
+      //   textInput: this.textInput,
+      //   playerChangedSkin: playerChangedSkin,
+      //   numberImposter: numberImposter,
+      //   numberPlayer: numberPlayer,
+      // });
+
+      this.scene.stop("ChangeSkin");
     });
   }
 }
