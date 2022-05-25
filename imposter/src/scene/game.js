@@ -5,7 +5,8 @@ import playerpng from "../assets/player/player_sprite/player_base.png";
 import playerjson from "../assets/player/player_sprite/player_base.json";
 import player_ghost from "../assets/player/Base/ghost/ghost.png"
 import player_ghost_json from "../assets/player/Base/ghost/ghost.json"
-
+import dead from "../assets/player/dead/dead.png"
+import dead_json from "../assets/player/dead/dead.json"
 import Archaeologist_Walk_png from "../assets/player/player_sprite/Archaeologist_Walk.png";
 import Archaeologist_Walk_json from "../assets/player/player_sprite/Archaeologist_Walk.json";
 
@@ -86,7 +87,7 @@ class Game extends Phaser.Scene {
 
     this.load.atlas("playerbase", playerpng, playerjson);
     this.load.atlas("ghost", player_ghost, player_ghost_json)
-
+    this.load.atlas("dead", dead, dead_json)
 
 
 
@@ -193,10 +194,7 @@ class Game extends Phaser.Scene {
       key: "player-idle",
       frames: [{ key: "playerbase", frame: "idle.png" }],
     });
-    this.anims.create({
-      key: "dead",
-      frames: [{ key: "dead", frame: "dead.png" }],
-    });
+
 
     //khởi tạo nhóm các vent 
     vent_group = this.physics.add.staticGroup({
@@ -271,9 +269,9 @@ class Game extends Phaser.Scene {
     //player death
     this.anims.create({
       key: "player-dead",
-      frames: this.anims.generateFrameNames("playerbase", {
+      frames: this.anims.generateFrameNames("dead", {
         start: 1,
-        end: 12,
+        end: 42,
         prefix: "Dead",
         suffix: ".png",
       }),
