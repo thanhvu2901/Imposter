@@ -68,18 +68,18 @@ export default class waitingRoom extends Phaser.Scene {
     cursors = this.input.keyboard.createCursorKeys();
 
     player = this.physics.add.sprite(-45, 26, "playerbase", "idle.png");
-    pants_skin = this.physics.add.sprite(
-      player.x,
-      player.y,
-      "archaeologist_walk",
-      "Archaeologist_Spawn0051.png"
-    );
+    // pants_skin = this.physics.add.sprite(
+    //   player.x,
+    //   player.y,
+    //   "archaeologist_walk",
+    //   "Archaeologist_Spawn0051.png"
+    // );
     // tạo theo số lượng other player vào
 
     for (let i = 0; i < otherPlayerId.length; i++) {
       otherPlayer[i] = this.physics.add.sprite(
-        -45 + 10 * i,
-        26 + 10 * i,
+        -45 + 20 * i,
+        26 + 20 * i,
         "playerbase",
         "idle.png"
       );
@@ -291,7 +291,7 @@ export default class waitingRoom extends Phaser.Scene {
     //   ///  console.log(dataResume.test);
 
     // })
-    pants_skin.anims.play("archaeologist_walk");
+    //pants_skin.anims.play("archaeologist_walk");
   }
   update() {
     // pants_skin.setPosition(this.player.x, this.player.y);

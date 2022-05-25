@@ -82,15 +82,8 @@ class Game extends Phaser.Scene {
   preload() {
 
     this.load.tilemapTiledJSON("tilemap", theskeld);
-
-
     this.load.atlas("playerbase", playerpng, playerjson);
     this.load.atlas("ghost", player_ghost, player_ghost_json)
-
-
-
-
-
 
 
     this.load.atlas("Archaeologist_Walk", Archaeologist_Walk_png, Archaeologist_Walk_json);
@@ -105,8 +98,6 @@ class Game extends Phaser.Scene {
     this.load.image("FixWiring_mission_marked", FixWiring_mission_marked);
     this.load.image("CleanAsteroids", CleanAsteroids);
     this.load.image("StabilizeSteering", StabilizeSteering);
-
-
 
   }
 
@@ -163,7 +154,7 @@ class Game extends Phaser.Scene {
     // debugDraw(ship_tileset, this);
 
     //add player
-    player = this.physics.add.sprite(115, -720, "playerbase", "idle.png");
+    player = this.physics.add.sprite(160, -720, "playerbase", "idle.png");
 
 
     // tạo theo số lượng other player vào
@@ -173,8 +164,8 @@ class Game extends Phaser.Scene {
     // console.log(this.numPlayers);
     for (let i = 0; i < this.numPlayers - 1; i++) {
       otherPlayer[i] = this.physics.add.sprite(
-        115,
-        -740 + 30 * i,
+        115 + 30 * i,
+        -740 + 50 * i,
         "playerbase",
         "idle.png"
       );
