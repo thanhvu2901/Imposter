@@ -81,16 +81,8 @@ export default class waitingRoom extends Phaser.Scene {
     //cursor to direct
     cursors = this.input.keyboard.createCursorKeys();
 
-    var color_code = 1;
-    if (color_code == 1) {
-      console.log("blue");
       player = this.physics.add.sprite(-45, 26, PLAYER_BLUE, "idle.png");
       color = "blue"
-    } else {
-      player = this.physics.add.sprite(-45, 26, PLAYER_RED, "idle.png");
-      color = "red"
-      console.log("red");
-    }
 
     // pants_skin = this.physics.add.sprite(
     //   player.x,
@@ -371,6 +363,19 @@ export default class waitingRoom extends Phaser.Scene {
       this.playerChangedSkin = data.playerChangedSkin;
       this.numberImposter = data.numberImposter;
       this.numberPlayer = data.numberPlayer;
+      let colorPlayerChanged= this.playerChangedSkin.player.texture.key;
+      if (colorPlayerChanged === "player1") {
+        player.destroy();
+        console.log("blue");
+        player = this.physics.add.sprite(-45, 26, PLAYER_BLUE, "idle.png");
+        color = "blue"
+      } else if(colorPlayerChanged==="player9") {
+        player.destroy();
+        player = this.physics.add.sprite(-45, 26, PLAYER_RED, "idle.png");
+        color = "red"
+        console.log("red");
+      }
+
     });
     // this.events.on('resume', (data) => {
     //   console.log('resume');
