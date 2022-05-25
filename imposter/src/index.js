@@ -115,6 +115,6 @@ game.scene.add("divert_power", DivertPower)
 // game.scene.start('stabilizeSteering');
 // game.scene.start('startReactor')
 
-//game.scene.start('preloader');
+game.scene.start('preloader');
 //game.scene.start("align_engine_output")
-game.scene.start('guidemap')
+//game.scene.start('guidemap')
