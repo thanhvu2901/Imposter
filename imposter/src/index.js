@@ -83,7 +83,7 @@ game.scene.add('waitingRoom', waitingRoom)
 game.scene.add("divert_power", DivertPower)
 // start title
 
-game.scene.start("preloader");
+//game.scene.start("preloader");
 // game.scene.start("theskeld");
 //game.scene.start('menu');
 // game.scene.start('game');

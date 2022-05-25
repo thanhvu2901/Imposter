@@ -29,7 +29,7 @@ import jump6 from "../assets/img/jump vent/Vent0006.png";
 import jump7 from "../assets/img/jump vent/Vent0007.png";
 import vent_button from "../assets/img/vent_button.png"
 import arrow from "../assets/img/arrow.png"
-import { io } from "socket.io-client";
+
 import { PLAYER_SPEED } from "../consts/constants";
 
 //marked mission
@@ -42,18 +42,9 @@ import StabilizeSteering from "../assets/tasks/Stabilize Steering/marked.png";
 import { movePlayer } from "../animation/movement.js";
 import Event_Center from "../helper/event_center";
 
-import { io } from 'socket.io-client';
-import {
 
-  PLAYER_HEIGHT,
-  PLAYER_WIDTH,
-  PLAYER_START_X,
-  PLAYER_START_Y,
-  PLAYER_SPEED
-} from "../consts/constants";
 
-var player;
-var cursors;
+
 import eventsCenter from "./eventsCenter";
 let player;
 let otherPlayer = new Array();
@@ -145,7 +136,7 @@ class Game extends Phaser.Scene {
       current_x = data.x;
       current_y = data.y;
       mission_name = data.mission;
-      if(current_x && current_y) {
+      if (current_x && current_y) {
         map_missions.completed(mission_name);
         list_missions_completed.push(mission_name);
         total_missions_completed += 1;
@@ -181,7 +172,7 @@ class Game extends Phaser.Scene {
 
     //add player
     player = this.physics.add.sprite(250, 328, "playerbase", "idle.png");
-  
+
 
     // tạo theo số lượng other player vào
 
@@ -505,7 +496,7 @@ class Game extends Phaser.Scene {
         alive = false;
 
         //*****************LOOP HERE********************** */
-        player.anims.play("player-dead",false);
+        player.anims.play("player-dead", false);
       } else {
         let index = otherPlayerId.findIndex((Element) => Element == playerId);
         otherPlayer[index].anims.play("player-dead", true);
