@@ -293,6 +293,9 @@ class Game extends Phaser.Scene {
     })
     this.input.keyboard.on("keyup", (e) => {
       this.sound.stopByKey("walk");
+      if(alive == true){
+        player.anims.play("player-idle");}
+        
       pressedKeys = pressedKeys.filter((key) => key !== e.code);
     });
 
@@ -379,7 +382,7 @@ class Game extends Phaser.Scene {
     light.draw()
 
     //ẩn hết các arrow của vent sau khi khởi tạo
-    arrow_group.setVisible(false)
+    arrow_group.setVisible(false).setDepth(1)
 
     //bắt sự kiện khi player overlap với 1 object khác
     player.on("overlapstart", function () {
@@ -405,7 +408,21 @@ class Game extends Phaser.Scene {
       this.sound.play('vent', false)
       if (is_vent) {
         temp.play("hole")
-        player.anims.play("jump",true);
+        player.anims.play("jump")
+        player.on("animationcomplete", (animation,frame) => {
+         if(animation.key="jump"){
+         if (is_hidden == true) {
+          player.setDepth(-10)
+        } else {
+          player.setDepth(0.6)
+          player.play("jump")
+          player.on("animationcomplete", (animation,frame) => {
+            if(animation.key="jump"){
+              player.anims.play("player-idle")
+            }
+          })
+        }}
+       },this);
         is_jump = true
         //nếu player không trốn vent thì is_hidden sẽ chuyển thành true và ngược lại
         if (is_hidden == true) {
@@ -516,31 +533,9 @@ class Game extends Phaser.Scene {
       else if (!touching && wasTouching) player.emit("overlapend");
 
       //để tránh xung đột với animation idle khi vào vent thì ta sẽ delay animation idle lại để player thực hiện nhảy vent và sau đó ẩn player đi 
-      if (is_vent == true && is_jump == true) {
-        count++
-        if (count == 10) {
-          check(player)
-          is_jump = false
-          count = 0
-        }
-      }
-      else if (is_vent == true && is_jump == false) {
-
-        player.anims.play("player-idle");
-      }
       let playerMoved = false;
       player.setVelocity(0);
 
-      if (
-        !cursors.left.isDown &&
-        !cursors.right.isDown &&
-        !cursors.up.isDown &&
-        !cursors.down.isDown &&
-        !is_vent
-      ) {
-        //     console.log("outvent")
-        player.anims.play("player-idle");
-      }
       //nếu is_hidden bằng true có nghĩa là player đang trốn vent nên sẽ ko di chuyển bằng input được
       if (cursors.left.isDown && is_hidden == false) {
         player.anims.play("player-walk", true);
@@ -593,37 +588,28 @@ class Game extends Phaser.Scene {
       }
     }
     //canKill = false
-    if (alive == true) {
+    if (alive == true ) {
       let playerMoved = false;
       player.setVelocity(0);
 
-      if (
-        !cursors.left.isDown &&
-        !cursors.right.isDown &&
-        !cursors.up.isDown &&
-        !cursors.down.isDown
-      ) {
-        player.anims.play("player-idle");
-      }
-
-      if (cursors.left.isDown) {
+      if (cursors.left.isDown && is_hidden == false) {
         player.anims.play("player-walk", true);
         player.setVelocityX(-PLAYER_SPEED);
         player.scaleX = -1;
         player.body.offset.x = 40;
         playerMoved = true;
-      } else if (cursors.right.isDown) {
+      } else if (cursors.right.isDown && is_hidden == false) {
         player.anims.play("player-walk", true);
         player.setVelocityX(PLAYER_SPEED);
         player.scaleX = 1;
         player.body.offset.x = 0;
         playerMoved = true;
       }
-      if (cursors.up.isDown) {
+      if (cursors.up.isDown && is_hidden == false) {
         player.anims.play("player-walk", true);
         player.setVelocityY(-PLAYER_SPEED);
         playerMoved = true;
-      } else if (cursors.down.isDown) {
+      } else if (cursors.down.isDown && is_hidden == false) {
         player.anims.play("player-walk", true);
         player.setVelocityY(PLAYER_SPEED);
         playerMoved = true;
@@ -714,14 +700,5 @@ function getKey(val) {
   return [...vent_cord].find(([key, value]) => JSON.stringify(val) === JSON.stringify(value));
 }
 //ẩn player dựa trên giá trị của is_hidden
-function check(player) {
-  if (is_hidden == true) {
-    player.setActive(false).setVisible(false)
-
-  } else {
-
-    player.setActive(true).setVisible(true)
-  }
-}
 
 export default Game;
