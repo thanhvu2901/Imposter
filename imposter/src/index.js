@@ -24,6 +24,7 @@ import JoinGame from "./scene/joinGame.js";
 import waitingRoom from "./scene/waitingRoom.js";
 import introCrew from "./scene/state/intro/introCrew.js";
 import introImposter from "./scene/state/intro/introImposter.js";
+import guidemap from "./scene/state/guidemap/guidemap.js";
 
 var preloader = new Preloader();
 
@@ -42,7 +43,7 @@ const config = {
     mode: Phaser.Scale.FIT,
     autoCenter: Phaser.Scale.CENTER_BOTH
   },
-  
+
   //enable Phaser-raycaster plugin
   plugins: {
     scene: [
@@ -69,7 +70,7 @@ game.scene.add('game', Game);
 game.scene.add('options', Options);
 game.scene.add('login', Login);
 game.scene.add('submenu', SubMenu)
-
+game.scene.add('guidemap', guidemap)
 
 game.scene.add('Course', ChartCourse)
 
@@ -93,7 +94,7 @@ game.scene.add('waitingRoom', waitingRoom)
 game.scene.add("divert_power", DivertPower)
 // start title
 //game.scene.start("joinGame");
-game.scene.start("preloader");
+//game.scene.start("preloader");
 // game.scene.start("theskeld");
 //game.scene.start('menu');
 // game.scene.start('game');
@@ -116,4 +117,4 @@ game.scene.start("preloader");
 
 //game.scene.start('preloader');
 //game.scene.start("align_engine_output")
-
+game.scene.start('guidemap')
