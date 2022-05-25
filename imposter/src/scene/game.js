@@ -98,12 +98,6 @@ class Game extends Phaser.Scene {
   }
 
   create() {
-    this.input.keyboard.on('keyup', (event) => {
-      if(alive == true){
-      player.anims.play("player-idle");}
-  
-      }
-  );
     //this.scene.pause('game')
     // let intro = this.scene.launch('introCrew', { isRole: isRole }).bringToTop('introCrew')
 
@@ -134,7 +128,7 @@ class Game extends Phaser.Scene {
 
     //add player
     player = this.physics.add.sprite(115, -700, "playerbase", "idle.png").setDepth(0.6)
-    player.body.setCircle(10);
+    player.body.setCircle(10,35,20)
 
 
     if (current_x && current_y) {
@@ -301,6 +295,9 @@ class Game extends Phaser.Scene {
     })
     this.input.keyboard.on("keyup", (e) => {
       this.sound.stopByKey("walk");
+      if(alive == true){
+        player.anims.play("player-idle");}
+    
       pressedKeys = pressedKeys.filter((key) => key !== e.code);
     });
 
@@ -354,7 +351,7 @@ class Game extends Phaser.Scene {
         case "vent":
           //gán vị trí cho từng phần tử con của group vent 
           children[i].setPosition(object.x, object.y - 10).setOrigin(0, 0).setScale(1.2).setDepth(0.5)
-          children[i].body.setCircle(10)
+          children[i].body.setCircle(15)
      
           i++
           break;
@@ -416,7 +413,6 @@ player.eventNames.on
       //nếu tới gần vent thì sẽ đi vào vòng if
       this.sound.play('vent', false)
       if (is_vent) {
-        console.log(is_vent,is_hidden)
         temp.play("hole")
         player.anims.play("jump")
         player.on("animationcomplete", (animation,frame) => {
