@@ -125,6 +125,7 @@ class Preloader extends Phaser.Scene {
     this.load.image('dead', dead)
     this.load.image('guideMap', guideMap)
 
+
     this.load.image("vent_1", vent1);
     this.load.image("vent_2", vent2);
     this.load.image("vent_3", vent3);

@@ -5,8 +5,7 @@ import playerpng from "../assets/player/player_sprite/player_base.png";
 import playerjson from "../assets/player/player_sprite/player_base.json";
 import player_ghost from "../assets/player/Base/ghost/ghost.png"
 import player_ghost_json from "../assets/player/Base/ghost/ghost.json"
-import dead from "../assets/player/dead/dead.png"
-import dead_json from "../assets/player/dead/dead.json"
+
 import Archaeologist_Walk_png from "../assets/player/player_sprite/Archaeologist_Walk.png";
 import Archaeologist_Walk_json from "../assets/player/player_sprite/Archaeologist_Walk.json";
 
@@ -87,12 +86,13 @@ class Game extends Phaser.Scene {
 
     this.load.atlas("playerbase", playerpng, playerjson);
     this.load.atlas("ghost", player_ghost, player_ghost_json)
-    this.load.atlas("dead", dead, dead_json)
 
 
 
 
-    this.load.atlas("playerbase", playerpng, playerjson);
+
+
+
     this.load.atlas("Archaeologist_Walk", Archaeologist_Walk_png, Archaeologist_Walk_json);
 
 
@@ -147,6 +147,11 @@ class Game extends Phaser.Scene {
       kill.alpha = 0.5;
 
       sabotage = this.add.image(1000, 700, "sabotage").setScrollFactor(0, 0).setInteractive().setAlpha(1)
+      //*****************OPEN the Mini Map ******/
+      sabotage.on('pointerdown', () => {
+        console.log('guide map');
+        this.scene.launch('guidemap').bringToTop('guideMap')
+      })
 
     }
     //initialize missions of this map
@@ -269,14 +274,14 @@ class Game extends Phaser.Scene {
     //player death
     this.anims.create({
       key: "player-dead",
-      frames: this.anims.generateFrameNames("dead", {
+      frames: this.anims.generateFrameNames("playerbase", {
         start: 1,
         end: 42,
         prefix: "Dead",
         suffix: ".png",
       }),
       repeat: 0,
-      frameRate: 24,
+      frameRate: 32,
     });
     //player ghost
     this.anims.create({
@@ -691,9 +696,9 @@ class Game extends Phaser.Scene {
 
       }
     }
-    else {
 
-    }
+
+    //******************GHOST */
     //
   };
 }
