@@ -136,7 +136,7 @@
             <key>data</key>
             <struct type="DataFile">
                 <key>name</key>
-                <filename>../player_sprite/player_base_blue.json</filename>
+                <filename>../player_sprite/player_base_green_light.json</filename>
             </struct>
         </map>
         <key>multiPack</key>
@@ -185,10 +185,10 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Dead1.png</key>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Dead10.png</key>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Dead24.png</key>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Dead28.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead1.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead10.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead24.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead28.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -203,11 +203,11 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Dead11.png</key>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Dead12.png</key>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Dead2.png</key>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Dead3.png</key>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Dead9.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead11.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead12.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead2.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead3.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead9.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -222,8 +222,8 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Dead13.png</key>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Dead5.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead13.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead5.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -238,9 +238,9 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Dead14.png</key>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Dead18.png</key>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Dead4.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead14.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead18.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead4.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -255,8 +255,8 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Dead15.png</key>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Dead17.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead15.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead17.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -271,14 +271,14 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Dead16.png</key>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Dead20.png</key>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Dead25.png</key>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Dead26.png</key>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Dead27.png</key>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Dead29.png</key>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Dead7.png</key>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Dead8.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead16.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead20.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead25.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead26.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead27.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead29.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead7.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead8.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -293,9 +293,9 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Dead19.png</key>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Dead22.png</key>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Dead23.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead19.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead22.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead23.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -310,8 +310,8 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Dead21.png</key>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Dead30.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead21.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead30.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -326,7 +326,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Dead31.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead31.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -341,7 +341,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Dead32.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead32.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -356,8 +356,8 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Dead33.png</key>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Dead34.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead33.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead34.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -372,7 +372,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Dead35.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead35.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -387,12 +387,13 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Dead36.png</key>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Dead37.png</key>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Dead38.png</key>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Dead40.png</key>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Dead41.png</key>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Dead42.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead36.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead37.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead38.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead39.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead40.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead41.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead42.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -407,7 +408,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Dead6.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Dead6.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -422,7 +423,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Walk1.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Walk1.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -437,8 +438,8 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Walk10.png</key>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/idle.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Walk10.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/idle.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -453,8 +454,8 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Walk11.png</key>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Walk5.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Walk11.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Walk5.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -469,7 +470,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Walk12.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Walk12.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -484,7 +485,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Walk2.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Walk2.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -499,7 +500,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Walk3.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Walk3.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -514,7 +515,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Walk4.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Walk4.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -529,7 +530,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Walk6.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Walk6.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -544,7 +545,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Walk7.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Walk7.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -559,8 +560,8 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Walk8.png</key>
-            <key type="filename">../BulkResizePhotos.com/player_base_blue/Walk9.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Walk8.png</key>
+            <key type="filename">../BulkResizePhotos.com/player_base_green_light/Walk9.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -578,60 +579,61 @@
         </map>
         <key>fileList</key>
         <array>
-            <filename>../BulkResizePhotos.com/player_base_blue/Dead1.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Dead10.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Dead11.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Dead12.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Dead13.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Dead14.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Dead15.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Dead16.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Dead17.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Dead18.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Dead19.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Dead2.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Dead20.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Dead21.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Dead22.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Dead23.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Dead24.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Dead25.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Dead26.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Dead27.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Dead28.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Dead29.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Dead3.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Dead30.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Dead31.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Dead32.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Dead33.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Dead34.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Dead35.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Dead36.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Dead37.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Dead38.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Dead4.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Dead40.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Dead41.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Dead42.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Dead5.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Dead6.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Dead7.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Dead8.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Dead9.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Walk1.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Walk10.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Walk11.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Walk12.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Walk2.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Walk3.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Walk4.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Walk5.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Walk6.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Walk7.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Walk8.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/Walk9.png</filename>
-            <filename>../BulkResizePhotos.com/player_base_blue/idle.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead1.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead10.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead11.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead12.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead13.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead14.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead15.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead16.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead17.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead18.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead19.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead2.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead20.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead21.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead22.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead23.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead24.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead25.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead26.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead27.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead28.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead29.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead3.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead30.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead31.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead32.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead33.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead34.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead35.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead36.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead37.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead38.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead39.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead4.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead40.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead41.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead42.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead5.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead6.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead7.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead8.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Dead9.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Walk1.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Walk10.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Walk11.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Walk12.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Walk2.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Walk3.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Walk4.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Walk5.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Walk6.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Walk7.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Walk8.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/Walk9.png</filename>
+            <filename>../BulkResizePhotos.com/player_base_green_light/idle.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
