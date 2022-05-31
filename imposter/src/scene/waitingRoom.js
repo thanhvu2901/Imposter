@@ -10,11 +10,45 @@ import playerpng_red from "../assets/player/player_sprite/player_base_red.png";
 import playerjson_red from "../assets/player/player_sprite/player_base_red.json";
 import playerpng_blue from "../assets/player/player_sprite/player_base_blue.png";
 import playerjson_blue from "../assets/player/player_sprite/player_base_blue.json";
+import playerpng_blue_dark from "../assets/player/player_sprite/player_base_blue_dark.png";
+import playerjson_blue_dark from "../assets/player/player_sprite/player_base_blue_dark.json";
+import playerpng_blue_light from "../assets/player/player_sprite/player_base_blue_light.png";
+import playerjson_blue_light from "../assets/player/player_sprite/player_base_blue_light.json";
+import playerpng_gray_dark from "../assets/player/player_sprite/player_base_gray_dark.png";
+import playerjson_gray_dark from "../assets/player/player_sprite/player_base_gray_dark.json";
+import playerpng_gray_light from "../assets/player/player_sprite/player_base_gray_light.png";
+import playerjson_gray_light from "../assets/player/player_sprite/player_base_gray_light.json";
+import playerpng_green_dark from "../assets/player/player_sprite/player_base_green_dark.png";
+import playerjson_green_dark from "../assets/player/player_sprite/player_base_green_dark.json";
+import playerpng_green_light from "../assets/player/player_sprite/player_base_green_light.png";
+import playerjson_green_light from "../assets/player/player_sprite/player_base_green_light.json";
+import playerpng_orange from "../assets/player/player_sprite/player_base_orange.png";
+import playerjson_orange from "../assets/player/player_sprite/player_base_orange.json";
+import playerpng_purple from "../assets/player/player_sprite/player_base_purple.png";
+import playerjson_purple from "../assets/player/player_sprite/player_base_purple.json";
+import playerpng_yellow from "../assets/player/player_sprite/player_base_yellow.png";
+import playerjson_yellow from "../assets/player/player_sprite/player_base_yellow.json";
+import playerpng_pink from "../assets/player/player_sprite/player_base_pink.png";
+import playerjson_pink from "../assets/player/player_sprite/player_base_pink.json";
 
 import Archaeologist_Walk_png from "../assets/player/player_sprite/Archaeologist_Walk.png";
 import Archaeologist_Walk_json from "../assets/player/player_sprite/Archaeologist_Walk.json";
 
-import { PLAYER_SPEED, PLAYER_BLUE, PLAYER_RED } from "../consts/constants";
+import {
+  PLAYER_SPEED,
+  PLAYER_BLUE,
+  PLAYER_RED,
+  PLAYER_BLUE_DARK,
+  PLAYER_BLUE_LIGHT,
+  PLAYER_GRAY_DARK,
+  PLAYER_GRAY_LIGHT,
+  PLAYER_GREEN_DARK,
+  PLAYER_GREEN_LIGHT,
+  PLAYER_ORANGE,
+  PLAYER_PURPLE,
+  PLAYER_YELLOW,
+  PLAYER_PINK,
+} from "../consts/constants";
 import { debugDraw } from "../scene/debugDraw";
 import eventsCenter from "./eventsCenter";
 let player;
@@ -52,6 +86,40 @@ export default class waitingRoom extends Phaser.Scene {
     //Player color
     this.load.atlas(PLAYER_RED, playerpng_red, playerjson_red);
     this.load.atlas(PLAYER_BLUE, playerpng_blue, playerjson_blue);
+    this.load.atlas(
+      PLAYER_BLUE_DARK,
+      playerpng_blue_dark,
+      playerjson_blue_dark
+    );
+    this.load.atlas(
+      PLAYER_BLUE_LIGHT,
+      playerpng_blue_light,
+      playerjson_blue_light
+    );
+    this.load.atlas(
+      PLAYER_GRAY_DARK,
+      playerpng_gray_dark,
+      playerjson_gray_dark
+    );
+    this.load.atlas(
+      PLAYER_GRAY_LIGHT,
+      playerpng_gray_light,
+      playerjson_gray_light
+    );
+    this.load.atlas(
+      PLAYER_GREEN_DARK,
+      playerpng_green_dark,
+      playerjson_green_dark
+    );
+    this.load.atlas(
+      PLAYER_GREEN_LIGHT,
+      playerpng_green_light,
+      playerjson_green_light
+    );
+    this.load.atlas(PLAYER_ORANGE, playerpng_orange, playerjson_orange);
+    this.load.atlas(PLAYER_PURPLE, playerpng_purple, playerjson_purple);
+    this.load.atlas(PLAYER_PINK, playerpng_pink, playerjson_pink);
+    this.load.atlas(PLAYER_YELLOW, playerpng_yellow, playerjson_yellow);
 
     this.load.atlas(
       "archaeologist_walk",
@@ -81,8 +149,8 @@ export default class waitingRoom extends Phaser.Scene {
     //cursor to direct
     cursors = this.input.keyboard.createCursorKeys();
 
-      player = this.physics.add.sprite(-45, 26, PLAYER_BLUE, "idle.png");
-      color = "blue"
+    player = this.physics.add.sprite(-45, 26, PLAYER_BLUE, "idle.png");
+    color = "blue";
 
     // pants_skin = this.physics.add.sprite(
     //   player.x,
@@ -119,6 +187,66 @@ export default class waitingRoom extends Phaser.Scene {
       frames: [{ key: PLAYER_BLUE, frame: "idle.png" }],
     });
 
+    //Blue dark
+    this.anims.create({
+      key: "player-idle_blue_dark",
+      frames: [{ key: PLAYER_BLUE_DARK, frame: "idle.png" }],
+    });
+
+    //Blue light
+    this.anims.create({
+      key: "player-idle_blue_light",
+      frames: [{ key: PLAYER_BLUE_LIGHT, frame: "idle.png" }],
+    });
+
+    //Gray dark
+    this.anims.create({
+      key: "player-idle_gray_dark",
+      frames: [{ key: PLAYER_GRAY_DARK, frame: "idle.png" }],
+    });
+
+    //Gray light
+    this.anims.create({
+      key: "player-idle_gray_light",
+      frames: [{ key: PLAYER_GRAY_LIGHT, frame: "idle.png" }],
+    });
+
+    //Green dark
+    this.anims.create({
+      key: "player-idle_green_dark",
+      frames: [{ key: PLAYER_GREEN_DARK, frame: "idle.png" }],
+    });
+
+    //Green light
+    this.anims.create({
+      key: "player-idle_green_light",
+      frames: [{ key: PLAYER_GREEN_LIGHT, frame: "idle.png" }],
+    });
+
+    //Orange
+    this.anims.create({
+      key: "player-idle_orange",
+      frames: [{ key: PLAYER_ORANGE, frame: "idle.png" }],
+    });
+
+    //Pink
+    this.anims.create({
+      key: "player-idle_pink",
+      frames: [{ key: PLAYER_PINK, frame: "idle.png" }],
+    });
+
+    //Purple
+    this.anims.create({
+      key: "player-idle_purple",
+      frames: [{ key: PLAYER_PURPLE, frame: "idle.png" }],
+    });
+
+    //Yellow
+    this.anims.create({
+      key: "player-idle_yellow",
+      frames: [{ key: PLAYER_YELLOW, frame: "idle.png" }],
+    });
+
     //animation player
     this.anims.create({
       key: "player-walk",
@@ -149,6 +277,136 @@ export default class waitingRoom extends Phaser.Scene {
     this.anims.create({
       key: "player-walk_blue",
       frames: this.anims.generateFrameNames(PLAYER_BLUE, {
+        start: 1,
+        end: 12,
+        prefix: "Walk",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 16,
+    });
+
+    //Blue dark
+    this.anims.create({
+      key: "player-walk_blue_dark",
+      frames: this.anims.generateFrameNames(PLAYER_BLUE_DARK, {
+        start: 1,
+        end: 12,
+        prefix: "Walk",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 16,
+    });
+
+    //Blue light
+    this.anims.create({
+      key: "player-walk_blue_light",
+      frames: this.anims.generateFrameNames(PLAYER_BLUE_LIGHT, {
+        start: 1,
+        end: 12,
+        prefix: "Walk",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 16,
+    });
+
+    //Gray dark
+    this.anims.create({
+      key: "player-walk_gray_dark",
+      frames: this.anims.generateFrameNames(PLAYER_GRAY_DARK, {
+        start: 1,
+        end: 12,
+        prefix: "Walk",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 16,
+    });
+
+    //Gray light
+    this.anims.create({
+      key: "player-walk_gray_light",
+      frames: this.anims.generateFrameNames(PLAYER_GRAY_LIGHT, {
+        start: 1,
+        end: 12,
+        prefix: "Walk",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 16,
+    });
+
+    //Green dark
+    this.anims.create({
+      key: "player-walk_green_dark",
+      frames: this.anims.generateFrameNames(PLAYER_GREEN_DARK, {
+        start: 1,
+        end: 12,
+        prefix: "Walk",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 16,
+    });
+
+    //Green light
+    this.anims.create({
+      key: "player-walk_green_light",
+      frames: this.anims.generateFrameNames(PLAYER_GREEN_LIGHT, {
+        start: 1,
+        end: 12,
+        prefix: "Walk",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 16,
+    });
+
+    //Orange
+    this.anims.create({
+      key: "player-walk_orange",
+      frames: this.anims.generateFrameNames(PLAYER_ORANGE, {
+        start: 1,
+        end: 12,
+        prefix: "Walk",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 16,
+    });
+
+    //Pink
+    this.anims.create({
+      key: "player-walk_pink",
+      frames: this.anims.generateFrameNames(PLAYER_PINK, {
+        start: 1,
+        end: 12,
+        prefix: "Walk",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 16,
+    });
+
+    //Purple
+    this.anims.create({
+      key: "player-walk_purple",
+      frames: this.anims.generateFrameNames(PLAYER_PURPLE, {
+        start: 1,
+        end: 12,
+        prefix: "Walk",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 16,
+    });
+
+    //Yellow
+    this.anims.create({
+      key: "player-walk_yellow",
+      frames: this.anims.generateFrameNames(PLAYER_YELLOW, {
         start: 1,
         end: 12,
         prefix: "Walk",
@@ -200,6 +458,136 @@ export default class waitingRoom extends Phaser.Scene {
     this.anims.create({
       key: "player-dead_blue",
       frames: this.anims.generateFrameNames(PLAYER_BLUE, {
+        start: 1,
+        end: 42,
+        prefix: "Dead",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    //Blue dark
+    this.anims.create({
+      key: "player-dead_blue_dark",
+      frames: this.anims.generateFrameNames(PLAYER_BLUE_DARK, {
+        start: 1,
+        end: 42,
+        prefix: "Dead",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    //Blue light
+    this.anims.create({
+      key: "player-dead_blue_light",
+      frames: this.anims.generateFrameNames(PLAYER_BLUE_LIGHT, {
+        start: 1,
+        end: 42,
+        prefix: "Dead",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    //Gray dark
+    this.anims.create({
+      key: "player-dead_gray_dark",
+      frames: this.anims.generateFrameNames(PLAYER_GRAY_DARK, {
+        start: 1,
+        end: 42,
+        prefix: "Dead",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    //Gray light
+    this.anims.create({
+      key: "player-dead_gray_light",
+      frames: this.anims.generateFrameNames(PLAYER_GRAY_LIGHT, {
+        start: 1,
+        end: 42,
+        prefix: "Dead",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    //Green dark
+    this.anims.create({
+      key: "player-dead_green_dark",
+      frames: this.anims.generateFrameNames(PLAYER_GREEN_DARK, {
+        start: 1,
+        end: 42,
+        prefix: "Dead",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    //Green light
+    this.anims.create({
+      key: "player-dead_green_light",
+      frames: this.anims.generateFrameNames(PLAYER_GREEN_LIGHT, {
+        start: 1,
+        end: 42,
+        prefix: "Dead",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    //Orange
+    this.anims.create({
+      key: "player-dead_orange",
+      frames: this.anims.generateFrameNames(PLAYER_ORANGE, {
+        start: 1,
+        end: 42,
+        prefix: "Dead",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    //Pink
+    this.anims.create({
+      key: "player-dead_pink",
+      frames: this.anims.generateFrameNames(PLAYER_PINK, {
+        start: 1,
+        end: 42,
+        prefix: "Dead",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    //Purple
+    this.anims.create({
+      key: "player-dead_purple",
+      frames: this.anims.generateFrameNames(PLAYER_PURPLE, {
+        start: 1,
+        end: 42,
+        prefix: "Dead",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    //Yellow
+    this.anims.create({
+      key: "player-dead_yellow",
+      frames: this.anims.generateFrameNames(PLAYER_YELLOW, {
         start: 1,
         end: 42,
         prefix: "Dead",
@@ -363,19 +751,104 @@ export default class waitingRoom extends Phaser.Scene {
       this.playerChangedSkin = data.playerChangedSkin;
       this.numberImposter = data.numberImposter;
       this.numberPlayer = data.numberPlayer;
-      let colorPlayerChanged= this.playerChangedSkin.player.texture.key;
-      if (colorPlayerChanged === "player1") {
-        player.destroy();
-        console.log("blue");
-        player = this.physics.add.sprite(-45, 26, PLAYER_BLUE, "idle.png");
-        color = "blue"
-      } else if(colorPlayerChanged==="player9") {
-        player.destroy();
-        player = this.physics.add.sprite(-45, 26, PLAYER_RED, "idle.png");
-        color = "red"
-        console.log("red");
+      let colorPlayerChanged = this.playerChangedSkin.player.texture.key;
+      switch (colorPlayerChanged) {
+        case "player0":
+          player.destroy();
+          player = this.physics.add.sprite(-45, 26, PLAYER_BLUE, "idle.png");
+          color = "blue";
+          break;
+        case "player1":
+          player.destroy();
+          player = this.physics.add.sprite(-45, 26, PLAYER_YELLOW, "idle.png");
+          color = "yellow";
+          break;
+        case "player2":
+          player.destroy();
+          player = this.physics.add.sprite(-45, 26, PLAYER_PINK, "idle.png");
+          color = "pink";
+          break;
+        case "player3":
+          player.destroy();
+          player = this.physics.add.sprite(-45, 26, PLAYER_ORANGE, "idle.png");
+          color = "orange";
+          break;
+        case "player4":
+          player.destroy();
+          player = this.physics.add.sprite(
+            -45,
+            26,
+            PLAYER_GRAY_DARK,
+            "idle.png"
+          );
+          color = "gray_dark";
+          break;
+        case "player5":
+          player.destroy();
+          player = this.physics.add.sprite(
+            -45,
+            26,
+            PLAYER_GRAY_LIGHT,
+            "idle.png"
+          );
+          color = "gray_light";
+          break;
+        case "player6":
+          player.destroy();
+          player = this.physics.add.sprite(-45, 26, PLAYER_PURPLE, "idle.png");
+          color = "purple";
+          break;
+        case "player7":
+          player.destroy();
+          player = this.physics.add.sprite(
+            -45,
+            26,
+            PLAYER_BLUE_LIGHT,
+            "idle.png"
+          );
+          color = "blue_light";
+          break;
+        case "player8":
+          player.destroy();
+          player = this.physics.add.sprite(
+            -45,
+            26,
+            PLAYER_BLUE_DARK,
+            "idle.png"
+          );
+          color = "blue_dark";
+          break;
+        case "player9":
+          player.destroy();
+          player = this.physics.add.sprite(-45, 26, PLAYER_RED, "idle.png");
+          color = "red";
+          break;
+        case "player10":
+          player.destroy();
+          player = this.physics.add.sprite(
+            -45,
+            26,
+            PLAYER_GREEN_LIGHT,
+            "idle.png"
+          );
+          color = "green_light";
+          break;
+        case "player11":
+          player.destroy();
+          player = this.physics.add.sprite(
+            -45,
+            26,
+            PLAYER_GREEN_DARK,
+            "idle.png"
+          );
+          color = "green_dark";
+          break;
+        default:
+          player.destroy();
+          player = this.physics.add.sprite(-45, 26, PLAYER_BLUE, "idle.png");
+          color = "blue";
+          break;
       }
-
     });
     // this.events.on('resume', (data) => {
     //   console.log('resume');
@@ -393,7 +866,7 @@ export default class waitingRoom extends Phaser.Scene {
     // pants_skin.setPosition(this.player.x, this.player.y);
     let playerMoved = false;
     player.setVelocity(0);
-    var suffix = (color == "blue" ? "blue" : "red");
+    var suffix = color;
     if (
       !cursors.left.isDown &&
       !cursors.right.isDown &&
