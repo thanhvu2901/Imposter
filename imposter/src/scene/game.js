@@ -1,5 +1,5 @@
 import Phaser, { Scene } from "phaser";
-
+import Map_1 from "./state/ingame/mini-map";
 import theskeld from "../assets/tilemaps/theskeld.json";
 import playerpng from "../assets/player/player_sprite/player_base.png";
 import playerjson from "../assets/player/player_sprite/player_base.json";
@@ -52,7 +52,7 @@ let vent_group, arrow_group, vent_cord = new Map(), vent_des = new Map()
 let temp, key, is_vent = false, is_jump = false, is_hidden = false, keyboard
 let count = 0
 let current_scene;
-
+const eventsCenter = new Phaser.Events.EventEmitter()
 let total_missions_completed = 0;
 let list_missions_completed = [];
 class Game extends Phaser.Scene {
@@ -437,7 +437,10 @@ class Game extends Phaser.Scene {
       }
 
     })
-
+    sabotage.on('pointerdown',()=>{
+      console.log("aaaa")
+      this.scene.launch("mini-map")
+    })
     this.socket.on("move", ({ x, y, playerId }) => {
       //console.log({ x, y, playerId });
 
@@ -499,6 +502,8 @@ class Game extends Phaser.Scene {
 
   }
   update() {
+   
+    this.events.emit('moving',[player.x,player.y]);
     light.update(player)
     if (this.isRole == 1) {
       kill.on("pointerdown", () => {

@@ -16,7 +16,7 @@ import CleanO2Filter from "./scene/state/ingame/cleanO2Filter.js";
 import CleanAsteroids from "./scene/state/ingame/cleanAsteroids.js"
 import PrimeShields from "./scene/state/ingame/primeShields.js";
 import ChangeSkin from "./scene/state/skin/changeSkin.js";
-
+import Map_1 from "./scene/state/ingame/mini-map.js";
 import InspectSample from "./scene/state/minigame/inspect_sample.js";
 import StabilizeSteering from "./scene/state/minigame/stabilize_steering.js";
 import StartReactor from "./scene/state/minigame/start_reactor.js";
@@ -65,7 +65,7 @@ game.scene.add('introCrew', introCrew)
 game.scene.add('introImposter', introImposter)
 game.scene.add("theskeld", TheSkeld);
 game.scene.add('game', Game);
-
+game.scene.add('mini-map',Map_1)
 game.scene.add('options', Options);
 game.scene.add('login', Login);
 game.scene.add('submenu', SubMenu)
@@ -93,7 +93,7 @@ game.scene.add('waitingRoom', waitingRoom)
 game.scene.add("divert_power", DivertPower)
 // start title
 //game.scene.start("joinGame");
-game.scene.start("preloader");
+//game.scene.start("mini-map");
 // game.scene.start("theskeld");
 //game.scene.start('menu');
 // game.scene.start('game');
@@ -103,7 +103,7 @@ game.scene.start("preloader");
 /***intro */
 //game.scene.start("introCrew");
 //game.scene.start("introImposter");
-//game.scene.start('preloader');
+game.scene.start('preloader');
 // game.scene.start('Course');
 // game.scene.start('CleanO2Filter');
 // game.scene.start('CleanAsteroids');
