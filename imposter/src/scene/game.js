@@ -301,10 +301,7 @@ class Game extends Phaser.Scene {
 
       sabotage = this.add.image(1000, 700, "sabotage").setScrollFactor(0, 0).setInteractive().setAlpha(1)
       //*****************OPEN the Mini Map ******/
-      sabotage.on('pointerdown', () => {
-        console.log('guide map');
-        this.scene.launch('guidemap').bringToTop('guideMap')
-      })
+
       sabotage.on('pointerdown', () => {
         console.log("aaaa")
         this.scene.launch("mini-map")
