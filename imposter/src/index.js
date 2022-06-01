@@ -24,6 +24,7 @@ import JoinGame from "./scene/joinGame.js";
 import waitingRoom from "./scene/waitingRoom.js";
 import introCrew from "./scene/state/intro/introCrew.js";
 import introImposter from "./scene/state/intro/introImposter.js";
+import guidemap from "./scene/state/guidemap/guidemap.js";
 
 var preloader = new Preloader();
 
@@ -53,6 +54,7 @@ const config = {
       }
     ]
   }
+
 };
 
 const game = new Phaser.Game(config);
@@ -69,7 +71,7 @@ game.scene.add('mini-map', Map_1)
 game.scene.add('options', Options);
 game.scene.add('login', Login);
 game.scene.add('submenu', SubMenu)
-
+game.scene.add('guidemap', guidemap)
 
 game.scene.add('Course', ChartCourse)
 
@@ -116,4 +118,4 @@ game.scene.start('preloader');
 
 //game.scene.start('preloader');
 //game.scene.start("align_engine_output")
-
+//game.scene.start('guidemap')

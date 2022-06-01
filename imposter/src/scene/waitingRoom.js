@@ -4,6 +4,8 @@ import lobby from "../assets/tilemaps/lobby.json";
 
 import playerpng from "../assets/player/player_sprite/player_base.png";
 import playerjson from "../assets/player/player_sprite/player_base.json";
+import Archaeologist_Walk_png from "../assets/player/player_sprite/Archaeologist_Walk.png";
+import Archaeologist_Walk_json from "../assets/player/player_sprite/Archaeologist_Walk.json";
 
 import { PLAYER_SPEED } from "../consts/constants";
 
@@ -34,8 +36,6 @@ import playerjson_yellow from "../assets/player/player_sprite/player_base_yellow
 import playerpng_pink from "../assets/player/player_sprite/player_base_pink.png";
 import playerjson_pink from "../assets/player/player_sprite/player_base_pink.json";
 
-import Archaeologist_Walk_png from "../assets/player/player_sprite/Archaeologist_Walk.png";
-import Archaeologist_Walk_json from "../assets/player/player_sprite/Archaeologist_Walk.json";
 
 import {
 
@@ -163,8 +163,8 @@ export default class waitingRoom extends Phaser.Scene {
 
     for (let i = 0; i < otherPlayerId.length; i++) {
       otherPlayer[i] = this.physics.add.sprite(
-        -45 + 10 * i,
-        26 + 10 * i,
+        -45 + 20 * i,
+        26 + 20 * i,
         "playerbase",
         "idle.png"
       );
@@ -458,6 +458,19 @@ export default class waitingRoom extends Phaser.Scene {
     this.input.keyboard.on("keydown", (e) => {
       if (!pressedKeys.includes(e.code)) {
         pressedKeys.push(e.code);
+        this.anims.create({
+          key: "archaeologist_walk",
+          frames: this.anims.generateFrameNames("archaeologist_walk", {
+            start: 1,
+            end: 12,
+            prefix: "Archaeologist_Walk",
+            suffix: ".png",
+          }),
+          repeat: -1,
+          frameRate: 16,
+        });
+
+
       }
     })
 
@@ -728,6 +741,7 @@ export default class waitingRoom extends Phaser.Scene {
 
     // })
 
+    //pants_skin.anims.play("archaeologist_walk");
   }
 
   update() {

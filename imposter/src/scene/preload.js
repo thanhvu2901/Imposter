@@ -29,6 +29,7 @@ import dead from '../assets/player/Dead.png'
 import killAudio from '../assets/audio/kill/impostor_kill.wav'
 import footStep from "../assets/audio/amination/Walk.mp3";
 import ventOpen from "../assets/audio/vent/Vent_open.mp3";
+import Icon from "../assets/img/mini.png"
 
 import KillButton from "../assets/img/killButton.png";
 import vent1 from "../assets/img/jump vent/vent1.png";
@@ -46,6 +47,8 @@ import jump6 from "../assets/img/jump vent/Vent0006.png";
 import jump7 from "../assets/img/jump vent/Vent0007.png";
 import vent_button from "../assets/img/vent_button.png"
 import UseButton from "../assets/tasks/Align Engine Output/Use.webp.png";
+
+import guideMap from "../assets/img/guideMap.png"
 
 import SubMenu from "./submenu";
 
@@ -121,6 +124,10 @@ class Preloader extends Phaser.Scene {
     this.load.image('startBtn', startBtn);
     this.load.image('customizeBtn', customizeBtn)
     this.load.image('dead', dead)
+
+    this.load.image('guideMap', guideMap)
+    this.load.image('Icon', Icon);
+
 
     this.load.image("vent_1", vent1);
     this.load.image("vent_2", vent2);

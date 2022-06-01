@@ -123,6 +123,8 @@ class Game extends Phaser.Scene {
     this.load.atlas("ghost", player_ghost, player_ghost_json)
 
 
+    this.load.atlas("Archaeologist_Walk", Archaeologist_Walk_png, Archaeologist_Walk_json);
+
 
     this.load.image(
       "AlignEngineOutput_mission_marked",
@@ -180,12 +182,23 @@ class Game extends Phaser.Scene {
     // let intro = this.scene.launch('introCrew', { isRole: isRole }).bringToTop('introCrew')
 
     light = new Light(this)
-    eventsCenter.on('updateMission', (data) => {
+    eventsCenter.on("continue_scene_game", (data) => {
       current_x = data.x;
       current_y = data.y;
       mission_name = data.mission;
+      if (current_x && current_y) {
+        map_missions.completed(mission_name);
+        list_missions_completed.push(mission_name);
+        total_missions_completed += 1;
+        map_missions.count_missions_completed(total_missions_completed);
+        map_missions.update_list_missions_completed(list_missions_completed)
+        player.x = current_x + 2;
+        player.y = current_y + 2;
+        // player.setPosition(current_x, current_y);
+      }
     })
 
+    current_scene = this.scene;
     const ship = this.make.tilemap({ key: "tilemap" });
     const tileset = ship.addTilesetImage("theSkeld", "tiles", 17, 17);
     const ship_tileset = ship.createLayer("Background", tileset);
@@ -286,6 +299,11 @@ class Game extends Phaser.Scene {
       kill.alpha = 0.5;
 
       sabotage = this.add.image(1000, 700, "sabotage").setScrollFactor(0, 0).setInteractive().setAlpha(1)
+      //*****************OPEN the Mini Map ******/
+      sabotage.on('pointerdown', () => {
+        console.log('guide map');
+        this.scene.launch('guidemap').bringToTop('guideMap')
+      })
 
     }
     //initialize missions of this map
@@ -300,18 +318,6 @@ class Game extends Phaser.Scene {
     // player = this.physics.add.sprite(115, -700, "playerbase", "idle.png");
 
 
-    if (current_x && current_y) {
-      console.log(mission_name);
-
-      map_missions.completed(mission_name);
-      list_missions_completed.push(mission_name);
-      total_missions_completed += 1;
-      map_missions.count_missions_completed(total_missions_completed);
-      map_missions.update_list_missions_completed(list_missions_completed)
-      player.x = current_x + 2;
-      player.y = current_y + 2;
-      // player.setPosition(current_x, current_y);
-    }
     // tạo theo số lượng other player vào
 
     this.state.roomKey = this.textInput;
@@ -319,8 +325,8 @@ class Game extends Phaser.Scene {
     // console.log(this.numPlayers);
     for (let i = 0; i < this.numPlayers - 1; i++) {
       otherPlayer[i] = this.physics.add.sprite(
-        115,
-        -740 + 30 * i,
+        115 + 30 * i,
+        -740 + 50 * i,
         "playerbase",
         "idle.png"
       );
@@ -345,10 +351,7 @@ class Game extends Phaser.Scene {
       key: "player-idle",
       frames: [{ key: "playerbase", frame: "idle.png" }],
     });
-    this.anims.create({
-      key: "dead",
-      frames: [{ key: "dead", frame: "dead.png" }],
-    });
+
 
     //Red
     this.anims.create({
@@ -1115,8 +1118,8 @@ class Game extends Phaser.Scene {
 
     //update if killed ==>> ************************TO GHOST*******************
     this.socket.on("updateOtherPlayer", (playerId) => {
-      console.log(this.socket.id);
-      console.log(playerId);
+      // console.log(this.socket.id);
+      // console.log(playerId);
       if (this.socket.id == playerId) {
         //run noitice died
         console.log("this player killed");
@@ -1325,9 +1328,9 @@ class Game extends Phaser.Scene {
 
       }
     }
-    else {
 
-    }
+
+    //******************GHOST */
     //
   };
 }
