@@ -1,0 +1,212 @@
+{"frames": [
+
+{
+	"filename": "Archaeologist_Spawn0051.png",
+	"frame": {"x":0,"y":0,"w":33,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":28},
+	"sourceSize": {"w":33,"h":28}
+},
+{
+	"filename": "Archaeologist_Walk1.png",
+	"frame": {"x":33,"y":0,"w":43,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":27},
+	"sourceSize": {"w":43,"h":27}
+},
+{
+	"filename": "Archaeologist_Walk2.png",
+	"frame": {"x":76,"y":0,"w":43,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":27},
+	"sourceSize": {"w":43,"h":27}
+},
+{
+	"filename": "Archaeologist_Walk3.png",
+	"frame": {"x":119,"y":0,"w":43,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":27},
+	"sourceSize": {"w":43,"h":27}
+},
+{
+	"filename": "Archaeologist_Walk4.png",
+	"frame": {"x":162,"y":0,"w":43,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":27},
+	"sourceSize": {"w":43,"h":27}
+},
+{
+	"filename": "Archaeologist_Walk5.png",
+	"frame": {"x":205,"y":0,"w":32,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":27},
+	"sourceSize": {"w":32,"h":27}
+},
+{
+	"filename": "Archaeologist_Walk6.png",
+	"frame": {"x":237,"y":0,"w":32,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":27},
+	"sourceSize": {"w":32,"h":27}
+},
+{
+	"filename": "Archaeologist_Walk7.png",
+	"frame": {"x":269,"y":0,"w":39,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":30},
+	"sourceSize": {"w":39,"h":30}
+},
+{
+	"filename": "Archaeologist_Walk8.png",
+	"frame": {"x":308,"y":0,"w":39,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":30},
+	"sourceSize": {"w":39,"h":30}
+},
+{
+	"filename": "Archaeologist_Walk9.png",
+	"frame": {"x":347,"y":0,"w":39,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":30},
+	"sourceSize": {"w":39,"h":30}
+},
+{
+	"filename": "Archaeologist_Walk10.png",
+	"frame": {"x":386,"y":0,"w":39,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":30},
+	"sourceSize": {"w":39,"h":30}
+},
+{
+	"filename": "Archaeologist_Walk11.png",
+	"frame": {"x":425,"y":0,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "Archaeologist_Walk12.png",
+	"frame": {"x":457,"y":0,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "Archaeologist_WalkMirror0001.png",
+	"frame": {"x":489,"y":0,"w":43,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":27},
+	"sourceSize": {"w":43,"h":27}
+},
+{
+	"filename": "Archaeologist_WalkMirror0002.png",
+	"frame": {"x":532,"y":0,"w":43,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":27},
+	"sourceSize": {"w":43,"h":27}
+},
+{
+	"filename": "Archaeologist_WalkMirror0003.png",
+	"frame": {"x":575,"y":0,"w":43,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":27},
+	"sourceSize": {"w":43,"h":27}
+},
+{
+	"filename": "Archaeologist_WalkMirror0004.png",
+	"frame": {"x":618,"y":0,"w":43,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":27},
+	"sourceSize": {"w":43,"h":27}
+},
+{
+	"filename": "Archaeologist_WalkMirror0005.png",
+	"frame": {"x":661,"y":0,"w":32,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":28},
+	"sourceSize": {"w":32,"h":28}
+},
+{
+	"filename": "Archaeologist_WalkMirror0006.png",
+	"frame": {"x":693,"y":0,"w":32,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":28},
+	"sourceSize": {"w":32,"h":28}
+},
+{
+	"filename": "Archaeologist_WalkMirror0007.png",
+	"frame": {"x":725,"y":0,"w":39,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":30},
+	"sourceSize": {"w":39,"h":30}
+},
+{
+	"filename": "Archaeologist_WalkMirror0008.png",
+	"frame": {"x":764,"y":0,"w":39,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":30},
+	"sourceSize": {"w":39,"h":30}
+},
+{
+	"filename": "Archaeologist_WalkMirror0009.png",
+	"frame": {"x":803,"y":0,"w":39,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":30},
+	"sourceSize": {"w":39,"h":30}
+},
+{
+	"filename": "Archaeologist_WalkMirror0010.png",
+	"frame": {"x":842,"y":0,"w":39,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":30},
+	"sourceSize": {"w":39,"h":30}
+},
+{
+	"filename": "Archaeologist_WalkMirror0011.png",
+	"frame": {"x":881,"y":0,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "Archaeologist_WalkMirror0012.png",
+	"frame": {"x":913,"y":0,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+}],
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "Archaeologist_Walk.png",
+	"format": "RGBA8888",
+	"size": {"w":945,"h":30},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:1e6ecd2cd876cfd4b30eafc22df69b56:2c11f3ee518b2e0d38bbc4609a84d639:b1b41e594176f271652d40608ad4a8c6$"
+}
+}

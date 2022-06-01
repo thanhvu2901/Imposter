@@ -42,7 +42,7 @@ const config = {
     mode: Phaser.Scale.FIT,
     autoCenter: Phaser.Scale.CENTER_BOTH
   },
-  
+
   //enable Phaser-raycaster plugin
   plugins: {
     scene: [
@@ -65,7 +65,7 @@ game.scene.add('introCrew', introCrew)
 game.scene.add('introImposter', introImposter)
 game.scene.add("theskeld", TheSkeld);
 game.scene.add('game', Game);
-game.scene.add('mini-map',Map_1)
+game.scene.add('mini-map', Map_1)
 game.scene.add('options', Options);
 game.scene.add('login', Login);
 game.scene.add('submenu', SubMenu)

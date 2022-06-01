@@ -5,6 +5,52 @@ import playerpng from "../assets/player/player_sprite/player_base.png";
 import playerjson from "../assets/player/player_sprite/player_base.json";
 import player_ghost from "../assets/player/Base/ghost/ghost.png"
 import player_ghost_json from "../assets/player/Base/ghost/ghost.json"
+
+// Player color
+import playerpng_red from "../assets/player/player_sprite/player_base_red.png";
+import playerjson_red from "../assets/player/player_sprite/player_base_red.json";
+import playerpng_blue from "../assets/player/player_sprite/player_base_blue.png";
+import playerjson_blue from "../assets/player/player_sprite/player_base_blue.json";
+import playerpng_blue_dark from "../assets/player/player_sprite/player_base_blue_dark.png";
+import playerjson_blue_dark from "../assets/player/player_sprite/player_base_blue_dark.json";
+import playerpng_blue_light from "../assets/player/player_sprite/player_base_blue_light.png";
+import playerjson_blue_light from "../assets/player/player_sprite/player_base_blue_light.json";
+import playerpng_gray_dark from "../assets/player/player_sprite/player_base_gray_dark.png";
+import playerjson_gray_dark from "../assets/player/player_sprite/player_base_gray_dark.json";
+import playerpng_gray_light from "../assets/player/player_sprite/player_base_gray_light.png";
+import playerjson_gray_light from "../assets/player/player_sprite/player_base_gray_light.json";
+import playerpng_green_dark from "../assets/player/player_sprite/player_base_green_dark.png";
+import playerjson_green_dark from "../assets/player/player_sprite/player_base_green_dark.json";
+import playerpng_green_light from "../assets/player/player_sprite/player_base_green_light.png";
+import playerjson_green_light from "../assets/player/player_sprite/player_base_green_light.json";
+import playerpng_orange from "../assets/player/player_sprite/player_base_orange.png";
+import playerjson_orange from "../assets/player/player_sprite/player_base_orange.json";
+import playerpng_purple from "../assets/player/player_sprite/player_base_purple.png";
+import playerjson_purple from "../assets/player/player_sprite/player_base_purple.json";
+import playerpng_yellow from "../assets/player/player_sprite/player_base_yellow.png";
+import playerjson_yellow from "../assets/player/player_sprite/player_base_yellow.json";
+import playerpng_pink from "../assets/player/player_sprite/player_base_pink.png";
+import playerjson_pink from "../assets/player/player_sprite/player_base_pink.json";
+
+import {
+  PLAYER_SPEED,
+  PLAYER_BLUE,
+  PLAYER_RED,
+  PLAYER_BLUE_DARK,
+  PLAYER_BLUE_LIGHT,
+  PLAYER_GRAY_DARK,
+  PLAYER_GRAY_LIGHT,
+  PLAYER_GREEN_DARK,
+  PLAYER_GREEN_LIGHT,
+  PLAYER_ORANGE,
+  PLAYER_PURPLE,
+  PLAYER_YELLOW,
+  PLAYER_PINK,
+} from "../consts/constants";
+
+import Archaeologist_Walk_png from "../assets/player/player_sprite/Archaeologist_Walk.png";
+import Archaeologist_Walk_json from "../assets/player/player_sprite/Archaeologist_Walk.json";
+
 import { debugDraw } from "../scene/debugDraw";
 
 import MapMissionsExporter from "../helper/map_mission_exporter";
@@ -12,9 +58,6 @@ import Mission from "../services/missions/mission";
 
 import AlignEngineOutput_mission_marked from "../assets/tasks/Align Engine Output/mission_marked.png";
 
-
-
-import { PLAYER_SPEED } from "../consts/constants";
 
 //marked mission
 
@@ -24,6 +67,7 @@ import CleanAsteroids from "../assets/tasks/Clear Asteroids/marked.png";
 import StabilizeSteering from "../assets/tasks/Stabilize Steering/marked.png";
 
 import Light from "../scene//state/ingame/ray-light"
+import eventsCenter from "./eventsCenter";
 let player;
 let otherPlayer = new Array();
 let otherPlayerId = new Array();
@@ -52,9 +96,9 @@ let vent_group, arrow_group, vent_cord = new Map(), vent_des = new Map()
 let temp, key, is_vent = false, is_jump = false, is_hidden = false, keyboard
 let count = 0
 let current_scene;
-const eventsCenter = new Phaser.Events.EventEmitter()
 let total_missions_completed = 0;
 let list_missions_completed = [];
+let color = "";
 class Game extends Phaser.Scene {
   constructor() {
     super({ key: "game" });
@@ -67,10 +111,7 @@ class Game extends Phaser.Scene {
     this.numPlayers = data.numPlayers;
     this.idPlayers = data.idPlayers;
     this.isRole = data.isRole
-    current_x = data.x;
-    current_y = data.y;
-    mission_name = data.mission;
-
+    this.playerChangedSkin = data.playerChangedSkin;
   }
 
   preload() {
@@ -93,7 +134,43 @@ class Game extends Phaser.Scene {
     this.load.image("CleanAsteroids", CleanAsteroids);
     this.load.image("StabilizeSteering", StabilizeSteering);
 
-
+    //Player color
+    this.load.atlas(PLAYER_RED, playerpng_red, playerjson_red);
+    this.load.atlas(PLAYER_BLUE, playerpng_blue, playerjson_blue);
+    this.load.atlas(
+      PLAYER_BLUE_DARK,
+      playerpng_blue_dark,
+      playerjson_blue_dark
+    );
+    this.load.atlas(
+      PLAYER_BLUE_LIGHT,
+      playerpng_blue_light,
+      playerjson_blue_light
+    );
+    this.load.atlas(
+      PLAYER_GRAY_DARK,
+      playerpng_gray_dark,
+      playerjson_gray_dark
+    );
+    this.load.atlas(
+      PLAYER_GRAY_LIGHT,
+      playerpng_gray_light,
+      playerjson_gray_light
+    );
+    this.load.atlas(
+      PLAYER_GREEN_DARK,
+      playerpng_green_dark,
+      playerjson_green_dark
+    );
+    this.load.atlas(
+      PLAYER_GREEN_LIGHT,
+      playerpng_green_light,
+      playerjson_green_light
+    );
+    this.load.atlas(PLAYER_ORANGE, playerpng_orange, playerjson_orange);
+    this.load.atlas(PLAYER_PURPLE, playerpng_purple, playerjson_purple);
+    this.load.atlas(PLAYER_PINK, playerpng_pink, playerjson_pink);
+    this.load.atlas(PLAYER_YELLOW, playerpng_yellow, playerjson_yellow);
 
   }
 
@@ -103,9 +180,101 @@ class Game extends Phaser.Scene {
     // let intro = this.scene.launch('introCrew', { isRole: isRole }).bringToTop('introCrew')
 
     light = new Light(this)
+    eventsCenter.on('updateMission', (data) => {
+      current_x = data.x;
+      current_y = data.y;
+      mission_name = data.mission;
+    })
+
     const ship = this.make.tilemap({ key: "tilemap" });
     const tileset = ship.addTilesetImage("theSkeld", "tiles", 17, 17);
     const ship_tileset = ship.createLayer("Background", tileset);
+
+    let colorPlayerChanged = this.playerChangedSkin.player.texture.key;
+    switch (colorPlayerChanged) {
+      case "player0":
+        player = this.physics.add.sprite(115, -700, PLAYER_BLUE, "idle.png");
+        color = "blue";
+        break;
+      case "player1":
+        player = this.physics.add.sprite(115, -700, PLAYER_YELLOW, "idle.png");
+        color = "yellow";
+        break;
+      case "player2":
+        player = this.physics.add.sprite(115, -700, PLAYER_PINK, "idle.png");
+        color = "pink";
+        break;
+      case "player3":
+        player = this.physics.add.sprite(115, -700, PLAYER_ORANGE, "idle.png");
+        color = "orange";
+        break;
+      case "player4":
+        player = this.physics.add.sprite(
+          115,
+          -700,
+          PLAYER_GRAY_DARK,
+          "idle.png"
+        );
+        color = "gray_dark";
+        break;
+      case "player5":
+        player = this.physics.add.sprite(
+          115,
+          -700,
+          PLAYER_GRAY_LIGHT,
+          "idle.png"
+        );
+        color = "gray_light";
+        break;
+      case "player6":
+        player = this.physics.add.sprite(115, -700, PLAYER_PURPLE, "idle.png");
+        color = "purple";
+        break;
+      case "player7":
+        player = this.physics.add.sprite(
+          115,
+          -700,
+          PLAYER_BLUE_LIGHT,
+          "idle.png"
+        );
+        color = "blue_light";
+        break;
+      case "player8":
+        player = this.physics.add.sprite(
+          115,
+          -700,
+          PLAYER_BLUE_DARK,
+          "idle.png"
+        );
+        color = "blue_dark";
+        break;
+      case "player9":
+        player = this.physics.add.sprite(115, -700, PLAYER_RED, "idle.png");
+        color = "red";
+        break;
+      case "player10":
+        player = this.physics.add.sprite(
+          115,
+          -700,
+          PLAYER_GREEN_LIGHT,
+          "idle.png"
+        );
+        color = "green_light";
+        break;
+      case "player11":
+        player = this.physics.add.sprite(
+          115,
+          -700,
+          PLAYER_GREEN_DARK,
+          "idle.png"
+        );
+        color = "green_dark";
+        break;
+      default:
+        player = this.physics.add.sprite(115, -700, PLAYER_BLUE, "idle.png");
+        color = "blue";
+        break;
+    }
 
 
     //add kill button if imposter
@@ -128,10 +297,12 @@ class Game extends Phaser.Scene {
     // debugDraw(ship_tileset, this);
 
     //add player
-    player = this.physics.add.sprite(115, -700, "playerbase", "idle.png").setDepth(0.6);
+    // player = this.physics.add.sprite(115, -700, "playerbase", "idle.png");
 
 
     if (current_x && current_y) {
+      console.log(mission_name);
+
       map_missions.completed(mission_name);
       list_missions_completed.push(mission_name);
       total_missions_completed += 1;
@@ -177,6 +348,151 @@ class Game extends Phaser.Scene {
     this.anims.create({
       key: "dead",
       frames: [{ key: "dead", frame: "dead.png" }],
+    });
+
+    //Red
+    this.anims.create({
+      key: "player-idle_red",
+      frames: [{ key: PLAYER_RED, frame: "idle.png" }],
+    });
+
+    //Blue
+    this.anims.create({
+      key: "player-idle_blue",
+      frames: [{ key: PLAYER_BLUE, frame: "idle.png" }],
+    });
+
+    //Blue dark
+    this.anims.create({
+      key: "player-idle_blue_dark",
+      frames: [{ key: PLAYER_BLUE_DARK, frame: "idle.png" }],
+    });
+
+    //Blue light
+    this.anims.create({
+      key: "player-idle_blue_light",
+      frames: [{ key: PLAYER_BLUE_LIGHT, frame: "idle.png" }],
+    });
+
+    //Gray dark
+    this.anims.create({
+      key: "player-idle_gray_dark",
+      frames: [{ key: PLAYER_GRAY_DARK, frame: "idle.png" }],
+    });
+
+    //Gray light
+    this.anims.create({
+      key: "player-idle_gray_light",
+      frames: [{ key: PLAYER_GRAY_LIGHT, frame: "idle.png" }],
+    });
+
+    //Green dark
+    this.anims.create({
+      key: "player-idle_green_dark",
+      frames: [{ key: PLAYER_GREEN_DARK, frame: "idle.png" }],
+    });
+
+    //Green light
+    this.anims.create({
+      key: "player-idle_green_light",
+      frames: [{ key: PLAYER_GREEN_LIGHT, frame: "idle.png" }],
+    });
+
+    //Orange
+    this.anims.create({
+      key: "player-idle_orange",
+      frames: [{ key: PLAYER_ORANGE, frame: "idle.png" }],
+    });
+
+    //Pink
+    this.anims.create({
+      key: "player-idle_pink",
+      frames: [{ key: PLAYER_PINK, frame: "idle.png" }],
+    });
+
+    //Purple
+    this.anims.create({
+      key: "player-idle_purple",
+      frames: [{ key: PLAYER_PURPLE, frame: "idle.png" }],
+    });
+
+    //Yellow
+    this.anims.create({
+      key: "player-idle_yellow",
+      frames: [{ key: PLAYER_YELLOW, frame: "idle.png" }],
+    });
+
+
+    //Red
+    this.anims.create({
+      key: "dead_red",
+      frames: [{ key: PLAYER_RED, frame: "dead.png" }],
+    });
+
+    //Blue
+    this.anims.create({
+      key: "dead_blue",
+      frames: [{ key: PLAYER_BLUE, frame: "dead.png" }],
+    });
+
+    //Blue dark
+    this.anims.create({
+      key: "dead_blue_dark",
+      frames: [{ key: PLAYER_BLUE_DARK, frame: "dead.png" }],
+    });
+
+    //Blue light
+    this.anims.create({
+      key: "dead_blue_light",
+      frames: [{ key: PLAYER_BLUE_LIGHT, frame: "dead.png" }],
+    });
+
+    //Gray dark
+    this.anims.create({
+      key: "dead_gray_dark",
+      frames: [{ key: PLAYER_GRAY_DARK, frame: "dead.png" }],
+    });
+
+    //Gray light
+    this.anims.create({
+      key: "dead_gray_light",
+      frames: [{ key: PLAYER_GRAY_LIGHT, frame: "dead.png" }],
+    });
+
+    //Green dark
+    this.anims.create({
+      key: "dead_green_dark",
+      frames: [{ key: PLAYER_GREEN_DARK, frame: "dead.png" }],
+    });
+
+    //Green light
+    this.anims.create({
+      key: "dead_green_light",
+      frames: [{ key: PLAYER_GREEN_LIGHT, frame: "dead.png" }],
+    });
+
+    //Orange
+    this.anims.create({
+      key: "dead_orange",
+      frames: [{ key: PLAYER_ORANGE, frame: "dead.png" }],
+    });
+
+    //Pink
+    this.anims.create({
+      key: "dead_pink",
+      frames: [{ key: PLAYER_PINK, frame: "dead.png" }],
+    });
+
+    //Purple
+    this.anims.create({
+      key: "dead_purple",
+      frames: [{ key: PLAYER_PURPLE, frame: "dead.png" }],
+    });
+
+    //Yellow
+    this.anims.create({
+      key: "dead_yellow",
+      frames: [{ key: PLAYER_YELLOW, frame: "dead.png" }],
     });
 
     //khởi tạo nhóm các vent 
@@ -249,6 +565,162 @@ class Game extends Phaser.Scene {
       frameRate: 24,
     });
 
+    //Red
+    this.anims.create({
+      key: "player-walk_red",
+      frames: this.anims.generateFrameNames(PLAYER_RED, {
+        start: 1,
+        end: 12,
+        prefix: "Walk",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 16,
+    });
+
+    //Blue
+    this.anims.create({
+      key: "player-walk_blue",
+      frames: this.anims.generateFrameNames(PLAYER_BLUE, {
+        start: 1,
+        end: 12,
+        prefix: "Walk",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 16,
+    });
+
+    //Blue dark
+    this.anims.create({
+      key: "player-walk_blue_dark",
+      frames: this.anims.generateFrameNames(PLAYER_BLUE_DARK, {
+        start: 1,
+        end: 12,
+        prefix: "Walk",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 16,
+    });
+
+    //Blue light
+    this.anims.create({
+      key: "player-walk_blue_light",
+      frames: this.anims.generateFrameNames(PLAYER_BLUE_LIGHT, {
+        start: 1,
+        end: 12,
+        prefix: "Walk",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 16,
+    });
+
+    //Gray dark
+    this.anims.create({
+      key: "player-walk_gray_dark",
+      frames: this.anims.generateFrameNames(PLAYER_GRAY_DARK, {
+        start: 1,
+        end: 12,
+        prefix: "Walk",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 16,
+    });
+
+    //Gray light
+    this.anims.create({
+      key: "player-walk_gray_light",
+      frames: this.anims.generateFrameNames(PLAYER_GRAY_LIGHT, {
+        start: 1,
+        end: 12,
+        prefix: "Walk",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 16,
+    });
+
+    //Green dark
+    this.anims.create({
+      key: "player-walk_green_dark",
+      frames: this.anims.generateFrameNames(PLAYER_GREEN_DARK, {
+        start: 1,
+        end: 12,
+        prefix: "Walk",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 16,
+    });
+
+    //Green light
+    this.anims.create({
+      key: "player-walk_green_light",
+      frames: this.anims.generateFrameNames(PLAYER_GREEN_LIGHT, {
+        start: 1,
+        end: 12,
+        prefix: "Walk",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 16,
+    });
+
+    //Orange
+    this.anims.create({
+      key: "player-walk_orange",
+      frames: this.anims.generateFrameNames(PLAYER_ORANGE, {
+        start: 1,
+        end: 12,
+        prefix: "Walk",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 16,
+    });
+
+    //Pink
+    this.anims.create({
+      key: "player-walk_pink",
+      frames: this.anims.generateFrameNames(PLAYER_PINK, {
+        start: 1,
+        end: 12,
+        prefix: "Walk",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 16,
+    });
+
+    //Purple
+    this.anims.create({
+      key: "player-walk_purple",
+      frames: this.anims.generateFrameNames(PLAYER_PURPLE, {
+        start: 1,
+        end: 12,
+        prefix: "Walk",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 16,
+    });
+
+    //Yellow
+    this.anims.create({
+      key: "player-walk_yellow",
+      frames: this.anims.generateFrameNames(PLAYER_YELLOW, {
+        start: 1,
+        end: 12,
+        prefix: "Walk",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 16,
+    });
+
     //player death
     this.anims.create({
       key: "player-dead",
@@ -274,6 +746,162 @@ class Game extends Phaser.Scene {
       frameRate: 32,
     });
 
+
+    //Red
+    this.anims.create({
+      key: "player-dead_red",
+      frames: this.anims.generateFrameNames(PLAYER_RED, {
+        start: 1,
+        end: 42,
+        prefix: "Dead",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    //Blue
+    this.anims.create({
+      key: "player-dead_blue",
+      frames: this.anims.generateFrameNames(PLAYER_BLUE, {
+        start: 1,
+        end: 42,
+        prefix: "Dead",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    //Blue dark
+    this.anims.create({
+      key: "player-dead_blue_dark",
+      frames: this.anims.generateFrameNames(PLAYER_BLUE_DARK, {
+        start: 1,
+        end: 42,
+        prefix: "Dead",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    //Blue light
+    this.anims.create({
+      key: "player-dead_blue_light",
+      frames: this.anims.generateFrameNames(PLAYER_BLUE_LIGHT, {
+        start: 1,
+        end: 42,
+        prefix: "Dead",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    //Gray dark
+    this.anims.create({
+      key: "player-dead_gray_dark",
+      frames: this.anims.generateFrameNames(PLAYER_GRAY_DARK, {
+        start: 1,
+        end: 42,
+        prefix: "Dead",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    //Gray light
+    this.anims.create({
+      key: "player-dead_gray_light",
+      frames: this.anims.generateFrameNames(PLAYER_GRAY_LIGHT, {
+        start: 1,
+        end: 42,
+        prefix: "Dead",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    //Green dark
+    this.anims.create({
+      key: "player-dead_green_dark",
+      frames: this.anims.generateFrameNames(PLAYER_GREEN_DARK, {
+        start: 1,
+        end: 42,
+        prefix: "Dead",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    //Green light
+    this.anims.create({
+      key: "player-dead_green_light",
+      frames: this.anims.generateFrameNames(PLAYER_GREEN_LIGHT, {
+        start: 1,
+        end: 42,
+        prefix: "Dead",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    //Orange
+    this.anims.create({
+      key: "player-dead_orange",
+      frames: this.anims.generateFrameNames(PLAYER_ORANGE, {
+        start: 1,
+        end: 42,
+        prefix: "Dead",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    //Pink
+    this.anims.create({
+      key: "player-dead_pink",
+      frames: this.anims.generateFrameNames(PLAYER_PINK, {
+        start: 1,
+        end: 42,
+        prefix: "Dead",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    //Purple
+    this.anims.create({
+      key: "player-dead_purple",
+      frames: this.anims.generateFrameNames(PLAYER_PURPLE, {
+        start: 1,
+        end: 42,
+        prefix: "Dead",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    //Yellow
+    this.anims.create({
+      key: "player-dead_yellow",
+      frames: this.anims.generateFrameNames(PLAYER_YELLOW, {
+        start: 1,
+        end: 42,
+        prefix: "Dead",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
     //input to control
     this.input.keyboard.on("keydown", (e) => {
       if (!pressedKeys.includes(e.code)) {
@@ -293,9 +921,10 @@ class Game extends Phaser.Scene {
     })
     this.input.keyboard.on("keyup", (e) => {
       this.sound.stopByKey("walk");
-      if(alive == true){
-        player.anims.play("player-idle");}
-        
+      if (alive == true) {
+        player.anims.play("player-idle");
+      }
+
       pressedKeys = pressedKeys.filter((key) => key !== e.code);
     });
 
@@ -409,20 +1038,21 @@ class Game extends Phaser.Scene {
       if (is_vent) {
         temp.play("hole")
         player.anims.play("jump")
-        player.on("animationcomplete", (animation,frame) => {
-         if(animation.key="jump"){
-         if (is_hidden == true) {
-          player.setDepth(-10)
-        } else {
-          player.setDepth(0.6)
-          player.play("jump")
-          player.on("animationcomplete", (animation,frame) => {
-            if(animation.key="jump"){
-              player.anims.play("player-idle")
+        player.on("animationcomplete", (animation, frame) => {
+          if (animation.key = "jump") {
+            if (is_hidden == true) {
+              player.setDepth(-10)
+            } else {
+              player.setDepth(0.6)
+              player.play("jump")
+              player.on("animationcomplete", (animation, frame) => {
+                if (animation.key = "jump") {
+                  player.anims.play("player-idle")
+                }
+              })
             }
-          })
-        }}
-       },this);
+          }
+        }, this);
         is_jump = true
         //nếu player không trốn vent thì is_hidden sẽ chuyển thành true và ngược lại
         if (is_hidden == true) {
@@ -437,7 +1067,7 @@ class Game extends Phaser.Scene {
       }
 
     })
-    sabotage.on('pointerdown',()=>{
+    sabotage.on('pointerdown', () => {
       console.log("aaaa")
       this.scene.launch("mini-map")
     })
@@ -502,19 +1132,17 @@ class Game extends Phaser.Scene {
 
   }
   update() {
-   
-    this.events.emit('moving',[player.x,player.y]);
+
+    this.events.emit('moving', [player.x, player.y]);
     light.update(player)
     if (this.isRole == 1) {
       kill.on("pointerdown", () => {
         //console.log();
-
         if (canKill) {
           this.sound.play('killAudio', false)
-          playerKilled.anims.play("player-dead", true);
+          playerKilled.anims.play("player-dead_" + color, true);
           this.socket.emit('killed', (otherPlayerId[indexKill]))
           otherPlayer = otherPlayer.filter(player => { return player !== playerKilled });
-
           console.log(otherPlayerId[indexKill]); // emit socket id player killed
           otherPlayerId = otherPlayerId.filter(player => { return player !== otherPlayerId[indexKill] });
           console.log("emitted");
@@ -538,29 +1166,51 @@ class Game extends Phaser.Scene {
       else if (!touching && wasTouching) player.emit("overlapend");
 
       //để tránh xung đột với animation idle khi vào vent thì ta sẽ delay animation idle lại để player thực hiện nhảy vent và sau đó ẩn player đi 
+      if (is_vent == true && is_jump == true) {
+        count++
+        if (count == 40) {
+          check(player)
+          is_jump = false
+          count = 0
+        }
+      }
+      else if (is_vent == true && is_jump == false) {
+
+        player.anims.play("player-idle_" + color);
+      }
       let playerMoved = false;
       player.setVelocity(0);
 
+      if (
+        !cursors.left.isDown &&
+        !cursors.right.isDown &&
+        !cursors.up.isDown &&
+        !cursors.down.isDown &&
+        !is_vent
+      ) {
+        //     console.log("outvent")
+        player.anims.play("player-idle_" + color);
+      }
       //nếu is_hidden bằng true có nghĩa là player đang trốn vent nên sẽ ko di chuyển bằng input được
       if (cursors.left.isDown && is_hidden == false) {
-        player.anims.play("player-walk", true);
+        player.anims.play("player-walk_" + color, true);
         player.setVelocityX(-PLAYER_SPEED);
         player.scaleX = -1;
         player.body.offset.x = 40;
         playerMoved = true;
       } else if (cursors.right.isDown && is_hidden == false) {
-        player.anims.play("player-walk", true);
+        player.anims.play("player-walk_" + color, true);
         player.setVelocityX(PLAYER_SPEED);
         player.scaleX = 1;
         player.body.offset.x = 0;
         playerMoved = true;
       }
       if (cursors.up.isDown && is_hidden == false) {
-        player.anims.play("player-walk", true);
+        player.anims.play("player-walk_" + color, true);
         player.setVelocityY(-PLAYER_SPEED);
         playerMoved = true;
       } else if (cursors.down.isDown && is_hidden == false) {
-        player.anims.play("player-walk", true);
+        player.anims.play("player-walk_" + color, true);
         player.setVelocityY(PLAYER_SPEED);
         playerMoved = true;
       }
@@ -593,29 +1243,38 @@ class Game extends Phaser.Scene {
       }
     }
     //canKill = false
-    if (alive == true ) {
+    if (alive == true) {
       let playerMoved = false;
       player.setVelocity(0);
 
-      if (cursors.left.isDown && is_hidden == false) {
-        player.anims.play("player-walk", true);
+      if (
+        !cursors.left.isDown &&
+        !cursors.right.isDown &&
+        !cursors.up.isDown &&
+        !cursors.down.isDown
+      ) {
+        player.anims.play("player-idle_" + color);
+      }
+
+      if (cursors.left.isDown) {
+        player.anims.play("player-walk_" + color, true);
         player.setVelocityX(-PLAYER_SPEED);
         player.scaleX = -1;
         player.body.offset.x = 40;
         playerMoved = true;
-      } else if (cursors.right.isDown && is_hidden == false) {
-        player.anims.play("player-walk", true);
+      } else if (cursors.right.isDown) {
+        player.anims.play("player-walk_" + color, true);
         player.setVelocityX(PLAYER_SPEED);
         player.scaleX = 1;
         player.body.offset.x = 0;
         playerMoved = true;
       }
-      if (cursors.up.isDown && is_hidden == false) {
-        player.anims.play("player-walk", true);
+      if (cursors.up.isDown) {
+        player.anims.play("player-walk_" + color, true);
         player.setVelocityY(-PLAYER_SPEED);
         playerMoved = true;
-      } else if (cursors.down.isDown && is_hidden == false) {
-        player.anims.play("player-walk", true);
+      } else if (cursors.down.isDown) {
+        player.anims.play("player-walk_" + color, true);
         player.setVelocityY(PLAYER_SPEED);
         playerMoved = true;
       }
