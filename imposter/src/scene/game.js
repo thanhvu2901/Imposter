@@ -154,7 +154,7 @@ class Game extends Phaser.Scene {
     // debugDraw(ship_tileset, this);
 
     //add player
-    player = this.physics.add.sprite(160, -720, "playerbase", "idle.png");
+    player = this.physics.add.sprite(0, 0, "playerbase", "idle.png");
 
 
     // tạo theo số lượng other player vào
