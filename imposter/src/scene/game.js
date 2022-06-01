@@ -283,10 +283,11 @@ class Game extends Phaser.Scene {
         );
         color = "green_dark";
         break;
-      default:
+      default: {
         player = this.physics.add.sprite(115, -700, PLAYER_BLUE, "idle.png");
         color = "blue";
         break;
+      }
     }
 
 
@@ -1367,5 +1368,13 @@ function getKey(val) {
   return [...vent_cord].find(([key, value]) => JSON.stringify(val) === JSON.stringify(value));
 }
 //ẩn player dựa trên giá trị của is_hidden
+function check(player) {
+  if (is_hidden == true) {
+    player.setActive(false).setVisible(false)
 
+  } else {
+
+    player.setActive(true).setVisible(true)
+  }
+}
 export default Game;
