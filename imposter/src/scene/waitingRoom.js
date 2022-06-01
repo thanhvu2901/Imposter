@@ -537,6 +537,14 @@ export default class waitingRoom extends Phaser.Scene {
       // console.log(otherPlayerId);
     });
 
+    //update skin current in room
+    this.socket.on('changeSkin', ({ color, id }) => {
+      let index = otherPlayerId.findIndex((Element) => Element == id)
+      otherPlayer[index].destroy();
+      otherPlayer[index] = this.physics.add.sprite(-45, 26, 'player_base_' + color, "idle.png");
+    })
+
+
     this.socket.on("newPlayer", ({ playerInfo, numPlayers }) => {
       // listplyer socket có khác với tại local khong
       otherPlayerId.push(playerInfo.playerId);
@@ -626,7 +634,7 @@ export default class waitingRoom extends Phaser.Scene {
       this.playerChangedSkin = data.playerChangedSkin;
       this.numberImposter = data.numberImposter;
       this.numberPlayer = data.numberPlayer;
-      let colorPlayerChanged = this.playerChangedSkin.player.texture.key;
+      let colorPlayerChanged = this.playerChangedSkin.player.texture.key ?? 'nothing';
       switch (colorPlayerChanged) {
         case "player0":
           player.destroy();
@@ -724,8 +732,10 @@ export default class waitingRoom extends Phaser.Scene {
           color = "blue";
           break;
       }
+      //send color player change
+      console.log(color + " " + this.socket.id);
+      this.socket.emit('changeSkin', ({ color: color, id: this.socket.id }))
       this.physics.add.collider(player, lobby_tileset);
-
       this.cameras.main.startFollow(player, true);
     });
 

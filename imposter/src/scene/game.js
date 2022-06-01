@@ -202,7 +202,8 @@ class Game extends Phaser.Scene {
     const ship = this.make.tilemap({ key: "tilemap" });
     const tileset = ship.addTilesetImage("theSkeld", "tiles", 17, 17);
     const ship_tileset = ship.createLayer("Background", tileset);
-
+    player = this.physics.add.sprite(-45, 26, PLAYER_BLUE, "idle.png");
+    color = "blue";
     let colorPlayerChanged = this.playerChangedSkin.player.texture.key;
     switch (colorPlayerChanged) {
       case "player0":
