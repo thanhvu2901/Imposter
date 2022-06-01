@@ -305,6 +305,10 @@ class Game extends Phaser.Scene {
         console.log('guide map');
         this.scene.launch('guidemap').bringToTop('guideMap')
       })
+      sabotage.on('pointerdown', () => {
+        console.log("aaaa")
+        this.scene.launch("mini-map")
+      })
 
     }
     //initialize missions of this map
@@ -1071,10 +1075,7 @@ class Game extends Phaser.Scene {
       }
 
     })
-    sabotage.on('pointerdown', () => {
-      console.log("aaaa")
-      this.scene.launch("mini-map")
-    })
+
     this.socket.on("move", ({ x, y, playerId }) => {
       //console.log({ x, y, playerId });
 
