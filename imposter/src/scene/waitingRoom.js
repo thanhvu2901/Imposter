@@ -161,15 +161,15 @@ export default class waitingRoom extends Phaser.Scene {
     // );
     // tạo theo số lượng other player vào
 
-    for (let i = 0; i < otherPlayerId.length; i++) {
-      otherPlayer[i] = this.physics.add.sprite(
-        -45 + 20 * i,
-        26 + 20 * i,
-        "playerbase",
-        "idle.png"
-      );
-    }
-    stt = otherPlayer.length;
+    // for (let i = 0; i < otherPlayerId.length; i++) {
+    //   otherPlayer[i] = this.physics.add.sprite(
+    //     -45 + 20 * i,
+    //     26 + 20 * i,
+    //     "playerbase",
+    //     "idle.png"
+    //   );
+    // }
+    // stt = otherPlayer.length;
 
     this.anims.create({
       key: "player-idle",
@@ -734,7 +734,7 @@ export default class waitingRoom extends Phaser.Scene {
       }
       //send color player change
       console.log(color + " " + this.socket.id);
-      this.socket.emit('changeSkin', ({ color: color, id: this.socket.id }))
+      this.socket.emit('changeSkin', ({ color: color, id: this.socket.id, room: this.state.roomKey }))
       this.physics.add.collider(player, lobby_tileset);
       this.cameras.main.startFollow(player, true);
     });
