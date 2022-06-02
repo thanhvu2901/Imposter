@@ -63,6 +63,7 @@ let otherPlayerId = new Array();
 let pressedKeys = [];
 let stt = 0;
 var color = "";
+let defaultPlayer={};
 export default class waitingRoom extends Phaser.Scene {
   constructor() {
     super({
@@ -77,7 +78,7 @@ export default class waitingRoom extends Phaser.Scene {
     this.playerChangedSkin = data.playerChangedSkin;
     this.numberImposter = data.numberImposter;
     this.numberPlayer = data.numberPlayer;
-    // this.test = data.test
+    this.test = data.test
   }
   preload() {
     this.load.image("dropShip", dropShip);
@@ -152,6 +153,8 @@ export default class waitingRoom extends Phaser.Scene {
 
     player = this.physics.add.sprite(-45, 26, PLAYER_BLUE, "idle.png");
     color = "blue";
+    defaultPlayer.player= player;
+    this.playerChangedSkin= defaultPlayer;
 
     // pants_skin = this.physics.add.sprite(
     //   player.x,
