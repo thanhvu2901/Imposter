@@ -4,7 +4,7 @@
         <key>fileFormatVersion</key>
         <int>5</int>
         <key>texturePackerVersion</key>
-        <string>6.0.1</string>
+        <string>6.0.2</string>
         <key>autoSDSettings</key>
         <array>
             <struct type="AutoSDSettings">
@@ -34,7 +34,7 @@
         <key>dataFormat</key>
         <string>phaser-json-array</string>
         <key>textureFileName</key>
-        <filename>../player_sprite/Archaeologist_Walk.png</filename>
+        <filename></filename>
         <key>flipPVR</key>
         <false/>
         <key>pvrQualityLevel</key>
@@ -43,24 +43,14 @@
         <uint>2</uint>
         <key>basisUniversalQualityLevel</key>
         <uint>2</uint>
-        <key>atfCompressData</key>
-        <false/>
-        <key>mipMapMinSize</key>
-        <uint>32768</uint>
         <key>etc1QualityLevel</key>
         <uint>70</uint>
         <key>etc2QualityLevel</key>
         <uint>70</uint>
         <key>dxtCompressionMode</key>
         <enum type="SettingsBase::DxtCompressionMode">DXT_PERCEPTUAL</enum>
-        <key>jxrColorFormat</key>
-        <enum type="SettingsBase::JpegXrColorMode">JXR_YUV444</enum>
-        <key>jxrTrimFlexBits</key>
-        <uint>0</uint>
-        <key>jxrCompressionLevel</key>
-        <uint>0</uint>
         <key>ditherType</key>
-        <enum type="SettingsBase::DitherType">PngQuantLow</enum>
+        <enum type="SettingsBase::DitherType">NearestNeighbour</enum>
         <key>backgroundColor</key>
         <uint>0</uint>
         <key>libGdx</key>
@@ -82,8 +72,6 @@
         <key>webpQualityLevel</key>
         <uint>101</uint>
         <key>textureSubPath</key>
-        <string></string>
-        <key>atfFormats</key>
         <string></string>
         <key>textureFormat</key>
         <enum type="SettingsBase::TextureFormat">png</enum>
@@ -185,7 +173,7 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../BulkResizePhotos.com/archaeologist/Archaeologist_Spawn0051.png</key>
+            <key type="filename">D:/Phuc/imagePantTest/imagePantTest/Archaeologist_Spawn55.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -194,20 +182,76 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>8,7,17,14</rect>
+                <rect>10,9,21,19</rect>
                 <key>scale9Paddings</key>
-                <rect>8,7,17,14</rect>
+                <rect>10,9,21,19</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../BulkResizePhotos.com/archaeologist/Archaeologist_Walk1.png</key>
-            <key type="filename">../BulkResizePhotos.com/archaeologist/Archaeologist_Walk2.png</key>
-            <key type="filename">../BulkResizePhotos.com/archaeologist/Archaeologist_Walk3.png</key>
-            <key type="filename">../BulkResizePhotos.com/archaeologist/Archaeologist_Walk4.png</key>
-            <key type="filename">../BulkResizePhotos.com/archaeologist/Archaeologist_WalkMirror0001.png</key>
-            <key type="filename">../BulkResizePhotos.com/archaeologist/Archaeologist_WalkMirror0002.png</key>
-            <key type="filename">../BulkResizePhotos.com/archaeologist/Archaeologist_WalkMirror0003.png</key>
-            <key type="filename">../BulkResizePhotos.com/archaeologist/Archaeologist_WalkMirror0004.png</key>
+            <key type="filename">D:/Phuc/imagePantTest/imagePantTest/Archaeologist_Walk1.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>11,7,23,14</rect>
+                <key>scale9Paddings</key>
+                <rect>11,7,23,14</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">D:/Phuc/imagePantTest/imagePantTest/Archaeologist_Walk10.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>10,8,21,15</rect>
+                <key>scale9Paddings</key>
+                <rect>10,8,21,15</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">D:/Phuc/imagePantTest/imagePantTest/Archaeologist_Walk11.png</key>
+            <key type="filename">D:/Phuc/imagePantTest/imagePantTest/Archaeologist_Walk6.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>10,9,19,17</rect>
+                <key>scale9Paddings</key>
+                <rect>10,9,19,17</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">D:/Phuc/imagePantTest/imagePantTest/Archaeologist_Walk12.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>10,9,20,18</rect>
+                <key>scale9Paddings</key>
+                <rect>10,9,20,18</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">D:/Phuc/imagePantTest/imagePantTest/Archaeologist_Walk2.png</key>
+            <key type="filename">D:/Phuc/imagePantTest/imagePantTest/Archaeologist_Walk3.png</key>
+            <key type="filename">D:/Phuc/imagePantTest/imagePantTest/Archaeologist_Walk4.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -222,14 +266,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../BulkResizePhotos.com/archaeologist/Archaeologist_Walk10.png</key>
-            <key type="filename">../BulkResizePhotos.com/archaeologist/Archaeologist_Walk7.png</key>
-            <key type="filename">../BulkResizePhotos.com/archaeologist/Archaeologist_Walk8.png</key>
-            <key type="filename">../BulkResizePhotos.com/archaeologist/Archaeologist_Walk9.png</key>
-            <key type="filename">../BulkResizePhotos.com/archaeologist/Archaeologist_WalkMirror0007.png</key>
-            <key type="filename">../BulkResizePhotos.com/archaeologist/Archaeologist_WalkMirror0008.png</key>
-            <key type="filename">../BulkResizePhotos.com/archaeologist/Archaeologist_WalkMirror0009.png</key>
-            <key type="filename">../BulkResizePhotos.com/archaeologist/Archaeologist_WalkMirror0010.png</key>
+            <key type="filename">D:/Phuc/imagePantTest/imagePantTest/Archaeologist_Walk5.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -238,14 +275,14 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>10,8,19,15</rect>
+                <rect>10,9,21,18</rect>
                 <key>scale9Paddings</key>
-                <rect>10,8,19,15</rect>
+                <rect>10,9,21,18</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../BulkResizePhotos.com/archaeologist/Archaeologist_Walk11.png</key>
-            <key type="filename">../BulkResizePhotos.com/archaeologist/Archaeologist_Walk12.png</key>
+            <key type="filename">D:/Phuc/imagePantTest/imagePantTest/Archaeologist_Walk7.png</key>
+            <key type="filename">D:/Phuc/imagePantTest/imagePantTest/Archaeologist_Walk9.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -254,14 +291,13 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>8,7,16,15</rect>
+                <rect>11,9,21,17</rect>
                 <key>scale9Paddings</key>
-                <rect>8,7,16,15</rect>
+                <rect>11,9,21,17</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../BulkResizePhotos.com/archaeologist/Archaeologist_Walk5.png</key>
-            <key type="filename">../BulkResizePhotos.com/archaeologist/Archaeologist_Walk6.png</key>
+            <key type="filename">D:/Phuc/imagePantTest/imagePantTest/Archaeologist_Walk8.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -270,72 +306,28 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>8,7,16,13</rect>
+                <rect>11,9,22,17</rect>
                 <key>scale9Paddings</key>
-                <rect>8,7,16,13</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../BulkResizePhotos.com/archaeologist/Archaeologist_WalkMirror0005.png</key>
-            <key type="filename">../BulkResizePhotos.com/archaeologist/Archaeologist_WalkMirror0006.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>8,7,16,14</rect>
-                <key>scale9Paddings</key>
-                <rect>8,7,16,14</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../BulkResizePhotos.com/archaeologist/Archaeologist_WalkMirror0011.png</key>
-            <key type="filename">../BulkResizePhotos.com/archaeologist/Archaeologist_WalkMirror0012.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>8,8,16,15</rect>
-                <key>scale9Paddings</key>
-                <rect>8,8,16,15</rect>
+                <rect>11,9,22,17</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
         </map>
         <key>fileList</key>
         <array>
-            <filename>../BulkResizePhotos.com/archaeologist/Archaeologist_WalkMirror0001.png</filename>
-            <filename>../BulkResizePhotos.com/archaeologist/Archaeologist_WalkMirror0002.png</filename>
-            <filename>../BulkResizePhotos.com/archaeologist/Archaeologist_WalkMirror0003.png</filename>
-            <filename>../BulkResizePhotos.com/archaeologist/Archaeologist_WalkMirror0004.png</filename>
-            <filename>../BulkResizePhotos.com/archaeologist/Archaeologist_WalkMirror0005.png</filename>
-            <filename>../BulkResizePhotos.com/archaeologist/Archaeologist_WalkMirror0006.png</filename>
-            <filename>../BulkResizePhotos.com/archaeologist/Archaeologist_WalkMirror0007.png</filename>
-            <filename>../BulkResizePhotos.com/archaeologist/Archaeologist_WalkMirror0008.png</filename>
-            <filename>../BulkResizePhotos.com/archaeologist/Archaeologist_WalkMirror0009.png</filename>
-            <filename>../BulkResizePhotos.com/archaeologist/Archaeologist_WalkMirror0010.png</filename>
-            <filename>../BulkResizePhotos.com/archaeologist/Archaeologist_WalkMirror0011.png</filename>
-            <filename>../BulkResizePhotos.com/archaeologist/Archaeologist_WalkMirror0012.png</filename>
-            <filename>../BulkResizePhotos.com/archaeologist/Archaeologist_Spawn0051.png</filename>
-            <filename>../BulkResizePhotos.com/archaeologist/Archaeologist_Walk1.png</filename>
-            <filename>../BulkResizePhotos.com/archaeologist/Archaeologist_Walk10.png</filename>
-            <filename>../BulkResizePhotos.com/archaeologist/Archaeologist_Walk11.png</filename>
-            <filename>../BulkResizePhotos.com/archaeologist/Archaeologist_Walk12.png</filename>
-            <filename>../BulkResizePhotos.com/archaeologist/Archaeologist_Walk2.png</filename>
-            <filename>../BulkResizePhotos.com/archaeologist/Archaeologist_Walk3.png</filename>
-            <filename>../BulkResizePhotos.com/archaeologist/Archaeologist_Walk4.png</filename>
-            <filename>../BulkResizePhotos.com/archaeologist/Archaeologist_Walk5.png</filename>
-            <filename>../BulkResizePhotos.com/archaeologist/Archaeologist_Walk6.png</filename>
-            <filename>../BulkResizePhotos.com/archaeologist/Archaeologist_Walk7.png</filename>
-            <filename>../BulkResizePhotos.com/archaeologist/Archaeologist_Walk8.png</filename>
-            <filename>../BulkResizePhotos.com/archaeologist/Archaeologist_Walk9.png</filename>
+            <filename>D:/Phuc/imagePantTest/imagePantTest/Archaeologist_Spawn55.png</filename>
+            <filename>D:/Phuc/imagePantTest/imagePantTest/Archaeologist_Walk1.png</filename>
+            <filename>D:/Phuc/imagePantTest/imagePantTest/Archaeologist_Walk10.png</filename>
+            <filename>D:/Phuc/imagePantTest/imagePantTest/Archaeologist_Walk11.png</filename>
+            <filename>D:/Phuc/imagePantTest/imagePantTest/Archaeologist_Walk12.png</filename>
+            <filename>D:/Phuc/imagePantTest/imagePantTest/Archaeologist_Walk2.png</filename>
+            <filename>D:/Phuc/imagePantTest/imagePantTest/Archaeologist_Walk3.png</filename>
+            <filename>D:/Phuc/imagePantTest/imagePantTest/Archaeologist_Walk4.png</filename>
+            <filename>D:/Phuc/imagePantTest/imagePantTest/Archaeologist_Walk5.png</filename>
+            <filename>D:/Phuc/imagePantTest/imagePantTest/Archaeologist_Walk6.png</filename>
+            <filename>D:/Phuc/imagePantTest/imagePantTest/Archaeologist_Walk7.png</filename>
+            <filename>D:/Phuc/imagePantTest/imagePantTest/Archaeologist_Walk8.png</filename>
+            <filename>D:/Phuc/imagePantTest/imagePantTest/Archaeologist_Walk9.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
