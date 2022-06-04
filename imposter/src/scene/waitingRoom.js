@@ -2,39 +2,39 @@ import Phaser from "phaser";
 import dropShip from "../assets/img/Dropship.png";
 import lobby from "../assets/tilemaps/lobby.json";
 
-import playerpng from "../assets/player/player_sprite/player_base.png";
-import playerjson from "../assets/player/player_sprite/player_base.json";
-import Archaeologist_Walk_png from "../assets/player/player_sprite/Archaeologist_Walk.png";
-import Archaeologist_Walk_json from "../assets/player/player_sprite/Archaeologist_Walk.json";
+import playerpng from "../assets/player/player_sprite/player_color/player_base.png";
+import playerjson from "../assets/player/player_sprite/player_color/player_base.json";
+import Archaeologist_Walk_png from "../assets/player/player_sprite/pants/Archaeologist_Walk.png";
+import Archaeologist_Walk_json from "../assets/player/player_sprite/pants/Archaeologist_Walk.json";
 
 import { PLAYER_SPEED } from "../consts/constants";
 
 
 // Player color
-import playerpng_red from "../assets/player/player_sprite/player_base_red.png";
-import playerjson_red from "../assets/player/player_sprite/player_base_red.json";
-import playerpng_blue from "../assets/player/player_sprite/player_base_blue.png";
-import playerjson_blue from "../assets/player/player_sprite/player_base_blue.json";
-import playerpng_blue_dark from "../assets/player/player_sprite/player_base_blue_dark.png";
-import playerjson_blue_dark from "../assets/player/player_sprite/player_base_blue_dark.json";
-import playerpng_blue_light from "../assets/player/player_sprite/player_base_blue_light.png";
-import playerjson_blue_light from "../assets/player/player_sprite/player_base_blue_light.json";
-import playerpng_gray_dark from "../assets/player/player_sprite/player_base_gray_dark.png";
-import playerjson_gray_dark from "../assets/player/player_sprite/player_base_gray_dark.json";
-import playerpng_gray_light from "../assets/player/player_sprite/player_base_gray_light.png";
-import playerjson_gray_light from "../assets/player/player_sprite/player_base_gray_light.json";
-import playerpng_green_dark from "../assets/player/player_sprite/player_base_green_dark.png";
-import playerjson_green_dark from "../assets/player/player_sprite/player_base_green_dark.json";
-import playerpng_green_light from "../assets/player/player_sprite/player_base_green_light.png";
-import playerjson_green_light from "../assets/player/player_sprite/player_base_green_light.json";
-import playerpng_orange from "../assets/player/player_sprite/player_base_orange.png";
-import playerjson_orange from "../assets/player/player_sprite/player_base_orange.json";
-import playerpng_purple from "../assets/player/player_sprite/player_base_purple.png";
-import playerjson_purple from "../assets/player/player_sprite/player_base_purple.json";
-import playerpng_yellow from "../assets/player/player_sprite/player_base_yellow.png";
-import playerjson_yellow from "../assets/player/player_sprite/player_base_yellow.json";
-import playerpng_pink from "../assets/player/player_sprite/player_base_pink.png";
-import playerjson_pink from "../assets/player/player_sprite/player_base_pink.json";
+import playerpng_red from "../assets/player/player_sprite/player_color/player_base_red.png";
+import playerjson_red from "../assets/player/player_sprite/player_color/player_base_red.json";
+import playerpng_blue from "../assets/player/player_sprite/player_color/player_base_blue.png";
+import playerjson_blue from "../assets/player/player_sprite/player_color/player_base_blue.json";
+import playerpng_blue_dark from "../assets/player/player_sprite/player_color/player_base_blue_dark.png";
+import playerjson_blue_dark from "../assets/player/player_sprite/player_color/player_base_blue_dark.json";
+import playerpng_blue_light from "../assets/player/player_sprite/player_color/player_base_blue_light.png";
+import playerjson_blue_light from "../assets/player/player_sprite/player_color/player_base_blue_light.json";
+import playerpng_gray_dark from "../assets/player/player_sprite/player_color/player_base_gray_dark.png";
+import playerjson_gray_dark from "../assets/player/player_sprite/player_color/player_base_gray_dark.json";
+import playerpng_gray_light from "../assets/player/player_sprite/player_color/player_base_gray_light.png";
+import playerjson_gray_light from "../assets/player/player_sprite/player_color/player_base_gray_light.json";
+import playerpng_green_dark from "../assets/player/player_sprite/player_color/player_base_green_dark.png";
+import playerjson_green_dark from "../assets/player/player_sprite/player_color/player_base_green_dark.json";
+import playerpng_green_light from "../assets/player/player_sprite/player_color/player_base_green_light.png";
+import playerjson_green_light from "../assets/player/player_sprite/player_color/player_base_green_light.json";
+import playerpng_orange from "../assets/player/player_sprite/player_color/player_base_orange.png";
+import playerjson_orange from "../assets/player/player_sprite/player_color/player_base_orange.json";
+import playerpng_purple from "../assets/player/player_sprite/player_color/player_base_purple.png";
+import playerjson_purple from "../assets/player/player_sprite/player_color/player_base_purple.json";
+import playerpng_yellow from "../assets/player/player_sprite/player_color/player_base_yellow.png";
+import playerjson_yellow from "../assets/player/player_sprite/player_color/player_base_yellow.json";
+import playerpng_pink from "../assets/player/player_sprite/player_color/player_base_pink.png";
+import playerjson_pink from "../assets/player/player_sprite/player_color/player_base_pink.json";
 
 
 import {
@@ -62,6 +62,7 @@ let otherPlayerId = new Array();
 let pressedKeys = [];
 let stt = 0;
 var color = "";
+let defaultPlayer={};
 export default class waitingRoom extends Phaser.Scene {
   constructor() {
     super({
@@ -76,7 +77,7 @@ export default class waitingRoom extends Phaser.Scene {
     this.playerChangedSkin = data.playerChangedSkin;
     this.numberImposter = data.numberImposter;
     this.numberPlayer = data.numberPlayer;
-    // this.test = data.test
+    this.test = data.test
   }
   preload() {
     this.load.image("dropShip", dropShip);
@@ -151,6 +152,8 @@ export default class waitingRoom extends Phaser.Scene {
 
     player = this.physics.add.sprite(-45, 26, PLAYER_BLUE, "idle.png");
     color = "blue";
+    defaultPlayer.player= player;
+    this.playerChangedSkin= defaultPlayer;
 
     // pants_skin = this.physics.add.sprite(
     //   player.x,
