@@ -23,5 +23,15 @@ export const PLAYER_YELLOW = "player_base_yellow";
 export const PLAYER_PINK = "player_base_pink";
 
 //Pets
+export const BEDCRAB = "bedcrab"
 export const BSLUG = "bslug";
+export const CREWMIN = "crewmin"
+export const DOG = "dog"
+export const ELLIE = "ellie"
+export const HAMPSTER = "hampster"
+export const ROBIT = "robit"
+export const SQUIG = "squig"
+export const STICKMIN = "stickmin";
+export const TWITCH = "twitch";
+export const UFO = "ufo";
  

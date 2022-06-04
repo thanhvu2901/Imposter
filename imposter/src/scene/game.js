@@ -52,6 +52,8 @@ import Archaeologist_Walk_json from "../assets/player/player_sprite/pants/Archae
 // Pets
 import bslugjson from "../assets/player/pet_sprite/bslug.json";
 import bslugpng from "../assets/player/pet_sprite/bslug.png";
+import stickminjson from "../assets/player/pet_sprite/stickmin.json";
+import stickminpng from "../assets/player/pet_sprite/stickmin.png";
 
 //Constants
 import {
@@ -69,6 +71,7 @@ import {
   PLAYER_YELLOW,
   PLAYER_PINK,
   BSLUG,
+  STICKMIN,
 } from "../consts/constants";
 
 //Variables declaration
@@ -190,6 +193,7 @@ class Game extends Phaser.Scene {
 
     //Pets
     this.load.atlas(BSLUG, bslugpng, bslugjson);
+    this.load.atlas(STICKMIN, stickminpng, stickminjson);
   }
 
   create() {
@@ -312,10 +316,10 @@ class Game extends Phaser.Scene {
     pet = this.physics.add.sprite(
       player.x + 50,
       player.y + 10,
-      BSLUG,
-      "bslug_idle1.png"
+      STICKMIN,
+      `${STICKMIN}_idle1.png`
     );
-    pet_type = BSLUG;
+    pet_type = STICKMIN;
 
     //add kill button if imposter
     if (this.isRole == 1) {
@@ -936,7 +940,9 @@ class Game extends Phaser.Scene {
       frameRate: 24,
     });
 
-    //Creating animation for pets
+    /* PETS ANIMATIONS */
+
+    //Bslug
     this.anims.create({
       key: `${BSLUG}-walk`,
       frames: this.anims.generateFrameNames(BSLUG, {
@@ -946,7 +952,7 @@ class Game extends Phaser.Scene {
         suffix: ".png",
       }),
       repeat: -1,
-      frameRate: 24,
+      frameRate: 16,
     });
 
     this.anims.create({
@@ -958,8 +964,33 @@ class Game extends Phaser.Scene {
         suffix: ".png",
       }),
       repeat: -1,
-      frameRate: 24,
+      frameRate: 16,
     });
+
+    //Stick
+    this.anims.create({
+      key: `${STICKMIN}-walk`,
+      frames: this.anims.generateFrameNames(STICKMIN, {
+        start: 1,
+        end: 9,
+        prefix: `${STICKMIN}_walk`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 16,
+    })
+
+    this.anims.create({
+      key: `${STICKMIN}-idle`,
+      frames: this.anims.generateFrameNames(STICKMIN, {
+        start: 1,
+        end: 34,
+        prefix: `${STICKMIN}_idle`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 16,
+    })
 
     //input to control
     this.input.keyboard.on("keydown", (e) => {
@@ -990,8 +1021,8 @@ class Game extends Phaser.Scene {
 
     this.cameras.main.startFollow(player, true);
     this.input.keyboard.enabled;
+
     //tải lại mới khi có player mới vào có các player đã ở trong đó
-    console.log(this.textInput);
     //các function liên quan đến objectlayer
     objectsLayer = ship.getObjectLayer("GameObjects");
     //khởi tạo hashmap cho vent và arrow
@@ -1326,12 +1357,12 @@ class Game extends Phaser.Scene {
         !cursors.up.isDown &&
         !cursors.down.isDown
       ) {
-        pet.anims.play(`${BSLUG}-idle`);
+        pet.anims.play(`${STICKMIN}-idle`);
         player.anims.play("player-idle_" + color);
       }
 
       if (cursors.left.isDown) {
-        pet.anims.play(`${BSLUG}-walk`, true);
+        pet.anims.play(`${STICKMIN}-walk`, true);
         player.anims.play("player-walk_" + color, true);
         player.setVelocityX(-PLAYER_SPEED);
         player.scaleX = -1;
@@ -1339,7 +1370,7 @@ class Game extends Phaser.Scene {
         player.body.offset.x = 40;
         playerMoved = true;
       } else if (cursors.right.isDown) {
-        pet.anims.play(`${BSLUG}-walk`, true);
+        pet.anims.play(`${STICKMIN}-walk`, true);
         player.anims.play("player-walk_" + color, true);
         player.setVelocityX(PLAYER_SPEED);
         player.scaleX = 1;
@@ -1348,12 +1379,12 @@ class Game extends Phaser.Scene {
         playerMoved = true;
       }
       if (cursors.up.isDown) {
-        pet.anims.play(`${BSLUG}-walk`, true);
+        pet.anims.play(`${STICKMIN}-walk`, true);
         player.anims.play("player-walk_" + color, true);
         player.setVelocityY(-PLAYER_SPEED);
         playerMoved = true;
       } else if (cursors.down.isDown) {
-        pet.anims.play(`${BSLUG}-walk`, true);
+        pet.anims.play(`${STICKMIN}-walk`, true);
         player.anims.play("player-walk_" + color, true);
         player.setVelocityY(PLAYER_SPEED);
         playerMoved = true;

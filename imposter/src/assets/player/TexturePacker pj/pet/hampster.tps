@@ -173,37 +173,114 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../../../skin/Pets/pet08/hampster_idle1.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_idle10.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_idle11.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_idle12.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_idle13.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_idle14.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_idle15.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_idle16.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_idle17.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_idle18.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_idle19.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_idle2.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_idle20.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_idle21.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_idle22.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_idle23.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_idle24.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_idle25.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_idle26.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_idle27.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_idle28.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_idle29.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_idle3.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_idle30.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_idle31.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_idle4.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_idle5.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_idle6.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_idle7.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_idle8.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_idle9.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_idle1.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_idle10.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_idle11.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_idle12.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_idle13.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_idle14.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_idle15.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_idle16.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_idle17.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_idle18.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_idle19.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_idle2.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_idle20.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_idle21.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_idle22.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_idle23.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_idle24.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_idle25.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_idle26.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_idle27.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_idle28.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_idle29.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_idle3.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_idle30.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_idle31.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_idle4.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_idle5.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_idle6.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_idle7.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_idle8.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_idle9.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad1.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad10.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad11.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad12.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad13.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad14.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad15.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad16.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad17.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad18.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad19.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad2.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad20.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad21.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad22.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad23.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad24.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad25.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad26.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad27.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad28.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad29.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad3.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad30.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad31.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad32.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad33.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad34.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad35.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad36.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad37.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad38.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad39.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad4.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad40.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad41.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad42.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad43.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad44.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad45.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad46.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad47.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad48.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad49.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad5.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad50.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad51.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad52.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad53.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad54.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad55.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad56.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad57.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad58.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad59.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad6.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad60.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad61.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad62.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad63.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad64.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad65.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad66.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad67.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad68.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad69.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad7.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad70.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad71.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad8.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_sad9.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_walk1.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_walk2.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_walk3.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_walk4.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_walk5.png</key>
+            <key type="filename">../../preload_assets/pet/hampster/hampster_walk6.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -212,242 +289,123 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>30,30,59,59</rect>
+                <rect>8,8,15,15</rect>
                 <key>scale9Paddings</key>
-                <rect>30,30,59,59</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad1.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad2.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad3.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad4.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad49.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad5.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad50.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad51.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad52.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad53.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad54.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad55.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad56.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad57.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad58.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad59.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad6.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad60.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad61.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad62.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad63.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad64.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad65.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad66.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad67.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad68.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad69.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad7.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad70.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad71.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>31,30,61,59</rect>
-                <key>scale9Paddings</key>
-                <rect>31,30,61,59</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad10.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad11.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad12.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad13.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad14.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad15.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad16.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad17.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad18.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad19.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad20.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad21.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad22.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad23.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad24.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad25.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad26.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad27.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad28.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad29.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad30.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad31.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad32.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad33.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad34.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad35.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad36.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad37.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad38.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad39.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad40.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad41.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad42.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad43.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad44.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad45.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad46.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad47.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad48.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad8.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_sad9.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>30,30,61,59</rect>
-                <key>scale9Paddings</key>
-                <rect>30,30,61,59</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet08/hampster_walk1.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_walk2.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_walk3.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_walk4.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_walk5.png</key>
-            <key type="filename">../../../skin/Pets/pet08/hampster_walk6.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>30,30,60,59</rect>
-                <key>scale9Paddings</key>
-                <rect>30,30,60,59</rect>
+                <rect>8,8,15,15</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
         </map>
         <key>fileList</key>
         <array>
-            <filename>../../../skin/Pets/pet08/hampster_idle1.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_idle10.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_idle11.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_idle12.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_idle13.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_idle14.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_idle15.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_idle16.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_idle17.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_idle18.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_idle19.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_idle2.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_idle20.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_idle21.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_idle22.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_idle23.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_idle24.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_idle25.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_idle26.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_idle27.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_idle28.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_idle29.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_idle3.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_idle30.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_idle31.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_idle4.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_idle5.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_idle6.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_idle7.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_idle8.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_idle9.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad1.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad10.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad11.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad12.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad13.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad14.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad15.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad16.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad17.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad18.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad19.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad2.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad20.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad21.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad22.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad23.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad24.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad25.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad26.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad27.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad28.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad29.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad3.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad30.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad31.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad32.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad33.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad34.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad35.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad36.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad37.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad38.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad39.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad4.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad40.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad41.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad42.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad43.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad44.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad45.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad46.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad47.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad48.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad49.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad5.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad50.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad51.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad52.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad53.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad54.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad55.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad56.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad57.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad58.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad59.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad6.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad60.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad61.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad62.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad63.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad64.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad65.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad66.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad67.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad68.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad69.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad7.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad70.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad71.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad8.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_sad9.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_walk1.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_walk2.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_walk3.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_walk4.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_walk5.png</filename>
-            <filename>../../../skin/Pets/pet08/hampster_walk6.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_idle1.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_idle10.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_idle11.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_idle12.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_idle13.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_idle14.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_idle15.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_idle16.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_idle17.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_idle18.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_idle19.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_idle2.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_idle20.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_idle21.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_idle22.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_idle23.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_idle24.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_idle25.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_idle26.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_idle27.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_idle28.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_idle29.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_idle3.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_idle30.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_idle31.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_idle4.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_idle5.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_idle6.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_idle7.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_idle8.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_idle9.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad1.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad10.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad11.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad12.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad13.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad14.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad15.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad16.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad17.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad18.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad19.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad2.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad20.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad21.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad22.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad23.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad24.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad25.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad26.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad27.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad28.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad29.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad3.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad30.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad31.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad32.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad33.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad34.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad35.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad36.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad37.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad38.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad39.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad4.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad40.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad41.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad42.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad43.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad44.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad45.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad46.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad47.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad48.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad49.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad5.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad50.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad51.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad52.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad53.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad54.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad55.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad56.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad57.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad58.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad59.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad6.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad60.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad61.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad62.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad63.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad64.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad65.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad66.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad67.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad68.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad69.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad7.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad70.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad71.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad8.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_sad9.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_walk1.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_walk2.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_walk3.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_walk4.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_walk5.png</filename>
+            <filename>../../preload_assets/pet/hampster/hampster_walk6.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

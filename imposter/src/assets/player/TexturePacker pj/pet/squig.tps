@@ -173,9 +173,41 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../../../skin/Pets/pet09/squig_idle1.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_idle20.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_idle40.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_idle1.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_idle11.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_idle14.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_idle15.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_idle16.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_idle17.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_idle18.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_idle19.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_idle2.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_idle20.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_idle21.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_idle22.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_idle23.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_idle24.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_idle25.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_idle26.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_idle27.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_idle28.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_idle29.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_idle3.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_idle30.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_idle31.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_idle32.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_idle33.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_idle34.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_idle35.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_idle36.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_idle37.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_idle38.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_idle39.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_idle4.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_idle40.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_idle5.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_idle6.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_idle9.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -184,16 +216,17 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>27,36,53,71</rect>
+                <rect>7,9,13,18</rect>
                 <key>scale9Paddings</key>
-                <rect>27,36,53,71</rect>
+                <rect>7,9,13,18</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet09/squig_idle10.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_idle13.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_idle7.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_idle8.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_idle10.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_idle12.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_idle13.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_idle7.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_idle8.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -202,25 +235,13 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>27,37,53,73</rect>
+                <rect>7,9,13,19</rect>
                 <key>scale9Paddings</key>
-                <rect>27,37,53,73</rect>
+                <rect>7,9,13,19</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet09/squig_idle11.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_idle14.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_idle15.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_idle16.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_idle24.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_idle27.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_idle28.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_idle30.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_idle32.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_idle33.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_idle36.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_idle6.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_idle9.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_sad.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -229,13 +250,16 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>27,36,53,73</rect>
+                <rect>9,6,18,11</rect>
                 <key>scale9Paddings</key>
-                <rect>27,36,53,73</rect>
+                <rect>9,6,18,11</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet09/squig_idle12.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_scared1.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_scared3.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_scared5.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_scared6.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -244,19 +268,14 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>27,37,54,73</rect>
+                <rect>8,12,15,23</rect>
                 <key>scale9Paddings</key>
-                <rect>27,37,54,73</rect>
+                <rect>8,12,15,23</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet09/squig_idle17.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_idle25.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_idle26.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_idle29.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_idle31.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_idle34.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_idle35.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_scared2.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_scared4.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -265,22 +284,26 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>27,36,54,73</rect>
+                <rect>8,12,15,24</rect>
                 <key>scale9Paddings</key>
-                <rect>27,36,54,73</rect>
+                <rect>8,12,15,24</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet09/squig_idle18.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_idle19.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_idle2.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_idle21.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_idle22.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_idle3.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_idle38.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_idle39.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_idle4.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_idle5.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_walk1.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_walk10.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_walk11.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_walk12.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_walk14.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_walk15.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_walk16.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_walk2.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_walk3.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_walk4.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_walk6.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_walk7.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_walk8.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_walk9.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -289,14 +312,14 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>27,36,53,72</rect>
+                <rect>8,9,15,17</rect>
                 <key>scale9Paddings</key>
-                <rect>27,36,53,72</rect>
+                <rect>8,9,15,17</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet09/squig_idle23.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_idle37.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_walk13.png</key>
+            <key type="filename">../../preload_assets/pet/squig/squig_walk5.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -305,297 +328,78 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>27,36,54,72</rect>
+                <rect>8,8,15,17</rect>
                 <key>scale9Paddings</key>
-                <rect>27,36,54,72</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet09/squig_sad.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>36,23,71,47</rect>
-                <key>scale9Paddings</key>
-                <rect>36,23,71,47</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet09/squig_scared1.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>31,47,62,95</rect>
-                <key>scale9Paddings</key>
-                <rect>31,47,62,95</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet09/squig_scared2.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>31,48,61,95</rect>
-                <key>scale9Paddings</key>
-                <rect>31,48,61,95</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet09/squig_scared3.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_scared6.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>31,47,63,94</rect>
-                <key>scale9Paddings</key>
-                <rect>31,47,63,94</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet09/squig_scared4.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>31,48,63,95</rect>
-                <key>scale9Paddings</key>
-                <rect>31,48,63,95</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet09/squig_scared5.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>31,47,62,94</rect>
-                <key>scale9Paddings</key>
-                <rect>31,47,62,94</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet09/squig_walk1.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_walk9.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>31,35,62,69</rect>
-                <key>scale9Paddings</key>
-                <rect>31,35,62,69</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet09/squig_walk10.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_walk2.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>31,35,61,69</rect>
-                <key>scale9Paddings</key>
-                <rect>31,35,61,69</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet09/squig_walk11.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_walk16.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_walk3.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_walk7.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_walk8.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>30,35,61,69</rect>
-                <key>scale9Paddings</key>
-                <rect>30,35,61,69</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet09/squig_walk12.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_walk4.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>30,34,60,68</rect>
-                <key>scale9Paddings</key>
-                <rect>30,34,60,68</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet09/squig_walk13.png</key>
-            <key type="filename">../../../skin/Pets/pet09/squig_walk5.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>30,33,60,67</rect>
-                <key>scale9Paddings</key>
-                <rect>30,33,60,67</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet09/squig_walk14.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>30,34,60,67</rect>
-                <key>scale9Paddings</key>
-                <rect>30,34,60,67</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet09/squig_walk15.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>30,34,61,69</rect>
-                <key>scale9Paddings</key>
-                <rect>30,34,61,69</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet09/squig_walk6.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>30,34,61,67</rect>
-                <key>scale9Paddings</key>
-                <rect>30,34,61,67</rect>
+                <rect>8,8,15,17</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
         </map>
         <key>fileList</key>
         <array>
-            <filename>../../../skin/Pets/pet09/squig_idle1.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_idle10.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_idle11.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_idle12.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_idle13.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_idle14.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_idle15.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_idle16.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_idle17.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_idle18.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_idle19.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_idle2.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_idle20.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_idle21.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_idle22.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_idle23.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_idle24.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_idle25.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_idle26.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_idle27.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_idle28.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_idle29.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_idle3.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_idle30.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_idle31.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_idle32.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_idle33.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_idle34.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_idle35.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_idle36.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_idle37.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_idle38.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_idle39.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_idle4.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_idle40.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_idle5.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_idle6.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_idle7.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_idle8.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_idle9.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_sad.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_scared1.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_scared2.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_scared3.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_scared4.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_scared5.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_scared6.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_walk1.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_walk10.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_walk11.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_walk12.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_walk13.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_walk14.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_walk15.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_walk16.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_walk2.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_walk3.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_walk4.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_walk5.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_walk6.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_walk7.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_walk8.png</filename>
-            <filename>../../../skin/Pets/pet09/squig_walk9.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_idle1.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_idle10.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_idle11.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_idle12.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_idle13.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_idle14.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_idle15.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_idle16.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_idle17.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_idle18.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_idle19.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_idle2.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_idle20.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_idle21.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_idle22.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_idle23.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_idle24.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_idle25.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_idle26.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_idle27.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_idle28.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_idle29.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_idle3.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_idle30.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_idle31.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_idle32.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_idle33.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_idle34.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_idle35.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_idle36.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_idle37.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_idle38.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_idle39.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_idle4.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_idle40.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_idle5.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_idle6.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_idle7.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_idle8.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_idle9.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_sad.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_scared1.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_scared2.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_scared3.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_scared4.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_scared5.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_scared6.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_walk1.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_walk10.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_walk11.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_walk12.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_walk13.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_walk14.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_walk15.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_walk16.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_walk2.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_walk3.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_walk4.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_walk5.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_walk6.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_walk7.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_walk8.png</filename>
+            <filename>../../preload_assets/pet/squig/squig_walk9.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

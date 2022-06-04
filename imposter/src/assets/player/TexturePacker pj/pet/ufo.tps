@@ -173,16 +173,24 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../../../skin/Pets/pet10/ufo_walk1.png</key>
-            <key type="filename">../../../skin/Pets/pet10/ufo_walk11.png</key>
-            <key type="filename">../../../skin/Pets/pet10/ufo_walk16.png</key>
-            <key type="filename">../../../skin/Pets/pet10/ufo_walk18.png</key>
-            <key type="filename">../../../skin/Pets/pet10/ufo_walk2.png</key>
-            <key type="filename">../../../skin/Pets/pet10/ufo_walk3.png</key>
-            <key type="filename">../../../skin/Pets/pet10/ufo_walk5.png</key>
-            <key type="filename">../../../skin/Pets/pet10/ufo_walk7.png</key>
-            <key type="filename">../../../skin/Pets/pet10/ufo_walk8.png</key>
-            <key type="filename">../../../skin/Pets/pet10/ufo_walk9.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_walk1.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_walk10.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_walk11.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_walk12.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_walk13.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_walk14.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_walk15.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_walk16.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_walk17.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_walk18.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_walk2.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_walk3.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_walk4.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_walk5.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_walk6.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_walk7.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_walk8.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_walk9.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -191,55 +199,33 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>37,21,73,42</rect>
+                <rect>9,5,19,11</rect>
                 <key>scale9Paddings</key>
-                <rect>37,21,73,42</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet10/ufo_walk10.png</key>
-            <key type="filename">../../../skin/Pets/pet10/ufo_walk12.png</key>
-            <key type="filename">../../../skin/Pets/pet10/ufo_walk13.png</key>
-            <key type="filename">../../../skin/Pets/pet10/ufo_walk14.png</key>
-            <key type="filename">../../../skin/Pets/pet10/ufo_walk15.png</key>
-            <key type="filename">../../../skin/Pets/pet10/ufo_walk17.png</key>
-            <key type="filename">../../../skin/Pets/pet10/ufo_walk4.png</key>
-            <key type="filename">../../../skin/Pets/pet10/ufo_walk6.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>37,21,73,43</rect>
-                <key>scale9Paddings</key>
-                <rect>37,21,73,43</rect>
+                <rect>9,5,19,11</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
         </map>
         <key>fileList</key>
         <array>
-            <filename>../../../skin/Pets/pet10/ufo_walk1.png</filename>
-            <filename>../../../skin/Pets/pet10/ufo_walk10.png</filename>
-            <filename>../../../skin/Pets/pet10/ufo_walk11.png</filename>
-            <filename>../../../skin/Pets/pet10/ufo_walk12.png</filename>
-            <filename>../../../skin/Pets/pet10/ufo_walk13.png</filename>
-            <filename>../../../skin/Pets/pet10/ufo_walk14.png</filename>
-            <filename>../../../skin/Pets/pet10/ufo_walk15.png</filename>
-            <filename>../../../skin/Pets/pet10/ufo_walk16.png</filename>
-            <filename>../../../skin/Pets/pet10/ufo_walk17.png</filename>
-            <filename>../../../skin/Pets/pet10/ufo_walk18.png</filename>
-            <filename>../../../skin/Pets/pet10/ufo_walk2.png</filename>
-            <filename>../../../skin/Pets/pet10/ufo_walk3.png</filename>
-            <filename>../../../skin/Pets/pet10/ufo_walk4.png</filename>
-            <filename>../../../skin/Pets/pet10/ufo_walk5.png</filename>
-            <filename>../../../skin/Pets/pet10/ufo_walk6.png</filename>
-            <filename>../../../skin/Pets/pet10/ufo_walk7.png</filename>
-            <filename>../../../skin/Pets/pet10/ufo_walk8.png</filename>
-            <filename>../../../skin/Pets/pet10/ufo_walk9.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_walk1.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_walk10.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_walk11.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_walk12.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_walk13.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_walk14.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_walk15.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_walk16.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_walk17.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_walk18.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_walk2.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_walk3.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_walk4.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_walk5.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_walk6.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_walk7.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_walk8.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_walk9.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
