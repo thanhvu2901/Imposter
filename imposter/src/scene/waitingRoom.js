@@ -2,43 +2,42 @@ import Phaser from "phaser";
 import dropShip from "../assets/img/Dropship.png";
 import lobby from "../assets/tilemaps/lobby.json";
 
-import playerpng from "../assets/player/player_sprite/player_base.png";
-import playerjson from "../assets/player/player_sprite/player_base.json";
-import Archaeologist_Walk_png from "../assets/player/player_sprite/Archaeologist_Walk.png";
-import Archaeologist_Walk_json from "../assets/player/player_sprite/Archaeologist_Walk.json";
+import playerpng from "../assets/player/player_sprite/player_color/player_base.png";
+import playerjson from "../assets/player/player_sprite/player_color/player_base.json";
+import Archaeologist_Walk_png from "../assets/player/player_sprite/pants/Archaeologist_Walk.png";
+import Archaeologist_Walk_json from "../assets/player/player_sprite/pants/Archaeologist_Walk.json";
 
 import { PLAYER_SPEED } from "../consts/constants";
 
 
 // Player color
-import playerpng_red from "../assets/player/player_sprite/player_base_red.png";
-import playerjson_red from "../assets/player/player_sprite/player_base_red.json";
-import playerpng_blue from "../assets/player/player_sprite/player_base_blue.png";
-import playerjson_blue from "../assets/player/player_sprite/player_base_blue.json";
-import playerpng_blue_dark from "../assets/player/player_sprite/player_base_blue_dark.png";
-import playerjson_blue_dark from "../assets/player/player_sprite/player_base_blue_dark.json";
-import playerpng_blue_light from "../assets/player/player_sprite/player_base_blue_light.png";
-import playerjson_blue_light from "../assets/player/player_sprite/player_base_blue_light.json";
-import playerpng_gray_dark from "../assets/player/player_sprite/player_base_gray_dark.png";
-import playerjson_gray_dark from "../assets/player/player_sprite/player_base_gray_dark.json";
-import playerpng_gray_light from "../assets/player/player_sprite/player_base_gray_light.png";
-import playerjson_gray_light from "../assets/player/player_sprite/player_base_gray_light.json";
-import playerpng_green_dark from "../assets/player/player_sprite/player_base_green_dark.png";
-import playerjson_green_dark from "../assets/player/player_sprite/player_base_green_dark.json";
-import playerpng_green_light from "../assets/player/player_sprite/player_base_green_light.png";
-import playerjson_green_light from "../assets/player/player_sprite/player_base_green_light.json";
-import playerpng_orange from "../assets/player/player_sprite/player_base_orange.png";
-import playerjson_orange from "../assets/player/player_sprite/player_base_orange.json";
-import playerpng_purple from "../assets/player/player_sprite/player_base_purple.png";
-import playerjson_purple from "../assets/player/player_sprite/player_base_purple.json";
-import playerpng_yellow from "../assets/player/player_sprite/player_base_yellow.png";
-import playerjson_yellow from "../assets/player/player_sprite/player_base_yellow.json";
-import playerpng_pink from "../assets/player/player_sprite/player_base_pink.png";
-import playerjson_pink from "../assets/player/player_sprite/player_base_pink.json";
+import playerpng_red from "../assets/player/player_sprite/player_color/player_base_red.png";
+import playerjson_red from "../assets/player/player_sprite/player_color/player_base_red.json";
+import playerpng_blue from "../assets/player/player_sprite/player_color/player_base_blue.png";
+import playerjson_blue from "../assets/player/player_sprite/player_color/player_base_blue.json";
+import playerpng_blue_dark from "../assets/player/player_sprite/player_color/player_base_blue_dark.png";
+import playerjson_blue_dark from "../assets/player/player_sprite/player_color/player_base_blue_dark.json";
+import playerpng_blue_light from "../assets/player/player_sprite/player_color/player_base_blue_light.png";
+import playerjson_blue_light from "../assets/player/player_sprite/player_color/player_base_blue_light.json";
+import playerpng_gray_dark from "../assets/player/player_sprite/player_color/player_base_gray_dark.png";
+import playerjson_gray_dark from "../assets/player/player_sprite/player_color/player_base_gray_dark.json";
+import playerpng_gray_light from "../assets/player/player_sprite/player_color/player_base_gray_light.png";
+import playerjson_gray_light from "../assets/player/player_sprite/player_color/player_base_gray_light.json";
+import playerpng_green_dark from "../assets/player/player_sprite/player_color/player_base_green_dark.png";
+import playerjson_green_dark from "../assets/player/player_sprite/player_color/player_base_green_dark.json";
+import playerpng_green_light from "../assets/player/player_sprite/player_color/player_base_green_light.png";
+import playerjson_green_light from "../assets/player/player_sprite/player_color/player_base_green_light.json";
+import playerpng_orange from "../assets/player/player_sprite/player_color/player_base_orange.png";
+import playerjson_orange from "../assets/player/player_sprite/player_color/player_base_orange.json";
+import playerpng_purple from "../assets/player/player_sprite/player_color/player_base_purple.png";
+import playerjson_purple from "../assets/player/player_sprite/player_color/player_base_purple.json";
+import playerpng_yellow from "../assets/player/player_sprite/player_color/player_base_yellow.png";
+import playerjson_yellow from "../assets/player/player_sprite/player_color/player_base_yellow.json";
+import playerpng_pink from "../assets/player/player_sprite/player_color/player_base_pink.png";
+import playerjson_pink from "../assets/player/player_sprite/player_color/player_base_pink.json";
 
 
 import {
-
   PLAYER_BLUE,
   PLAYER_RED,
   PLAYER_BLUE_DARK,
@@ -63,6 +62,7 @@ let otherPlayerId = new Array();
 let pressedKeys = [];
 let stt = 0;
 var color = "";
+let defaultPlayer={};
 export default class waitingRoom extends Phaser.Scene {
   constructor() {
     super({
@@ -77,7 +77,7 @@ export default class waitingRoom extends Phaser.Scene {
     this.playerChangedSkin = data.playerChangedSkin;
     this.numberImposter = data.numberImposter;
     this.numberPlayer = data.numberPlayer;
-    // this.test = data.test
+    this.test = data.test
   }
   preload() {
     this.load.image("dropShip", dropShip);
@@ -152,6 +152,8 @@ export default class waitingRoom extends Phaser.Scene {
 
     player = this.physics.add.sprite(-45, 26, PLAYER_BLUE, "idle.png");
     color = "blue";
+    defaultPlayer.player= player;
+    this.playerChangedSkin= defaultPlayer;
 
     // pants_skin = this.physics.add.sprite(
     //   player.x,
@@ -161,15 +163,15 @@ export default class waitingRoom extends Phaser.Scene {
     // );
     // tạo theo số lượng other player vào
 
-    for (let i = 0; i < otherPlayerId.length; i++) {
-      otherPlayer[i] = this.physics.add.sprite(
-        -45 + 20 * i,
-        26 + 20 * i,
-        "playerbase",
-        "idle.png"
-      );
-    }
-    stt = otherPlayer.length;
+    // for (let i = 0; i < otherPlayerId.length; i++) {
+    //   otherPlayer[i] = this.physics.add.sprite(
+    //     -45 + 20 * i,
+    //     26 + 20 * i,
+    //     "playerbase",
+    //     "idle.png"
+    //   );
+    // }
+    // stt = otherPlayer.length;
 
     this.anims.create({
       key: "player-idle",
@@ -537,6 +539,14 @@ export default class waitingRoom extends Phaser.Scene {
       // console.log(otherPlayerId);
     });
 
+    //update skin current in room
+    this.socket.on('changeSkin', ({ color, id }) => {
+      let index = otherPlayerId.findIndex((Element) => Element == id)
+      otherPlayer[index].destroy();
+      otherPlayer[index] = this.physics.add.sprite(-45, 26, 'player_base_' + color, "idle.png");
+    })
+
+
     this.socket.on("newPlayer", ({ playerInfo, numPlayers }) => {
       // listplyer socket có khác với tại local khong
       otherPlayerId.push(playerInfo.playerId);
@@ -553,45 +563,6 @@ export default class waitingRoom extends Phaser.Scene {
       console.log("stt" + stt);
     });
 
-    // this.socket.on("move", ({ x, y, playerId }) => {
-    //   console.log({ x, y, playerId });
-
-    //   let index = otherPlayerId.findIndex((Element) => Element == playerId);
-    //   //id = index;
-    //   console.log(index);
-
-    //   if (otherPlayer[index].x > x) {
-    //     otherPlayer[index].flipX = true;
-    //   } else if (otherPlayer[index].x < x) {
-    //     otherPlayer[index].flipX = false;
-    //   }
-    //   otherPlayer[index].x = x;
-    //   otherPlayer[index].y = y;
-    //   otherPlayer[index].moving = true;
-
-    //   if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
-    //     otherPlayer[index].play("player-walk");
-    //   } else if (
-    //     !otherPlayer[index].moving &&
-    //     otherPlayer[index].anims.isPlaying
-    //   ) {
-    //     otherPlayer[index].stop("player-walk");
-    //   }
-    // });
-
-    // this.socket.on("moveEnd", ({ playerId }) => {
-    //   let index = otherPlayerId.findIndex((Element) => Element == playerId);
-    //   otherPlayer[index].moving = false;
-    //   otherPlayer[index].anims.play("player-idle");
-    //   if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
-    //     otherPlayer[index].play("player-walk");
-    //   } else if (
-    //     !otherPlayer[index].moving &&
-    //     otherPlayer[index].anims.isPlaying
-    //   ) {
-    //     otherPlayer[index].stop("player-walk");
-    //   }
-    // });
 
     customize.on("pointerdown", () => {
       // this.input.on('pointerdown', () => this.scene.start('ChangeSkin'))
@@ -626,7 +597,7 @@ export default class waitingRoom extends Phaser.Scene {
       this.playerChangedSkin = data.playerChangedSkin;
       this.numberImposter = data.numberImposter;
       this.numberPlayer = data.numberPlayer;
-      let colorPlayerChanged = this.playerChangedSkin.player.texture.key;
+      let colorPlayerChanged = this.playerChangedSkin.player.texture.key ?? 'nothing';
       switch (colorPlayerChanged) {
         case "player0":
           player.destroy();
@@ -724,24 +695,54 @@ export default class waitingRoom extends Phaser.Scene {
           color = "blue";
           break;
       }
+      //send color player change
+      console.log(color + " " + this.socket.id);
+      this.socket.emit('changeSkin', ({ color: color, id: this.socket.id, room: this.state.roomKey }))
       this.physics.add.collider(player, lobby_tileset);
-
       this.cameras.main.startFollow(player, true);
     });
 
-    // this.events.on('resume', (data) => {
-    //   console.log('resume');
-    //   console.log(data);
-    //   this.socket = data.socket;
-    //   this.textInput = data.textInput;
-    //   this.playerChangedSkin = data.playerChangedSkin;
-    //   this.numberImposter = data.numberImposter;
-    //   this.numberPlayer = data.numberPlayer
-    //   ///  console.log(dataResume.test);
 
-    // })
+    this.socket.on("moveW", ({ x, y, playerId }) => {
+      console.log({ x, y, playerId });
 
-    //pants_skin.anims.play("archaeologist_walk");
+      let index = otherPlayerId.findIndex((Element) => Element == playerId);
+      //id = index;
+      console.log(index);
+
+      if (otherPlayer[index].x > x) {
+        otherPlayer[index].flipX = true;
+      } else if (otherPlayer[index].x < x) {
+        otherPlayer[index].flipX = false;
+      }
+      otherPlayer[index].x = x;
+      otherPlayer[index].y = y;
+      otherPlayer[index].moving = true;
+
+      if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
+        otherPlayer[index].play("player-walk");
+      } else if (
+        !otherPlayer[index].moving &&
+        otherPlayer[index].anims.isPlaying
+      ) {
+        otherPlayer[index].stop("player-walk");
+      }
+    });
+
+    this.socket.on("moveEndW", ({ playerId }) => {
+      let index = otherPlayerId.findIndex((Element) => Element == playerId);
+      otherPlayer[index].moving = false;
+      otherPlayer[index].anims.play("player-idle");
+      if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
+        otherPlayer[index].play("player-walk");
+      } else if (
+        !otherPlayer[index].moving &&
+        otherPlayer[index].anims.isPlaying
+      ) {
+        otherPlayer[index].stop("player-walk");
+      }
+    });
+
   }
 
   update() {
@@ -784,7 +785,7 @@ export default class waitingRoom extends Phaser.Scene {
     }
 
     if (playerMoved) {
-      this.socket.emit("move", {
+      this.socket.emit("moveW", {
         x: player.x,
         y: player.y,
         roomId: this.state.roomKey,
@@ -792,7 +793,7 @@ export default class waitingRoom extends Phaser.Scene {
       player.movedLastFrame = true;
     } else {
       if (player.movedLastFrame) {
-        this.socket.emit("moveEnd", { roomId: this.state.roomKey });
+        this.socket.emit("moveEndW", { roomId: this.state.roomKey });
       }
       player.movedLastFrame = false;
     }

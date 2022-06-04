@@ -85,7 +85,7 @@ let arrColor = [];
 let backgroundColor;
 const colorPlayers = [
   0x0000ff, 0xffff00, 0xff00ff, 0xffae00, 0x808080, 0xb7b2b2, 0x8b14c8,
-   0x00ffff, 0x051950, 0xff0000, 0x00ff00, 0x044104,
+  0x00ffff, 0x051950, 0xff0000, 0x00ff00, 0x044104,
 ];
 class ChangeSkin extends Phaser.Scene {
   constructor() {
@@ -176,11 +176,11 @@ class ChangeSkin extends Phaser.Scene {
     let groupPetsBackground = this.add.group();
     let groupColors = this.add.group();
     let groupColorsBackground = this.add.group();
-    let backgroundColorText= this.add.rectangle(255, 180, 90, 50, 0x505655);
-    let backgroundHatText=this.add.rectangle(355, 180, 90, 50, 0xa1b1ae);
-    let backgroundSkinText=this.add.rectangle(455, 180, 90, 50, 0xa1b1ae);
-    let backgroundPetText=this.add.rectangle(555, 180, 90, 50, 0xa1b1ae);
-    let backgroundGameText=this.add.rectangle(655, 180, 90, 50, 0xa1b1ae);
+    let backgroundColorText = this.add.rectangle(255, 180, 90, 50, 0x505655);
+    let backgroundHatText = this.add.rectangle(355, 180, 90, 50, 0xa1b1ae);
+    let backgroundSkinText = this.add.rectangle(455, 180, 90, 50, 0xa1b1ae);
+    let backgroundPetText = this.add.rectangle(555, 180, 90, 50, 0xa1b1ae);
+    let backgroundGameText = this.add.rectangle(655, 180, 90, 50, 0xa1b1ae);
     const colorText = this.add.text(225, 165, "Color", { font: "27px atari" });
     const hatText = this.add.text(335, 165, "Hat", { font: "27px atari" });
     const skinText = this.add.text(430, 165, "Skin", { font: "27px atari" });
@@ -532,11 +532,11 @@ class ChangeSkin extends Phaser.Scene {
             player.destroy();
             player = current_object.add.sprite(350, 460, `player${i}`);
             playerChangedSkin.player = player;
-            if(trouserChosen){
-              trouserChosen= current_object.add.sprite(360, 510, trouserChosen.texture.key);
+            if (trouserChosen) {
+              trouserChosen = current_object.add.sprite(360, 510, trouserChosen.texture.key);
               trouserChosen.scale = 1.9;
             }
-            if(hatChosen){
+            if (hatChosen) {
               hatChosen = current_object.add.sprite(345, 350, hatChosen.texture.key);
               hatChosen.scale = 1.5;
             }
