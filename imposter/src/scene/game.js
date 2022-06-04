@@ -1,37 +1,59 @@
+//Libs and files
 import Phaser, { Scene } from "phaser";
 import Map_1 from "./state/ingame/mini-map";
 import theskeld from "../assets/tilemaps/theskeld.json";
-import playerpng from "../assets/player/player_sprite/player_base.png";
-import playerjson from "../assets/player/player_sprite/player_base.json";
+import playerpng from "../assets/player/player_sprite/player_color/player_base.png";
+import playerjson from "../assets/player/player_sprite/player_color/player_base.json";
 import player_ghost from "../assets/player/Base/ghost/ghost.png";
 import player_ghost_json from "../assets/player/Base/ghost/ghost.json";
+import Light from "../scene//state/ingame/ray-light";
+import eventsCenter from "./eventsCenter";
+import { debugDraw } from "../scene/debugDraw";
+import MapMissionsExporter from "../helper/map_mission_exporter";
+import Mission from "../services/missions/mission";
+
+//Marked mission
+import AlignEngineOutput_mission_marked from "../assets/tasks/Align Engine Output/mission_marked.png";
+import CleanO2Filter_mission_marked from "../assets/tasks/Clean O2 Filter/marked.png";
+import FixWiring_mission_marked from "../assets/tasks/Fix_Wiring/marked.png";
+import CleanAsteroids from "../assets/tasks/Clear Asteroids/marked.png";
+import StabilizeSteering from "../assets/tasks/Stabilize Steering/marked.png";
 
 // Player color
-import playerpng_red from "../assets/player/player_sprite/player_base_red.png";
-import playerjson_red from "../assets/player/player_sprite/player_base_red.json";
-import playerpng_blue from "../assets/player/player_sprite/player_base_blue.png";
-import playerjson_blue from "../assets/player/player_sprite/player_base_blue.json";
-import playerpng_blue_dark from "../assets/player/player_sprite/player_base_blue_dark.png";
-import playerjson_blue_dark from "../assets/player/player_sprite/player_base_blue_dark.json";
-import playerpng_blue_light from "../assets/player/player_sprite/player_base_blue_light.png";
-import playerjson_blue_light from "../assets/player/player_sprite/player_base_blue_light.json";
-import playerpng_gray_dark from "../assets/player/player_sprite/player_base_gray_dark.png";
-import playerjson_gray_dark from "../assets/player/player_sprite/player_base_gray_dark.json";
-import playerpng_gray_light from "../assets/player/player_sprite/player_base_gray_light.png";
-import playerjson_gray_light from "../assets/player/player_sprite/player_base_gray_light.json";
-import playerpng_green_dark from "../assets/player/player_sprite/player_base_green_dark.png";
-import playerjson_green_dark from "../assets/player/player_sprite/player_base_green_dark.json";
-import playerpng_green_light from "../assets/player/player_sprite/player_base_green_light.png";
-import playerjson_green_light from "../assets/player/player_sprite/player_base_green_light.json";
-import playerpng_orange from "../assets/player/player_sprite/player_base_orange.png";
-import playerjson_orange from "../assets/player/player_sprite/player_base_orange.json";
-import playerpng_purple from "../assets/player/player_sprite/player_base_purple.png";
-import playerjson_purple from "../assets/player/player_sprite/player_base_purple.json";
-import playerpng_yellow from "../assets/player/player_sprite/player_base_yellow.png";
-import playerjson_yellow from "../assets/player/player_sprite/player_base_yellow.json";
-import playerpng_pink from "../assets/player/player_sprite/player_base_pink.png";
-import playerjson_pink from "../assets/player/player_sprite/player_base_pink.json";
+import playerpng_red from "../assets/player/player_sprite/player_color/player_base_red.png";
+import playerjson_red from "../assets/player/player_sprite/player_color/player_base_red.json";
+import playerpng_blue from "../assets/player/player_sprite/player_color/player_base_blue.png";
+import playerjson_blue from "../assets/player/player_sprite/player_color/player_base_blue.json";
+import playerpng_blue_dark from "../assets/player/player_sprite/player_color/player_base_blue_dark.png";
+import playerjson_blue_dark from "../assets/player/player_sprite/player_color/player_base_blue_dark.json";
+import playerpng_blue_light from "../assets/player/player_sprite/player_color/player_base_blue_light.png";
+import playerjson_blue_light from "../assets/player/player_sprite/player_color/player_base_blue_light.json";
+import playerpng_gray_dark from "../assets/player/player_sprite/player_color/player_base_gray_dark.png";
+import playerjson_gray_dark from "../assets/player/player_sprite/player_color/player_base_gray_dark.json";
+import playerpng_gray_light from "../assets/player/player_sprite/player_color/player_base_gray_light.png";
+import playerjson_gray_light from "../assets/player/player_sprite/player_color/player_base_gray_light.json";
+import playerpng_green_dark from "../assets/player/player_sprite/player_color/player_base_green_dark.png";
+import playerjson_green_dark from "../assets/player/player_sprite/player_color/player_base_green_dark.json";
+import playerpng_green_light from "../assets/player/player_sprite/player_color/player_base_green_light.png";
+import playerjson_green_light from "../assets/player/player_sprite/player_color/player_base_green_light.json";
+import playerpng_orange from "../assets/player/player_sprite/player_color/player_base_orange.png";
+import playerjson_orange from "../assets/player/player_sprite/player_color/player_base_orange.json";
+import playerpng_purple from "../assets/player/player_sprite/player_color/player_base_purple.png";
+import playerjson_purple from "../assets/player/player_sprite/player_color/player_base_purple.json";
+import playerpng_yellow from "../assets/player/player_sprite/player_color/player_base_yellow.png";
+import playerjson_yellow from "../assets/player/player_sprite/player_color/player_base_yellow.json";
+import playerpng_pink from "../assets/player/player_sprite/player_color/player_base_pink.png";
+import playerjson_pink from "../assets/player/player_sprite/player_color/player_base_pink.json";
 
+// Skins
+import Archaeologist_Walk_png from "../assets/player/player_sprite/pants/Archaeologist_Walk.png";
+import Archaeologist_Walk_json from "../assets/player/player_sprite/pants/Archaeologist_Walk.json";
+
+// Pets
+import bslugjson from "../assets/player/pet_sprite/bslug.json";
+import bslugpng from "../assets/player/pet_sprite/bslug.png";
+
+//Constants
 import {
   PLAYER_SPEED,
   PLAYER_BLUE,
@@ -46,28 +68,11 @@ import {
   PLAYER_PURPLE,
   PLAYER_YELLOW,
   PLAYER_PINK,
+  BSLUG,
 } from "../consts/constants";
 
-import Archaeologist_Walk_png from "../assets/player/player_sprite/Archaeologist_Walk.png";
-import Archaeologist_Walk_json from "../assets/player/player_sprite/Archaeologist_Walk.json";
-
-import { debugDraw } from "../scene/debugDraw";
-
-import MapMissionsExporter from "../helper/map_mission_exporter";
-import Mission from "../services/missions/mission";
-
-import AlignEngineOutput_mission_marked from "../assets/tasks/Align Engine Output/mission_marked.png";
-
-//marked mission
-
-import CleanO2Filter_mission_marked from "../assets/tasks/Clean O2 Filter/marked.png";
-import FixWiring_mission_marked from "../assets/tasks/Fix_Wiring/marked.png";
-import CleanAsteroids from "../assets/tasks/Clear Asteroids/marked.png";
-import StabilizeSteering from "../assets/tasks/Stabilize Steering/marked.png";
-
-import Light from "../scene//state/ingame/ray-light";
-import eventsCenter from "./eventsCenter";
-let player, pants_skin;
+//Variables declaration
+let player, pet, pet_type;
 let otherPlayer = new Array();
 let otherPlayerId = new Array();
 let cursors;
@@ -82,7 +87,6 @@ let export_missions;
 let current_x, current_y, mission_name;
 let useButton;
 let launch_scene = false;
-
 let playerKilled;
 let indexKill = 0;
 let canKill = false;
@@ -102,10 +106,10 @@ let temp,
   is_hidden = false,
   keyboard;
 let count = 0;
-let current_scene;
 let total_missions_completed = 0;
 let list_missions_completed = [];
 let color = "";
+
 class Game extends Phaser.Scene {
   constructor() {
     super({ key: "game" });
@@ -183,6 +187,9 @@ class Game extends Phaser.Scene {
     this.load.atlas(PLAYER_PURPLE, playerpng_purple, playerjson_purple);
     this.load.atlas(PLAYER_PINK, playerpng_pink, playerjson_pink);
     this.load.atlas(PLAYER_YELLOW, playerpng_yellow, playerjson_yellow);
+
+    //Pets
+    this.load.atlas(BSLUG, bslugpng, bslugjson);
   }
 
   create() {
@@ -206,13 +213,13 @@ class Game extends Phaser.Scene {
       }
     });
 
-    current_scene = this.scene;
     const ship = this.make.tilemap({ key: "tilemap" });
     const tileset = ship.addTilesetImage("theSkeld", "tiles", 17, 17);
     const ship_tileset = ship.createLayer("Background", tileset);
+
+    //Player loading based on color - default is blue
     player = this.physics.add.sprite(-45, 26, PLAYER_BLUE, "idle.png");
     color = "blue";
-
     let colorPlayerChanged =
       this.playerChangedSkin.player.texture.key ?? "nothing";
     switch (colorPlayerChanged) {
@@ -301,12 +308,14 @@ class Game extends Phaser.Scene {
       }
     }
 
-    pants_skin = this.physics.add.sprite(
-      player.x + 5,
-      player.y + 12,
-      "Archaeologist_Walk",
-      "Archaeologist_Spawn55.png"
+    //Pets and skins loading
+    pet = this.physics.add.sprite(
+      player.x + 50,
+      player.y + 10,
+      BSLUG,
+      "bslug_idle1.png"
     );
+    pet_type = BSLUG;
 
     //add kill button if imposter
     if (this.isRole == 1) {
@@ -335,16 +344,10 @@ class Game extends Phaser.Scene {
     map_missions.show_mission(this);
     ship_tileset.setCollisionByProperty({ collides: true });
 
-    // debugDraw(ship_tileset, this);
-
-    //add player
-    // player = this.physics.add.sprite(115, -700, "playerbase", "idle.png");
-
     // tạo theo số lượng other player vào
 
     this.state.roomKey = this.textInput;
 
-    // console.log(this.numPlayers);
     for (let i = 0; i < this.numPlayers - 1; i++) {
       otherPlayer[i] = this.physics.add.sprite(
         115 + 30 * i,
@@ -368,7 +371,7 @@ class Game extends Phaser.Scene {
 
     //input button
 
-    // tạo object và gán các thuộc tính
+    //Creating animation for player
     this.anims.create({
       key: "player-idle",
       frames: [{ key: "playerbase", frame: "idle.png" }],
@@ -446,6 +449,7 @@ class Game extends Phaser.Scene {
       frames: [{ key: PLAYER_YELLOW, frame: "idle.png" }],
     });
 
+    /* DEAD ANIMATION */
     //Red
     this.anims.create({
       key: "dead_red",
@@ -932,12 +936,13 @@ class Game extends Phaser.Scene {
       frameRate: 24,
     });
 
+    //Creating animation for pets
     this.anims.create({
-      key: "archaeologist-walk",
-      frames: this.anims.generateFrameNames("Archaeologist_Walk", {
+      key: `${BSLUG}-walk`,
+      frames: this.anims.generateFrameNames(BSLUG, {
         start: 1,
-        end: 12,
-        prefix: "Archaeologist_Walk",
+        end: 18,
+        prefix: `${BSLUG}_walk`,
         suffix: ".png",
       }),
       repeat: -1,
@@ -945,8 +950,15 @@ class Game extends Phaser.Scene {
     });
 
     this.anims.create({
-      key: "archaeologist-idle",
-      frames: [{ key: "Archaeologist_Walk", frame: "Archaeologist_Spawn55.png" }],
+      key: `${BSLUG}-idle`,
+      frames: this.anims.generateFrameNames(BSLUG, {
+        start: 1,
+        end: 48,
+        prefix: `${BSLUG}_idle`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
     });
 
     //input to control
@@ -1190,7 +1202,7 @@ class Game extends Phaser.Scene {
     });
   }
   update() {
-    pants_skin.setPosition(player.x + 3, player.y + 12);
+    pet.setPosition(player.x + 50, player.y + 10);
 
     this.events.emit("moving", [player.x, player.y]);
     light.update(player);
@@ -1314,34 +1326,34 @@ class Game extends Phaser.Scene {
         !cursors.up.isDown &&
         !cursors.down.isDown
       ) {
-        pants_skin.anims.play("archaeologist-idle");
+        pet.anims.play(`${BSLUG}-idle`);
         player.anims.play("player-idle_" + color);
       }
 
       if (cursors.left.isDown) {
-        pants_skin.anims.play("archaeologist-walk", true);
+        pet.anims.play(`${BSLUG}-walk`, true);
         player.anims.play("player-walk_" + color, true);
         player.setVelocityX(-PLAYER_SPEED);
         player.scaleX = -1;
-        pants_skin.scaleX = -1;
+        pet.scaleX = -1;
         player.body.offset.x = 40;
         playerMoved = true;
       } else if (cursors.right.isDown) {
-        pants_skin.anims.play("archaeologist-walk", true);
+        pet.anims.play(`${BSLUG}-walk`, true);
         player.anims.play("player-walk_" + color, true);
         player.setVelocityX(PLAYER_SPEED);
         player.scaleX = 1;
-        pants_skin.scaleX = 1;
+        pet.scaleX = 1;
         player.body.offset.x = 0;
         playerMoved = true;
       }
       if (cursors.up.isDown) {
-        pants_skin.anims.play("archaeologist-walk", true);
+        pet.anims.play(`${BSLUG}-walk`, true);
         player.anims.play("player-walk_" + color, true);
         player.setVelocityY(-PLAYER_SPEED);
         playerMoved = true;
       } else if (cursors.down.isDown) {
-        pants_skin.anims.play("archaeologist-walk", true);
+        pet.anims.play(`${BSLUG}-walk`, true);
         player.anims.play("player-walk_" + color, true);
         player.setVelocityY(PLAYER_SPEED);
         playerMoved = true;
