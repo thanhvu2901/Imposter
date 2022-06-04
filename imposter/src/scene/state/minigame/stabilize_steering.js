@@ -9,11 +9,13 @@ let done = false;
 let x;
 let y;
 let current_scene;
+let sprite;
 
 class StabilizeSteering extends Phaser.Scene {
     init(data) {
         x = data.x;
         y = data.y;
+        sprite = data.sprite;
     }
 
     constructor() {
@@ -67,6 +69,7 @@ class StabilizeSteering extends Phaser.Scene {
     update() {
         if (done === true) {
             text = this.add.text(317, 327, 'TASK COMPLETE!!', { font: '50px Courier', fill: '#FFFFFF' }).setDepth(1);
+            sprite.tint = 0;
             Event_Center.emit("continue_scene_game", {x: x, y: y, mission: "StabilizeSteering"});
             current_scene.stop("stabilizeSteering");   
         }

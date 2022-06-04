@@ -21,7 +21,8 @@ import { PLAYER_SPEED } from "../consts/constants";
 
 //marked mission
 
-import CleanO2Filter_mission_marked from "../assets/tasks/Clean O2 Filter/marked.png"
+import CleanO2Filter_mission_marked from "../assets/tasks/Clean O2 Filter/marked.png";
+import AlignEnginOutput_gallery from "../assets/tasks/Align Engine Output/gallery.png";
 import FixWiring_mission_marked from "../assets/tasks/Fix_Wiring/marked.png";
 import CleanAsteroids from "../assets/tasks/Clear Asteroids/marked.png";
 import StabilizeSteering from "../assets/tasks/Stabilize Steering/marked.png";
@@ -89,10 +90,13 @@ class Game extends Phaser.Scene {
     this.load.atlas("Archaeologist_Walk", Archaeologist_Walk_png, Archaeologist_Walk_json);
 
 
-    this.load.image(
-      "AlignEngineOutput_mission_marked",
-      AlignEngineOutput_mission_marked
-    );
+    // this.load.image(
+    //   "AlignEngineOutput_mission_marked",
+    //   AlignEngineOutput_mission_marked
+    // );
+
+    this.load.image("AlignEngineOutput_mission_marked", AlignEnginOutput_gallery);
+
 
     this.load.image("CleanO2Filter_mission_marked", CleanO2Filter_mission_marked);
     this.load.image("FixWiring_mission_marked", FixWiring_mission_marked);
@@ -170,11 +174,11 @@ class Game extends Phaser.Scene {
         "idle.png"
       );
     }
-    this.idPlayers.forEach((element) => {
-      if (element != this.socket.id) {
-        otherPlayerId.push(element);
-      }
-    });
+    // this.idPlayers.forEach((element) => {
+    //   if (element != this.socket.id) {
+    //     otherPlayerId.push(element);
+    //   }
+    // });
     // console.log(otherPlayerId);
 
     // stt = otherPlayer.length;
@@ -434,65 +438,65 @@ class Game extends Phaser.Scene {
 
     })
 
-    this.socket.on("move", ({ x, y, playerId }) => {
-      //console.log({ x, y, playerId });
+    // this.socket.on("move", ({ x, y, playerId }) => {
+    //   //console.log({ x, y, playerId });
 
-      let index = otherPlayerId.findIndex((Element) => Element == playerId);
-      //id = index;
-      // console.log(index);
+    //   let index = otherPlayerId.findIndex((Element) => Element == playerId);
+    //   //id = index;
+    //   // console.log(index);
 
-      if (otherPlayer[index].x > x) {
-        otherPlayer[index].flipX = true;
-      } else if (otherPlayer[index].x < x) {
-        otherPlayer[index].flipX = false;
-      }
-      otherPlayer[index].x = x;
-      otherPlayer[index].y = y;
-      otherPlayer[index].moving = true;
+    //   if (otherPlayer[index].x > x) {
+    //     otherPlayer[index].flipX = true;
+    //   } else if (otherPlayer[index].x < x) {
+    //     otherPlayer[index].flipX = false;
+    //   }
+    //   otherPlayer[index].x = x;
+    //   otherPlayer[index].y = y;
+    //   otherPlayer[index].moving = true;
 
-      if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
-        otherPlayer[index].play("player-walk");
-      } else if (
-        !otherPlayer[index].moving &&
-        otherPlayer[index].anims.isPlaying
-      ) {
-        otherPlayer[index].stop("player-walk");
-      }
-    });
+    //   if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
+    //     otherPlayer[index].play("player-walk");
+    //   } else if (
+    //     !otherPlayer[index].moving &&
+    //     otherPlayer[index].anims.isPlaying
+    //   ) {
+    //     otherPlayer[index].stop("player-walk");
+    //   }
+    // });
 
     // console.log(objectsLayer);
 
-    this.socket.on("moveEnd", ({ playerId }) => {
-      let index = otherPlayerId.findIndex((Element) => Element == playerId);
-      otherPlayer[index].moving = false;
-      otherPlayer[index].anims.play("player-idle");
-      if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
-        otherPlayer[index].play("player-walk");
-      } else if (
-        !otherPlayer[index].moving &&
-        otherPlayer[index].anims.isPlaying
-      ) {
-        otherPlayer[index].stop("player-walk");
-      }
-    });
+    // this.socket.on("moveEnd", ({ playerId }) => {
+    //   let index = otherPlayerId.findIndex((Element) => Element == playerId);
+    //   otherPlayer[index].moving = false;
+    //   otherPlayer[index].anims.play("player-idle");
+    //   if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
+    //     otherPlayer[index].play("player-walk");
+    //   } else if (
+    //     !otherPlayer[index].moving &&
+    //     otherPlayer[index].anims.isPlaying
+    //   ) {
+    //     otherPlayer[index].stop("player-walk");
+    //   }
+    // });
 
     //update if killed ==>> ************************TO GHOST*******************
-    this.socket.on("updateOtherPlayer", (playerId) => {
-      console.log(this.socket.id);
-      console.log(playerId);
-      if (this.socket.id == playerId) {
-        //run noitice died
-        console.log("this player killed");
-        //player.stop("player-idle")
-        alive = false;
+    // this.socket.on("updateOtherPlayer", (playerId) => {
+    //   console.log(this.socket.id);
+    //   console.log(playerId);
+    //   if (this.socket.id == playerId) {
+    //     //run noitice died
+    //     console.log("this player killed");
+    //     //player.stop("player-idle")
+    //     alive = false;
 
-        //*****************LOOP HERE********************** */
-        player.anims.play("player-dead", false);
-      } else {
-        let index = otherPlayerId.findIndex((Element) => Element == playerId);
-        otherPlayer[index].anims.play("player-dead", true);
-      }
-    });
+    //     //*****************LOOP HERE********************** */
+    //     player.anims.play("player-dead", false);
+    //   } else {
+    //     let index = otherPlayerId.findIndex((Element) => Element == playerId);
+    //     otherPlayer[index].anims.play("player-dead", true);
+    //   }
+    // });
 
   }
   update() {
@@ -577,11 +581,11 @@ class Game extends Phaser.Scene {
         playerMoved = true;
       }
       if (playerMoved) {
-        this.socket.emit("move", {
-          x: player.x,
-          y: player.y,
-          roomId: this.state.roomKey,
-        });
+        // this.socket.emit("move", {
+        //   x: player.x,
+        //   y: player.y,
+        //   roomId: this.state.roomKey,
+        // });
 
         let index = 0;
 
@@ -642,15 +646,15 @@ class Game extends Phaser.Scene {
       }
 
       if (playerMoved) {
-        this.socket.emit("move", {
-          x: player.x,
-          y: player.y,
-          roomId: this.state.roomKey,
-        });
+        // this.socket.emit("move", {
+        //   x: player.x,
+        //   y: player.y,
+        //   roomId: this.state.roomKey,
+        // });
         player.movedLastFrame = true;
       } else {
         if (player.movedLastFrame) {
-          this.socket.emit("moveEnd", { roomId: this.state.roomKey });
+          // this.socket.emit("moveEnd", { roomId: this.state.roomKey });
         }
         player.movedLastFrame = false;
       }
@@ -682,6 +686,7 @@ class Game extends Phaser.Scene {
         this.scene.launch(check_mission.scene, {
           x: check_mission.x,
           y: check_mission.y,
+          sprite: check_mission.sprite
         });
         launch_scene = false;
 

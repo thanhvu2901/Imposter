@@ -23,12 +23,14 @@ let text;
 
 let x;
 let y;
+let sprite;
 
 class CleanAsteroids extends Phaser.Scene {
 
   init(data) {
     x = data.x;
     y = data.y;
+    sprite = data.sprite;
   }
 
   constructor() {
@@ -142,6 +144,7 @@ class CleanAsteroids extends Phaser.Scene {
         current_object.asteroid2.destroy();
         current_object.asteroid3.destroy();
         current_object.add.text(250, 300, "Task Complete");
+        sprite.tint = 0;
         Event_Center.emit("continue_scene_game", {x: x, y: y, mission: "CleanAsteroids"});
         current_scene.stop("CleanAsteroids"); 
       }

@@ -7,10 +7,12 @@ import Event_Center from "../../../helper/event_center";
 
 let x;
 let y;
+let sprite; 
 class AlignEngineOutput extends Phaser.Scene {
     init(data) {
         x = data.x;
         y = data.y;
+        sprite = data.sprite;
     }
 
     preload() {
@@ -56,6 +58,7 @@ class AlignEngineOutput extends Phaser.Scene {
                 check_y = dragY;
                 if (Math.floor(check_y) == 414) {
                     current_object.add.text(390, 250, "Mission Completed");
+                    sprite.tint = 0;
                     Event_Center.emit("continue_scene_game", {x: x, y: y, mission: "AlignEngineOutput"});
                     current_scene.stop("align_engine_output");
                 }
