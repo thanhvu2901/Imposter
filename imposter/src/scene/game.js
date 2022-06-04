@@ -26,6 +26,12 @@ import AlignEnginOutput_gallery from "../assets/tasks/Align Engine Output/galler
 import FixWiring_mission_marked from "../assets/tasks/Fix_Wiring/marked.png";
 import CleanAsteroids from "../assets/tasks/Clear Asteroids/marked.png";
 import StabilizeSteering from "../assets/tasks/Stabilize Steering/marked.png";
+import Swipcard_mision_marked from "../assets/tasks/Swipe Card/marked.png";
+import UploadData_mission_marked from "../assets/tasks/Upload Data/marked.png";
+import CalibratorDistributor_mission_marked from "../assets/tasks/Calibrate Distributor/marked.png"
+import ChartCourse from "../assets/tasks/Chart Course/marked.png";
+import FuelEngine from "../assets/tasks/Fuel Engines/marked.png";
+import PrimeShields from "../assets/tasks/Prime Shields/marked.png";
 
 import Light from "../scene//state/ingame/ray-light"
 import Event_Center from "../helper/event_center";
@@ -102,6 +108,12 @@ class Game extends Phaser.Scene {
     this.load.image("FixWiring_mission_marked", FixWiring_mission_marked);
     this.load.image("CleanAsteroids", CleanAsteroids);
     this.load.image("StabilizeSteering", StabilizeSteering);
+    this.load.image("Swipcard_mision_marked", Swipcard_mision_marked);
+    this.load.image("UploadData_mission_marked", UploadData_mission_marked);
+    this.load.image("CalibratorDistributor_mission_marked", CalibratorDistributor_mission_marked);
+    this.load.image("ChartCourse", ChartCourse);
+    this.load.image("FuelEngine", FuelEngine);
+    this.load.image("PrimeSheilds", PrimeShields);
 
   }
 
@@ -110,6 +122,7 @@ class Game extends Phaser.Scene {
     //this.scene.pause('game')
     // let intro = this.scene.launch('introCrew', { isRole: isRole }).bringToTop('introCrew')
 
+  
     light = new Light(this)
     Event_Center.on("continue_scene_game", (data) => {
       current_x = data.x;
@@ -500,6 +513,10 @@ class Game extends Phaser.Scene {
 
   }
   update() {
+
+    console.log("x", player.x);
+    console.log("y", player.y);
+  
     light.update(player)
     if (this.isRole == 1) {
       kill.on("pointerdown", () => {
