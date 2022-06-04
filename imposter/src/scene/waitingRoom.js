@@ -38,7 +38,6 @@ import playerjson_pink from "../assets/player/player_sprite/player_base_pink.jso
 
 
 import {
-
   PLAYER_BLUE,
   PLAYER_RED,
   PLAYER_BLUE_DARK,
@@ -561,45 +560,6 @@ export default class waitingRoom extends Phaser.Scene {
       console.log("stt" + stt);
     });
 
-    // this.socket.on("move", ({ x, y, playerId }) => {
-    //   console.log({ x, y, playerId });
-
-    //   let index = otherPlayerId.findIndex((Element) => Element == playerId);
-    //   //id = index;
-    //   console.log(index);
-
-    //   if (otherPlayer[index].x > x) {
-    //     otherPlayer[index].flipX = true;
-    //   } else if (otherPlayer[index].x < x) {
-    //     otherPlayer[index].flipX = false;
-    //   }
-    //   otherPlayer[index].x = x;
-    //   otherPlayer[index].y = y;
-    //   otherPlayer[index].moving = true;
-
-    //   if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
-    //     otherPlayer[index].play("player-walk");
-    //   } else if (
-    //     !otherPlayer[index].moving &&
-    //     otherPlayer[index].anims.isPlaying
-    //   ) {
-    //     otherPlayer[index].stop("player-walk");
-    //   }
-    // });
-
-    // this.socket.on("moveEnd", ({ playerId }) => {
-    //   let index = otherPlayerId.findIndex((Element) => Element == playerId);
-    //   otherPlayer[index].moving = false;
-    //   otherPlayer[index].anims.play("player-idle");
-    //   if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
-    //     otherPlayer[index].play("player-walk");
-    //   } else if (
-    //     !otherPlayer[index].moving &&
-    //     otherPlayer[index].anims.isPlaying
-    //   ) {
-    //     otherPlayer[index].stop("player-walk");
-    //   }
-    // });
 
     customize.on("pointerdown", () => {
       // this.input.on('pointerdown', () => this.scene.start('ChangeSkin'))
@@ -739,19 +699,47 @@ export default class waitingRoom extends Phaser.Scene {
       this.cameras.main.startFollow(player, true);
     });
 
-    // this.events.on('resume', (data) => {
-    //   console.log('resume');
-    //   console.log(data);
-    //   this.socket = data.socket;
-    //   this.textInput = data.textInput;
-    //   this.playerChangedSkin = data.playerChangedSkin;
-    //   this.numberImposter = data.numberImposter;
-    //   this.numberPlayer = data.numberPlayer
-    //   ///  console.log(dataResume.test);
 
-    // })
+    this.socket.on("moveW", ({ x, y, playerId }) => {
+      console.log({ x, y, playerId });
 
-    //pants_skin.anims.play("archaeologist_walk");
+      let index = otherPlayerId.findIndex((Element) => Element == playerId);
+      //id = index;
+      console.log(index);
+
+      if (otherPlayer[index].x > x) {
+        otherPlayer[index].flipX = true;
+      } else if (otherPlayer[index].x < x) {
+        otherPlayer[index].flipX = false;
+      }
+      otherPlayer[index].x = x;
+      otherPlayer[index].y = y;
+      otherPlayer[index].moving = true;
+
+      if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
+        otherPlayer[index].play("player-walk");
+      } else if (
+        !otherPlayer[index].moving &&
+        otherPlayer[index].anims.isPlaying
+      ) {
+        otherPlayer[index].stop("player-walk");
+      }
+    });
+
+    this.socket.on("moveEndW", ({ playerId }) => {
+      let index = otherPlayerId.findIndex((Element) => Element == playerId);
+      otherPlayer[index].moving = false;
+      otherPlayer[index].anims.play("player-idle");
+      if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
+        otherPlayer[index].play("player-walk");
+      } else if (
+        !otherPlayer[index].moving &&
+        otherPlayer[index].anims.isPlaying
+      ) {
+        otherPlayer[index].stop("player-walk");
+      }
+    });
+
   }
 
   update() {
@@ -794,7 +782,7 @@ export default class waitingRoom extends Phaser.Scene {
     }
 
     if (playerMoved) {
-      this.socket.emit("move", {
+      this.socket.emit("moveW", {
         x: player.x,
         y: player.y,
         roomId: this.state.roomKey,
@@ -802,7 +790,7 @@ export default class waitingRoom extends Phaser.Scene {
       player.movedLastFrame = true;
     } else {
       if (player.movedLastFrame) {
-        this.socket.emit("moveEnd", { roomId: this.state.roomKey });
+        this.socket.emit("moveEndW", { roomId: this.state.roomKey });
       }
       player.movedLastFrame = false;
     }
