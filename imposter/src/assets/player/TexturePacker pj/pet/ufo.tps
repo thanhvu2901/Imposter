@@ -173,6 +173,76 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle1.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle10.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle11.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle12.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle13.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle14.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle15.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle16.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle17.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle18.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle19.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle2.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle20.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle21.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle22.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle23.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle24.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle25.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle26.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle27.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle28.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle29.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle3.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle30.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle31.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle32.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle33.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle34.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle35.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle36.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle37.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle38.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle39.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle4.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle40.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle41.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle42.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle43.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle44.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle45.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle5.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle6.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle7.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle8.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_idle9.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_sad1.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_sad10.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_sad11.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_sad12.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_sad13.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_sad14.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_sad15.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_sad16.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_sad17.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_sad18.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_sad19.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_sad2.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_sad20.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_sad21.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_sad22.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_sad23.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_sad24.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_sad25.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_sad3.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_sad4.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_sad5.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_sad6.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_sad7.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_sad8.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_sad9.png</key>
             <key type="filename">../../preload_assets/pet/ufo/ufo_walk1.png</key>
             <key type="filename">../../preload_assets/pet/ufo/ufo_walk10.png</key>
             <key type="filename">../../preload_assets/pet/ufo/ufo_walk11.png</key>
@@ -205,9 +275,109 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_scared1.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_scared2.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_scared3.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_scared4.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_scared5.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_scared6.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_scared7.png</key>
+            <key type="filename">../../preload_assets/pet/ufo/ufo_scared8.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>9,6,17,12</rect>
+                <key>scale9Paddings</key>
+                <rect>9,6,17,12</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
         </map>
         <key>fileList</key>
         <array>
+            <filename>../../preload_assets/pet/ufo/ufo_idle1.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle10.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle11.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle12.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle13.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle14.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle15.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle16.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle17.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle18.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle19.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle2.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle20.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle21.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle22.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle23.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle24.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle25.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle26.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle27.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle28.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle29.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle3.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle30.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle31.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle32.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle33.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle34.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle35.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle36.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle37.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle38.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle39.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle4.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle40.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle41.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle42.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle43.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle44.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle45.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle5.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle6.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle7.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle8.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_idle9.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_sad1.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_sad10.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_sad11.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_sad12.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_sad13.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_sad14.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_sad15.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_sad16.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_sad17.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_sad18.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_sad19.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_sad2.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_sad20.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_sad21.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_sad22.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_sad23.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_sad24.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_sad25.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_sad3.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_sad4.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_sad5.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_sad6.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_sad7.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_sad8.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_sad9.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_scared1.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_scared2.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_scared3.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_scared4.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_scared5.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_scared6.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_scared7.png</filename>
+            <filename>../../preload_assets/pet/ufo/ufo_scared8.png</filename>
             <filename>../../preload_assets/pet/ufo/ufo_walk1.png</filename>
             <filename>../../preload_assets/pet/ufo/ufo_walk10.png</filename>
             <filename>../../preload_assets/pet/ufo/ufo_walk11.png</filename>
