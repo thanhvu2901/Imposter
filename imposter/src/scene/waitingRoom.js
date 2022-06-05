@@ -9,7 +9,6 @@ import Archaeologist_Walk_json from "../assets/player/player_sprite/pants/Archae
 
 import { PLAYER_SPEED } from "../consts/constants";
 
-
 // Player color
 import playerpng_red from "../assets/player/player_sprite/player_color/player_base_red.png";
 import playerjson_red from "../assets/player/player_sprite/player_color/player_base_red.json";
@@ -36,9 +35,7 @@ import playerjson_yellow from "../assets/player/player_sprite/player_color/playe
 import playerpng_pink from "../assets/player/player_sprite/player_color/player_base_pink.png";
 import playerjson_pink from "../assets/player/player_sprite/player_color/player_base_pink.json";
 
-
 import {
-
   PLAYER_BLUE,
   PLAYER_RED,
   PLAYER_BLUE_DARK,
@@ -51,9 +48,43 @@ import {
   PLAYER_PURPLE,
   PLAYER_YELLOW,
   PLAYER_PINK,
+  BSLUG,
+  BEDCRAB,
+  CREWMIN,
+  DOG,
+  ELLIE,
+  HAMPSTER,
+  ROBIT,
+  SQUIG,
+  STICKMIN,
+  TWITCH,
+  UFO,
 } from "../consts/constants";
 import { debugDraw } from "../scene/debugDraw";
 import eventsCenter from "./eventsCenter";
+
+import bslugjson from "../assets/player/pet_sprite/bslug.json";
+import bslugpng from "../assets/player/pet_sprite/bslug.png";
+import bedcrabjson from "../assets/player/pet_sprite/bedcrab.json";
+import bedcrabpng from "../assets/player/pet_sprite/bedcrab.png";
+import crewminjson from "../assets/player/pet_sprite/crewmin.json";
+import crewminpng from "../assets/player/pet_sprite/crewmin.png";
+import dogjson from "../assets/player/pet_sprite/dog.json";
+import dogpng from "../assets/player/pet_sprite/dog.png";
+import elliejson from "../assets/player/pet_sprite/ellie.json";
+import elliepng from "../assets/player/pet_sprite/ellie.png";
+import hampsterjson from "../assets/player/pet_sprite/hampster.json";
+import hampsterpng from "../assets/player/pet_sprite/hampster.png";
+import robitjson from "../assets/player/pet_sprite/robit.json";
+import robitpng from "../assets/player/pet_sprite/robit.png";
+import squigjson from "../assets/player/pet_sprite/squig.json";
+import squigpng from "../assets/player/pet_sprite/squig.png";
+import stickminjson from "../assets/player/pet_sprite/stickmin.json";
+import stickminpng from "../assets/player/pet_sprite/stickmin.png";
+import twitchjson from "../assets/player/pet_sprite/twitch.json";
+import twitchpng from "../assets/player/pet_sprite/twitch.png";
+import ufojson from "../assets/player/pet_sprite/ufo.json";
+import ufopng from "../assets/player/pet_sprite/ufo.png";
 let player;
 let pants_skin;
 let cursors;
@@ -63,7 +94,9 @@ let otherPlayerId = new Array();
 let pressedKeys = [];
 let stt = 0;
 var color = "";
-let defaultPlayer={};
+let defaultPlayer = {};
+let pet=null;
+let pet_type;
 export default class waitingRoom extends Phaser.Scene {
   constructor() {
     super({
@@ -78,7 +111,7 @@ export default class waitingRoom extends Phaser.Scene {
     this.playerChangedSkin = data.playerChangedSkin;
     this.numberImposter = data.numberImposter;
     this.numberPlayer = data.numberPlayer;
-    this.test = data.test
+    this.test = data.test;
   }
   preload() {
     this.load.image("dropShip", dropShip);
@@ -129,6 +162,18 @@ export default class waitingRoom extends Phaser.Scene {
       Archaeologist_Walk_json
     );
 
+    this.load.atlas(BSLUG, bslugpng, bslugjson);
+    this.load.atlas(BEDCRAB, bedcrabpng, bedcrabjson);
+    this.load.atlas(CREWMIN, crewminpng, crewminjson);
+    this.load.atlas(DOG, dogpng, dogjson);
+    this.load.atlas(ELLIE, elliepng, elliejson);
+    this.load.atlas(HAMPSTER, hampsterpng, hampsterjson);
+    this.load.atlas(ROBIT, robitpng, robitjson);
+    this.load.atlas(SQUIG, squigpng, squigjson);
+    this.load.atlas(STICKMIN, stickminpng, stickminjson);
+    this.load.atlas(TWITCH, twitchpng, twitchjson);
+    this.load.atlas(UFO, ufopng, ufojson);
+
     // console.log('preload');
   }
 
@@ -153,8 +198,8 @@ export default class waitingRoom extends Phaser.Scene {
 
     player = this.physics.add.sprite(-45, 26, PLAYER_BLUE, "idle.png");
     color = "blue";
-    defaultPlayer.player= player;
-    this.playerChangedSkin= defaultPlayer;
+    defaultPlayer.player = player;
+    this.playerChangedSkin = defaultPlayer;
 
     // pants_skin = this.physics.add.sprite(
     //   player.x,
@@ -264,14 +309,14 @@ export default class waitingRoom extends Phaser.Scene {
       frameRate: 16,
     });
 
-    this.input.keyboard.on('keydown', (e) => {
+    this.input.keyboard.on("keydown", (e) => {
       if (
-        e.code == 'ArrowDown' ||
-        e.code == 'ArrowUp' ||
-        e.code == 'ArrowRight' ||
-        e.code == 'ArrowLeft'
+        e.code == "ArrowDown" ||
+        e.code == "ArrowUp" ||
+        e.code == "ArrowRight" ||
+        e.code == "ArrowLeft"
       ) {
-        this.sound.play('walk', { loop: true })
+        this.sound.play("walk", { loop: true });
       }
     });
     //Red
@@ -455,7 +500,270 @@ export default class waitingRoom extends Phaser.Scene {
       frameRate: 24,
     });
 
+    //Creating animation for pets
+    this.anims.create({
+      key: `${BSLUG}-walk`,
+      frames: this.anims.generateFrameNames(BSLUG, {
+        start: 1,
+        end: 18,
+        prefix: `${BSLUG}_walk`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
 
+    this.anims.create({
+      key: `${BSLUG}-idle`,
+      frames: this.anims.generateFrameNames(BSLUG, {
+        start: 1,
+        end: 48,
+        prefix: `${BSLUG}_idle`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${BEDCRAB}-walk`,
+      frames: this.anims.generateFrameNames(BEDCRAB, {
+        start: 1,
+        end: 18,
+        prefix: `${BEDCRAB}_walk`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${BEDCRAB}-idle`,
+      frames: this.anims.generateFrameNames(BEDCRAB, {
+        start: 1,
+        end: 48,
+        prefix: `${BEDCRAB}_idle`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${CREWMIN}-walk`,
+      frames: this.anims.generateFrameNames(CREWMIN, {
+        start: 1,
+        end: 18,
+        prefix: `${CREWMIN}_walk`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${CREWMIN}-idle`,
+      frames: this.anims.generateFrameNames(CREWMIN, {
+        start: 1,
+        end: 48,
+        prefix: `${CREWMIN}_idle`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${DOG}-walk`,
+      frames: this.anims.generateFrameNames(DOG, {
+        start: 1,
+        end: 18,
+        prefix: `${DOG}_walk`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${DOG}-idle`,
+      frames: this.anims.generateFrameNames(DOG, {
+        start: 1,
+        end: 48,
+        prefix: `${DOG}_idle`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${ELLIE}-walk`,
+      frames: this.anims.generateFrameNames(ELLIE, {
+        start: 1,
+        end: 18,
+        prefix: `${ELLIE}_walk`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${ELLIE}-idle`,
+      frames: this.anims.generateFrameNames(ELLIE, {
+        start: 1,
+        end: 48,
+        prefix: `${ELLIE}_idle`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${HAMPSTER}-walk`,
+      frames: this.anims.generateFrameNames(HAMPSTER, {
+        start: 1,
+        end: 18,
+        prefix: `${HAMPSTER}_walk`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${HAMPSTER}-idle`,
+      frames: this.anims.generateFrameNames(HAMPSTER, {
+        start: 1,
+        end: 48,
+        prefix: `${HAMPSTER}_idle`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${ROBIT}-walk`,
+      frames: this.anims.generateFrameNames(ROBIT, {
+        start: 1,
+        end: 18,
+        prefix: `${ROBIT}_walk`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${ROBIT}-idle`,
+      frames: this.anims.generateFrameNames(ROBIT, {
+        start: 1,
+        end: 48,
+        prefix: `${ROBIT}_idle`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${SQUIG}-walk`,
+      frames: this.anims.generateFrameNames(SQUIG, {
+        start: 1,
+        end: 18,
+        prefix: `${SQUIG}_walk`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${SQUIG}-idle`,
+      frames: this.anims.generateFrameNames(SQUIG, {
+        start: 1,
+        end: 48,
+        prefix: `${SQUIG}_idle`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${STICKMIN}-walk`,
+      frames: this.anims.generateFrameNames(STICKMIN, {
+        start: 1,
+        end: 18,
+        prefix: `${STICKMIN}_walk`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${STICKMIN}-idle`,
+      frames: this.anims.generateFrameNames(STICKMIN, {
+        start: 1,
+        end: 48,
+        prefix: `${STICKMIN}_idle`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${TWITCH}-walk`,
+      frames: this.anims.generateFrameNames(TWITCH, {
+        start: 1,
+        end: 18,
+        prefix: `${TWITCH}_walk`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${TWITCH}-idle`,
+      frames: this.anims.generateFrameNames(TWITCH, {
+        start: 1,
+        end: 48,
+        prefix: `${TWITCH}_idle`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${UFO}-walk`,
+      frames: this.anims.generateFrameNames(UFO, {
+        start: 1,
+        end: 18,
+        prefix: `${UFO}_walk`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${UFO}-idle`,
+      frames: this.anims.generateFrameNames(UFO, {
+        start: 1,
+        end: 48,
+        prefix: `${UFO}_idle`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
 
     //input to control
     this.input.keyboard.on("keydown", (e) => {
@@ -472,17 +780,13 @@ export default class waitingRoom extends Phaser.Scene {
           repeat: -1,
           frameRate: 16,
         });
-
-
       }
-    })
-
+    });
 
     this.input.keyboard.on("keyup", (e) => {
       this.sound.stopByKey("walk");
 
       pressedKeys = pressedKeys.filter((key) => key !== e.code);
-
     });
 
     this.physics.add.collider(player, lobby_tileset);
@@ -496,8 +800,7 @@ export default class waitingRoom extends Phaser.Scene {
       // this.physics.resume();
       // STATE
       this.state.roomKey = states.roomKey;
-      this.state.host = Object.keys((states).players)[0]
-
+      this.state.host = Object.keys(states.players)[0];
 
       //IF HOST
       if (this.socket.id == this.state.host) {
@@ -524,7 +827,6 @@ export default class waitingRoom extends Phaser.Scene {
     });
 
     this.socket.on("currentPlayers", ({ players, numPlayers }) => {
-
       for (let i = 0; i < numPlayers; i++) {
         if (this.socket.id !== Object.keys(players)[i]) {
           otherPlayerId.push(Object.keys(players)[i]);
@@ -541,12 +843,16 @@ export default class waitingRoom extends Phaser.Scene {
     });
 
     //update skin current in room
-    this.socket.on('changeSkin', ({ color, id }) => {
-      let index = otherPlayerId.findIndex((Element) => Element == id)
+    this.socket.on("changeSkin", ({ color, id }) => {
+      let index = otherPlayerId.findIndex((Element) => Element == id);
       otherPlayer[index].destroy();
-      otherPlayer[index] = this.physics.add.sprite(-45, 26, 'player_base_' + color, "idle.png");
-    })
-
+      otherPlayer[index] = this.physics.add.sprite(
+        -45,
+        26,
+        "player_base_" + color,
+        "idle.png"
+      );
+    });
 
     this.socket.on("newPlayer", ({ playerInfo, numPlayers }) => {
       // listplyer socket có khác với tại local khong
@@ -628,7 +934,7 @@ export default class waitingRoom extends Phaser.Scene {
         numPlayers: numPlayers,
         idPlayers: idPlayers,
         numberImposter: this.numberImposter ?? 1,
-        playerChangedSkin: this.playerChangedSkin
+        playerChangedSkin: this.playerChangedSkin,
       });
       this.game.scene.stop("waitingRoom");
     });
@@ -637,7 +943,9 @@ export default class waitingRoom extends Phaser.Scene {
       this.playerChangedSkin = data.playerChangedSkin;
       this.numberImposter = data.numberImposter;
       this.numberPlayer = data.numberPlayer;
-      let colorPlayerChanged = this.playerChangedSkin.player.texture.key ?? 'nothing';
+      console.log("player changed skin: ", this.playerChangedSkin);
+      let colorPlayerChanged =
+        this.playerChangedSkin.player.texture.key ?? "nothing";
       switch (colorPlayerChanged) {
         case "player0":
           player.destroy();
@@ -735,9 +1043,158 @@ export default class waitingRoom extends Phaser.Scene {
           color = "blue";
           break;
       }
+
+      if (this.playerChangedSkin.pet) {
+        let petChosen = this.playerChangedSkin.pet.texture.key ?? "nothing";
+        switch (petChosen) {
+          case "pet0":
+            if(pet){
+              pet.destroy();
+            }
+            pet = null;
+            pet_type = null;
+            break;
+          case "pet1":
+            if(pet){
+              pet.destroy();
+            }
+            pet = this.physics.add.sprite(
+              player.x + 50,
+              player.y + 10,
+              STICKMIN,
+              "stickmin_idle1.png"
+            );
+            pet_type = STICKMIN;
+            break;
+          case "pet2":
+            if(pet){
+              pet.destroy();
+            }
+            pet = this.physics.add.sprite(
+              player.x + 50,
+              player.y + 10,
+              ELLIE,
+              "ellie_idle1.png"
+            );
+            pet_type = ELLIE;
+            break;
+          case "pet3":
+            if(pet){
+              pet.destroy();
+            }
+            pet = this.physics.add.sprite(
+              player.x + 50,
+              player.y + 10,
+              CREWMIN,
+              "crewmin_idle1.png"
+            );
+            pet_type = CREWMIN;
+            break;
+          case "pet4":
+            if(pet){
+              pet.destroy();
+            }
+            pet = this.physics.add.sprite(
+              player.x + 50,
+              player.y + 10,
+              DOG,
+              "dog_idle1.png"
+            );
+            pet_type = DOG;
+            break;
+          case "pet5":
+            if(pet){
+              pet.destroy();
+            }
+            pet = this.physics.add.sprite(
+              player.x + 50,
+              player.y + 10,
+              BEDCRAB,
+              "bedcrab_idle1.png"
+            );
+            pet_type = BEDCRAB;
+            break;
+          case "pet6":
+            if(pet){
+              pet.destroy();
+            }
+            pet = this.physics.add.sprite(
+              player.x + 50,
+              player.y + 10,
+              ROBIT,
+              "robit_idle1.png"
+            );
+            pet_type = ROBIT;
+            break;
+          case "pet7":
+            if(pet){
+              pet.destroy();
+            }
+            pet = this.physics.add.sprite(
+              player.x + 50,
+              player.y + 10,
+              BSLUG,
+              "bslug_idle1.png"
+            );
+            pet_type = BSLUG;
+            break;
+          case "pet8":
+            if(pet){
+              pet.destroy();
+            }
+            pet = this.physics.add.sprite(
+              player.x + 50,
+              player.y + 10,
+              HAMPSTER,
+              "hampster_idle1.png"
+            );
+            pet_type = HAMPSTER;
+            break;
+          case "pet9":
+            if(pet){
+              pet.destroy();
+            }
+            pet = this.physics.add.sprite(
+              player.x + 50,
+              player.y + 10,
+              SQUIG,
+              "squig_idle1.png"
+            );
+            pet_type = SQUIG;
+            break;
+          case "pet10":
+            if(pet){
+              pet.dstroy();
+            }
+            pet = this.physics.add.sprite(
+              player.x + 50,
+              player.y + 10,
+              UFO,
+              "ufo_idle1.png"
+            );
+            pet_type = UFO;
+            break;
+          case "pet11":
+            if(pet){
+              pet.destroy();
+            }
+            pet = this.physics.add.sprite(
+              player.x + 50,
+              player.y + 10,
+              TWITCH,
+              "twitch_idle1.png"
+            );
+            pet_type = TWITCH;
+            break;
+        }
+      }
       //send color player change
       console.log(color + " " + this.socket.id);
-      this.socket.emit('changeSkin', ({ color: color, id: this.socket.id, room: this.state.roomKey }))
+      this.socket.emit("changeSkin", {
+        color: color,
+        id: this.socket.id,
+        room: this.state.roomKey,
+      });
       this.physics.add.collider(player, lobby_tileset);
       this.cameras.main.startFollow(player, true);
     });
@@ -758,6 +1215,9 @@ export default class waitingRoom extends Phaser.Scene {
   }
 
   update() {
+    if (pet) {
+      pet.setPosition(player.x + 50, player.y + 10);
+    }
     // pants_skin.setPosition(this.player.x, this.player.y);
     let playerMoved = false;
     player.setVelocity(0);
@@ -768,17 +1228,28 @@ export default class waitingRoom extends Phaser.Scene {
       !cursors.up.isDown &&
       !cursors.down.isDown
     ) {
+      if (pet) {
+        pet.anims.play(`${pet_type}-idle`);
+      }
       player.anims.play("player-idle_" + suffix);
     }
 
     // when move
     if (cursors.left.isDown) {
+      if (pet) {
+        pet.anims.play(`${pet_type}-walk`, true);
+        pet.scaleX = -1;
+      }
       player.anims.play("player-walk_" + suffix, true);
       player.setVelocityX(-PLAYER_SPEED);
       player.scaleX = -1;
       player.body.offset.x = 40;
       playerMoved = true;
     } else if (cursors.right.isDown) {
+      if (pet) {
+        pet.anims.play(`${pet_type}-walk`, true);
+        pet.scaleX = 1;
+      }
       player.anims.play("player-walk_" + suffix, true);
       player.setVelocityX(PLAYER_SPEED);
       player.scaleX = 1;
@@ -787,10 +1258,16 @@ export default class waitingRoom extends Phaser.Scene {
     }
 
     if (cursors.up.isDown) {
+      if (pet) {
+        pet.anims.play(`${pet_type}-walk`, true);
+      }
       player.anims.play("player-walk_" + suffix, true);
       player.setVelocityY(-PLAYER_SPEED);
       playerMoved = true;
     } else if (cursors.down.isDown) {
+      if (pet) {
+        pet.anims.play(`${pet_type}-walk`, true);
+      }
       player.anims.play("player-walk_" + suffix, true);
       player.setVelocityY(PLAYER_SPEED);
       playerMoved = true;
@@ -810,6 +1287,4 @@ export default class waitingRoom extends Phaser.Scene {
       player.movedLastFrame = false;
     }
   }
-
-
 }

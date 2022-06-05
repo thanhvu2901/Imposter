@@ -52,9 +52,26 @@ import Archaeologist_Walk_json from "../assets/player/player_sprite/pants/Archae
 // Pets
 import bslugjson from "../assets/player/pet_sprite/bslug.json";
 import bslugpng from "../assets/player/pet_sprite/bslug.png";
+import bedcrabjson from "../assets/player/pet_sprite/bedcrab.json";
+import bedcrabpng from "../assets/player/pet_sprite/bedcrab.png";
+import crewminjson from "../assets/player/pet_sprite/crewmin.json";
+import crewminpng from "../assets/player/pet_sprite/crewmin.png";
+import dogjson from "../assets/player/pet_sprite/dog.json";
+import dogpng from "../assets/player/pet_sprite/dog.png";
+import elliejson from "../assets/player/pet_sprite/ellie.json";
+import elliepng from "../assets/player/pet_sprite/ellie.png";
+import hampsterjson from "../assets/player/pet_sprite/hampster.json";
+import hampsterpng from "../assets/player/pet_sprite/hampster.png";
+import robitjson from "../assets/player/pet_sprite/robit.json";
+import robitpng from "../assets/player/pet_sprite/robit.png";
+import squigjson from "../assets/player/pet_sprite/squig.json";
+import squigpng from "../assets/player/pet_sprite/squig.png";
 import stickminjson from "../assets/player/pet_sprite/stickmin.json";
 import stickminpng from "../assets/player/pet_sprite/stickmin.png";
-
+import twitchjson from "../assets/player/pet_sprite/twitch.json";
+import twitchpng from "../assets/player/pet_sprite/twitch.png";
+import ufojson from "../assets/player/pet_sprite/ufo.json";
+import ufopng from "../assets/player/pet_sprite/ufo.png";
 //Constants
 import {
   PLAYER_SPEED,
@@ -71,11 +88,20 @@ import {
   PLAYER_YELLOW,
   PLAYER_PINK,
   BSLUG,
+  BEDCRAB,
+  CREWMIN,
+  DOG,
+  ELLIE,
+  HAMPSTER,
+  ROBIT,
+  SQUIG,
   STICKMIN,
+  TWITCH,
+  UFO,
 } from "../consts/constants";
 
 //Variables declaration
-let player, pet, pet_type;
+let player, pet_type;
 let otherPlayer = new Array();
 let otherPlayerId = new Array();
 let cursors;
@@ -112,6 +138,7 @@ let count = 0;
 let total_missions_completed = 0;
 let list_missions_completed = [];
 let color = "";
+let pet=null;
 
 class Game extends Phaser.Scene {
   constructor() {
@@ -193,7 +220,16 @@ class Game extends Phaser.Scene {
 
     //Pets
     this.load.atlas(BSLUG, bslugpng, bslugjson);
+    this.load.atlas(BEDCRAB, bedcrabpng, bedcrabjson);
+    this.load.atlas(CREWMIN, crewminpng, crewminjson);
+    this.load.atlas(DOG, dogpng, dogjson);
+    this.load.atlas(ELLIE, elliepng, elliejson);
+    this.load.atlas(HAMPSTER, hampsterpng, hampsterjson);
+    this.load.atlas(ROBIT, robitpng, robitjson);
+    this.load.atlas(SQUIG, squigpng, squigjson);
     this.load.atlas(STICKMIN, stickminpng, stickminjson);
+    this.load.atlas(TWITCH, twitchpng, twitchjson);
+    this.load.atlas(UFO, ufopng, ufojson);
   }
 
   create() {
@@ -313,13 +349,150 @@ class Game extends Phaser.Scene {
     }
 
     //Pets and skins loading
-    pet = this.physics.add.sprite(
-      player.x + 50,
-      player.y + 10,
-      STICKMIN,
-      `${STICKMIN}_idle1.png`
-    );
-    pet_type = STICKMIN;
+    if (this.playerChangedSkin.pet) {
+      let petChosen = this.playerChangedSkin.pet.texture.key ?? "nothing";
+      switch (petChosen) {
+        case "pet0":
+          if(pet){
+            pet.destroy();
+          }
+          pet = null;
+          pet_type = null;
+          break;
+        case "pet1":
+          if(pet){
+            pet.destroy();
+          }
+          pet = this.physics.add.sprite(
+            player.x + 50,
+            player.y + 10,
+            STICKMIN,
+            "stickmin_idle1.png"
+          );
+          pet_type = STICKMIN;
+          break;
+        case "pet2":
+          if(pet){
+            pet.destroy();
+          }
+          pet = this.physics.add.sprite(
+            player.x + 50,
+            player.y + 10,
+            ELLIE,
+            "ellie_idle1.png"
+          );
+          pet_type = ELLIE;
+          break;
+        case "pet3":
+          if(pet){
+            pet.destroy();
+          }
+          pet = this.physics.add.sprite(
+            player.x + 50,
+            player.y + 10,
+            CREWMIN,
+            "crewmin_idle1.png"
+          );
+          pet_type = CREWMIN;
+          break;
+        case "pet4":
+          if(pet){
+            pet.destroy();
+          }
+          pet = this.physics.add.sprite(
+            player.x + 50,
+            player.y + 10,
+            DOG,
+            "dog_idle1.png"
+          );
+          pet_type = DOG;
+          break;
+        case "pet5":
+          if(pet){
+            pet.destroy();
+          }
+          pet = this.physics.add.sprite(
+            player.x + 50,
+            player.y + 10,
+            BEDCRAB,
+            "bedcrab_idle1.png"
+          );
+          pet_type = BEDCRAB;
+          break;
+        case "pet6":
+          if(pet){
+            pet.destroy();
+          }
+          pet = this.physics.add.sprite(
+            player.x + 50,
+            player.y + 10,
+            ROBIT,
+            "robit_idle1.png"
+          );
+          pet_type = ROBIT;
+          break;
+        case "pet7":
+          if(pet){
+            pet.destroy();
+          }
+          pet = this.physics.add.sprite(
+            player.x + 50,
+            player.y + 10,
+            BSLUG,
+            "bslug_idle1.png"
+          );
+          pet_type = BSLUG;
+          break;
+        case "pet8":
+          if(pet){
+            pet.destroy();
+          }
+          pet = this.physics.add.sprite(
+            player.x + 50,
+            player.y + 10,
+            HAMPSTER,
+            "hampster_idle1.png"
+          );
+          pet_type = HAMPSTER;
+          break;
+        case "pet9":
+          if(pet){
+            pet.destroy();
+          }
+          pet = this.physics.add.sprite(
+            player.x + 50,
+            player.y + 10,
+            SQUIG,
+            "squig_idle1.png"
+          );
+          pet_type = SQUIG;
+          break;
+        case "pet10":
+          if(pet){
+            pet.dstroy();
+          }
+          pet = this.physics.add.sprite(
+            player.x + 50,
+            player.y + 10,
+            UFO,
+            "ufo_idle1.png"
+          );
+          pet_type = UFO;
+          break;
+        case "pet11":
+          if(pet){
+            pet.destroy();
+          }
+          pet = this.physics.add.sprite(
+            player.x + 50,
+            player.y + 10,
+            TWITCH,
+            "twitch_idle1.png"
+          );
+          pet_type = TWITCH;
+          break;
+      }
+    }
 
     //add kill button if imposter
     if (this.isRole == 1) {
@@ -942,7 +1115,6 @@ class Game extends Phaser.Scene {
 
     /* PETS ANIMATIONS */
 
-    //Bslug
     this.anims.create({
       key: `${BSLUG}-walk`,
       frames: this.anims.generateFrameNames(BSLUG, {
@@ -952,7 +1124,7 @@ class Game extends Phaser.Scene {
         suffix: ".png",
       }),
       repeat: -1,
-      frameRate: 16,
+      frameRate: 24,
     });
 
     this.anims.create({
@@ -964,34 +1136,248 @@ class Game extends Phaser.Scene {
         suffix: ".png",
       }),
       repeat: -1,
-      frameRate: 16,
+      frameRate: 24,
     });
 
-    //Stick
+    this.anims.create({
+      key: `${BEDCRAB}-walk`,
+      frames: this.anims.generateFrameNames(BEDCRAB, {
+        start: 1,
+        end: 18,
+        prefix: `${BEDCRAB}_walk`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${BEDCRAB}-idle`,
+      frames: this.anims.generateFrameNames(BEDCRAB, {
+        start: 1,
+        end: 48,
+        prefix: `${BEDCRAB}_idle`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${CREWMIN}-walk`,
+      frames: this.anims.generateFrameNames(CREWMIN, {
+        start: 1,
+        end: 18,
+        prefix: `${CREWMIN}_walk`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${CREWMIN}-idle`,
+      frames: this.anims.generateFrameNames(CREWMIN, {
+        start: 1,
+        end: 48,
+        prefix: `${CREWMIN}_idle`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${DOG}-walk`,
+      frames: this.anims.generateFrameNames(DOG, {
+        start: 1,
+        end: 18,
+        prefix: `${DOG}_walk`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${DOG}-idle`,
+      frames: this.anims.generateFrameNames(DOG, {
+        start: 1,
+        end: 48,
+        prefix: `${DOG}_idle`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${ELLIE}-walk`,
+      frames: this.anims.generateFrameNames(ELLIE, {
+        start: 1,
+        end: 18,
+        prefix: `${ELLIE}_walk`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${ELLIE}-idle`,
+      frames: this.anims.generateFrameNames(ELLIE, {
+        start: 1,
+        end: 48,
+        prefix: `${ELLIE}_idle`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${HAMPSTER}-walk`,
+      frames: this.anims.generateFrameNames(HAMPSTER, {
+        start: 1,
+        end: 18,
+        prefix: `${HAMPSTER}_walk`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${HAMPSTER}-idle`,
+      frames: this.anims.generateFrameNames(HAMPSTER, {
+        start: 1,
+        end: 48,
+        prefix: `${HAMPSTER}_idle`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${ROBIT}-walk`,
+      frames: this.anims.generateFrameNames(ROBIT, {
+        start: 1,
+        end: 18,
+        prefix: `${ROBIT}_walk`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${ROBIT}-idle`,
+      frames: this.anims.generateFrameNames(ROBIT, {
+        start: 1,
+        end: 48,
+        prefix: `${ROBIT}_idle`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${SQUIG}-walk`,
+      frames: this.anims.generateFrameNames(SQUIG, {
+        start: 1,
+        end: 18,
+        prefix: `${SQUIG}_walk`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${SQUIG}-idle`,
+      frames: this.anims.generateFrameNames(SQUIG, {
+        start: 1,
+        end: 48,
+        prefix: `${SQUIG}_idle`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
     this.anims.create({
       key: `${STICKMIN}-walk`,
       frames: this.anims.generateFrameNames(STICKMIN, {
         start: 1,
-        end: 9,
+        end: 18,
         prefix: `${STICKMIN}_walk`,
         suffix: ".png",
       }),
       repeat: -1,
-      frameRate: 16,
-    })
+      frameRate: 24,
+    });
 
     this.anims.create({
       key: `${STICKMIN}-idle`,
       frames: this.anims.generateFrameNames(STICKMIN, {
         start: 1,
-        end: 34,
+        end: 48,
         prefix: `${STICKMIN}_idle`,
         suffix: ".png",
       }),
       repeat: -1,
-      frameRate: 16,
-    })
+      frameRate: 24,
+    });
 
+    this.anims.create({
+      key: `${TWITCH}-walk`,
+      frames: this.anims.generateFrameNames(TWITCH, {
+        start: 1,
+        end: 18,
+        prefix: `${TWITCH}_walk`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${TWITCH}-idle`,
+      frames: this.anims.generateFrameNames(TWITCH, {
+        start: 1,
+        end: 48,
+        prefix: `${TWITCH}_idle`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${UFO}-walk`,
+      frames: this.anims.generateFrameNames(UFO, {
+        start: 1,
+        end: 18,
+        prefix: `${UFO}_walk`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${UFO}-idle`,
+      frames: this.anims.generateFrameNames(UFO, {
+        start: 1,
+        end: 48,
+        prefix: `${UFO}_idle`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
     //input to control
     this.input.keyboard.on("keydown", (e) => {
       if (!pressedKeys.includes(e.code)) {
@@ -1233,7 +1619,10 @@ class Game extends Phaser.Scene {
     });
   }
   update() {
-    pet.setPosition(player.x + 50, player.y + 10);
+    if (pet) {
+      pet.setPosition(player.x + 50, player.y + 10);
+    }
+
 
     this.events.emit("moving", [player.x, player.y]);
     light.update(player);
@@ -1357,34 +1746,44 @@ class Game extends Phaser.Scene {
         !cursors.up.isDown &&
         !cursors.down.isDown
       ) {
-        pet.anims.play(`${STICKMIN}-idle`);
+        if (pet) {
+          pet.anims.play(`${pet_type}-idle`);
+        }
         player.anims.play("player-idle_" + color);
       }
 
       if (cursors.left.isDown) {
-        pet.anims.play(`${STICKMIN}-walk`, true);
+        if (pet) {
+          pet.anims.play(`${pet_type}-walk`, true);
+          pet.scaleX = -1;
+        }
         player.anims.play("player-walk_" + color, true);
         player.setVelocityX(-PLAYER_SPEED);
         player.scaleX = -1;
-        pet.scaleX = -1;
         player.body.offset.x = 40;
         playerMoved = true;
       } else if (cursors.right.isDown) {
-        pet.anims.play(`${STICKMIN}-walk`, true);
+        if (pet) {
+          pet.anims.play(`${pet_type}-walk`, true);
+          pet.scaleX = 1;
+        }
         player.anims.play("player-walk_" + color, true);
         player.setVelocityX(PLAYER_SPEED);
         player.scaleX = 1;
-        pet.scaleX = 1;
         player.body.offset.x = 0;
         playerMoved = true;
       }
       if (cursors.up.isDown) {
-        pet.anims.play(`${STICKMIN}-walk`, true);
+        if (pet) {
+          pet.anims.play(`${pet_type}-walk`, true);
+        }
         player.anims.play("player-walk_" + color, true);
         player.setVelocityY(-PLAYER_SPEED);
         playerMoved = true;
       } else if (cursors.down.isDown) {
-        pet.anims.play(`${STICKMIN}-walk`, true);
+        if (pet) {
+          pet.anims.play(`${pet_type}-walk`, true);
+        }
         player.anims.play("player-walk_" + color, true);
         player.setVelocityY(PLAYER_SPEED);
         playerMoved = true;
