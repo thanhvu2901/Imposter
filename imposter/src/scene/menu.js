@@ -65,8 +65,8 @@ export default class MainMenuScene extends Phaser.Scene {
         })
         playButton.on("pointerdown", () => {
             console.log('start game');
-            this.scene.start('game', Game);
-            // this.scene.start('joinGame', JoinGame);
+            //this.scene.start('game', Game);
+            this.scene.start('joinGame', JoinGame);
         })
         playButton.on("pointerout", () => {
             // this.scene.start(play);
