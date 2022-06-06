@@ -27,9 +27,10 @@ let lightright = new Array
 let gen_arr = new Array;
 let input_arr = new Array;
 let sequence_button = new Array
+let button = new Array
 let can_input = false
 let level = 1;
-
+let exbutton = new Array
 let loop = 0
 let delay = 0
 let count = 0;
@@ -64,10 +65,10 @@ class StartReactor extends Phaser.Scene {
     }
     async create() {
         let check = [0, 1, 2, 3, 4, 5, 6, 7, 8]
-        x = this.game.renderer.width
-        y = this.game.renderer.height
-        cords_1 = [[x * 5 / 8 - 50, y / 2 - 40], [x * 5 / 8, y / 2 - 40], [x * 5 / 8 + 50, y / 2 - 40], [x * 5 / 8 - 50, y / 2 + 10], [x * 5 / 8, y / 2 + 10], [x * 5 / 8 + 50, y / 2 + 10], [x * 5 / 8 - 50, y / 2 + 60], [x * 5 / 8, y / 2 + 60], [x * 5 / 8 + 50, y / 2 + 60]]
-        cords_2 = [[x * 3 / 8 - 50, y / 2 - 40], [x * 3 / 8, y / 2 - 40], [x * 3 / 8 + 50, y / 2 - 40], [x * 3 / 8 - 50, y / 2 + 10], [x * 3 / 8, y / 2 + 10], [x * 3 / 8 + 50, y / 2 + 10], [x * 3 / 8 - 50, y / 2 + 60], [x * 3 / 8, y / 2 + 60], [x * 3 / 8 + 50, y / 2 + 60]]
+        let x = this.game.renderer.width
+        let y = this.game.renderer.height
+        let cords_1 = [[x * 5 / 8 - 50, y / 2 - 40], [x * 5 / 8, y / 2 - 40], [x * 5 / 8 + 50, y / 2 - 40], [x * 5 / 8 - 50, y / 2 + 10], [x * 5 / 8, y / 2 + 10], [x * 5 / 8 + 50, y / 2 + 10], [x * 5 / 8 - 50, y / 2 + 60], [x * 5 / 8, y / 2 + 60], [x * 5 / 8 + 50, y / 2 + 60]]
+        let cords_2 = [[x * 3 / 8 - 50, y / 2 - 40], [x * 3 / 8, y / 2 - 40], [x * 3 / 8 + 50, y / 2 - 40], [x * 3 / 8 - 50, y / 2 + 10], [x * 3 / 8, y / 2 + 10], [x * 3 / 8 + 50, y / 2 + 10], [x * 3 / 8 - 50, y / 2 + 60], [x * 3 / 8, y / 2 + 60], [x * 3 / 8 + 50, y / 2 + 60]]
         this.add.image(x * 3 / 8, y / 2, 'base').setDepth(0)
         this.add.image(x * 5 / 8, y / 2, 'base').setDepth(0)
 
