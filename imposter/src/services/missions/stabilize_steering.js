@@ -14,8 +14,9 @@ class StabilizeSteering extends Base {
             this.x,
             this.y);
         if (check_mission) {
-            this.scene.scene.add.image(STABLE_STEERING_MARKED_X, STABLE_STEERING_MARKED_Y, "StabilizeSteering");
-            return { scene: "stabilizeSteering", x: this.x, y: this.y }
+            let sprite = this.scene.scene.add.sprite(STABLE_STEERING_MARKED_X, STABLE_STEERING_MARKED_Y, "StabilizeSteering");
+            sprite.tint =  Math.random() * 0xffff00;
+            return { scene: "stabilizeSteering", x: this.x, y: this.y, sprite: sprite }
 
         }
         return;

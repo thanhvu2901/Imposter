@@ -14,10 +14,23 @@ import Mission from "../services/missions/mission";
 
 //Marked mission
 import AlignEngineOutput_mission_marked from "../assets/tasks/Align Engine Output/mission_marked.png";
+
+
+
+
+//marked mission
+
 import CleanO2Filter_mission_marked from "../assets/tasks/Clean O2 Filter/marked.png";
+import AlignEnginOutput_gallery from "../assets/tasks/Align Engine Output/gallery.png";
 import FixWiring_mission_marked from "../assets/tasks/Fix_Wiring/marked.png";
 import CleanAsteroids from "../assets/tasks/Clear Asteroids/marked.png";
 import StabilizeSteering from "../assets/tasks/Stabilize Steering/marked.png";
+import Swipcard_mision_marked from "../assets/tasks/Swipe Card/marked.png";
+import UploadData_mission_marked from "../assets/tasks/Upload Data/marked.png";
+import CalibratorDistributor_mission_marked from "../assets/tasks/Calibrate Distributor/marked.png"
+import ChartCourse from "../assets/tasks/Chart Course/marked.png";
+import FuelEngine from "../assets/tasks/Fuel Engines/marked.png";
+import PrimeShields from "../assets/tasks/Prime Shields/marked.png";
 
 // Player color
 import playerpng_red from "../assets/player/player_sprite/player_color/player_base_red.png";
@@ -137,10 +150,13 @@ class Game extends Phaser.Scene {
       Archaeologist_Walk_json
     );
 
-    this.load.image(
-      "AlignEngineOutput_mission_marked",
-      AlignEngineOutput_mission_marked
-    );
+    // this.load.image(
+    //   "AlignEngineOutput_mission_marked",
+    //   AlignEngineOutput_mission_marked
+    // );
+
+    this.load.image("AlignEngineOutput_mission_marked", AlignEnginOutput_gallery);
+
 
     this.load.image(
       "CleanO2Filter_mission_marked",
@@ -149,6 +165,12 @@ class Game extends Phaser.Scene {
     this.load.image("FixWiring_mission_marked", FixWiring_mission_marked);
     this.load.image("CleanAsteroids", CleanAsteroids);
     this.load.image("StabilizeSteering", StabilizeSteering);
+    this.load.image("Swipcard_mision_marked", Swipcard_mision_marked);
+    this.load.image("UploadData_mission_marked", UploadData_mission_marked);
+    this.load.image("CalibratorDistributor_mission_marked", CalibratorDistributor_mission_marked);
+    this.load.image("ChartCourse", ChartCourse);
+    this.load.image("FuelEngine", FuelEngine);
+    this.load.image("PrimeSheilds", PrimeShields);
 
     //Player color
     this.load.atlas(PLAYER_RED, playerpng_red, playerjson_red);
@@ -356,11 +378,11 @@ class Game extends Phaser.Scene {
         "idle.png"
       );
     }
-    this.idPlayers.forEach((element) => {
-      if (element != this.socket.id) {
-        otherPlayerId.push(element);
-      }
-    });
+    // this.idPlayers.forEach((element) => {
+    //   if (element != this.socket.id) {
+    //     otherPlayerId.push(element);
+    //   }
+    // });
     // console.log(otherPlayerId);
 
     // stt = otherPlayer.length;
@@ -1142,47 +1164,47 @@ class Game extends Phaser.Scene {
       }
     });
 
-    this.socket.on("move", ({ x, y, playerId }) => {
-      //console.log({ x, y, playerId });
+    // this.socket.on("move", ({ x, y, playerId }) => {
+    //   //console.log({ x, y, playerId });
 
-      let index = otherPlayerId.findIndex((Element) => Element == playerId);
-      //id = index;
-      // console.log(index);
+    //   let index = otherPlayerId.findIndex((Element) => Element == playerId);
+    //   //id = index;
+    //   // console.log(index);
 
-      if (otherPlayer[index].x > x) {
-        otherPlayer[index].flipX = true;
-      } else if (otherPlayer[index].x < x) {
-        otherPlayer[index].flipX = false;
-      }
-      otherPlayer[index].x = x;
-      otherPlayer[index].y = y;
-      otherPlayer[index].moving = true;
+    //   if (otherPlayer[index].x > x) {
+    //     otherPlayer[index].flipX = true;
+    //   } else if (otherPlayer[index].x < x) {
+    //     otherPlayer[index].flipX = false;
+    //   }
+    //   otherPlayer[index].x = x;
+    //   otherPlayer[index].y = y;
+    //   otherPlayer[index].moving = true;
 
-      if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
-        otherPlayer[index].play("player-walk");
-      } else if (
-        !otherPlayer[index].moving &&
-        otherPlayer[index].anims.isPlaying
-      ) {
-        otherPlayer[index].stop("player-walk");
-      }
-    });
+    //   if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
+    //     otherPlayer[index].play("player-walk");
+    //   } else if (
+    //     !otherPlayer[index].moving &&
+    //     otherPlayer[index].anims.isPlaying
+    //   ) {
+    //     otherPlayer[index].stop("player-walk");
+    //   }
+    // });
 
     // console.log(objectsLayer);
 
-    this.socket.on("moveEnd", ({ playerId }) => {
-      let index = otherPlayerId.findIndex((Element) => Element == playerId);
-      otherPlayer[index].moving = false;
-      otherPlayer[index].anims.play("player-idle");
-      if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
-        otherPlayer[index].play("player-walk");
-      } else if (
-        !otherPlayer[index].moving &&
-        otherPlayer[index].anims.isPlaying
-      ) {
-        otherPlayer[index].stop("player-walk");
-      }
-    });
+    // this.socket.on("moveEnd", ({ playerId }) => {
+    //   let index = otherPlayerId.findIndex((Element) => Element == playerId);
+    //   otherPlayer[index].moving = false;
+    //   otherPlayer[index].anims.play("player-idle");
+    //   if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
+    //     otherPlayer[index].play("player-walk");
+    //   } else if (
+    //     !otherPlayer[index].moving &&
+    //     otherPlayer[index].anims.isPlaying
+    //   ) {
+    //     otherPlayer[index].stop("player-walk");
+    //   }
+    // });
 
     //update if killed ==>> ************************TO GHOST*******************
     this.socket.on("updateOtherPlayer", (playerId) => {
@@ -1288,11 +1310,11 @@ class Game extends Phaser.Scene {
         playerMoved = true;
       }
       if (playerMoved) {
-        this.socket.emit("move", {
-          x: player.x,
-          y: player.y,
-          roomId: this.state.roomKey,
-        });
+        // this.socket.emit("move", {
+        //   x: player.x,
+        //   y: player.y,
+        //   roomId: this.state.roomKey,
+        // });
 
         let index = 0;
 
@@ -1360,15 +1382,15 @@ class Game extends Phaser.Scene {
       }
 
       if (playerMoved) {
-        this.socket.emit("move", {
-          x: player.x,
-          y: player.y,
-          roomId: this.state.roomKey,
-        });
+        // this.socket.emit("move", {
+        //   x: player.x,
+        //   y: player.y,
+        //   roomId: this.state.roomKey,
+        // });
         player.movedLastFrame = true;
       } else {
         if (player.movedLastFrame) {
-          this.socket.emit("moveEnd", { roomId: this.state.roomKey });
+          // this.socket.emit("moveEnd", { roomId: this.state.roomKey });
         }
         player.movedLastFrame = false;
       }
@@ -1399,6 +1421,7 @@ class Game extends Phaser.Scene {
         this.scene.launch(check_mission.scene, {
           x: check_mission.x,
           y: check_mission.y,
+          sprite: check_mission.sprite
         });
         launch_scene = false;
       }

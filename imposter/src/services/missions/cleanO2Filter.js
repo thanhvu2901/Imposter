@@ -15,8 +15,9 @@ class CleanO2Filter extends Base {
             this.x,
             this.y);
         if (check_mission) {
-            this.scene.scene.add.image(CLEAN_02_FILTER_MARKED_X, CLEAN_02_FILTER_MARKED_Y, "CleanO2Filter_mission_marked");
-            return { scene: "CleanO2Filter", x: this.x, y: this.y }
+            let sprite = this.scene.scene.add.sprite(CLEAN_02_FILTER_MARKED_X, CLEAN_02_FILTER_MARKED_Y, "CleanO2Filter_mission_marked");
+            sprite.tint =  Math.random() * 0xffff00;  
+            return { scene: "CleanO2Filter", x: this.x, y: this.y, sprite: sprite }
 
         }
         return;

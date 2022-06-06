@@ -26,6 +26,10 @@ import introCrew from "./scene/state/intro/introCrew.js";
 import introImposter from "./scene/state/intro/introImposter.js";
 import guidemap from "./scene/state/guidemap/guidemap.js";
 
+import UploadData from "./scene/state/ingame/uploaddata.js";
+import CalibratorDistributor from "./scene/state/minigame/calibrate_distributor.js";
+import FuelEngine from "./scene/state/ingame/fuelengine.js"
+
 var preloader = new Preloader();
 
 const config = {
@@ -92,7 +96,13 @@ game.scene.add('startReactor', StartReactor)
 
 game.scene.add('waitingRoom', waitingRoom)
 
-game.scene.add("divert_power", DivertPower)
+game.scene.add("divert_power", DivertPower);
+
+game.scene.add("SwipeCard", SwipeCard);
+game.scene.add("Upload", UploadData);
+game.scene.add("CalibratorDistributor", CalibratorDistributor);
+game.scene.add("Fuel", FuelEngine)
+
 // start title
 //game.scene.start("joinGame");
 //game.scene.start("mini-map");
@@ -112,9 +122,14 @@ game.scene.start('preloader');
 // game.scene.start('PrimeShields');
 
 // game.scene.start('fixWiring')
-// game.scene.start('inspectSample')
+// game.scene.start('inspectSample');
+
+// game.scene.start("Upload")
 // game.scene.start('stabilizeSteering');
-// game.scene.start('startReactor')
+// game.scene.start('startReactor') // game nay hien dang bị loi
+// game.scene.start('SwipeCard')
+// game.scene.start("CalibratorDistributor")
+// game.scene.start("Fuel")
 
 //game.scene.start('preloader');
 //game.scene.start("align_engine_output")

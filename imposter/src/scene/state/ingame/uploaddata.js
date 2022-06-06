@@ -22,10 +22,30 @@ import jump4 from  "../../../assets/img/jump vent/Vent0004.png";
 import jump5 from  "../../../assets/img/jump vent/vent0005.png";
 import jump6 from  "../../../assets/img/jump vent/Vent0006.png";
 import jump7 from  "../../../assets/img/jump vent/Vent0007.png";
+import Event_Center from  "../../../helper/event_center";
 
-let x,y,file1,folder1,folder,player1,bar,rect,vent_hole,vent_jump
+
+let x,y,file1,folder1,folder,player1,bar,rect,vent_hole,vent_jump;
 let move=0
+let sprite;
+let current_scene;
+
+// hãy nhét đoạn code này vào khi hoàn thành nhiệm vụ
+
+// sprite.tint = 0;
+// Event_Center.emit("continue_scene_game", {x: x, y: y, mission: "Upload"});
+// current_scene.stop("Upload")
+
+
+
 class UploadData extends Phaser.Scene {
+  init(data) {
+    x = data.x;
+    y = data.y;
+    sprite = data.sprite;
+}
+
+
   constructor() {
     super({ key: "Upload" });
     
@@ -63,6 +83,7 @@ class UploadData extends Phaser.Scene {
   }
 
   create() {
+    current_scene = this.scene
     x =   this.game.renderer.width / 2
 
 
@@ -167,8 +188,6 @@ let jump= this.anims.create({
   update(){
   //  this.folder.x+=0.5
  
-console.log(rect)
-
  //rect.y+=0.1
 
   file1.x+=0.5

@@ -16,8 +16,9 @@ class CleanAsteroids extends Base {
                                                             this.x, 
                                                             this.y);
         if(check_mission){
-            this.scene.scene.add.image(CLEAN_ASTEROIDS_MARKED_X, CLEAN_ASTEROIDS_MARKED_Y, "CleanAsteroids");
-            return {scene: "CleanAsteroids", x: this.x, y: this.y}
+            let sprite = this.scene.scene.add.sprite(CLEAN_ASTEROIDS_MARKED_X, CLEAN_ASTEROIDS_MARKED_Y, "CleanAsteroids");
+            sprite.tint =  Math.random() * 0xffff00;  
+            return {scene: "CleanAsteroids", x: this.x, y: this.y, sprite: sprite}
             
         }
         return;      

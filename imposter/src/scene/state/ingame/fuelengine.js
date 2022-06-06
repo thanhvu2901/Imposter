@@ -4,6 +4,8 @@ import base from "../../../assets/img/Fuel Engines/base.png";
 import button from "../../../assets/img//Fuel Engines/button.png";
 import wire from "../../../assets/img//Fuel Engines/wire.png";
 import light from "../../../assets/img//Fuel Engines/light.png";
+import Event_Center from "../../../helper/event_center";
+
 let ring1,ring2,ring3,ring4
 let dot1,dot2,dot3,dot4
 let text;
@@ -16,9 +18,16 @@ let isfull = false
 let r1
 let r2
 let step = 0
-let light_,light_1
+let light_,light_1;
+let sprite, current_scene;
+
 class FuelEngine extends Phaser.Scene {
-  
+  init(data) {
+    x = data.x;
+    y = data.y;
+    sprite = data.sprite;
+  }
+
   constructor() {
     super({ key: "Fuel" });
    
@@ -33,7 +42,7 @@ class FuelEngine extends Phaser.Scene {
   }
 
   create() {
- 
+ current_scene = this.scene;
   x =   this.game.renderer.width / 2
   y =   this.game.renderer.height / 2
     text = this.add.text(10, 10, 'Cursors to move', { font: '16px Courier', fill: '#00ff00' }).setScrollFactor(0);
@@ -87,10 +96,13 @@ class FuelEngine extends Phaser.Scene {
     console.log(y,r1.height)
   }
   if(r1.height*-197/345==197){
-    console.log("ok")
     isfull=true
     light_1.clearTint()
-    light_.setTint('0x04FF00')
+    light_.setTint('0x04FF00');
+
+    sprite.tint = 0;
+    Event_Center.emit("continue_scene_game", {x: x, y: y, mission: "Fuel"});
+    current_scene.stop("Fuel");
   }
    }
    

@@ -19,11 +19,13 @@ let leaf_1, leaf_2, leaf_3, leaf_4, leaf_5, leaf_6, leaf_7;
 const TOTAL_LEAF = 7;
 let x;
 let y;
+let sprite;
 
 class CleanO2Filter extends Phaser.Scene {
   init(data) {
     x = data.x;
     y = data.y;
+    sprite = data.sprite;
   }
 
   constructor() {
@@ -85,6 +87,7 @@ class CleanO2Filter extends Phaser.Scene {
           current_object.add.image(80, 300, "leftComplete");
           current_object.add.image(140, 303, "rightComplete");
           current_object.add.text(290, 250, "Task Completed");
+          sprite.tint = 0;
           Event_Center.emit("continue_scene_game", {x: x, y: y, mission: "CleanO2Filter"}); 
           current_scene.stop("CleanO2Filter"); 
         }

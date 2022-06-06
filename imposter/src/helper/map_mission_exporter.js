@@ -4,13 +4,18 @@ import CleanO2Filter from "../services/missions/cleanO2Filter";
 import FixWiring from "../services/missions/fix_wiring";
 import CleanAsteroids from "../services/missions/cleanAsteroids";
 import StabilizeSteering from "../services/missions/stabilize_steering";
-
+import SwipeCard from "../services/missions/swipe_card";
+import Upload from "../services/missions/uploaddata"
+import CalibratorDistributor from "../services/missions/calibrator_distributor";
+import ChartCourse from "../services/missions/chart_course";
+import FuelEngine from "../services/missions/fuel_engine";
+import PrimeShields from "../services/missions/prime_shields";
 
 class MapMissionsExporter {
     constructor(map) {
         this.map = map;
         this.missions = this.missions();
-        this.map_missions_number = 5;
+        this.map_missions_number = 11;
         this.total_missions_completed = 0;
         this.list_missions_completed = [];
     }
@@ -39,7 +44,13 @@ class MapMissionsExporter {
                 "CleanO2Filter": CleanO2Filter,
                 "FixWiring": FixWiring,
                 "CleanAsteroids": CleanAsteroids,
-                "StabilizeSteering": StabilizeSteering
+                "StabilizeSteering": StabilizeSteering,
+                "SwipeCard": SwipeCard,
+                "Upload": Upload,
+                "CalibratorDistributor": CalibratorDistributor,
+                "ChartCourse": ChartCourse,
+                "FuelEngine": FuelEngine,
+                "PrimeShields": PrimeShields
             }
         }
     }
@@ -114,7 +125,7 @@ class MapMissionsExporter {
             y += 20;
         }
 
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < this.map_missions_number; i++) {
             this.draw_rectangle(60 + (i * 70), 25, false)
         }
 
@@ -122,7 +133,7 @@ class MapMissionsExporter {
     }
 
     update_total_mission_complete() {
-        if (this.total_missions_completed < 6) {
+        if (this.total_missions_completed < this.map_missions_number) {
             for (let i = 0; i < this.total_missions_completed; i++) {
                 this.draw_rectangle(60 + (i * 70), 25, true)
             }
