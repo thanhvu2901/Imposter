@@ -32,6 +32,8 @@ import CalibratorDistributor_mission_marked from "../assets/tasks/Calibrate Dist
 import ChartCourse from "../assets/tasks/Chart Course/marked.png";
 import FuelEngine from "../assets/tasks/Fuel Engines/marked.png";
 import PrimeShields from "../assets/tasks/Prime Shields/marked.png";
+import InspectSample from "../assets/tasks/Inspect Sample/marked.png";
+import UnlockManifolds from "../assets/tasks/Unlock Manifolds/marked.png";
 
 import Light from "../scene//state/ingame/ray-light"
 import Event_Center from "../helper/event_center";
@@ -114,7 +116,8 @@ class Game extends Phaser.Scene {
     this.load.image("ChartCourse", ChartCourse);
     this.load.image("FuelEngine", FuelEngine);
     this.load.image("PrimeSheilds", PrimeShields);
-
+    this.load.image("InspectSample", InspectSample);
+    this.load.image("UnlockManifolds", UnlockManifolds)
   }
 
   create() {
