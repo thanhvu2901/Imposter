@@ -35,22 +35,22 @@ class FuelEngine extends Phaser.Scene {
 
   preload() {
     this.load.image("gas_can", gas_can);
-    this.load.image("button", button);
+    this.load.image("fuel-button", button);
     this.load.image("base", base);
     this.load.image("wire", wire);
     this.load.image("light", light);
   }
 
   create() {
+    this.scene.bringToTop()
  current_scene = this.scene;
   x =   this.game.renderer.width / 2
   y =   this.game.renderer.height / 2
     text = this.add.text(10, 10, 'Cursors to move', { font: '16px Courier', fill: '#00ff00' }).setScrollFactor(0);
      r1 = this.add.rectangle(x, y+150, 300, 0, 0xFFBB35);
-     r2 = this.add.rectangle(x-200, y-350, 300,100 , 0xFFBB35);
     const gas = this.add.image(x,y , "gas_can")
     const base_ = this.add.image(x+280,y+188 , "base");
-     button_ = this.add.image(x+280,y+188 , "button");
+     button_ = this.add.image(x+280,y+188 , "fuel-button");
     const wire_ = this.add.image(x+200,y+188 , "wire");
     light_ = this.add.image(x+310,y+120 , "light");
    light_1 = this.add.image(x+250,y+120 , "light");
@@ -80,20 +80,8 @@ class FuelEngine extends Phaser.Scene {
    
       
   ]);
-  step++
-  if(step==6){
-    r2.x+=15
-  }
-  if(step==25){
-    r2.x+=25
-  }
-  if(step==35){
-    r2.x-=40
-    step=0
-  }
   if(ispressed==true&&isfull==false){
     r1.height-=5;
-    console.log(y,r1.height)
   }
   if(r1.height*-197/345==197){
     isfull=true

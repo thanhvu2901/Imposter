@@ -329,7 +329,8 @@ class Game extends Phaser.Scene {
         break;
       }
     }
-
+    //player depth
+    player.setDepth(0.6);
     //Pets and skins loading
     pet = this.physics.add.sprite(
       player.x + 50,
@@ -352,11 +353,11 @@ class Game extends Phaser.Scene {
         .image(1000, 700, "sabotage")
         .setScrollFactor(0, 0)
         .setInteractive()
-        .setAlpha(1);
+        .setAlpha(1)
+        .setDepth(1);
       //*****************OPEN the Mini Map ******/
 
       sabotage.on("pointerdown", () => {
-        console.log("aaaa");
         this.scene.launch("mini-map");
       });
     }
@@ -1002,7 +1003,7 @@ class Game extends Phaser.Scene {
     this.input.keyboard.on("keyup", (e) => {
       this.sound.stopByKey("walk");
       if (alive == true) {
-        player.anims.play("player-idle");
+        player.anims.play("player-idle_" + color);
       }
 
       pressedKeys = pressedKeys.filter((key) => key !== e.code);
@@ -1143,7 +1144,7 @@ class Game extends Phaser.Scene {
                 player.play("jump");
                 player.on("animationcomplete", (animation, frame) => {
                   if ((animation.key = "jump")) {
-                    player.anims.play("player-idle");
+                    player.anims.play("player-idle_" + color);
                   }
                 });
               }
@@ -1262,30 +1263,12 @@ class Game extends Phaser.Scene {
       if (touching && !wasTouching) player.emit("overlapstart");
       else if (!touching && wasTouching) player.emit("overlapend");
 
-      //để tránh xung đột với animation idle khi vào vent thì ta sẽ delay animation idle lại để player thực hiện nhảy vent và sau đó ẩn player đi
-      if (is_vent == true && is_jump == true) {
-        count++;
-        if (count == 40) {
-          check(player);
-          is_jump = false;
-          count = 0;
-        }
-      } else if (is_vent == true && is_jump == false) {
-        player.anims.play("player-idle_" + color);
-      }
+     
+   
       let playerMoved = false;
       player.setVelocity(0);
 
-      if (
-        !cursors.left.isDown &&
-        !cursors.right.isDown &&
-        !cursors.up.isDown &&
-        !cursors.down.isDown &&
-        !is_vent
-      ) {
-        //     console.log("outvent")
-        player.anims.play("player-idle_" + color);
-      }
+
       //nếu is_hidden bằng true có nghĩa là player đang trốn vent nên sẽ ko di chuyển bằng input được
       if (cursors.left.isDown && is_hidden == false) {
         player.anims.play("player-walk_" + color, true);
@@ -1349,7 +1332,6 @@ class Game extends Phaser.Scene {
         !cursors.down.isDown
       ) {
         pet.anims.play(`${BSLUG}-idle`);
-        player.anims.play("player-idle_" + color);
       }
 
       if (cursors.left.isDown) {
@@ -1415,7 +1397,7 @@ class Game extends Phaser.Scene {
         }
       });
 
-      if (launch_scene) {
+      if (launch_scene&&check_mission!=undefined) {
         //this.scene.pause("game");
 
         this.scene.launch(check_mission.scene, {
@@ -1445,29 +1427,11 @@ function circleOverlap(player, vent) {
   key = getKey([vent.x, vent.y + 10])[0];
 }
 // hiện arrow của vent khi player tới gần
-function playercur() {
-  vent_des.get(key).forEach((element) => {
-    element.setVisible(true);
-  });
-}
-function circleOverlap(player, vent) {
-  temp = vent;
-  is_vent = true;
-  //lấy key string của vent hiện tại dựa trên x y của sprite vent
-  key = getKey([vent.x, vent.y + 10])[0];
-}
 //hàm lấy key từ hashmap dựa trên value của key
 function getKey(val) {
   return [...vent_cord].find(
     ([key, value]) => JSON.stringify(val) === JSON.stringify(value)
   );
 }
-//ẩn player dựa trên giá trị của is_hidden
-function check(player) {
-  if (is_hidden == true) {
-    player.setActive(false).setVisible(false);
-  } else {
-    player.setActive(true).setVisible(true);
-  }
-}
+
 export default Game;
