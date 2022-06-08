@@ -4,8 +4,11 @@ import lobby from "../assets/tilemaps/lobby.json";
 
 import playerpng from "../assets/player/player_sprite/player_color/player_base.png";
 import playerjson from "../assets/player/player_sprite/player_color/player_base.json";
+
+// SKINS
 import Archaeologist_Walk_png from "../assets/player/player_sprite/pants/Archaeologist_Walk.png";
 import Archaeologist_Walk_json from "../assets/player/player_sprite/pants/Archaeologist_Walk.json";
+import hat1 from "../assets/player/preload_assets/skin/hat/hats0005.png";
 
 import { PLAYER_SPEED } from "../consts/constants";
 
@@ -60,7 +63,6 @@ import {
   TWITCH,
   UFO,
 } from "../consts/constants";
-import { debugDraw } from "../scene/debugDraw";
 import eventsCenter from "./eventsCenter";
 
 import bslugjson from "../assets/player/pet_sprite/bslug.json";
@@ -86,8 +88,9 @@ import twitchpng from "../assets/player/pet_sprite/twitch.png";
 import ufojson from "../assets/player/pet_sprite/ufo.json";
 import ufopng from "../assets/player/pet_sprite/ufo.png";
 let player;
-let pants_skin;
+let pants_skin, hat_skin;
 let cursors;
+var player_container;
 
 let otherPlayer = new Array();
 let otherPlayerId = new Array();
@@ -95,7 +98,7 @@ let pressedKeys = [];
 let stt = 0;
 var color = "";
 let defaultPlayer = {};
-let pet=null;
+let pet = null;
 let pet_type;
 export default class waitingRoom extends Phaser.Scene {
   constructor() {
@@ -157,10 +160,12 @@ export default class waitingRoom extends Phaser.Scene {
     this.load.atlas(PLAYER_YELLOW, playerpng_yellow, playerjson_yellow);
 
     this.load.atlas(
-      "archaeologist_walk",
+      "archaeologist_pants",
       Archaeologist_Walk_png,
       Archaeologist_Walk_json
     );
+
+    this.load.image("hat", hat1);
 
     this.load.atlas(BSLUG, bslugpng, bslugjson);
     this.load.atlas(BEDCRAB, bedcrabpng, bedcrabjson);
@@ -191,22 +196,28 @@ export default class waitingRoom extends Phaser.Scene {
       .setInteractive({ useHandCursor: true });
 
     lobby_tileset.setCollisionByProperty({ collides: true });
-    debugDraw(lobby_tileset, this);
 
     //cursor to direct
     cursors = this.input.keyboard.createCursorKeys();
 
-    player = this.physics.add.sprite(-45, 26, PLAYER_BLUE, "idle.png");
+    player = this.physics.add.sprite(0, 0, PLAYER_BLUE, "idle.png");
     color = "blue";
     defaultPlayer.player = player;
     this.playerChangedSkin = defaultPlayer;
 
-    // pants_skin = this.physics.add.sprite(
-    //   player.x,
-    //   player.y,
-    //   "archaeologist_walk",
-    //   "Archaeologist_Spawn0051.png"
-    // );
+    pants_skin = this.physics.add.sprite(
+      player.x,
+      player.y + 12,
+      "archaeologist_pants",
+      "Archaeologist_Spawn55.png"
+    );
+
+    hat_skin = this.physics.add.sprite(player.x, player.y - 25, "hat", 0);
+
+    player_container = this.add
+      .container(player.x, player.y, [player, pants_skin, hat_skin])
+      .setSize(player.width, player.height);
+    this.physics.add.existing(player_container);
     // tạo theo số lượng other player vào
 
     // for (let i = 0; i < otherPlayerId.length; i++) {
@@ -218,6 +229,8 @@ export default class waitingRoom extends Phaser.Scene {
     //   );
     // }
     // stt = otherPlayer.length;
+
+    /* *********************CREATING ANIMATIONS FOR PLAYER COLORS********************* */
 
     this.anims.create({
       key: "player-idle",
@@ -475,18 +488,6 @@ export default class waitingRoom extends Phaser.Scene {
       frameRate: 16,
     });
 
-    this.anims.create({
-      key: "archaeologist_walk",
-      frames: this.anims.generateFrameNames("archaeologist_walk", {
-        start: 1,
-        end: 12,
-        prefix: "Archaeologist_Walk",
-        suffix: ".png",
-      }),
-      repeat: -1,
-      frameRate: 16,
-    });
-
     //player death
     this.anims.create({
       key: "player-dead",
@@ -500,7 +501,8 @@ export default class waitingRoom extends Phaser.Scene {
       frameRate: 24,
     });
 
-    //Creating animation for pets
+    /* *********************CREATING ANIMATIONS FOR PETS********************* */
+
     this.anims.create({
       key: `${BSLUG}-walk`,
       frames: this.anims.generateFrameNames(BSLUG, {
@@ -765,33 +767,41 @@ export default class waitingRoom extends Phaser.Scene {
       frameRate: 24,
     });
 
-    //input to control
-    this.input.keyboard.on("keydown", (e) => {
-      if (!pressedKeys.includes(e.code)) {
-        pressedKeys.push(e.code);
-        this.anims.create({
-          key: "archaeologist_walk",
-          frames: this.anims.generateFrameNames("archaeologist_walk", {
-            start: 1,
-            end: 12,
-            prefix: "Archaeologist_Walk",
-            suffix: ".png",
-          }),
-          repeat: -1,
-          frameRate: 16,
-        });
-      }
+    /* *********************CREATING ANIMATIONS FOR SKINS********************* */
+
+    this.anims.create({
+      key: "archaeologist_walk",
+      frames: this.anims.generateFrameNames("archaeologist_pants", {
+        start: 1,
+        end: 12,
+        prefix: "Archaeologist_Walk",
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 16,
     });
 
+    this.anims.create({
+      key: "archaeologist_idle",
+      frames: [
+        {
+          key: "archaeologist_pants",
+          frame: "Archaeologist_Spawn55.png",
+        },
+      ],
+    });
+
+    //input to control
     this.input.keyboard.on("keyup", (e) => {
       this.sound.stopByKey("walk");
 
       pressedKeys = pressedKeys.filter((key) => key !== e.code);
     });
 
-    this.physics.add.collider(player, lobby_tileset);
 
-    this.cameras.main.startFollow(player, true);
+    //Add collider with player and set camera to follow player
+    this.physics.add.collider(player_container, lobby_tileset);
+    this.cameras.main.startFollow(player_container, true);
 
     //tải lại mới khi có player mới vào có các player đã ở trong đó
     this.socket.emit("joinRoom", this.textInput);
@@ -1048,14 +1058,14 @@ export default class waitingRoom extends Phaser.Scene {
         let petChosen = this.playerChangedSkin.pet.texture.key ?? "nothing";
         switch (petChosen) {
           case "pet0":
-            if(pet){
+            if (pet) {
               pet.destroy();
             }
             pet = null;
             pet_type = null;
             break;
           case "pet1":
-            if(pet){
+            if (pet) {
               pet.destroy();
             }
             pet = this.physics.add.sprite(
@@ -1067,7 +1077,7 @@ export default class waitingRoom extends Phaser.Scene {
             pet_type = STICKMIN;
             break;
           case "pet2":
-            if(pet){
+            if (pet) {
               pet.destroy();
             }
             pet = this.physics.add.sprite(
@@ -1079,7 +1089,7 @@ export default class waitingRoom extends Phaser.Scene {
             pet_type = ELLIE;
             break;
           case "pet3":
-            if(pet){
+            if (pet) {
               pet.destroy();
             }
             pet = this.physics.add.sprite(
@@ -1091,7 +1101,7 @@ export default class waitingRoom extends Phaser.Scene {
             pet_type = CREWMIN;
             break;
           case "pet4":
-            if(pet){
+            if (pet) {
               pet.destroy();
             }
             pet = this.physics.add.sprite(
@@ -1103,7 +1113,7 @@ export default class waitingRoom extends Phaser.Scene {
             pet_type = DOG;
             break;
           case "pet5":
-            if(pet){
+            if (pet) {
               pet.destroy();
             }
             pet = this.physics.add.sprite(
@@ -1115,7 +1125,7 @@ export default class waitingRoom extends Phaser.Scene {
             pet_type = BEDCRAB;
             break;
           case "pet6":
-            if(pet){
+            if (pet) {
               pet.destroy();
             }
             pet = this.physics.add.sprite(
@@ -1127,7 +1137,7 @@ export default class waitingRoom extends Phaser.Scene {
             pet_type = ROBIT;
             break;
           case "pet7":
-            if(pet){
+            if (pet) {
               pet.destroy();
             }
             pet = this.physics.add.sprite(
@@ -1139,7 +1149,7 @@ export default class waitingRoom extends Phaser.Scene {
             pet_type = BSLUG;
             break;
           case "pet8":
-            if(pet){
+            if (pet) {
               pet.destroy();
             }
             pet = this.physics.add.sprite(
@@ -1151,7 +1161,7 @@ export default class waitingRoom extends Phaser.Scene {
             pet_type = HAMPSTER;
             break;
           case "pet9":
-            if(pet){
+            if (pet) {
               pet.destroy();
             }
             pet = this.physics.add.sprite(
@@ -1163,7 +1173,7 @@ export default class waitingRoom extends Phaser.Scene {
             pet_type = SQUIG;
             break;
           case "pet10":
-            if(pet){
+            if (pet) {
               pet.dstroy();
             }
             pet = this.physics.add.sprite(
@@ -1175,7 +1185,7 @@ export default class waitingRoom extends Phaser.Scene {
             pet_type = UFO;
             break;
           case "pet11":
-            if(pet){
+            if (pet) {
               pet.destroy();
             }
             pet = this.physics.add.sprite(
@@ -1195,8 +1205,9 @@ export default class waitingRoom extends Phaser.Scene {
         id: this.socket.id,
         room: this.state.roomKey,
       });
-      this.physics.add.collider(player, lobby_tileset);
-      this.cameras.main.startFollow(player, true);
+      // this.physics.add.collider(player, lobby_tileset);
+      // this.physics.add.collider(player_container, lobby_tileset);
+      // this.cameras.main.startFollow(player, true);
     });
 
     // this.events.on('resume', (data) => {
@@ -1218,9 +1229,9 @@ export default class waitingRoom extends Phaser.Scene {
     if (pet) {
       pet.setPosition(player.x + 50, player.y + 10);
     }
-    // pants_skin.setPosition(this.player.x, this.player.y);
     let playerMoved = false;
     player.setVelocity(0);
+    player_container.body.setVelocity(0);
     var suffix = color;
     if (
       !cursors.left.isDown &&
@@ -1232,6 +1243,7 @@ export default class waitingRoom extends Phaser.Scene {
         pet.anims.play(`${pet_type}-idle`);
       }
       player.anims.play("player-idle_" + suffix);
+      pants_skin.anims.play("archaeologist_idle");
     }
 
     // when move
@@ -1241,9 +1253,14 @@ export default class waitingRoom extends Phaser.Scene {
         pet.scaleX = -1;
       }
       player.anims.play("player-walk_" + suffix, true);
-      player.setVelocityX(-PLAYER_SPEED);
+      pants_skin.anims.play("archaeologist_walk", true);
+      player_container.body.setVelocityX(-PLAYER_SPEED);
+      // player.setVelocityX(-PLAYER_SPEED);
       player.scaleX = -1;
       player.body.offset.x = 40;
+      pants_skin.scaleX = -1;
+      hat_skin.scaleX = -1;
+      // player_container.body.offset.x = 40;
       playerMoved = true;
     } else if (cursors.right.isDown) {
       if (pet) {
@@ -1251,9 +1268,14 @@ export default class waitingRoom extends Phaser.Scene {
         pet.scaleX = 1;
       }
       player.anims.play("player-walk_" + suffix, true);
-      player.setVelocityX(PLAYER_SPEED);
+      pants_skin.anims.play("archaeologist_walk", true);
+      player_container.body.setVelocityX(PLAYER_SPEED);
+      // player.setVelocityX(PLAYER_SPEED);
       player.scaleX = 1;
       player.body.offset.x = 0;
+      pants_skin.scaleX = 1;
+      hat_skin.scaleX = 1;
+      // player_container.body.offset.x = 0;
       playerMoved = true;
     }
 
@@ -1262,14 +1284,18 @@ export default class waitingRoom extends Phaser.Scene {
         pet.anims.play(`${pet_type}-walk`, true);
       }
       player.anims.play("player-walk_" + suffix, true);
-      player.setVelocityY(-PLAYER_SPEED);
+      pants_skin.anims.play("archaeologist_walk", true);
+      player_container.body.setVelocityY(-PLAYER_SPEED);
+      // player.setVelocityY(-PLAYER_SPEED);
       playerMoved = true;
     } else if (cursors.down.isDown) {
       if (pet) {
         pet.anims.play(`${pet_type}-walk`, true);
       }
       player.anims.play("player-walk_" + suffix, true);
-      player.setVelocityY(PLAYER_SPEED);
+      pants_skin.anims.play("archaeologist_walk", true);
+      player_container.body.setVelocityY(PLAYER_SPEED);
+      // player.setVelocityY(PLAYER_SPEED);
       playerMoved = true;
     }
 

@@ -1403,8 +1403,8 @@ class Game extends Phaser.Scene {
       pressedKeys = pressedKeys.filter((key) => key !== e.code);
     });
 
+    //Add collider with player and set camera to follow player
     this.physics.add.collider(player, ship_tileset);
-
     this.cameras.main.startFollow(player, true);
     this.input.keyboard.enabled;
 
