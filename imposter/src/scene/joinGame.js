@@ -15,12 +15,14 @@ export default class JoinGame extends Phaser.Scene {
 
     preload() {
 
-        socket = io('192.168.2.9:3000'||'localhost:3000'||'171.248.252.217:3000')
+    socket = io.connect('localhost:3000')
 
+ 
+       
+       
     }
 
     create() {
-
         this.add.image(this.game.renderer.width * 0.5, this.game.renderer.height * 0.2, 'createRoom').setScale(0.4).setInteractive({ cursor: 'pointer' })
         let createPublic = this.add.image(this.game.renderer.width * 0.5, this.game.renderer.height * 0.25, 'public').setScale(0.4).setInteractive({ cursor: 'pointer' })
         let createPrivate = this.add.image(this.game.renderer.width * 0.5, this.game.renderer.height * 0.30, 'private').setScale(0.4).setInteractive({ cursor: 'pointer' })
