@@ -66,6 +66,8 @@ import FixWiring_mission_marked from "../assets/tasks/Fix_Wiring/marked.png";
 import CleanAsteroids from "../assets/tasks/Clear Asteroids/marked.png";
 import StabilizeSteering from "../assets/tasks/Stabilize Steering/marked.png";
 
+import emergencyButton from "../assets/img/emergencyButton.png"
+import reportbtn from "../assets/img/reportButton.png"
 import Light from "../scene//state/ingame/ray-light"
 import eventsCenter from "./eventsCenter";
 let player;
@@ -76,7 +78,7 @@ let pressedKeys = [];
 let stt = 0;
 let socket;
 let tables = [];
-let tableObject, ventObject, hole, vent_butt;
+let tableObject, ventObject, hole, vent_butt,emergency_btn,near_btn=false,report_btn;
 var objectsLayer;
 let map_missions;
 let export_missions;
@@ -99,6 +101,7 @@ let current_scene;
 let total_missions_completed = 0;
 let list_missions_completed = [];
 let color = "";
+let report_button
 class Game extends Phaser.Scene {
   constructor() {
     super({ key: "game" });
@@ -117,8 +120,8 @@ class Game extends Phaser.Scene {
   preload() {
 
     this.load.tilemapTiledJSON("tilemap", theskeld);
-
-
+ this.load.image("report-btn",reportbtn)
+this.load.image("emergency",emergencyButton)
     this.load.atlas("playerbase", playerpng, playerjson);
     this.load.atlas("ghost", player_ghost, player_ghost_json)
 
@@ -300,12 +303,13 @@ class Game extends Phaser.Scene {
       kill.alpha = 0.5;
 
       sabotage = this.add.image(1000, 700, "sabotage").setScrollFactor(0, 0).setInteractive().setAlpha(1)
+     
       //*****************OPEN the Mini Map ******/
 
       sabotage.on('pointerdown', () => {
-        console.log("aaaa")
         this.scene.launch("mini-map")
       })
+    
 
     }
     //initialize missions of this map
@@ -332,6 +336,9 @@ class Game extends Phaser.Scene {
         "playerbase",
         "idle.png"
       );
+      otherPlayer[i].status=true
+      this.physics.overlap(player,otherPlayer[i],deadreport)
+     
     }
     this.idPlayers.forEach((element) => {
       if (element != this.socket.id) {
@@ -513,7 +520,7 @@ class Game extends Phaser.Scene {
     });
     //add use button
     vent_butt = this.add.image(1000, 700, "button").setScrollFactor(0, 0).setInteractive().setAlpha(0).setDepth(1)
-
+    report_btn = this.add.image(600, 700, "report-btn").setScrollFactor(0, 0).setInteractive().setAlpha(0.5).setDepth(10)
     useButton = this.add
       .image(900, 700, "UseButton")
       .setScrollFactor(0, 0)
@@ -731,12 +738,12 @@ class Game extends Phaser.Scene {
       key: "player-dead",
       frames: this.anims.generateFrameNames("playerbase", {
         start: 1,
-        end: 42,
+        end: 41,
         prefix: "Dead",
         suffix: ".png",
       }),
       repeat: 0,
-      frameRate: 12,
+      frameRate: 24,
     });
     //player ghost
     this.anims.create({
@@ -747,7 +754,7 @@ class Game extends Phaser.Scene {
         prefix: "ghost00",
         suffix: ".png",
       }),
-      repeat: -1,
+      repeat: 0,
       frameRate: 32,
     });
 
@@ -757,11 +764,11 @@ class Game extends Phaser.Scene {
       key: "player-dead_red",
       frames: this.anims.generateFrameNames(PLAYER_RED, {
         start: 1,
-        end: 42,
+        end: 41,
         prefix: "Dead",
         suffix: ".png",
       }),
-      repeat: -1,
+      repeat: 0,
       frameRate: 24,
     });
 
@@ -770,11 +777,11 @@ class Game extends Phaser.Scene {
       key: "player-dead_blue",
       frames: this.anims.generateFrameNames(PLAYER_BLUE, {
         start: 1,
-        end: 42,
+        end: 41,
         prefix: "Dead",
         suffix: ".png",
       }),
-      repeat: -1,
+      repeat: 0,
       frameRate: 24,
     });
 
@@ -783,11 +790,11 @@ class Game extends Phaser.Scene {
       key: "player-dead_blue_dark",
       frames: this.anims.generateFrameNames(PLAYER_BLUE_DARK, {
         start: 1,
-        end: 42,
+        end: 41,
         prefix: "Dead",
         suffix: ".png",
       }),
-      repeat: -1,
+      repeat: 0,
       frameRate: 24,
     });
 
@@ -800,7 +807,7 @@ class Game extends Phaser.Scene {
         prefix: "Dead",
         suffix: ".png",
       }),
-      repeat: -1,
+      repeat: 0,
       frameRate: 24,
     });
 
@@ -813,7 +820,7 @@ class Game extends Phaser.Scene {
         prefix: "Dead",
         suffix: ".png",
       }),
-      repeat: -1,
+      repeat: 0,
       frameRate: 24,
     });
 
@@ -826,7 +833,7 @@ class Game extends Phaser.Scene {
         prefix: "Dead",
         suffix: ".png",
       }),
-      repeat: -1,
+      repeat: 0,
       frameRate: 24,
     });
 
@@ -839,7 +846,7 @@ class Game extends Phaser.Scene {
         prefix: "Dead",
         suffix: ".png",
       }),
-      repeat: -1,
+      repeat: 0,
       frameRate: 24,
     });
 
@@ -852,7 +859,7 @@ class Game extends Phaser.Scene {
         prefix: "Dead",
         suffix: ".png",
       }),
-      repeat: -1,
+      repeat: 0,
       frameRate: 24,
     });
 
@@ -865,7 +872,7 @@ class Game extends Phaser.Scene {
         prefix: "Dead",
         suffix: ".png",
       }),
-      repeat: -1,
+      repeat: 0,
       frameRate: 24,
     });
 
@@ -878,7 +885,7 @@ class Game extends Phaser.Scene {
         prefix: "Dead",
         suffix: ".png",
       }),
-      repeat: -1,
+      repeat: 0,
       frameRate: 24,
     });
 
@@ -891,7 +898,7 @@ class Game extends Phaser.Scene {
         prefix: "Dead",
         suffix: ".png",
       }),
-      repeat: -1,
+      repeat: 0,
       frameRate: 24,
     });
 
@@ -904,7 +911,7 @@ class Game extends Phaser.Scene {
         prefix: "Dead",
         suffix: ".png",
       }),
-      repeat: -1,
+      repeat: 0,
       frameRate: 24,
     });
     //input to control
@@ -927,7 +934,7 @@ class Game extends Phaser.Scene {
     this.input.keyboard.on("keyup", (e) => {
       this.sound.stopByKey("walk");
       if (alive == true) {
-        player.anims.play("player-idle");
+        player.anims.play("player-idle_"+color);
       }
 
       pressedKeys = pressedKeys.filter((key) => key !== e.code);
@@ -1007,7 +1014,13 @@ class Game extends Phaser.Scene {
           let temp = this.add.rectangle(object.x, object.y, object.width, object.height).setAngle(object.rotation).setOrigin(0, 0).setDepth(29)
           light.map(temp)
           break;
-        default:
+        case "Button":
+          let temp1 = this.add.rectangle(object.x,object.y,object.width,object.height).setOrigin(0,0)
+        emergency_btn = this.add.image(object.x,object.y,"emergency").setOrigin(-2.20,-1.25)
+          this.physics.add.existing(temp1)
+          this.physics.add.overlap(player,temp1,report)
+        break;
+          default:
           break;
       }
     });
@@ -1021,21 +1034,32 @@ class Game extends Phaser.Scene {
     //bắt sự kiện khi player overlap với 1 object khác
     player.on("overlapstart", function () {
       //hiện nút nhảy vent với điều kiện là player overlap với vent
+      console.log("overlaping")
       if (is_vent) {
         vent_butt.alpha = 1
         sabotage.alpha = 0
+      }
+      if(near_btn){
+        report_btn.alpha = 1
+        emergency_btn.setTint(0xffed00,0xffed00,0xffed00,0xffed00)
       }
     });
     //bắt sự kiện khi player đi ra khỏi vùng overlap
     player.on("overlapend", function () {
       //ẩn nút nhảy vent
       is_vent = false
+      if(this.isRole==1){
       vent_butt.alpha = 0
       sabotage.alpha = 1
+    }
+      near_btn=false
+      report_btn.alpha=0.5
+      emergency_btn.clearTint()
     });
 
     //thực hiện hàm circleOverlap khi player tới gần vent
     this.physics.add.overlap(player, vent_group, circleOverlap);
+
     //bắt sự kiện button nhảy vent
     vent_butt.on('pointerdown', () => {
       //nếu tới gần vent thì sẽ đi vào vòng if
@@ -1052,7 +1076,7 @@ class Game extends Phaser.Scene {
               player.play("jump")
               player.on("animationcomplete", (animation, frame) => {
                 if (animation.key = "jump") {
-                  player.anims.play("player-idle")
+                  player.anims.play("player-idle_"+color)
                 }
               })
             }
@@ -1071,6 +1095,11 @@ class Game extends Phaser.Scene {
         }
       }
 
+    })
+   
+    report_btn.on('pointerdown',()=>{
+      if(near_btn){
+      this.scene.launch("vote")}
     })
 
     this.socket.on("move", ({ x, y, playerId }) => {
@@ -1125,15 +1154,28 @@ class Game extends Phaser.Scene {
         //player.stop("player-idle")
         alive = false;
 
-        player.anims.play("player-dead", true);
+        player.anims.play("player-dead_"+color, false);
       } else {
         let index = otherPlayerId.findIndex((Element) => Element == playerId);
-        otherPlayer[index].anims.play("player-dead", true);
+
+        otherPlayer[index].anims.play("player-dead_"+color, false);
+        let temp =this.add.rectangle( otherPlayer[index].x,  otherPlayer[index].y,200,200)
+        this.physics.add.existing(temp)
+        this.physics.add.overlap(player,temp,report)
+      //  otherPlayer[index].status=false
+      //  otherPlayer[index].body.setCircle(100)
       }
     });
-
+//console.log(otherPlayer[0].status)
   }
   update() {
+    console.log(near_btn)
+    var wasTouching = !player.body.wasTouching.none;
+      // If you want 'touching or embedded' then use:
+      var touching = !player.body.touching.none || player.body.embedded;
+      if (touching && !wasTouching) player.emit("overlapstart");
+      else if (!touching && wasTouching) player.emit("overlapend");
+
 
     this.events.emit('moving', [player.x, player.y]);
     light.update(player)
@@ -1142,7 +1184,10 @@ class Game extends Phaser.Scene {
         //console.log();
         if (canKill) {
           this.sound.play('killAudio', false)
-          playerKilled.anims.play("player-dead_" + color, true);
+          playerKilled.anims.play("player-dead_" + color, false);
+          let temp =this.add.rectangle( playerKilled.x,  playerKilled.y,200,200)
+          this.physics.add.existing(temp)
+          this.physics.add.overlap(player,temp,report)
           this.socket.emit('killed', (otherPlayerId[indexKill]))
           otherPlayer = otherPlayer.filter(player => { return player !== playerKilled });
           console.log(otherPlayerId[indexKill]); // emit socket id player killed
@@ -1161,38 +1206,12 @@ class Game extends Phaser.Scene {
 
       //vì phaser chưa có phương thức xác định bắt sự kiện khi player tiếp xúc với sprite hoặc player rời xa sprite nên ta sử dụng emit để gửi sự kiện overlapstart và overlapend
       // var touching = !player.body.touching.none;
-      var wasTouching = !player.body.wasTouching.none;
-      // If you want 'touching or embedded' then use:
-      var touching = !player.body.touching.none || player.body.embedded;
-      if (touching && !wasTouching) player.emit("overlapstart");
-      else if (!touching && wasTouching) player.emit("overlapend");
-
-      //để tránh xung đột với animation idle khi vào vent thì ta sẽ delay animation idle lại để player thực hiện nhảy vent và sau đó ẩn player đi 
-      if (is_vent == true && is_jump == true) {
-        count++
-        if (count == 40) {
-          check(player)
-          is_jump = false
-          count = 0
-        }
-      }
-      else if (is_vent == true && is_jump == false) {
-
-        player.anims.play("player-idle_" + color);
-      }
+  
+  
       let playerMoved = false;
       player.setVelocity(0);
 
-      if (
-        !cursors.left.isDown &&
-        !cursors.right.isDown &&
-        !cursors.up.isDown &&
-        !cursors.down.isDown &&
-        !is_vent
-      ) {
-        //     console.log("outvent")
-        player.anims.play("player-idle_" + color);
-      }
+      
       //nếu is_hidden bằng true có nghĩa là player đang trốn vent nên sẽ ko di chuyển bằng input được
       if (cursors.left.isDown && is_hidden == false) {
         player.anims.play("player-walk_" + color, true);
@@ -1248,16 +1267,6 @@ class Game extends Phaser.Scene {
     if (alive == true) {
       let playerMoved = false;
       player.setVelocity(0);
-
-      if (
-        !cursors.left.isDown &&
-        !cursors.right.isDown &&
-        !cursors.up.isDown &&
-        !cursors.down.isDown
-      ) {
-        player.anims.play("player-idle_" + color);
-      }
-
       if (cursors.left.isDown) {
         player.anims.play("player-walk_" + color, true);
         player.setVelocityX(-PLAYER_SPEED);
@@ -1347,32 +1356,16 @@ function circleOverlap(player, vent) {
   key = getKey([vent.x, vent.y + 10])[0]
 
 }
+function deadreport(player,otherplayer){
+console.log("player status",otherplayer.status)
+}
+function report(player,button){
+ 
+  near_btn=true
+}
 // hiện arrow của vent khi player tới gần
-function playercur() {
-  vent_des.get(key).forEach(element => {
-    element.setVisible(true)
-  });
-}
-function circleOverlap(player, vent) {
-  temp = vent
-  is_vent = true
-  //lấy key string của vent hiện tại dựa trên x y của sprite vent 
-  key = getKey([vent.x, vent.y + 10])[0]
-
-
-}
 //hàm lấy key từ hashmap dựa trên value của key
 function getKey(val) {
   return [...vent_cord].find(([key, value]) => JSON.stringify(val) === JSON.stringify(value));
-}
-//ẩn player dựa trên giá trị của is_hidden
-function check(player) {
-  if (is_hidden == true) {
-    player.setActive(false).setVisible(false)
-
-  } else {
-
-    player.setActive(true).setVisible(true)
-  }
 }
 export default Game;

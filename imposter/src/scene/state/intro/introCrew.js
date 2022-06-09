@@ -71,11 +71,11 @@ class introCrew extends Phaser.Scene {
             var intro = this.tweens.add({
                 targets: [sprite, text],
                 alpha: 1,
-                duration: 5000,
+                duration: 3000,
                 ease: 'Power1',
 
                 onComplete: this.time.addEvent({
-                    delay: 5000,
+                    delay: 2000,
                     callback: () => {
                         Run(this)
                     }

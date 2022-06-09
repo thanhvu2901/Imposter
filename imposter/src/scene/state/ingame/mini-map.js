@@ -26,7 +26,6 @@ class Map_1 extends Phaser.Scene {
     this.add.image(x, y, "map")
     circle = this.add.image(x, y, "Icon").setScale(0.1)
     this.scene.get("game").events.on("moving", (data) => {
-      console.log(data)
       circle.x = data[0] / 4 + 508
       circle.y = data[1] / 4 + 380
     })

@@ -25,7 +25,7 @@ import waitingRoom from "./scene/waitingRoom.js";
 import introCrew from "./scene/state/intro/introCrew.js";
 import introImposter from "./scene/state/intro/introImposter.js";
 import guidemap from "./scene/state/guidemap/guidemap.js";
-
+import votingScreen from "./scene/state/Voting/votingScreen.js"
 var preloader = new Preloader();
 
 const config = {
@@ -61,6 +61,7 @@ const game = new Phaser.Game(config);
 //game.scene.add(SceneKeys.Preloader, Preloader)
 
 game.scene.add("preloader", preloader);
+game.scene.add("vote", votingScreen);
 game.scene.add("menu", MainMenuScene);
 game.scene.add('joinGame', JoinGame)
 game.scene.add('introCrew', introCrew)

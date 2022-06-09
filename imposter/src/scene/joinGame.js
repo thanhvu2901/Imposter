@@ -15,7 +15,7 @@ export default class JoinGame extends Phaser.Scene {
 
     preload() {
 
-        socket = io('localhost:3000')
+        socket = io('192.168.2.9:3000'||'localhost:3000'||'171.248.252.217:3000')
 
     }
 

@@ -1,15 +1,15 @@
 import Phaser from "phaser";
-import screen1 from "../../assets/img/Voting Screen/screens/screen1.png";
-import chat_icon from "../../assets/img/Voting Screen/icons/chat_icon.png";
-import player_background from "../../assets/img/Voting Screen/misc/player_background.png";
-import player_avatar from "../../assets/img/Voting Screen/icons/player_avatar_big.png";
-import mini_avatar from "../../assets/img/Voting Screen/icons/player_avatar_small.png";
-import skip_vote from "../../assets/img/Voting Screen/icons/skip_vote.png";
-import speaker from "../../assets/img/Voting Screen/icons/speaker.png";
-import x_symbol from "../../assets/img/Voting Screen/icons/x_symbol.png";
-import voted_mark from "../../assets/img/Voting Screen/icons/voted_mark.png";
+import screen1 from "../../../assets/img/Voting Screen/screens/screen1.png";
+import chat_icon from "../../../assets/img/Voting Screen/icons/chat_icon.png";
+import player_background from "../../../assets/img/Voting Screen/misc/player_background.png";
+import player_avatar from "../../../assets/img/Voting Screen/icons/player_avatar_big.png";
+import mini_avatar from "../../../assets/img/Voting Screen/icons/player_avatar_small.png";
+import skip_vote from "../../../assets/img/Voting Screen/icons/skip_vote.png";
+import speaker from "../../../assets/img/Voting Screen/icons/speaker.png";
+import x_symbol from "../../../assets/img/Voting Screen/icons/x_symbol.png";
+import voted_mark from "../../../assets/img/Voting Screen/icons/voted_mark.png";
 
-var main_screen, chat_icon_img, title, skip_vote_button, voting_count;
+var main_screen, chat_icon_img, title, skip_vote_button, voting_count,timedEvent,timer=5000;
 const coordinates = [
   [305, 235],
   [305, 310],
@@ -25,7 +25,7 @@ const coordinates = [
 
 class VotingScreen extends Phaser.Scene {
   constructor() {
-    super({ key: "VotingScreen" });
+    super({ key: "vote" });
   }
 
   preload() {
@@ -41,7 +41,9 @@ class VotingScreen extends Phaser.Scene {
   }
 
   create() {
-    main_screen = this.add.image(512, 384, "screen1");
+    this.scene.bringToTop();
+
+    main_screen = this.add.image(512, 384, "screen1")
     chat_icon_img = this.add.image(
       main_screen.width - 12,
       main_screen.height - 412,
@@ -62,7 +64,7 @@ class VotingScreen extends Phaser.Scene {
       }
     );
     var players = this.bulkGeneratePlayer(coordinates, 3);
-    console.log(players);
+  //  console.log(players);
     // // Left side
     // player_background_img = this.add.image(305, 235, "player_background");
     // this.add.image(170, 235, "player_avatar_big");
@@ -166,16 +168,22 @@ class VotingScreen extends Phaser.Scene {
     // });
 
     skip_vote_button = this.add.image(205, 600, "skip_vote");
-
-    voting_count = this.add.text(640, 582, "Voting Ends In: 0s", {
+    voting_count = this.add.text(640, 582, "", {
       fontSize: "25px",
       color: "#FF0000",
       fontFamily: "Arial",
       stroke: "#000000",
       strokeThickness: 3,
     });
+    timedEvent = this.time.addEvent({ delay: timer,callback:()=>{
+      exit(this)
+    }});
+    
   }
-
+update(){
+  console.log(timer/1000,timedEvent.getElapsed())
+voting_count.setText("Voting Ends In: "+((timer-timedEvent.getElapsed())/1000).toFixed(0))
+}
   generatePlayerBackground(x, y, num, numOfPlayers) {
     var background = this.add.image(x, y, "player_background");
 
@@ -237,6 +245,9 @@ class VotingScreen extends Phaser.Scene {
       console.log("Number of players is greater than 10");
     }
   }
+ 
 }
-
+function exit(game){
+  game.scene.stop()
+    }
 export default VotingScreen;
