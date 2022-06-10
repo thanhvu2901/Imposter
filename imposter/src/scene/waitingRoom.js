@@ -62,7 +62,7 @@ let otherPlayerId = new Array();
 let pressedKeys = [];
 let stt = 0;
 var color = "";
-let defaultPlayer={};
+let defaultPlayer = {};
 export default class waitingRoom extends Phaser.Scene {
   constructor() {
     super({
@@ -150,10 +150,19 @@ export default class waitingRoom extends Phaser.Scene {
     //cursor to direct
     cursors = this.input.keyboard.createCursorKeys();
 
+
+
+    //create player color in game
+
     player = this.physics.add.sprite(-45, 26, PLAYER_BLUE, "idle.png");
     color = "blue";
-    defaultPlayer.player= player;
-    this.playerChangedSkin= defaultPlayer;
+
+
+
+
+
+    defaultPlayer.player = player;
+    this.playerChangedSkin = defaultPlayer;
 
     // pants_skin = this.physics.add.sprite(
     //   player.x,
@@ -494,6 +503,12 @@ export default class waitingRoom extends Phaser.Scene {
     this.socket.on("setState", (states) => {
       // this.physics.resume();
       // STATE
+
+      // let playercolor = (Object(states).players)[this.socket].color
+      // player = this.physics.add.sprite(-45, 26, 'player-idle_' + playercolor, "idle.png");
+      // color = playercolor;
+
+
       this.state.roomKey = states.roomKey;
       this.state.host = Object.keys((states).players)[0]
 
@@ -527,10 +542,12 @@ export default class waitingRoom extends Phaser.Scene {
       for (let i = 0; i < numPlayers; i++) {
         if (this.socket.id !== Object.keys(players)[i]) {
           otherPlayerId.push(Object.keys(players)[i]);
+          console.log(Object.values(players)[i].color);
           otherPlayer[stt] = this.physics.add.sprite(
             Object.values(players)[i].x,
             Object.values(players)[i].y,
-            "playerbase",
+
+            "player-idle_" + Object.values(players)[i].color,
             "idle.png"
           );
           stt = stt + 1;
@@ -703,8 +720,8 @@ export default class waitingRoom extends Phaser.Scene {
     });
 
 
-    this.socket.on("moveW", ({ x, y, playerId }) => {
-      console.log({ x, y, playerId });
+    this.socket.on("moveW", ({ x, y, playerId, color }) => {
+      // console.log({ x, y, playerId });
 
       let index = otherPlayerId.findIndex((Element) => Element == playerId);
       //id = index;
@@ -720,26 +737,26 @@ export default class waitingRoom extends Phaser.Scene {
       otherPlayer[index].moving = true;
 
       if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
-        otherPlayer[index].play("player-walk");
+        otherPlayer[index].play("player-walk_" + color);
       } else if (
         !otherPlayer[index].moving &&
         otherPlayer[index].anims.isPlaying
       ) {
-        otherPlayer[index].stop("player-walk");
+        otherPlayer[index].stop("player-walk_" + color);
       }
     });
 
-    this.socket.on("moveEndW", ({ playerId }) => {
+    this.socket.on("moveEndW", ({ playerId, color }) => {
       let index = otherPlayerId.findIndex((Element) => Element == playerId);
       otherPlayer[index].moving = false;
-      otherPlayer[index].anims.play("player-idle");
+      otherPlayer[index].anims.play("player-idle_" + color);
       if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
-        otherPlayer[index].play("player-walk");
+        otherPlayer[index].play("player-walk_" + color);
       } else if (
         !otherPlayer[index].moving &&
         otherPlayer[index].anims.isPlaying
       ) {
-        otherPlayer[index].stop("player-walk");
+        otherPlayer[index].stop("player-walk_" + color);
       }
     });
 

@@ -70,7 +70,7 @@ export default class JoinGame extends Phaser.Scene {
             this.roomKey = roomKey;
             console.log(roomKey);
             textInput = roomKey
-            socket.emit('ok')
+            socket.emit('ok', roomKey)
 
         });
         socket.on('join', () => {
