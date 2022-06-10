@@ -537,17 +537,17 @@ export default class waitingRoom extends Phaser.Scene {
       }
     });
 
-    this.socket.on("currentPlayers", ({ players, numPlayers }) => {
+    this.socket.on("currentPlayers", ({ players, numPlayers, roomInfo }) => {
 
       for (let i = 0; i < numPlayers; i++) {
         if (this.socket.id !== Object.keys(players)[i]) {
+
           otherPlayerId.push(Object.keys(players)[i]);
           console.log(Object.values(players)[i].color);
           otherPlayer[stt] = this.physics.add.sprite(
             Object.values(players)[i].x,
             Object.values(players)[i].y,
-
-            "player-idle_" + Object.values(players)[i].color,
+            "player_base_" + Object.values(roomInfo.players)[i].color,
             "idle.png"
           );
           stt = stt + 1;
@@ -571,7 +571,7 @@ export default class waitingRoom extends Phaser.Scene {
       otherPlayer[stt] = this.physics.add.sprite(
         -40 + 10 * stt,
         30 + 10 * stt,
-        "playerbase",
+        "player_base_" + playerInfo.color,
         "idle.png"
       );
       console.log("stt" + stt);
