@@ -24,14 +24,23 @@ export const PLAYER_PINK = "player_base_pink";
 
 //Pants skins
 //With Mirror
-export const ARCHAEOLOGIST = "archaeologist";
 export const POLICE = "police";
+export const ARCHAEOLOGIST = "archaeologist";
 export const SECGUARD = "secguard";
 export const WALL = "wall";
 export const CCC = "ccc";
 
 //Without Mirror
 export const HAZMAT = "hazmat";
+export const WINTERJACKET = "winterjacket";
+export const TARMAC = "tarmac";
+export const MILITARY = "military";
+export const SUITBLACK = "suitblack";
+export const ASTRONAUT = "astronaut";
+export const CAPTAIN = "captain";
+export const SCIENTIST = "scientist";
+export const MECHANIC = "mechanic";
+export const SUITWHITE = "suitwhite";
 
 //Pets
 export const BEDCRAB = "bedcrab"

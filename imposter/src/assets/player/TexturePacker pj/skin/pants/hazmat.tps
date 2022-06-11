@@ -124,7 +124,7 @@
             <key>data</key>
             <struct type="DataFile">
                 <key>name</key>
-                <filename></filename>
+                <filename>../../../player_sprite/pants/hazmat.json</filename>
             </struct>
         </map>
         <key>multiPack</key>

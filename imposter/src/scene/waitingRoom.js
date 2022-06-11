@@ -7,12 +7,37 @@ import playerjson from "../assets/player/player_sprite/player_color/player_base.
 
 /* *****SKINS***** */
 //PANTS
-import archaeologistpng from "../assets/player/player_sprite/pants/archaeologist.png";
-import archaeologistjson from "../assets/player/player_sprite/pants/archaeologist.json";
 import policepng from "../assets/player/player_sprite/pants/police.png";
 import policejson from "../assets/player/player_sprite/pants/police.json";
+import archaeologistpng from "../assets/player/player_sprite/pants/archaeologist.png";
+import archaeologistjson from "../assets/player/player_sprite/pants/archaeologist.json";
+import secguardpng from "../assets/player/player_sprite/pants/secguard.png";
+import secguardjson from "../assets/player/player_sprite/pants/secguard.json";
+import wallpng from "../assets/player/player_sprite/pants/wall.png";
+import walljson from "../assets/player/player_sprite/pants/wall.json";
+import cccpng from "../assets/player/player_sprite/pants/ccc.png";
+import cccjson from "../assets/player/player_sprite/pants/ccc.json";
+
 import hazmatpng from "../assets/player/player_sprite/pants/hazmat.png";
 import hazmatjson from "../assets/player/player_sprite/pants/hazmat.json";
+import winterjacketpng from "../assets/player/player_sprite/pants/winterjacket.png";
+import winterjacketjson from "../assets/player/player_sprite/pants/winterjacket.json";
+import tarmacpng from "../assets/player/player_sprite/pants/tarmac.png";
+import tarmacjson from "../assets/player/player_sprite/pants/tarmac.json";
+import militarypng from "../assets/player/player_sprite/pants/military.png";
+import militaryjson from "../assets/player/player_sprite/pants/military.json";
+import suitblackpng from "../assets/player/player_sprite/pants/suitblack.png";
+import suitblackjson from "../assets/player/player_sprite/pants/suitblack.json";
+import astronautpng from "../assets/player/player_sprite/pants/astronaut.png";
+import astronautjson from "../assets/player/player_sprite/pants/astronaut.json";
+import captainpng from "../assets/player/player_sprite/pants/captain.png";
+import captainjson from "../assets/player/player_sprite/pants/captain.json";
+import scientistpng from "../assets/player/player_sprite/pants/scientist.png";
+import scientistjson from "../assets/player/player_sprite/pants/scientist.json";
+import mechanicpng from "../assets/player/player_sprite/pants/mechanic.png";
+import mechanicjson from "../assets/player/player_sprite/pants/mechanic.json";
+import suitwhitepng from "../assets/player/player_sprite/pants/suitwhite.png";
+import suitwhitejson from "../assets/player/player_sprite/pants/suitwhite.json";
 
 //HAT
 import hat1 from "../assets/player/preload_assets/skin/hat/hats0005.png";
@@ -68,12 +93,21 @@ import {
   STICKMIN,
   TWITCH,
   UFO,
-  ARCHAEOLOGIST,
   POLICE,
+  ARCHAEOLOGIST,
   SECGUARD,
   WALL,
   CCC,
   HAZMAT,
+  WINTERJACKET,
+  TARMAC,
+  MILITARY,
+  SUITBLACK,
+  ASTRONAUT,
+  CAPTAIN,
+  SCIENTIST,
+  MECHANIC,
+  SUITWHITE,
 } from "../consts/constants";
 import eventsCenter from "./eventsCenter";
 
@@ -174,14 +208,21 @@ export default class waitingRoom extends Phaser.Scene {
     this.load.atlas(PLAYER_PINK, playerpng_pink, playerjson_pink);
     this.load.atlas(PLAYER_YELLOW, playerpng_yellow, playerjson_yellow);
 
-    this.load.atlas(
-      `${ARCHAEOLOGIST}_pants`,
-      archaeologistpng,
-      archaeologistjson
-    );
-
     this.load.atlas(`${POLICE}_pants`, policepng, policejson);
+    this.load.atlas(`${ARCHAEOLOGIST}_pants`, archaeologistpng, archaeologistjson);
+    this.load.atlas(`${SECGUARD}_pants`, secguardpng, secguardjson);
+    this.load.atlas(`${WALL}_pants`, wallpng, walljson);
+    this.load.atlas(`${CCC}_pants`, cccpng, cccjson);
     this.load.atlas(`${HAZMAT}_pants`, hazmatpng, hazmatjson);
+    this.load.atlas(`${WINTERJACKET}_pants`, winterjacketpng, winterjacketjson);
+    this.load.atlas(`${TARMAC}_pants`, tarmacpng, tarmacjson);
+    this.load.atlas(`${MILITARY}_pants`, militarypng, militaryjson);
+    this.load.atlas(`${SUITBLACK}_pants`, suitblackpng, suitblackjson);
+    this.load.atlas(`${ASTRONAUT}_pants`, astronautpng, astronautjson);
+    this.load.atlas(`${CAPTAIN}_pants`, captainpng, captainjson);
+    this.load.atlas(`${SCIENTIST}_pants`, scientistpng, scientistjson);
+    this.load.atlas(`${MECHANIC}_pants`, mechanicpng, mechanicjson);
+    this.load.atlas(`${SUITWHITE}_pants`, suitwhitepng, suitwhitejson);
 
     this.load.image("hat", hat1);
 
@@ -223,7 +264,7 @@ export default class waitingRoom extends Phaser.Scene {
     defaultPlayer.player = player;
     this.playerChangedSkin = defaultPlayer;
 
-    pants_type = POLICE;
+    pants_type = WINTERJACKET;
     pants_skin = this.physics.add.sprite(
       player.x + 0.75,
       player.y + 10,
@@ -1276,7 +1317,9 @@ export default class waitingRoom extends Phaser.Scene {
   }
 
   update() {
-    isLeft == true && isMirror == true ? pants_skin.setPosition(player.x, player.y + 10) : null;
+    isLeft == true && isMirror == true
+      ? pants_skin.setPosition(player.x, player.y + 10)
+      : null;
     if (pet) {
       pet.setPosition(player.x + 50, player.y + 10);
     }
@@ -1296,8 +1339,8 @@ export default class waitingRoom extends Phaser.Scene {
       player.anims.play("player-idle_" + suffix);
       if (isMirror) {
         isLeft == true
-        ? pants_skin.anims.play(`${pants_type}_idleMirror`)
-        : pants_skin.anims.play(`${pants_type}_idle`);
+          ? pants_skin.anims.play(`${pants_type}_idleMirror`)
+          : pants_skin.anims.play(`${pants_type}_idle`);
       } else {
         pants_skin.anims.play(`${pants_type}_idle`);
       }
@@ -1331,7 +1374,7 @@ export default class waitingRoom extends Phaser.Scene {
       player.anims.play("player-walk_" + suffix, true);
       pants_skin.anims.play(`${pants_type}_walk`, true);
       player_container.body.setVelocityX(PLAYER_SPEED);
-      isMirror == false ? pants_skin.scaleX = 1 : null;
+      isMirror == false ? (pants_skin.scaleX = 1) : null;
       player.scaleX = 1;
       player.body.offset.x = 0;
       hat_skin.scaleX = 1;

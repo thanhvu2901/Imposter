@@ -1,0 +1,4068 @@
+{"frames": [
+
+{
+	"filename": "scientist_Kill_stab_Impostor1.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor2.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor3.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor4.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor5.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor6.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor7.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor8.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor9.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor10.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor11.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor12.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor13.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor14.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor15.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor16.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor17.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor18.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor19.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor20.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor21.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor22.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor23.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor24.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor25.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor26.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor27.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor28.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor29.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor30.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor31.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor32.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor33.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor34.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor35.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor36.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor37.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor38.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor39.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor40.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor41.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor42.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor43.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor44.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor45.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor46.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor47.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientist_Kill_stab_Impostor48.png",
+	"frame": {"x":771,"y":25,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_Idle.png",
+	"frame": {"x":272,"y":38,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim1.png",
+	"frame": {"x":345,"y":65,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim2.png",
+	"frame": {"x":345,"y":65,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim3.png",
+	"frame": {"x":345,"y":65,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim4.png",
+	"frame": {"x":345,"y":65,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim5.png",
+	"frame": {"x":345,"y":65,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim6.png",
+	"frame": {"x":345,"y":65,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim7.png",
+	"frame": {"x":345,"y":65,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim8.png",
+	"frame": {"x":345,"y":65,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim9.png",
+	"frame": {"x":345,"y":65,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim10.png",
+	"frame": {"x":345,"y":65,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim11.png",
+	"frame": {"x":219,"y":92,"w":38,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":32},
+	"sourceSize": {"w":38,"h":32}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim12.png",
+	"frame": {"x":219,"y":92,"w":38,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":32},
+	"sourceSize": {"w":38,"h":32}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim13.png",
+	"frame": {"x":1176,"y":32,"w":34,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":36},
+	"sourceSize": {"w":34,"h":36}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim14.png",
+	"frame": {"x":1176,"y":32,"w":34,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":36},
+	"sourceSize": {"w":34,"h":36}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim15.png",
+	"frame": {"x":1176,"y":32,"w":34,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":36},
+	"sourceSize": {"w":34,"h":36}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim16.png",
+	"frame": {"x":1021,"y":75,"w":36,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":36},
+	"sourceSize": {"w":36,"h":36}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim17.png",
+	"frame": {"x":1021,"y":75,"w":36,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":36},
+	"sourceSize": {"w":36,"h":36}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim18.png",
+	"frame": {"x":1021,"y":34,"w":34,"h":39},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":39},
+	"sourceSize": {"w":34,"h":39}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim19.png",
+	"frame": {"x":1021,"y":34,"w":34,"h":39},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":39},
+	"sourceSize": {"w":34,"h":39}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim20.png",
+	"frame": {"x":1021,"y":34,"w":34,"h":39},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":39},
+	"sourceSize": {"w":34,"h":39}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim21.png",
+	"frame": {"x":219,"y":92,"w":38,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":32},
+	"sourceSize": {"w":38,"h":32}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim22.png",
+	"frame": {"x":219,"y":92,"w":38,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":32},
+	"sourceSize": {"w":38,"h":32}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim23.png",
+	"frame": {"x":1176,"y":32,"w":34,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":36},
+	"sourceSize": {"w":34,"h":36}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim24.png",
+	"frame": {"x":1176,"y":32,"w":34,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":36},
+	"sourceSize": {"w":34,"h":36}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim25.png",
+	"frame": {"x":1176,"y":32,"w":34,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":36},
+	"sourceSize": {"w":34,"h":36}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim26.png",
+	"frame": {"x":1021,"y":75,"w":36,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":36},
+	"sourceSize": {"w":36,"h":36}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim27.png",
+	"frame": {"x":1021,"y":75,"w":36,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":36},
+	"sourceSize": {"w":36,"h":36}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim28.png",
+	"frame": {"x":1021,"y":34,"w":34,"h":39},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":39},
+	"sourceSize": {"w":34,"h":39}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim29.png",
+	"frame": {"x":1021,"y":34,"w":34,"h":39},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":39},
+	"sourceSize": {"w":34,"h":39}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim30.png",
+	"frame": {"x":1021,"y":34,"w":34,"h":39},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":39},
+	"sourceSize": {"w":34,"h":39}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim31.png",
+	"frame": {"x":93,"y":92,"w":40,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":32},
+	"sourceSize": {"w":40,"h":32}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim32.png",
+	"frame": {"x":93,"y":92,"w":40,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":32},
+	"sourceSize": {"w":40,"h":32}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim33.png",
+	"frame": {"x":1097,"y":33,"w":35,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":37},
+	"sourceSize": {"w":35,"h":37}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim34.png",
+	"frame": {"x":1099,"y":72,"w":35,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":37},
+	"sourceSize": {"w":35,"h":37}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim35.png",
+	"frame": {"x":1099,"y":72,"w":35,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":37},
+	"sourceSize": {"w":35,"h":37}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim36.png",
+	"frame": {"x":1099,"y":72,"w":35,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":37},
+	"sourceSize": {"w":35,"h":37}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim37.png",
+	"frame": {"x":1099,"y":72,"w":35,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":37},
+	"sourceSize": {"w":35,"h":37}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim38.png",
+	"frame": {"x":1057,"y":33,"w":38,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":37},
+	"sourceSize": {"w":38,"h":37}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim39.png",
+	"frame": {"x":648,"y":35,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim40.png",
+	"frame": {"x":648,"y":35,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim41.png",
+	"frame": {"x":1136,"y":101,"w":32,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":23},
+	"sourceSize": {"w":32,"h":23}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim42.png",
+	"frame": {"x":796,"y":86,"w":31,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":24},
+	"sourceSize": {"w":31,"h":24}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim43.png",
+	"frame": {"x":796,"y":86,"w":31,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":24},
+	"sourceSize": {"w":31,"h":24}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim44.png",
+	"frame": {"x":796,"y":86,"w":31,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":24},
+	"sourceSize": {"w":31,"h":24}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim45.png",
+	"frame": {"x":796,"y":86,"w":31,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":24},
+	"sourceSize": {"w":31,"h":24}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim46.png",
+	"frame": {"x":796,"y":86,"w":31,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":24},
+	"sourceSize": {"w":31,"h":24}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim47.png",
+	"frame": {"x":796,"y":86,"w":31,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":24},
+	"sourceSize": {"w":31,"h":24}
+},
+{
+	"filename": "scientistentist_Kill_stab_Victim48.png",
+	"frame": {"x":796,"y":86,"w":31,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":24},
+	"sourceSize": {"w":31,"h":24}
+},
+{
+	"filename": "scientistentist_killalien_imposter1.png",
+	"frame": {"x":692,"y":89,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killalien_imposter2.png",
+	"frame": {"x":692,"y":89,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killalien_imposter3.png",
+	"frame": {"x":692,"y":89,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killalien_imposter4.png",
+	"frame": {"x":692,"y":89,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killalien_imposter5.png",
+	"frame": {"x":758,"y":56,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "scientistentist_killalien_imposter6.png",
+	"frame": {"x":758,"y":56,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "scientistentist_killalien_imposter7.png",
+	"frame": {"x":758,"y":56,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "scientistentist_killalien_imposter8.png",
+	"frame": {"x":758,"y":56,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "scientistentist_killalien_imposter9.png",
+	"frame": {"x":758,"y":56,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "scientistentist_killalien_imposter10.png",
+	"frame": {"x":758,"y":56,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "scientistentist_killalien_imposter11.png",
+	"frame": {"x":758,"y":56,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "scientistentist_killalien_imposter12.png",
+	"frame": {"x":758,"y":56,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "scientistentist_killalien_imposter13.png",
+	"frame": {"x":758,"y":56,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "scientistentist_killalien_imposter14.png",
+	"frame": {"x":758,"y":56,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "scientistentist_killalien_imposter15.png",
+	"frame": {"x":758,"y":56,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "scientistentist_killalien_imposter16.png",
+	"frame": {"x":758,"y":56,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "scientistentist_killalien_imposter17.png",
+	"frame": {"x":758,"y":56,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "scientistentist_killalien_imposter18.png",
+	"frame": {"x":758,"y":56,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "scientistentist_killalien_imposter19.png",
+	"frame": {"x":758,"y":56,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "scientistentist_killalien_imposter20.png",
+	"frame": {"x":758,"y":56,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "scientistentist_killalien_imposter21.png",
+	"frame": {"x":758,"y":56,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "scientistentist_killalien_imposter22.png",
+	"frame": {"x":758,"y":56,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "scientistentist_killalien_imposter23.png",
+	"frame": {"x":758,"y":56,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "scientistentist_killalien_imposter24.png",
+	"frame": {"x":758,"y":56,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "scientistentist_killalien_imposter25.png",
+	"frame": {"x":758,"y":56,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "scientistentist_killalien_imposter26.png",
+	"frame": {"x":758,"y":56,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "scientistentist_killalien_imposter27.png",
+	"frame": {"x":758,"y":56,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "scientistentist_killalien_imposter28.png",
+	"frame": {"x":758,"y":56,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "scientistentist_killalien_imposter29.png",
+	"frame": {"x":568,"y":35,"w":37,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":25},
+	"sourceSize": {"w":37,"h":25}
+},
+{
+	"filename": "scientistentist_killalien_imposter30.png",
+	"frame": {"x":568,"y":35,"w":37,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":25},
+	"sourceSize": {"w":37,"h":25}
+},
+{
+	"filename": "scientistentist_killalien_imposter31.png",
+	"frame": {"x":460,"y":36,"w":34,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":27},
+	"sourceSize": {"w":34,"h":27}
+},
+{
+	"filename": "scientistentist_killalien_imposter32.png",
+	"frame": {"x":692,"y":89,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killalien_imposter33.png",
+	"frame": {"x":692,"y":89,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killalien_imposter34.png",
+	"frame": {"x":692,"y":89,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killalien_imposter35.png",
+	"frame": {"x":692,"y":89,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killalien_imposter36.png",
+	"frame": {"x":692,"y":89,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killalien_imposter37.png",
+	"frame": {"x":692,"y":89,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killalien_imposter38.png",
+	"frame": {"x":692,"y":89,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killalien_imposter39.png",
+	"frame": {"x":692,"y":89,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killalien_imposter40.png",
+	"frame": {"x":692,"y":89,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killalien_imposter41.png",
+	"frame": {"x":692,"y":89,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killalien_imposter42.png",
+	"frame": {"x":692,"y":89,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killalien_imposter43.png",
+	"frame": {"x":692,"y":89,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killalien_imposter44.png",
+	"frame": {"x":692,"y":89,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killalien_imposter45.png",
+	"frame": {"x":692,"y":89,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killalien_imposter46.png",
+	"frame": {"x":692,"y":89,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killalien_imposter47.png",
+	"frame": {"x":692,"y":89,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killalien_imposter48.png",
+	"frame": {"x":692,"y":89,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killalien_victim1.png",
+	"frame": {"x":727,"y":80,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killalien_victim2.png",
+	"frame": {"x":727,"y":80,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killalien_victim3.png",
+	"frame": {"x":727,"y":80,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killalien_victim4.png",
+	"frame": {"x":727,"y":80,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killalien_victim5.png",
+	"frame": {"x":727,"y":80,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killalien_victim6.png",
+	"frame": {"x":727,"y":80,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killalien_victim7.png",
+	"frame": {"x":727,"y":80,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killalien_victim8.png",
+	"frame": {"x":727,"y":80,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killalien_victim9.png",
+	"frame": {"x":727,"y":80,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killalien_victim10.png",
+	"frame": {"x":727,"y":80,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killalien_victim11.png",
+	"frame": {"x":177,"y":92,"w":40,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":32},
+	"sourceSize": {"w":40,"h":32}
+},
+{
+	"filename": "scientistentist_killalien_victim12.png",
+	"frame": {"x":259,"y":69,"w":41,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":25},
+	"sourceSize": {"w":41,"h":25}
+},
+{
+	"filename": "scientistentist_killalien_victim13.png",
+	"frame": {"x":259,"y":69,"w":41,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":25},
+	"sourceSize": {"w":41,"h":25}
+},
+{
+	"filename": "scientistentist_killalien_victim14.png",
+	"frame": {"x":514,"y":64,"w":30,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":31},
+	"sourceSize": {"w":30,"h":31}
+},
+{
+	"filename": "scientistentist_killalien_victim15.png",
+	"frame": {"x":514,"y":64,"w":30,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":31},
+	"sourceSize": {"w":30,"h":31}
+},
+{
+	"filename": "scientistentist_killalien_victim16.png",
+	"frame": {"x":546,"y":64,"w":29,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":31},
+	"sourceSize": {"w":29,"h":31}
+},
+{
+	"filename": "scientistentist_killalien_victim17.png",
+	"frame": {"x":546,"y":64,"w":29,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":31},
+	"sourceSize": {"w":29,"h":31}
+},
+{
+	"filename": "scientistentist_killalien_victim18.png",
+	"frame": {"x":546,"y":64,"w":29,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":31},
+	"sourceSize": {"w":29,"h":31}
+},
+{
+	"filename": "scientistentist_killalien_victim19.png",
+	"frame": {"x":546,"y":64,"w":29,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":31},
+	"sourceSize": {"w":29,"h":31}
+},
+{
+	"filename": "scientistentist_killalien_victim20.png",
+	"frame": {"x":546,"y":64,"w":29,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":31},
+	"sourceSize": {"w":29,"h":31}
+},
+{
+	"filename": "scientistentist_killalien_victim21.png",
+	"frame": {"x":302,"y":69,"w":41,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":25},
+	"sourceSize": {"w":41,"h":25}
+},
+{
+	"filename": "scientistentist_killalien_victim22.png",
+	"frame": {"x":302,"y":69,"w":41,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":25},
+	"sourceSize": {"w":41,"h":25}
+},
+{
+	"filename": "scientistentist_killalien_victim23.png",
+	"frame": {"x":340,"y":37,"w":41,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":26},
+	"sourceSize": {"w":41,"h":26}
+},
+{
+	"filename": "scientistentist_killalien_victim24.png",
+	"frame": {"x":340,"y":37,"w":41,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":26},
+	"sourceSize": {"w":41,"h":26}
+},
+{
+	"filename": "scientistentist_killalien_victim25.png",
+	"frame": {"x":1170,"y":101,"w":27,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":23},
+	"sourceSize": {"w":27,"h":23}
+},
+{
+	"filename": "scientistentist_killalien_victim26.png",
+	"frame": {"x":1170,"y":101,"w":27,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":23},
+	"sourceSize": {"w":27,"h":23}
+},
+{
+	"filename": "scientistentist_killalien_victim27.png",
+	"frame": {"x":952,"y":96,"w":27,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":24},
+	"sourceSize": {"w":27,"h":24}
+},
+{
+	"filename": "scientistentist_killalien_victim28.png",
+	"frame": {"x":952,"y":96,"w":27,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":24},
+	"sourceSize": {"w":27,"h":24}
+},
+{
+	"filename": "scientistentist_killalien_victim29.png",
+	"frame": {"x":981,"y":96,"w":27,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":23},
+	"sourceSize": {"w":27,"h":23}
+},
+{
+	"filename": "scientistentist_killalien_victim30.png",
+	"frame": {"x":981,"y":96,"w":27,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":23},
+	"sourceSize": {"w":27,"h":23}
+},
+{
+	"filename": "scientistentist_killalien_victim31.png",
+	"frame": {"x":981,"y":96,"w":27,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":23},
+	"sourceSize": {"w":27,"h":23}
+},
+{
+	"filename": "scientistentist_killalien_victim32.png",
+	"frame": {"x":981,"y":96,"w":27,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":23},
+	"sourceSize": {"w":27,"h":23}
+},
+{
+	"filename": "scientistentist_killalien_victim33.png",
+	"frame": {"x":981,"y":96,"w":27,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":23},
+	"sourceSize": {"w":27,"h":23}
+},
+{
+	"filename": "scientistentist_killalien_victim34.png",
+	"frame": {"x":981,"y":96,"w":27,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":23},
+	"sourceSize": {"w":27,"h":23}
+},
+{
+	"filename": "scientistentist_killalien_victim35.png",
+	"frame": {"x":981,"y":96,"w":27,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":23},
+	"sourceSize": {"w":27,"h":23}
+},
+{
+	"filename": "scientistentist_killalien_victim36.png",
+	"frame": {"x":981,"y":96,"w":27,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":23},
+	"sourceSize": {"w":27,"h":23}
+},
+{
+	"filename": "scientistentist_killalien_victim37.png",
+	"frame": {"x":981,"y":96,"w":27,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":23},
+	"sourceSize": {"w":27,"h":23}
+},
+{
+	"filename": "scientistentist_killalien_victim38.png",
+	"frame": {"x":981,"y":96,"w":27,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":23},
+	"sourceSize": {"w":27,"h":23}
+},
+{
+	"filename": "scientistentist_killalien_victim39.png",
+	"frame": {"x":981,"y":96,"w":27,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":23},
+	"sourceSize": {"w":27,"h":23}
+},
+{
+	"filename": "scientistentist_killalien_victim40.png",
+	"frame": {"x":981,"y":96,"w":27,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":23},
+	"sourceSize": {"w":27,"h":23}
+},
+{
+	"filename": "scientistentist_killalien_victim41.png",
+	"frame": {"x":981,"y":96,"w":27,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":23},
+	"sourceSize": {"w":27,"h":23}
+},
+{
+	"filename": "scientistentist_killalien_victim42.png",
+	"frame": {"x":981,"y":96,"w":27,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":23},
+	"sourceSize": {"w":27,"h":23}
+},
+{
+	"filename": "scientistentist_killalien_victim43.png",
+	"frame": {"x":981,"y":96,"w":27,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":23},
+	"sourceSize": {"w":27,"h":23}
+},
+{
+	"filename": "scientistentist_killalien_victim44.png",
+	"frame": {"x":981,"y":96,"w":27,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":23},
+	"sourceSize": {"w":27,"h":23}
+},
+{
+	"filename": "scientistentist_killalien_victim45.png",
+	"frame": {"x":981,"y":96,"w":27,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":23},
+	"sourceSize": {"w":27,"h":23}
+},
+{
+	"filename": "scientistentist_killalien_victim46.png",
+	"frame": {"x":981,"y":96,"w":27,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":23},
+	"sourceSize": {"w":27,"h":23}
+},
+{
+	"filename": "scientistentist_killalien_victim47.png",
+	"frame": {"x":981,"y":96,"w":27,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":23},
+	"sourceSize": {"w":27,"h":23}
+},
+{
+	"filename": "scientistentist_killalien_victim48.png",
+	"frame": {"x":981,"y":96,"w":27,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":23},
+	"sourceSize": {"w":27,"h":23}
+},
+{
+	"filename": "scientistentist_killGun_imposter1.png",
+	"frame": {"x":415,"y":65,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_imposter2.png",
+	"frame": {"x":415,"y":65,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_imposter3.png",
+	"frame": {"x":415,"y":65,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_imposter4.png",
+	"frame": {"x":103,"y":56,"w":37,"h":34},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":34},
+	"sourceSize": {"w":37,"h":34}
+},
+{
+	"filename": "scientistentist_killGun_imposter5.png",
+	"frame": {"x":1059,"y":72,"w":38,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":35},
+	"sourceSize": {"w":38,"h":35}
+},
+{
+	"filename": "scientistentist_killGun_imposter6.png",
+	"frame": {"x":1059,"y":72,"w":38,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":35},
+	"sourceSize": {"w":38,"h":35}
+},
+{
+	"filename": "scientistentist_killGun_imposter7.png",
+	"frame": {"x":1059,"y":72,"w":38,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":35},
+	"sourceSize": {"w":38,"h":35}
+},
+{
+	"filename": "scientistentist_killGun_imposter8.png",
+	"frame": {"x":402,"y":1,"w":47,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":47,"h":32},
+	"sourceSize": {"w":47,"h":32}
+},
+{
+	"filename": "scientistentist_killGun_imposter9.png",
+	"frame": {"x":638,"y":1,"w":44,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":32},
+	"sourceSize": {"w":44,"h":32}
+},
+{
+	"filename": "scientistentist_killGun_imposter10.png",
+	"frame": {"x":638,"y":1,"w":44,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":32},
+	"sourceSize": {"w":44,"h":32}
+},
+{
+	"filename": "scientistentist_killGun_imposter11.png",
+	"frame": {"x":638,"y":1,"w":44,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":32},
+	"sourceSize": {"w":44,"h":32}
+},
+{
+	"filename": "scientistentist_killGun_imposter12.png",
+	"frame": {"x":135,"y":92,"w":40,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":32},
+	"sourceSize": {"w":40,"h":32}
+},
+{
+	"filename": "scientistentist_killGun_imposter13.png",
+	"frame": {"x":449,"y":96,"w":33,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":28},
+	"sourceSize": {"w":33,"h":28}
+},
+{
+	"filename": "scientistentist_killGun_imposter14.png",
+	"frame": {"x":450,"y":65,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_imposter15.png",
+	"frame": {"x":450,"y":65,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_imposter16.png",
+	"frame": {"x":450,"y":65,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_imposter17.png",
+	"frame": {"x":450,"y":65,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_imposter18.png",
+	"frame": {"x":450,"y":65,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_imposter19.png",
+	"frame": {"x":450,"y":65,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_imposter20.png",
+	"frame": {"x":450,"y":65,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_imposter21.png",
+	"frame": {"x":450,"y":65,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_imposter22.png",
+	"frame": {"x":450,"y":65,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_imposter23.png",
+	"frame": {"x":450,"y":65,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_imposter24.png",
+	"frame": {"x":450,"y":65,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_imposter25.png",
+	"frame": {"x":450,"y":65,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_imposter26.png",
+	"frame": {"x":450,"y":65,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_imposter27.png",
+	"frame": {"x":450,"y":65,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_imposter28.png",
+	"frame": {"x":450,"y":65,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_imposter29.png",
+	"frame": {"x":450,"y":65,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_imposter30.png",
+	"frame": {"x":450,"y":65,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_imposter31.png",
+	"frame": {"x":450,"y":65,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_imposter32.png",
+	"frame": {"x":450,"y":65,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_imposter33.png",
+	"frame": {"x":450,"y":65,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_imposter34.png",
+	"frame": {"x":450,"y":65,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_imposter35.png",
+	"frame": {"x":450,"y":65,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_imposter36.png",
+	"frame": {"x":450,"y":65,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_imposter37.png",
+	"frame": {"x":450,"y":65,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_imposter38.png",
+	"frame": {"x":450,"y":65,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_imposter39.png",
+	"frame": {"x":450,"y":65,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_imposter40.png",
+	"frame": {"x":450,"y":65,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_imposter41.png",
+	"frame": {"x":450,"y":65,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_imposter42.png",
+	"frame": {"x":450,"y":65,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_imposter43.png",
+	"frame": {"x":450,"y":65,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_imposter44.png",
+	"frame": {"x":450,"y":65,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_imposter45.png",
+	"frame": {"x":450,"y":65,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_imposter46.png",
+	"frame": {"x":450,"y":65,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_imposter47.png",
+	"frame": {"x":450,"y":65,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_imposter48.png",
+	"frame": {"x":450,"y":65,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_victim1.png",
+	"frame": {"x":608,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_victim2.png",
+	"frame": {"x":608,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_victim3.png",
+	"frame": {"x":608,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_victim4.png",
+	"frame": {"x":608,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_victim5.png",
+	"frame": {"x":608,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_victim6.png",
+	"frame": {"x":608,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_victim7.png",
+	"frame": {"x":608,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_victim8.png",
+	"frame": {"x":229,"y":38,"w":41,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":29},
+	"sourceSize": {"w":41,"h":29}
+},
+{
+	"filename": "scientistentist_killGun_victim9.png",
+	"frame": {"x":1134,"y":32,"w":40,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":35},
+	"sourceSize": {"w":40,"h":35}
+},
+{
+	"filename": "scientistentist_killGun_victim10.png",
+	"frame": {"x":51,"y":86,"w":40,"h":38},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":38},
+	"sourceSize": {"w":40,"h":38}
+},
+{
+	"filename": "scientistentist_killGun_victim11.png",
+	"frame": {"x":179,"y":69,"w":33,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":21},
+	"sourceSize": {"w":33,"h":21}
+},
+{
+	"filename": "scientistentist_killGun_victim12.png",
+	"frame": {"x":861,"y":92,"w":29,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":25},
+	"sourceSize": {"w":29,"h":25}
+},
+{
+	"filename": "scientistentist_killGun_victim13.png",
+	"frame": {"x":537,"y":36,"w":29,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":26},
+	"sourceSize": {"w":29,"h":26}
+},
+{
+	"filename": "scientistentist_killGun_victim14.png",
+	"frame": {"x":892,"y":96,"w":28,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":25},
+	"sourceSize": {"w":28,"h":25}
+},
+{
+	"filename": "scientistentist_killGun_victim15.png",
+	"frame": {"x":922,"y":96,"w":28,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":26},
+	"sourceSize": {"w":28,"h":26}
+},
+{
+	"filename": "scientistentist_killGun_victim16.png",
+	"frame": {"x":922,"y":96,"w":28,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":26},
+	"sourceSize": {"w":28,"h":26}
+},
+{
+	"filename": "scientistentist_killGun_victim17.png",
+	"frame": {"x":922,"y":96,"w":28,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":26},
+	"sourceSize": {"w":28,"h":26}
+},
+{
+	"filename": "scientistentist_killGun_victim18.png",
+	"frame": {"x":922,"y":96,"w":28,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":26},
+	"sourceSize": {"w":28,"h":26}
+},
+{
+	"filename": "scientistentist_killGun_victim19.png",
+	"frame": {"x":922,"y":96,"w":28,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":26},
+	"sourceSize": {"w":28,"h":26}
+},
+{
+	"filename": "scientistentist_killGun_victim20.png",
+	"frame": {"x":922,"y":96,"w":28,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":26},
+	"sourceSize": {"w":28,"h":26}
+},
+{
+	"filename": "scientistentist_killGun_victim21.png",
+	"frame": {"x":922,"y":96,"w":28,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":26},
+	"sourceSize": {"w":28,"h":26}
+},
+{
+	"filename": "scientistentist_killGun_victim22.png",
+	"frame": {"x":829,"y":92,"w":30,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":24},
+	"sourceSize": {"w":30,"h":24}
+},
+{
+	"filename": "scientistentist_killGun_victim23.png",
+	"frame": {"x":829,"y":92,"w":30,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":24},
+	"sourceSize": {"w":30,"h":24}
+},
+{
+	"filename": "scientistentist_killGun_victim24.png",
+	"frame": {"x":684,"y":1,"w":53,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":53,"h":22},
+	"sourceSize": {"w":53,"h":22}
+},
+{
+	"filename": "scientistentist_killGun_victim25.png",
+	"frame": {"x":684,"y":1,"w":53,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":53,"h":22},
+	"sourceSize": {"w":53,"h":22}
+},
+{
+	"filename": "scientistentist_killGun_victim26.png",
+	"frame": {"x":739,"y":1,"w":53,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":53,"h":22},
+	"sourceSize": {"w":53,"h":22}
+},
+{
+	"filename": "scientistentist_killGun_victim27.png",
+	"frame": {"x":794,"y":1,"w":53,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":53,"h":21},
+	"sourceSize": {"w":53,"h":21}
+},
+{
+	"filename": "scientistentist_killGun_victim28.png",
+	"frame": {"x":794,"y":1,"w":53,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":53,"h":21},
+	"sourceSize": {"w":53,"h":21}
+},
+{
+	"filename": "scientistentist_killGun_victim29.png",
+	"frame": {"x":794,"y":1,"w":53,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":53,"h":21},
+	"sourceSize": {"w":53,"h":21}
+},
+{
+	"filename": "scientistentist_killGun_victim30.png",
+	"frame": {"x":794,"y":1,"w":53,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":53,"h":21},
+	"sourceSize": {"w":53,"h":21}
+},
+{
+	"filename": "scientistentist_killGun_victim31.png",
+	"frame": {"x":794,"y":1,"w":53,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":53,"h":21},
+	"sourceSize": {"w":53,"h":21}
+},
+{
+	"filename": "scientistentist_killGun_victim32.png",
+	"frame": {"x":794,"y":1,"w":53,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":53,"h":21},
+	"sourceSize": {"w":53,"h":21}
+},
+{
+	"filename": "scientistentist_killGun_victim33.png",
+	"frame": {"x":214,"y":69,"w":41,"h":17},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":17},
+	"sourceSize": {"w":41,"h":17}
+},
+{
+	"filename": "scientistentist_killGun_victim34.png",
+	"frame": {"x":104,"y":36,"w":37,"h":18},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":18},
+	"sourceSize": {"w":37,"h":18}
+},
+{
+	"filename": "scientistentist_killGun_victim35.png",
+	"frame": {"x":104,"y":36,"w":37,"h":18},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":18},
+	"sourceSize": {"w":37,"h":18}
+},
+{
+	"filename": "scientistentist_killGun_victim36.png",
+	"frame": {"x":104,"y":36,"w":37,"h":18},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":18},
+	"sourceSize": {"w":37,"h":18}
+},
+{
+	"filename": "scientistentist_killGun_victim37.png",
+	"frame": {"x":104,"y":36,"w":37,"h":18},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":18},
+	"sourceSize": {"w":37,"h":18}
+},
+{
+	"filename": "scientistentist_killGun_victim38.png",
+	"frame": {"x":104,"y":36,"w":37,"h":18},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":18},
+	"sourceSize": {"w":37,"h":18}
+},
+{
+	"filename": "scientistentist_killGun_victim39.png",
+	"frame": {"x":104,"y":36,"w":37,"h":18},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":18},
+	"sourceSize": {"w":37,"h":18}
+},
+{
+	"filename": "scientistentist_killGun_victim40.png",
+	"frame": {"x":104,"y":36,"w":37,"h":18},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":18},
+	"sourceSize": {"w":37,"h":18}
+},
+{
+	"filename": "scientistentist_killGun_victim41.png",
+	"frame": {"x":104,"y":36,"w":37,"h":18},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":18},
+	"sourceSize": {"w":37,"h":18}
+},
+{
+	"filename": "scientistentist_killGun_victim42.png",
+	"frame": {"x":104,"y":36,"w":37,"h":18},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":18},
+	"sourceSize": {"w":37,"h":18}
+},
+{
+	"filename": "scientistentist_killGun_victim43.png",
+	"frame": {"x":104,"y":36,"w":37,"h":18},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":18},
+	"sourceSize": {"w":37,"h":18}
+},
+{
+	"filename": "scientistentist_killGun_victim44.png",
+	"frame": {"x":104,"y":36,"w":37,"h":18},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":18},
+	"sourceSize": {"w":37,"h":18}
+},
+{
+	"filename": "scientistentist_killGun_victim45.png",
+	"frame": {"x":104,"y":36,"w":37,"h":18},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":18},
+	"sourceSize": {"w":37,"h":18}
+},
+{
+	"filename": "scientistentist_killGun_victim46.png",
+	"frame": {"x":104,"y":36,"w":37,"h":18},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":18},
+	"sourceSize": {"w":37,"h":18}
+},
+{
+	"filename": "scientistentist_killGun_victim47.png",
+	"frame": {"x":104,"y":36,"w":37,"h":18},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":18},
+	"sourceSize": {"w":37,"h":18}
+},
+{
+	"filename": "scientistentist_killGun_victim48.png",
+	"frame": {"x":104,"y":36,"w":37,"h":18},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":18},
+	"sourceSize": {"w":37,"h":18}
+},
+{
+	"filename": "scientistentist_killNeck_imposter1.png",
+	"frame": {"x":643,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_imposter2.png",
+	"frame": {"x":643,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_imposter3.png",
+	"frame": {"x":413,"y":96,"w":34,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":28},
+	"sourceSize": {"w":34,"h":28}
+},
+{
+	"filename": "scientistentist_killNeck_imposter4.png",
+	"frame": {"x":413,"y":96,"w":34,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":28},
+	"sourceSize": {"w":34,"h":28}
+},
+{
+	"filename": "scientistentist_killNeck_imposter5.png",
+	"frame": {"x":307,"y":37,"w":31,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":30},
+	"sourceSize": {"w":31,"h":30}
+},
+{
+	"filename": "scientistentist_killNeck_imposter6.png",
+	"frame": {"x":307,"y":37,"w":31,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":30},
+	"sourceSize": {"w":31,"h":30}
+},
+{
+	"filename": "scientistentist_killNeck_imposter7.png",
+	"frame": {"x":577,"y":62,"w":29,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":30},
+	"sourceSize": {"w":29,"h":30}
+},
+{
+	"filename": "scientistentist_killNeck_imposter8.png",
+	"frame": {"x":577,"y":62,"w":29,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":30},
+	"sourceSize": {"w":29,"h":30}
+},
+{
+	"filename": "scientistentist_killNeck_imposter9.png",
+	"frame": {"x":577,"y":62,"w":29,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":30},
+	"sourceSize": {"w":29,"h":30}
+},
+{
+	"filename": "scientistentist_killNeck_imposter10.png",
+	"frame": {"x":424,"y":36,"w":34,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":27},
+	"sourceSize": {"w":34,"h":27}
+},
+{
+	"filename": "scientistentist_killNeck_imposter11.png",
+	"frame": {"x":424,"y":36,"w":34,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":27},
+	"sourceSize": {"w":34,"h":27}
+},
+{
+	"filename": "scientistentist_killNeck_imposter12.png",
+	"frame": {"x":643,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_imposter13.png",
+	"frame": {"x":643,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_imposter14.png",
+	"frame": {"x":643,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_imposter15.png",
+	"frame": {"x":643,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_imposter16.png",
+	"frame": {"x":643,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_imposter17.png",
+	"frame": {"x":643,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_imposter18.png",
+	"frame": {"x":643,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_imposter19.png",
+	"frame": {"x":643,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_imposter20.png",
+	"frame": {"x":643,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_imposter21.png",
+	"frame": {"x":643,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_imposter22.png",
+	"frame": {"x":643,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_imposter23.png",
+	"frame": {"x":643,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_imposter24.png",
+	"frame": {"x":643,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_imposter25.png",
+	"frame": {"x":643,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_imposter26.png",
+	"frame": {"x":643,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_imposter27.png",
+	"frame": {"x":643,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_imposter28.png",
+	"frame": {"x":643,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_imposter29.png",
+	"frame": {"x":643,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_imposter30.png",
+	"frame": {"x":643,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_imposter31.png",
+	"frame": {"x":643,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_imposter32.png",
+	"frame": {"x":643,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_imposter33.png",
+	"frame": {"x":643,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_imposter34.png",
+	"frame": {"x":643,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_imposter35.png",
+	"frame": {"x":643,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_imposter36.png",
+	"frame": {"x":643,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_imposter37.png",
+	"frame": {"x":643,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_imposter38.png",
+	"frame": {"x":643,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_imposter39.png",
+	"frame": {"x":643,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_imposter40.png",
+	"frame": {"x":643,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_imposter41.png",
+	"frame": {"x":643,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_imposter42.png",
+	"frame": {"x":643,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_imposter43.png",
+	"frame": {"x":643,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_imposter44.png",
+	"frame": {"x":643,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_imposter45.png",
+	"frame": {"x":643,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_imposter46.png",
+	"frame": {"x":643,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_imposter47.png",
+	"frame": {"x":643,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_imposter48.png",
+	"frame": {"x":643,"y":59,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_victim1.png",
+	"frame": {"x":658,"y":90,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_victim2.png",
+	"frame": {"x":658,"y":90,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_victim3.png",
+	"frame": {"x":658,"y":90,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_victim4.png",
+	"frame": {"x":658,"y":90,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_victim5.png",
+	"frame": {"x":658,"y":90,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_victim6.png",
+	"frame": {"x":658,"y":90,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_victim7.png",
+	"frame": {"x":658,"y":90,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_victim8.png",
+	"frame": {"x":658,"y":90,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_victim9.png",
+	"frame": {"x":658,"y":90,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_victim10.png",
+	"frame": {"x":484,"y":65,"w":28,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":31},
+	"sourceSize": {"w":28,"h":31}
+},
+{
+	"filename": "scientistentist_killNeck_victim11.png",
+	"frame": {"x":484,"y":65,"w":28,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":31},
+	"sourceSize": {"w":28,"h":31}
+},
+{
+	"filename": "scientistentist_killNeck_victim12.png",
+	"frame": {"x":658,"y":90,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_victim13.png",
+	"frame": {"x":658,"y":90,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_victim14.png",
+	"frame": {"x":658,"y":90,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_victim15.png",
+	"frame": {"x":658,"y":90,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_victim16.png",
+	"frame": {"x":658,"y":90,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_victim17.png",
+	"frame": {"x":658,"y":90,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "scientistentist_killNeck_victim18.png",
+	"frame": {"x":1215,"y":59,"w":37,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":27},
+	"sourceSize": {"w":37,"h":27}
+},
+{
+	"filename": "scientistentist_killNeck_victim19.png",
+	"frame": {"x":1215,"y":59,"w":37,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":27},
+	"sourceSize": {"w":37,"h":27}
+},
+{
+	"filename": "scientistentist_killNeck_victim20.png",
+	"frame": {"x":762,"y":80,"w":32,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":27},
+	"sourceSize": {"w":32,"h":27}
+},
+{
+	"filename": "scientistentist_killNeck_victim21.png",
+	"frame": {"x":520,"y":97,"w":33,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":27},
+	"sourceSize": {"w":33,"h":27}
+},
+{
+	"filename": "scientistentist_killNeck_victim22.png",
+	"frame": {"x":520,"y":97,"w":33,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":27},
+	"sourceSize": {"w":33,"h":27}
+},
+{
+	"filename": "scientistentist_killNeck_victim23.png",
+	"frame": {"x":520,"y":97,"w":33,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":27},
+	"sourceSize": {"w":33,"h":27}
+},
+{
+	"filename": "scientistentist_killNeck_victim24.png",
+	"frame": {"x":520,"y":97,"w":33,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":27},
+	"sourceSize": {"w":33,"h":27}
+},
+{
+	"filename": "scientistentist_killNeck_victim25.png",
+	"frame": {"x":520,"y":97,"w":33,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":27},
+	"sourceSize": {"w":33,"h":27}
+},
+{
+	"filename": "scientistentist_killNeck_victim26.png",
+	"frame": {"x":520,"y":97,"w":33,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":27},
+	"sourceSize": {"w":33,"h":27}
+},
+{
+	"filename": "scientistentist_killNeck_victim27.png",
+	"frame": {"x":555,"y":97,"w":33,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":27},
+	"sourceSize": {"w":33,"h":27}
+},
+{
+	"filename": "scientistentist_killNeck_victim28.png",
+	"frame": {"x":555,"y":97,"w":33,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":27},
+	"sourceSize": {"w":33,"h":27}
+},
+{
+	"filename": "scientistentist_killNeck_victim29.png",
+	"frame": {"x":484,"y":98,"w":34,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":26},
+	"sourceSize": {"w":34,"h":26}
+},
+{
+	"filename": "scientistentist_killNeck_victim30.png",
+	"frame": {"x":484,"y":98,"w":34,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":26},
+	"sourceSize": {"w":34,"h":26}
+},
+{
+	"filename": "scientistentist_killNeck_victim31.png",
+	"frame": {"x":684,"y":25,"w":42,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":23},
+	"sourceSize": {"w":42,"h":23}
+},
+{
+	"filename": "scientistentist_killNeck_victim32.png",
+	"frame": {"x":678,"y":68,"w":37,"h":19},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":19},
+	"sourceSize": {"w":37,"h":19}
+},
+{
+	"filename": "scientistentist_killNeck_victim33.png",
+	"frame": {"x":678,"y":68,"w":37,"h":19},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":19},
+	"sourceSize": {"w":37,"h":19}
+},
+{
+	"filename": "scientistentist_killNeck_victim34.png",
+	"frame": {"x":142,"y":69,"w":35,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":21},
+	"sourceSize": {"w":35,"h":21}
+},
+{
+	"filename": "scientistentist_killNeck_victim35.png",
+	"frame": {"x":723,"y":56,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "scientistentist_killNeck_victim36.png",
+	"frame": {"x":723,"y":56,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "scientistentist_killNeck_victim37.png",
+	"frame": {"x":723,"y":56,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "scientistentist_killNeck_victim38.png",
+	"frame": {"x":723,"y":56,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "scientistentist_killNeck_victim39.png",
+	"frame": {"x":723,"y":56,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "scientistentist_killNeck_victim40.png",
+	"frame": {"x":723,"y":56,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "scientistentist_killNeck_victim41.png",
+	"frame": {"x":723,"y":56,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "scientistentist_killNeck_victim42.png",
+	"frame": {"x":723,"y":56,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "scientistentist_killNeck_victim43.png",
+	"frame": {"x":723,"y":56,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "scientistentist_killNeck_victim44.png",
+	"frame": {"x":723,"y":56,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "scientistentist_killNeck_victim45.png",
+	"frame": {"x":723,"y":56,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "scientistentist_killNeck_victim46.png",
+	"frame": {"x":723,"y":56,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "scientistentist_killNeck_victim47.png",
+	"frame": {"x":723,"y":56,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "scientistentist_killNeck_victim48.png",
+	"frame": {"x":723,"y":56,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "scientistentist_killRHM_victim1.png",
+	"frame": {"x":623,"y":90,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killRHM_victim2.png",
+	"frame": {"x":623,"y":90,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killRHM_victim3.png",
+	"frame": {"x":623,"y":90,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killRHM_victim4.png",
+	"frame": {"x":623,"y":90,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killRHM_victim5.png",
+	"frame": {"x":623,"y":90,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killRHM_victim6.png",
+	"frame": {"x":623,"y":90,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killRHM_victim7.png",
+	"frame": {"x":623,"y":90,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killRHM_victim8.png",
+	"frame": {"x":623,"y":90,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killRHM_victim9.png",
+	"frame": {"x":623,"y":90,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killRHM_victim10.png",
+	"frame": {"x":623,"y":90,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_killRHM_victim11.png",
+	"frame": {"x":607,"y":35,"w":39,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":22},
+	"sourceSize": {"w":39,"h":22}
+},
+{
+	"filename": "scientistentist_killRHM_victim12.png",
+	"frame": {"x":607,"y":35,"w":39,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":22},
+	"sourceSize": {"w":39,"h":22}
+},
+{
+	"filename": "scientistentist_killRHM_victim13.png",
+	"frame": {"x":607,"y":35,"w":39,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":22},
+	"sourceSize": {"w":39,"h":22}
+},
+{
+	"filename": "scientistentist_killRHM_victim14.png",
+	"frame": {"x":607,"y":35,"w":39,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":22},
+	"sourceSize": {"w":39,"h":22}
+},
+{
+	"filename": "scientistentist_killRHM_victim15.png",
+	"frame": {"x":607,"y":35,"w":39,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":22},
+	"sourceSize": {"w":39,"h":22}
+},
+{
+	"filename": "scientistentist_killRHM_victim16.png",
+	"frame": {"x":607,"y":35,"w":39,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":22},
+	"sourceSize": {"w":39,"h":22}
+},
+{
+	"filename": "scientistentist_killRHM_victim17.png",
+	"frame": {"x":607,"y":35,"w":39,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":22},
+	"sourceSize": {"w":39,"h":22}
+},
+{
+	"filename": "scientistentist_killRHM_victim18.png",
+	"frame": {"x":607,"y":35,"w":39,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":22},
+	"sourceSize": {"w":39,"h":22}
+},
+{
+	"filename": "scientistentist_killRHM_victim19.png",
+	"frame": {"x":607,"y":35,"w":39,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":22},
+	"sourceSize": {"w":39,"h":22}
+},
+{
+	"filename": "scientistentist_killRHM_victim20.png",
+	"frame": {"x":607,"y":35,"w":39,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":22},
+	"sourceSize": {"w":39,"h":22}
+},
+{
+	"filename": "scientistentist_killRHM_victim21.png",
+	"frame": {"x":607,"y":35,"w":39,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":22},
+	"sourceSize": {"w":39,"h":22}
+},
+{
+	"filename": "scientistentist_killRHM_victim22.png",
+	"frame": {"x":607,"y":35,"w":39,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":22},
+	"sourceSize": {"w":39,"h":22}
+},
+{
+	"filename": "scientistentist_killRHM_victim23.png",
+	"frame": {"x":607,"y":35,"w":39,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":22},
+	"sourceSize": {"w":39,"h":22}
+},
+{
+	"filename": "scientistentist_killRHM_victim24.png",
+	"frame": {"x":607,"y":35,"w":39,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":22},
+	"sourceSize": {"w":39,"h":22}
+},
+{
+	"filename": "scientistentist_killRHM_victim25.png",
+	"frame": {"x":607,"y":35,"w":39,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":22},
+	"sourceSize": {"w":39,"h":22}
+},
+{
+	"filename": "scientistentist_killRHM_victim26.png",
+	"frame": {"x":607,"y":35,"w":39,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":22},
+	"sourceSize": {"w":39,"h":22}
+},
+{
+	"filename": "scientistentist_killRHM_victim27.png",
+	"frame": {"x":607,"y":35,"w":39,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":22},
+	"sourceSize": {"w":39,"h":22}
+},
+{
+	"filename": "scientistentist_killRHM_victim28.png",
+	"frame": {"x":607,"y":35,"w":39,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":22},
+	"sourceSize": {"w":39,"h":22}
+},
+{
+	"filename": "scientistentist_killRHM_victim29.png",
+	"frame": {"x":607,"y":35,"w":39,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":22},
+	"sourceSize": {"w":39,"h":22}
+},
+{
+	"filename": "scientistentist_killRHM_victim30.png",
+	"frame": {"x":607,"y":35,"w":39,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":22},
+	"sourceSize": {"w":39,"h":22}
+},
+{
+	"filename": "scientistentist_killRHM_victim31.png",
+	"frame": {"x":607,"y":35,"w":39,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":22},
+	"sourceSize": {"w":39,"h":22}
+},
+{
+	"filename": "scientistentist_killRHM_victim32.png",
+	"frame": {"x":607,"y":35,"w":39,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":22},
+	"sourceSize": {"w":39,"h":22}
+},
+{
+	"filename": "scientistentist_killRHM_victim33.png",
+	"frame": {"x":607,"y":35,"w":39,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":22},
+	"sourceSize": {"w":39,"h":22}
+},
+{
+	"filename": "scientistentist_killRHM_victim34.png",
+	"frame": {"x":607,"y":35,"w":39,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":22},
+	"sourceSize": {"w":39,"h":22}
+},
+{
+	"filename": "scientistentist_killRHM_victim35.png",
+	"frame": {"x":607,"y":35,"w":39,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":22},
+	"sourceSize": {"w":39,"h":22}
+},
+{
+	"filename": "scientistentist_killRHM_victim36.png",
+	"frame": {"x":607,"y":35,"w":39,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":22},
+	"sourceSize": {"w":39,"h":22}
+},
+{
+	"filename": "scientistentist_killRHM_victim37.png",
+	"frame": {"x":607,"y":35,"w":39,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":22},
+	"sourceSize": {"w":39,"h":22}
+},
+{
+	"filename": "scientistentist_killRHM_victim38.png",
+	"frame": {"x":607,"y":35,"w":39,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":22},
+	"sourceSize": {"w":39,"h":22}
+},
+{
+	"filename": "scientistentist_killRHM_victim39.png",
+	"frame": {"x":607,"y":35,"w":39,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":22},
+	"sourceSize": {"w":39,"h":22}
+},
+{
+	"filename": "scientistentist_killRHM_victim40.png",
+	"frame": {"x":607,"y":35,"w":39,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":22},
+	"sourceSize": {"w":39,"h":22}
+},
+{
+	"filename": "scientistentist_killRHM_victim41.png",
+	"frame": {"x":607,"y":35,"w":39,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":22},
+	"sourceSize": {"w":39,"h":22}
+},
+{
+	"filename": "scientistentist_killRHM_victim42.png",
+	"frame": {"x":607,"y":35,"w":39,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":22},
+	"sourceSize": {"w":39,"h":22}
+},
+{
+	"filename": "scientistentist_killRHM_victim43.png",
+	"frame": {"x":607,"y":35,"w":39,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":22},
+	"sourceSize": {"w":39,"h":22}
+},
+{
+	"filename": "scientistentist_killRHM_victim44.png",
+	"frame": {"x":607,"y":35,"w":39,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":22},
+	"sourceSize": {"w":39,"h":22}
+},
+{
+	"filename": "scientistentist_killRHM_victim45.png",
+	"frame": {"x":607,"y":35,"w":39,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":22},
+	"sourceSize": {"w":39,"h":22}
+},
+{
+	"filename": "scientistentist_killRHM_victim46.png",
+	"frame": {"x":607,"y":35,"w":39,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":22},
+	"sourceSize": {"w":39,"h":22}
+},
+{
+	"filename": "scientistentist_killRHM_victim47.png",
+	"frame": {"x":607,"y":35,"w":39,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":22},
+	"sourceSize": {"w":39,"h":22}
+},
+{
+	"filename": "scientistentist_killRHM_victim48.png",
+	"frame": {"x":607,"y":35,"w":39,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":22},
+	"sourceSize": {"w":39,"h":22}
+},
+{
+	"filename": "scientistentist_Spawn1.png",
+	"frame": {"x":1,"y":40,"w":49,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":49,"h":35},
+	"sourceSize": {"w":49,"h":35}
+},
+{
+	"filename": "scientistentist_Spawn2.png",
+	"frame": {"x":678,"y":59,"w":3,"h":3},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":3,"h":3},
+	"sourceSize": {"w":1,"h":1}
+},
+{
+	"filename": "scientistentist_Spawn3.png",
+	"frame": {"x":1,"y":40,"w":49,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":49,"h":35},
+	"sourceSize": {"w":49,"h":35}
+},
+{
+	"filename": "scientistentist_Spawn4.png",
+	"frame": {"x":678,"y":59,"w":3,"h":3},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":3,"h":3},
+	"sourceSize": {"w":1,"h":1}
+},
+{
+	"filename": "scientistentist_Spawn5.png",
+	"frame": {"x":678,"y":59,"w":3,"h":3},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":3,"h":3},
+	"sourceSize": {"w":1,"h":1}
+},
+{
+	"filename": "scientistentist_Spawn6.png",
+	"frame": {"x":1,"y":77,"w":48,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":48,"h":35},
+	"sourceSize": {"w":48,"h":35}
+},
+{
+	"filename": "scientistentist_Spawn7.png",
+	"frame": {"x":156,"y":1,"w":48,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":48,"h":35},
+	"sourceSize": {"w":48,"h":35}
+},
+{
+	"filename": "scientistentist_Spawn8.png",
+	"frame": {"x":206,"y":1,"w":48,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":48,"h":35},
+	"sourceSize": {"w":48,"h":35}
+},
+{
+	"filename": "scientistentist_Spawn9.png",
+	"frame": {"x":256,"y":1,"w":47,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":47,"h":35},
+	"sourceSize": {"w":47,"h":35}
+},
+{
+	"filename": "scientistentist_Spawn10.png",
+	"frame": {"x":305,"y":1,"w":47,"h":34},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":47,"h":34},
+	"sourceSize": {"w":47,"h":34}
+},
+{
+	"filename": "scientistentist_Spawn11.png",
+	"frame": {"x":354,"y":1,"w":46,"h":34},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":46,"h":34},
+	"sourceSize": {"w":46,"h":34}
+},
+{
+	"filename": "scientistentist_Spawn12.png",
+	"frame": {"x":451,"y":1,"w":45,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":45,"h":33},
+	"sourceSize": {"w":45,"h":33}
+},
+{
+	"filename": "scientistentist_Spawn13.png",
+	"frame": {"x":498,"y":1,"w":45,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":45,"h":33},
+	"sourceSize": {"w":45,"h":33}
+},
+{
+	"filename": "scientistentist_Spawn14.png",
+	"frame": {"x":545,"y":1,"w":45,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":45,"h":32},
+	"sourceSize": {"w":45,"h":32}
+},
+{
+	"filename": "scientistentist_Spawn15.png",
+	"frame": {"x":592,"y":1,"w":44,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":32},
+	"sourceSize": {"w":44,"h":32}
+},
+{
+	"filename": "scientistentist_Spawn16.png",
+	"frame": {"x":896,"y":1,"w":43,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":31},
+	"sourceSize": {"w":43,"h":31}
+},
+{
+	"filename": "scientistentist_Spawn17.png",
+	"frame": {"x":941,"y":1,"w":43,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":31},
+	"sourceSize": {"w":43,"h":31}
+},
+{
+	"filename": "scientistentist_Spawn18.png",
+	"frame": {"x":986,"y":1,"w":43,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":31},
+	"sourceSize": {"w":43,"h":31}
+},
+{
+	"filename": "scientistentist_Spawn19.png",
+	"frame": {"x":1031,"y":1,"w":42,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":30},
+	"sourceSize": {"w":42,"h":30}
+},
+{
+	"filename": "scientistentist_Spawn20.png",
+	"frame": {"x":1075,"y":1,"w":42,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":30},
+	"sourceSize": {"w":42,"h":30}
+},
+{
+	"filename": "scientistentist_Spawn21.png",
+	"frame": {"x":728,"y":25,"w":41,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":29},
+	"sourceSize": {"w":41,"h":29}
+},
+{
+	"filename": "scientistentist_Spawn22.png",
+	"frame": {"x":806,"y":24,"w":41,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":29},
+	"sourceSize": {"w":41,"h":29}
+},
+{
+	"filename": "scientistentist_Spawn23.png",
+	"frame": {"x":849,"y":30,"w":41,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":29},
+	"sourceSize": {"w":41,"h":29}
+},
+{
+	"filename": "scientistentist_Spawn24.png",
+	"frame": {"x":892,"y":34,"w":41,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":29},
+	"sourceSize": {"w":41,"h":29}
+},
+{
+	"filename": "scientistentist_Spawn25.png",
+	"frame": {"x":935,"y":34,"w":41,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":29},
+	"sourceSize": {"w":41,"h":29}
+},
+{
+	"filename": "scientistentist_Spawn26.png",
+	"frame": {"x":978,"y":34,"w":41,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":29},
+	"sourceSize": {"w":41,"h":29}
+},
+{
+	"filename": "scientistentist_Spawn27.png",
+	"frame": {"x":806,"y":55,"w":41,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":29},
+	"sourceSize": {"w":41,"h":29}
+},
+{
+	"filename": "scientistentist_Spawn28.png",
+	"frame": {"x":849,"y":61,"w":41,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":29},
+	"sourceSize": {"w":41,"h":29}
+},
+{
+	"filename": "scientistentist_Spawn29.png",
+	"frame": {"x":892,"y":65,"w":41,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":29},
+	"sourceSize": {"w":41,"h":29}
+},
+{
+	"filename": "scientistentist_Spawn30.png",
+	"frame": {"x":935,"y":65,"w":41,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":29},
+	"sourceSize": {"w":41,"h":29}
+},
+{
+	"filename": "scientistentist_Spawn31.png",
+	"frame": {"x":978,"y":65,"w":41,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":29},
+	"sourceSize": {"w":41,"h":29}
+},
+{
+	"filename": "scientistentist_Spawn32.png",
+	"frame": {"x":1172,"y":70,"w":41,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":29},
+	"sourceSize": {"w":41,"h":29}
+},
+{
+	"filename": "scientistentist_Spawn33.png",
+	"frame": {"x":143,"y":38,"w":41,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":29},
+	"sourceSize": {"w":41,"h":29}
+},
+{
+	"filename": "scientistentist_Spawn34.png",
+	"frame": {"x":186,"y":38,"w":41,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":29},
+	"sourceSize": {"w":41,"h":29}
+},
+{
+	"filename": "scientistentist_Spawn35.png",
+	"frame": {"x":186,"y":38,"w":41,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":29},
+	"sourceSize": {"w":41,"h":29}
+},
+{
+	"filename": "scientistentist_Spawn36.png",
+	"frame": {"x":259,"y":96,"w":41,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":28},
+	"sourceSize": {"w":41,"h":28}
+},
+{
+	"filename": "scientistentist_Spawn37.png",
+	"frame": {"x":1119,"y":1,"w":43,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":29},
+	"sourceSize": {"w":43,"h":29}
+},
+{
+	"filename": "scientistentist_Spawn38.png",
+	"frame": {"x":1119,"y":1,"w":43,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":29},
+	"sourceSize": {"w":43,"h":29}
+},
+{
+	"filename": "scientistentist_Spawn39.png",
+	"frame": {"x":1164,"y":1,"w":42,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":29},
+	"sourceSize": {"w":42,"h":29}
+},
+{
+	"filename": "scientistentist_Spawn40.png",
+	"frame": {"x":1164,"y":1,"w":42,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":29},
+	"sourceSize": {"w":42,"h":29}
+},
+{
+	"filename": "scientistentist_Spawn41.png",
+	"frame": {"x":1208,"y":1,"w":44,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":24},
+	"sourceSize": {"w":44,"h":24}
+},
+{
+	"filename": "scientistentist_Spawn42.png",
+	"frame": {"x":1208,"y":1,"w":44,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":24},
+	"sourceSize": {"w":44,"h":24}
+},
+{
+	"filename": "scientistentist_Spawn43.png",
+	"frame": {"x":1,"y":1,"w":49,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":49,"h":37},
+	"sourceSize": {"w":49,"h":37}
+},
+{
+	"filename": "scientistentist_Spawn44.png",
+	"frame": {"x":52,"y":1,"w":50,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":35},
+	"sourceSize": {"w":50,"h":35}
+},
+{
+	"filename": "scientistentist_Spawn45.png",
+	"frame": {"x":52,"y":1,"w":50,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":35},
+	"sourceSize": {"w":50,"h":35}
+},
+{
+	"filename": "scientistentist_Spawn46.png",
+	"frame": {"x":104,"y":1,"w":50,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":33},
+	"sourceSize": {"w":50,"h":33}
+},
+{
+	"filename": "scientistentist_Spawn47.png",
+	"frame": {"x":104,"y":1,"w":50,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":33},
+	"sourceSize": {"w":50,"h":33}
+},
+{
+	"filename": "scientistentist_Spawn48.png",
+	"frame": {"x":52,"y":38,"w":49,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":49,"h":35},
+	"sourceSize": {"w":49,"h":35}
+},
+{
+	"filename": "scientistentist_Spawn49.png",
+	"frame": {"x":1215,"y":88,"w":37,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":26},
+	"sourceSize": {"w":37,"h":26}
+},
+{
+	"filename": "scientistentist_Spawn50.png",
+	"frame": {"x":1215,"y":88,"w":37,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":26},
+	"sourceSize": {"w":37,"h":26}
+},
+{
+	"filename": "scientistentist_Spawn51.png",
+	"frame": {"x":340,"y":96,"w":35,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":28},
+	"sourceSize": {"w":35,"h":28}
+},
+{
+	"filename": "scientistentist_Spawn52.png",
+	"frame": {"x":380,"y":65,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_Spawn53.png",
+	"frame": {"x":380,"y":65,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_Spawn54.png",
+	"frame": {"x":380,"y":65,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_Spawn55.png",
+	"frame": {"x":380,"y":65,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "scientistentist_Vententer1.png",
+	"frame": {"x":590,"y":94,"w":31,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":29},
+	"sourceSize": {"w":31,"h":29}
+},
+{
+	"filename": "scientistentist_Vententer2.png",
+	"frame": {"x":302,"y":96,"w":36,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":28},
+	"sourceSize": {"w":36,"h":28}
+},
+{
+	"filename": "scientistentist_Vententer3.png",
+	"frame": {"x":383,"y":37,"w":39,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":26},
+	"sourceSize": {"w":39,"h":26}
+},
+{
+	"filename": "scientistentist_Vententer4.png",
+	"frame": {"x":383,"y":37,"w":39,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":26},
+	"sourceSize": {"w":39,"h":26}
+},
+{
+	"filename": "scientistentist_Vententer5.png",
+	"frame": {"x":383,"y":37,"w":39,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":26},
+	"sourceSize": {"w":39,"h":26}
+},
+{
+	"filename": "scientistentist_Vententer6.png",
+	"frame": {"x":496,"y":36,"w":39,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":26},
+	"sourceSize": {"w":39,"h":26}
+},
+{
+	"filename": "scientistentist_Vententer7.png",
+	"frame": {"x":683,"y":50,"w":38,"h":16},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":16},
+	"sourceSize": {"w":38,"h":16}
+},
+{
+	"filename": "scientistentist_Walk1.png",
+	"frame": {"x":849,"y":1,"w":45,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":45,"h":27},
+	"sourceSize": {"w":45,"h":27}
+},
+{
+	"filename": "scientistentist_Walk2.png",
+	"frame": {"x":849,"y":1,"w":45,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":45,"h":27},
+	"sourceSize": {"w":45,"h":27}
+},
+{
+	"filename": "scientistentist_Walk3.png",
+	"frame": {"x":849,"y":1,"w":45,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":45,"h":27},
+	"sourceSize": {"w":45,"h":27}
+},
+{
+	"filename": "scientistentist_Walk4.png",
+	"frame": {"x":849,"y":1,"w":45,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":45,"h":27},
+	"sourceSize": {"w":45,"h":27}
+},
+{
+	"filename": "scientistentist_Walk5.png",
+	"frame": {"x":377,"y":96,"w":34,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":28},
+	"sourceSize": {"w":34,"h":28}
+},
+{
+	"filename": "scientistentist_Walk6.png",
+	"frame": {"x":377,"y":96,"w":34,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":28},
+	"sourceSize": {"w":34,"h":28}
+},
+{
+	"filename": "scientistentist_Walk7.png",
+	"frame": {"x":1212,"y":27,"w":40,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":30},
+	"sourceSize": {"w":40,"h":30}
+},
+{
+	"filename": "scientistentist_Walk8.png",
+	"frame": {"x":1212,"y":27,"w":40,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":30},
+	"sourceSize": {"w":40,"h":30}
+},
+{
+	"filename": "scientistentist_Walk9.png",
+	"frame": {"x":1212,"y":27,"w":40,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":30},
+	"sourceSize": {"w":40,"h":30}
+},
+{
+	"filename": "scientistentist_Walk10.png",
+	"frame": {"x":1212,"y":27,"w":40,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":30},
+	"sourceSize": {"w":40,"h":30}
+},
+{
+	"filename": "scientistentist_Walk11.png",
+	"frame": {"x":1136,"y":69,"w":34,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":30},
+	"sourceSize": {"w":34,"h":30}
+},
+{
+	"filename": "scientistentist_Walk12.png",
+	"frame": {"x":1136,"y":69,"w":34,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":30},
+	"sourceSize": {"w":34,"h":30}
+}],
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "scientist.png",
+	"format": "RGBA8888",
+	"size": {"w":1253,"h":125},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:8d4a14d220055be0a64418c282488752:922a4d5f0c8dd209f97dd8a955caf7f3:0bc3e87d63a3b173d85565eec90a1738$"
+}
+}
