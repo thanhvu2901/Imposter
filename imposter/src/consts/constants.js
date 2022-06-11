@@ -22,6 +22,17 @@ export const PLAYER_PURPLE = "player_base_purple";
 export const PLAYER_YELLOW = "player_base_yellow";
 export const PLAYER_PINK = "player_base_pink";
 
+//Pants skins
+//With Mirror
+export const ARCHAEOLOGIST = "archaeologist";
+export const POLICE = "police";
+export const SECGUARD = "secguard";
+export const WALL = "wall";
+export const CCC = "ccc";
+
+//Without Mirror
+export const HAZMAT = "hazmat";
+
 //Pets
 export const BEDCRAB = "bedcrab"
 export const BSLUG = "bslug";

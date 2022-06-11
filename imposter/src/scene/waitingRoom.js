@@ -5,14 +5,19 @@ import lobby from "../assets/tilemaps/lobby.json";
 import playerpng from "../assets/player/player_sprite/player_color/player_base.png";
 import playerjson from "../assets/player/player_sprite/player_color/player_base.json";
 
-// SKINS
-import Archaeologist_Walk_png from "../assets/player/player_sprite/pants/Archaeologist_Walk.png";
-import Archaeologist_Walk_json from "../assets/player/player_sprite/pants/Archaeologist_Walk.json";
+/* *****SKINS***** */
+//PANTS
+import archaeologistpng from "../assets/player/player_sprite/pants/archaeologist.png";
+import archaeologistjson from "../assets/player/player_sprite/pants/archaeologist.json";
+import policepng from "../assets/player/player_sprite/pants/police.png";
+import policejson from "../assets/player/player_sprite/pants/police.json";
+import hazmatpng from "../assets/player/player_sprite/pants/hazmat.png";
+import hazmatjson from "../assets/player/player_sprite/pants/hazmat.json";
+
+//HAT
 import hat1 from "../assets/player/preload_assets/skin/hat/hats0005.png";
 
-import { PLAYER_SPEED } from "../consts/constants";
-
-// Player color
+/* *****PLAYER COLORS***** */
 import playerpng_red from "../assets/player/player_sprite/player_color/player_base_red.png";
 import playerjson_red from "../assets/player/player_sprite/player_color/player_base_red.json";
 import playerpng_blue from "../assets/player/player_sprite/player_color/player_base_blue.png";
@@ -39,6 +44,7 @@ import playerpng_pink from "../assets/player/player_sprite/player_color/player_b
 import playerjson_pink from "../assets/player/player_sprite/player_color/player_base_pink.json";
 
 import {
+  PLAYER_SPEED,
   PLAYER_BLUE,
   PLAYER_RED,
   PLAYER_BLUE_DARK,
@@ -62,6 +68,12 @@ import {
   STICKMIN,
   TWITCH,
   UFO,
+  ARCHAEOLOGIST,
+  POLICE,
+  SECGUARD,
+  WALL,
+  CCC,
+  HAZMAT,
 } from "../consts/constants";
 import eventsCenter from "./eventsCenter";
 
@@ -87,19 +99,22 @@ import twitchjson from "../assets/player/pet_sprite/twitch.json";
 import twitchpng from "../assets/player/pet_sprite/twitch.png";
 import ufojson from "../assets/player/pet_sprite/ufo.json";
 import ufopng from "../assets/player/pet_sprite/ufo.png";
-let player;
-let pants_skin, hat_skin;
-let cursors;
-var player_container;
 
+let cursors;
 let otherPlayer = new Array();
 let otherPlayerId = new Array();
 let pressedKeys = [];
-let stt = 0;
-var color = "";
 let defaultPlayer = {};
+let stt = 0;
+
+let player, pants_skin, hat_skin;
+var color = "";
 let pet = null;
-let pet_type;
+var pet_type, pants_type, hat_type;
+var player_container;
+var isLeft = false;
+var isMirror = false;
+
 export default class waitingRoom extends Phaser.Scene {
   constructor() {
     super({
@@ -160,10 +175,13 @@ export default class waitingRoom extends Phaser.Scene {
     this.load.atlas(PLAYER_YELLOW, playerpng_yellow, playerjson_yellow);
 
     this.load.atlas(
-      "archaeologist_pants",
-      Archaeologist_Walk_png,
-      Archaeologist_Walk_json
+      `${ARCHAEOLOGIST}_pants`,
+      archaeologistpng,
+      archaeologistjson
     );
+
+    this.load.atlas(`${POLICE}_pants`, policepng, policejson);
+    this.load.atlas(`${HAZMAT}_pants`, hazmatpng, hazmatjson);
 
     this.load.image("hat", hat1);
 
@@ -205,11 +223,12 @@ export default class waitingRoom extends Phaser.Scene {
     defaultPlayer.player = player;
     this.playerChangedSkin = defaultPlayer;
 
+    pants_type = POLICE;
     pants_skin = this.physics.add.sprite(
-      player.x,
-      player.y + 12,
-      "archaeologist_pants",
-      "Archaeologist_Spawn55.png"
+      player.x + 0.75,
+      player.y + 10,
+      `${pants_type}_pants`,
+      `${pants_type}_Idle.png`
     );
 
     hat_skin = this.physics.add.sprite(player.x, player.y - 25, "hat", 0);
@@ -322,16 +341,6 @@ export default class waitingRoom extends Phaser.Scene {
       frameRate: 16,
     });
 
-    this.input.keyboard.on("keydown", (e) => {
-      if (
-        e.code == "ArrowDown" ||
-        e.code == "ArrowUp" ||
-        e.code == "ArrowRight" ||
-        e.code == "ArrowLeft"
-      ) {
-        this.sound.play("walk", { loop: true });
-      }
-    });
     //Red
     this.anims.create({
       key: "player-walk_red",
@@ -769,12 +778,13 @@ export default class waitingRoom extends Phaser.Scene {
 
     /* *********************CREATING ANIMATIONS FOR SKINS********************* */
 
+    //For skis that don't have mirror animations
     this.anims.create({
-      key: "archaeologist_walk",
-      frames: this.anims.generateFrameNames("archaeologist_pants", {
+      key: `${pants_type}_walk`,
+      frames: this.anims.generateFrameNames(`${pants_type}_pants`, {
         start: 1,
         end: 12,
-        prefix: "Archaeologist_Walk",
+        prefix: `${pants_type}_Walk`,
         suffix: ".png",
       }),
       repeat: -1,
@@ -782,22 +792,64 @@ export default class waitingRoom extends Phaser.Scene {
     });
 
     this.anims.create({
-      key: "archaeologist_idle",
+      key: `${pants_type}_idle`,
       frames: [
         {
-          key: "archaeologist_pants",
-          frame: "Archaeologist_Spawn55.png",
+          key: `${pants_type}_pants`,
+          frame: `${pants_type}_Idle.png`,
         },
       ],
     });
 
-    //input to control
+    //For skins that have mirror animations
+    if (
+      pants_type == POLICE ||
+      pants_type == ARCHAEOLOGIST ||
+      pants_type == SECGUARD ||
+      pants_type == WALL ||
+      pants_type == CCC
+    ) {
+      isMirror = true;
+      this.anims.create({
+        key: `${pants_type}_walkMirror`,
+        frames: this.anims.generateFrameNames(`${pants_type}_pants`, {
+          start: 1,
+          end: 12,
+          prefix: `${pants_type}_WalkMirror`,
+          suffix: ".png",
+        }),
+        repeat: -1,
+        frameRate: 16,
+      });
+
+      this.anims.create({
+        key: `${pants_type}_idleMirror`,
+        frames: [
+          {
+            key: `${pants_type}_pants`,
+            frame: `${pants_type}_IdleMirror.png`,
+          },
+        ],
+      });
+    } else isMirror = false;
+
+    //Sound Effects
     this.input.keyboard.on("keyup", (e) => {
       this.sound.stopByKey("walk");
 
       pressedKeys = pressedKeys.filter((key) => key !== e.code);
     });
 
+    this.input.keyboard.on("keydown", (e) => {
+      if (
+        e.code == "ArrowDown" ||
+        e.code == "ArrowUp" ||
+        e.code == "ArrowRight" ||
+        e.code == "ArrowLeft"
+      ) {
+        this.sound.play("walk", { loop: true });
+      }
+    });
 
     //Add collider with player and set camera to follow player
     this.physics.add.collider(player_container, lobby_tileset);
@@ -1221,11 +1273,10 @@ export default class waitingRoom extends Phaser.Scene {
     //   ///  console.log(dataResume.test);
 
     // })
-
-    //pants_skin.anims.play("archaeologist_walk");
   }
 
   update() {
+    isLeft == true && isMirror == true ? pants_skin.setPosition(player.x, player.y + 10) : null;
     if (pet) {
       pet.setPosition(player.x + 50, player.y + 10);
     }
@@ -1243,7 +1294,13 @@ export default class waitingRoom extends Phaser.Scene {
         pet.anims.play(`${pet_type}-idle`);
       }
       player.anims.play("player-idle_" + suffix);
-      pants_skin.anims.play("archaeologist_idle");
+      if (isMirror) {
+        isLeft == true
+        ? pants_skin.anims.play(`${pants_type}_idleMirror`)
+        : pants_skin.anims.play(`${pants_type}_idle`);
+      } else {
+        pants_skin.anims.play(`${pants_type}_idle`);
+      }
     }
 
     // when move
@@ -1252,30 +1309,32 @@ export default class waitingRoom extends Phaser.Scene {
         pet.anims.play(`${pet_type}-walk`, true);
         pet.scaleX = -1;
       }
+      isLeft = true;
       player.anims.play("player-walk_" + suffix, true);
-      pants_skin.anims.play("archaeologist_walk", true);
+      if (isMirror) {
+        pants_skin.anims.play(`${pants_type}_walkMirror`, true);
+      } else {
+        pants_skin.anims.play(`${pants_type}_walk`, true);
+        pants_skin.scaleX = -1;
+      }
       player_container.body.setVelocityX(-PLAYER_SPEED);
-      // player.setVelocityX(-PLAYER_SPEED);
       player.scaleX = -1;
       player.body.offset.x = 40;
-      pants_skin.scaleX = -1;
       hat_skin.scaleX = -1;
-      // player_container.body.offset.x = 40;
       playerMoved = true;
     } else if (cursors.right.isDown) {
       if (pet) {
         pet.anims.play(`${pet_type}-walk`, true);
         pet.scaleX = 1;
       }
+      isLeft = false;
       player.anims.play("player-walk_" + suffix, true);
-      pants_skin.anims.play("archaeologist_walk", true);
+      pants_skin.anims.play(`${pants_type}_walk`, true);
       player_container.body.setVelocityX(PLAYER_SPEED);
-      // player.setVelocityX(PLAYER_SPEED);
+      isMirror == false ? pants_skin.scaleX = 1 : null;
       player.scaleX = 1;
       player.body.offset.x = 0;
-      pants_skin.scaleX = 1;
       hat_skin.scaleX = 1;
-      // player_container.body.offset.x = 0;
       playerMoved = true;
     }
 
@@ -1284,18 +1343,20 @@ export default class waitingRoom extends Phaser.Scene {
         pet.anims.play(`${pet_type}-walk`, true);
       }
       player.anims.play("player-walk_" + suffix, true);
-      pants_skin.anims.play("archaeologist_walk", true);
+      isLeft == true && isMirror == true
+        ? pants_skin.anims.play(`${pants_type}_walkMirror`, true)
+        : pants_skin.anims.play(`${pants_type}_walk`, true);
       player_container.body.setVelocityY(-PLAYER_SPEED);
-      // player.setVelocityY(-PLAYER_SPEED);
       playerMoved = true;
     } else if (cursors.down.isDown) {
       if (pet) {
         pet.anims.play(`${pet_type}-walk`, true);
       }
       player.anims.play("player-walk_" + suffix, true);
-      pants_skin.anims.play("archaeologist_walk", true);
+      isLeft == true && isMirror == true
+        ? pants_skin.anims.play(`${pants_type}_walkMirror`, true)
+        : pants_skin.anims.play(`${pants_type}_walk`, true);
       player_container.body.setVelocityY(PLAYER_SPEED);
-      // player.setVelocityY(PLAYER_SPEED);
       playerMoved = true;
     }
 
