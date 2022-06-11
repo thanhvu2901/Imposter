@@ -504,9 +504,13 @@ export default class waitingRoom extends Phaser.Scene {
       // this.physics.resume();
       // STATE
 
+      //set player color AGAIN
+      let colorPlayer = states.players[this.socket.id].color;
+      console.log("color" + colorPlayer);
+      player.destroy()
       // let playercolor = (Object(states).players)[this.socket].color
-      // player = this.physics.add.sprite(-45, 26, 'player-idle_' + playercolor, "idle.png");
-      // color = playercolor;
+      player = this.physics.add.sprite(-45, 26, 'player-idle_' + colorPlayer, "idle.png");
+      color = colorPlayer;
 
 
       this.state.roomKey = states.roomKey;
@@ -536,14 +540,19 @@ export default class waitingRoom extends Phaser.Scene {
         });
       }
     });
-
+    //update skin current in room
+    this.socket.on('changeSkin', ({ color, id }) => {
+      let index = otherPlayerId.findIndex((Element) => Element == id)
+      otherPlayer[index].destroy();
+      otherPlayer[index] = this.physics.add.sprite(-45, 26, 'player_base_' + color, "idle.png");
+    })
     this.socket.on("currentPlayers", ({ players, numPlayers, roomInfo }) => {
 
       for (let i = 0; i < numPlayers; i++) {
         if (this.socket.id !== Object.keys(players)[i]) {
 
           otherPlayerId.push(Object.keys(players)[i]);
-          console.log(Object.values(players)[i].color);
+
           otherPlayer[stt] = this.physics.add.sprite(
             Object.values(players)[i].x,
             Object.values(players)[i].y,
@@ -555,14 +564,6 @@ export default class waitingRoom extends Phaser.Scene {
       }
       // console.log(otherPlayerId);
     });
-
-    //update skin current in room
-    this.socket.on('changeSkin', ({ color, id }) => {
-      let index = otherPlayerId.findIndex((Element) => Element == id)
-      otherPlayer[index].destroy();
-      otherPlayer[index] = this.physics.add.sprite(-45, 26, 'player_base_' + color, "idle.png");
-    })
-
 
     this.socket.on("newPlayer", ({ playerInfo, numPlayers }) => {
       // listplyer socket có khác với tại local khong
