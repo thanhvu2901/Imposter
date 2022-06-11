@@ -158,7 +158,9 @@ export default class waitingRoom extends Phaser.Scene {
     color = "blue";
 
 
+    this.physics.add.collider(player, lobby_tileset);
 
+    this.cameras.main.startFollow(player, true);
 
 
     defaultPlayer.player = player;
@@ -171,16 +173,6 @@ export default class waitingRoom extends Phaser.Scene {
     //   "Archaeologist_Spawn0051.png"
     // );
     // tạo theo số lượng other player vào
-
-    // for (let i = 0; i < otherPlayerId.length; i++) {
-    //   otherPlayer[i] = this.physics.add.sprite(
-    //     -45 + 20 * i,
-    //     26 + 20 * i,
-    //     "playerbase",
-    //     "idle.png"
-    //   );
-    // }
-    // stt = otherPlayer.length;
 
     this.anims.create({
       key: "player-idle",
@@ -493,9 +485,7 @@ export default class waitingRoom extends Phaser.Scene {
 
     });
 
-    this.physics.add.collider(player, lobby_tileset);
 
-    this.cameras.main.startFollow(player, true);
 
     //tải lại mới khi có player mới vào có các player đã ở trong đó
     this.socket.emit("joinRoom", this.textInput);
@@ -512,6 +502,9 @@ export default class waitingRoom extends Phaser.Scene {
       player = this.physics.add.sprite(-45, 26, 'player-idle_' + colorPlayer, "idle.png");
       color = colorPlayer;
 
+      this.physics.add.collider(player, lobby_tileset);
+
+      this.cameras.main.startFollow(player, true);
 
       this.state.roomKey = states.roomKey;
       this.state.host = Object.keys((states).players)[0]
@@ -592,7 +585,7 @@ export default class waitingRoom extends Phaser.Scene {
       this.scene.bringToTop("ChangeSkin");
     });
 
-    this.socket.on("gogame", ({ numPlayers, idPlayers }) => {
+    this.socket.on("gogame", ({ numPlayers, idPlayers, Info }) => {
       //console.log(numPlayers);
       // this.scene.stop('waitingRoom')
 
@@ -606,7 +599,8 @@ export default class waitingRoom extends Phaser.Scene {
         numPlayers: numPlayers,
         idPlayers: idPlayers,
         numberImposter: this.numberImposter ?? 1,
-        playerChangedSkin: this.playerChangedSkin
+        playerChangedSkin: this.playerChangedSkin,
+        Info: Info
       });
       this.game.scene.stop("waitingRoom");
     });
