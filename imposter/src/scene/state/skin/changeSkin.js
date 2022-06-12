@@ -716,7 +716,13 @@ class ChangeSkin extends Phaser.Scene {
         playerChangedSkin.player = player;
       }
       if (!playerChangedSkin.pet) {
-        playerChangedSkin.pet = null;
+        playerChangedSkin.pet = arrPets[0];
+      }
+      if (!playerChangedSkin.hat) {
+        playerChangedSkin.hat = arrHats[0];
+      }
+      if (!playerChangedSkin.trouser) {
+        playerChangedSkin.trouser = arrTrousers[0];
       }
       eventsCenter.emit("update", {
         playerChangedSkin: playerChangedSkin,
