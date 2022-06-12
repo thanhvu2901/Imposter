@@ -9,7 +9,9 @@ import speaker from "../../../assets/img/Voting Screen/icons/speaker.png";
 import x_symbol from "../../../assets/img/Voting Screen/icons/x_symbol.png";
 import voted_mark from "../../../assets/img/Voting Screen/icons/voted_mark.png";
 
-var main_screen, chat_icon_img, title, skip_vote_button, voting_count,timedEvent,timer=5000;
+var main_screen, chat_icon_img, title, skip_vote_button, voting_count,timedEvent,timer=10000;
+let player_list =new Map()
+let player_count = new Map()
 const coordinates = [
   [305, 235],
   [305, 310],
@@ -27,7 +29,11 @@ class VotingScreen extends Phaser.Scene {
   constructor() {
     super({ key: "vote" });
   }
-
+  init(data) {
+    this.socket = data.socket;
+    this.numPlayers = data.numPlayers;
+    this.idPlayers = data.idPlayers;
+  }
   preload() {
     this.load.image("screen1", screen1);
     this.load.image("chat_icon", chat_icon);
@@ -42,7 +48,7 @@ class VotingScreen extends Phaser.Scene {
 
   create() {
     this.scene.bringToTop();
-
+console.log(this.socket)
     main_screen = this.add.image(512, 384, "screen1")
     chat_icon_img = this.add.image(
       main_screen.width - 12,
@@ -63,7 +69,21 @@ class VotingScreen extends Phaser.Scene {
         color: "#ffffff",
       }
     );
-    var players = this.bulkGeneratePlayer(coordinates, 3);
+    var players = this.bulkGeneratePlayer(coordinates, this.numPlayers);
+    this.idPlayers.forEach(element => {
+      player_count.set(element,0)
+    });
+    console.log(player_list)
+    this.socket.on("vote_otherplayer",(playerid)=>{
+     // console.log("id:",playerid)
+     let count = player_count.get(playerid)
+     count+=1
+     player_count.set(playerid,count)
+      console.log(count)
+     let list =player_list.get(playerid)
+     list.getChildren()[count-1].setVisible(true)
+    })
+   
   //  console.log(players);
     // // Left side
     // player_background_img = this.add.image(305, 235, "player_background");
@@ -176,46 +196,62 @@ class VotingScreen extends Phaser.Scene {
       strokeThickness: 3,
     });
     timedEvent = this.time.addEvent({ delay: timer,callback:()=>{
+     
+      player_count.forEach(element => {
+        console.log(element)
+        element=0
+      });
+      this.socket.removeListener("vote_otherplayer");
       exit(this)
     }});
     
   }
 update(){
-  console.log(timer/1000,timedEvent.getElapsed())
 voting_count.setText("Voting Ends In: "+((timer-timedEvent.getElapsed())/1000).toFixed(0))
 }
-  generatePlayerBackground(x, y, num, numOfPlayers) {
+  generatePlayerBackground(x, y, num, numOfPlayers,id) {
     var background = this.add.image(x, y, "player_background");
 
     // Circle để xác định vị trí x,y của background
     // this.add.circle(x, y, 5, 0xff0000, 0.5);
     
     var avatar = this.add.image(x - 135, y, "player_avatar_big");
-    var name = this.add.text(x - 100, y - 30, "Player " + num, {
+    var name = this.add.text(x - 100, y - 30, this.idPlayers[num-1], {
       fontSize: "25px",
       color: "#ffffff",
       fontFamily: "Arial",
       stroke: "#000000",
       strokeThickness: 3,
     });
-    var speaker = this.add.image(x + 130, y, "speaker");
+    var speaker = this.add.image(x + 130, y, "speaker").setInteractive();
     speaker.setAlpha(0.5);
+speaker.on('pointerdown',()=>{
+  //console.log(id)
+this.add.image(avatar.x - 30, y - 25, "voted_mark");
+this.socket.emit("vote",id)
 
+})
     var x_symbol = this.add.image(avatar.x, y, "x_symbol");
     x_symbol.setVisible(false);
 
-    var voted_mark = this.add.image(avatar.x - 30, y - 25, "voted_mark");
+  let temp=  this.add.group({
+key:"player_avatar_small",
+frameQuantity: 10
 
+    })
+let temp1=temp.getChildren()
     var voted_players = [];
-    for (var i = 0; i < numOfPlayers; i++) {
-      var votedPlayer = this.add.image(
-        (avatar.x + 50) + (i * 28),
-        y + 15,
-        "player_avatar_small"
-      );
-      voted_players.push(votedPlayer);
+    for (var i = 0; i < 10; i++) {
+      temp1[i].setPosition( (avatar.x + 50) + (i * 28),y + 15)
+      // var votedPlayer = this.add.image(
+      //   (avatar.x + 50) + (i * 28),
+      //   y + 15,
+      //   "player_avatar_small"
+      // );
+     // voted_players.push(votedPlayer);
     }
-
+    player_list.set(this.idPlayers[num-1],temp);
+    temp.setVisible(false)
     var player = {
       background: background,
       avatar: avatar,
@@ -236,9 +272,10 @@ voting_count.setText("Voting Ends In: "+((timer-timedEvent.getElapsed())/1000).t
           coordinates[i][0],
           coordinates[i][1],
           i + 1,
-          numOfPlayers
+          numOfPlayers,
+          this.idPlayers[i]
         );
-        players.push(player);
+       
       }
       return players;
     } else {

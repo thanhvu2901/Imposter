@@ -1113,11 +1113,16 @@ this.load.image("emergency",emergencyButton)
     });
     report_btn.on('pointerdown',()=>{
       if(near_btn){
-      this.scene.launch("vote")}
+      this.scene.launch("vote",{socket:this.socket, numPlayers: this.numPlayers,
+        idPlayers:this.idPlayers,})}
+        this.socket.emit("open_vote")
     })
     // this.socket.on("move", ({ x, y, playerId }) => {
     //   //console.log({ x, y, playerId });
-
+this.socket.on("open_othervote",()=>{
+  this.scene.launch("vote",{socket:this.socket, numPlayers: this.numPlayers,
+    idPlayers:this.idPlayers,})
+})
     this.socket.on("move", ({ x, y, playerId, color }) => {
       let index = otherPlayerId.findIndex((Element) => Element == playerId);
       //id = index;
@@ -1276,7 +1281,7 @@ this.load.image("emergency",emergencyButton)
       }
     }
     //canKill = false
-    if (alive == true&&this.isRole!=1) {
+    if (alive == true) {
       let playerMoved = false;
       player.setVelocity(0);
 
