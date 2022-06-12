@@ -1089,7 +1089,18 @@ class Game extends Phaser.Scene {
     });
 
     this.socket.on("move", ({ x, y, playerId, color }) => {
+      let index = otherPlayerId.findIndex((Element) => Element == playerId);
+      //id = index;
+      // console.log(index);
 
+      if (otherPlayer[index].x > x) {
+        otherPlayer[index].flipX = true;
+      } else if (otherPlayer[index].x < x) {
+        otherPlayer[index].flipX = false;
+      }
+      otherPlayer[index].x = x;
+      otherPlayer[index].y = y;
+      otherPlayer[index].moving = true;
 
       if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
         otherPlayer[index].play("player-walk_" + color);
