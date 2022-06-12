@@ -9,6 +9,8 @@ import calibratorGaugeBorder from "../../../assets/tasks/Calibrate Distributor/c
 import calibratorSpin1 from "../../../assets/tasks/Calibrate Distributor/calibratorSpin1.png";
 import calibratorSpin2 from "../../../assets/tasks/Calibrate Distributor/calibratorSpin2.png";
 import calibratorSpin3 from "../../../assets/tasks/Calibrate Distributor/calibratorSpin3.png";
+import Event_Center from "../../../helper/event_center";
+
 var spin1,
   gauge1,
   border1,
@@ -31,7 +33,17 @@ var pointer;
 var table;
 
 let r1,step = false;
+
+let x, y;
+let sprite, current_scene;
+
 class CalibratorDistributor extends Phaser.Scene {
+  init(data) {
+    x = data.x;
+    y = data.y;
+    sprite = data.sprite;
+  }
+  
   preload() {
     this.load.image("CalibratorBaseWWires", CalibratorBaseWWires);
     this.load.image("calibratorButton", calibratorButton);
@@ -46,6 +58,7 @@ class CalibratorDistributor extends Phaser.Scene {
   }
 
   create() {
+    current_scene = this;
     pointer = this.input.activePointer;
     table = this.add.image(512, 384, "CalibratorBaseWWires");
     table.setDepth(-2);
@@ -155,7 +168,10 @@ class CalibratorDistributor extends Phaser.Scene {
     }
     if (checkSpin3) {
       spin3.angle = 0;
-      this.add.text(390, 250, "Mission Completed");
+      sprite.tint = 0;
+      Event_Center.emit("continue_scene_game", {x: x, y: y, mission: "CalibratorDistributor"});
+      current_scene.scene.stop("CalibratorDistributor");
+      // this.add.text(390, 250, "Mission Completed");
     }
   }
 }

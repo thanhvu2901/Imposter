@@ -14,8 +14,9 @@ class FixWiring extends Base {
             this.x,
             this.y);
         if (check_mission) {
-            this.scene.scene.add.image(FIX_WIRING_MARKED_X, FIX_WIRING_MARKED_Y, "FixWiring_mission_marked");
-            return { scene: "fixWiring", x: this.x, y: this.y }
+            let sprite = this.scene.scene.add.sprite(FIX_WIRING_MARKED_X, FIX_WIRING_MARKED_Y, "FixWiring_mission_marked");
+            sprite.tint =  Math.random() * 0xffff00
+            return { scene: "fixWiring", x: this.x, y: this.y, sprite: sprite }
 
         }
         return;

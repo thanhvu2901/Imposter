@@ -6,13 +6,25 @@ import ring_2 from "../../../assets/img/SetCourse/ring-1.png";
 import dot_1 from "../../../assets/img/SetCourse/dot1.png";
 import dot_2 from "../../../assets/img/SetCourse/dot2.png";
 import dashed from "../../../assets/img/SetCourse/dashed.png";
+import Event_Center from "../../../helper/event_center";
+
 let ring1,ring2,ring3,ring4
 let dot1,dot2,dot3,dot4
 let text;
 var ship1;
+let x, y;
+let sprite, current_scene;
+let complete_ring_2 = false;
+let complete_ring_3 = false;
+let complete_ring_4 = false;
 
 class ChartCourse extends Phaser.Scene {
-  
+  init(data) {
+    x = data.x;
+    y = data.y;
+    sprite = data.sprite;
+  }
+
   constructor() {
     super({ key: "Course" });
     
@@ -29,6 +41,7 @@ class ChartCourse extends Phaser.Scene {
   }
 
   create() {
+    current_scene = this.scene
     const board = this.add.image(303, 303, "Course");
    
      text = this.add.text(10, 10, 'Cursors to move', { font: '16px Courier', fill: '#00ff00' }).setScrollFactor(0);
@@ -141,10 +154,16 @@ ship1 = this.add.image(140, 232, "Space_ship");
 
       
   ]);
-  check(ship1,ring2,dot2,this)
-  check(ship1,ring3,dot3,this)
-  check(ship1,ring4,dot4,this)
+  check(ship1, ring2, dot2, this, "ring2")
+  check(ship1, ring3, dot3, this, "ring3")
+  check(ship1, ring4, dot4, this, "ring4")
   
+  if(complete_ring_2 && complete_ring_3 && complete_ring_4)
+  {
+    sprite.tint = 0;
+    Event_Center.emit("continue_scene_game", {x: x, y: y, mission: "ChartCourse"});
+    current_scene.stop("Course");
+  }
   //ship1.body.velo
   // if (this.input.mousePointer.isDown)
   // {
@@ -164,15 +183,29 @@ ship1 = this.add.image(140, 232, "Space_ship");
    }
    
 }
-function check(ob1,ob2,ob3,game){
+function check(ob1,ob2,ob3,game, completed_ring){
   let tempx=ob2.x;
   let tempy=ob2.y;
  if(ob1.x<=ob2.x+10&&ob1.x>=ob2.x-10&&ob1.y<=ob2.y+10&&ob1.y>=ob2.y-10){
    ob2.destroy()
  //  ob2=null;
-   ob3=game.add.image(tempx,tempy,"dot2")
-  // ob2.rotation +=0.05
+   ob3=game.add.image(tempx,tempy,"dot2");
+  // ob2.rotation +=0.05;
+
+  switch(completed_ring) {
+    case "ring2":
+      complete_ring_2 = true;
+      break;
+    case "ring3":
+      complete_ring_3 = true;
+      break;
+    case "ring4":
+      complete_ring_4 = true;
+      break;
+  }
+  
  }
+
 
 }
 export default ChartCourse;

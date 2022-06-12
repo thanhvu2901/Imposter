@@ -1,0 +1,1644 @@
+{"frames": [
+
+{
+	"filename": "robit_idle1.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle2.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle3.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle4.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle5.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle6.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle7.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle8.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle9.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle10.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle11.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle12.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle13.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle14.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle15.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle16.png",
+	"frame": {"x":944,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle17.png",
+	"frame": {"x":944,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle18.png",
+	"frame": {"x":1102,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle19.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle20.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle21.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle22.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle23.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle24.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle25.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle26.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle27.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle28.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle29.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle30.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle31.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle32.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle33.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle34.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle35.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle36.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle37.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle38.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle39.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle40.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle41.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle42.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle43.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle44.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle45.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle46.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle47.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle48.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle49.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle50.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle51.png",
+	"frame": {"x":1260,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle52.png",
+	"frame": {"x":1260,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle53.png",
+	"frame": {"x":1418,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle54.png",
+	"frame": {"x":1418,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle55.png",
+	"frame": {"x":1576,"y":1,"w":155,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":155,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle56.png",
+	"frame": {"x":1576,"y":1,"w":155,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":155,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle57.png",
+	"frame": {"x":1733,"y":1,"w":155,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":155,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle58.png",
+	"frame": {"x":1733,"y":1,"w":155,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":155,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle59.png",
+	"frame": {"x":1890,"y":1,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle60.png",
+	"frame": {"x":1890,"y":1,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle61.png",
+	"frame": {"x":159,"y":1,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle62.png",
+	"frame": {"x":159,"y":1,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle63.png",
+	"frame": {"x":159,"y":1,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle64.png",
+	"frame": {"x":159,"y":1,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle65.png",
+	"frame": {"x":159,"y":1,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle66.png",
+	"frame": {"x":159,"y":1,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle67.png",
+	"frame": {"x":159,"y":1,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle68.png",
+	"frame": {"x":159,"y":1,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle69.png",
+	"frame": {"x":159,"y":1,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle70.png",
+	"frame": {"x":159,"y":1,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle71.png",
+	"frame": {"x":159,"y":1,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle72.png",
+	"frame": {"x":159,"y":1,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle73.png",
+	"frame": {"x":1,"y":177,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle74.png",
+	"frame": {"x":1,"y":177,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle75.png",
+	"frame": {"x":159,"y":177,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle76.png",
+	"frame": {"x":159,"y":1,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle77.png",
+	"frame": {"x":159,"y":1,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle78.png",
+	"frame": {"x":159,"y":1,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle79.png",
+	"frame": {"x":1,"y":177,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle80.png",
+	"frame": {"x":1,"y":177,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle81.png",
+	"frame": {"x":159,"y":177,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle82.png",
+	"frame": {"x":159,"y":1,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle83.png",
+	"frame": {"x":159,"y":1,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle84.png",
+	"frame": {"x":159,"y":1,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle85.png",
+	"frame": {"x":159,"y":1,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle86.png",
+	"frame": {"x":159,"y":1,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle87.png",
+	"frame": {"x":159,"y":1,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle88.png",
+	"frame": {"x":159,"y":1,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle89.png",
+	"frame": {"x":159,"y":1,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle90.png",
+	"frame": {"x":159,"y":1,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle91.png",
+	"frame": {"x":159,"y":1,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle92.png",
+	"frame": {"x":159,"y":1,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle93.png",
+	"frame": {"x":159,"y":1,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle94.png",
+	"frame": {"x":159,"y":1,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle95.png",
+	"frame": {"x":159,"y":1,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle96.png",
+	"frame": {"x":159,"y":1,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle97.png",
+	"frame": {"x":159,"y":1,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle98.png",
+	"frame": {"x":159,"y":1,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle99.png",
+	"frame": {"x":159,"y":1,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle100.png",
+	"frame": {"x":159,"y":1,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle101.png",
+	"frame": {"x":315,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle102.png",
+	"frame": {"x":315,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle103.png",
+	"frame": {"x":473,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle104.png",
+	"frame": {"x":473,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle105.png",
+	"frame": {"x":631,"y":1,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle106.png",
+	"frame": {"x":631,"y":1,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle107.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle108.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle109.png",
+	"frame": {"x":787,"y":1,"w":155,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":155,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle110.png",
+	"frame": {"x":787,"y":1,"w":155,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":155,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle111.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle112.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle113.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle114.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle115.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle116.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle117.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle118.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle119.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle120.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle121.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_idle122.png",
+	"frame": {"x":1,"y":1,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad1.png",
+	"frame": {"x":317,"y":177,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad2.png",
+	"frame": {"x":1,"y":353,"w":155,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":155,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad3.png",
+	"frame": {"x":1729,"y":353,"w":155,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":155,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad4.png",
+	"frame": {"x":1418,"y":529,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad5.png",
+	"frame": {"x":1098,"y":705,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad6.png",
+	"frame": {"x":788,"y":881,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad7.png",
+	"frame": {"x":1261,"y":881,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad8.png",
+	"frame": {"x":1419,"y":881,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad9.png",
+	"frame": {"x":1577,"y":881,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad10.png",
+	"frame": {"x":475,"y":177,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad11.png",
+	"frame": {"x":633,"y":177,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad12.png",
+	"frame": {"x":789,"y":177,"w":155,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":155,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad13.png",
+	"frame": {"x":946,"y":177,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad14.png",
+	"frame": {"x":1104,"y":177,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad15.png",
+	"frame": {"x":1262,"y":177,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad16.png",
+	"frame": {"x":1420,"y":177,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad17.png",
+	"frame": {"x":1578,"y":177,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad18.png",
+	"frame": {"x":1734,"y":177,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad19.png",
+	"frame": {"x":1890,"y":177,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad20.png",
+	"frame": {"x":158,"y":353,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad21.png",
+	"frame": {"x":314,"y":353,"w":155,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":155,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad22.png",
+	"frame": {"x":471,"y":353,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad23.png",
+	"frame": {"x":629,"y":353,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad24.png",
+	"frame": {"x":787,"y":353,"w":155,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":155,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad25.png",
+	"frame": {"x":944,"y":353,"w":155,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":155,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad26.png",
+	"frame": {"x":1101,"y":353,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad27.png",
+	"frame": {"x":1257,"y":353,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad28.png",
+	"frame": {"x":1413,"y":353,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad29.png",
+	"frame": {"x":1571,"y":353,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad30.png",
+	"frame": {"x":1886,"y":353,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad31.png",
+	"frame": {"x":1,"y":529,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad32.png",
+	"frame": {"x":159,"y":529,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad33.png",
+	"frame": {"x":317,"y":529,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad34.png",
+	"frame": {"x":473,"y":529,"w":155,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":155,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad35.png",
+	"frame": {"x":630,"y":529,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad36.png",
+	"frame": {"x":788,"y":529,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad37.png",
+	"frame": {"x":946,"y":529,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad38.png",
+	"frame": {"x":1104,"y":529,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad39.png",
+	"frame": {"x":1262,"y":529,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad40.png",
+	"frame": {"x":1574,"y":529,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad41.png",
+	"frame": {"x":1730,"y":529,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad42.png",
+	"frame": {"x":1886,"y":529,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad43.png",
+	"frame": {"x":1,"y":705,"w":155,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":155,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad44.png",
+	"frame": {"x":158,"y":705,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad45.png",
+	"frame": {"x":314,"y":705,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad46.png",
+	"frame": {"x":472,"y":705,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad47.png",
+	"frame": {"x":628,"y":705,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad48.png",
+	"frame": {"x":786,"y":705,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad49.png",
+	"frame": {"x":942,"y":705,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad50.png",
+	"frame": {"x":1254,"y":705,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad51.png",
+	"frame": {"x":1412,"y":705,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad52.png",
+	"frame": {"x":1568,"y":705,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad53.png",
+	"frame": {"x":1726,"y":705,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad54.png",
+	"frame": {"x":1882,"y":705,"w":155,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":155,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad55.png",
+	"frame": {"x":1,"y":881,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad56.png",
+	"frame": {"x":159,"y":881,"w":155,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":155,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad57.png",
+	"frame": {"x":316,"y":881,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad58.png",
+	"frame": {"x":474,"y":881,"w":155,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":155,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad59.png",
+	"frame": {"x":631,"y":881,"w":155,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":155,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad60.png",
+	"frame": {"x":946,"y":881,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_sad61.png",
+	"frame": {"x":1104,"y":881,"w":155,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":155,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_scared1.png",
+	"frame": {"x":1735,"y":881,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_scared2.png",
+	"frame": {"x":1,"y":1057,"w":155,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":155,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_scared3.png",
+	"frame": {"x":158,"y":1057,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_scared4.png",
+	"frame": {"x":316,"y":1057,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_scared5.png",
+	"frame": {"x":474,"y":1057,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_walk1.png",
+	"frame": {"x":632,"y":1057,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_walk2.png",
+	"frame": {"x":632,"y":1057,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_walk3.png",
+	"frame": {"x":1577,"y":1057,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_walk4.png",
+	"frame": {"x":1577,"y":1057,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_walk5.png",
+	"frame": {"x":1735,"y":1057,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_walk6.png",
+	"frame": {"x":1735,"y":1057,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_walk7.png",
+	"frame": {"x":1419,"y":1057,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_walk8.png",
+	"frame": {"x":1419,"y":1057,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_walk9.png",
+	"frame": {"x":1893,"y":1057,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_walk10.png",
+	"frame": {"x":1893,"y":881,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_walk11.png",
+	"frame": {"x":790,"y":1057,"w":154,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_walk12.png",
+	"frame": {"x":946,"y":1057,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_walk13.png",
+	"frame": {"x":1104,"y":1057,"w":155,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":155,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_walk14.png",
+	"frame": {"x":632,"y":1057,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_walk15.png",
+	"frame": {"x":1261,"y":1057,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+},
+{
+	"filename": "robit_walk16.png",
+	"frame": {"x":1419,"y":1057,"w":156,"h":174},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":174},
+	"sourceSize": {"w":156,"h":174}
+}],
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "robit.png",
+	"format": "RGBA8888",
+	"size": {"w":2048,"h":1232},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:073130480163518f12379190510033e3:426a7066855a7ad92ebfe78470b85b8e:a6626f161ae679fb7dbb142cbce6b62c$"
+}
+}

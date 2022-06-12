@@ -6,6 +6,8 @@ import admin_sliderTop from "../../../assets/tasks/Swipe Card/admin_sliderTop.pn
 import admin_textBar from "../../../assets/tasks/Swipe Card/admin_textBar.png";
 import admin_Wallet from "../../../assets/tasks/Swipe Card/admin_Wallet.png";
 import admin_walletFront from "../../../assets/tasks/Swipe Card/admin_walletFront.png";
+import Event_Center from "../../../helper/event_center";
+
 
 let text,
   textType = 0,
@@ -26,7 +28,18 @@ let move;
 let step = 0;
 let scale = 0.75;
 let finished = 0;
+let x;
+let y;
+let sprite;
+let current_scene;
+
 class SwipeCard extends Phaser.Scene {
+  init(data) {
+    x = data.x;
+    y = data.y;
+    sprite = data.sprite;
+  }
+
   preload() {
     this.load.image("admin_BG", admin_BG);
     this.load.image("admin_Card", admin_Card);
@@ -37,6 +50,7 @@ class SwipeCard extends Phaser.Scene {
     this.load.image("admin_walletFront", admin_walletFront);
   }
   create() {
+    current_scene = this.scene
     board = this.add.image(512, 384, "admin_BG");
     textBar = this.add.image(512, 165, "admin_textBar");
     textBar.setDepth(3);
@@ -128,10 +142,15 @@ class SwipeCard extends Phaser.Scene {
 
     // Return card to wallet when game is finished
     if (finished == 1) {
+
       move = this.physics.moveToObject(mini_card, start, 300);
       finished = -1;
       leave = false;
       textType = 4;
+
+      sprite.tint = 0;
+      Event_Center.emit("continue_scene_game", {x: x, y: y, mission: "SwipeCard"});
+      current_scene.stop("SwipeCard");
     }
 
     // Check if card is in the right place

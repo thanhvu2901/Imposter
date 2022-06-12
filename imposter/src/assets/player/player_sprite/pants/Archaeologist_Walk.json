@@ -1,0 +1,116 @@
+{"frames": [
+
+{
+	"filename": "Archaeologist_Spawn55.png",
+	"frame": {"x":0,"y":0,"w":41,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":37},
+	"sourceSize": {"w":41,"h":37}
+},
+{
+	"filename": "Archaeologist_Walk1.png",
+	"frame": {"x":0,"y":37,"w":45,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":45,"h":28},
+	"sourceSize": {"w":45,"h":28}
+},
+{
+	"filename": "Archaeologist_Walk2.png",
+	"frame": {"x":0,"y":65,"w":43,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":27},
+	"sourceSize": {"w":43,"h":27}
+},
+{
+	"filename": "Archaeologist_Walk3.png",
+	"frame": {"x":0,"y":92,"w":43,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":27},
+	"sourceSize": {"w":43,"h":27}
+},
+{
+	"filename": "Archaeologist_Walk4.png",
+	"frame": {"x":0,"y":119,"w":43,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":27},
+	"sourceSize": {"w":43,"h":27}
+},
+{
+	"filename": "Archaeologist_Walk5.png",
+	"frame": {"x":0,"y":146,"w":41,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":36},
+	"sourceSize": {"w":41,"h":36}
+},
+{
+	"filename": "Archaeologist_Walk6.png",
+	"frame": {"x":0,"y":182,"w":39,"h":34},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":34},
+	"sourceSize": {"w":39,"h":34}
+},
+{
+	"filename": "Archaeologist_Walk7.png",
+	"frame": {"x":0,"y":216,"w":43,"h":34},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":34},
+	"sourceSize": {"w":43,"h":34}
+},
+{
+	"filename": "Archaeologist_Walk8.png",
+	"frame": {"x":0,"y":250,"w":44,"h":34},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":34},
+	"sourceSize": {"w":44,"h":34}
+},
+{
+	"filename": "Archaeologist_Walk9.png",
+	"frame": {"x":0,"y":284,"w":43,"h":34},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":34},
+	"sourceSize": {"w":43,"h":34}
+},
+{
+	"filename": "Archaeologist_Walk10.png",
+	"frame": {"x":0,"y":318,"w":41,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":31},
+	"sourceSize": {"w":41,"h":31}
+},
+{
+	"filename": "Archaeologist_Walk11.png",
+	"frame": {"x":0,"y":349,"w":39,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":35},
+	"sourceSize": {"w":39,"h":35}
+},
+{
+	"filename": "Archaeologist_Walk12.png",
+	"frame": {"x":0,"y":384,"w":40,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":36},
+	"sourceSize": {"w":40,"h":36}
+}],
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "Archaeologist_Walk.png",
+	"format": "RGBA8888",
+	"size": {"w":45,"h":420},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:0b8a6e617e930b125fb3775fd8fe2902:2fb8a8821830998f2de6c3aed1d41117:b1b41e594176f271652d40608ad4a8c6$"
+}
+}
