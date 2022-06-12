@@ -1841,7 +1841,7 @@ export default class waitingRoom extends Phaser.Scene {
       player_container.body.setVelocityX(-PLAYER_SPEED);
       player.scaleX = -1;
       player.body.offset.x = 40;
-      hat_skin.scaleX = -1;
+      hat_skin != null ? hat_skin.scaleX = -1 : null;
       playerMoved = true;
     } else if (cursors.right.isDown) {
       if (pet) {
@@ -1857,7 +1857,7 @@ export default class waitingRoom extends Phaser.Scene {
       player_container.body.setVelocityX(PLAYER_SPEED);
       player.scaleX = 1;
       player.body.offset.x = 0;
-      hat_skin.scaleX = 1;
+      hat_skin != null ? hat_skin.scaleX = 1 : null;
       playerMoved = true;
     }
 
