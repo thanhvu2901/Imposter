@@ -16,7 +16,8 @@ class introCrew extends Phaser.Scene {
         this.numPlayers = data.numPlayers;
         this.idPlayers = data.idPlayers;
         this.numberImposter = data.numberImposter
-        this.playerChangedSkin= data.playerChangedSkin;
+        this.playerChangedSkin = data.playerChangedSkin;
+        this.Info = data.Info
         //  this.isRole = data.isRole
     }
     //*********lấy socket định danh role và thông báo tới */
@@ -91,7 +92,7 @@ class introCrew extends Phaser.Scene {
 
 }
 function Run(game) {
-    game.scene.launch('game', { socket: game.socket, textInput: game.textInput, numPlayers: game.numPlayers, idPlayers: game.idPlayers, isRole: isRole, playerChangedSkin: game.playerChangedSkin })
+    game.scene.launch('game', { socket: game.socket, textInput: game.textInput, numPlayers: game.numPlayers, idPlayers: game.idPlayers, isRole: isRole, playerChangedSkin: game.playerChangedSkin, Info: game.Info })
     game.scene.stop('introCrew');
     // console.log(game.scene);
 }
