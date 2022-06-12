@@ -459,13 +459,11 @@ class Game extends Phaser.Scene {
       .setSize(player.width, player.height);
     player_container.add(player);
     this.physics.add.existing(player_container);
-    console.log("player container: ", player_container);
 
     if (this.playerChangedSkin.hat) {
       let hatChosen = this.playerChangedSkin.hat.texture.key ?? "nothing";
       switch (hatChosen) {
         case "hat0":
-          hat_skin.destroy();
           hat_skin = this.physics.add.sprite(
             player.x,
             player.y - 25,
@@ -474,7 +472,6 @@ class Game extends Phaser.Scene {
           );
           break;
         case "hat1":
-          hat_skin.destroy();
           hat_skin = this.physics.add.sprite(
             player.x,
             player.y - 25,
@@ -483,7 +480,6 @@ class Game extends Phaser.Scene {
           );
           break;
         case "hat2":
-          hat_skin.destroy();
           hat_skin = this.physics.add.sprite(
             player.x,
             player.y - 25,
@@ -492,7 +488,6 @@ class Game extends Phaser.Scene {
           );
           break;
         case "hat3":
-          hat_skin.destroy();
           hat_skin = this.physics.add.sprite(
             player.x,
             player.y - 25,
@@ -501,7 +496,7 @@ class Game extends Phaser.Scene {
           );
           break;
         case "hat4":
-          hat_skin.destroy();
+          
           hat_skin = this.physics.add.sprite(
             player.x,
             player.y - 25,
@@ -510,7 +505,7 @@ class Game extends Phaser.Scene {
           );
           break;
         case "hat5":
-          hat_skin.destroy();
+          
           hat_skin = this.physics.add.sprite(
             player.x,
             player.y - 25,
@@ -519,7 +514,6 @@ class Game extends Phaser.Scene {
           );
           break;
         case "hat6":
-          hat_skin.destroy();
           hat_skin = this.physics.add.sprite(
             player.x,
             player.y - 25,
@@ -528,7 +522,6 @@ class Game extends Phaser.Scene {
           );
           break;
         case "hat7":
-          hat_skin.destroy();
           hat_skin = this.physics.add.sprite(
             player.x,
             player.y - 25,
@@ -536,8 +529,7 @@ class Game extends Phaser.Scene {
             0
           );
           break;
-        case "hat8":
-          hat_skin.destroy();
+        case "hat8":       
           hat_skin = this.physics.add.sprite(
             player.x,
             player.y - 25,
@@ -545,9 +537,8 @@ class Game extends Phaser.Scene {
             0
           );
           break;
-        case "hat9":
-          hat_skin.destroy();
-          hat_skin = this.physics.add.sprite(
+        case "hat9":          
+         hat_skin = this.physics.add.sprite(
             player.x,
             player.y - 25,
             "hat9",
@@ -555,7 +546,6 @@ class Game extends Phaser.Scene {
           );
           break;
         case "hat10":
-          hat_skin.destroy();
           hat_skin = this.physics.add.sprite(
             player.x,
             player.y - 25,
@@ -564,7 +554,6 @@ class Game extends Phaser.Scene {
           );
           break;
         case "hat11":
-          hat_skin.destroy();
           hat_skin = this.physics.add.sprite(
             player.x,
             player.y - 25,
@@ -573,7 +562,6 @@ class Game extends Phaser.Scene {
           );
           break;
         case "hat12":
-          hat_skin.destroy();
           hat_skin = this.physics.add.sprite(
             player.x,
             player.y - 25,
@@ -582,7 +570,6 @@ class Game extends Phaser.Scene {
           );
           break;
         case "hat13":
-          hat_skin.destroy();
           hat_skin = this.physics.add.sprite(
             player.x,
             player.y - 25,
@@ -591,7 +578,7 @@ class Game extends Phaser.Scene {
           );
           break;
         case "hat14":
-          hat_skin.destroy();
+          
           hat_skin = this.physics.add.sprite(
             player.x,
             player.y - 25,
@@ -600,7 +587,7 @@ class Game extends Phaser.Scene {
           );
           break;
         case "hat15":
-          hat_skin.destroy();
+          
           hat_skin = this.physics.add.sprite(
             player.x,
             player.y - 25,
@@ -609,7 +596,6 @@ class Game extends Phaser.Scene {
           );
           break;
         case "hat16":
-          hat_skin.destroy();
           hat_skin = this.physics.add.sprite(
             player.x,
             player.y - 25,
@@ -618,7 +604,6 @@ class Game extends Phaser.Scene {
           );
           break;
         case "hat17":
-          hat_skin.destroy();
           hat_skin = this.physics.add.sprite(
             player.x,
             player.y - 25,
@@ -627,7 +612,6 @@ class Game extends Phaser.Scene {
           );
           break;
         case "hat18":
-          hat_skin.destroy();
           hat_skin = this.physics.add.sprite(
             player.x,
             player.y - 25,
@@ -636,7 +620,6 @@ class Game extends Phaser.Scene {
           );
           break;
         case "hat19":
-          hat_skin.destroy();
           hat_skin = this.physics.add.sprite(
             player.x,
             player.y - 25,
@@ -653,16 +636,11 @@ class Game extends Phaser.Scene {
         this.playerChangedSkin.trouser.texture.key ?? "nothing";
       switch (pantChosen) {
         case "trouser0":
-          if(pants_type){
-            pants_skin.destroy();
-          }
           pants_type = null;
           pants_skin = null;
           break;
         case "trouser1":
-          if(pants_type){
-            pants_skin.destroy();
-          }
+          
           pants_type = POLICE;
           pants_skin = this.physics.add.sprite(
             player.x + 0.75,
@@ -672,9 +650,7 @@ class Game extends Phaser.Scene {
           );
           break;
         case "trouser2":
-          if(pants_type){
-            pants_skin.destroy();
-          }
+          
           pants_type = HAZMAT;
           pants_skin = this.physics.add.sprite(
             player.x + 0.75,
@@ -684,9 +660,7 @@ class Game extends Phaser.Scene {
           );
           break;
         case "trouser3":
-          if(pants_type){
-            pants_skin.destroy();
-          }
+          
           pants_type = ARCHAEOLOGIST;
           pants_skin = this.physics.add.sprite(
             player.x + 0.75,
@@ -696,9 +670,7 @@ class Game extends Phaser.Scene {
           );
           break;
         case "trouser4":
-          if(pants_type){
-            pants_skin.destroy();
-          }
+          
           pants_type = WINTERJACKET;
           pants_skin = this.physics.add.sprite(
             player.x + 0.75,
@@ -708,9 +680,7 @@ class Game extends Phaser.Scene {
           );
           break;
         case "trouser5":
-          if(pants_type){
-            pants_skin.destroy();
-          }
+          
           pants_type = TARMAC;
           pants_skin = this.physics.add.sprite(
             player.x + 0.75,
@@ -720,9 +690,7 @@ class Game extends Phaser.Scene {
           );
           break;
         case "trouser6":
-          if(pants_type){
-            pants_skin.destroy();
-          }
+          
           pants_type = MILITARY;
           pants_skin = this.physics.add.sprite(
             player.x + 0.75,
@@ -732,9 +700,7 @@ class Game extends Phaser.Scene {
           );
           break;
         case "trouser7":
-          if(pants_type){
-            pants_skin.destroy();
-          }
+          
           pants_type = SUITBLACK;
           pants_skin = this.physics.add.sprite(
             player.x + 0.75,
@@ -744,9 +710,7 @@ class Game extends Phaser.Scene {
           );
           break;
         case "trouser8":
-          if(pants_type){
-            pants_skin.destroy();
-          }
+          
           pants_type = ASTRONAUT;
           pants_skin = this.physics.add.sprite(
             player.x + 0.75,
@@ -756,9 +720,7 @@ class Game extends Phaser.Scene {
           );
           break;
         case "trouser9":
-          if(pants_type){
-            pants_skin.destroy();
-          }
+          
           pants_type = CAPTAIN;
           pants_skin = this.physics.add.sprite(
             player.x + 0.75,
@@ -768,9 +730,7 @@ class Game extends Phaser.Scene {
           );
           break;
         case "trouser10 ":
-          if(pants_type){
-            pants_skin.destroy();
-          }
+          
           pants_type = SECGUARD;
           pants_skin = this.physics.add.sprite(
             player.x + 0.75,
@@ -780,9 +740,7 @@ class Game extends Phaser.Scene {
           );
           break;
         case "trouser11":
-          if(pants_type){
-            pants_skin.destroy();
-          }
+          
           pants_type = SCIENTIST;
           pants_skin = this.physics.add.sprite(
             player.x + 0.75,
@@ -792,9 +750,7 @@ class Game extends Phaser.Scene {
           );
           break;
         case "trouser12":
-          if(pants_type){
-            pants_skin.destroy();
-          }
+          
           pants_type = MECHANIC;
           pants_skin = this.physics.add.sprite(
             player.x + 0.75,
@@ -804,9 +760,7 @@ class Game extends Phaser.Scene {
           );
           break;
         case "trouser13":
-          if(pants_type){
-            pants_skin.destroy();
-          }
+          
           pants_type = WALL;
           pants_skin = this.physics.add.sprite(
             player.x + 0.75,
@@ -816,9 +770,7 @@ class Game extends Phaser.Scene {
           );
           break;
         case "trouser14":
-          if(pants_type){
-            pants_skin.destroy();
-          }
+          
           pants_type = SUITWHITE;
           pants_skin = this.physics.add.sprite(
             player.x + 0.75,
@@ -828,9 +780,7 @@ class Game extends Phaser.Scene {
           );
           break;
         case "trouser15":
-          if(pants_type){
-            pants_skin.destroy();
-          }
+          
           pants_type = CCC;
           pants_skin = this.physics.add.sprite(
             player.x + 0.75,
@@ -904,16 +854,12 @@ class Game extends Phaser.Scene {
       let petChosen = this.playerChangedSkin.pet.texture.key ?? "nothing";
       switch (petChosen) {
         case "pet0":
-          if(pet){
-            pet.destroy();
-          }
+          
           pet = null;
           pet_type = null;
           break;
         case "pet1":
-          if(pet){
-            pet.destroy();
-          }
+          
           pet = this.physics.add.sprite(
             player.x + 50,
             player.y + 10,
@@ -923,9 +869,7 @@ class Game extends Phaser.Scene {
           pet_type = STICKMIN;
           break;
         case "pet2":
-          if(pet){
-            pet.destroy();
-          }
+          
           pet = this.physics.add.sprite(
             player.x + 50,
             player.y + 10,
@@ -935,9 +879,7 @@ class Game extends Phaser.Scene {
           pet_type = ELLIE;
           break;
         case "pet3":
-          if(pet){
-            pet.destroy();
-          }
+          
           pet = this.physics.add.sprite(
             player.x + 50,
             player.y + 10,
@@ -947,9 +889,7 @@ class Game extends Phaser.Scene {
           pet_type = CREWMIN;
           break;
         case "pet4":
-          if(pet){
-            pet.destroy();
-          }
+          
           pet = this.physics.add.sprite(
             player.x + 50,
             player.y + 10,
@@ -959,9 +899,7 @@ class Game extends Phaser.Scene {
           pet_type = DOG;
           break;
         case "pet5":
-          if(pet){
-            pet.destroy();
-          }
+          
           pet = this.physics.add.sprite(
             player.x + 50,
             player.y + 10,
@@ -971,9 +909,7 @@ class Game extends Phaser.Scene {
           pet_type = BEDCRAB;
           break;
         case "pet6":
-          if(pet){
-            pet.destroy();
-          }
+          
           pet = this.physics.add.sprite(
             player.x + 50,
             player.y + 10,
@@ -983,9 +919,7 @@ class Game extends Phaser.Scene {
           pet_type = ROBIT;
           break;
         case "pet7":
-          if(pet){
-            pet.destroy();
-          }
+          
           pet = this.physics.add.sprite(
             player.x + 50,
             player.y + 10,
@@ -995,9 +929,7 @@ class Game extends Phaser.Scene {
           pet_type = BSLUG;
           break;
         case "pet8":
-          if(pet){
-            pet.destroy();
-          }
+          
           pet = this.physics.add.sprite(
             player.x + 50,
             player.y + 10,
@@ -1007,9 +939,7 @@ class Game extends Phaser.Scene {
           pet_type = HAMPSTER;
           break;
         case "pet9":
-          if(pet){
-            pet.destroy();
-          }
+          
           pet = this.physics.add.sprite(
             player.x + 50,
             player.y + 10,
@@ -1031,9 +961,7 @@ class Game extends Phaser.Scene {
           pet_type = UFO;
           break;
         case "pet11":
-          if(pet){
-            pet.destroy();
-          }
+          
           pet = this.physics.add.sprite(
             player.x + 50,
             player.y + 10,
