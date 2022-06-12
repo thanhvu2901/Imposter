@@ -271,16 +271,19 @@ class Game extends Phaser.Scene {
       let colorOther = Object.values(this.Info.players)[i].color
 
       otherPlayer[i] = this.physics.add.sprite(
-        115 + 30 * i,
-        -740 + 50 * i,
+        120 + 50 * i,
+        -745 + 50 * i,
         "player_base_" + colorOther,
         "idle.png"
       );
+
+
     }
     this.idPlayers.forEach((element) => {
       if (element != this.socket.id) {
         otherPlayerId.push(element);
       }
+
     });
     // console.log(otherPlayerId);
 
@@ -1109,16 +1112,17 @@ class Game extends Phaser.Scene {
     this.socket.on("updateOtherPlayer", (playerId) => {
       // console.log(this.socket.id);
       // console.log(playerId);
+      let colorDead = Object.values(this.Info.players)[this.socket.id].color
       if (this.socket.id == playerId) {
         //run noitice died
         console.log("this player killed");
         //player.stop("player-idle")
         alive = false;
 
-        player.anims.play("player-dead", true);
+        player.anims.play("player-dead" + colorDead, true);
       } else {
         let index = otherPlayerId.findIndex((Element) => Element == playerId);
-        otherPlayer[index].anims.play("player-dead", true);
+        otherPlayer[index].anims.play("player-dead" + colorDead, true);
       }
     });
   }
