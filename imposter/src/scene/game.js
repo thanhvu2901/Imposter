@@ -136,6 +136,7 @@ class Game extends Phaser.Scene {
     this.idPlayers = data.idPlayers;
     this.isRole = data.isRole;
     this.playerChangedSkin = data.playerChangedSkin;
+    this.Info = data.Info
   }
 
   preload() {
@@ -217,7 +218,7 @@ class Game extends Phaser.Scene {
   create() {
     //this.scene.pause('game')
     // let intro = this.scene.launch('introCrew', { isRole: isRole }).bringToTop('introCrew')
-
+    console.log(this.Info);
     light = new Light(this);
     eventsCenter.on("continue_scene_game", (data) => {
       current_x = data.x;
@@ -240,97 +241,14 @@ class Game extends Phaser.Scene {
     const ship_tileset = ship.createLayer("Background", tileset);
 
     //Player loading based on color - default is blue
-    player = this.physics.add.sprite(-45, 26, PLAYER_BLUE, "idle.png");
-    color = "blue";
-    let colorPlayerChanged =
-      this.playerChangedSkin.player.texture.key ?? "nothing";
-    switch (colorPlayerChanged) {
-      case "player0":
-        player = this.physics.add.sprite(115, -700, PLAYER_BLUE, "idle.png");
-        color = "blue";
-        break;
-      case "player1":
-        player = this.physics.add.sprite(115, -700, PLAYER_YELLOW, "idle.png");
-        color = "yellow";
-        break;
-      case "player2":
-        player = this.physics.add.sprite(115, -700, PLAYER_PINK, "idle.png");
-        color = "pink";
-        break;
-      case "player3":
-        player = this.physics.add.sprite(115, -700, PLAYER_ORANGE, "idle.png");
-        color = "orange";
-        break;
-      case "player4":
-        player = this.physics.add.sprite(
-          115,
-          -700,
-          PLAYER_GRAY_DARK,
-          "idle.png"
-        );
-        color = "gray_dark";
-        break;
-      case "player5":
-        player = this.physics.add.sprite(
-          115,
-          -700,
-          PLAYER_GRAY_LIGHT,
-          "idle.png"
-        );
-        color = "gray_light";
-        break;
-      case "player6":
-        player = this.physics.add.sprite(115, -700, PLAYER_PURPLE, "idle.png");
-        color = "purple";
-        break;
-      case "player7":
-        player = this.physics.add.sprite(
-          115,
-          -700,
-          PLAYER_BLUE_LIGHT,
-          "idle.png"
-        );
-        color = "blue_light";
-        break;
-      case "player8":
-        player = this.physics.add.sprite(
-          115,
-          -700,
-          PLAYER_BLUE_DARK,
-          "idle.png"
-        );
-        color = "blue_dark";
-        break;
-      case "player9":
-        player = this.physics.add.sprite(115, -700, PLAYER_RED, "idle.png");
-        color = "red";
-        break;
-      case "player10":
-        player = this.physics.add.sprite(
-          115,
-          -700,
-          PLAYER_GREEN_LIGHT,
-          "idle.png"
-        );
-        color = "green_light";
-        break;
-      case "player11":
-        player = this.physics.add.sprite(
-          115,
-          -700,
-          PLAYER_GREEN_DARK,
-          "idle.png"
-        );
-        color = "green_dark";
-        break;
-      default: {
-        player = this.physics.add.sprite(115, -700, PLAYER_BLUE, "idle.png");
-        color = "blue";
-        break;
-      }
-    }
-    //player depth
-    player.setDepth(0.6);
+    let colorPlayer = this.Info.players[this.socket.id].color;
+    console.log(colorPlayer);
+    player = this.physics.add.sprite(115, -740, 'player-idle_' + colorPlayer, "idle.png");
+    color = colorPlayer
+    delete this.Info.players[this.socket.id]
+
+    console.log(this.Info);
+
     //Pets and skins loading
     pet = this.physics.add.sprite(
       player.x + 50,
@@ -372,18 +290,23 @@ class Game extends Phaser.Scene {
     this.state.roomKey = this.textInput;
 
     for (let i = 0; i < this.numPlayers - 1; i++) {
+      let colorOther = Object.values(this.Info.players)[i].color
+
       otherPlayer[i] = this.physics.add.sprite(
-        115 + 30 * i,
-        -740 + 50 * i,
-        "playerbase",
+        120 + 50 * i,
+        -745 + 50 * i,
+        "player_base_" + colorOther,
         "idle.png"
       );
+
+
     }
-    // this.idPlayers.forEach((element) => {
-    //   if (element != this.socket.id) {
-    //     otherPlayerId.push(element);
-    //   }
-    // });
+    this.idPlayers.forEach((element) => {
+      if (element != this.socket.id) {
+        otherPlayerId.push(element);
+      }
+
+    });
     // console.log(otherPlayerId);
 
     // stt = otherPlayer.length;
@@ -1165,62 +1088,50 @@ class Game extends Phaser.Scene {
       }
     });
 
-    // this.socket.on("move", ({ x, y, playerId }) => {
-    //   //console.log({ x, y, playerId });
+    this.socket.on("move", ({ x, y, playerId, color }) => {
 
-    //   let index = otherPlayerId.findIndex((Element) => Element == playerId);
-    //   //id = index;
-    //   // console.log(index);
 
-    //   if (otherPlayer[index].x > x) {
-    //     otherPlayer[index].flipX = true;
-    //   } else if (otherPlayer[index].x < x) {
-    //     otherPlayer[index].flipX = false;
-    //   }
-    //   otherPlayer[index].x = x;
-    //   otherPlayer[index].y = y;
-    //   otherPlayer[index].moving = true;
-
-    //   if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
-    //     otherPlayer[index].play("player-walk");
-    //   } else if (
-    //     !otherPlayer[index].moving &&
-    //     otherPlayer[index].anims.isPlaying
-    //   ) {
-    //     otherPlayer[index].stop("player-walk");
-    //   }
-    // });
+      if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
+        otherPlayer[index].play("player-walk_" + color);
+      } else if (
+        !otherPlayer[index].moving &&
+        otherPlayer[index].anims.isPlaying
+      ) {
+        otherPlayer[index].stop("player-walk_" + color);
+      }
+    });
 
     // console.log(objectsLayer);
 
-    // this.socket.on("moveEnd", ({ playerId }) => {
-    //   let index = otherPlayerId.findIndex((Element) => Element == playerId);
-    //   otherPlayer[index].moving = false;
-    //   otherPlayer[index].anims.play("player-idle");
-    //   if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
-    //     otherPlayer[index].play("player-walk");
-    //   } else if (
-    //     !otherPlayer[index].moving &&
-    //     otherPlayer[index].anims.isPlaying
-    //   ) {
-    //     otherPlayer[index].stop("player-walk");
-    //   }
-    // });
+    this.socket.on("moveEnd", ({ playerId, color }) => {
+      let index = otherPlayerId.findIndex((Element) => Element == playerId);
+      otherPlayer[index].moving = false;
+      otherPlayer[index].anims.play("player-idle_" + color);
+      if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
+        otherPlayer[index].play("player-walk_" + color);
+      } else if (
+        !otherPlayer[index].moving &&
+        otherPlayer[index].anims.isPlaying
+      ) {
+        otherPlayer[index].stop("player-walk_" + color);
+      }
+    });
 
     //update if killed ==>> ************************TO GHOST*******************
     this.socket.on("updateOtherPlayer", (playerId) => {
       // console.log(this.socket.id);
       // console.log(playerId);
+      let colorDead = Object.values(this.Info.players)[this.socket.id].color
       if (this.socket.id == playerId) {
         //run noitice died
         console.log("this player killed");
         //player.stop("player-idle")
         alive = false;
 
-        player.anims.play("player-dead", true);
+        player.anims.play("player-dead" + colorDead, true);
       } else {
         let index = otherPlayerId.findIndex((Element) => Element == playerId);
-        otherPlayer[index].anims.play("player-dead", true);
+        otherPlayer[index].anims.play("player-dead" + colorDead, true);
       }
     });
   }
@@ -1263,8 +1174,8 @@ class Game extends Phaser.Scene {
       if (touching && !wasTouching) player.emit("overlapstart");
       else if (!touching && wasTouching) player.emit("overlapend");
 
-     
-   
+
+
       let playerMoved = false;
       player.setVelocity(0);
 
@@ -1397,7 +1308,7 @@ class Game extends Phaser.Scene {
         }
       });
 
-      if (launch_scene&&check_mission!=undefined) {
+      if (launch_scene && check_mission != undefined) {
         //this.scene.pause("game");
 
         this.scene.launch(check_mission.scene, {
