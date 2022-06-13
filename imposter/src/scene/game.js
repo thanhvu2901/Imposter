@@ -732,7 +732,7 @@ this.load.image("emergency",emergencyButton)
         suffix: ".png",
       }),
       repeat: 0,
-      frameRate: 32,
+      frameRate: 12,
     });
 
     //Red
@@ -745,7 +745,7 @@ this.load.image("emergency",emergencyButton)
         suffix: ".png",
       }),
       repeat: 0,
-      frameRate: 24,
+      frameRate: 12,
     });
 
     //Blue
@@ -758,7 +758,7 @@ this.load.image("emergency",emergencyButton)
         suffix: ".png",
       }),
       repeat: 0,
-      frameRate: 24,
+      frameRate: 12,
     });
 
     //Blue dark
@@ -771,7 +771,7 @@ this.load.image("emergency",emergencyButton)
         suffix: ".png",
       }),
       repeat: 0,
-      frameRate: 24,
+      frameRate: 12,
     });
 
     //Blue light
@@ -784,7 +784,7 @@ this.load.image("emergency",emergencyButton)
         suffix: ".png",
       }),
       repeat: 0,
-      frameRate: 24,
+      frameRate: 12,
     });
 
     //Gray dark
@@ -797,7 +797,7 @@ this.load.image("emergency",emergencyButton)
         suffix: ".png",
       }),
       repeat: 0,
-      frameRate: 24,
+      frameRate: 12,
     });
 
     //Gray light
@@ -810,7 +810,7 @@ this.load.image("emergency",emergencyButton)
         suffix: ".png",
       }),
       repeat: 0,
-      frameRate: 24,
+      frameRate: 12,
     });
 
     //Green dark
@@ -823,7 +823,7 @@ this.load.image("emergency",emergencyButton)
         suffix: ".png",
       }),
       repeat: 0,
-      frameRate: 24,
+      frameRate: 12,
     });
 
     //Green light
@@ -836,7 +836,7 @@ this.load.image("emergency",emergencyButton)
         suffix: ".png",
       }),
       repeat: 0,
-      frameRate: 24,
+      frameRate: 12,
     });
 
     //Orange
@@ -849,7 +849,7 @@ this.load.image("emergency",emergencyButton)
         suffix: ".png",
       }),
       repeat: 0,
-      frameRate: 24,
+      frameRate: 12,
     });
 
     //Pink
@@ -862,7 +862,7 @@ this.load.image("emergency",emergencyButton)
         suffix: ".png",
       }),
       repeat: 0,
-      frameRate: 24,
+      frameRate: 12,
     });
 
     //Purple
@@ -875,7 +875,7 @@ this.load.image("emergency",emergencyButton)
         suffix: ".png",
       }),
       repeat: 0,
-      frameRate: 24,
+      frameRate: 12,
     });
 
     //Yellow
@@ -888,7 +888,7 @@ this.load.image("emergency",emergencyButton)
         suffix: ".png",
       }),
       repeat: 0,
-      frameRate: 24,
+      frameRate: 12,
     });
 
     //Creating animation for pets
@@ -900,8 +900,8 @@ this.load.image("emergency",emergencyButton)
         prefix: `${BSLUG}_walk`,
         suffix: ".png",
       }),
-      repeat: -1,
-      frameRate: 24,
+      repeat: 0,
+      frameRate: 12,
     });
 
     this.anims.create({
@@ -912,8 +912,8 @@ this.load.image("emergency",emergencyButton)
         prefix: `${BSLUG}_idle`,
         suffix: ".png",
       }),
-      repeat: -1,
-      frameRate: 24,
+      repeat: 0,
+      frameRate: 12,
     });
 
     //input to control
@@ -1164,20 +1164,20 @@ this.socket.on("open_othervote",()=>{
     });
 
     //update if killed ==>> ************************TO GHOST*******************
-    this.socket.on("updateOtherPlayer", (playerId) => {
+    this.socket.on("updateOtherPlayer", ({ playerId, colorKill }) => {
       // console.log(this.socket.id);
       // console.log(playerId);
-      let colorDead = Object.values(this.Info.players)[this.socket.id].color
+      // let colorDead = (Object((this.Info.players)[String(playerId)]).color)
+      // console.log(colorDead);
       if (this.socket.id == playerId) {
         //run noitice died
         console.log("this player killed");
         //player.stop("player-idle")
         alive = false;
-
-        player.anims.play("player-dead" + colorDead, true);
+        player.anims.play("player-dead_" + colorKill, true);
       } else {
         let index = otherPlayerId.findIndex((Element) => Element == playerId);
-        otherPlayer[index].anims.play("player-dead" + colorDead, true);
+        otherPlayer[index].anims.play("player-dead_" + colorKill, true);
         let temp =this.add.rectangle( otherPlayer[index].x,  otherPlayer[index].y,200,200)
         this.physics.add.existing(temp)
         this.physics.add.overlap(player,temp,report)
@@ -1198,13 +1198,17 @@ this.socket.on("open_othervote",()=>{
       kill.on("pointerdown", () => {
         //console.log();
         if (canKill) {
-          this.sound.play('killAudio', false)
-          playerKilled.anims.play("player-dead_" + color, false);
+          this.sound.play("killAudio", false);
+          let killId = otherPlayerId[indexKill];
+          let colorKill = (Object((this.Info.players)[killId]).color)
+          playerKilled.anims.play("player-dead_" + colorKill, true);
           let temp =this.add.rectangle( playerKilled.x,  playerKilled.y,200,200)
           this.physics.add.existing(temp)
           this.physics.add.overlap(player,temp,report)
-          this.socket.emit('killed', (otherPlayerId[indexKill]))
-          otherPlayer = otherPlayer.filter(player => { return player !== playerKilled });
+          this.socket.emit("killed", ({ playerId: otherPlayerId[indexKill], roomId: this.state.roomKey }));
+          otherPlayer = otherPlayer.filter((player) => {
+            return player !== playerKilled;
+          });
           console.log(otherPlayerId[indexKill]); // emit socket id player killed
           otherPlayerId = otherPlayerId.filter((player) => {
             return player !== otherPlayerId[indexKill];
