@@ -1257,11 +1257,11 @@ this.socket.on("open_othervote",()=>{
         playerMoved = true;
       }
       if (playerMoved) {
-        // this.socket.emit("move", {
-        //   x: player.x,
-        //   y: player.y,
-        //   roomId: this.state.roomKey,
-        // });
+        this.socket.emit("move", {
+          x: player.x,
+          y: player.y,
+          roomId: this.state.roomKey,
+        });
 
         let index = 0;
 
@@ -1328,15 +1328,15 @@ this.socket.on("open_othervote",()=>{
       }
 
       if (playerMoved) {
-        // this.socket.emit("move", {
-        //   x: player.x,
-        //   y: player.y,
-        //   roomId: this.state.roomKey,
-        // });
+        this.socket.emit("move", {
+          x: player.x,
+          y: player.y,
+          roomId: this.state.roomKey,
+        });
         player.movedLastFrame = true;
       } else {
         if (player.movedLastFrame) {
-          // this.socket.emit("moveEnd", { roomId: this.state.roomKey });
+          this.socket.emit("moveEnd", { roomId: this.state.roomKey });
         }
         player.movedLastFrame = false;
       }
