@@ -700,8 +700,8 @@ class Game extends Phaser.Scene {
         prefix: "ghost00",
         suffix: ".png",
       }),
-      repeat: -1,
-      frameRate: 32,
+      repeat: 0,
+      frameRate: 12,
     });
 
     //Red
@@ -713,8 +713,8 @@ class Game extends Phaser.Scene {
         prefix: "Dead",
         suffix: ".png",
       }),
-      repeat: -1,
-      frameRate: 24,
+      repeat: 0,
+      frameRate: 12,
     });
 
     //Blue
@@ -726,8 +726,8 @@ class Game extends Phaser.Scene {
         prefix: "Dead",
         suffix: ".png",
       }),
-      repeat: -1,
-      frameRate: 24,
+      repeat: 0,
+      frameRate: 12,
     });
 
     //Blue dark
@@ -739,8 +739,8 @@ class Game extends Phaser.Scene {
         prefix: "Dead",
         suffix: ".png",
       }),
-      repeat: -1,
-      frameRate: 24,
+      repeat: 0,
+      frameRate: 12,
     });
 
     //Blue light
@@ -752,8 +752,8 @@ class Game extends Phaser.Scene {
         prefix: "Dead",
         suffix: ".png",
       }),
-      repeat: -1,
-      frameRate: 24,
+      repeat: 0,
+      frameRate: 12,
     });
 
     //Gray dark
@@ -765,8 +765,8 @@ class Game extends Phaser.Scene {
         prefix: "Dead",
         suffix: ".png",
       }),
-      repeat: -1,
-      frameRate: 24,
+      repeat: 0,
+      frameRate: 12,
     });
 
     //Gray light
@@ -778,8 +778,8 @@ class Game extends Phaser.Scene {
         prefix: "Dead",
         suffix: ".png",
       }),
-      repeat: -1,
-      frameRate: 24,
+      repeat: 0,
+      frameRate: 12,
     });
 
     //Green dark
@@ -791,8 +791,8 @@ class Game extends Phaser.Scene {
         prefix: "Dead",
         suffix: ".png",
       }),
-      repeat: -1,
-      frameRate: 24,
+      repeat: 0,
+      frameRate: 12,
     });
 
     //Green light
@@ -804,8 +804,8 @@ class Game extends Phaser.Scene {
         prefix: "Dead",
         suffix: ".png",
       }),
-      repeat: -1,
-      frameRate: 24,
+      repeat: 0,
+      frameRate: 12,
     });
 
     //Orange
@@ -817,8 +817,8 @@ class Game extends Phaser.Scene {
         prefix: "Dead",
         suffix: ".png",
       }),
-      repeat: -1,
-      frameRate: 24,
+      repeat: 0,
+      frameRate: 12,
     });
 
     //Pink
@@ -830,8 +830,8 @@ class Game extends Phaser.Scene {
         prefix: "Dead",
         suffix: ".png",
       }),
-      repeat: -1,
-      frameRate: 24,
+      repeat: 0,
+      frameRate: 12,
     });
 
     //Purple
@@ -843,8 +843,8 @@ class Game extends Phaser.Scene {
         prefix: "Dead",
         suffix: ".png",
       }),
-      repeat: -1,
-      frameRate: 24,
+      repeat: 0,
+      frameRate: 12,
     });
 
     //Yellow
@@ -856,8 +856,8 @@ class Game extends Phaser.Scene {
         prefix: "Dead",
         suffix: ".png",
       }),
-      repeat: -1,
-      frameRate: 24,
+      repeat: 0,
+      frameRate: 12,
     });
 
     //Creating animation for pets
@@ -869,8 +869,8 @@ class Game extends Phaser.Scene {
         prefix: `${BSLUG}_walk`,
         suffix: ".png",
       }),
-      repeat: -1,
-      frameRate: 24,
+      repeat: 0,
+      frameRate: 12,
     });
 
     this.anims.create({
@@ -881,8 +881,8 @@ class Game extends Phaser.Scene {
         prefix: `${BSLUG}_idle`,
         suffix: ".png",
       }),
-      repeat: -1,
-      frameRate: 24,
+      repeat: 0,
+      frameRate: 12,
     });
 
     //input to control
@@ -1109,20 +1109,20 @@ class Game extends Phaser.Scene {
     });
 
     //update if killed ==>> ************************TO GHOST*******************
-    this.socket.on("updateOtherPlayer", (playerId) => {
+    this.socket.on("updateOtherPlayer", ({ playerId, colorKill }) => {
       // console.log(this.socket.id);
       // console.log(playerId);
-      let colorDead = Object.values(this.Info.players)[this.socket.id].color
+      // let colorDead = (Object((this.Info.players)[String(playerId)]).color)
+      // console.log(colorDead);
       if (this.socket.id == playerId) {
         //run noitice died
         console.log("this player killed");
         //player.stop("player-idle")
         alive = false;
-
-        player.anims.play("player-dead_" + colorDead, true);
+        player.anims.play("player-dead_" + colorKill, true);
       } else {
         let index = otherPlayerId.findIndex((Element) => Element == playerId);
-        otherPlayer[index].anims.play("player-dead_" + colorDead, true);
+        otherPlayer[index].anims.play("player-dead_" + colorKill, true);
       }
     });
   }
@@ -1136,8 +1136,10 @@ class Game extends Phaser.Scene {
         //console.log();
         if (canKill) {
           this.sound.play("killAudio", false);
-          playerKilled.anims.play("player-dead_" + color, true);
-          this.socket.emit("killed", otherPlayerId[indexKill]);
+          let killId = otherPlayerId[indexKill];
+          let colorKill = (Object((this.Info.players)[killId]).color)
+          playerKilled.anims.play("player-dead_" + colorKill, true);
+          this.socket.emit("killed", ({ playerId: otherPlayerId[indexKill], roomId: this.state.roomKey }));
           otherPlayer = otherPlayer.filter((player) => {
             return player !== playerKilled;
           });
