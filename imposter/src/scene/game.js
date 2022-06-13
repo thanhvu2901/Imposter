@@ -1119,10 +1119,10 @@ class Game extends Phaser.Scene {
         //player.stop("player-idle")
         alive = false;
 
-        player.anims.play("player-dead" + colorDead, true);
+        player.anims.play("player-dead_" + colorDead, true);
       } else {
         let index = otherPlayerId.findIndex((Element) => Element == playerId);
-        otherPlayer[index].anims.play("player-dead" + colorDead, true);
+        otherPlayer[index].anims.play("player-dead_" + colorDead, true);
       }
     });
   }
