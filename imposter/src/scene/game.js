@@ -125,7 +125,7 @@ let total_missions_completed = 0;
 let list_missions_completed = [];
 let color = "";
 let report_button
-
+let deadplayer=[]
 class Game extends Phaser.Scene {
   constructor() {
     super({ key: "game" });
@@ -1113,15 +1113,22 @@ this.load.image("emergency",emergencyButton)
     });
     report_btn.on('pointerdown',()=>{
       if(near_btn){
-      this.scene.launch("vote",{socket:this.socket, numPlayers: this.numPlayers,
-        idPlayers:this.idPlayers,})}
-        this.socket.emit("open_vote")
+        this.scene.launch("vote",{socket:this.socket, numPlayers: this.numPlayers,
+          idPlayers:this.idPlayers,roomId:this.state.roomKey,deadlist:deadplayer})
+          this.socket.emit("open_vote")
+      
+      }
+        
     })
     // this.socket.on("move", ({ x, y, playerId }) => {
     //   //console.log({ x, y, playerId });
 this.socket.on("open_othervote",()=>{
-  this.scene.launch("vote",{socket:this.socket, numPlayers: this.numPlayers,
-    idPlayers:this.idPlayers,})
+
+ 
+    this.scene.launch("vote",{socket:this.socket, numPlayers: this.numPlayers,
+      idPlayers:this.idPlayers,roomId:this.state.roomKey,deadlist:deadplayer})
+
+
 })
     this.socket.on("move", ({ x, y, playerId, color }) => {
       let index = otherPlayerId.findIndex((Element) => Element == playerId);
@@ -1169,6 +1176,7 @@ this.socket.on("open_othervote",()=>{
       // console.log(playerId);
       // let colorDead = (Object((this.Info.players)[String(playerId)]).color)
       // console.log(colorDead);
+      deadplayer.push(playerId)
       if (this.socket.id == playerId) {
         //run noitice died
         console.log("this player killed");
@@ -1200,6 +1208,7 @@ this.socket.on("open_othervote",()=>{
         if (canKill) {
           this.sound.play("killAudio", false);
           let killId = otherPlayerId[indexKill];
+          deadplayer.push(killId)
           let colorKill = (Object((this.Info.players)[killId]).color)
           playerKilled.anims.play("player-dead_" + colorKill, true);
           let temp =this.add.rectangle( playerKilled.x,  playerKilled.y,200,200)

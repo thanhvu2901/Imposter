@@ -9,9 +9,10 @@ import speaker from "../../../assets/img/Voting Screen/icons/speaker.png";
 import x_symbol from "../../../assets/img/Voting Screen/icons/x_symbol.png";
 import voted_mark from "../../../assets/img/Voting Screen/icons/voted_mark.png";
 
-var main_screen, chat_icon_img, title, skip_vote_button, voting_count,timedEvent,timer=10000;
+var main_screen, chat_icon_img, title, skip_vote_button, voting_count,timedEvent,timer=10000,can_vote=true,speaker_group,dead;
 let player_list =new Map()
 let player_count = new Map()
+let player_vote = new Map()
 const coordinates = [
   [305, 235],
   [305, 310],
@@ -33,8 +34,10 @@ class VotingScreen extends Phaser.Scene {
     this.socket = data.socket;
     this.numPlayers = data.numPlayers;
     this.idPlayers = data.idPlayers;
+    this.roomKey=data.roomId
+    this.dead=data.deadlist
   }
-  preload() {
+ async preload() {
     this.load.image("screen1", screen1);
     this.load.image("chat_icon", chat_icon);
     this.load.image("player_background", player_background);
@@ -46,9 +49,11 @@ class VotingScreen extends Phaser.Scene {
     this.load.image("voted_mark", voted_mark);
   }
 
-  create() {
+async  create() {
+   
+    console.log(this.dead)
+    speaker_group=this.add.group()
     this.scene.bringToTop();
-console.log(this.socket)
     main_screen = this.add.image(512, 384, "screen1")
     chat_icon_img = this.add.image(
       main_screen.width - 12,
@@ -83,7 +88,10 @@ console.log(this.socket)
      let list =player_list.get(playerid)
      list.getChildren()[count-1].setVisible(true)
     })
-   
+   this.socket.on("voter_id",(playerid)=>{
+     player_vote.get(playerid).setVisible(true)
+   })
+  
   //  console.log(players);
     // // Left side
     // player_background_img = this.add.image(305, 235, "player_background");
@@ -195,13 +203,19 @@ console.log(this.socket)
       stroke: "#000000",
       strokeThickness: 3,
     });
+    if(this.dead.includes(this.socket.id)){
+      speaker_group.setVisible(false)
+    }
     timedEvent = this.time.addEvent({ delay: timer,callback:()=>{
      
       player_count.forEach(element => {
         console.log(element)
         element=0
       });
+      can_vote=true
       this.socket.removeListener("vote_otherplayer");
+      this.socket.removeListener("voter_id");
+      this.socket.removeListener("dead_list")
       exit(this)
     }});
     
@@ -210,6 +224,7 @@ update(){
 voting_count.setText("Voting Ends In: "+((timer-timedEvent.getElapsed())/1000).toFixed(0))
 }
   generatePlayerBackground(x, y, num, numOfPlayers,id) {
+  
     var background = this.add.image(x, y, "player_background");
 
     // Circle để xác định vị trí x,y của background
@@ -224,13 +239,31 @@ voting_count.setText("Voting Ends In: "+((timer-timedEvent.getElapsed())/1000).t
       strokeThickness: 3,
     });
     var speaker = this.add.image(x + 130, y, "speaker").setInteractive();
-    speaker.setAlpha(0.5);
+    if(this.socket.id==id){
+      name.setColor(0xff0000)
+    }
+    if(this.dead.includes(id)){
+      background.setTint(0x707070)
+    }
+     player_vote.set( id,this.add.image(avatar.x - 30, y - 25, "voted_mark").setVisible(false))
+    
+    if(this.socket.id!=id&& !this.dead.includes(id)){
+    speaker.setAlpha(1);
+  }
+    else{
+      speaker.setAlpha(0.5);
+    }
+    
 speaker.on('pointerdown',()=>{
-  //console.log(id)
-this.add.image(avatar.x - 30, y - 25, "voted_mark");
-this.socket.emit("vote",id)
+if(this.socket.id!=id && can_vote==true&&  !this.dead.includes(id) ){
 
+this.socket.emit("vote",this.socket.id,id)
+
+speaker_group.setAlpha(0.5)
+can_vote=false
+}
 })
+speaker_group.add(speaker)
     var x_symbol = this.add.image(avatar.x, y, "x_symbol");
     x_symbol.setVisible(false);
 
@@ -286,5 +319,8 @@ let temp1=temp.getChildren()
 }
 function exit(game){
   game.scene.stop()
+    }
+   async function update(value){
+    dead=value
     }
 export default VotingScreen;
