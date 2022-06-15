@@ -617,8 +617,8 @@ export default class waitingRoom extends Phaser.Scene {
       key: `${BEDCRAB}-walk`,
       frames: this.anims.generateFrameNames(BEDCRAB, {
         start: 1,
-        end: 18,
-        prefix: `${BEDCRAB}_walk`,
+        end: 12,
+        prefix: `${BEDCRAB}_Walk`,
         suffix: ".png",
       }),
       repeat: -1,
@@ -629,7 +629,7 @@ export default class waitingRoom extends Phaser.Scene {
       key: `${BEDCRAB}-idle`,
       frames: this.anims.generateFrameNames(BEDCRAB, {
         start: 1,
-        end: 48,
+        end: 27,
         prefix: `${BEDCRAB}_idle`,
         suffix: ".png",
       }),
@@ -641,7 +641,7 @@ export default class waitingRoom extends Phaser.Scene {
       key: `${CREWMIN}-walk`,
       frames: this.anims.generateFrameNames(CREWMIN, {
         start: 1,
-        end: 18,
+        end: 16,
         prefix: `${CREWMIN}_walk`,
         suffix: ".png",
       }),
@@ -651,21 +651,14 @@ export default class waitingRoom extends Phaser.Scene {
 
     this.anims.create({
       key: `${CREWMIN}-idle`,
-      frames: this.anims.generateFrameNames(CREWMIN, {
-        start: 1,
-        end: 48,
-        prefix: `${CREWMIN}_idle`,
-        suffix: ".png",
-      }),
-      repeat: -1,
-      frameRate: 24,
+      frames: [{key: CREWMIN, frame: `${CREWMIN}_idle1.png`}]
     });
 
     this.anims.create({
       key: `${DOG}-walk`,
       frames: this.anims.generateFrameNames(DOG, {
         start: 1,
-        end: 18,
+        end: 8,
         prefix: `${DOG}_walk`,
         suffix: ".png",
       }),
@@ -677,7 +670,7 @@ export default class waitingRoom extends Phaser.Scene {
       key: `${DOG}-idle`,
       frames: this.anims.generateFrameNames(DOG, {
         start: 1,
-        end: 48,
+        end: 8,
         prefix: `${DOG}_idle`,
         suffix: ".png",
       }),
@@ -689,7 +682,7 @@ export default class waitingRoom extends Phaser.Scene {
       key: `${ELLIE}-walk`,
       frames: this.anims.generateFrameNames(ELLIE, {
         start: 1,
-        end: 18,
+        end: 9,
         prefix: `${ELLIE}_walk`,
         suffix: ".png",
       }),
@@ -701,7 +694,7 @@ export default class waitingRoom extends Phaser.Scene {
       key: `${ELLIE}-idle`,
       frames: this.anims.generateFrameNames(ELLIE, {
         start: 1,
-        end: 48,
+        end: 34,
         prefix: `${ELLIE}_idle`,
         suffix: ".png",
       }),
@@ -713,7 +706,7 @@ export default class waitingRoom extends Phaser.Scene {
       key: `${HAMPSTER}-walk`,
       frames: this.anims.generateFrameNames(HAMPSTER, {
         start: 1,
-        end: 18,
+        end: 6,
         prefix: `${HAMPSTER}_walk`,
         suffix: ".png",
       }),
@@ -725,7 +718,7 @@ export default class waitingRoom extends Phaser.Scene {
       key: `${HAMPSTER}-idle`,
       frames: this.anims.generateFrameNames(HAMPSTER, {
         start: 1,
-        end: 48,
+        end: 31,
         prefix: `${HAMPSTER}_idle`,
         suffix: ".png",
       }),
@@ -737,7 +730,7 @@ export default class waitingRoom extends Phaser.Scene {
       key: `${ROBIT}-walk`,
       frames: this.anims.generateFrameNames(ROBIT, {
         start: 1,
-        end: 18,
+        end: 16,
         prefix: `${ROBIT}_walk`,
         suffix: ".png",
       }),
@@ -749,7 +742,7 @@ export default class waitingRoom extends Phaser.Scene {
       key: `${ROBIT}-idle`,
       frames: this.anims.generateFrameNames(ROBIT, {
         start: 1,
-        end: 48,
+        end: 122,
         prefix: `${ROBIT}_idle`,
         suffix: ".png",
       }),
@@ -761,7 +754,7 @@ export default class waitingRoom extends Phaser.Scene {
       key: `${SQUIG}-walk`,
       frames: this.anims.generateFrameNames(SQUIG, {
         start: 1,
-        end: 18,
+        end: 16,
         prefix: `${SQUIG}_walk`,
         suffix: ".png",
       }),
@@ -773,7 +766,7 @@ export default class waitingRoom extends Phaser.Scene {
       key: `${SQUIG}-idle`,
       frames: this.anims.generateFrameNames(SQUIG, {
         start: 1,
-        end: 48,
+        end: 40,
         prefix: `${SQUIG}_idle`,
         suffix: ".png",
       }),
@@ -785,7 +778,7 @@ export default class waitingRoom extends Phaser.Scene {
       key: `${STICKMIN}-walk`,
       frames: this.anims.generateFrameNames(STICKMIN, {
         start: 1,
-        end: 18,
+        end: 9,
         prefix: `${STICKMIN}_walk`,
         suffix: ".png",
       }),
@@ -797,7 +790,7 @@ export default class waitingRoom extends Phaser.Scene {
       key: `${STICKMIN}-idle`,
       frames: this.anims.generateFrameNames(STICKMIN, {
         start: 1,
-        end: 48,
+        end: 34,
         prefix: `${STICKMIN}_idle`,
         suffix: ".png",
       }),
@@ -809,7 +802,7 @@ export default class waitingRoom extends Phaser.Scene {
       key: `${TWITCH}-walk`,
       frames: this.anims.generateFrameNames(TWITCH, {
         start: 1,
-        end: 18,
+        end: 12,
         prefix: `${TWITCH}_walk`,
         suffix: ".png",
       }),
@@ -821,7 +814,7 @@ export default class waitingRoom extends Phaser.Scene {
       key: `${TWITCH}-idle`,
       frames: this.anims.generateFrameNames(TWITCH, {
         start: 1,
-        end: 48,
+        end: 96,
         prefix: `${TWITCH}_idle`,
         suffix: ".png",
       }),
@@ -845,14 +838,13 @@ export default class waitingRoom extends Phaser.Scene {
       key: `${UFO}-idle`,
       frames: this.anims.generateFrameNames(UFO, {
         start: 1,
-        end: 48,
+        end: 45,
         prefix: `${UFO}_idle`,
         suffix: ".png",
       }),
       repeat: -1,
       frameRate: 24,
     });
-
     
     //Sound Effects
     this.input.keyboard.on("keyup", (e) => {
@@ -1738,7 +1730,7 @@ export default class waitingRoom extends Phaser.Scene {
             break;
           case "pet10":
             if (pet) {
-              pet.dstroy();
+              pet.destroy();
             }
             pet = this.physics.add.sprite(
               player.x + 50,
