@@ -303,27 +303,26 @@ class Game extends Phaser.Scene {
     this.load.atlas(`${SUITWHITE}_pants`, suitwhitepng, suitwhitejson);
 
     //hats
-    this.load.image("hat", hat1);
-    this.load.image("hat0", hat0);
-    this.load.image("hat1", hat1);
-    this.load.image("hat2", hat2);
-    this.load.image("hat3", hat3);
-    this.load.image("hat4", hat4);
-    this.load.image("hat5", hat5);
-    this.load.image("hat6", hat6);
-    this.load.image("hat7", hat7);
-    this.load.image("hat8", hat8);
-    this.load.image("hat9", hat9);
-    this.load.image("hat10", hat10);
-    this.load.image("hat11", hat11);
-    this.load.image("hat12", hat12);
-    this.load.image("hat13", hat13);
-    this.load.image("hat14", hat14);
-    this.load.image("hat15", hat15);
-    this.load.image("hat16", hat16);
-    this.load.image("hat17", hat17);
-    this.load.image("hat18", hat18);
-    this.load.image("hat19", hat19);
+    this.load.image("hat00", hat0);
+    this.load.image("hat01", hat1);
+    this.load.image("hat02", hat2);
+    this.load.image("hat03", hat3);
+    this.load.image("hat04", hat4);
+    this.load.image("hat05", hat5);
+    this.load.image("hat06", hat6);
+    this.load.image("hat07", hat7);
+    this.load.image("hat08", hat8);
+    this.load.image("hat09", hat9);
+    this.load.image("hat010", hat10);
+    this.load.image("hat011", hat11);
+    this.load.image("hat012", hat12);
+    this.load.image("hat013", hat13);
+    this.load.image("hat014", hat14);
+    this.load.image("hat015", hat15);
+    this.load.image("hat016", hat16);
+    this.load.image("hat017", hat17);
+    this.load.image("hat018", hat18);
+    this.load.image("hat019", hat19);
 
     //Pets
     this.load.atlas(BSLUG, bslugpng, bslugjson);
@@ -466,7 +465,7 @@ class Game extends Phaser.Scene {
           hat_skin = this.physics.add.sprite(
             player.x,
             player.y - 25,
-            "hat0",
+            "hat00",
             0
           );
           break;
@@ -474,7 +473,7 @@ class Game extends Phaser.Scene {
           hat_skin = this.physics.add.sprite(
             player.x,
             player.y - 25,
-            "hat1",
+            "hat01",
             0
           );
           break;
@@ -482,7 +481,7 @@ class Game extends Phaser.Scene {
           hat_skin = this.physics.add.sprite(
             player.x,
             player.y - 25,
-            "hat2",
+            "hat02",
             0
           );
           break;
@@ -490,7 +489,7 @@ class Game extends Phaser.Scene {
           hat_skin = this.physics.add.sprite(
             player.x,
             player.y - 25,
-            "hat3",
+            "hat03",
             0
           );
           break;
@@ -498,7 +497,7 @@ class Game extends Phaser.Scene {
           hat_skin = this.physics.add.sprite(
             player.x,
             player.y - 25,
-            "hat4",
+            "hat04",
             0
           );
           break;
@@ -506,7 +505,7 @@ class Game extends Phaser.Scene {
           hat_skin = this.physics.add.sprite(
             player.x,
             player.y - 25,
-            "hat5",
+            "hat05",
             0
           );
           break;
@@ -514,7 +513,7 @@ class Game extends Phaser.Scene {
           hat_skin = this.physics.add.sprite(
             player.x,
             player.y - 25,
-            "hat6",
+            "hat06",
             0
           );
           break;
@@ -522,7 +521,7 @@ class Game extends Phaser.Scene {
           hat_skin = this.physics.add.sprite(
             player.x,
             player.y - 25,
-            "hat7",
+            "hat07",
             0
           );
           break;
@@ -530,7 +529,7 @@ class Game extends Phaser.Scene {
           hat_skin = this.physics.add.sprite(
             player.x,
             player.y - 25,
-            "hat8",
+            "hat08",
             0
           );
           break;
@@ -538,7 +537,7 @@ class Game extends Phaser.Scene {
           hat_skin = this.physics.add.sprite(
             player.x,
             player.y - 25,
-            "hat9",
+            "hat09",
             0
           );
           break;
@@ -546,7 +545,7 @@ class Game extends Phaser.Scene {
           hat_skin = this.physics.add.sprite(
             player.x,
             player.y - 25,
-            "hat10",
+            "hat010",
             0
           );
           break;
@@ -554,7 +553,7 @@ class Game extends Phaser.Scene {
           hat_skin = this.physics.add.sprite(
             player.x,
             player.y - 25,
-            "hat11",
+            "hat011",
             0
           );
           break;
@@ -562,7 +561,7 @@ class Game extends Phaser.Scene {
           hat_skin = this.physics.add.sprite(
             player.x,
             player.y - 25,
-            "hat12",
+            "hat012",
             0
           );
           break;
@@ -570,7 +569,7 @@ class Game extends Phaser.Scene {
           hat_skin = this.physics.add.sprite(
             player.x,
             player.y - 25,
-            "hat13",
+            "hat013",
             0
           );
           break;
@@ -578,7 +577,7 @@ class Game extends Phaser.Scene {
           hat_skin = this.physics.add.sprite(
             player.x,
             player.y - 25,
-            "hat14",
+            "hat014",
             0
           );
           break;
@@ -586,7 +585,7 @@ class Game extends Phaser.Scene {
           hat_skin = this.physics.add.sprite(
             player.x,
             player.y - 25,
-            "hat15",
+            "hat015",
             0
           );
           break;
@@ -594,7 +593,7 @@ class Game extends Phaser.Scene {
           hat_skin = this.physics.add.sprite(
             player.x,
             player.y - 25,
-            "hat16",
+            "hat016",
             0
           );
           break;
@@ -602,7 +601,7 @@ class Game extends Phaser.Scene {
           hat_skin = this.physics.add.sprite(
             player.x,
             player.y - 25,
-            "hat17",
+            "hat017",
             0
           );
           break;
@@ -610,7 +609,7 @@ class Game extends Phaser.Scene {
           hat_skin = this.physics.add.sprite(
             player.x,
             player.y - 25,
-            "hat18",
+            "hat018",
             0
           );
           break;
@@ -618,7 +617,7 @@ class Game extends Phaser.Scene {
           hat_skin = this.physics.add.sprite(
             player.x,
             player.y - 25,
-            "hat19",
+            "hat019",
             0
           );
           break;
@@ -627,7 +626,8 @@ class Game extends Phaser.Scene {
     } */
 
     // if (this.playerChangedSkin.trouser) {
-    //   let pantChosen = this.playerChangedSkin.trouser.texture.key ?? "nothing";
+    //   let pantChosen =
+    //     this.playerChangedSkin.trouser.texture.key ?? "nothing";
     //   switch (pantChosen) {
     //     case "trouser0":
     //       pants_type = null;
@@ -769,11 +769,10 @@ class Game extends Phaser.Scene {
     //       );
     //       break;
     //   }
-    //   player_container.add(pants_skin);
-
+    //   // player_container.add(pants_skin);
     //   /* *********************CREATING ANIMATIONS FOR SKINS********************* */
     //   //For skis that don't have mirror animations
-    //   /* this.anims.create({
+    //   this.anims.create({
     //     key: `${pants_type}_walk`,
     //     frames: this.anims.generateFrameNames(`${pants_type}_pants`, {
     //       start: 1,
@@ -784,7 +783,7 @@ class Game extends Phaser.Scene {
     //     repeat: -1,
     //     frameRate: 16,
     //   });
-
+  
     //   this.anims.create({
     //     key: `${pants_type}_idle`,
     //     frames: [
@@ -793,40 +792,40 @@ class Game extends Phaser.Scene {
     //         frame: `${pants_type}_Idle.png`,
     //       },
     //     ],
-    //   }); */
-    //   //For skins that have mirror animations
-    //   /* if (
-    //     pants_type == POLICE ||
-    //     pants_type == ARCHAEOLOGIST ||
-    //     pants_type == SECGUARD ||
-    //     pants_type == WALL ||
-    //     pants_type == CCC
-    //   ) {
-    //     isMirror = true;
-    //     this.anims.create({
-    //       key: `${pants_type}_walkMirror`,
-    //       frames: this.anims.generateFrameNames(`${pants_type}_pants`, {
-    //         start: 1,
-    //         end: 12,
-    //         prefix: `${pants_type}_WalkMirror`,
-    //         suffix: ".png",
-    //       }),
-    //       repeat: -1,
-    //       frameRate: 16,
-    //     });
-
-    //     this.anims.create({
-    //       key: `${pants_type}_idleMirror`,
-    //       frames: [
-    //         {
-    //           key: `${pants_type}_pants`,
-    //           frame: `${pants_type}_IdleMirror.png`,
-    //         },
-    //       ],
-    //     });
-    //   } else {
-    //     isMirror = false;
-    //   } */
+    //   });    
+    //     //For skins that have mirror animations
+    //     if (
+    //       pants_type == POLICE ||
+    //       pants_type == ARCHAEOLOGIST ||
+    //       pants_type == SECGUARD ||
+    //       pants_type == WALL ||
+    //       pants_type == CCC
+    //     ) {
+    //       isMirror = true;
+    //       this.anims.create({
+    //         key: `${pants_type}_walkMirror`,
+    //         frames: this.anims.generateFrameNames(`${pants_type}_pants`, {
+    //           start: 1,
+    //           end: 12,
+    //           prefix: `${pants_type}_WalkMirror`,
+    //           suffix: ".png",
+    //         }),
+    //         repeat: -1,
+    //         frameRate: 16,
+    //       });
+  
+    //       this.anims.create({
+    //         key: `${pants_type}_idleMirror`,
+    //         frames: [
+    //           {
+    //             key: `${pants_type}_pants`,
+    //             frame: `${pants_type}_IdleMirror.png`,
+    //           },
+    //         ],
+    //       });
+    //     } else {
+    //       isMirror = false;
+    //     }
     // }
 
     //Pets loading
