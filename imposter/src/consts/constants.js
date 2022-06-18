@@ -9,6 +9,8 @@ export const SHIP_WIDTH = 4320;
 export const SHIP_HEIGHT = 2502;
 
 //Player colors
+export const PLAYER_GHOST = "player_ghost"
+export const PLAYER_BASE = "player_base";
 export const PLAYER_BLUE = "player_base_blue";
 export const PLAYER_RED = "player_base_red";
 export const PLAYER_BLUE_DARK = "player_base_blue_dark";
