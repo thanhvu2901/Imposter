@@ -1294,7 +1294,7 @@ this.socket.on("open_othervote",()=>{
       }
     }
     //canKill = false
-    if (alive == true) {
+    if (alive == true&&this.isRole!=1) {
       let playerMoved = false;
       player.setVelocity(0);
 
