@@ -517,8 +517,8 @@ class Game extends Phaser.Scene {
   }
   update() {
 
-    console.log("x", player.x);
-    console.log("y", player.y);
+    // console.log("x", player.x);
+    // console.log("y", player.y);
   
     light.update(player)
     if (this.isRole == 1) {
@@ -687,6 +687,7 @@ class Game extends Phaser.Scene {
         player.y
       );
       const check_mission = mission.check_mission();
+      console.log("check_mission", check_mission);
       if (check_mission) {
         //blink blink marker
         useButton.alpha = 1;
@@ -702,7 +703,6 @@ class Game extends Phaser.Scene {
 
       if (launch_scene) {
         //this.scene.pause("game");
-
         this.scene.launch(check_mission.scene, {
           x: check_mission.x,
           y: check_mission.y,
