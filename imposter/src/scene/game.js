@@ -1049,7 +1049,7 @@ this.load.image("emergency",emergencyButton)
     //bắt sự kiện khi player overlap với 1 object khác
     player.on("overlapstart", function () {
       //hiện nút nhảy vent với điều kiện là player overlap với vent
-      if (is_vent&&this.isRole==1) {
+      if (is_vent) {
         vent_butt.alpha = 1;
         sabotage.alpha = 0;
       }
