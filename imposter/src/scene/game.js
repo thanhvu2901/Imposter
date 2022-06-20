@@ -731,6 +731,7 @@ this.load.image("emergency",emergencyButton)
         prefix: "ghost00",
         suffix: ".png",
       }),
+      setScale: 0.2,
       repeat: 0,
       frameRate: 12,
     });
@@ -1182,7 +1183,7 @@ this.socket.on("open_othervote",()=>{
         console.log("this player killed");
         //player.stop("player-idle")
         alive = false;
-        player.anims.play("player-dead_" + colorKill, true);
+        player.anims.play("player-ghost", true);
       } else {
         let index = otherPlayerId.findIndex((Element) => Element == playerId);
         otherPlayer[index].anims.play("player-dead_" + colorKill, true);
@@ -1380,6 +1381,49 @@ this.socket.on("open_othervote",()=>{
         });
         launch_scene = false;
       }
+    }
+    else {
+      let playerDieMoved = false;
+      player.setVelocity(0);
+
+      if (
+        !cursors.left.isDown &&
+        !cursors.right.isDown &&
+        !cursors.up.isDown &&
+        !cursors.down.isDown
+      ) {
+        pet.anims.play(`${BSLUG}-idle`);
+      }
+
+      if (cursors.left.isDown) {
+
+        player.anims.play("player-ghost", true);
+        player.setVelocityX(-PLAYER_SPEED);
+        player.scaleX = -1;
+
+        player.body.offset.x = 40;
+        playerDieMoved = true;
+      } else if (cursors.right.isDown) {
+
+        player.anims.play("player-ghost", true);
+        player.setVelocityX(PLAYER_SPEED);
+        player.scaleX = 1;
+
+        player.body.offset.x = 0;
+        playerDieMoved = true;
+      }
+      if (cursors.up.isDown) {
+
+        player.anims.play("player-ghost", true);
+        player.setVelocityY(-PLAYER_SPEED);
+        playerDieMoved = true;
+      } else if (cursors.down.isDown) {
+
+        player.anims.play("player-ghost", true);
+        player.setVelocityY(PLAYER_SPEED);
+        playerDieMoved = true;
+      }
+
     }
 
     //******************GHOST */
