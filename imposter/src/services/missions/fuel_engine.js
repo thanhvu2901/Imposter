@@ -16,7 +16,7 @@ class FuelEngine extends Base {
             this.x,
             this.y);
         if (check_mission) {
-            let sprite = this.scene.scene.add.image(FUEL_ENGINE_MARKED_X, FUEL_ENGINE_MARKED_Y, "Fuel");
+            let sprite = this.scene.scene.add.sprite(FUEL_ENGINE_MARKED_X, FUEL_ENGINE_MARKED_Y, "FuelEngine");
             sprite.tint =  Math.random() * 0xffff00;
             return { scene: "Fuel", x: this.x, y: this.y, sprite: sprite }
 

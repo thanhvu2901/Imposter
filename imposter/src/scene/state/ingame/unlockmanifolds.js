@@ -12,6 +12,8 @@ import Button10 from "../../../assets/img/Unlock Manifolds/Button10.png";
 import Panel from "../../../assets/img/Unlock Manifolds/Panel.png";
 import Glass from "../../../assets/img/Unlock Manifolds/PanelGlass.png";
 import Wire from "../../../assets/img/Unlock Manifolds/Wire.png";
+import Event_Center from "../../../helper/event_center";
+
 let ring1,ring2,ring3,ring4
 let button01,button02,button03,button04,button05,button06,button07,button08,button09,button10
 let text;
@@ -29,9 +31,16 @@ let light_,light_1
 let button=[]
 let cords
 let check=[]
-let ischeck=false
+let ischeck=false;
+let sprite, current_scene;
+let player_x, player_y;
 class UnlockManifolds extends Phaser.Scene {
-  
+  init(data) {
+    player_x = data.x;
+    player_y = data.y;
+    sprite = data.sprite;
+}
+
   constructor() {
     super({ key: "Unlock" });
    
@@ -54,6 +63,8 @@ class UnlockManifolds extends Phaser.Scene {
   }
 
   create() {
+    current_scene = this.scene
+
     x =   this.game.renderer.width / 2
     y =   this.game.renderer.height / 2
     cords=[[x-170,y-40],[x-85,y-40],[x,y-40],[x+85,y-40],[x+170,y-40],[x-170,y+45],[x-85,y+45],[x,y+45],[x+85,y+45],[x+170,y+45]]
@@ -135,8 +146,9 @@ console.log(button)
         button[i][0].removeInteractive()
         
       }
-      console.log('success')
-      this.scene.stop()
+      sprite.tint = 0;
+      Event_Center.emit("continue_scene_game", {x: x, y: y, mission: "Unlock"});
+      current_scene.stop("Unlock"); 
     }
   }
    

@@ -32,6 +32,8 @@ import CalibratorDistributor_mission_marked from "../assets/tasks/Calibrate Dist
 import ChartCourse from "../assets/tasks/Chart Course/marked.png";
 import FuelEngine from "../assets/tasks/Fuel Engines/marked.png";
 import PrimeShields from "../assets/tasks/Prime Shields/marked.png";
+import InspectSample from "../assets/tasks/Inspect Sample/marked.png";
+import UnlockManifolds from "../assets/tasks/Unlock Manifolds/marked.png";
 
 import Light from "../scene//state/ingame/ray-light"
 import Event_Center from "../helper/event_center";
@@ -114,7 +116,8 @@ class Game extends Phaser.Scene {
     this.load.image("ChartCourse", ChartCourse);
     this.load.image("FuelEngine", FuelEngine);
     this.load.image("PrimeSheilds", PrimeShields);
-
+    this.load.image("InspectSample", InspectSample);
+    this.load.image("UnlockManifolds", UnlockManifolds)
   }
 
   create() {
@@ -514,8 +517,8 @@ class Game extends Phaser.Scene {
   }
   update() {
 
-    console.log("x", player.x);
-    console.log("y", player.y);
+    // console.log("x", player.x);
+    // console.log("y", player.y);
   
     light.update(player)
     if (this.isRole == 1) {
@@ -684,6 +687,7 @@ class Game extends Phaser.Scene {
         player.y
       );
       const check_mission = mission.check_mission();
+      console.log("check_mission", check_mission);
       if (check_mission) {
         //blink blink marker
         useButton.alpha = 1;
@@ -699,7 +703,6 @@ class Game extends Phaser.Scene {
 
       if (launch_scene) {
         //this.scene.pause("game");
-
         this.scene.launch(check_mission.scene, {
           x: check_mission.x,
           y: check_mission.y,
