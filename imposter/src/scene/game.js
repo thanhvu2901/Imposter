@@ -95,7 +95,7 @@ let pressedKeys = [];
 let stt = 0;
 let socket;
 let tables = [];
-let tableObject, ventObject, hole, vent_butt,emergency_btn,near_btn=false,report_btn;
+let tableObject, ventObject, hole, vent_butt, emergency_btn, near_btn = false, report_btn;
 var objectsLayer;
 let map_missions;
 let export_missions;
@@ -125,7 +125,7 @@ let total_missions_completed = 0;
 let list_missions_completed = [];
 let color = "";
 let report_button
-let deadplayer=[]
+let deadplayer = []
 class Game extends Phaser.Scene {
   constructor() {
     super({ key: "game" });
@@ -144,8 +144,8 @@ class Game extends Phaser.Scene {
 
   preload() {
     this.load.tilemapTiledJSON("tilemap", theskeld);
- this.load.image("report-btn",reportbtn)
-this.load.image("emergency",emergencyButton)
+    this.load.image("report-btn", reportbtn)
+    this.load.image("emergency", emergencyButton)
 
     this.load.atlas("playerbase", playerpng, playerjson);
     this.load.atlas("ghost", player_ghost, player_ghost_json);
@@ -730,8 +730,9 @@ this.load.image("emergency",emergencyButton)
         end: 48,
         prefix: "ghost00",
         suffix: ".png",
+
       }),
-      setScale: 0.2,
+
       repeat: 0,
       frameRate: 12,
     });
@@ -1030,12 +1031,12 @@ this.load.image("emergency",emergencyButton)
           light.map(temp);
           break;
         case "Button":
-          let temp1 = this.add.rectangle(object.x,object.y,object.width,object.height).setOrigin(0,0)
-        emergency_btn = this.add.image(object.x,object.y,"emergency").setOrigin(-2.20,-1.25)
+          let temp1 = this.add.rectangle(object.x, object.y, object.width, object.height).setOrigin(0, 0)
+          emergency_btn = this.add.image(object.x, object.y, "emergency").setOrigin(-2.20, -1.25)
           this.physics.add.existing(temp1)
-          this.physics.add.overlap(player,temp1,report)
-        break;
-          default:
+          this.physics.add.overlap(player, temp1, report)
+          break;
+        default:
           break;
       }
     });
@@ -1053,21 +1054,21 @@ this.load.image("emergency",emergencyButton)
         vent_butt.alpha = 1;
         sabotage.alpha = 0;
       }
-      if(near_btn){
+      if (near_btn) {
         report_btn.alpha = 1
-        emergency_btn.setTint(0xffed00,0xffed00,0xffed00,0xffed00)
+        emergency_btn.setTint(0xffed00, 0xffed00, 0xffed00, 0xffed00)
       }
     });
     //bắt sự kiện khi player đi ra khỏi vùng overlap
     player.on("overlapend", function () {
       //ẩn nút nhảy vent
       is_vent = false
-      if(this.isRole==1){
-      vent_butt.alpha = 0
-      sabotage.alpha = 1
-    }
-      near_btn=false
-      report_btn.alpha=0.5
+      if (this.isRole == 1) {
+        vent_butt.alpha = 0
+        sabotage.alpha = 1
+      }
+      near_btn = false
+      report_btn.alpha = 0.5
       emergency_btn.clearTint()
     });
 
@@ -1112,25 +1113,29 @@ this.load.image("emergency",emergencyButton)
         }
       }
     });
-    report_btn.on('pointerdown',()=>{
-      if(near_btn){
-        this.scene.launch("vote",{socket:this.socket, numPlayers: this.numPlayers,
-          idPlayers:this.idPlayers,roomId:this.state.roomKey,deadlist:deadplayer})
-          this.socket.emit("open_vote")
-      
+    report_btn.on('pointerdown', () => {
+      if (near_btn) {
+        this.scene.launch("vote", {
+          socket: this.socket, numPlayers: this.numPlayers,
+          idPlayers: this.idPlayers, roomId: this.state.roomKey, deadlist: deadplayer
+        })
+        this.socket.emit("open_vote")
+
       }
-        
+
     })
     // this.socket.on("move", ({ x, y, playerId }) => {
     //   //console.log({ x, y, playerId });
-this.socket.on("open_othervote",()=>{
-
- 
-    this.scene.launch("vote",{socket:this.socket, numPlayers: this.numPlayers,
-      idPlayers:this.idPlayers,roomId:this.state.roomKey,deadlist:deadplayer})
+    this.socket.on("open_othervote", () => {
 
 
-})
+      this.scene.launch("vote", {
+        socket: this.socket, numPlayers: this.numPlayers,
+        idPlayers: this.idPlayers, roomId: this.state.roomKey, deadlist: deadplayer
+      })
+
+
+    })
     this.socket.on("move", ({ x, y, playerId, color }) => {
       let index = otherPlayerId.findIndex((Element) => Element == playerId);
       //id = index;
@@ -1183,24 +1188,24 @@ this.socket.on("open_othervote",()=>{
         console.log("this player killed");
         //player.stop("player-idle")
         alive = false;
-        player.anims.play("player-ghost", true);
+        player.anims.play("player-ghost", true).setScale(0.2);
       } else {
         let index = otherPlayerId.findIndex((Element) => Element == playerId);
         otherPlayer[index].anims.play("player-dead_" + colorKill, true);
-        let temp =this.add.rectangle( otherPlayer[index].x,  otherPlayer[index].y,200,200)
+        let temp = this.add.rectangle(otherPlayer[index].x, otherPlayer[index].y, 200, 200)
         this.physics.add.existing(temp)
-        this.physics.add.overlap(player,temp,report)
+        this.physics.add.overlap(player, temp, report)
       }
     });
   }
   update() {
     pet.setPosition(player.x + 50, player.y + 10);
     var wasTouching = !player.body.wasTouching.none;
-      // If you want 'touching or embedded' then use:
-      var touching = !player.body.touching.none || player.body.embedded;
-      if (touching && !wasTouching) player.emit("overlapstart");
-      else if (!touching && wasTouching) player.emit("overlapend");
-      
+    // If you want 'touching or embedded' then use:
+    var touching = !player.body.touching.none || player.body.embedded;
+    if (touching && !wasTouching) player.emit("overlapstart");
+    else if (!touching && wasTouching) player.emit("overlapend");
+
     this.events.emit("moving", [player.x, player.y]);
     light.update(player);
     if (this.isRole == 1) {
@@ -1212,9 +1217,9 @@ this.socket.on("open_othervote",()=>{
           deadplayer.push(killId)
           let colorKill = (Object((this.Info.players)[killId]).color)
           playerKilled.anims.play("player-dead_" + colorKill, true);
-          let temp =this.add.rectangle( playerKilled.x,  playerKilled.y,200,200)
+          let temp = this.add.rectangle(playerKilled.x, playerKilled.y, 200, 200)
           this.physics.add.existing(temp)
-          this.physics.add.overlap(player,temp,report)
+          this.physics.add.overlap(player, temp, report)
           this.socket.emit("killed", ({ playerId: otherPlayerId[indexKill], roomId: this.state.roomKey }));
           otherPlayer = otherPlayer.filter((player) => {
             return player !== playerKilled;
@@ -1237,12 +1242,12 @@ this.socket.on("open_othervote",()=>{
 
       //vì phaser chưa có phương thức xác định bắt sự kiện khi player tiếp xúc với sprite hoặc player rời xa sprite nên ta sử dụng emit để gửi sự kiện overlapstart và overlapend
       // var touching = !player.body.touching.none;
-  
-  
+
+
       let playerMoved = false;
       player.setVelocity(0);
 
-      
+
       //nếu is_hidden bằng true có nghĩa là player đang trốn vent nên sẽ ko di chuyển bằng input được
       if (cursors.left.isDown && is_hidden == false) {
         player.anims.play("player-walk_" + color, true);
@@ -1272,7 +1277,7 @@ this.socket.on("open_othervote",()=>{
           y: player.y,
           roomId: this.state.roomKey,
         });
-
+        player.movedLastFrame = true;
         let index = 0;
 
         for (let other of otherPlayer) {
@@ -1293,9 +1298,15 @@ this.socket.on("open_othervote",()=>{
           kill.alpha = 0.5;
         }
       }
+      else {
+        if (player.movedLastFrame) {
+          this.socket.emit("moveEnd", { roomId: this.state.roomKey });
+        }
+        player.movedLastFrame = false;
+      }
     }
     //canKill = false
-    if (alive == true&&this.isRole!=1) {
+    if (alive == true && this.isRole != 1) {
       let playerMoved = false;
       player.setVelocity(0);
 
@@ -1382,7 +1393,7 @@ this.socket.on("open_othervote",()=>{
         launch_scene = false;
       }
     }
-    else if(alive==false&&this.isRole!=1){
+    else if (alive == false && this.isRole != 1) {
       let playerDieMoved = false;
       player.setVelocity(0);
 
@@ -1397,7 +1408,7 @@ this.socket.on("open_othervote",()=>{
 
       if (cursors.left.isDown) {
 
-        player.anims.play("player-ghost", true);
+        player.anims.play("player-ghost", true).setScale(0.2);
         player.setVelocityX(-PLAYER_SPEED);
         player.scaleX = -1;
 
@@ -1405,7 +1416,7 @@ this.socket.on("open_othervote",()=>{
         playerDieMoved = true;
       } else if (cursors.right.isDown) {
 
-        player.anims.play("player-ghost", true);
+        player.anims.play("player-ghost", true).setScale(0.2);
         player.setVelocityX(PLAYER_SPEED);
         player.scaleX = 1;
 
@@ -1414,12 +1425,12 @@ this.socket.on("open_othervote",()=>{
       }
       if (cursors.up.isDown) {
 
-        player.anims.play("player-ghost", true);
+        player.anims.play("player-ghost", true).setScale(0.2);
         player.setVelocityY(-PLAYER_SPEED);
         playerDieMoved = true;
       } else if (cursors.down.isDown) {
 
-        player.anims.play("player-ghost", true);
+        player.anims.play("player-ghost", true).setScale(0.2);
         player.setVelocityY(PLAYER_SPEED);
         playerDieMoved = true;
       }
@@ -1444,12 +1455,12 @@ function circleOverlap(player, vent) {
   key = getKey([vent.x, vent.y + 10])[0]
 
 }
-function deadreport(player,otherplayer){
-console.log("player status",otherplayer.status)
+function deadreport(player, otherplayer) {
+  console.log("player status", otherplayer.status)
 }
-function report(player,button){
- 
-  near_btn=true
+function report(player, button) {
+
+  near_btn = true
 }
 // hiện arrow của vent khi player tới gần
 //hàm lấy key từ hashmap dựa trên value của key
