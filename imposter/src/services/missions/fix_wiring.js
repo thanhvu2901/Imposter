@@ -1,7 +1,7 @@
 import Base from "./base";
 
 const FIX_WIRING_MARKED_X = -349;
-const FIX_WIRING_MARKED_Y = 150
+const FIX_WIRING_MARKED_Y = 155
 
 class FixWiring extends Base {
     constructor(scene, x, y) {
