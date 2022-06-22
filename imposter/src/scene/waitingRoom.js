@@ -1716,11 +1716,7 @@ export default class waitingRoom extends Phaser.Scene {
         id: this.socket.id,
         room: this.state.roomKey,
       });
-      // this.physics.add.collider(player, lobby_tileset);
-      // this.physics.add.collider(player_container, lobby_tileset);
-      // this.cameras.main.startFollow(player, true);
     });
-
 
     this.socket.on("moveW", ({ x, y, playerId, color }) => {
       // console.log({ x, y, playerId });
@@ -1762,6 +1758,19 @@ export default class waitingRoom extends Phaser.Scene {
       }
     });
 
+    // this.events.on('resume', (data) => {
+    //   console.log('resume');
+    //   console.log(data);
+    //   this.socket = data.socket;
+    //   this.textInput = data.textInput;
+    //   this.playerChangedSkin = data.playerChangedSkin;
+    //   this.numberImposter = data.numberImposter;
+    //   this.numberPlayer = data.numberPlayer
+    //   ///  console.log(dataResume.test);
+
+    // })
+    
+    console.log("player container: ", player_container);
   }
 
   update() {

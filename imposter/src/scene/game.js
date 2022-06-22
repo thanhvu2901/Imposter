@@ -221,12 +221,15 @@ class Game extends Phaser.Scene {
 
     ship_tileset.setCollisionByProperty({ collides: true });
 
-    player = this.physics.add.sprite(115, -700, PLAYER_BLUE, "idle.png");
-    color = "blue";
-    player_container = this.add
-      .container(player.x, player.y)
-      .setSize(player.width, player.height);
-    player_container.add(player);
+    // color = PLAYER_BLUE;
+    // player = this.physics.add.sprite(115, -700, color, "idle.png");
+    // player_container = this.add
+    //   .container(player.x, player.y)
+    //   .setSize(player.width, player.height);
+    // player_container.add(player);
+    // this.physics.add.existing(player_container);
+    // console.log(player.body)
+    // console.log(player_container);
 
     eventsCenter.on("continue_scene_game", (data) => {
       current_x = data.x;
@@ -243,18 +246,79 @@ class Game extends Phaser.Scene {
       }
     });
 
-    // hat_skin = this.physics.add.sprite(player.x, player.y - 25, "hat0", 0);
+    let colorPlayerChanged =
+      this.playerChangedSkin.player.texture.key ?? "nothing";
+    switch (colorPlayerChanged) {
+      case "player0":
+        color = PLAYER_BLUE;
+        player = this.physics.add.sprite(115, -700, color, "idle.png");
+        break;
+      case "player1":
+        color = PLAYER_YELLOW;
+        player = this.physics.add.sprite(115, -700, color, "idle.png");
+        break;
+      case "player2":
+        color = PLAYER_PINK;
+        player = this.physics.add.sprite(115, -700, color, "idle.png");
+        break;
+      case "player3":
+        color = PLAYER_ORANGE;
+        player = this.physics.add.sprite(115, -700, color, "idle.png");
+        break;
+      case "player4":
+        color = PLAYER_GRAY_DARK;
+        player = this.physics.add.sprite(115, -700, color, "idle.png");
+        break;
+      case "player5":
+        color = PLAYER_GRAY_LIGHT;
+        player = this.physics.add.sprite(115, -700, color, "idle.png");
+        break;
+      case "player6":
+        color = PLAYER_PURPLE;
+        player = this.physics.add.sprite(115, -700, color, "idle.png");
+        break;
+      case "player7":
+        color = PLAYER_BLUE_LIGHT;
+        player = this.physics.add.sprite(115, -700, color, "idle.png");
 
-    //Player loading based on color - default is blue
-    let colorPlayer = this.Info.players[this.socket.id].color;
-    console.log(colorPlayer);
-    player = this.physics.add.sprite(115, -740, 'player-idle_' + colorPlayer, "idle.png");
-    color = colorPlayer
-    delete this.Info.players[this.socket.id]
+        break;
+      case "player8":
+        color = PLAYER_BLUE_DARK;
+        player = this.physics.add.sprite(115, -700, color, "idle.png");
 
-    console.log(this.Info);
+        break;
+      case "player9":
+        color = PLAYER_RED;
+        player = this.physics.add.sprite(115, -700, color, "idle.png");
 
-    /* if (this.playerChangedSkin.hat) {
+        break;
+      case "player10":
+        color = PLAYER_GREEN_LIGHT;
+        player = this.physics.add.sprite(115, -700, color, "idle.png");
+        break;
+      case "player11":
+        color = PLAYER_GREEN_DARK;
+        player = this.physics.add.sprite(115, -700, color, "idle.png");
+        break;
+      default: {
+        color = PLAYER_BLUE;
+        player = this.physics.add.sprite(115, -700, color, "idle.png");
+        break;
+      }
+    }
+
+    player_container = this.add
+      .container(player.x, player.y)
+      .setSize(player.width, player.height);
+    player_container.add(player);
+    this.physics.add.existing(player_container);
+    this.physics.add.collider(player_container, ship_tileset);
+    this.cameras.main.startFollow(player_container, true);
+    this.input.keyboard.enabled;
+    console.log(player.body);
+    console.log(player_container);
+
+    if (this.playerChangedSkin.hat) {
       let hatChosen = this.playerChangedSkin.hat.texture.key ?? "nothing";
       switch (hatChosen) {
         case "hat0":
@@ -419,213 +483,213 @@ class Game extends Phaser.Scene {
           break;
       }
       player_container.add(hat_skin);
-    } */
+    }
 
-    // if (this.playerChangedSkin.trouser) {
-    //   let pantChosen =
-    //     this.playerChangedSkin.trouser.texture.key ?? "nothing";
-    //   switch (pantChosen) {
-    //     case "trouser0":
-    //       pants_type = null;
-    //       pants_skin = null;
-    //       break;
-    //     case "trouser1":
-    //       pants_type = POLICE;
-    //       pants_skin = this.physics.add.sprite(
-    //         player.x + 0.75,
-    //         player.y + 10,
-    //         `${pants_type}_pants`,
-    //         `${pants_type}_Idle.png`
-    //       );
-    //       break;
-    //     case "trouser2":
-    //       pants_type = HAZMAT;
-    //       pants_skin = this.physics.add.sprite(
-    //         player.x + 0.75,
-    //         player.y + 10,
-    //         `${pants_type}_pants`,
-    //         `${pants_type}_Idle.png`
-    //       );
-    //       break;
-    //     case "trouser3":
-    //       pants_type = ARCHAEOLOGIST;
-    //       pants_skin = this.physics.add.sprite(
-    //         player.x + 0.75,
-    //         player.y + 10,
-    //         `${pants_type}_pants`,
-    //         `${pants_type}_Idle.png`
-    //       );
-    //       break;
-    //     case "trouser4":
-    //       pants_type = WINTERJACKET;
-    //       pants_skin = this.physics.add.sprite(
-    //         player.x + 0.75,
-    //         player.y + 10,
-    //         `${pants_type}_pants`,
-    //         `${pants_type}_Idle.png`
-    //       );
-    //       break;
-    //     case "trouser5":
-    //       pants_type = TARMAC;
-    //       pants_skin = this.physics.add.sprite(
-    //         player.x + 0.75,
-    //         player.y + 10,
-    //         `${pants_type}_pants`,
-    //         `${pants_type}_Idle.png`
-    //       );
-    //       break;
-    //     case "trouser6":
-    //       pants_type = MILITARY;
-    //       pants_skin = this.physics.add.sprite(
-    //         player.x + 0.75,
-    //         player.y + 10,
-    //         `${pants_type}_pants`,
-    //         `${pants_type}_Idle.png`
-    //       );
-    //       break;
-    //     case "trouser7":
-    //       pants_type = SUITBLACK;
-    //       pants_skin = this.physics.add.sprite(
-    //         player.x + 0.75,
-    //         player.y + 10,
-    //         `${pants_type}_pants`,
-    //         `${pants_type}_Idle.png`
-    //       );
-    //       break;
-    //     case "trouser8":
-    //       pants_type = ASTRONAUT;
-    //       pants_skin = this.physics.add.sprite(
-    //         player.x + 0.75,
-    //         player.y + 10,
-    //         `${pants_type}_pants`,
-    //         `${pants_type}_Idle.png`
-    //       );
-    //       break;
-    //     case "trouser9":
-    //       pants_type = CAPTAIN;
-    //       pants_skin = this.physics.add.sprite(
-    //         player.x + 0.75,
-    //         player.y + 10,
-    //         `${pants_type}_pants`,
-    //         `${pants_type}_Idle.png`
-    //       );
-    //       break;
-    //     case "trouser10 ":
-    //       pants_type = SECGUARD;
-    //       pants_skin = this.physics.add.sprite(
-    //         player.x + 0.75,
-    //         player.y + 10,
-    //         `${pants_type}_pants`,
-    //         `${pants_type}_Idle.png`
-    //       );
-    //       break;
-    //     case "trouser11":
-    //       pants_type = SCIENTIST;
-    //       pants_skin = this.physics.add.sprite(
-    //         player.x + 0.75,
-    //         player.y + 10,
-    //         `${pants_type}_pants`,
-    //         `${pants_type}_Idle.png`
-    //       );
-    //       break;
-    //     case "trouser12":
-    //       pants_type = MECHANIC;
-    //       pants_skin = this.physics.add.sprite(
-    //         player.x + 0.75,
-    //         player.y + 10,
-    //         `${pants_type}_pants`,
-    //         `${pants_type}_Idle.png`
-    //       );
-    //       break;
-    //     case "trouser13":
-    //       pants_type = WALL;
-    //       pants_skin = this.physics.add.sprite(
-    //         player.x + 0.75,
-    //         player.y + 10,
-    //         `${pants_type}_pants`,
-    //         `${pants_type}_Idle.png`
-    //       );
-    //       break;
-    //     case "trouser14":
-    //       pants_type = SUITWHITE;
-    //       pants_skin = this.physics.add.sprite(
-    //         player.x + 0.75,
-    //         player.y + 10,
-    //         `${pants_type}_pants`,
-    //         `${pants_type}_Idle.png`
-    //       );
-    //       break;
-    //     case "trouser15":
-    //       pants_type = CCC;
-    //       pants_skin = this.physics.add.sprite(
-    //         player.x + 0.75,
-    //         player.y + 10,
-    //         `${pants_type}_pants`,
-    //         `${pants_type}_Idle.png`
-    //       );
-    //       break;
-    //   }
-    //   // player_container.add(pants_skin);
-    //   /* *********************CREATING ANIMATIONS FOR SKINS********************* */
-    //   //For skis that don't have mirror animations
-    //   this.anims.create({
-    //     key: `${pants_type}_walk`,
-    //     frames: this.anims.generateFrameNames(`${pants_type}_pants`, {
-    //       start: 1,
-    //       end: 12,
-    //       prefix: `${pants_type}_Walk`,
-    //       suffix: ".png",
-    //     }),
-    //     repeat: -1,
-    //     frameRate: 16,
-    //   });
+    if (this.playerChangedSkin.trouser) {
+      let pantChosen =
+        this.playerChangedSkin.trouser.texture.key ?? "nothing";
+      switch (pantChosen) {
+        case "trouser0":
+          pants_type = null;
+          pants_skin = null;
+          break;
+        case "trouser1":
+          pants_type = POLICE;
+          pants_skin = this.physics.add.sprite(
+            player.x + 0.75,
+            player.y + 10,
+            `${pants_type}_pants`,
+            `${pants_type}_Idle.png`
+          );
+          break;
+        case "trouser2":
+          pants_type = HAZMAT;
+          pants_skin = this.physics.add.sprite(
+            player.x + 0.75,
+            player.y + 10,
+            `${pants_type}_pants`,
+            `${pants_type}_Idle.png`
+          );
+          break;
+        case "trouser3":
+          pants_type = ARCHAEOLOGIST;
+          pants_skin = this.physics.add.sprite(
+            player.x + 0.75,
+            player.y + 10,
+            `${pants_type}_pants`,
+            `${pants_type}_Idle.png`
+          );
+          break;
+        case "trouser4":
+          pants_type = WINTERJACKET;
+          pants_skin = this.physics.add.sprite(
+            player.x + 0.75,
+            player.y + 10,
+            `${pants_type}_pants`,
+            `${pants_type}_Idle.png`
+          );
+          break;
+        case "trouser5":
+          pants_type = TARMAC;
+          pants_skin = this.physics.add.sprite(
+            player.x + 0.75,
+            player.y + 10,
+            `${pants_type}_pants`,
+            `${pants_type}_Idle.png`
+          );
+          break;
+        case "trouser6":
+          pants_type = MILITARY;
+          pants_skin = this.physics.add.sprite(
+            player.x + 0.75,
+            player.y + 10,
+            `${pants_type}_pants`,
+            `${pants_type}_Idle.png`
+          );
+          break;
+        case "trouser7":
+          pants_type = SUITBLACK;
+          pants_skin = this.physics.add.sprite(
+            player.x + 0.75,
+            player.y + 10,
+            `${pants_type}_pants`,
+            `${pants_type}_Idle.png`
+          );
+          break;
+        case "trouser8":
+          pants_type = ASTRONAUT;
+          pants_skin = this.physics.add.sprite(
+            player.x + 0.75,
+            player.y + 10,
+            `${pants_type}_pants`,
+            `${pants_type}_Idle.png`
+          );
+          break;
+        case "trouser9":
+          pants_type = CAPTAIN;
+          pants_skin = this.physics.add.sprite(
+            player.x + 0.75,
+            player.y + 10,
+            `${pants_type}_pants`,
+            `${pants_type}_Idle.png`
+          );
+          break;
+        case "trouser10 ":
+          pants_type = SECGUARD;
+          pants_skin = this.physics.add.sprite(
+            player.x + 0.75,
+            player.y + 10,
+            `${pants_type}_pants`,
+            `${pants_type}_Idle.png`
+          );
+          break;
+        case "trouser11":
+          pants_type = SCIENTIST;
+          pants_skin = this.physics.add.sprite(
+            player.x + 0.75,
+            player.y + 10,
+            `${pants_type}_pants`,
+            `${pants_type}_Idle.png`
+          );
+          break;
+        case "trouser12":
+          pants_type = MECHANIC;
+          pants_skin = this.physics.add.sprite(
+            player.x + 0.75,
+            player.y + 10,
+            `${pants_type}_pants`,
+            `${pants_type}_Idle.png`
+          );
+          break;
+        case "trouser13":
+          pants_type = WALL;
+          pants_skin = this.physics.add.sprite(
+            player.x + 0.75,
+            player.y + 10,
+            `${pants_type}_pants`,
+            `${pants_type}_Idle.png`
+          );
+          break;
+        case "trouser14":
+          pants_type = SUITWHITE;
+          pants_skin = this.physics.add.sprite(
+            player.x + 0.75,
+            player.y + 10,
+            `${pants_type}_pants`,
+            `${pants_type}_Idle.png`
+          );
+          break;
+        case "trouser15":
+          pants_type = CCC;
+          pants_skin = this.physics.add.sprite(
+            player.x + 0.75,
+            player.y + 10,
+            `${pants_type}_pants`,
+            `${pants_type}_Idle.png`
+          );
+          break;
+      }
+      // player_container.add(pants_skin);
+      /* *********************CREATING ANIMATIONS FOR SKINS********************* */
+      //For skis that don't have mirror animations
+      this.anims.create({
+        key: `${pants_type}_walk`,
+        frames: this.anims.generateFrameNames(`${pants_type}_pants`, {
+          start: 1,
+          end: 12,
+          prefix: `${pants_type}_Walk`,
+          suffix: ".png",
+        }),
+        repeat: -1,
+        frameRate: 16,
+      });
 
-    //   this.anims.create({
-    //     key: `${pants_type}_idle`,
-    //     frames: [
-    //       {
-    //         key: `${pants_type}_pants`,
-    //         frame: `${pants_type}_Idle.png`,
-    //       },
-    //     ],
-    //   });
-    //     //For skins that have mirror animations
-    //     if (
-    //       pants_type == POLICE ||
-    //       pants_type == ARCHAEOLOGIST ||
-    //       pants_type == SECGUARD ||
-    //       pants_type == WALL ||
-    //       pants_type == CCC
-    //     ) {
-    //       isMirror = true;
-    //       this.anims.create({
-    //         key: `${pants_type}_walkMirror`,
-    //         frames: this.anims.generateFrameNames(`${pants_type}_pants`, {
-    //           start: 1,
-    //           end: 12,
-    //           prefix: `${pants_type}_WalkMirror`,
-    //           suffix: ".png",
-    //         }),
-    //         repeat: -1,
-    //         frameRate: 16,
-    //       });
+      this.anims.create({
+        key: `${pants_type}_idle`,
+        frames: [
+          {
+            key: `${pants_type}_pants`,
+            frame: `${pants_type}_Idle.png`,
+          },
+        ],
+      });
+        //For skins that have mirror animations
+        if (
+          pants_type == POLICE ||
+          pants_type == ARCHAEOLOGIST ||
+          pants_type == SECGUARD ||
+          pants_type == WALL ||
+          pants_type == CCC
+        ) {
+          isMirror = true;
+          this.anims.create({
+            key: `${pants_type}_walkMirror`,
+            frames: this.anims.generateFrameNames(`${pants_type}_pants`, {
+              start: 1,
+              end: 12,
+              prefix: `${pants_type}_WalkMirror`,
+              suffix: ".png",
+            }),
+            repeat: -1,
+            frameRate: 16,
+          });
 
-    //       this.anims.create({
-    //         key: `${pants_type}_idleMirror`,
-    //         frames: [
-    //           {
-    //             key: `${pants_type}_pants`,
-    //             frame: `${pants_type}_IdleMirror.png`,
-    //           },
-    //         ],
-    //       });
-    //     } else {
-    //       isMirror = false;
-    //     }
-    // }
+          this.anims.create({
+            key: `${pants_type}_idleMirror`,
+            frames: [
+              {
+                key: `${pants_type}_pants`,
+                frame: `${pants_type}_IdleMirror.png`,
+              },
+            ],
+          });
+        } else {
+          isMirror = false;
+        }
+    }
 
     //Pets loading
-    /* if (this.playerChangedSkin.pet) {
+    if (this.playerChangedSkin.pet) {
       let petChosen = this.playerChangedSkin.pet.texture.key ?? "nothing";
       switch (petChosen) {
         case "pet0":
@@ -736,7 +800,7 @@ class Game extends Phaser.Scene {
           break;
       }
       // player_container.add(pet);
-    } */
+    }
 
     //add kill button if imposter
     if (this.isRole == 1) {
@@ -1399,6 +1463,8 @@ class Game extends Phaser.Scene {
     // console.log(player_container);
     this.input.keyboard.enabled;
     //tải lại mới khi có player mới vào có các player đã ở trong đó
+    light = new Light(this);
+
     //các function liên quan đến objectlayer
     objectsLayer = ship.getObjectLayer("GameObjects");
     //khởi tạo hashmap cho vent và arrow
@@ -1712,8 +1778,18 @@ class Game extends Phaser.Scene {
       } else if (is_vent == true && is_jump == false) {
         player.anims.play(`${color}-idle`);
       }
+
+      if (pants_type) {
+        isLeft == true && isMirror == true
+          ? pants_skin.setPosition(player.x, player.y + 10)
+          : null;
+      }
+      if (pet) {
+        pet.setPosition(player.x + 50, player.y + 10);
+      }
+      player_container.body.setVelocity(0);
+      // player.setVelocity(0);
       let playerMoved = false;
-      player.setVelocity(0);
 
       if (
         !cursors.left.isDown &&
@@ -1740,8 +1816,8 @@ class Game extends Phaser.Scene {
       //nếu is_hidden bằng true có nghĩa là player đang trốn vent nên sẽ ko di chuyển bằng input được
       if (cursors.left.isDown && is_hidden == false) {
         player.anims.play(`${color}-walk`, true);
-        // player_container.body.setVelocityX(-PLAYER_SPEED);
-        player.setVelocityX(-PLAYER_SPEED);
+        player_container.body.setVelocityX(-PLAYER_SPEED);
+        // player.setVelocityX(-PLAYER_SPEED);
         player.scaleX = -1;
         player.body.offset.x = 40;
         if (hat_skin) {
@@ -1772,8 +1848,8 @@ class Game extends Phaser.Scene {
           pants_skin.anims.play(`${pants_type}_walk`, true);
           isMirror == false ? (pants_skin.scaleX = 1) : null;
         }
-        // player_container.body.setVelocityX(PLAYER_SPEED);
-        player.setVelocityX(PLAYER_SPEED);
+        player_container.body.setVelocityX(PLAYER_SPEED);
+        // player.setVelocityX(PLAYER_SPEED);
         player.scaleX = 1;
         player.body.offset.x = 0;
         if (hat_skin) {
@@ -1791,8 +1867,8 @@ class Game extends Phaser.Scene {
             ? pants_skin.anims.play(`${pants_type}_walkMirror`, true)
             : pants_skin.anims.play(`${pants_type}_walk`, true);
         }
-        // player_container.body.setVelocityY(-PLAYER_SPEED);
-        player.setVelocityY(-PLAYER_SPEED);
+        player_container.body.setVelocityY(-PLAYER_SPEED);
+        // player.setVelocityY(-PLAYER_SPEED);
         playerMoved = true;
       } else if (cursors.down.isDown && is_hidden == false) {
         if (pet) {
@@ -1804,8 +1880,8 @@ class Game extends Phaser.Scene {
             ? pants_skin.anims.play(`${pants_type}_walkMirror`, true)
             : pants_skin.anims.play(`${pants_type}_walk`, true);
         }
-        // player_container.body.setVelocityY(PLAYER_SPEED);
-        player.setVelocityY(PLAYER_SPEED);
+        player_container.body.setVelocityY(PLAYER_SPEED);
+        // player.setVelocityY(PLAYER_SPEED);
         playerMoved = true;
       }
       if (playerMoved) {
@@ -1842,11 +1918,12 @@ class Game extends Phaser.Scene {
         player.movedLastFrame = false;
       }
     }
+
     //canKill = false
     if (alive == true && this.isRole != 1) {
       let playerMoved = false;
-      // player_container.body.setVelocity(0);
-      player.setVelocity(0);
+      player_container.body.setVelocity(0);
+      // player.setVelocity(0);
 
       if (
         !cursors.left.isDown &&
@@ -1866,8 +1943,8 @@ class Game extends Phaser.Scene {
           pet.scaleX = -1;
         }
         player.anims.play(`${color}-walk`, true);
-        // player_container.body.setVelocityX(-PLAYER_SPEED);
-        player.setVelocityX(-PLAYER_SPEED);
+        player_container.body.setVelocityX(-PLAYER_SPEED);
+        // player.setVelocityX(-PLAYER_SPEED);
         player.scaleX = -1;
         player.body.offset.x = 40;
         playerMoved = true;
@@ -1877,8 +1954,8 @@ class Game extends Phaser.Scene {
           pet.scaleX = 1;
         }
         player.anims.play(`${color}-walk`, true);
-        // player_container.body.setVelocityX(PLAYER_SPEED);
-        player.setVelocityX(PLAYER_SPEED);
+        player_container.body.setVelocityX(PLAYER_SPEED);
+        // player.setVelocityX(PLAYER_SPEED);
         player.scaleX = 1;
         player.body.offset.x = 0;
         playerMoved = true;
@@ -1888,16 +1965,16 @@ class Game extends Phaser.Scene {
           pet.anims.play(`${pet_type}-walk`, true);
         }
         player.anims.play(`${color}-walk`, true);
-        // player_container.body.setVelocityY(-PLAYER_SPEED);
-        player.setVelocityY(-PLAYER_SPEED);
+        player_container.body.setVelocityY(-PLAYER_SPEED);
+        // player.setVelocityY(-PLAYER_SPEED);
         playerMoved = true;
       } else if (cursors.down.isDown) {
         if (pet) {
           pet.anims.play(`${pet_type}-walk`, true);
         }
         player.anims.play(`${color}-walk`, true);
-        // player_container.body.setVelocityY(PLAYER_SPEED);
-        player.setVelocityY(PLAYER_SPEED);
+        player_container.body.setVelocityY(PLAYER_SPEED);
+        // player.setVelocityY(PLAYER_SPEED);
         playerMoved = true;
       }
 
