@@ -4,8 +4,8 @@ import Map_1 from "./state/ingame/mini-map";
 import theskeld from "../assets/tilemaps/theskeld.json";
 import playerpng from "../assets/player/player_sprite/player_color/player_base.png";
 import playerjson from "../assets/player/player_sprite/player_color/player_base.json";
-import player_ghost from "../assets/player/Base/ghost/ghost.png";
-import player_ghost_json from "../assets/player/Base/ghost/ghost.json";
+import player_ghost from "../assets/player/Base/ghost/ghost1.png";
+import player_ghost_json from "../assets/player/Base/ghost/ghost1.json";
 import Light from "../scene//state/ingame/ray-light";
 import eventsCenter from "./eventsCenter";
 import { debugDraw } from "../scene/debugDraw";
@@ -1046,11 +1046,11 @@ class Game extends Phaser.Scene {
 
     //ẩn hết các arrow của vent sau khi khởi tạo
     arrow_group.setVisible(false).setDepth(1);
-
+let player_role=this.isRole
     //bắt sự kiện khi player overlap với 1 object khác
     player.on("overlapstart", function () {
       //hiện nút nhảy vent với điều kiện là player overlap với vent
-      if (is_vent) {
+      if (is_vent&&player_role==1) {
         vent_butt.alpha = 1;
         sabotage.alpha = 0;
       }
@@ -1063,7 +1063,7 @@ class Game extends Phaser.Scene {
     player.on("overlapend", function () {
       //ẩn nút nhảy vent
       is_vent = false
-      if (this.isRole == 1) {
+      if (player_role== 1) {
         vent_butt.alpha = 0
         sabotage.alpha = 1
       }
@@ -1188,7 +1188,7 @@ class Game extends Phaser.Scene {
         console.log("this player killed");
         //player.stop("player-idle")
         alive = false;
-        player.anims.play("player-ghost", true).setScale(0.2);
+        player.anims.play("player-ghost", true);
       } else {
         let index = otherPlayerId.findIndex((Element) => Element == playerId);
         otherPlayer[index].anims.play("player-dead_" + colorKill, true);
@@ -1199,6 +1199,7 @@ class Game extends Phaser.Scene {
     });
   }
   update() {
+
     pet.setPosition(player.x + 50, player.y + 10);
     var wasTouching = !player.body.wasTouching.none;
     // If you want 'touching or embedded' then use:
@@ -1408,7 +1409,7 @@ class Game extends Phaser.Scene {
 
       if (cursors.left.isDown) {
 
-        player.anims.play("player-ghost", true).setScale(0.2);
+        player.anims.play("player-ghost", true);
         player.setVelocityX(-PLAYER_SPEED);
         player.scaleX = -1;
 
@@ -1416,7 +1417,7 @@ class Game extends Phaser.Scene {
         playerDieMoved = true;
       } else if (cursors.right.isDown) {
 
-        player.anims.play("player-ghost", true).setScale(0.2);
+        player.anims.play("player-ghost", true);
         player.setVelocityX(PLAYER_SPEED);
         player.scaleX = 1;
 
@@ -1425,12 +1426,12 @@ class Game extends Phaser.Scene {
       }
       if (cursors.up.isDown) {
 
-        player.anims.play("player-ghost", true).setScale(0.2);
+        player.anims.play("player-ghost", true);
         player.setVelocityY(-PLAYER_SPEED);
         playerDieMoved = true;
       } else if (cursors.down.isDown) {
 
-        player.anims.play("player-ghost", true).setScale(0.2);
+        player.anims.play("player-ghost", true);
         player.setVelocityY(PLAYER_SPEED);
         playerDieMoved = true;
       }
@@ -1449,6 +1450,7 @@ function playercur() {
   });
 }
 function circleOverlap(player, vent) {
+
   temp = vent
   is_vent = true
   //lấy key string của vent hiện tại dựa trên x y của sprite vent 
