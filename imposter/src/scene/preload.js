@@ -164,7 +164,6 @@ import ufojson from "../assets/player/pet_sprite/ufo.json";
 import ufopng from "../assets/player/pet_sprite/ufo.png";
 
 import {
-  PLAYER_SPEED,
   PLAYER_BASE,
   PLAYER_GHOST,
   PLAYER_BLUE,
@@ -314,7 +313,7 @@ class Preloader extends Phaser.Scene {
     });
 
     this.load.atlas(PLAYER_BASE, playerpng, playerjson);
-    this.load.atlas("ghost", player_ghost, player_ghost_json);
+    this.load.atlas(PLAYER_GHOST, player_ghost, player_ghost_json);
 
     //Player color
     this.load.atlas(PLAYER_RED, playerpng_red, playerjson_red);
@@ -355,6 +354,8 @@ class Preloader extends Phaser.Scene {
     this.load.atlas(PLAYER_YELLOW, playerpng_yellow, playerjson_yellow);
 
     //pants
+    this.load.atlas(`${POLICE}_pants`, policepng, policejson);
+    this.load.atlas(`${ARCHAEOLOGIST}_pants`, archaeologistpng, archaeologistjson);
     this.load.atlas(`${SECGUARD}_pants`, secguardpng, secguardjson);
     this.load.atlas(`${WALL}_pants`, wallpng, walljson);
     this.load.atlas(`${CCC}_pants`, cccpng, cccjson);

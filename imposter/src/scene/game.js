@@ -8,14 +8,11 @@ import eventsCenter from "./eventsCenter";
 import { debugDraw } from "../scene/debugDraw";
 import MapMissionsExporter from "../helper/map_mission_exporter";
 import Mission from "../services/missions/mission";
-import emergencyButton from "../assets/img/emergencyButton.png"
-import reportbtn from "../assets/img/reportButton.png"
+import emergencyButton from "../assets/img/emergencyButton.png";
+import reportbtn from "../assets/img/reportButton.png";
 
 //Marked mission
 import AlignEngineOutput_mission_marked from "../assets/tasks/Align Engine Output/mission_marked.png";
-
-
-
 
 //marked mission
 
@@ -26,7 +23,7 @@ import CleanAsteroids from "../assets/tasks/Clear Asteroids/marked.png";
 import StabilizeSteering from "../assets/tasks/Stabilize Steering/marked.png";
 import Swipcard_mision_marked from "../assets/tasks/Swipe Card/marked.png";
 import UploadData_mission_marked from "../assets/tasks/Upload Data/marked.png";
-import CalibratorDistributor_mission_marked from "../assets/tasks/Calibrate Distributor/marked.png"
+import CalibratorDistributor_mission_marked from "../assets/tasks/Calibrate Distributor/marked.png";
 import ChartCourse from "../assets/tasks/Chart Course/marked.png";
 import FuelEngine from "../assets/tasks/Fuel Engines/marked.png";
 import PrimeShields from "../assets/tasks/Prime Shields/marked.png";
@@ -61,6 +58,21 @@ import {
   STICKMIN,
   TWITCH,
   UFO,
+  POLICE,
+  ARCHAEOLOGIST,
+  SECGUARD,
+  WALL,
+  CCC,
+  HAZMAT,
+  WINTERJACKET,
+  TARMAC,
+  MILITARY,
+  SUITBLACK,
+  ASTRONAUT,
+  CAPTAIN,
+  SCIENTIST,
+  MECHANIC,
+  SUITWHITE,
 } from "../consts/constants";
 
 //Variables declaration
@@ -72,7 +84,13 @@ let pressedKeys = [];
 let stt = 0;
 let socket;
 let tables = [];
-let tableObject, ventObject, hole, vent_butt, emergency_btn, near_btn = false, report_btn;
+let tableObject,
+  ventObject,
+  hole,
+  vent_butt,
+  emergency_btn,
+  near_btn = false,
+  report_btn;
 var objectsLayer;
 let map_missions;
 let export_missions;
@@ -101,8 +119,8 @@ let count = 0;
 let total_missions_completed = 0;
 let list_missions_completed = [];
 let color = "";
-let report_button
-let deadplayer = []
+let report_button;
+let deadplayer = [];
 let pet = null;
 let pants_skin,
   hat_skin,
@@ -124,22 +142,13 @@ class Game extends Phaser.Scene {
     this.idPlayers = data.idPlayers;
     this.isRole = data.isRole;
     this.playerChangedSkin = data.playerChangedSkin;
-    this.Info = data.Info
+    this.Info = data.Info;
   }
 
   preload() {
-    this.load.tilemapTiledJSON("tilemap", theskeld);
-    this.load.image("report-btn", reportbtn)
-    this.load.image("emergency", emergencyButton)
+    this.load.image("report-btn", reportbtn);
+    this.load.image("emergency", emergencyButton);
 
-    this.load.atlas("playerbase", playerpng, playerjson);
-    this.load.atlas("ghost", player_ghost, player_ghost_json);
-
-    this.load.atlas(
-      "Archaeologist_Walk",
-      Archaeologist_Walk_png,
-      Archaeologist_Walk_json
-    );
     this.load.image("theSkeldpng", theSkeldpng);
     this.load.tilemapTiledJSON("theSkeld_tilemap", theSkeldjson);
 
@@ -148,8 +157,10 @@ class Game extends Phaser.Scene {
     //   AlignEngineOutput_mission_marked
     // );
 
-    this.load.image("AlignEngineOutput_mission_marked", AlignEnginOutput_gallery);
-
+    this.load.image(
+      "AlignEngineOutput_mission_marked",
+      AlignEnginOutput_gallery
+    );
 
     this.load.image(
       "CleanO2Filter_mission_marked",
@@ -160,58 +171,17 @@ class Game extends Phaser.Scene {
     this.load.image("StabilizeSteering", StabilizeSteering);
     this.load.image("Swipcard_mision_marked", Swipcard_mision_marked);
     this.load.image("UploadData_mission_marked", UploadData_mission_marked);
-    this.load.image("CalibratorDistributor_mission_marked", CalibratorDistributor_mission_marked);
+    this.load.image(
+      "CalibratorDistributor_mission_marked",
+      CalibratorDistributor_mission_marked
+    );
     this.load.image("ChartCourse", ChartCourse);
     this.load.image("FuelEngine", FuelEngine);
     this.load.image("PrimeSheilds", PrimeShields);
 
-    //Player color
-    this.load.atlas(PLAYER_RED, playerpng_red, playerjson_red);
-    this.load.atlas(PLAYER_BLUE, playerpng_blue, playerjson_blue);
-    this.load.atlas(
-      PLAYER_BLUE_DARK,
-      playerpng_blue_dark,
-      playerjson_blue_dark
-    );
-    this.load.atlas(
-      PLAYER_BLUE_LIGHT,
-      playerpng_blue_light,
-      playerjson_blue_light
-    );
-    this.load.atlas(
-      PLAYER_GRAY_DARK,
-      playerpng_gray_dark,
-      playerjson_gray_dark
-    );
-    this.load.atlas(
-      PLAYER_GRAY_LIGHT,
-      playerpng_gray_light,
-      playerjson_gray_light
-    );
-    this.load.atlas(
-      PLAYER_GREEN_DARK,
-      playerpng_green_dark,
-      playerjson_green_dark
-    );
-    this.load.atlas(
-      PLAYER_GREEN_LIGHT,
-      playerpng_green_light,
-      playerjson_green_light
-    );
-    this.load.atlas(PLAYER_ORANGE, playerpng_orange, playerjson_orange);
-    this.load.atlas(PLAYER_PURPLE, playerpng_purple, playerjson_purple);
-    this.load.atlas(PLAYER_PINK, playerpng_pink, playerjson_pink);
-    this.load.atlas(PLAYER_YELLOW, playerpng_yellow, playerjson_yellow);
-
-    //Pets
-    this.load.atlas(BSLUG, bslugpng, bslugjson);
     this.load.image("InspectSample", InspectSample);
-    this.load.image("UnlockManifolds", UnlockManifolds)
+    this.load.image("UnlockManifolds", UnlockManifolds);
   }
-
-
-
-
 
   create() {
     light = new Light(this);
@@ -220,16 +190,6 @@ class Game extends Phaser.Scene {
     const ship_tileset = ship.createLayer("Background", tileset);
 
     ship_tileset.setCollisionByProperty({ collides: true });
-
-    // color = PLAYER_BLUE;
-    // player = this.physics.add.sprite(115, -700, color, "idle.png");
-    // player_container = this.add
-    //   .container(player.x, player.y)
-    //   .setSize(player.width, player.height);
-    // player_container.add(player);
-    // this.physics.add.existing(player_container);
-    // console.log(player.body)
-    // console.log(player_container);
 
     eventsCenter.on("continue_scene_game", (data) => {
       current_x = data.x;
@@ -246,75 +206,79 @@ class Game extends Phaser.Scene {
       }
     });
 
+    player_container = this.add.container(115, -700);
+
     let colorPlayerChanged =
       this.playerChangedSkin.player.texture.key ?? "nothing";
     switch (colorPlayerChanged) {
       case "player0":
         color = PLAYER_BLUE;
-        player = this.physics.add.sprite(115, -700, color, "idle.png");
+        player = this.physics.add.sprite(0, 0, color, "idle.png");
         break;
       case "player1":
         color = PLAYER_YELLOW;
-        player = this.physics.add.sprite(115, -700, color, "idle.png");
+        player = this.physics.add.sprite(0, 0, color, "idle.png");
         break;
       case "player2":
         color = PLAYER_PINK;
-        player = this.physics.add.sprite(115, -700, color, "idle.png");
+        player = this.physics.add.sprite(0, 0, color, "idle.png");
         break;
       case "player3":
         color = PLAYER_ORANGE;
-        player = this.physics.add.sprite(115, -700, color, "idle.png");
+        player = this.physics.add.sprite(0, 0, color, "idle.png");
         break;
       case "player4":
         color = PLAYER_GRAY_DARK;
-        player = this.physics.add.sprite(115, -700, color, "idle.png");
+        player = this.physics.add.sprite(0, 0, color, "idle.png");
         break;
       case "player5":
         color = PLAYER_GRAY_LIGHT;
-        player = this.physics.add.sprite(115, -700, color, "idle.png");
+        player = this.physics.add.sprite(0, 0, color, "idle.png");
         break;
       case "player6":
         color = PLAYER_PURPLE;
-        player = this.physics.add.sprite(115, -700, color, "idle.png");
+        player = this.physics.add.sprite(0, 0, color, "idle.png");
         break;
       case "player7":
         color = PLAYER_BLUE_LIGHT;
-        player = this.physics.add.sprite(115, -700, color, "idle.png");
+        player = this.physics.add.sprite(0, 0, color, "idle.png");
 
         break;
       case "player8":
         color = PLAYER_BLUE_DARK;
-        player = this.physics.add.sprite(115, -700, color, "idle.png");
+        player = this.physics.add.sprite(0, 0, color, "idle.png");
 
         break;
       case "player9":
         color = PLAYER_RED;
-        player = this.physics.add.sprite(115, -700, color, "idle.png");
+        player = this.physics.add.sprite(0, 0, color, "idle.png");
 
         break;
       case "player10":
         color = PLAYER_GREEN_LIGHT;
-        player = this.physics.add.sprite(115, -700, color, "idle.png");
+        player = this.physics.add.sprite(0, 0, color, "idle.png");
         break;
       case "player11":
         color = PLAYER_GREEN_DARK;
-        player = this.physics.add.sprite(115, -700, color, "idle.png");
+        player = this.physics.add.sprite(0, 0, color, "idle.png");
         break;
       default: {
         color = PLAYER_BLUE;
-        player = this.physics.add.sprite(115, -700, color, "idle.png");
+        player = this.physics.add.sprite(0, 0, color, "idle.png");
         break;
       }
     }
-
-    player_container = this.add
-      .container(player.x, player.y)
-      .setSize(player.width, player.height);
+    player_container.setSize(player.width, player.height);
     player_container.add(player);
+
     this.physics.add.existing(player_container);
+
     this.physics.add.collider(player_container, ship_tileset);
+
     this.cameras.main.startFollow(player_container, true);
+
     this.input.keyboard.enabled;
+
     console.log(player.body);
     console.log(player_container);
 
@@ -486,8 +450,7 @@ class Game extends Phaser.Scene {
     }
 
     if (this.playerChangedSkin.trouser) {
-      let pantChosen =
-        this.playerChangedSkin.trouser.texture.key ?? "nothing";
+      let pantChosen = this.playerChangedSkin.trouser.texture.key ?? "nothing";
       switch (pantChosen) {
         case "trouser0":
           pants_type = null;
@@ -629,7 +592,7 @@ class Game extends Phaser.Scene {
           );
           break;
       }
-      // player_container.add(pants_skin);
+      player_container.add(pants_skin);
       /* *********************CREATING ANIMATIONS FOR SKINS********************* */
       //For skis that don't have mirror animations
       this.anims.create({
@@ -653,39 +616,39 @@ class Game extends Phaser.Scene {
           },
         ],
       });
-        //For skins that have mirror animations
-        if (
-          pants_type == POLICE ||
-          pants_type == ARCHAEOLOGIST ||
-          pants_type == SECGUARD ||
-          pants_type == WALL ||
-          pants_type == CCC
-        ) {
-          isMirror = true;
-          this.anims.create({
-            key: `${pants_type}_walkMirror`,
-            frames: this.anims.generateFrameNames(`${pants_type}_pants`, {
-              start: 1,
-              end: 12,
-              prefix: `${pants_type}_WalkMirror`,
-              suffix: ".png",
-            }),
-            repeat: -1,
-            frameRate: 16,
-          });
+      //For skins that have mirror animations
+      if (
+        pants_type == POLICE ||
+        pants_type == ARCHAEOLOGIST ||
+        pants_type == SECGUARD ||
+        pants_type == WALL ||
+        pants_type == CCC
+      ) {
+        isMirror = true;
+        this.anims.create({
+          key: `${pants_type}_walkMirror`,
+          frames: this.anims.generateFrameNames(`${pants_type}_pants`, {
+            start: 1,
+            end: 12,
+            prefix: `${pants_type}_WalkMirror`,
+            suffix: ".png",
+          }),
+          repeat: -1,
+          frameRate: 16,
+        });
 
-          this.anims.create({
-            key: `${pants_type}_idleMirror`,
-            frames: [
-              {
-                key: `${pants_type}_pants`,
-                frame: `${pants_type}_IdleMirror.png`,
-              },
-            ],
-          });
-        } else {
-          isMirror = false;
-        }
+        this.anims.create({
+          key: `${pants_type}_idleMirror`,
+          frames: [
+            {
+              key: `${pants_type}_pants`,
+              frame: `${pants_type}_IdleMirror.png`,
+            },
+          ],
+        });
+      } else {
+        isMirror = false;
+      }
     }
 
     //Pets loading
@@ -799,7 +762,7 @@ class Game extends Phaser.Scene {
           pet_type = TWITCH;
           break;
       }
-      // player_container.add(pet);
+      player_container.add(pet);
     }
 
     //add kill button if imposter
@@ -833,7 +796,7 @@ class Game extends Phaser.Scene {
     this.state.roomKey = this.textInput;
 
     for (let i = 0; i < this.numPlayers - 1; i++) {
-      let colorOther = Object.values(this.Info.players)[i].color
+      let colorOther = Object.values(this.Info.players)[i].color;
 
       otherPlayer[i] = this.physics.add.sprite(
         120 + 50 * i,
@@ -841,14 +804,11 @@ class Game extends Phaser.Scene {
         "player_base_" + colorOther,
         "idle.png"
       );
-
-
     }
     this.idPlayers.forEach((element) => {
       if (element != this.socket.id) {
         otherPlayerId.push(element);
       }
-
     });
     // console.log(otherPlayerId);
 
@@ -857,14 +817,6 @@ class Game extends Phaser.Scene {
 
     //cursor to direct
     cursors = this.input.keyboard.createCursorKeys();
-
-    //input button
-
-    //Creating animation for player
-    this.anims.create({
-      key: "player-idle",
-      frames: [{ key: PLAYER_BASE, frame: "idle.png" }],
-    });
 
     //khởi tạo nhóm các vent
     vent_group = this.physics.add.staticGroup({
@@ -884,11 +836,12 @@ class Game extends Phaser.Scene {
       .setInteractive()
       .setAlpha(0)
       .setDepth(1);
-    report_btn = this.add.image(600, 700, "report-btn")
+    report_btn = this.add
+      .image(600, 700, "report-btn")
       .setScrollFactor(0, 0)
       .setInteractive()
       .setAlpha(0.5)
-      .setDepth(10)
+      .setDepth(10);
     useButton = this.add
       .image(900, 700, "UseButton")
       .setScrollFactor(0, 0)
@@ -936,6 +889,11 @@ class Game extends Phaser.Scene {
     });
 
     /* *********************CREATING ANIMATIONS FOR PLAYER********************* */
+
+    this.anims.create({
+      key: "player-idle",
+      frames: [{ key: PLAYER_BASE, frame: "idle.png" }],
+    });
 
     this.anims.create({
       key: "player-walk",
@@ -993,12 +951,11 @@ class Game extends Phaser.Scene {
     //player ghost
     this.anims.create({
       key: "player-ghost",
-      frames: this.anims.generateFrameNames("ghost", {
+      frames: this.anims.generateFrameNames(PLAYER_GHOST, {
         start: 1,
         end: 48,
         prefix: "ghost00",
         suffix: ".png",
-
       }),
 
       repeat: 0,
@@ -1292,22 +1249,13 @@ class Game extends Phaser.Scene {
     this.input.keyboard.on("keyup", (e) => {
       this.sound.stopByKey("walk");
       if (alive == true) {
-        player.anims.play("player-idle_" + color);
+        player.anims.play(`${color}-idle`);
       }
 
       pressedKeys = pressedKeys.filter((key) => key !== e.code);
     });
 
-    //Add collider with player and set camera to follow player
-    this.physics.add.existing(player_container);
-    this.physics.add.collider(player_container, ship_tileset);
-    // this.cameras.main.startFollow(player_container, true);
-    // this.physics.add.collider(player, ship_tileset);
-    this.cameras.main.startFollow(player, true);
-    // console.log(player_container);
-    this.input.keyboard.enabled;
     //tải lại mới khi có player mới vào có các player đã ở trong đó
-    light = new Light(this);
 
     //các function liên quan đến objectlayer
     objectsLayer = ship.getObjectLayer("GameObjects");
@@ -1343,8 +1291,8 @@ class Game extends Phaser.Scene {
 
           tableObject.body.immovable = true;
           tableObject.setOrigin(0, 0);
-          this.physics.add.overlap(player, tableObject, null, null, this);
-          this.physics.add.collider(player, tableObject);
+          this.physics.add.overlap(player_container, tableObject, null, null, this);
+          this.physics.add.collider(player_container, tableObject);
           break;
         case "vent":
           //gán vị trí cho từng phần tử con của group vent
@@ -1388,10 +1336,14 @@ class Game extends Phaser.Scene {
           light.map(temp);
           break;
         case "Button":
-          let temp1 = this.add.rectangle(object.x, object.y, object.width, object.height).setOrigin(0, 0)
-          emergency_btn = this.add.image(object.x, object.y, "emergency").setOrigin(-2.20, -1.25)
-          this.physics.add.existing(temp1)
-          this.physics.add.overlap(player, temp1, report)
+          let temp1 = this.add
+            .rectangle(object.x, object.y, object.width, object.height)
+            .setOrigin(0, 0);
+          emergency_btn = this.add
+            .image(object.x, object.y, "emergency")
+            .setOrigin(-2.2, -1.25);
+          this.physics.add.existing(temp1);
+          this.physics.add.overlap(player, temp1, report);
           break;
         default:
           break;
@@ -1412,21 +1364,21 @@ class Game extends Phaser.Scene {
         sabotage.alpha = 0;
       }
       if (near_btn) {
-        report_btn.alpha = 1
-        emergency_btn.setTint(0xffed00, 0xffed00, 0xffed00, 0xffed00)
+        report_btn.alpha = 1;
+        emergency_btn.setTint(0xffed00, 0xffed00, 0xffed00, 0xffed00);
       }
     });
     //bắt sự kiện khi player đi ra khỏi vùng overlap
     player.on("overlapend", function () {
       //ẩn nút nhảy vent
-      is_vent = false
+      is_vent = false;
       if (this.isRole == 1) {
-        vent_butt.alpha = 0
-        sabotage.alpha = 1
+        vent_butt.alpha = 0;
+        sabotage.alpha = 1;
       }
-      near_btn = false
-      report_btn.alpha = 0.5
-      emergency_btn.clearTint()
+      near_btn = false;
+      report_btn.alpha = 0.5;
+      emergency_btn.clearTint();
     });
 
     //thực hiện hàm circleOverlap khi player tới gần vent
@@ -1470,29 +1422,29 @@ class Game extends Phaser.Scene {
         }
       }
     });
-    report_btn.on('pointerdown', () => {
+    report_btn.on("pointerdown", () => {
       if (near_btn) {
         this.scene.launch("vote", {
-          socket: this.socket, numPlayers: this.numPlayers,
-          idPlayers: this.idPlayers, roomId: this.state.roomKey, deadlist: deadplayer
-        })
-        this.socket.emit("open_vote")
-
+          socket: this.socket,
+          numPlayers: this.numPlayers,
+          idPlayers: this.idPlayers,
+          roomId: this.state.roomKey,
+          deadlist: deadplayer,
+        });
+        this.socket.emit("open_vote");
       }
-
-    })
+    });
     // this.socket.on("move", ({ x, y, playerId }) => {
     //   //console.log({ x, y, playerId });
     this.socket.on("open_othervote", () => {
-
-
       this.scene.launch("vote", {
-        socket: this.socket, numPlayers: this.numPlayers,
-        idPlayers: this.idPlayers, roomId: this.state.roomKey, deadlist: deadplayer
-      })
-
-
-    })
+        socket: this.socket,
+        numPlayers: this.numPlayers,
+        idPlayers: this.idPlayers,
+        roomId: this.state.roomKey,
+        deadlist: deadplayer,
+      });
+    });
     this.socket.on("move", ({ x, y, playerId, color }) => {
       let index = otherPlayerId.findIndex((Element) => Element == playerId);
       //id = index;
@@ -1539,7 +1491,7 @@ class Game extends Phaser.Scene {
       // console.log(playerId);
       // let colorDead = (Object((this.Info.players)[String(playerId)]).color)
       // console.log(colorDead);
-      deadplayer.push(playerId)
+      deadplayer.push(playerId);
       if (this.socket.id == playerId) {
         //run noitice died
         console.log("this player killed");
@@ -1549,14 +1501,18 @@ class Game extends Phaser.Scene {
       } else {
         let index = otherPlayerId.findIndex((Element) => Element == playerId);
         otherPlayer[index].anims.play("player-dead_" + colorKill, true);
-        let temp = this.add.rectangle(otherPlayer[index].x, otherPlayer[index].y, 200, 200)
-        this.physics.add.existing(temp)
-        this.physics.add.overlap(player, temp, report)
+        let temp = this.add.rectangle(
+          otherPlayer[index].x,
+          otherPlayer[index].y,
+          200,
+          200
+        );
+        this.physics.add.existing(temp);
+        this.physics.add.overlap(player, temp, report);
       }
     });
   }
   update() {
-    pet.setPosition(player.x + 50, player.y + 10);
     var wasTouching = !player.body.wasTouching.none;
     // If you want 'touching or embedded' then use:
     var touching = !player.body.touching.none || player.body.embedded;
@@ -1570,11 +1526,9 @@ class Game extends Phaser.Scene {
     if (pet) {
       pet.setPosition(player.x + 50, player.y + 10);
     }
-    // player_container.body.setVelocity(0);
-    player.setVelocity(0);
 
     this.events.emit("moving", [player.x, player.y]);
-    light.update(player);
+    light.update(player_container);
 
     if (this.isRole == 1) {
       kill.on("pointerdown", () => {
@@ -1582,13 +1536,21 @@ class Game extends Phaser.Scene {
         if (canKill) {
           this.sound.play("killAudio", false);
           let killId = otherPlayerId[indexKill];
-          deadplayer.push(killId)
-          let colorKill = (Object((this.Info.players)[killId]).color)
+          deadplayer.push(killId);
+          let colorKill = Object(this.Info.players[killId]).color;
           playerKilled.anims.play("player-dead_" + colorKill, true);
-          let temp = this.add.rectangle(playerKilled.x, playerKilled.y, 200, 200)
-          this.physics.add.existing(temp)
-          this.physics.add.overlap(player, temp, report)
-          this.socket.emit("killed", ({ playerId: otherPlayerId[indexKill], roomId: this.state.roomKey }));
+          let temp = this.add.rectangle(
+            playerKilled.x,
+            playerKilled.y,
+            200,
+            200
+          );
+          this.physics.add.existing(temp);
+          this.physics.add.overlap(player, temp, report);
+          this.socket.emit("killed", {
+            playerId: otherPlayerId[indexKill],
+            roomId: this.state.roomKey,
+          });
           otherPlayer = otherPlayer.filter((player) => {
             return player !== playerKilled;
           });
@@ -1632,7 +1594,6 @@ class Game extends Phaser.Scene {
         pet.setPosition(player.x + 50, player.y + 10);
       }
       player_container.body.setVelocity(0);
-      // player.setVelocity(0);
       let playerMoved = false;
 
       if (
@@ -1642,7 +1603,6 @@ class Game extends Phaser.Scene {
         !cursors.down.isDown &&
         !is_vent
       ) {
-        //     console.log("outvent")
         player.anims.play(`${color}-idle`);
         if (pet) {
           pet.anims.play(`${pet_type}-idle`);
@@ -1661,9 +1621,8 @@ class Game extends Phaser.Scene {
       if (cursors.left.isDown && is_hidden == false) {
         player.anims.play(`${color}-walk`, true);
         player_container.body.setVelocityX(-PLAYER_SPEED);
-        // player.setVelocityX(-PLAYER_SPEED);
         player.scaleX = -1;
-        player.body.offset.x = 40;
+        player_container.body.offset.x = 0;
         if (hat_skin) {
           hat_skin.scaleX = -1;
         }
@@ -1693,9 +1652,7 @@ class Game extends Phaser.Scene {
           isMirror == false ? (pants_skin.scaleX = 1) : null;
         }
         player_container.body.setVelocityX(PLAYER_SPEED);
-        // player.setVelocityX(PLAYER_SPEED);
         player.scaleX = 1;
-        player.body.offset.x = 0;
         if (hat_skin) {
           hat_skin.scaleX = 1;
         }
@@ -1712,7 +1669,6 @@ class Game extends Phaser.Scene {
             : pants_skin.anims.play(`${pants_type}_walk`, true);
         }
         player_container.body.setVelocityY(-PLAYER_SPEED);
-        // player.setVelocityY(-PLAYER_SPEED);
         playerMoved = true;
       } else if (cursors.down.isDown && is_hidden == false) {
         if (pet) {
@@ -1725,7 +1681,6 @@ class Game extends Phaser.Scene {
             : pants_skin.anims.play(`${pants_type}_walk`, true);
         }
         player_container.body.setVelocityY(PLAYER_SPEED);
-        // player.setVelocityY(PLAYER_SPEED);
         playerMoved = true;
       }
       if (playerMoved) {
@@ -1754,8 +1709,7 @@ class Game extends Phaser.Scene {
           canKill = false;
           kill.alpha = 0.5;
         }
-      }
-      else {
+      } else {
         if (player.movedLastFrame) {
           this.socket.emit("moveEnd", { roomId: this.state.roomKey });
         }
@@ -1767,8 +1721,6 @@ class Game extends Phaser.Scene {
     if (alive == true && this.isRole != 1) {
       let playerMoved = false;
       player_container.body.setVelocity(0);
-      // player.setVelocity(0);
-
       if (
         !cursors.left.isDown &&
         !cursors.right.isDown &&
@@ -1788,9 +1740,8 @@ class Game extends Phaser.Scene {
         }
         player.anims.play(`${color}-walk`, true);
         player_container.body.setVelocityX(-PLAYER_SPEED);
-        // player.setVelocityX(-PLAYER_SPEED);
         player.scaleX = -1;
-        player.body.offset.x = 40;
+        player_container.body.offset.x = 0;
         playerMoved = true;
       } else if (cursors.right.isDown) {
         if (pet) {
@@ -1799,9 +1750,7 @@ class Game extends Phaser.Scene {
         }
         player.anims.play(`${color}-walk`, true);
         player_container.body.setVelocityX(PLAYER_SPEED);
-        // player.setVelocityX(PLAYER_SPEED);
         player.scaleX = 1;
-        player.body.offset.x = 0;
         playerMoved = true;
       }
       if (cursors.up.isDown) {
@@ -1810,7 +1759,6 @@ class Game extends Phaser.Scene {
         }
         player.anims.play(`${color}-walk`, true);
         player_container.body.setVelocityY(-PLAYER_SPEED);
-        // player.setVelocityY(-PLAYER_SPEED);
         playerMoved = true;
       } else if (cursors.down.isDown) {
         if (pet) {
@@ -1818,7 +1766,6 @@ class Game extends Phaser.Scene {
         }
         player.anims.play(`${color}-walk`, true);
         player_container.body.setVelocityY(PLAYER_SPEED);
-        // player.setVelocityY(PLAYER_SPEED);
         playerMoved = true;
       }
 
@@ -1862,12 +1809,11 @@ class Game extends Phaser.Scene {
         this.scene.launch(check_mission.scene, {
           x: check_mission.x,
           y: check_mission.y,
-          sprite: check_mission.sprite
+          sprite: check_mission.sprite,
         });
         launch_scene = false;
       }
-    }
-    else if (alive == false && this.isRole != 1) {
+    } else if (alive == false && this.isRole != 1) {
       let playerDieMoved = false;
       player.setVelocity(0);
 
@@ -1881,7 +1827,6 @@ class Game extends Phaser.Scene {
       }
 
       if (cursors.left.isDown) {
-
         player.anims.play("player-ghost", true).setScale(0.2);
         player.setVelocityX(-PLAYER_SPEED);
         player.scaleX = -1;
@@ -1889,7 +1834,6 @@ class Game extends Phaser.Scene {
         player.body.offset.x = 40;
         playerDieMoved = true;
       } else if (cursors.right.isDown) {
-
         player.anims.play("player-ghost", true).setScale(0.2);
         player.setVelocityX(PLAYER_SPEED);
         player.scaleX = 1;
@@ -1898,17 +1842,14 @@ class Game extends Phaser.Scene {
         playerDieMoved = true;
       }
       if (cursors.up.isDown) {
-
         player.anims.play("player-ghost", true).setScale(0.2);
         player.setVelocityY(-PLAYER_SPEED);
         playerDieMoved = true;
       } else if (cursors.down.isDown) {
-
         player.anims.play("player-ghost", true).setScale(0.2);
         player.setVelocityY(PLAYER_SPEED);
         playerDieMoved = true;
       }
-
     }
 
     //******************GHOST */
@@ -1918,23 +1859,21 @@ class Game extends Phaser.Scene {
 
 // hiện arrow của vent khi player tới gần
 function playercur() {
-  vent_des.get(key).forEach(element => {
-    element.setVisible(true)
+  vent_des.get(key).forEach((element) => {
+    element.setVisible(true);
   });
 }
 function circleOverlap(player, vent) {
-  temp = vent
-  is_vent = true
-  //lấy key string của vent hiện tại dựa trên x y của sprite vent 
-  key = getKey([vent.x, vent.y + 10])[0]
-
+  temp = vent;
+  is_vent = true;
+  //lấy key string của vent hiện tại dựa trên x y của sprite vent
+  key = getKey([vent.x, vent.y + 10])[0];
 }
 function deadreport(player, otherplayer) {
-  console.log("player status", otherplayer.status)
+  console.log("player status", otherplayer.status);
 }
 function report(player, button) {
-
-  near_btn = true
+  near_btn = true;
 }
 // hiện arrow của vent khi player tới gần
 //hàm lấy key từ hashmap dựa trên value của key
