@@ -2,875 +2,875 @@
 
 {
 	"filename": "hampster_idle1.png",
-	"frame": {"x":857,"y":122,"w":119,"h":119},
+	"frame": {"x":166,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":119,"h":119},
-	"sourceSize": {"w":119,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_idle2.png",
-	"frame": {"x":857,"y":122,"w":119,"h":119},
+	"frame": {"x":166,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":119,"h":119},
-	"sourceSize": {"w":119,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_idle3.png",
-	"frame": {"x":857,"y":122,"w":119,"h":119},
+	"frame": {"x":166,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":119,"h":119},
-	"sourceSize": {"w":119,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_idle4.png",
-	"frame": {"x":857,"y":122,"w":119,"h":119},
+	"frame": {"x":166,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":119,"h":119},
-	"sourceSize": {"w":119,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_idle5.png",
-	"frame": {"x":857,"y":122,"w":119,"h":119},
+	"frame": {"x":166,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":119,"h":119},
-	"sourceSize": {"w":119,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_idle6.png",
-	"frame": {"x":857,"y":122,"w":119,"h":119},
+	"frame": {"x":166,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":119,"h":119},
-	"sourceSize": {"w":119,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_idle7.png",
-	"frame": {"x":857,"y":122,"w":119,"h":119},
+	"frame": {"x":166,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":119,"h":119},
-	"sourceSize": {"w":119,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_idle8.png",
-	"frame": {"x":978,"y":122,"w":119,"h":119},
+	"frame": {"x":198,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":119,"h":119},
-	"sourceSize": {"w":119,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_idle9.png",
-	"frame": {"x":857,"y":122,"w":119,"h":119},
+	"frame": {"x":166,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":119,"h":119},
-	"sourceSize": {"w":119,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_idle10.png",
-	"frame": {"x":857,"y":122,"w":119,"h":119},
+	"frame": {"x":166,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":119,"h":119},
-	"sourceSize": {"w":119,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_idle11.png",
-	"frame": {"x":857,"y":122,"w":119,"h":119},
+	"frame": {"x":166,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":119,"h":119},
-	"sourceSize": {"w":119,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_idle12.png",
-	"frame": {"x":857,"y":122,"w":119,"h":119},
+	"frame": {"x":166,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":119,"h":119},
-	"sourceSize": {"w":119,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_idle13.png",
-	"frame": {"x":857,"y":122,"w":119,"h":119},
+	"frame": {"x":166,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":119,"h":119},
-	"sourceSize": {"w":119,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_idle14.png",
-	"frame": {"x":857,"y":122,"w":119,"h":119},
+	"frame": {"x":166,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":119,"h":119},
-	"sourceSize": {"w":119,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_idle15.png",
-	"frame": {"x":857,"y":122,"w":119,"h":119},
+	"frame": {"x":166,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":119,"h":119},
-	"sourceSize": {"w":119,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_idle16.png",
-	"frame": {"x":857,"y":122,"w":119,"h":119},
+	"frame": {"x":166,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":119,"h":119},
-	"sourceSize": {"w":119,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_idle17.png",
-	"frame": {"x":857,"y":122,"w":119,"h":119},
+	"frame": {"x":166,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":119,"h":119},
-	"sourceSize": {"w":119,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_idle18.png",
-	"frame": {"x":857,"y":122,"w":119,"h":119},
+	"frame": {"x":166,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":119,"h":119},
-	"sourceSize": {"w":119,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_idle19.png",
-	"frame": {"x":857,"y":122,"w":119,"h":119},
+	"frame": {"x":166,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":119,"h":119},
-	"sourceSize": {"w":119,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_idle20.png",
-	"frame": {"x":857,"y":122,"w":119,"h":119},
+	"frame": {"x":166,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":119,"h":119},
-	"sourceSize": {"w":119,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_idle21.png",
-	"frame": {"x":857,"y":122,"w":119,"h":119},
+	"frame": {"x":166,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":119,"h":119},
-	"sourceSize": {"w":119,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_idle22.png",
-	"frame": {"x":857,"y":122,"w":119,"h":119},
+	"frame": {"x":166,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":119,"h":119},
-	"sourceSize": {"w":119,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_idle23.png",
-	"frame": {"x":857,"y":122,"w":119,"h":119},
+	"frame": {"x":166,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":119,"h":119},
-	"sourceSize": {"w":119,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_idle24.png",
-	"frame": {"x":857,"y":122,"w":119,"h":119},
+	"frame": {"x":166,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":119,"h":119},
-	"sourceSize": {"w":119,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_idle25.png",
-	"frame": {"x":857,"y":122,"w":119,"h":119},
+	"frame": {"x":166,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":119,"h":119},
-	"sourceSize": {"w":119,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_idle26.png",
-	"frame": {"x":857,"y":122,"w":119,"h":119},
+	"frame": {"x":166,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":119,"h":119},
-	"sourceSize": {"w":119,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_idle27.png",
-	"frame": {"x":857,"y":122,"w":119,"h":119},
+	"frame": {"x":166,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":119,"h":119},
-	"sourceSize": {"w":119,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_idle28.png",
-	"frame": {"x":857,"y":122,"w":119,"h":119},
+	"frame": {"x":166,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":119,"h":119},
-	"sourceSize": {"w":119,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_idle29.png",
-	"frame": {"x":857,"y":122,"w":119,"h":119},
+	"frame": {"x":166,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":119,"h":119},
-	"sourceSize": {"w":119,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_idle30.png",
-	"frame": {"x":857,"y":122,"w":119,"h":119},
+	"frame": {"x":166,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":119,"h":119},
-	"sourceSize": {"w":119,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_idle31.png",
-	"frame": {"x":857,"y":122,"w":119,"h":119},
+	"frame": {"x":166,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":119,"h":119},
-	"sourceSize": {"w":119,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad1.png",
-	"frame": {"x":1,"y":1,"w":121,"h":119},
+	"frame": {"x":1,"y":1,"w":31,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":122,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":30},
+	"sourceSize": {"w":31,"h":30}
 },
 {
 	"filename": "hampster_sad2.png",
-	"frame": {"x":1,"y":1,"w":121,"h":119},
+	"frame": {"x":1,"y":1,"w":31,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":122,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":30},
+	"sourceSize": {"w":31,"h":30}
 },
 {
 	"filename": "hampster_sad3.png",
-	"frame": {"x":1,"y":1,"w":121,"h":119},
+	"frame": {"x":1,"y":1,"w":31,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":122,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":30},
+	"sourceSize": {"w":31,"h":30}
 },
 {
 	"filename": "hampster_sad4.png",
-	"frame": {"x":1,"y":1,"w":121,"h":119},
+	"frame": {"x":1,"y":1,"w":31,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":122,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":30},
+	"sourceSize": {"w":31,"h":30}
 },
 {
 	"filename": "hampster_sad5.png",
-	"frame": {"x":739,"y":1,"w":121,"h":119},
+	"frame": {"x":34,"y":1,"w":31,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":122,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":30},
+	"sourceSize": {"w":31,"h":30}
 },
 {
 	"filename": "hampster_sad6.png",
-	"frame": {"x":862,"y":1,"w":121,"h":119},
+	"frame": {"x":67,"y":1,"w":31,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":122,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":30},
+	"sourceSize": {"w":31,"h":30}
 },
 {
 	"filename": "hampster_sad7.png",
-	"frame": {"x":124,"y":122,"w":121,"h":119},
+	"frame": {"x":133,"y":1,"w":31,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":122,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":30},
+	"sourceSize": {"w":31,"h":30}
 },
 {
 	"filename": "hampster_sad8.png",
-	"frame": {"x":369,"y":122,"w":120,"h":119},
+	"frame": {"x":422,"y":1,"w":30,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":119},
-	"sourceSize": {"w":121,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad9.png",
-	"frame": {"x":369,"y":122,"w":120,"h":119},
+	"frame": {"x":422,"y":1,"w":30,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":119},
-	"sourceSize": {"w":121,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad10.png",
-	"frame": {"x":124,"y":1,"w":121,"h":119},
+	"frame": {"x":230,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":121,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad11.png",
-	"frame": {"x":124,"y":1,"w":121,"h":119},
+	"frame": {"x":230,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":121,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad12.png",
-	"frame": {"x":124,"y":1,"w":121,"h":119},
+	"frame": {"x":230,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":121,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad13.png",
-	"frame": {"x":124,"y":1,"w":121,"h":119},
+	"frame": {"x":230,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":121,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad14.png",
-	"frame": {"x":124,"y":1,"w":121,"h":119},
+	"frame": {"x":230,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":121,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad15.png",
-	"frame": {"x":124,"y":1,"w":121,"h":119},
+	"frame": {"x":230,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":121,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad16.png",
-	"frame": {"x":124,"y":1,"w":121,"h":119},
+	"frame": {"x":230,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":121,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad17.png",
-	"frame": {"x":124,"y":1,"w":121,"h":119},
+	"frame": {"x":230,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":121,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad18.png",
-	"frame": {"x":124,"y":1,"w":121,"h":119},
+	"frame": {"x":230,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":121,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad19.png",
-	"frame": {"x":124,"y":1,"w":121,"h":119},
+	"frame": {"x":230,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":121,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad20.png",
-	"frame": {"x":124,"y":1,"w":121,"h":119},
+	"frame": {"x":230,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":121,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad21.png",
-	"frame": {"x":124,"y":1,"w":121,"h":119},
+	"frame": {"x":230,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":121,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad22.png",
-	"frame": {"x":247,"y":1,"w":121,"h":119},
+	"frame": {"x":262,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":121,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad23.png",
-	"frame": {"x":124,"y":1,"w":121,"h":119},
+	"frame": {"x":230,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":121,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad24.png",
-	"frame": {"x":124,"y":1,"w":121,"h":119},
+	"frame": {"x":230,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":121,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad25.png",
-	"frame": {"x":124,"y":1,"w":121,"h":119},
+	"frame": {"x":230,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":121,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad26.png",
-	"frame": {"x":247,"y":1,"w":121,"h":119},
+	"frame": {"x":262,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":121,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad27.png",
-	"frame": {"x":124,"y":1,"w":121,"h":119},
+	"frame": {"x":230,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":121,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad28.png",
-	"frame": {"x":124,"y":1,"w":121,"h":119},
+	"frame": {"x":230,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":121,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad29.png",
-	"frame": {"x":124,"y":1,"w":121,"h":119},
+	"frame": {"x":230,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":121,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad30.png",
-	"frame": {"x":124,"y":1,"w":121,"h":119},
+	"frame": {"x":230,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":121,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad31.png",
-	"frame": {"x":124,"y":1,"w":121,"h":119},
+	"frame": {"x":230,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":121,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad32.png",
-	"frame": {"x":124,"y":1,"w":121,"h":119},
+	"frame": {"x":230,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":121,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad33.png",
-	"frame": {"x":124,"y":1,"w":121,"h":119},
+	"frame": {"x":230,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":121,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad34.png",
-	"frame": {"x":124,"y":1,"w":121,"h":119},
+	"frame": {"x":230,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":121,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad35.png",
-	"frame": {"x":124,"y":1,"w":121,"h":119},
+	"frame": {"x":230,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":121,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad36.png",
-	"frame": {"x":124,"y":1,"w":121,"h":119},
+	"frame": {"x":230,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":121,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad37.png",
-	"frame": {"x":124,"y":1,"w":121,"h":119},
+	"frame": {"x":230,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":121,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad38.png",
-	"frame": {"x":124,"y":1,"w":121,"h":119},
+	"frame": {"x":230,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":121,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad39.png",
-	"frame": {"x":124,"y":1,"w":121,"h":119},
+	"frame": {"x":230,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":121,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad40.png",
-	"frame": {"x":124,"y":1,"w":121,"h":119},
+	"frame": {"x":230,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":121,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad41.png",
-	"frame": {"x":124,"y":1,"w":121,"h":119},
+	"frame": {"x":230,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":121,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad42.png",
-	"frame": {"x":124,"y":1,"w":121,"h":119},
+	"frame": {"x":230,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":121,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad43.png",
-	"frame": {"x":124,"y":1,"w":121,"h":119},
+	"frame": {"x":230,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":121,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad44.png",
-	"frame": {"x":370,"y":1,"w":121,"h":119},
+	"frame": {"x":294,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":121,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad45.png",
-	"frame": {"x":493,"y":1,"w":121,"h":119},
+	"frame": {"x":326,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":121,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad46.png",
-	"frame": {"x":616,"y":1,"w":121,"h":119},
+	"frame": {"x":358,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":121,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad47.png",
-	"frame": {"x":247,"y":122,"w":120,"h":119},
+	"frame": {"x":390,"y":1,"w":30,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":120,"h":119},
-	"sourceSize": {"w":121,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad48.png",
-	"frame": {"x":247,"y":122,"w":120,"h":119},
+	"frame": {"x":390,"y":1,"w":30,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":120,"h":119},
-	"sourceSize": {"w":121,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_sad49.png",
-	"frame": {"x":1,"y":1,"w":121,"h":119},
+	"frame": {"x":1,"y":1,"w":31,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":122,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":30},
+	"sourceSize": {"w":31,"h":30}
 },
 {
 	"filename": "hampster_sad50.png",
-	"frame": {"x":1,"y":1,"w":121,"h":119},
+	"frame": {"x":1,"y":1,"w":31,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":122,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":30},
+	"sourceSize": {"w":31,"h":30}
 },
 {
 	"filename": "hampster_sad51.png",
-	"frame": {"x":1,"y":1,"w":121,"h":119},
+	"frame": {"x":1,"y":1,"w":31,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":122,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":30},
+	"sourceSize": {"w":31,"h":30}
 },
 {
 	"filename": "hampster_sad52.png",
-	"frame": {"x":1,"y":1,"w":121,"h":119},
+	"frame": {"x":1,"y":1,"w":31,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":122,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":30},
+	"sourceSize": {"w":31,"h":30}
 },
 {
 	"filename": "hampster_sad53.png",
-	"frame": {"x":1,"y":1,"w":121,"h":119},
+	"frame": {"x":1,"y":1,"w":31,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":122,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":30},
+	"sourceSize": {"w":31,"h":30}
 },
 {
 	"filename": "hampster_sad54.png",
-	"frame": {"x":1,"y":1,"w":121,"h":119},
+	"frame": {"x":1,"y":1,"w":31,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":122,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":30},
+	"sourceSize": {"w":31,"h":30}
 },
 {
 	"filename": "hampster_sad55.png",
-	"frame": {"x":1,"y":1,"w":121,"h":119},
+	"frame": {"x":1,"y":1,"w":31,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":122,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":30},
+	"sourceSize": {"w":31,"h":30}
 },
 {
 	"filename": "hampster_sad56.png",
-	"frame": {"x":1,"y":1,"w":121,"h":119},
+	"frame": {"x":1,"y":1,"w":31,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":122,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":30},
+	"sourceSize": {"w":31,"h":30}
 },
 {
 	"filename": "hampster_sad57.png",
-	"frame": {"x":1,"y":1,"w":121,"h":119},
+	"frame": {"x":1,"y":1,"w":31,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":122,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":30},
+	"sourceSize": {"w":31,"h":30}
 },
 {
 	"filename": "hampster_sad58.png",
-	"frame": {"x":1,"y":1,"w":121,"h":119},
+	"frame": {"x":1,"y":1,"w":31,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":122,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":30},
+	"sourceSize": {"w":31,"h":30}
 },
 {
 	"filename": "hampster_sad59.png",
-	"frame": {"x":1,"y":1,"w":121,"h":119},
+	"frame": {"x":1,"y":1,"w":31,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":122,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":30},
+	"sourceSize": {"w":31,"h":30}
 },
 {
 	"filename": "hampster_sad60.png",
-	"frame": {"x":1,"y":1,"w":121,"h":119},
+	"frame": {"x":1,"y":1,"w":31,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":122,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":30},
+	"sourceSize": {"w":31,"h":30}
 },
 {
 	"filename": "hampster_sad61.png",
-	"frame": {"x":1,"y":1,"w":121,"h":119},
+	"frame": {"x":1,"y":1,"w":31,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":122,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":30},
+	"sourceSize": {"w":31,"h":30}
 },
 {
 	"filename": "hampster_sad62.png",
-	"frame": {"x":1,"y":1,"w":121,"h":119},
+	"frame": {"x":1,"y":1,"w":31,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":122,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":30},
+	"sourceSize": {"w":31,"h":30}
 },
 {
 	"filename": "hampster_sad63.png",
-	"frame": {"x":1,"y":1,"w":121,"h":119},
+	"frame": {"x":1,"y":1,"w":31,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":122,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":30},
+	"sourceSize": {"w":31,"h":30}
 },
 {
 	"filename": "hampster_sad64.png",
-	"frame": {"x":1,"y":1,"w":121,"h":119},
+	"frame": {"x":1,"y":1,"w":31,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":122,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":30},
+	"sourceSize": {"w":31,"h":30}
 },
 {
 	"filename": "hampster_sad65.png",
-	"frame": {"x":1,"y":122,"w":121,"h":119},
+	"frame": {"x":100,"y":1,"w":31,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":122,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":30},
+	"sourceSize": {"w":31,"h":30}
 },
 {
 	"filename": "hampster_sad66.png",
-	"frame": {"x":1,"y":1,"w":121,"h":119},
+	"frame": {"x":1,"y":1,"w":31,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":122,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":30},
+	"sourceSize": {"w":31,"h":30}
 },
 {
 	"filename": "hampster_sad67.png",
-	"frame": {"x":1,"y":1,"w":121,"h":119},
+	"frame": {"x":1,"y":1,"w":31,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":122,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":30},
+	"sourceSize": {"w":31,"h":30}
 },
 {
 	"filename": "hampster_sad68.png",
-	"frame": {"x":1,"y":1,"w":121,"h":119},
+	"frame": {"x":1,"y":1,"w":31,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":122,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":30},
+	"sourceSize": {"w":31,"h":30}
 },
 {
 	"filename": "hampster_sad69.png",
-	"frame": {"x":1,"y":1,"w":121,"h":119},
+	"frame": {"x":1,"y":1,"w":31,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":122,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":30},
+	"sourceSize": {"w":31,"h":30}
 },
 {
 	"filename": "hampster_sad70.png",
-	"frame": {"x":1,"y":1,"w":121,"h":119},
+	"frame": {"x":1,"y":1,"w":31,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":122,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":30},
+	"sourceSize": {"w":31,"h":30}
 },
 {
 	"filename": "hampster_sad71.png",
-	"frame": {"x":1,"y":1,"w":121,"h":119},
+	"frame": {"x":1,"y":1,"w":31,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":121,"h":119},
-	"sourceSize": {"w":122,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":30},
+	"sourceSize": {"w":31,"h":30}
 },
 {
 	"filename": "hampster_walk1.png",
-	"frame": {"x":491,"y":122,"w":120,"h":119},
+	"frame": {"x":454,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":119},
-	"sourceSize": {"w":120,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_walk2.png",
-	"frame": {"x":491,"y":122,"w":120,"h":119},
+	"frame": {"x":454,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":119},
-	"sourceSize": {"w":120,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_walk3.png",
-	"frame": {"x":613,"y":122,"w":120,"h":119},
+	"frame": {"x":486,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":119},
-	"sourceSize": {"w":120,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_walk4.png",
-	"frame": {"x":613,"y":122,"w":120,"h":119},
+	"frame": {"x":486,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":119},
-	"sourceSize": {"w":120,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_walk5.png",
-	"frame": {"x":735,"y":122,"w":120,"h":119},
+	"frame": {"x":518,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":119},
-	"sourceSize": {"w":120,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 },
 {
 	"filename": "hampster_walk6.png",
-	"frame": {"x":735,"y":122,"w":120,"h":119},
+	"frame": {"x":518,"y":1,"w":30,"h":30},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":119},
-	"sourceSize": {"w":120,"h":119}
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
 }],
 "meta": {
 	"app": "https://www.codeandweb.com/texturepacker",
 	"version": "1.0",
 	"image": "hampster.png",
 	"format": "RGBA8888",
-	"size": {"w":1098,"h":242},
+	"size": {"w":549,"h":32},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:e69410e7b80fe0fa1f02f20eeb05cedb:0b61215196537d1cababe671df0102b4:c6235a258d79ba771dab350f07c7cfeb$"
+	"smartupdate": "$TexturePacker:SmartUpdate:abbe0d1c836316f03408283cf3181d53:89cd5b8076fab0de9691267536fc7a53:c6235a258d79ba771dab350f07c7cfeb$"
 }
 }

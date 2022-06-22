@@ -1,11 +1,8 @@
 //Libs and files
 import Phaser, { Scene } from "phaser";
-import Map_1 from "./state/ingame/mini-map";
-import theskeld from "../assets/tilemaps/theskeld.json";
-import playerpng from "../assets/player/player_sprite/player_color/player_base.png";
-import playerjson from "../assets/player/player_sprite/player_color/player_base.json";
-import player_ghost from "../assets/player/Base/ghost/ghost.png";
-import player_ghost_json from "../assets/player/Base/ghost/ghost.json";
+import theSkeldpng from "../assets/img/theSkeld.png";
+import theSkeldjson from "../assets/tilemaps/theskeld.json";
+
 import Light from "../scene//state/ingame/ray-light";
 import eventsCenter from "./eventsCenter";
 import { debugDraw } from "../scene/debugDraw";
@@ -36,43 +33,11 @@ import PrimeShields from "../assets/tasks/Prime Shields/marked.png";
 import InspectSample from "../assets/tasks/Inspect Sample/marked.png";
 import UnlockManifolds from "../assets/tasks/Unlock Manifolds/marked.png";
 
-// Player color
-import playerpng_red from "../assets/player/player_sprite/player_color/player_base_red.png";
-import playerjson_red from "../assets/player/player_sprite/player_color/player_base_red.json";
-import playerpng_blue from "../assets/player/player_sprite/player_color/player_base_blue.png";
-import playerjson_blue from "../assets/player/player_sprite/player_color/player_base_blue.json";
-import playerpng_blue_dark from "../assets/player/player_sprite/player_color/player_base_blue_dark.png";
-import playerjson_blue_dark from "../assets/player/player_sprite/player_color/player_base_blue_dark.json";
-import playerpng_blue_light from "../assets/player/player_sprite/player_color/player_base_blue_light.png";
-import playerjson_blue_light from "../assets/player/player_sprite/player_color/player_base_blue_light.json";
-import playerpng_gray_dark from "../assets/player/player_sprite/player_color/player_base_gray_dark.png";
-import playerjson_gray_dark from "../assets/player/player_sprite/player_color/player_base_gray_dark.json";
-import playerpng_gray_light from "../assets/player/player_sprite/player_color/player_base_gray_light.png";
-import playerjson_gray_light from "../assets/player/player_sprite/player_color/player_base_gray_light.json";
-import playerpng_green_dark from "../assets/player/player_sprite/player_color/player_base_green_dark.png";
-import playerjson_green_dark from "../assets/player/player_sprite/player_color/player_base_green_dark.json";
-import playerpng_green_light from "../assets/player/player_sprite/player_color/player_base_green_light.png";
-import playerjson_green_light from "../assets/player/player_sprite/player_color/player_base_green_light.json";
-import playerpng_orange from "../assets/player/player_sprite/player_color/player_base_orange.png";
-import playerjson_orange from "../assets/player/player_sprite/player_color/player_base_orange.json";
-import playerpng_purple from "../assets/player/player_sprite/player_color/player_base_purple.png";
-import playerjson_purple from "../assets/player/player_sprite/player_color/player_base_purple.json";
-import playerpng_yellow from "../assets/player/player_sprite/player_color/player_base_yellow.png";
-import playerjson_yellow from "../assets/player/player_sprite/player_color/player_base_yellow.json";
-import playerpng_pink from "../assets/player/player_sprite/player_color/player_base_pink.png";
-import playerjson_pink from "../assets/player/player_sprite/player_color/player_base_pink.json";
-
-// Skins
-import Archaeologist_Walk_png from "../assets/player/player_sprite/pants/Archaeologist_Walk.png";
-import Archaeologist_Walk_json from "../assets/player/player_sprite/pants/Archaeologist_Walk.json";
-
-// Pets
-import bslugjson from "../assets/player/pet_sprite/bslug.json";
-import bslugpng from "../assets/player/pet_sprite/bslug.png";
-
 //Constants
 import {
   PLAYER_SPEED,
+  PLAYER_BASE,
+  PLAYER_GHOST,
   PLAYER_BLUE,
   PLAYER_RED,
   PLAYER_BLUE_DARK,
@@ -86,10 +51,20 @@ import {
   PLAYER_YELLOW,
   PLAYER_PINK,
   BSLUG,
+  BEDCRAB,
+  CREWMIN,
+  DOG,
+  ELLIE,
+  HAMPSTER,
+  ROBIT,
+  SQUIG,
+  STICKMIN,
+  TWITCH,
+  UFO,
 } from "../consts/constants";
 
 //Variables declaration
-let player, pet, pet_type;
+let player, pet_type;
 let otherPlayer = new Array();
 let otherPlayerId = new Array();
 let cursors;
@@ -128,6 +103,14 @@ let list_missions_completed = [];
 let color = "";
 let report_button
 let deadplayer = []
+let pet = null;
+let pants_skin,
+  hat_skin,
+  pants_type = null;
+var player_container;
+var isLeft = false;
+var isMirror = false;
+
 class Game extends Phaser.Scene {
   constructor() {
     super({ key: "game" });
@@ -157,6 +140,8 @@ class Game extends Phaser.Scene {
       Archaeologist_Walk_png,
       Archaeologist_Walk_json
     );
+    this.load.image("theSkeldpng", theSkeldpng);
+    this.load.tilemapTiledJSON("theSkeld_tilemap", theSkeldjson);
 
     // this.load.image(
     //   "AlignEngineOutput_mission_marked",
@@ -224,11 +209,25 @@ class Game extends Phaser.Scene {
     this.load.image("UnlockManifolds", UnlockManifolds)
   }
 
+
+
+
+
   create() {
-    //this.scene.pause('game')
-    // let intro = this.scene.launch('introCrew', { isRole: isRole }).bringToTop('introCrew')
-    console.log(this.Info);
     light = new Light(this);
+    const ship = this.make.tilemap({ key: "theSkeld_tilemap" });
+    const tileset = ship.addTilesetImage("theSkeld", "theSkeldpng");
+    const ship_tileset = ship.createLayer("Background", tileset);
+
+    ship_tileset.setCollisionByProperty({ collides: true });
+
+    player = this.physics.add.sprite(115, -700, PLAYER_BLUE, "idle.png");
+    color = "blue";
+    player_container = this.add
+      .container(player.x, player.y)
+      .setSize(player.width, player.height);
+    player_container.add(player);
+
     eventsCenter.on("continue_scene_game", (data) => {
       current_x = data.x;
       current_y = data.y;
@@ -241,13 +240,10 @@ class Game extends Phaser.Scene {
         map_missions.update_list_missions_completed(list_missions_completed);
         player.x = current_x + 2;
         player.y = current_y + 2;
-        // player.setPosition(current_x, current_y);
       }
     });
 
-    const ship = this.make.tilemap({ key: "tilemap" });
-    const tileset = ship.addTilesetImage("theSkeld", "tiles", 17, 17);
-    const ship_tileset = ship.createLayer("Background", tileset);
+    // hat_skin = this.physics.add.sprite(player.x, player.y - 25, "hat0", 0);
 
     //Player loading based on color - default is blue
     let colorPlayer = this.Info.players[this.socket.id].color;
@@ -258,14 +254,489 @@ class Game extends Phaser.Scene {
 
     console.log(this.Info);
 
-    //Pets and skins loading
-    pet = this.physics.add.sprite(
-      player.x + 50,
-      player.y + 10,
-      BSLUG,
-      "bslug_idle1.png"
-    );
-    pet_type = BSLUG;
+    /* if (this.playerChangedSkin.hat) {
+      let hatChosen = this.playerChangedSkin.hat.texture.key ?? "nothing";
+      switch (hatChosen) {
+        case "hat0":
+          hat_skin = this.physics.add.sprite(
+            player.x,
+            player.y - 25,
+            "hat00",
+            0
+          );
+          break;
+        case "hat1":
+          hat_skin = this.physics.add.sprite(
+            player.x,
+            player.y - 25,
+            "hat01",
+            0
+          );
+          break;
+        case "hat2":
+          hat_skin = this.physics.add.sprite(
+            player.x,
+            player.y - 25,
+            "hat02",
+            0
+          );
+          break;
+        case "hat3":
+          hat_skin = this.physics.add.sprite(
+            player.x,
+            player.y - 25,
+            "hat03",
+            0
+          );
+          break;
+        case "hat4":
+          hat_skin = this.physics.add.sprite(
+            player.x,
+            player.y - 25,
+            "hat04",
+            0
+          );
+          break;
+        case "hat5":
+          hat_skin = this.physics.add.sprite(
+            player.x,
+            player.y - 25,
+            "hat05",
+            0
+          );
+          break;
+        case "hat6":
+          hat_skin = this.physics.add.sprite(
+            player.x,
+            player.y - 25,
+            "hat06",
+            0
+          );
+          break;
+        case "hat7":
+          hat_skin = this.physics.add.sprite(
+            player.x,
+            player.y - 25,
+            "hat07",
+            0
+          );
+          break;
+        case "hat8":
+          hat_skin = this.physics.add.sprite(
+            player.x,
+            player.y - 25,
+            "hat08",
+            0
+          );
+          break;
+        case "hat9":
+          hat_skin = this.physics.add.sprite(
+            player.x,
+            player.y - 25,
+            "hat09",
+            0
+          );
+          break;
+        case "hat10":
+          hat_skin = this.physics.add.sprite(
+            player.x,
+            player.y - 25,
+            "hat010",
+            0
+          );
+          break;
+        case "hat11":
+          hat_skin = this.physics.add.sprite(
+            player.x,
+            player.y - 25,
+            "hat011",
+            0
+          );
+          break;
+        case "hat12":
+          hat_skin = this.physics.add.sprite(
+            player.x,
+            player.y - 25,
+            "hat012",
+            0
+          );
+          break;
+        case "hat13":
+          hat_skin = this.physics.add.sprite(
+            player.x,
+            player.y - 25,
+            "hat013",
+            0
+          );
+          break;
+        case "hat14":
+          hat_skin = this.physics.add.sprite(
+            player.x,
+            player.y - 25,
+            "hat014",
+            0
+          );
+          break;
+        case "hat15":
+          hat_skin = this.physics.add.sprite(
+            player.x,
+            player.y - 25,
+            "hat015",
+            0
+          );
+          break;
+        case "hat16":
+          hat_skin = this.physics.add.sprite(
+            player.x,
+            player.y - 25,
+            "hat016",
+            0
+          );
+          break;
+        case "hat17":
+          hat_skin = this.physics.add.sprite(
+            player.x,
+            player.y - 25,
+            "hat017",
+            0
+          );
+          break;
+        case "hat18":
+          hat_skin = this.physics.add.sprite(
+            player.x,
+            player.y - 25,
+            "hat018",
+            0
+          );
+          break;
+        case "hat19":
+          hat_skin = this.physics.add.sprite(
+            player.x,
+            player.y - 25,
+            "hat019",
+            0
+          );
+          break;
+      }
+      player_container.add(hat_skin);
+    } */
+
+    // if (this.playerChangedSkin.trouser) {
+    //   let pantChosen =
+    //     this.playerChangedSkin.trouser.texture.key ?? "nothing";
+    //   switch (pantChosen) {
+    //     case "trouser0":
+    //       pants_type = null;
+    //       pants_skin = null;
+    //       break;
+    //     case "trouser1":
+    //       pants_type = POLICE;
+    //       pants_skin = this.physics.add.sprite(
+    //         player.x + 0.75,
+    //         player.y + 10,
+    //         `${pants_type}_pants`,
+    //         `${pants_type}_Idle.png`
+    //       );
+    //       break;
+    //     case "trouser2":
+    //       pants_type = HAZMAT;
+    //       pants_skin = this.physics.add.sprite(
+    //         player.x + 0.75,
+    //         player.y + 10,
+    //         `${pants_type}_pants`,
+    //         `${pants_type}_Idle.png`
+    //       );
+    //       break;
+    //     case "trouser3":
+    //       pants_type = ARCHAEOLOGIST;
+    //       pants_skin = this.physics.add.sprite(
+    //         player.x + 0.75,
+    //         player.y + 10,
+    //         `${pants_type}_pants`,
+    //         `${pants_type}_Idle.png`
+    //       );
+    //       break;
+    //     case "trouser4":
+    //       pants_type = WINTERJACKET;
+    //       pants_skin = this.physics.add.sprite(
+    //         player.x + 0.75,
+    //         player.y + 10,
+    //         `${pants_type}_pants`,
+    //         `${pants_type}_Idle.png`
+    //       );
+    //       break;
+    //     case "trouser5":
+    //       pants_type = TARMAC;
+    //       pants_skin = this.physics.add.sprite(
+    //         player.x + 0.75,
+    //         player.y + 10,
+    //         `${pants_type}_pants`,
+    //         `${pants_type}_Idle.png`
+    //       );
+    //       break;
+    //     case "trouser6":
+    //       pants_type = MILITARY;
+    //       pants_skin = this.physics.add.sprite(
+    //         player.x + 0.75,
+    //         player.y + 10,
+    //         `${pants_type}_pants`,
+    //         `${pants_type}_Idle.png`
+    //       );
+    //       break;
+    //     case "trouser7":
+    //       pants_type = SUITBLACK;
+    //       pants_skin = this.physics.add.sprite(
+    //         player.x + 0.75,
+    //         player.y + 10,
+    //         `${pants_type}_pants`,
+    //         `${pants_type}_Idle.png`
+    //       );
+    //       break;
+    //     case "trouser8":
+    //       pants_type = ASTRONAUT;
+    //       pants_skin = this.physics.add.sprite(
+    //         player.x + 0.75,
+    //         player.y + 10,
+    //         `${pants_type}_pants`,
+    //         `${pants_type}_Idle.png`
+    //       );
+    //       break;
+    //     case "trouser9":
+    //       pants_type = CAPTAIN;
+    //       pants_skin = this.physics.add.sprite(
+    //         player.x + 0.75,
+    //         player.y + 10,
+    //         `${pants_type}_pants`,
+    //         `${pants_type}_Idle.png`
+    //       );
+    //       break;
+    //     case "trouser10 ":
+    //       pants_type = SECGUARD;
+    //       pants_skin = this.physics.add.sprite(
+    //         player.x + 0.75,
+    //         player.y + 10,
+    //         `${pants_type}_pants`,
+    //         `${pants_type}_Idle.png`
+    //       );
+    //       break;
+    //     case "trouser11":
+    //       pants_type = SCIENTIST;
+    //       pants_skin = this.physics.add.sprite(
+    //         player.x + 0.75,
+    //         player.y + 10,
+    //         `${pants_type}_pants`,
+    //         `${pants_type}_Idle.png`
+    //       );
+    //       break;
+    //     case "trouser12":
+    //       pants_type = MECHANIC;
+    //       pants_skin = this.physics.add.sprite(
+    //         player.x + 0.75,
+    //         player.y + 10,
+    //         `${pants_type}_pants`,
+    //         `${pants_type}_Idle.png`
+    //       );
+    //       break;
+    //     case "trouser13":
+    //       pants_type = WALL;
+    //       pants_skin = this.physics.add.sprite(
+    //         player.x + 0.75,
+    //         player.y + 10,
+    //         `${pants_type}_pants`,
+    //         `${pants_type}_Idle.png`
+    //       );
+    //       break;
+    //     case "trouser14":
+    //       pants_type = SUITWHITE;
+    //       pants_skin = this.physics.add.sprite(
+    //         player.x + 0.75,
+    //         player.y + 10,
+    //         `${pants_type}_pants`,
+    //         `${pants_type}_Idle.png`
+    //       );
+    //       break;
+    //     case "trouser15":
+    //       pants_type = CCC;
+    //       pants_skin = this.physics.add.sprite(
+    //         player.x + 0.75,
+    //         player.y + 10,
+    //         `${pants_type}_pants`,
+    //         `${pants_type}_Idle.png`
+    //       );
+    //       break;
+    //   }
+    //   // player_container.add(pants_skin);
+    //   /* *********************CREATING ANIMATIONS FOR SKINS********************* */
+    //   //For skis that don't have mirror animations
+    //   this.anims.create({
+    //     key: `${pants_type}_walk`,
+    //     frames: this.anims.generateFrameNames(`${pants_type}_pants`, {
+    //       start: 1,
+    //       end: 12,
+    //       prefix: `${pants_type}_Walk`,
+    //       suffix: ".png",
+    //     }),
+    //     repeat: -1,
+    //     frameRate: 16,
+    //   });
+
+    //   this.anims.create({
+    //     key: `${pants_type}_idle`,
+    //     frames: [
+    //       {
+    //         key: `${pants_type}_pants`,
+    //         frame: `${pants_type}_Idle.png`,
+    //       },
+    //     ],
+    //   });
+    //     //For skins that have mirror animations
+    //     if (
+    //       pants_type == POLICE ||
+    //       pants_type == ARCHAEOLOGIST ||
+    //       pants_type == SECGUARD ||
+    //       pants_type == WALL ||
+    //       pants_type == CCC
+    //     ) {
+    //       isMirror = true;
+    //       this.anims.create({
+    //         key: `${pants_type}_walkMirror`,
+    //         frames: this.anims.generateFrameNames(`${pants_type}_pants`, {
+    //           start: 1,
+    //           end: 12,
+    //           prefix: `${pants_type}_WalkMirror`,
+    //           suffix: ".png",
+    //         }),
+    //         repeat: -1,
+    //         frameRate: 16,
+    //       });
+
+    //       this.anims.create({
+    //         key: `${pants_type}_idleMirror`,
+    //         frames: [
+    //           {
+    //             key: `${pants_type}_pants`,
+    //             frame: `${pants_type}_IdleMirror.png`,
+    //           },
+    //         ],
+    //       });
+    //     } else {
+    //       isMirror = false;
+    //     }
+    // }
+
+    //Pets loading
+    /* if (this.playerChangedSkin.pet) {
+      let petChosen = this.playerChangedSkin.pet.texture.key ?? "nothing";
+      switch (petChosen) {
+        case "pet0":
+          pet = null;
+          pet_type = null;
+          break;
+        case "pet1":
+          pet = this.physics.add.sprite(
+            player.x + 50,
+            player.y + 10,
+            STICKMIN,
+            "stickmin_idle1.png"
+          );
+          pet_type = STICKMIN;
+          break;
+        case "pet2":
+          pet = this.physics.add.sprite(
+            player.x + 50,
+            player.y + 10,
+            ELLIE,
+            "ellie_idle1.png"
+          );
+          pet_type = ELLIE;
+          break;
+        case "pet3":
+          pet = this.physics.add.sprite(
+            player.x + 50,
+            player.y + 10,
+            CREWMIN,
+            "crewmin_idle1.png"
+          );
+          pet_type = CREWMIN;
+          break;
+        case "pet4":
+          pet = this.physics.add.sprite(
+            player.x + 50,
+            player.y + 10,
+            DOG,
+            "dog_idle1.png"
+          );
+          pet_type = DOG;
+          break;
+        case "pet5":
+          pet = this.physics.add.sprite(
+            player.x + 50,
+            player.y + 10,
+            BEDCRAB,
+            "bedcrab_idle1.png"
+          );
+          pet_type = BEDCRAB;
+          break;
+        case "pet6":
+          pet = this.physics.add.sprite(
+            player.x + 50,
+            player.y + 10,
+            ROBIT,
+            "robit_idle1.png"
+          );
+          pet_type = ROBIT;
+          break;
+        case "pet7":
+          pet = this.physics.add.sprite(
+            player.x + 50,
+            player.y + 10,
+            BSLUG,
+            "bslug_idle1.png"
+          );
+          pet_type = BSLUG;
+          break;
+        case "pet8":
+          pet = this.physics.add.sprite(
+            player.x + 50,
+            player.y + 10,
+            HAMPSTER,
+            "hampster_idle1.png"
+          );
+          pet_type = HAMPSTER;
+          break;
+        case "pet9":
+          pet = this.physics.add.sprite(
+            player.x + 50,
+            player.y + 10,
+            SQUIG,
+            "squig_idle1.png"
+          );
+          pet_type = SQUIG;
+          break;
+        case "pet10":
+          if (pet) {
+            pet.dstroy();
+          }
+          pet = this.physics.add.sprite(
+            player.x + 50,
+            player.y + 10,
+            UFO,
+            "ufo_idle1.png"
+          );
+          pet_type = UFO;
+          break;
+        case "pet11":
+          pet = this.physics.add.sprite(
+            player.x + 50,
+            player.y + 10,
+            TWITCH,
+            "twitch_idle1.png"
+          );
+          pet_type = TWITCH;
+          break;
+      }
+      // player_container.add(pet);
+    } */
 
     //add kill button if imposter
     if (this.isRole == 1) {
@@ -292,7 +763,6 @@ class Game extends Phaser.Scene {
     map_missions = new MapMissionsExporter("theSkeld");
     export_missions = map_missions.create();
     map_missions.show_mission(this);
-    ship_tileset.setCollisionByProperty({ collides: true });
 
     // tạo theo số lượng other player vào
 
@@ -329,152 +799,7 @@ class Game extends Phaser.Scene {
     //Creating animation for player
     this.anims.create({
       key: "player-idle",
-      frames: [{ key: "playerbase", frame: "idle.png" }],
-    });
-
-    //Red
-    this.anims.create({
-      key: "player-idle_red",
-      frames: [{ key: PLAYER_RED, frame: "idle.png" }],
-    });
-
-    //Blue
-    this.anims.create({
-      key: "player-idle_blue",
-      frames: [{ key: PLAYER_BLUE, frame: "idle.png" }],
-    });
-
-    //Blue dark
-    this.anims.create({
-      key: "player-idle_blue_dark",
-      frames: [{ key: PLAYER_BLUE_DARK, frame: "idle.png" }],
-    });
-
-    //Blue light
-    this.anims.create({
-      key: "player-idle_blue_light",
-      frames: [{ key: PLAYER_BLUE_LIGHT, frame: "idle.png" }],
-    });
-
-    //Gray dark
-    this.anims.create({
-      key: "player-idle_gray_dark",
-      frames: [{ key: PLAYER_GRAY_DARK, frame: "idle.png" }],
-    });
-
-    //Gray light
-    this.anims.create({
-      key: "player-idle_gray_light",
-      frames: [{ key: PLAYER_GRAY_LIGHT, frame: "idle.png" }],
-    });
-
-    //Green dark
-    this.anims.create({
-      key: "player-idle_green_dark",
-      frames: [{ key: PLAYER_GREEN_DARK, frame: "idle.png" }],
-    });
-
-    //Green light
-    this.anims.create({
-      key: "player-idle_green_light",
-      frames: [{ key: PLAYER_GREEN_LIGHT, frame: "idle.png" }],
-    });
-
-    //Orange
-    this.anims.create({
-      key: "player-idle_orange",
-      frames: [{ key: PLAYER_ORANGE, frame: "idle.png" }],
-    });
-
-    //Pink
-    this.anims.create({
-      key: "player-idle_pink",
-      frames: [{ key: PLAYER_PINK, frame: "idle.png" }],
-    });
-
-    //Purple
-    this.anims.create({
-      key: "player-idle_purple",
-      frames: [{ key: PLAYER_PURPLE, frame: "idle.png" }],
-    });
-
-    //Yellow
-    this.anims.create({
-      key: "player-idle_yellow",
-      frames: [{ key: PLAYER_YELLOW, frame: "idle.png" }],
-    });
-
-    /* DEAD ANIMATION */
-    //Red
-    this.anims.create({
-      key: "dead_red",
-      frames: [{ key: PLAYER_RED, frame: "dead.png" }],
-    });
-
-    //Blue
-    this.anims.create({
-      key: "dead_blue",
-      frames: [{ key: PLAYER_BLUE, frame: "dead.png" }],
-    });
-
-    //Blue dark
-    this.anims.create({
-      key: "dead_blue_dark",
-      frames: [{ key: PLAYER_BLUE_DARK, frame: "dead.png" }],
-    });
-
-    //Blue light
-    this.anims.create({
-      key: "dead_blue_light",
-      frames: [{ key: PLAYER_BLUE_LIGHT, frame: "dead.png" }],
-    });
-
-    //Gray dark
-    this.anims.create({
-      key: "dead_gray_dark",
-      frames: [{ key: PLAYER_GRAY_DARK, frame: "dead.png" }],
-    });
-
-    //Gray light
-    this.anims.create({
-      key: "dead_gray_light",
-      frames: [{ key: PLAYER_GRAY_LIGHT, frame: "dead.png" }],
-    });
-
-    //Green dark
-    this.anims.create({
-      key: "dead_green_dark",
-      frames: [{ key: PLAYER_GREEN_DARK, frame: "dead.png" }],
-    });
-
-    //Green light
-    this.anims.create({
-      key: "dead_green_light",
-      frames: [{ key: PLAYER_GREEN_LIGHT, frame: "dead.png" }],
-    });
-
-    //Orange
-    this.anims.create({
-      key: "dead_orange",
-      frames: [{ key: PLAYER_ORANGE, frame: "dead.png" }],
-    });
-
-    //Pink
-    this.anims.create({
-      key: "dead_pink",
-      frames: [{ key: PLAYER_PINK, frame: "dead.png" }],
-    });
-
-    //Purple
-    this.anims.create({
-      key: "dead_purple",
-      frames: [{ key: PLAYER_PURPLE, frame: "dead.png" }],
-    });
-
-    //Yellow
-    this.anims.create({
-      key: "dead_yellow",
-      frames: [{ key: PLAYER_YELLOW, frame: "dead.png" }],
+      frames: [{ key: PLAYER_BASE, frame: "idle.png" }],
     });
 
     //khởi tạo nhóm các vent
@@ -545,10 +870,12 @@ class Game extends Phaser.Scene {
       frameRate: 36,
       repeat: 0,
     });
-    //animation player
+
+    /* *********************CREATING ANIMATIONS FOR PLAYER********************* */
+
     this.anims.create({
       key: "player-walk",
-      frames: this.anims.generateFrameNames("playerbase", {
+      frames: this.anims.generateFrameNames(PLAYER_BASE, {
         start: 1,
         end: 12,
         prefix: "Walk",
@@ -558,166 +885,39 @@ class Game extends Phaser.Scene {
       frameRate: 24,
     });
 
-    //Red
     this.anims.create({
-      key: "player-walk_red",
-      frames: this.anims.generateFrameNames(PLAYER_RED, {
+      key: `${color}-walk`,
+      frames: this.anims.generateFrameNames(color, {
         start: 1,
         end: 12,
         prefix: "Walk",
         suffix: ".png",
       }),
       repeat: -1,
-      frameRate: 16,
+      frameRate: 24,
     });
 
-    //Blue
     this.anims.create({
-      key: "player-walk_blue",
-      frames: this.anims.generateFrameNames(PLAYER_BLUE, {
-        start: 1,
-        end: 12,
-        prefix: "Walk",
-        suffix: ".png",
-      }),
-      repeat: -1,
-      frameRate: 16,
+      key: `${color}-idle`,
+      frames: [{ key: color, frame: "idle.png" }],
     });
 
-    //Blue dark
     this.anims.create({
-      key: "player-walk_blue_dark",
-      frames: this.anims.generateFrameNames(PLAYER_BLUE_DARK, {
+      key: `${color}-dead`,
+      frames: this.anims.generateFrameNames(color, {
         start: 1,
-        end: 12,
-        prefix: "Walk",
+        end: 42,
+        prefix: "Dead",
         suffix: ".png",
       }),
       repeat: -1,
-      frameRate: 16,
-    });
-
-    //Blue light
-    this.anims.create({
-      key: "player-walk_blue_light",
-      frames: this.anims.generateFrameNames(PLAYER_BLUE_LIGHT, {
-        start: 1,
-        end: 12,
-        prefix: "Walk",
-        suffix: ".png",
-      }),
-      repeat: -1,
-      frameRate: 16,
-    });
-
-    //Gray dark
-    this.anims.create({
-      key: "player-walk_gray_dark",
-      frames: this.anims.generateFrameNames(PLAYER_GRAY_DARK, {
-        start: 1,
-        end: 12,
-        prefix: "Walk",
-        suffix: ".png",
-      }),
-      repeat: -1,
-      frameRate: 16,
-    });
-
-    //Gray light
-    this.anims.create({
-      key: "player-walk_gray_light",
-      frames: this.anims.generateFrameNames(PLAYER_GRAY_LIGHT, {
-        start: 1,
-        end: 12,
-        prefix: "Walk",
-        suffix: ".png",
-      }),
-      repeat: -1,
-      frameRate: 16,
-    });
-
-    //Green dark
-    this.anims.create({
-      key: "player-walk_green_dark",
-      frames: this.anims.generateFrameNames(PLAYER_GREEN_DARK, {
-        start: 1,
-        end: 12,
-        prefix: "Walk",
-        suffix: ".png",
-      }),
-      repeat: -1,
-      frameRate: 16,
-    });
-
-    //Green light
-    this.anims.create({
-      key: "player-walk_green_light",
-      frames: this.anims.generateFrameNames(PLAYER_GREEN_LIGHT, {
-        start: 1,
-        end: 12,
-        prefix: "Walk",
-        suffix: ".png",
-      }),
-      repeat: -1,
-      frameRate: 16,
-    });
-
-    //Orange
-    this.anims.create({
-      key: "player-walk_orange",
-      frames: this.anims.generateFrameNames(PLAYER_ORANGE, {
-        start: 1,
-        end: 12,
-        prefix: "Walk",
-        suffix: ".png",
-      }),
-      repeat: -1,
-      frameRate: 16,
-    });
-
-    //Pink
-    this.anims.create({
-      key: "player-walk_pink",
-      frames: this.anims.generateFrameNames(PLAYER_PINK, {
-        start: 1,
-        end: 12,
-        prefix: "Walk",
-        suffix: ".png",
-      }),
-      repeat: -1,
-      frameRate: 16,
-    });
-
-    //Purple
-    this.anims.create({
-      key: "player-walk_purple",
-      frames: this.anims.generateFrameNames(PLAYER_PURPLE, {
-        start: 1,
-        end: 12,
-        prefix: "Walk",
-        suffix: ".png",
-      }),
-      repeat: -1,
-      frameRate: 16,
-    });
-
-    //Yellow
-    this.anims.create({
-      key: "player-walk_yellow",
-      frames: this.anims.generateFrameNames(PLAYER_YELLOW, {
-        start: 1,
-        end: 12,
-        prefix: "Walk",
-        suffix: ".png",
-      }),
-      repeat: -1,
-      frameRate: 16,
+      frameRate: 24,
     });
 
     //player death
     this.anims.create({
       key: "player-dead",
-      frames: this.anims.generateFrameNames("playerbase", {
+      frames: this.anims.generateFrameNames(PLAYER_BASE, {
         start: 1,
         end: 41,
         prefix: "Dead",
@@ -922,6 +1122,249 @@ class Game extends Phaser.Scene {
       frameRate: 12,
     });
 
+    //BEDCRAB
+    this.anims.create({
+      key: `${BEDCRAB}-walk`,
+      frames: this.anims.generateFrameNames(BEDCRAB, {
+        start: 1,
+        end: 12,
+        prefix: `${BEDCRAB}_Walk`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${BEDCRAB}-idle`,
+      frames: this.anims.generateFrameNames(BEDCRAB, {
+        start: 1,
+        end: 27,
+        prefix: `${BEDCRAB}_idle`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    //CREWMIN
+    this.anims.create({
+      key: `${CREWMIN}-walk`,
+      frames: this.anims.generateFrameNames(CREWMIN, {
+        start: 1,
+        end: 16,
+        prefix: `${CREWMIN}_walk`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${CREWMIN}-idle`,
+      frames: [{ key: CREWMIN, frame: `${CREWMIN}_idle1.png` }],
+    });
+
+    //DOG
+    this.anims.create({
+      key: `${DOG}-walk`,
+      frames: this.anims.generateFrameNames(DOG, {
+        start: 1,
+        end: 8,
+        prefix: `${DOG}_walk`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${DOG}-idle`,
+      frames: this.anims.generateFrameNames(DOG, {
+        start: 1,
+        end: 8,
+        prefix: `${DOG}_idle`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    //ELLIE
+    this.anims.create({
+      key: `${ELLIE}-walk`,
+      frames: this.anims.generateFrameNames(ELLIE, {
+        start: 1,
+        end: 9,
+        prefix: `${ELLIE}_walk`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${ELLIE}-idle`,
+      frames: this.anims.generateFrameNames(ELLIE, {
+        start: 1,
+        end: 34,
+        prefix: `${ELLIE}_idle`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    //HAMPSTER
+    this.anims.create({
+      key: `${HAMPSTER}-walk`,
+      frames: this.anims.generateFrameNames(HAMPSTER, {
+        start: 1,
+        end: 6,
+        prefix: `${HAMPSTER}_walk`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${HAMPSTER}-idle`,
+      frames: this.anims.generateFrameNames(HAMPSTER, {
+        start: 1,
+        end: 31,
+        prefix: `${HAMPSTER}_idle`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    //ROBIT
+    this.anims.create({
+      key: `${ROBIT}-walk`,
+      frames: this.anims.generateFrameNames(ROBIT, {
+        start: 1,
+        end: 16,
+        prefix: `${ROBIT}_walk`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${ROBIT}-idle`,
+      frames: this.anims.generateFrameNames(ROBIT, {
+        start: 1,
+        end: 122,
+        prefix: `${ROBIT}_idle`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    //SQUIG
+    this.anims.create({
+      key: `${SQUIG}-walk`,
+      frames: this.anims.generateFrameNames(SQUIG, {
+        start: 1,
+        end: 16,
+        prefix: `${SQUIG}_walk`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${SQUIG}-idle`,
+      frames: this.anims.generateFrameNames(SQUIG, {
+        start: 1,
+        end: 40,
+        prefix: `${SQUIG}_idle`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    //STICKMIN
+    this.anims.create({
+      key: `${STICKMIN}-walk`,
+      frames: this.anims.generateFrameNames(STICKMIN, {
+        start: 1,
+        end: 9,
+        prefix: `${STICKMIN}_walk`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${STICKMIN}-idle`,
+      frames: this.anims.generateFrameNames(STICKMIN, {
+        start: 1,
+        end: 34,
+        prefix: `${STICKMIN}_idle`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    //TWITCH
+    this.anims.create({
+      key: `${TWITCH}-walk`,
+      frames: this.anims.generateFrameNames(TWITCH, {
+        start: 1,
+        end: 12,
+        prefix: `${TWITCH}_walk`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${TWITCH}-idle`,
+      frames: this.anims.generateFrameNames(TWITCH, {
+        start: 1,
+        end: 96,
+        prefix: `${TWITCH}_idle`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    //UFO
+    this.anims.create({
+      key: `${UFO}-walk`,
+      frames: this.anims.generateFrameNames(UFO, {
+        start: 1,
+        end: 18,
+        prefix: `${UFO}_walk`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
+    this.anims.create({
+      key: `${UFO}-idle`,
+      frames: this.anims.generateFrameNames(UFO, {
+        start: 1,
+        end: 45,
+        prefix: `${UFO}_idle`,
+        suffix: ".png",
+      }),
+      repeat: -1,
+      frameRate: 24,
+    });
+
     //input to control
     this.input.keyboard.on("keydown", (e) => {
       if (!pressedKeys.includes(e.code)) {
@@ -947,9 +1390,13 @@ class Game extends Phaser.Scene {
       pressedKeys = pressedKeys.filter((key) => key !== e.code);
     });
 
-    this.physics.add.collider(player, ship_tileset);
-
+    //Add collider with player and set camera to follow player
+    this.physics.add.existing(player_container);
+    this.physics.add.collider(player_container, ship_tileset);
+    // this.cameras.main.startFollow(player_container, true);
+    // this.physics.add.collider(player, ship_tileset);
     this.cameras.main.startFollow(player, true);
+    // console.log(player_container);
     this.input.keyboard.enabled;
     //tải lại mới khi có player mới vào có các player đã ở trong đó
     //các function liên quan đến objectlayer
@@ -981,15 +1428,11 @@ class Game extends Phaser.Scene {
             object.width,
             object.height
           );
-          // tableObject.setFillStyle(0xffffff, 0.5);
-          // console.log(tableObject);
 
           this.physics.add.existing(tableObject);
 
           tableObject.body.immovable = true;
           tableObject.setOrigin(0, 0);
-          //r.body.moves=false
-          // tableObject.body.setCircle(120);
           this.physics.add.overlap(player, tableObject, null, null, this);
           this.physics.add.collider(player, tableObject);
           break;
@@ -1097,7 +1540,7 @@ class Game extends Phaser.Scene {
                 player.play("jump");
                 player.on("animationcomplete", (animation, frame) => {
                   if ((animation.key = "jump")) {
-                    player.anims.play("player-idle_" + color);
+                    player.anims.play(`${color}-idle`);
                   }
                 });
               }
@@ -1209,9 +1652,20 @@ class Game extends Phaser.Scene {
     var touching = !player.body.touching.none || player.body.embedded;
     if (touching && !wasTouching) player.emit("overlapstart");
     else if (!touching && wasTouching) player.emit("overlapend");
+    if (pants_type) {
+      isLeft == true && isMirror == true
+        ? pants_skin.setPosition(player.x, player.y + 10)
+        : null;
+    }
+    if (pet) {
+      pet.setPosition(player.x + 50, player.y + 10);
+    }
+    // player_container.body.setVelocity(0);
+    player.setVelocity(0);
 
     this.events.emit("moving", [player.x, player.y]);
     light.update(player);
+
     if (this.isRole == 1) {
       kill.on("pointerdown", () => {
         //console.log();
@@ -1247,31 +1701,110 @@ class Game extends Phaser.Scene {
       //vì phaser chưa có phương thức xác định bắt sự kiện khi player tiếp xúc với sprite hoặc player rời xa sprite nên ta sử dụng emit để gửi sự kiện overlapstart và overlapend
       // var touching = !player.body.touching.none;
 
-
+      //để tránh xung đột với animation idle khi vào vent thì ta sẽ delay animation idle lại để player thực hiện nhảy vent và sau đó ẩn player đi
+      if (is_vent == true && is_jump == true) {
+        count++;
+        if (count == 40) {
+          check(player);
+          is_jump = false;
+          count = 0;
+        }
+      } else if (is_vent == true && is_jump == false) {
+        player.anims.play(`${color}-idle`);
+      }
       let playerMoved = false;
       player.setVelocity(0);
 
-
+      if (
+        !cursors.left.isDown &&
+        !cursors.right.isDown &&
+        !cursors.up.isDown &&
+        !cursors.down.isDown &&
+        !is_vent
+      ) {
+        //     console.log("outvent")
+        player.anims.play(`${color}-idle`);
+        if (pet) {
+          pet.anims.play(`${pet_type}-idle`);
+        }
+        if (pants_type) {
+          if (isMirror) {
+            isLeft == true
+              ? pants_skin.anims.play(`${pants_type}_idleMirror`)
+              : pants_skin.anims.play(`${pants_type}_idle`);
+          } else {
+            pants_skin.anims.play(`${pants_type}_idle`);
+          }
+        }
+      }
       //nếu is_hidden bằng true có nghĩa là player đang trốn vent nên sẽ ko di chuyển bằng input được
       if (cursors.left.isDown && is_hidden == false) {
-        player.anims.play("player-walk_" + color, true);
+        player.anims.play(`${color}-walk`, true);
+        // player_container.body.setVelocityX(-PLAYER_SPEED);
         player.setVelocityX(-PLAYER_SPEED);
         player.scaleX = -1;
         player.body.offset.x = 40;
+        if (hat_skin) {
+          hat_skin.scaleX = -1;
+        }
         playerMoved = true;
+        if (pet) {
+          pet.anims.play(`${pet_type}-walk`, true);
+          pet.scaleX = -1;
+        }
+        isLeft = true;
+        if (pants_type) {
+          if (isMirror) {
+            pants_skin.anims.play(`${pants_type}_walkMirror`, true);
+          } else {
+            pants_skin.anims.play(`${pants_type}_walk`, true);
+            pants_skin.scaleX = -1;
+          }
+        }
       } else if (cursors.right.isDown && is_hidden == false) {
-        player.anims.play("player-walk_" + color, true);
+        if (pet) {
+          pet.anims.play(`${pet_type}-walk`, true);
+          pet.scaleX = 1;
+        }
+        isLeft = false;
+        player.anims.play(`${color}-walk`, true);
+        if (pants_type) {
+          pants_skin.anims.play(`${pants_type}_walk`, true);
+          isMirror == false ? (pants_skin.scaleX = 1) : null;
+        }
+        // player_container.body.setVelocityX(PLAYER_SPEED);
         player.setVelocityX(PLAYER_SPEED);
         player.scaleX = 1;
         player.body.offset.x = 0;
+        if (hat_skin) {
+          hat_skin.scaleX = 1;
+        }
         playerMoved = true;
       }
       if (cursors.up.isDown && is_hidden == false) {
-        player.anims.play("player-walk_" + color, true);
+        if (pet) {
+          pet.anims.play(`${pet_type}-walk`, true);
+        }
+        player.anims.play(`${color}-walk`, true);
+        if (pants_type) {
+          isLeft == true && isMirror == true
+            ? pants_skin.anims.play(`${pants_type}_walkMirror`, true)
+            : pants_skin.anims.play(`${pants_type}_walk`, true);
+        }
+        // player_container.body.setVelocityY(-PLAYER_SPEED);
         player.setVelocityY(-PLAYER_SPEED);
         playerMoved = true;
       } else if (cursors.down.isDown && is_hidden == false) {
-        player.anims.play("player-walk_" + color, true);
+        if (pet) {
+          pet.anims.play(`${pet_type}-walk`, true);
+        }
+        player.anims.play(`${color}-walk`, true);
+        if (pants_type) {
+          isLeft == true && isMirror == true
+            ? pants_skin.anims.play(`${pants_type}_walkMirror`, true)
+            : pants_skin.anims.play(`${pants_type}_walk`, true);
+        }
+        // player_container.body.setVelocityY(PLAYER_SPEED);
         player.setVelocityY(PLAYER_SPEED);
         playerMoved = true;
       }
@@ -1312,6 +1845,7 @@ class Game extends Phaser.Scene {
     //canKill = false
     if (alive == true && this.isRole != 1) {
       let playerMoved = false;
+      // player_container.body.setVelocity(0);
       player.setVelocity(0);
 
       if (
@@ -1320,34 +1854,49 @@ class Game extends Phaser.Scene {
         !cursors.up.isDown &&
         !cursors.down.isDown
       ) {
-        pet.anims.play(`${BSLUG}-idle`);
+        if (pet) {
+          pet.anims.play(`${pet_type}-idle`);
+        }
+        player.anims.play(`${color}-idle`);
       }
 
       if (cursors.left.isDown) {
-        pet.anims.play(`${BSLUG}-walk`, true);
-        player.anims.play("player-walk_" + color, true);
+        if (pet) {
+          pet.anims.play(`${pet_type}-walk`, true);
+          pet.scaleX = -1;
+        }
+        player.anims.play(`${color}-walk`, true);
+        // player_container.body.setVelocityX(-PLAYER_SPEED);
         player.setVelocityX(-PLAYER_SPEED);
         player.scaleX = -1;
-        pet.scaleX = -1;
         player.body.offset.x = 40;
         playerMoved = true;
       } else if (cursors.right.isDown) {
-        pet.anims.play(`${BSLUG}-walk`, true);
-        player.anims.play("player-walk_" + color, true);
+        if (pet) {
+          pet.anims.play(`${pet_type}-walk`, true);
+          pet.scaleX = 1;
+        }
+        player.anims.play(`${color}-walk`, true);
+        // player_container.body.setVelocityX(PLAYER_SPEED);
         player.setVelocityX(PLAYER_SPEED);
         player.scaleX = 1;
-        pet.scaleX = 1;
         player.body.offset.x = 0;
         playerMoved = true;
       }
       if (cursors.up.isDown) {
-        pet.anims.play(`${BSLUG}-walk`, true);
-        player.anims.play("player-walk_" + color, true);
+        if (pet) {
+          pet.anims.play(`${pet_type}-walk`, true);
+        }
+        player.anims.play(`${color}-walk`, true);
+        // player_container.body.setVelocityY(-PLAYER_SPEED);
         player.setVelocityY(-PLAYER_SPEED);
         playerMoved = true;
       } else if (cursors.down.isDown) {
-        pet.anims.play(`${BSLUG}-walk`, true);
-        player.anims.play("player-walk_" + color, true);
+        if (pet) {
+          pet.anims.play(`${pet_type}-walk`, true);
+        }
+        player.anims.play(`${color}-walk`, true);
+        // player_container.body.setVelocityY(PLAYER_SPEED);
         player.setVelocityY(PLAYER_SPEED);
         playerMoved = true;
       }

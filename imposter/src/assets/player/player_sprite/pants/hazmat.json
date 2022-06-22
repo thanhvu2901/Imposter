@@ -1,0 +1,4068 @@
+{"frames": [
+
+{
+	"filename": "hazmat_Idle.png",
+	"frame": {"x":217,"y":109,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor1.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor2.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor3.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor4.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor5.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor6.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor7.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor8.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor9.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor10.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor11.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor12.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor13.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor14.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor15.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor16.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor17.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor18.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor19.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor20.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor21.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor22.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor23.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor24.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor25.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor26.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor27.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor28.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor29.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor30.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor31.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor32.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor33.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor34.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor35.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor36.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor37.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor38.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor39.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor40.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor41.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor42.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor43.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor44.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor45.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor46.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor47.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Impostor48.png",
+	"frame": {"x":235,"y":74,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim1.png",
+	"frame": {"x":257,"y":144,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim2.png",
+	"frame": {"x":257,"y":144,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim3.png",
+	"frame": {"x":257,"y":144,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim4.png",
+	"frame": {"x":257,"y":144,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim5.png",
+	"frame": {"x":257,"y":144,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim6.png",
+	"frame": {"x":257,"y":144,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim7.png",
+	"frame": {"x":257,"y":144,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim8.png",
+	"frame": {"x":257,"y":144,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim9.png",
+	"frame": {"x":257,"y":144,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim10.png",
+	"frame": {"x":257,"y":144,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim11.png",
+	"frame": {"x":82,"y":298,"w":36,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":33},
+	"sourceSize": {"w":36,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim12.png",
+	"frame": {"x":82,"y":298,"w":36,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":33},
+	"sourceSize": {"w":36,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim13.png",
+	"frame": {"x":49,"y":120,"w":33,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":36},
+	"sourceSize": {"w":33,"h":36}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim14.png",
+	"frame": {"x":49,"y":120,"w":33,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":36},
+	"sourceSize": {"w":33,"h":36}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim15.png",
+	"frame": {"x":49,"y":120,"w":33,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":36},
+	"sourceSize": {"w":33,"h":36}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim16.png",
+	"frame": {"x":42,"y":201,"w":34,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":37},
+	"sourceSize": {"w":34,"h":37}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim17.png",
+	"frame": {"x":42,"y":201,"w":34,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":37},
+	"sourceSize": {"w":34,"h":37}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim18.png",
+	"frame": {"x":44,"y":158,"w":32,"h":41},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":41},
+	"sourceSize": {"w":32,"h":41}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim19.png",
+	"frame": {"x":44,"y":158,"w":32,"h":41},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":41},
+	"sourceSize": {"w":32,"h":41}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim20.png",
+	"frame": {"x":44,"y":158,"w":32,"h":41},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":41},
+	"sourceSize": {"w":32,"h":41}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim21.png",
+	"frame": {"x":82,"y":298,"w":36,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":33},
+	"sourceSize": {"w":36,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim22.png",
+	"frame": {"x":82,"y":298,"w":36,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":33},
+	"sourceSize": {"w":36,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim23.png",
+	"frame": {"x":49,"y":120,"w":33,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":36},
+	"sourceSize": {"w":33,"h":36}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim24.png",
+	"frame": {"x":49,"y":120,"w":33,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":36},
+	"sourceSize": {"w":33,"h":36}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim25.png",
+	"frame": {"x":49,"y":120,"w":33,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":36},
+	"sourceSize": {"w":33,"h":36}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim26.png",
+	"frame": {"x":42,"y":201,"w":34,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":37},
+	"sourceSize": {"w":34,"h":37}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim27.png",
+	"frame": {"x":42,"y":201,"w":34,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":37},
+	"sourceSize": {"w":34,"h":37}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim28.png",
+	"frame": {"x":44,"y":158,"w":32,"h":41},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":41},
+	"sourceSize": {"w":32,"h":41}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim29.png",
+	"frame": {"x":44,"y":158,"w":32,"h":41},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":41},
+	"sourceSize": {"w":32,"h":41}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim30.png",
+	"frame": {"x":44,"y":158,"w":32,"h":41},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":41},
+	"sourceSize": {"w":32,"h":41}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim31.png",
+	"frame": {"x":165,"y":213,"w":39,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":33},
+	"sourceSize": {"w":39,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim32.png",
+	"frame": {"x":165,"y":213,"w":39,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":33},
+	"sourceSize": {"w":39,"h":33}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim33.png",
+	"frame": {"x":42,"y":240,"w":34,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":37},
+	"sourceSize": {"w":34,"h":37}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim34.png",
+	"frame": {"x":50,"y":81,"w":34,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":37},
+	"sourceSize": {"w":34,"h":37}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim35.png",
+	"frame": {"x":50,"y":81,"w":34,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":37},
+	"sourceSize": {"w":34,"h":37}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim36.png",
+	"frame": {"x":50,"y":81,"w":34,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":37},
+	"sourceSize": {"w":34,"h":37}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim37.png",
+	"frame": {"x":50,"y":81,"w":34,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":37},
+	"sourceSize": {"w":34,"h":37}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim38.png",
+	"frame": {"x":1,"y":280,"w":37,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":37},
+	"sourceSize": {"w":37,"h":37}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim39.png",
+	"frame": {"x":78,"y":274,"w":40,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":22},
+	"sourceSize": {"w":40,"h":22}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim40.png",
+	"frame": {"x":78,"y":274,"w":40,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":22},
+	"sourceSize": {"w":40,"h":22}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim41.png",
+	"frame": {"x":41,"y":316,"w":39,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":23},
+	"sourceSize": {"w":39,"h":23}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim42.png",
+	"frame": {"x":159,"y":316,"w":38,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":23},
+	"sourceSize": {"w":38,"h":23}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim43.png",
+	"frame": {"x":159,"y":316,"w":38,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":23},
+	"sourceSize": {"w":38,"h":23}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim44.png",
+	"frame": {"x":159,"y":316,"w":38,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":23},
+	"sourceSize": {"w":38,"h":23}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim45.png",
+	"frame": {"x":159,"y":316,"w":38,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":23},
+	"sourceSize": {"w":38,"h":23}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim46.png",
+	"frame": {"x":159,"y":316,"w":38,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":23},
+	"sourceSize": {"w":38,"h":23}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim47.png",
+	"frame": {"x":159,"y":316,"w":38,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":23},
+	"sourceSize": {"w":38,"h":23}
+},
+{
+	"filename": "hazmat_Kill_stab_Victim48.png",
+	"frame": {"x":159,"y":316,"w":38,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":23},
+	"sourceSize": {"w":38,"h":23}
+},
+{
+	"filename": "hazmat_killalien_imposter1.png",
+	"frame": {"x":447,"y":116,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killalien_imposter2.png",
+	"frame": {"x":447,"y":116,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killalien_imposter3.png",
+	"frame": {"x":447,"y":116,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killalien_imposter4.png",
+	"frame": {"x":447,"y":116,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killalien_imposter5.png",
+	"frame": {"x":463,"y":247,"w":31,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":22},
+	"sourceSize": {"w":31,"h":22}
+},
+{
+	"filename": "hazmat_killalien_imposter6.png",
+	"frame": {"x":463,"y":247,"w":31,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":22},
+	"sourceSize": {"w":31,"h":22}
+},
+{
+	"filename": "hazmat_killalien_imposter7.png",
+	"frame": {"x":463,"y":247,"w":31,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":22},
+	"sourceSize": {"w":31,"h":22}
+},
+{
+	"filename": "hazmat_killalien_imposter8.png",
+	"frame": {"x":463,"y":247,"w":31,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":22},
+	"sourceSize": {"w":31,"h":22}
+},
+{
+	"filename": "hazmat_killalien_imposter9.png",
+	"frame": {"x":463,"y":247,"w":31,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":22},
+	"sourceSize": {"w":31,"h":22}
+},
+{
+	"filename": "hazmat_killalien_imposter10.png",
+	"frame": {"x":463,"y":247,"w":31,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":22},
+	"sourceSize": {"w":31,"h":22}
+},
+{
+	"filename": "hazmat_killalien_imposter11.png",
+	"frame": {"x":463,"y":247,"w":31,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":22},
+	"sourceSize": {"w":31,"h":22}
+},
+{
+	"filename": "hazmat_killalien_imposter12.png",
+	"frame": {"x":463,"y":247,"w":31,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":22},
+	"sourceSize": {"w":31,"h":22}
+},
+{
+	"filename": "hazmat_killalien_imposter13.png",
+	"frame": {"x":463,"y":247,"w":31,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":22},
+	"sourceSize": {"w":31,"h":22}
+},
+{
+	"filename": "hazmat_killalien_imposter14.png",
+	"frame": {"x":463,"y":247,"w":31,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":22},
+	"sourceSize": {"w":31,"h":22}
+},
+{
+	"filename": "hazmat_killalien_imposter15.png",
+	"frame": {"x":463,"y":247,"w":31,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":22},
+	"sourceSize": {"w":31,"h":22}
+},
+{
+	"filename": "hazmat_killalien_imposter16.png",
+	"frame": {"x":463,"y":247,"w":31,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":22},
+	"sourceSize": {"w":31,"h":22}
+},
+{
+	"filename": "hazmat_killalien_imposter17.png",
+	"frame": {"x":463,"y":247,"w":31,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":22},
+	"sourceSize": {"w":31,"h":22}
+},
+{
+	"filename": "hazmat_killalien_imposter18.png",
+	"frame": {"x":463,"y":247,"w":31,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":22},
+	"sourceSize": {"w":31,"h":22}
+},
+{
+	"filename": "hazmat_killalien_imposter19.png",
+	"frame": {"x":463,"y":247,"w":31,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":22},
+	"sourceSize": {"w":31,"h":22}
+},
+{
+	"filename": "hazmat_killalien_imposter20.png",
+	"frame": {"x":463,"y":247,"w":31,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":22},
+	"sourceSize": {"w":31,"h":22}
+},
+{
+	"filename": "hazmat_killalien_imposter21.png",
+	"frame": {"x":463,"y":247,"w":31,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":22},
+	"sourceSize": {"w":31,"h":22}
+},
+{
+	"filename": "hazmat_killalien_imposter22.png",
+	"frame": {"x":463,"y":247,"w":31,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":22},
+	"sourceSize": {"w":31,"h":22}
+},
+{
+	"filename": "hazmat_killalien_imposter23.png",
+	"frame": {"x":463,"y":247,"w":31,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":22},
+	"sourceSize": {"w":31,"h":22}
+},
+{
+	"filename": "hazmat_killalien_imposter24.png",
+	"frame": {"x":463,"y":247,"w":31,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":22},
+	"sourceSize": {"w":31,"h":22}
+},
+{
+	"filename": "hazmat_killalien_imposter25.png",
+	"frame": {"x":463,"y":247,"w":31,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":22},
+	"sourceSize": {"w":31,"h":22}
+},
+{
+	"filename": "hazmat_killalien_imposter26.png",
+	"frame": {"x":463,"y":247,"w":31,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":22},
+	"sourceSize": {"w":31,"h":22}
+},
+{
+	"filename": "hazmat_killalien_imposter27.png",
+	"frame": {"x":463,"y":247,"w":31,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":22},
+	"sourceSize": {"w":31,"h":22}
+},
+{
+	"filename": "hazmat_killalien_imposter28.png",
+	"frame": {"x":463,"y":247,"w":31,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":22},
+	"sourceSize": {"w":31,"h":22}
+},
+{
+	"filename": "hazmat_killalien_imposter29.png",
+	"frame": {"x":363,"y":148,"w":37,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":29},
+	"sourceSize": {"w":37,"h":29}
+},
+{
+	"filename": "hazmat_killalien_imposter30.png",
+	"frame": {"x":363,"y":148,"w":37,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":29},
+	"sourceSize": {"w":37,"h":29}
+},
+{
+	"filename": "hazmat_killalien_imposter31.png",
+	"frame": {"x":402,"y":149,"w":34,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":31},
+	"sourceSize": {"w":34,"h":31}
+},
+{
+	"filename": "hazmat_killalien_imposter32.png",
+	"frame": {"x":447,"y":116,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killalien_imposter33.png",
+	"frame": {"x":447,"y":116,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killalien_imposter34.png",
+	"frame": {"x":447,"y":116,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killalien_imposter35.png",
+	"frame": {"x":447,"y":116,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killalien_imposter36.png",
+	"frame": {"x":447,"y":116,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killalien_imposter37.png",
+	"frame": {"x":447,"y":116,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killalien_imposter38.png",
+	"frame": {"x":447,"y":116,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killalien_imposter39.png",
+	"frame": {"x":447,"y":116,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killalien_imposter40.png",
+	"frame": {"x":447,"y":116,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killalien_imposter41.png",
+	"frame": {"x":447,"y":116,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killalien_imposter42.png",
+	"frame": {"x":447,"y":116,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killalien_imposter43.png",
+	"frame": {"x":447,"y":116,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killalien_imposter44.png",
+	"frame": {"x":447,"y":116,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killalien_imposter45.png",
+	"frame": {"x":447,"y":116,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killalien_imposter46.png",
+	"frame": {"x":447,"y":116,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killalien_imposter47.png",
+	"frame": {"x":447,"y":116,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killalien_imposter48.png",
+	"frame": {"x":447,"y":116,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killalien_victim1.png",
+	"frame": {"x":463,"y":151,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killalien_victim2.png",
+	"frame": {"x":463,"y":151,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killalien_victim3.png",
+	"frame": {"x":463,"y":151,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killalien_victim4.png",
+	"frame": {"x":463,"y":151,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killalien_victim5.png",
+	"frame": {"x":463,"y":151,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killalien_victim6.png",
+	"frame": {"x":463,"y":151,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killalien_victim7.png",
+	"frame": {"x":463,"y":151,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killalien_victim8.png",
+	"frame": {"x":463,"y":151,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killalien_victim9.png",
+	"frame": {"x":463,"y":151,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killalien_victim10.png",
+	"frame": {"x":463,"y":151,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killalien_victim11.png",
+	"frame": {"x":1,"y":241,"w":39,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":37},
+	"sourceSize": {"w":39,"h":37}
+},
+{
+	"filename": "hazmat_killalien_victim12.png",
+	"frame": {"x":310,"y":311,"w":41,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":28},
+	"sourceSize": {"w":41,"h":28}
+},
+{
+	"filename": "hazmat_killalien_victim13.png",
+	"frame": {"x":310,"y":311,"w":41,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":28},
+	"sourceSize": {"w":41,"h":28}
+},
+{
+	"filename": "hazmat_killalien_victim14.png",
+	"frame": {"x":463,"y":210,"w":28,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":35},
+	"sourceSize": {"w":28,"h":35}
+},
+{
+	"filename": "hazmat_killalien_victim15.png",
+	"frame": {"x":463,"y":210,"w":28,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":35},
+	"sourceSize": {"w":28,"h":35}
+},
+{
+	"filename": "hazmat_killalien_victim16.png",
+	"frame": {"x":466,"y":271,"w":28,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":35},
+	"sourceSize": {"w":28,"h":35}
+},
+{
+	"filename": "hazmat_killalien_victim17.png",
+	"frame": {"x":466,"y":271,"w":28,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":35},
+	"sourceSize": {"w":28,"h":35}
+},
+{
+	"filename": "hazmat_killalien_victim18.png",
+	"frame": {"x":466,"y":271,"w":28,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":35},
+	"sourceSize": {"w":28,"h":35}
+},
+{
+	"filename": "hazmat_killalien_victim19.png",
+	"frame": {"x":466,"y":271,"w":28,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":35},
+	"sourceSize": {"w":28,"h":35}
+},
+{
+	"filename": "hazmat_killalien_victim20.png",
+	"frame": {"x":466,"y":271,"w":28,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":35},
+	"sourceSize": {"w":28,"h":35}
+},
+{
+	"filename": "hazmat_killalien_victim21.png",
+	"frame": {"x":323,"y":88,"w":41,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":28},
+	"sourceSize": {"w":41,"h":28}
+},
+{
+	"filename": "hazmat_killalien_victim22.png",
+	"frame": {"x":323,"y":88,"w":41,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":28},
+	"sourceSize": {"w":41,"h":28}
+},
+{
+	"filename": "hazmat_killalien_victim23.png",
+	"frame": {"x":323,"y":118,"w":41,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":28},
+	"sourceSize": {"w":41,"h":28}
+},
+{
+	"filename": "hazmat_killalien_victim24.png",
+	"frame": {"x":323,"y":118,"w":41,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":28},
+	"sourceSize": {"w":41,"h":28}
+},
+{
+	"filename": "hazmat_killalien_victim25.png",
+	"frame": {"x":362,"y":284,"w":33,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":24},
+	"sourceSize": {"w":33,"h":24}
+},
+{
+	"filename": "hazmat_killalien_victim26.png",
+	"frame": {"x":362,"y":284,"w":33,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":24},
+	"sourceSize": {"w":33,"h":24}
+},
+{
+	"filename": "hazmat_killalien_victim27.png",
+	"frame": {"x":397,"y":283,"w":33,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":24},
+	"sourceSize": {"w":33,"h":24}
+},
+{
+	"filename": "hazmat_killalien_victim28.png",
+	"frame": {"x":397,"y":283,"w":33,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":24},
+	"sourceSize": {"w":33,"h":24}
+},
+{
+	"filename": "hazmat_killalien_victim29.png",
+	"frame": {"x":425,"y":254,"w":33,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":24},
+	"sourceSize": {"w":33,"h":24}
+},
+{
+	"filename": "hazmat_killalien_victim30.png",
+	"frame": {"x":425,"y":254,"w":33,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":24},
+	"sourceSize": {"w":33,"h":24}
+},
+{
+	"filename": "hazmat_killalien_victim31.png",
+	"frame": {"x":425,"y":254,"w":33,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":24},
+	"sourceSize": {"w":33,"h":24}
+},
+{
+	"filename": "hazmat_killalien_victim32.png",
+	"frame": {"x":425,"y":254,"w":33,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":24},
+	"sourceSize": {"w":33,"h":24}
+},
+{
+	"filename": "hazmat_killalien_victim33.png",
+	"frame": {"x":425,"y":254,"w":33,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":24},
+	"sourceSize": {"w":33,"h":24}
+},
+{
+	"filename": "hazmat_killalien_victim34.png",
+	"frame": {"x":425,"y":254,"w":33,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":24},
+	"sourceSize": {"w":33,"h":24}
+},
+{
+	"filename": "hazmat_killalien_victim35.png",
+	"frame": {"x":425,"y":254,"w":33,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":24},
+	"sourceSize": {"w":33,"h":24}
+},
+{
+	"filename": "hazmat_killalien_victim36.png",
+	"frame": {"x":425,"y":254,"w":33,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":24},
+	"sourceSize": {"w":33,"h":24}
+},
+{
+	"filename": "hazmat_killalien_victim37.png",
+	"frame": {"x":425,"y":254,"w":33,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":24},
+	"sourceSize": {"w":33,"h":24}
+},
+{
+	"filename": "hazmat_killalien_victim38.png",
+	"frame": {"x":425,"y":254,"w":33,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":24},
+	"sourceSize": {"w":33,"h":24}
+},
+{
+	"filename": "hazmat_killalien_victim39.png",
+	"frame": {"x":425,"y":254,"w":33,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":24},
+	"sourceSize": {"w":33,"h":24}
+},
+{
+	"filename": "hazmat_killalien_victim40.png",
+	"frame": {"x":425,"y":254,"w":33,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":24},
+	"sourceSize": {"w":33,"h":24}
+},
+{
+	"filename": "hazmat_killalien_victim41.png",
+	"frame": {"x":425,"y":254,"w":33,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":24},
+	"sourceSize": {"w":33,"h":24}
+},
+{
+	"filename": "hazmat_killalien_victim42.png",
+	"frame": {"x":425,"y":254,"w":33,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":24},
+	"sourceSize": {"w":33,"h":24}
+},
+{
+	"filename": "hazmat_killalien_victim43.png",
+	"frame": {"x":425,"y":254,"w":33,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":24},
+	"sourceSize": {"w":33,"h":24}
+},
+{
+	"filename": "hazmat_killalien_victim44.png",
+	"frame": {"x":425,"y":254,"w":33,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":24},
+	"sourceSize": {"w":33,"h":24}
+},
+{
+	"filename": "hazmat_killalien_victim45.png",
+	"frame": {"x":425,"y":254,"w":33,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":24},
+	"sourceSize": {"w":33,"h":24}
+},
+{
+	"filename": "hazmat_killalien_victim46.png",
+	"frame": {"x":425,"y":254,"w":33,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":24},
+	"sourceSize": {"w":33,"h":24}
+},
+{
+	"filename": "hazmat_killalien_victim47.png",
+	"frame": {"x":425,"y":254,"w":33,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":24},
+	"sourceSize": {"w":33,"h":24}
+},
+{
+	"filename": "hazmat_killalien_victim48.png",
+	"frame": {"x":425,"y":254,"w":33,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":24},
+	"sourceSize": {"w":33,"h":24}
+},
+{
+	"filename": "hazmat_killGun_imposter1.png",
+	"frame": {"x":361,"y":179,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_imposter2.png",
+	"frame": {"x":361,"y":179,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_imposter3.png",
+	"frame": {"x":361,"y":179,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_imposter4.png",
+	"frame": {"x":249,"y":179,"w":37,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":35},
+	"sourceSize": {"w":37,"h":35}
+},
+{
+	"filename": "hazmat_killGun_imposter5.png",
+	"frame": {"x":269,"y":73,"w":38,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":35},
+	"sourceSize": {"w":38,"h":35}
+},
+{
+	"filename": "hazmat_killGun_imposter6.png",
+	"frame": {"x":269,"y":73,"w":38,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":35},
+	"sourceSize": {"w":38,"h":35}
+},
+{
+	"filename": "hazmat_killGun_imposter7.png",
+	"frame": {"x":269,"y":73,"w":38,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":35},
+	"sourceSize": {"w":38,"h":35}
+},
+{
+	"filename": "hazmat_killGun_imposter8.png",
+	"frame": {"x":197,"y":1,"w":47,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":47,"h":35},
+	"sourceSize": {"w":47,"h":35}
+},
+{
+	"filename": "hazmat_killGun_imposter9.png",
+	"frame": {"x":100,"y":68,"w":44,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":35},
+	"sourceSize": {"w":44,"h":35}
+},
+{
+	"filename": "hazmat_killGun_imposter10.png",
+	"frame": {"x":100,"y":68,"w":44,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":35},
+	"sourceSize": {"w":44,"h":35}
+},
+{
+	"filename": "hazmat_killGun_imposter11.png",
+	"frame": {"x":100,"y":68,"w":44,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":35},
+	"sourceSize": {"w":44,"h":35}
+},
+{
+	"filename": "hazmat_killGun_imposter12.png",
+	"frame": {"x":78,"y":237,"w":40,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":35},
+	"sourceSize": {"w":40,"h":35}
+},
+{
+	"filename": "hazmat_killGun_imposter13.png",
+	"frame": {"x":361,"y":214,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_imposter14.png",
+	"frame": {"x":357,"y":249,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_imposter15.png",
+	"frame": {"x":357,"y":249,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_imposter16.png",
+	"frame": {"x":357,"y":249,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_imposter17.png",
+	"frame": {"x":357,"y":249,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_imposter18.png",
+	"frame": {"x":357,"y":249,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_imposter19.png",
+	"frame": {"x":357,"y":249,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_imposter20.png",
+	"frame": {"x":357,"y":249,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_imposter21.png",
+	"frame": {"x":357,"y":249,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_imposter22.png",
+	"frame": {"x":357,"y":249,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_imposter23.png",
+	"frame": {"x":357,"y":249,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_imposter24.png",
+	"frame": {"x":357,"y":249,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_imposter25.png",
+	"frame": {"x":357,"y":249,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_imposter26.png",
+	"frame": {"x":357,"y":249,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_imposter27.png",
+	"frame": {"x":357,"y":249,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_imposter28.png",
+	"frame": {"x":357,"y":249,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_imposter29.png",
+	"frame": {"x":357,"y":249,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_imposter30.png",
+	"frame": {"x":357,"y":249,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_imposter31.png",
+	"frame": {"x":357,"y":249,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_imposter32.png",
+	"frame": {"x":357,"y":249,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_imposter33.png",
+	"frame": {"x":357,"y":249,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_imposter34.png",
+	"frame": {"x":357,"y":249,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_imposter35.png",
+	"frame": {"x":357,"y":249,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_imposter36.png",
+	"frame": {"x":357,"y":249,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_imposter37.png",
+	"frame": {"x":357,"y":249,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_imposter38.png",
+	"frame": {"x":357,"y":249,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_imposter39.png",
+	"frame": {"x":357,"y":249,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_imposter40.png",
+	"frame": {"x":357,"y":249,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_imposter41.png",
+	"frame": {"x":357,"y":249,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_imposter42.png",
+	"frame": {"x":357,"y":249,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_imposter43.png",
+	"frame": {"x":357,"y":249,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_imposter44.png",
+	"frame": {"x":357,"y":249,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_imposter45.png",
+	"frame": {"x":357,"y":249,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_imposter46.png",
+	"frame": {"x":357,"y":249,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_imposter47.png",
+	"frame": {"x":357,"y":249,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_imposter48.png",
+	"frame": {"x":357,"y":249,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_victim1.png",
+	"frame": {"x":435,"y":81,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_victim2.png",
+	"frame": {"x":435,"y":81,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_victim3.png",
+	"frame": {"x":435,"y":81,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_victim4.png",
+	"frame": {"x":435,"y":81,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_victim5.png",
+	"frame": {"x":435,"y":81,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_victim6.png",
+	"frame": {"x":435,"y":81,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_victim7.png",
+	"frame": {"x":435,"y":81,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killGun_victim8.png",
+	"frame": {"x":78,"y":201,"w":42,"h":34},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":34},
+	"sourceSize": {"w":42,"h":34}
+},
+{
+	"filename": "hazmat_killGun_victim9.png",
+	"frame": {"x":1,"y":200,"w":39,"h":39},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":39},
+	"sourceSize": {"w":39,"h":39}
+},
+{
+	"filename": "hazmat_killGun_victim10.png",
+	"frame": {"x":1,"y":158,"w":41,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":40},
+	"sourceSize": {"w":41,"h":40}
+},
+{
+	"filename": "hazmat_killGun_victim11.png",
+	"frame": {"x":377,"y":70,"w":41,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":21},
+	"sourceSize": {"w":41,"h":21}
+},
+{
+	"filename": "hazmat_killGun_victim12.png",
+	"frame": {"x":288,"y":284,"w":35,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":25},
+	"sourceSize": {"w":35,"h":25}
+},
+{
+	"filename": "hazmat_killGun_victim13.png",
+	"frame": {"x":236,"y":313,"w":35,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":26},
+	"sourceSize": {"w":35,"h":26}
+},
+{
+	"filename": "hazmat_killGun_victim14.png",
+	"frame": {"x":325,"y":284,"w":35,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":25},
+	"sourceSize": {"w":35,"h":25}
+},
+{
+	"filename": "hazmat_killGun_victim15.png",
+	"frame": {"x":273,"y":313,"w":35,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":26},
+	"sourceSize": {"w":35,"h":26}
+},
+{
+	"filename": "hazmat_killGun_victim16.png",
+	"frame": {"x":273,"y":313,"w":35,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":26},
+	"sourceSize": {"w":35,"h":26}
+},
+{
+	"filename": "hazmat_killGun_victim17.png",
+	"frame": {"x":273,"y":313,"w":35,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":26},
+	"sourceSize": {"w":35,"h":26}
+},
+{
+	"filename": "hazmat_killGun_victim18.png",
+	"frame": {"x":273,"y":313,"w":35,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":26},
+	"sourceSize": {"w":35,"h":26}
+},
+{
+	"filename": "hazmat_killGun_victim19.png",
+	"frame": {"x":273,"y":313,"w":35,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":26},
+	"sourceSize": {"w":35,"h":26}
+},
+{
+	"filename": "hazmat_killGun_victim20.png",
+	"frame": {"x":273,"y":313,"w":35,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":26},
+	"sourceSize": {"w":35,"h":26}
+},
+{
+	"filename": "hazmat_killGun_victim21.png",
+	"frame": {"x":273,"y":313,"w":35,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":26},
+	"sourceSize": {"w":35,"h":26}
+},
+{
+	"filename": "hazmat_killGun_victim22.png",
+	"frame": {"x":120,"y":315,"w":37,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":24},
+	"sourceSize": {"w":37,"h":24}
+},
+{
+	"filename": "hazmat_killGun_victim23.png",
+	"frame": {"x":120,"y":315,"w":37,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":24},
+	"sourceSize": {"w":37,"h":24}
+},
+{
+	"filename": "hazmat_killGun_victim24.png",
+	"frame": {"x":442,"y":1,"w":53,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":53,"h":23},
+	"sourceSize": {"w":53,"h":23}
+},
+{
+	"filename": "hazmat_killGun_victim25.png",
+	"frame": {"x":442,"y":1,"w":53,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":53,"h":23},
+	"sourceSize": {"w":53,"h":23}
+},
+{
+	"filename": "hazmat_killGun_victim26.png",
+	"frame": {"x":442,"y":26,"w":53,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":53,"h":22},
+	"sourceSize": {"w":53,"h":22}
+},
+{
+	"filename": "hazmat_killGun_victim27.png",
+	"frame": {"x":340,"y":34,"w":53,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":53,"h":21},
+	"sourceSize": {"w":53,"h":21}
+},
+{
+	"filename": "hazmat_killGun_victim28.png",
+	"frame": {"x":340,"y":34,"w":53,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":53,"h":21},
+	"sourceSize": {"w":53,"h":21}
+},
+{
+	"filename": "hazmat_killGun_victim29.png",
+	"frame": {"x":340,"y":34,"w":53,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":53,"h":21},
+	"sourceSize": {"w":53,"h":21}
+},
+{
+	"filename": "hazmat_killGun_victim30.png",
+	"frame": {"x":340,"y":34,"w":53,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":53,"h":21},
+	"sourceSize": {"w":53,"h":21}
+},
+{
+	"filename": "hazmat_killGun_victim31.png",
+	"frame": {"x":340,"y":34,"w":53,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":53,"h":21},
+	"sourceSize": {"w":53,"h":21}
+},
+{
+	"filename": "hazmat_killGun_victim32.png",
+	"frame": {"x":340,"y":34,"w":53,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":53,"h":21},
+	"sourceSize": {"w":53,"h":21}
+},
+{
+	"filename": "hazmat_killGun_victim33.png",
+	"frame": {"x":404,"y":130,"w":41,"h":17},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":17},
+	"sourceSize": {"w":41,"h":17}
+},
+{
+	"filename": "hazmat_killGun_victim34.png",
+	"frame": {"x":424,"y":311,"w":37,"h":18},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":18},
+	"sourceSize": {"w":37,"h":18}
+},
+{
+	"filename": "hazmat_killGun_victim35.png",
+	"frame": {"x":424,"y":311,"w":37,"h":18},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":18},
+	"sourceSize": {"w":37,"h":18}
+},
+{
+	"filename": "hazmat_killGun_victim36.png",
+	"frame": {"x":424,"y":311,"w":37,"h":18},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":18},
+	"sourceSize": {"w":37,"h":18}
+},
+{
+	"filename": "hazmat_killGun_victim37.png",
+	"frame": {"x":424,"y":311,"w":37,"h":18},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":18},
+	"sourceSize": {"w":37,"h":18}
+},
+{
+	"filename": "hazmat_killGun_victim38.png",
+	"frame": {"x":424,"y":311,"w":37,"h":18},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":18},
+	"sourceSize": {"w":37,"h":18}
+},
+{
+	"filename": "hazmat_killGun_victim39.png",
+	"frame": {"x":424,"y":311,"w":37,"h":18},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":18},
+	"sourceSize": {"w":37,"h":18}
+},
+{
+	"filename": "hazmat_killGun_victim40.png",
+	"frame": {"x":424,"y":311,"w":37,"h":18},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":18},
+	"sourceSize": {"w":37,"h":18}
+},
+{
+	"filename": "hazmat_killGun_victim41.png",
+	"frame": {"x":424,"y":311,"w":37,"h":18},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":18},
+	"sourceSize": {"w":37,"h":18}
+},
+{
+	"filename": "hazmat_killGun_victim42.png",
+	"frame": {"x":424,"y":311,"w":37,"h":18},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":18},
+	"sourceSize": {"w":37,"h":18}
+},
+{
+	"filename": "hazmat_killGun_victim43.png",
+	"frame": {"x":424,"y":311,"w":37,"h":18},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":18},
+	"sourceSize": {"w":37,"h":18}
+},
+{
+	"filename": "hazmat_killGun_victim44.png",
+	"frame": {"x":424,"y":311,"w":37,"h":18},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":18},
+	"sourceSize": {"w":37,"h":18}
+},
+{
+	"filename": "hazmat_killGun_victim45.png",
+	"frame": {"x":424,"y":311,"w":37,"h":18},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":18},
+	"sourceSize": {"w":37,"h":18}
+},
+{
+	"filename": "hazmat_killGun_victim46.png",
+	"frame": {"x":424,"y":311,"w":37,"h":18},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":18},
+	"sourceSize": {"w":37,"h":18}
+},
+{
+	"filename": "hazmat_killGun_victim47.png",
+	"frame": {"x":424,"y":311,"w":37,"h":18},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":18},
+	"sourceSize": {"w":37,"h":18}
+},
+{
+	"filename": "hazmat_killGun_victim48.png",
+	"frame": {"x":424,"y":311,"w":37,"h":18},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":18},
+	"sourceSize": {"w":37,"h":18}
+},
+{
+	"filename": "hazmat_killNeck_imposter1.png",
+	"frame": {"x":395,"y":182,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_imposter2.png",
+	"frame": {"x":395,"y":182,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_imposter3.png",
+	"frame": {"x":251,"y":110,"w":34,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":32},
+	"sourceSize": {"w":34,"h":32}
+},
+{
+	"filename": "hazmat_killNeck_imposter4.png",
+	"frame": {"x":251,"y":110,"w":34,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":32},
+	"sourceSize": {"w":34,"h":32}
+},
+{
+	"filename": "hazmat_killNeck_imposter5.png",
+	"frame": {"x":40,"y":280,"w":30,"h":34},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":34},
+	"sourceSize": {"w":30,"h":34}
+},
+{
+	"filename": "hazmat_killNeck_imposter6.png",
+	"frame": {"x":40,"y":280,"w":30,"h":34},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":34},
+	"sourceSize": {"w":30,"h":34}
+},
+{
+	"filename": "hazmat_killNeck_imposter7.png",
+	"frame": {"x":404,"y":93,"w":29,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":35},
+	"sourceSize": {"w":29,"h":35}
+},
+{
+	"filename": "hazmat_killNeck_imposter8.png",
+	"frame": {"x":404,"y":93,"w":29,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":35},
+	"sourceSize": {"w":29,"h":35}
+},
+{
+	"filename": "hazmat_killNeck_imposter9.png",
+	"frame": {"x":404,"y":93,"w":29,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":35},
+	"sourceSize": {"w":29,"h":35}
+},
+{
+	"filename": "hazmat_killNeck_imposter10.png",
+	"frame": {"x":287,"y":110,"w":34,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":31},
+	"sourceSize": {"w":34,"h":31}
+},
+{
+	"filename": "hazmat_killNeck_imposter11.png",
+	"frame": {"x":287,"y":110,"w":34,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":31},
+	"sourceSize": {"w":34,"h":31}
+},
+{
+	"filename": "hazmat_killNeck_imposter12.png",
+	"frame": {"x":395,"y":182,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_imposter13.png",
+	"frame": {"x":395,"y":182,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_imposter14.png",
+	"frame": {"x":395,"y":182,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_imposter15.png",
+	"frame": {"x":395,"y":182,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_imposter16.png",
+	"frame": {"x":395,"y":182,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_imposter17.png",
+	"frame": {"x":395,"y":182,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_imposter18.png",
+	"frame": {"x":395,"y":182,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_imposter19.png",
+	"frame": {"x":395,"y":182,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_imposter20.png",
+	"frame": {"x":395,"y":182,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_imposter21.png",
+	"frame": {"x":395,"y":182,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_imposter22.png",
+	"frame": {"x":395,"y":182,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_imposter23.png",
+	"frame": {"x":395,"y":182,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_imposter24.png",
+	"frame": {"x":395,"y":182,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_imposter25.png",
+	"frame": {"x":395,"y":182,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_imposter26.png",
+	"frame": {"x":395,"y":182,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_imposter27.png",
+	"frame": {"x":395,"y":182,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_imposter28.png",
+	"frame": {"x":395,"y":182,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_imposter29.png",
+	"frame": {"x":395,"y":182,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_imposter30.png",
+	"frame": {"x":395,"y":182,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_imposter31.png",
+	"frame": {"x":395,"y":182,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_imposter32.png",
+	"frame": {"x":395,"y":182,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_imposter33.png",
+	"frame": {"x":395,"y":182,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_imposter34.png",
+	"frame": {"x":395,"y":182,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_imposter35.png",
+	"frame": {"x":395,"y":182,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_imposter36.png",
+	"frame": {"x":395,"y":182,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_imposter37.png",
+	"frame": {"x":395,"y":182,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_imposter38.png",
+	"frame": {"x":395,"y":182,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_imposter39.png",
+	"frame": {"x":395,"y":182,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_imposter40.png",
+	"frame": {"x":395,"y":182,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_imposter41.png",
+	"frame": {"x":395,"y":182,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_imposter42.png",
+	"frame": {"x":395,"y":182,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_imposter43.png",
+	"frame": {"x":395,"y":182,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_imposter44.png",
+	"frame": {"x":395,"y":182,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_imposter45.png",
+	"frame": {"x":395,"y":182,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_imposter46.png",
+	"frame": {"x":395,"y":182,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_imposter47.png",
+	"frame": {"x":395,"y":182,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_imposter48.png",
+	"frame": {"x":395,"y":182,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_victim1.png",
+	"frame": {"x":395,"y":217,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_victim2.png",
+	"frame": {"x":395,"y":217,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_victim3.png",
+	"frame": {"x":395,"y":217,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_victim4.png",
+	"frame": {"x":395,"y":217,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_victim5.png",
+	"frame": {"x":395,"y":217,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_victim6.png",
+	"frame": {"x":395,"y":217,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_victim7.png",
+	"frame": {"x":395,"y":217,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_victim8.png",
+	"frame": {"x":395,"y":217,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_victim9.png",
+	"frame": {"x":395,"y":217,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_victim10.png",
+	"frame": {"x":429,"y":182,"w":28,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":35},
+	"sourceSize": {"w":28,"h":35}
+},
+{
+	"filename": "hazmat_killNeck_victim11.png",
+	"frame": {"x":429,"y":182,"w":28,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":35},
+	"sourceSize": {"w":28,"h":35}
+},
+{
+	"filename": "hazmat_killNeck_victim12.png",
+	"frame": {"x":395,"y":217,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_victim13.png",
+	"frame": {"x":395,"y":217,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_victim14.png",
+	"frame": {"x":395,"y":217,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_victim15.png",
+	"frame": {"x":395,"y":217,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_victim16.png",
+	"frame": {"x":395,"y":217,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_victim17.png",
+	"frame": {"x":395,"y":217,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killNeck_victim18.png",
+	"frame": {"x":323,"y":148,"w":38,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":29},
+	"sourceSize": {"w":38,"h":29}
+},
+{
+	"filename": "hazmat_killNeck_victim19.png",
+	"frame": {"x":323,"y":148,"w":38,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":29},
+	"sourceSize": {"w":38,"h":29}
+},
+{
+	"filename": "hazmat_killNeck_victim20.png",
+	"frame": {"x":391,"y":252,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "hazmat_killNeck_victim21.png",
+	"frame": {"x":432,"y":280,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "hazmat_killNeck_victim22.png",
+	"frame": {"x":432,"y":280,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "hazmat_killNeck_victim23.png",
+	"frame": {"x":432,"y":280,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "hazmat_killNeck_victim24.png",
+	"frame": {"x":432,"y":280,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "hazmat_killNeck_victim25.png",
+	"frame": {"x":432,"y":280,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "hazmat_killNeck_victim26.png",
+	"frame": {"x":432,"y":280,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "hazmat_killNeck_victim27.png",
+	"frame": {"x":389,"y":310,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "hazmat_killNeck_victim28.png",
+	"frame": {"x":389,"y":310,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "hazmat_killNeck_victim29.png",
+	"frame": {"x":353,"y":311,"w":34,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":28},
+	"sourceSize": {"w":34,"h":28}
+},
+{
+	"filename": "hazmat_killNeck_victim30.png",
+	"frame": {"x":353,"y":311,"w":34,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":28},
+	"sourceSize": {"w":34,"h":28}
+},
+{
+	"filename": "hazmat_killNeck_victim31.png",
+	"frame": {"x":86,"y":105,"w":43,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":23},
+	"sourceSize": {"w":43,"h":23}
+},
+{
+	"filename": "hazmat_killNeck_victim32.png",
+	"frame": {"x":1,"y":319,"w":38,"h":19},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":19},
+	"sourceSize": {"w":38,"h":19}
+},
+{
+	"filename": "hazmat_killNeck_victim33.png",
+	"frame": {"x":1,"y":319,"w":38,"h":19},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":19},
+	"sourceSize": {"w":38,"h":19}
+},
+{
+	"filename": "hazmat_killNeck_victim34.png",
+	"frame": {"x":366,"y":125,"w":36,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":21},
+	"sourceSize": {"w":36,"h":21}
+},
+{
+	"filename": "hazmat_killNeck_victim35.png",
+	"frame": {"x":459,"y":186,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "hazmat_killNeck_victim36.png",
+	"frame": {"x":459,"y":186,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "hazmat_killNeck_victim37.png",
+	"frame": {"x":459,"y":186,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "hazmat_killNeck_victim38.png",
+	"frame": {"x":459,"y":186,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "hazmat_killNeck_victim39.png",
+	"frame": {"x":459,"y":186,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "hazmat_killNeck_victim40.png",
+	"frame": {"x":459,"y":186,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "hazmat_killNeck_victim41.png",
+	"frame": {"x":459,"y":186,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "hazmat_killNeck_victim42.png",
+	"frame": {"x":459,"y":186,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "hazmat_killNeck_victim43.png",
+	"frame": {"x":459,"y":186,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "hazmat_killNeck_victim44.png",
+	"frame": {"x":459,"y":186,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "hazmat_killNeck_victim45.png",
+	"frame": {"x":459,"y":186,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "hazmat_killNeck_victim46.png",
+	"frame": {"x":459,"y":186,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "hazmat_killNeck_victim47.png",
+	"frame": {"x":459,"y":186,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "hazmat_killNeck_victim48.png",
+	"frame": {"x":459,"y":186,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "hazmat_killRHM_victim1.png",
+	"frame": {"x":429,"y":219,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killRHM_victim2.png",
+	"frame": {"x":429,"y":219,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killRHM_victim3.png",
+	"frame": {"x":429,"y":219,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killRHM_victim4.png",
+	"frame": {"x":429,"y":219,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killRHM_victim5.png",
+	"frame": {"x":429,"y":219,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killRHM_victim6.png",
+	"frame": {"x":429,"y":219,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killRHM_victim7.png",
+	"frame": {"x":429,"y":219,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killRHM_victim8.png",
+	"frame": {"x":429,"y":219,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killRHM_victim9.png",
+	"frame": {"x":429,"y":219,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killRHM_victim10.png",
+	"frame": {"x":429,"y":219,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_killRHM_victim11.png",
+	"frame": {"x":249,"y":289,"w":37,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":22},
+	"sourceSize": {"w":37,"h":22}
+},
+{
+	"filename": "hazmat_killRHM_victim12.png",
+	"frame": {"x":249,"y":289,"w":37,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":22},
+	"sourceSize": {"w":37,"h":22}
+},
+{
+	"filename": "hazmat_killRHM_victim13.png",
+	"frame": {"x":249,"y":289,"w":37,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":22},
+	"sourceSize": {"w":37,"h":22}
+},
+{
+	"filename": "hazmat_killRHM_victim14.png",
+	"frame": {"x":249,"y":289,"w":37,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":22},
+	"sourceSize": {"w":37,"h":22}
+},
+{
+	"filename": "hazmat_killRHM_victim15.png",
+	"frame": {"x":249,"y":289,"w":37,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":22},
+	"sourceSize": {"w":37,"h":22}
+},
+{
+	"filename": "hazmat_killRHM_victim16.png",
+	"frame": {"x":249,"y":289,"w":37,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":22},
+	"sourceSize": {"w":37,"h":22}
+},
+{
+	"filename": "hazmat_killRHM_victim17.png",
+	"frame": {"x":249,"y":289,"w":37,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":22},
+	"sourceSize": {"w":37,"h":22}
+},
+{
+	"filename": "hazmat_killRHM_victim18.png",
+	"frame": {"x":249,"y":289,"w":37,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":22},
+	"sourceSize": {"w":37,"h":22}
+},
+{
+	"filename": "hazmat_killRHM_victim19.png",
+	"frame": {"x":249,"y":289,"w":37,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":22},
+	"sourceSize": {"w":37,"h":22}
+},
+{
+	"filename": "hazmat_killRHM_victim20.png",
+	"frame": {"x":249,"y":289,"w":37,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":22},
+	"sourceSize": {"w":37,"h":22}
+},
+{
+	"filename": "hazmat_killRHM_victim21.png",
+	"frame": {"x":249,"y":289,"w":37,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":22},
+	"sourceSize": {"w":37,"h":22}
+},
+{
+	"filename": "hazmat_killRHM_victim22.png",
+	"frame": {"x":249,"y":289,"w":37,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":22},
+	"sourceSize": {"w":37,"h":22}
+},
+{
+	"filename": "hazmat_killRHM_victim23.png",
+	"frame": {"x":249,"y":289,"w":37,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":22},
+	"sourceSize": {"w":37,"h":22}
+},
+{
+	"filename": "hazmat_killRHM_victim24.png",
+	"frame": {"x":249,"y":289,"w":37,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":22},
+	"sourceSize": {"w":37,"h":22}
+},
+{
+	"filename": "hazmat_killRHM_victim25.png",
+	"frame": {"x":249,"y":289,"w":37,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":22},
+	"sourceSize": {"w":37,"h":22}
+},
+{
+	"filename": "hazmat_killRHM_victim26.png",
+	"frame": {"x":249,"y":289,"w":37,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":22},
+	"sourceSize": {"w":37,"h":22}
+},
+{
+	"filename": "hazmat_killRHM_victim27.png",
+	"frame": {"x":249,"y":289,"w":37,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":22},
+	"sourceSize": {"w":37,"h":22}
+},
+{
+	"filename": "hazmat_killRHM_victim28.png",
+	"frame": {"x":249,"y":289,"w":37,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":22},
+	"sourceSize": {"w":37,"h":22}
+},
+{
+	"filename": "hazmat_killRHM_victim29.png",
+	"frame": {"x":249,"y":289,"w":37,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":22},
+	"sourceSize": {"w":37,"h":22}
+},
+{
+	"filename": "hazmat_killRHM_victim30.png",
+	"frame": {"x":249,"y":289,"w":37,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":22},
+	"sourceSize": {"w":37,"h":22}
+},
+{
+	"filename": "hazmat_killRHM_victim31.png",
+	"frame": {"x":249,"y":289,"w":37,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":22},
+	"sourceSize": {"w":37,"h":22}
+},
+{
+	"filename": "hazmat_killRHM_victim32.png",
+	"frame": {"x":249,"y":289,"w":37,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":22},
+	"sourceSize": {"w":37,"h":22}
+},
+{
+	"filename": "hazmat_killRHM_victim33.png",
+	"frame": {"x":249,"y":289,"w":37,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":22},
+	"sourceSize": {"w":37,"h":22}
+},
+{
+	"filename": "hazmat_killRHM_victim34.png",
+	"frame": {"x":249,"y":289,"w":37,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":22},
+	"sourceSize": {"w":37,"h":22}
+},
+{
+	"filename": "hazmat_killRHM_victim35.png",
+	"frame": {"x":249,"y":289,"w":37,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":22},
+	"sourceSize": {"w":37,"h":22}
+},
+{
+	"filename": "hazmat_killRHM_victim36.png",
+	"frame": {"x":249,"y":289,"w":37,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":22},
+	"sourceSize": {"w":37,"h":22}
+},
+{
+	"filename": "hazmat_killRHM_victim37.png",
+	"frame": {"x":249,"y":289,"w":37,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":22},
+	"sourceSize": {"w":37,"h":22}
+},
+{
+	"filename": "hazmat_killRHM_victim38.png",
+	"frame": {"x":249,"y":289,"w":37,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":22},
+	"sourceSize": {"w":37,"h":22}
+},
+{
+	"filename": "hazmat_killRHM_victim39.png",
+	"frame": {"x":249,"y":289,"w":37,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":22},
+	"sourceSize": {"w":37,"h":22}
+},
+{
+	"filename": "hazmat_killRHM_victim40.png",
+	"frame": {"x":249,"y":289,"w":37,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":22},
+	"sourceSize": {"w":37,"h":22}
+},
+{
+	"filename": "hazmat_killRHM_victim41.png",
+	"frame": {"x":249,"y":289,"w":37,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":22},
+	"sourceSize": {"w":37,"h":22}
+},
+{
+	"filename": "hazmat_killRHM_victim42.png",
+	"frame": {"x":249,"y":289,"w":37,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":22},
+	"sourceSize": {"w":37,"h":22}
+},
+{
+	"filename": "hazmat_killRHM_victim43.png",
+	"frame": {"x":249,"y":289,"w":37,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":22},
+	"sourceSize": {"w":37,"h":22}
+},
+{
+	"filename": "hazmat_killRHM_victim44.png",
+	"frame": {"x":249,"y":289,"w":37,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":22},
+	"sourceSize": {"w":37,"h":22}
+},
+{
+	"filename": "hazmat_killRHM_victim45.png",
+	"frame": {"x":249,"y":289,"w":37,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":22},
+	"sourceSize": {"w":37,"h":22}
+},
+{
+	"filename": "hazmat_killRHM_victim46.png",
+	"frame": {"x":249,"y":289,"w":37,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":22},
+	"sourceSize": {"w":37,"h":22}
+},
+{
+	"filename": "hazmat_killRHM_victim47.png",
+	"frame": {"x":249,"y":289,"w":37,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":22},
+	"sourceSize": {"w":37,"h":22}
+},
+{
+	"filename": "hazmat_killRHM_victim48.png",
+	"frame": {"x":249,"y":289,"w":37,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":22},
+	"sourceSize": {"w":37,"h":22}
+},
+{
+	"filename": "hazmat_Spawn1.png",
+	"frame": {"x":1,"y":1,"w":48,"h":38},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":48,"h":38},
+	"sourceSize": {"w":48,"h":38}
+},
+{
+	"filename": "hazmat_Spawn2.png",
+	"frame": {"x":366,"y":88,"w":3,"h":3},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":3,"h":3},
+	"sourceSize": {"w":1,"h":1}
+},
+{
+	"filename": "hazmat_Spawn3.png",
+	"frame": {"x":1,"y":1,"w":48,"h":38},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":48,"h":38},
+	"sourceSize": {"w":48,"h":38}
+},
+{
+	"filename": "hazmat_Spawn4.png",
+	"frame": {"x":366,"y":88,"w":3,"h":3},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":3,"h":3},
+	"sourceSize": {"w":1,"h":1}
+},
+{
+	"filename": "hazmat_Spawn5.png",
+	"frame": {"x":366,"y":88,"w":3,"h":3},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":3,"h":3},
+	"sourceSize": {"w":1,"h":1}
+},
+{
+	"filename": "hazmat_Spawn6.png",
+	"frame": {"x":1,"y":41,"w":48,"h":38},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":48,"h":38},
+	"sourceSize": {"w":48,"h":38}
+},
+{
+	"filename": "hazmat_Spawn7.png",
+	"frame": {"x":51,"y":1,"w":48,"h":38},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":48,"h":38},
+	"sourceSize": {"w":48,"h":38}
+},
+{
+	"filename": "hazmat_Spawn8.png",
+	"frame": {"x":1,"y":81,"w":47,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":47,"h":37},
+	"sourceSize": {"w":47,"h":37}
+},
+{
+	"filename": "hazmat_Spawn9.png",
+	"frame": {"x":51,"y":41,"w":47,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":47,"h":37},
+	"sourceSize": {"w":47,"h":37}
+},
+{
+	"filename": "hazmat_Spawn10.png",
+	"frame": {"x":101,"y":1,"w":46,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":46,"h":36},
+	"sourceSize": {"w":46,"h":36}
+},
+{
+	"filename": "hazmat_Spawn11.png",
+	"frame": {"x":1,"y":120,"w":46,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":46,"h":36},
+	"sourceSize": {"w":46,"h":36}
+},
+{
+	"filename": "hazmat_Spawn12.png",
+	"frame": {"x":149,"y":1,"w":46,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":46,"h":36},
+	"sourceSize": {"w":46,"h":36}
+},
+{
+	"filename": "hazmat_Spawn13.png",
+	"frame": {"x":246,"y":1,"w":45,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":45,"h":35},
+	"sourceSize": {"w":45,"h":35}
+},
+{
+	"filename": "hazmat_Spawn14.png",
+	"frame": {"x":293,"y":1,"w":45,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":45,"h":35},
+	"sourceSize": {"w":45,"h":35}
+},
+{
+	"filename": "hazmat_Spawn15.png",
+	"frame": {"x":395,"y":34,"w":44,"h":34},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":34},
+	"sourceSize": {"w":44,"h":34}
+},
+{
+	"filename": "hazmat_Spawn16.png",
+	"frame": {"x":146,"y":73,"w":43,"h":34},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":34},
+	"sourceSize": {"w":43,"h":34}
+},
+{
+	"filename": "hazmat_Spawn17.png",
+	"frame": {"x":197,"y":38,"w":43,"h":34},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":34},
+	"sourceSize": {"w":43,"h":34}
+},
+{
+	"filename": "hazmat_Spawn18.png",
+	"frame": {"x":242,"y":38,"w":43,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":33},
+	"sourceSize": {"w":43,"h":33}
+},
+{
+	"filename": "hazmat_Spawn19.png",
+	"frame": {"x":191,"y":74,"w":42,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":33},
+	"sourceSize": {"w":42,"h":33}
+},
+{
+	"filename": "hazmat_Spawn20.png",
+	"frame": {"x":84,"y":130,"w":42,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":32},
+	"sourceSize": {"w":42,"h":32}
+},
+{
+	"filename": "hazmat_Spawn21.png",
+	"frame": {"x":131,"y":109,"w":41,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":32},
+	"sourceSize": {"w":41,"h":32}
+},
+{
+	"filename": "hazmat_Spawn22.png",
+	"frame": {"x":174,"y":109,"w":41,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":32},
+	"sourceSize": {"w":41,"h":32}
+},
+{
+	"filename": "hazmat_Spawn23.png",
+	"frame": {"x":128,"y":143,"w":41,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":32},
+	"sourceSize": {"w":41,"h":32}
+},
+{
+	"filename": "hazmat_Spawn24.png",
+	"frame": {"x":171,"y":143,"w":41,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":32},
+	"sourceSize": {"w":41,"h":32}
+},
+{
+	"filename": "hazmat_Spawn25.png",
+	"frame": {"x":122,"y":213,"w":41,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":32},
+	"sourceSize": {"w":41,"h":32}
+},
+{
+	"filename": "hazmat_Spawn26.png",
+	"frame": {"x":120,"y":247,"w":41,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":32},
+	"sourceSize": {"w":41,"h":32}
+},
+{
+	"filename": "hazmat_Spawn27.png",
+	"frame": {"x":163,"y":248,"w":41,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":32},
+	"sourceSize": {"w":41,"h":32}
+},
+{
+	"filename": "hazmat_Spawn28.png",
+	"frame": {"x":120,"y":281,"w":41,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":32},
+	"sourceSize": {"w":41,"h":32}
+},
+{
+	"filename": "hazmat_Spawn29.png",
+	"frame": {"x":163,"y":282,"w":41,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":32},
+	"sourceSize": {"w":41,"h":32}
+},
+{
+	"filename": "hazmat_Spawn30.png",
+	"frame": {"x":214,"y":144,"w":41,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":32},
+	"sourceSize": {"w":41,"h":32}
+},
+{
+	"filename": "hazmat_Spawn31.png",
+	"frame": {"x":206,"y":178,"w":41,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":32},
+	"sourceSize": {"w":41,"h":32}
+},
+{
+	"filename": "hazmat_Spawn32.png",
+	"frame": {"x":206,"y":212,"w":41,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":32},
+	"sourceSize": {"w":41,"h":32}
+},
+{
+	"filename": "hazmat_Spawn33.png",
+	"frame": {"x":206,"y":246,"w":41,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":32},
+	"sourceSize": {"w":41,"h":32}
+},
+{
+	"filename": "hazmat_Spawn34.png",
+	"frame": {"x":206,"y":280,"w":41,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":31},
+	"sourceSize": {"w":41,"h":31}
+},
+{
+	"filename": "hazmat_Spawn35.png",
+	"frame": {"x":206,"y":280,"w":41,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":31},
+	"sourceSize": {"w":41,"h":31}
+},
+{
+	"filename": "hazmat_Spawn36.png",
+	"frame": {"x":285,"y":217,"w":40,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":30},
+	"sourceSize": {"w":40,"h":30}
+},
+{
+	"filename": "hazmat_Spawn37.png",
+	"frame": {"x":441,"y":50,"w":44,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":29},
+	"sourceSize": {"w":44,"h":29}
+},
+{
+	"filename": "hazmat_Spawn38.png",
+	"frame": {"x":441,"y":50,"w":44,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":29},
+	"sourceSize": {"w":44,"h":29}
+},
+{
+	"filename": "hazmat_Spawn39.png",
+	"frame": {"x":332,"y":57,"w":43,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":29},
+	"sourceSize": {"w":43,"h":29}
+},
+{
+	"filename": "hazmat_Spawn40.png",
+	"frame": {"x":332,"y":57,"w":43,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":29},
+	"sourceSize": {"w":43,"h":29}
+},
+{
+	"filename": "hazmat_Spawn41.png",
+	"frame": {"x":101,"y":39,"w":44,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":27},
+	"sourceSize": {"w":44,"h":27}
+},
+{
+	"filename": "hazmat_Spawn42.png",
+	"frame": {"x":101,"y":39,"w":44,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":27},
+	"sourceSize": {"w":44,"h":27}
+},
+{
+	"filename": "hazmat_Spawn43.png",
+	"frame": {"x":340,"y":1,"w":49,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":49,"h":31},
+	"sourceSize": {"w":49,"h":31}
+},
+{
+	"filename": "hazmat_Spawn44.png",
+	"frame": {"x":391,"y":1,"w":49,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":49,"h":31},
+	"sourceSize": {"w":49,"h":31}
+},
+{
+	"filename": "hazmat_Spawn45.png",
+	"frame": {"x":391,"y":1,"w":49,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":49,"h":31},
+	"sourceSize": {"w":49,"h":31}
+},
+{
+	"filename": "hazmat_Spawn46.png",
+	"frame": {"x":287,"y":38,"w":43,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":33},
+	"sourceSize": {"w":43,"h":33}
+},
+{
+	"filename": "hazmat_Spawn47.png",
+	"frame": {"x":287,"y":38,"w":43,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":33},
+	"sourceSize": {"w":43,"h":33}
+},
+{
+	"filename": "hazmat_Spawn48.png",
+	"frame": {"x":78,"y":164,"w":42,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":35},
+	"sourceSize": {"w":42,"h":35}
+},
+{
+	"filename": "hazmat_Spawn49.png",
+	"frame": {"x":366,"y":93,"w":36,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":30},
+	"sourceSize": {"w":36,"h":30}
+},
+{
+	"filename": "hazmat_Spawn50.png",
+	"frame": {"x":366,"y":93,"w":36,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":30},
+	"sourceSize": {"w":36,"h":30}
+},
+{
+	"filename": "hazmat_Spawn51.png",
+	"frame": {"x":249,"y":254,"w":34,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":33},
+	"sourceSize": {"w":34,"h":33}
+},
+{
+	"filename": "hazmat_Spawn52.png",
+	"frame": {"x":327,"y":179,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Spawn53.png",
+	"frame": {"x":327,"y":179,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Spawn54.png",
+	"frame": {"x":327,"y":179,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Spawn55.png",
+	"frame": {"x":327,"y":179,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Vententer1.png",
+	"frame": {"x":291,"y":143,"w":30,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":37},
+	"sourceSize": {"w":30,"h":37}
+},
+{
+	"filename": "hazmat_Vententer2.png",
+	"frame": {"x":249,"y":216,"w":34,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":36},
+	"sourceSize": {"w":34,"h":36}
+},
+{
+	"filename": "hazmat_Vententer3.png",
+	"frame": {"x":288,"y":182,"w":37,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":33},
+	"sourceSize": {"w":37,"h":33}
+},
+{
+	"filename": "hazmat_Vententer4.png",
+	"frame": {"x":288,"y":182,"w":37,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":33},
+	"sourceSize": {"w":37,"h":33}
+},
+{
+	"filename": "hazmat_Vententer5.png",
+	"frame": {"x":288,"y":182,"w":37,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":33},
+	"sourceSize": {"w":37,"h":33}
+},
+{
+	"filename": "hazmat_Vententer6.png",
+	"frame": {"x":285,"y":249,"w":36,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":33},
+	"sourceSize": {"w":36,"h":33}
+},
+{
+	"filename": "hazmat_Vententer7.png",
+	"frame": {"x":199,"y":316,"w":35,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":23},
+	"sourceSize": {"w":35,"h":23}
+},
+{
+	"filename": "hazmat_Walk1.png",
+	"frame": {"x":147,"y":39,"w":44,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":32},
+	"sourceSize": {"w":44,"h":32}
+},
+{
+	"filename": "hazmat_Walk2.png",
+	"frame": {"x":147,"y":39,"w":44,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":32},
+	"sourceSize": {"w":44,"h":32}
+},
+{
+	"filename": "hazmat_Walk3.png",
+	"frame": {"x":147,"y":39,"w":44,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":32},
+	"sourceSize": {"w":44,"h":32}
+},
+{
+	"filename": "hazmat_Walk4.png",
+	"frame": {"x":147,"y":39,"w":44,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":32},
+	"sourceSize": {"w":44,"h":32}
+},
+{
+	"filename": "hazmat_Walk5.png",
+	"frame": {"x":323,"y":249,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Walk6.png",
+	"frame": {"x":323,"y":249,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Walk7.png",
+	"frame": {"x":164,"y":177,"w":40,"h":34},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":34},
+	"sourceSize": {"w":40,"h":34}
+},
+{
+	"filename": "hazmat_Walk8.png",
+	"frame": {"x":122,"y":177,"w":40,"h":34},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":34},
+	"sourceSize": {"w":40,"h":34}
+},
+{
+	"filename": "hazmat_Walk9.png",
+	"frame": {"x":122,"y":177,"w":40,"h":34},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":34},
+	"sourceSize": {"w":40,"h":34}
+},
+{
+	"filename": "hazmat_Walk10.png",
+	"frame": {"x":122,"y":177,"w":40,"h":34},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":34},
+	"sourceSize": {"w":40,"h":34}
+},
+{
+	"filename": "hazmat_Walk11.png",
+	"frame": {"x":327,"y":214,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+},
+{
+	"filename": "hazmat_Walk12.png",
+	"frame": {"x":327,"y":214,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33}
+}],
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "hazmat.png",
+	"format": "RGBA8888",
+	"size": {"w":496,"h":340},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:3d078c30b84a60794c1e6163f2ba7c03:4c92686f4a88597afde4aaf1b17f6dc0:2fd71fb695076367cc594d65ad74e5fa$"
+}
+}

@@ -533,11 +533,19 @@ class ChangeSkin extends Phaser.Scene {
             player = current_object.add.sprite(350, 460, `player${i}`);
             playerChangedSkin.player = player;
             if (trouserChosen) {
-              trouserChosen = current_object.add.sprite(360, 510, trouserChosen.texture.key);
+              trouserChosen = current_object.add.sprite(
+                360,
+                510,
+                trouserChosen.texture.key
+              );
               trouserChosen.scale = 1.9;
             }
             if (hatChosen) {
-              hatChosen = current_object.add.sprite(345, 350, hatChosen.texture.key);
+              hatChosen = current_object.add.sprite(
+                345,
+                350,
+                hatChosen.texture.key
+              );
               hatChosen.scale = 1.5;
             }
             break;
@@ -704,6 +712,18 @@ class ChangeSkin extends Phaser.Scene {
 
     closeBtn.on("pointerdown", () => {
       //  console.log(this.socket);
+      if (!playerChangedSkin.player) {
+        playerChangedSkin.player = player;
+      }
+      if (!playerChangedSkin.pet) {
+        playerChangedSkin.pet = arrPets[0];
+      }
+      if (!playerChangedSkin.hat) {
+        playerChangedSkin.hat = arrHats[0];
+      }
+      if (!playerChangedSkin.trouser) {
+        playerChangedSkin.trouser = arrTrousers[0];
+      }
       eventsCenter.emit("update", {
         playerChangedSkin: playerChangedSkin,
         numberImposter: numberImposter,
