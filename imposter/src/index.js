@@ -1,5 +1,5 @@
 import Phaser from "phaser";
-
+Phaser.Core.TimeStep.prototype.resetDelta = Phaser.Utils.NOOP;
 import Preloader from "./scene/preload.js";
 import MainMenuScene from "./scene/menu.js";
 import TheSkeld from "./scene/state/ingame/theskeld.js";
@@ -29,7 +29,7 @@ import votingScreen from "./scene/state/Voting/votingScreen.js"
 import UploadData from "./scene/state/ingame/uploaddata.js";
 import CalibratorDistributor from "./scene/state/minigame/calibrate_distributor.js";
 import FuelEngine from "./scene/state/ingame/fuelengine.js"
-
+import Vote_status from "./scene/state/ingame/vote_status.js";
 var preloader = new Preloader();
 
 const config = {
@@ -37,6 +37,9 @@ const config = {
   type: [Phaser.AUTO, Phaser.CANVAS],
   width: 1080,
   height: 768,
+  fps: {
+    smoothStep: false
+  },
   physics: {
     default: "arcade",
     arcade: {
@@ -77,7 +80,7 @@ game.scene.add('options', Options);
 game.scene.add('login', Login);
 game.scene.add('submenu', SubMenu)
 game.scene.add('guidemap', guidemap)
-
+game.scene.add('vote_state',Vote_status)
 game.scene.add('Course', ChartCourse)
 
 game.scene.add('fixWiring', fixWiring)

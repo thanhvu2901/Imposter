@@ -143,6 +143,7 @@ class Game extends Phaser.Scene {
   }
 
   preload() {
+    
     this.load.tilemapTiledJSON("tilemap", theskeld);
     this.load.image("report-btn", reportbtn)
     this.load.image("emergency", emergencyButton)
@@ -1117,7 +1118,7 @@ let player_role=this.isRole
       if (near_btn) {
         this.scene.launch("vote", {
           socket: this.socket, numPlayers: this.numPlayers,
-          idPlayers: this.idPlayers, roomId: this.state.roomKey, deadlist: deadplayer
+          idPlayers: this.idPlayers, roomId: this.state.roomKey, deadlist: deadplayer,role:this.isRole
         })
         this.socket.emit("open_vote")
 
@@ -1126,12 +1127,16 @@ let player_role=this.isRole
     })
     // this.socket.on("move", ({ x, y, playerId }) => {
     //   //console.log({ x, y, playerId });
+      this.socket.on("vote_final",(num,id)=>{
+    console.log("ppppp")
+    this.scene.launch("vote_state",{num:num,name:id})
+  })
     this.socket.on("open_othervote", () => {
 
 
       this.scene.launch("vote", {
         socket: this.socket, numPlayers: this.numPlayers,
-        idPlayers: this.idPlayers, roomId: this.state.roomKey, deadlist: deadplayer
+        idPlayers: this.idPlayers, roomId: this.state.roomKey, deadlist: deadplayer,role:this.isRole
       })
 
 

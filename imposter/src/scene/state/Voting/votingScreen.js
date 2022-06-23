@@ -9,7 +9,7 @@ import speaker from "../../../assets/img/Voting Screen/icons/speaker.png";
 import x_symbol from "../../../assets/img/Voting Screen/icons/x_symbol.png";
 import voted_mark from "../../../assets/img/Voting Screen/icons/voted_mark.png";
 
-var main_screen, chat_icon_img, title, skip_vote_button, voting_count,timedEvent,timer=10000,can_vote=true,speaker_group,dead;
+var main_screen, chat_icon_img, title, skip_vote_button, voting_count,timedEvent,timer=7000,can_vote=true,speaker_group,dead;
 let player_list =new Map()
 let player_count = new Map()
 let player_vote = new Map()
@@ -36,6 +36,7 @@ class VotingScreen extends Phaser.Scene {
     this.idPlayers = data.idPlayers;
     this.roomKey=data.roomId
     this.dead=data.deadlist
+    this.role=data.role
   }
  async preload() {
     this.load.image("screen1", screen1);
@@ -50,7 +51,7 @@ class VotingScreen extends Phaser.Scene {
   }
 
 async  create() {
-   
+ 
     console.log(this.dead)
     speaker_group=this.add.group()
     this.scene.bringToTop();
@@ -78,122 +79,18 @@ async  create() {
     this.idPlayers.forEach(element => {
       player_count.set(element,0)
     });
-    console.log(player_list)
     this.socket.on("vote_otherplayer",(playerid)=>{
      // console.log("id:",playerid)
      let count = player_count.get(playerid)
      count+=1
      player_count.set(playerid,count)
-      console.log(count)
-     let list =player_list.get(playerid)
+      //console.log(count)
+     let list = player_list.get(playerid)
      list.getChildren()[count-1].setVisible(true)
     })
    this.socket.on("voter_id",(playerid)=>{
      player_vote.get(playerid).setVisible(true)
    })
-  
-  //  console.log(players);
-    // // Left side
-    // player_background_img = this.add.image(305, 235, "player_background");
-    // this.add.image(170, 235, "player_avatar_big");
-    // this.add.text(205, 205, "Player 1", {
-    //   fontSize: "27px",
-    //   color: "#ffffff",
-    //   fontFamily: "Arial",
-    //   stroke: "#000000",
-    //   strokeThickness: 3,
-    // });
-
-    // this.add.image(305, 310, "player_background");
-    // this.add.image(170, 310, "player_avatar_big");
-    // this.add.text(205, 280, "Player 2", {
-    //   fontSize: "27px",
-    //   color: "#ffffff",
-    //   fontFamily: "Arial",
-    //   stroke: "#000000",
-    //   strokeThickness: 3,
-    // });
-
-    // this.add.image(305, 385, "player_background");
-    // this.add.image(170, 385, "player_avatar_big");
-    // this.add.text(205, 355, "Player 3", {
-    //   fontSize: "27px",
-    //   color: "#ffffff",
-    //   fontFamily: "Arial",
-    //   stroke: "#000000",
-    //   strokeThickness: 3,
-    // });
-
-    // this.add.image(305, 460, "player_background");
-    // this.add.image(170, 460, "player_avatar_big");
-    // this.add.text(205, 430, "Player 4", {
-    //   fontSize: "27px",
-    //   color: "#ffffff",
-    //   fontFamily: "Arial",
-    //   stroke: "#000000",
-    //   strokeThickness: 3,
-    // });
-
-    // this.add.image(305, 535, "player_background");
-    // this.add.image(170, 535, "player_avatar_big");
-    // this.add.text(205, 505, "Player 5", {
-    //   fontSize: "27px",
-    //   color: "#ffffff",
-    //   fontFamily: "Arial",
-    //   stroke: "#000000",
-    //   strokeThickness: 3,
-    // });
-
-    // // Right side
-    // this.add.image(675, 235, "player_background");
-    // this.add.image(540, 235, "player_avatar_big");
-    // this.add.text(575, 205, "Player 6", {
-    //   fontSize: "27px",
-    //   color: "#ffffff",
-    //   fontFamily: "Arial",
-    //   stroke: "#000000",
-    //   strokeThickness: 3,
-    // });
-
-    // this.add.image(675, 310, "player_background");
-    // this.add.image(540, 310, "player_avatar_big");
-    // this.add.text(575, 280, "Player 7", {
-    //   fontSize: "27px",
-    //   color: "#ffffff",
-    //   fontFamily: "Arial",
-    //   stroke: "#000000",
-    //   strokeThickness: 3,
-    // });
-
-    // this.add.image(675, 385, "player_background");
-    // this.add.image(540, 385, "player_avatar_big");
-    // this.add.text(575, 355, "Player 8", {
-    //   fontSize: "27px",
-    //   color: "#ffffff",
-    //   fontFamily: "Arial",
-    //   stroke: "#000000",
-    //   strokeThickness: 3,
-    // });
-
-    // this.add.image(675, 460, "player_background");
-    // this.add.image(540, 460, "player_avatar_big");
-    // this.add.text(575, 430, "Player 9", {
-    //   fontSize: "27px",
-    //   color: "#ffffff",
-    //   fontFamily: "Arial",
-    //   stroke: "#000000",
-    //   strokeThickness: 3,
-    // });
-
-    // this.add.image(675, 535, "player_background");
-    // this.add.image(540, 535, "player_avatar_big");
-    // this.add.text(575, 505, "Player 10", {
-    //   fontSize: "27px",
-    //   color: "#ffffff",
-    //   fontFamily: "Arial",
-    //   stroke: "#000000",
-    //   strokeThickness: 3,
-    // });
 
     skip_vote_button = this.add.image(205, 600, "skip_vote");
     voting_count = this.add.text(640, 582, "", {
@@ -203,21 +100,33 @@ async  create() {
       stroke: "#000000",
       strokeThickness: 3,
     });
+  
     if(this.dead.includes(this.socket.id)){
       speaker_group.setVisible(false)
     }
     timedEvent = this.time.addEvent({ delay: timer,callback:()=>{
-     
-      player_count.forEach(element => {
-        console.log(element)
-        element=0
-      });
-      can_vote=true
-      this.socket.removeListener("vote_otherplayer");
-      this.socket.removeListener("voter_id");
-      this.socket.removeListener("dead_list")
+     let check = false
+  if(this.numPlayers>1){
+     const mapSort1 = new Map([...player_count.entries()].sort((a, b) => b[1] - a[1]));
+      if([...mapSort1][0][1]==[...mapSort1][1][1]){
+        console.log("draw")
+        this.socket.emit("vote_end",3,0)
+      }else if([...mapSort1][0][0]==this.socket.id){
+        if(this.role==1){
+          this.socket.emit("vote_end",1,this.socket.id)
+        }else{
+          this.socket.emit("vote_end",2,this.socket.id)
+        }
+      }}
+    //  this.socket.emit("vote_end")
+  can_vote=true
       exit(this)
+    
+      
+   
     }});
+    
+
     
   }
 update(){
@@ -322,6 +231,9 @@ let temp1=temp.getChildren()
 }
 function exit(game){
   game.scene.stop()
+  game.socket.removeListener("vote_otherplayer");
+  game.socket.removeListener("voter_id");
+  game.socket.removeListener("dead_list")
     }
    async function update(value){
     dead=value
