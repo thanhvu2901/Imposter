@@ -1309,8 +1309,8 @@ class Game extends Phaser.Scene {
               // ở đây ta split object name của vent thành mảng 2 phần tử do cấu trúc name của object là (vent "cần tới"- vent"hiện tại") và 2 vent này được ngăn cách bởi dấu cách
               // như đã nói trên thì vent_cord là hash map lưu vị trí các vent dựa trên key value là name của vent, nên ta lấy vị trí [0] là vent "cần tới" dể gán tọa độ x y
               // cho player
-              player.x = vent_cord.get(object.name.split(" ")[0])[0] + 20;
-              player.y = vent_cord.get(object.name.split(" ")[0])[1];
+              player_container.x = vent_cord.get(object.name.split(" ")[0])[0] + 20;
+              player_container.y = vent_cord.get(object.name.split(" ")[0])[1];
             });
           // vent_des là hash map lưu các arrow của vent đó và ở đây và ứng với mỗi vent thì sẽ có 3 - 4 arrow cho vent đó
           // ở đây ta lấy vị trí [1] là vent "hiện tại" là gốc của các arrow
@@ -1386,9 +1386,9 @@ class Game extends Phaser.Scene {
           (animation, frame) => {
             if ((animation.key = "jump")) {
               if (is_hidden == true) {
-                player.setDepth(-10);
+                player_container.setDepth(-10);
               } else {
-                player.setDepth(0.6);
+                player_container.setDepth(0.6);
                 player.play("jump");
                 player.on("animationcomplete", (animation, frame) => {
                   if ((animation.key = "jump")) {
@@ -1584,7 +1584,6 @@ class Game extends Phaser.Scene {
         !cursors.down.isDown &&
         !is_vent
       ) {
-        player.anims.play(`${color}-idle`);
         if (pet) {
           pet.anims.play(`${pet_type}-idle`);
         }
