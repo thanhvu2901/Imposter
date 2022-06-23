@@ -1333,7 +1333,7 @@ class Game extends Phaser.Scene {
             .image(object.x, object.y, "emergency")
             .setOrigin(-2.2, -1.25);
           this.physics.add.existing(temp1);
-          this.physics.add.overlap(player, temp1, report);
+          this.physics.add.overlap(player_container, temp1, report);
           break;
         default:
           break;
@@ -1347,8 +1347,9 @@ class Game extends Phaser.Scene {
     arrow_group.setVisible(false).setDepth(1);
     let player_role = this.isRole
     //bắt sự kiện khi player overlap với 1 object khác
-    player.on("overlapstart", function () {
+    player_container.on("overlapstart", function () {
       //hiện nút nhảy vent với điều kiện là player overlap với vent
+      console.log(" overlap")
       if (is_vent && player_role == 1) {
         vent_butt.alpha = 1;
         sabotage.alpha = 0;
@@ -1359,8 +1360,7 @@ class Game extends Phaser.Scene {
       }
     });
     //bắt sự kiện khi player đi ra khỏi vùng overlap
-    player.on("overlapend", function () {
-      //ẩn nút nhảy vent
+    player_container.on("overlapend", function () {
       is_vent = false
       if (player_role == 1) {
         vent_butt.alpha = 0
@@ -1372,7 +1372,7 @@ class Game extends Phaser.Scene {
     });
 
     //thực hiện hàm circleOverlap khi player tới gần vent
-    this.physics.add.overlap(player, vent_group, circleOverlap);
+    this.physics.add.overlap(player_container, vent_group, circleOverlap);
 
     //bắt sự kiện button nhảy vent
     vent_butt.on("pointerdown", () => {
@@ -1499,16 +1499,17 @@ class Game extends Phaser.Scene {
           200
         );
         this.physics.add.existing(temp);
-        this.physics.add.overlap(player, temp, report);
+        this.physics.add.overlap(player_container, temp, report);
       }
     });
   }
   update() {
-    var wasTouching = !player.body.wasTouching.none;
+    console.log(near_btn)
+    var wasTouching = !player_container.body.wasTouching.none;
     // If you want 'touching or embedded' then use:
-    var touching = !player.body.touching.none || player.body.embedded;
-    if (touching && !wasTouching) player.emit("overlapstart");
-    else if (!touching && wasTouching) player.emit("overlapend");
+    var touching = !player_container.body.touching.none || player_container.body.embedded;
+    if (touching && !wasTouching) player_container.emit("overlapstart");
+    else if (!touching && wasTouching) player_container.emit("overlapend");
     if (pants_type) {
       isLeft == true && isMirror == true
         ? pants_skin.setPosition(player.x, player.y + 10)
@@ -1518,7 +1519,7 @@ class Game extends Phaser.Scene {
       pet.setPosition(player.x + 50, player.y + 10);
     }
 
-    this.events.emit("moving", [player.x, player.y]);
+    this.events.emit("moving", [player_container.x, player_container.y]);
     light.update(player_container);
 
     if (this.isRole == 1) {
