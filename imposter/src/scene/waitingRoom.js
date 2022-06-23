@@ -1263,7 +1263,7 @@ export default class waitingRoom extends Phaser.Scene {
       }
 
       //send color player change
-      console.log(color + " " + this.socket.id);
+      // console.log(color + " " + this.socket.id);
       this.socket.emit("changeSkin", {
         color: color,
         id: this.socket.id,
@@ -1272,11 +1272,11 @@ export default class waitingRoom extends Phaser.Scene {
     });
 
     this.socket.on("moveW", ({ x, y, playerId, color }) => {
-      console.log({ x, y, playerId });
+
 
       let index = otherPlayerId.findIndex((Element) => Element == playerId);
       //id = index;
-      console.log(index);
+      // console.log(index);
 
       if (otherPlayer[index].x > x) {
         otherPlayer[index].flipX = true;

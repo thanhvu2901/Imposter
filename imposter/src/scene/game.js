@@ -128,7 +128,19 @@ let pants_skin,
 var player_container;
 var isLeft = false;
 var isMirror = false;
-
+let colorArr = [
+  PLAYER_BLUE,
+  PLAYER_RED,
+  PLAYER_BLUE_DARK,
+  PLAYER_BLUE_LIGHT,
+  PLAYER_GRAY_DARK,
+  PLAYER_GRAY_LIGHT,
+  PLAYER_GREEN_DARK,
+  PLAYER_GREEN_LIGHT,
+  PLAYER_ORANGE,
+  PLAYER_PURPLE,
+  PLAYER_YELLOW,
+  PLAYER_PINK]
 class Game extends Phaser.Scene {
   constructor() {
     super({ key: "game" });
@@ -795,13 +807,49 @@ class Game extends Phaser.Scene {
 
     this.state.roomKey = this.textInput;
 
+    /* *********************CREATING ANIMATIONS FOR PLAYER********************* */
+
+
+
+    colorArr.forEach(element => {
+
+      this.anims.create({
+        key: `${element}-walk`,
+        frames: this.anims.generateFrameNames(element, {
+          start: 1,
+          end: 12,
+          prefix: "Walk",
+          suffix: ".png",
+        }),
+        repeat: -1,
+        frameRate: 24,
+      });
+      this.anims.create({
+        key: `${element}-idle`,
+        frames: [{ key: element, frame: "idle.png" }],
+      });
+
+      this.anims.create({
+        key: `${element}-dead`,
+        frames: this.anims.generateFrameNames(element, {
+          start: 1,
+          end: 42,
+          prefix: "Dead",
+          suffix: ".png",
+        }),
+        repeat: -1,
+        frameRate: 24,
+      });
+
+
+    });
     for (let i = 0; i < this.numPlayers - 1; i++) {
       let colorOther = Object.values(this.Info.players)[i].color;
-
+      console.log(colorOther);
       otherPlayer[i] = this.physics.add.sprite(
         120 + 50 * i,
         -745 + 50 * i,
-        "player_base_" + colorOther,
+        colorOther,
         "idle.png"
       );
     }
@@ -888,66 +936,8 @@ class Game extends Phaser.Scene {
       repeat: 0,
     });
 
-    /* *********************CREATING ANIMATIONS FOR PLAYER********************* */
 
-    this.anims.create({
-      key: "player-idle",
-      frames: [{ key: PLAYER_BASE, frame: "idle.png" }],
-    });
 
-    this.anims.create({
-      key: "player-walk",
-      frames: this.anims.generateFrameNames(PLAYER_BASE, {
-        start: 1,
-        end: 12,
-        prefix: "Walk",
-        suffix: ".png",
-      }),
-      repeat: -1,
-      frameRate: 24,
-    });
-
-    this.anims.create({
-      key: `${color}-walk`,
-      frames: this.anims.generateFrameNames(color, {
-        start: 1,
-        end: 12,
-        prefix: "Walk",
-        suffix: ".png",
-      }),
-      repeat: -1,
-      frameRate: 24,
-    });
-
-    this.anims.create({
-      key: `${color}-idle`,
-      frames: [{ key: color, frame: "idle.png" }],
-    });
-
-    this.anims.create({
-      key: `${color}-dead`,
-      frames: this.anims.generateFrameNames(color, {
-        start: 1,
-        end: 42,
-        prefix: "Dead",
-        suffix: ".png",
-      }),
-      repeat: -1,
-      frameRate: 24,
-    });
-
-    //player death
-    this.anims.create({
-      key: "player-dead",
-      frames: this.anims.generateFrameNames(PLAYER_BASE, {
-        start: 1,
-        end: 41,
-        prefix: "Dead",
-        suffix: ".png",
-      }),
-      repeat: 0,
-      frameRate: 24,
-    });
     //player ghost
     this.anims.create({
       key: "player-ghost",
@@ -1460,12 +1450,12 @@ class Game extends Phaser.Scene {
       otherPlayer[index].moving = true;
 
       if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
-        otherPlayer[index].play("player-walk_" + color);
+        otherPlayer[index].play(`${color}-walk`);
       } else if (
         !otherPlayer[index].moving &&
         otherPlayer[index].anims.isPlaying
       ) {
-        otherPlayer[index].stop("player-walk_" + color);
+        otherPlayer[index].stop(`${color}-walk`);
       }
     });
 
@@ -1474,14 +1464,14 @@ class Game extends Phaser.Scene {
     this.socket.on("moveEnd", ({ playerId, color }) => {
       let index = otherPlayerId.findIndex((Element) => Element == playerId);
       otherPlayer[index].moving = false;
-      otherPlayer[index].anims.play("player-idle_" + color);
+      otherPlayer[index].anims.play(`${color}-idle`);
       if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
-        otherPlayer[index].play("player-walk_" + color);
+        otherPlayer[index].play(`${color}-walk`);
       } else if (
         !otherPlayer[index].moving &&
         otherPlayer[index].anims.isPlaying
       ) {
-        otherPlayer[index].stop("player-walk_" + color);
+        otherPlayer[index].stop(`${color}-walk`);
       }
     });
 
@@ -1500,7 +1490,7 @@ class Game extends Phaser.Scene {
         player.anims.play("player-ghost", true);
       } else {
         let index = otherPlayerId.findIndex((Element) => Element == playerId);
-        otherPlayer[index].anims.play("player-dead_" + colorKill, true);
+        otherPlayer[index].anims.play(`${color}-'dead'`, true);
         let temp = this.add.rectangle(
           otherPlayer[index].x,
           otherPlayer[index].y,
@@ -1538,7 +1528,7 @@ class Game extends Phaser.Scene {
           let killId = otherPlayerId[indexKill];
           deadplayer.push(killId);
           let colorKill = Object(this.Info.players[killId]).color;
-          playerKilled.anims.play("player-dead_" + colorKill, true);
+          playerKilled.anims.play(`${color}-'dead'`, true);
           let temp = this.add.rectangle(
             playerKilled.x,
             playerKilled.y,
