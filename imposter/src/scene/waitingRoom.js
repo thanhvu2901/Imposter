@@ -450,7 +450,7 @@ export default class waitingRoom extends Phaser.Scene {
       //set player color AGAIN
 
       let colorPlayer = states.players[this.socket.id].color;
-      console.log("color" + colorPlayer);
+      // console.log("color" + colorPlayer);
       player.destroy()
       // // let playercolor = (Object(states).players)[this.socket].color
       color = colorPlayer;
@@ -638,8 +638,629 @@ export default class waitingRoom extends Phaser.Scene {
 
       /* RECREATE ANIMATION OF PLAYER DUE TO COLOR CHANGED */
 
+      if (this.playerChangedSkin.hat) {
+        let hatChosen = this.playerChangedSkin.hat.texture.key ?? "nothing";
+        switch (hatChosen) {
+          case "hat0":
+            if (hat_skin) {
+              hat_skin.destroy();
+            }
+            hat_skin = this.physics.add.sprite(
+              player.x,
+              player.y - 25,
+              "hat00",
+              0
+            );
+            break;
+          case "hat1":
+            if (hat_skin) {
+              hat_skin.destroy();
+            }
+            hat_skin = this.physics.add.sprite(
+              player.x,
+              player.y - 25,
+              "hat01",
+              0
+            );
+            break;
+          case "hat2":
+            if (hat_skin) {
+              hat_skin.destroy();
+            }
+            hat_skin = this.physics.add.sprite(
+              player.x,
+              player.y - 25,
+              "hat02",
+              0
+            );
+            break;
+          case "hat3":
+            if (hat_skin) {
+              hat_skin.destroy();
+            }
+            hat_skin = this.physics.add.sprite(
+              player.x,
+              player.y - 25,
+              "hat03",
+              0
+            );
+            break;
+          case "hat4":
+            if (hat_skin) {
+              hat_skin.destroy();
+            }
+            hat_skin = this.physics.add.sprite(
+              player.x,
+              player.y - 25,
+              "hat04",
+              0
+            );
+            break;
+          case "hat5":
+            if (hat_skin) {
+              hat_skin.destroy();
+            }
+            hat_skin = this.physics.add.sprite(
+              player.x,
+              player.y - 25,
+              "hat05",
+              0
+            );
+            break;
+          case "hat6":
+            if (hat_skin) {
+              hat_skin.destroy();
+            }
+            hat_skin = this.physics.add.sprite(
+              player.x,
+              player.y - 25,
+              "hat06",
+              0
+            );
+            break;
+          case "hat7":
+            if (hat_skin) {
+              hat_skin.destroy();
+            }
+            hat_skin = this.physics.add.sprite(
+              player.x,
+              player.y - 25,
+              "hat07",
+              0
+            );
+            break;
+          case "hat8":
+            if (hat_skin) {
+              hat_skin.destroy();
+            }
+            hat_skin = this.physics.add.sprite(
+              player.x,
+              player.y - 25,
+              "hat08",
+              0
+            );
+            break;
+          case "hat9":
+            if (hat_skin) {
+              hat_skin.destroy();
+            }
+            hat_skin = this.physics.add.sprite(
+              player.x,
+              player.y - 25,
+              "hat09",
+              0
+            );
+            break;
+          case "hat10":
+            if (hat_skin) {
+              hat_skin.destroy();
+            }
+            hat_skin = this.physics.add.sprite(
+              player.x,
+              player.y - 25,
+              "hat010",
+              0
+            );
+            break;
+          case "hat11":
+            if (hat_skin) {
+              hat_skin.destroy();
+            }
+            hat_skin = this.physics.add.sprite(
+              player.x,
+              player.y - 25,
+              "hat011",
+              0
+            );
+            break;
+          case "hat12":
+            if (hat_skin) {
+              hat_skin.destroy();
+            }
+            hat_skin = this.physics.add.sprite(
+              player.x,
+              player.y - 25,
+              "hat012",
+              0
+            );
+            break;
+          case "hat13":
+            if (hat_skin) {
+              hat_skin.destroy();
+            }
+            hat_skin = this.physics.add.sprite(
+              player.x,
+              player.y - 25,
+              "hat013",
+              0
+            );
+            break;
+          case "hat14":
+            if (hat_skin) {
+              hat_skin.destroy();
+            }
+            hat_skin = this.physics.add.sprite(
+              player.x,
+              player.y - 25,
+              "hat014",
+              0
+            );
+            break;
+          case "hat15":
+            if (hat_skin) {
+              hat_skin.destroy();
+            }
+            hat_skin = this.physics.add.sprite(
+              player.x,
+              player.y - 25,
+              "hat015",
+              0
+            );
+            break;
+          case "hat16":
+            if (hat_skin) {
+              hat_skin.destroy();
+            }
+            hat_skin = this.physics.add.sprite(
+              player.x,
+              player.y - 25,
+              "hat016",
+              0
+            );
+            break;
+          case "hat17":
+            if (hat_skin) {
+              hat_skin.destroy();
+            }
+            hat_skin = this.physics.add.sprite(
+              player.x,
+              player.y - 25,
+              "hat017",
+              0
+            );
+            break;
+          case "hat18":
+            if (hat_skin) {
+              hat_skin.destroy();
+            }
+            hat_skin = this.physics.add.sprite(
+              player.x,
+              player.y - 25,
+              "hat018",
+              0
+            );
+            break;
+          case "hat19":
+            if (hat_skin) {
+              hat_skin.destroy();
+            }
+            hat_skin = this.physics.add.sprite(
+              player.x,
+              player.y - 25,
+              "hat019",
+              0
+            );
+            break;
+        }
+        player_container.add(hat_skin);
+      }
 
+      if (this.playerChangedSkin.trouser) {
+        let pantChosen =
+          this.playerChangedSkin.trouser.texture.key ?? "nothing";
+        switch (pantChosen) {
+          case "trouser0":
+            if (pants_type) {
+              pants_skin.destroy();
+            }
+            pants_type = null;
+            pants_skin = null;
+            break;
+          case "trouser1":
+            if (pants_type) {
+              pants_skin.destroy();
+            }
+            pants_type = POLICE;
+            pants_skin = this.physics.add.sprite(
+              player.x + 0.75,
+              player.y + 10,
+              `${pants_type}_pants`,
+              `${pants_type}_Idle.png`
+            );
+            break;
+          case "trouser2":
+            if (pants_type) {
+              pants_skin.destroy();
+            }
+            pants_type = HAZMAT;
+            pants_skin = this.physics.add.sprite(
+              player.x + 0.75,
+              player.y + 10,
+              `${pants_type}_pants`,
+              `${pants_type}_Idle.png`
+            );
+            break;
+          case "trouser3":
+            if (pants_type) {
+              pants_skin.destroy();
+            }
+            pants_type = ARCHAEOLOGIST;
+            pants_skin = this.physics.add.sprite(
+              player.x + 0.75,
+              player.y + 10,
+              `${pants_type}_pants`,
+              `${pants_type}_Idle.png`
+            );
+            break;
+          case "trouser4":
+            if (pants_type) {
+              pants_skin.destroy();
+            }
+            pants_type = WINTERJACKET;
+            pants_skin = this.physics.add.sprite(
+              player.x + 0.75,
+              player.y + 10,
+              `${pants_type}_pants`,
+              `${pants_type}_Idle.png`
+            );
+            break;
+          case "trouser5":
+            if (pants_type) {
+              pants_skin.destroy();
+            }
+            pants_type = TARMAC;
+            pants_skin = this.physics.add.sprite(
+              player.x + 0.75,
+              player.y + 10,
+              `${pants_type}_pants`,
+              `${pants_type}_Idle.png`
+            );
+            break;
+          case "trouser6":
+            if (pants_type) {
+              pants_skin.destroy();
+            }
+            pants_type = MILITARY;
+            pants_skin = this.physics.add.sprite(
+              player.x + 0.75,
+              player.y + 10,
+              `${pants_type}_pants`,
+              `${pants_type}_Idle.png`
+            );
+            break;
+          case "trouser7":
+            if (pants_type) {
+              pants_skin.destroy();
+            }
+            pants_type = SUITBLACK;
+            pants_skin = this.physics.add.sprite(
+              player.x + 0.75,
+              player.y + 10,
+              `${pants_type}_pants`,
+              `${pants_type}_Idle.png`
+            );
+            break;
+          case "trouser8":
+            if (pants_type) {
+              pants_skin.destroy();
+            }
+            pants_type = ASTRONAUT;
+            pants_skin = this.physics.add.sprite(
+              player.x + 0.75,
+              player.y + 10,
+              `${pants_type}_pants`,
+              `${pants_type}_Idle.png`
+            );
+            break;
+          case "trouser9":
+            if (pants_type) {
+              pants_skin.destroy();
+            }
+            pants_type = CAPTAIN;
+            pants_skin = this.physics.add.sprite(
+              player.x + 0.75,
+              player.y + 10,
+              `${pants_type}_pants`,
+              `${pants_type}_Idle.png`
+            );
+            break;
+          case "trouser10 ":
+            if (pants_type) {
+              pants_skin.destroy();
+            }
+            pants_type = SECGUARD;
+            pants_skin = this.physics.add.sprite(
+              player.x + 0.75,
+              player.y + 10,
+              `${pants_type}_pants`,
+              `${pants_type}_Idle.png`
+            );
+            break;
+          case "trouser11":
+            if (pants_type) {
+              pants_skin.destroy();
+            }
+            pants_type = SCIENTIST;
+            pants_skin = this.physics.add.sprite(
+              player.x + 0.75,
+              player.y + 10,
+              `${pants_type}_pants`,
+              `${pants_type}_Idle.png`
+            );
+            break;
+          case "trouser12":
+            if (pants_type) {
+              pants_skin.destroy();
+            }
+            pants_type = MECHANIC;
+            pants_skin = this.physics.add.sprite(
+              player.x + 0.75,
+              player.y + 10,
+              `${pants_type}_pants`,
+              `${pants_type}_Idle.png`
+            );
+            break;
+          case "trouser13":
+            if (pants_type) {
+              pants_skin.destroy();
+            }
+            pants_type = WALL;
+            pants_skin = this.physics.add.sprite(
+              player.x + 0.75,
+              player.y + 10,
+              `${pants_type}_pants`,
+              `${pants_type}_Idle.png`
+            );
+            break;
+          case "trouser14":
+            if (pants_type) {
+              pants_skin.destroy();
+            }
+            pants_type = SUITWHITE;
+            pants_skin = this.physics.add.sprite(
+              player.x + 0.75,
+              player.y + 10,
+              `${pants_type}_pants`,
+              `${pants_type}_Idle.png`
+            );
+            break;
+          case "trouser15":
+            if (pants_type) {
+              pants_skin.destroy();
+            }
+            pants_type = CCC;
+            pants_skin = this.physics.add.sprite(
+              player.x + 0.75,
+              player.y + 10,
+              `${pants_type}_pants`,
+              `${pants_type}_Idle.png`
+            );
+            break;
+        }
+        player_container.add(pants_skin);
+        /* *********************CREATING ANIMATIONS FOR SKINS********************* */
+        //For skis that don't have mirror animations
+        this.anims.create({
+          key: `${pants_type}_walk`,
+          frames: this.anims.generateFrameNames(`${pants_type}_pants`, {
+            start: 1,
+            end: 12,
+            prefix: `${pants_type}_Walk`,
+            suffix: ".png",
+          }),
+          repeat: -1,
+          frameRate: 16,
+        });
 
+        this.anims.create({
+          key: `${pants_type}_idle`,
+          frames: [
+            {
+              key: `${pants_type}_pants`,
+              frame: `${pants_type}_Idle.png`,
+            },
+          ],
+        });
+        //For skins that have mirror animations
+        if (
+          pants_type == POLICE ||
+          pants_type == ARCHAEOLOGIST ||
+          pants_type == SECGUARD ||
+          pants_type == WALL ||
+          pants_type == CCC
+        ) {
+          isMirror = true;
+          this.anims.create({
+            key: `${pants_type}_walkMirror`,
+            frames: this.anims.generateFrameNames(`${pants_type}_pants`, {
+              start: 1,
+              end: 12,
+              prefix: `${pants_type}_WalkMirror`,
+              suffix: ".png",
+            }),
+            repeat: -1,
+            frameRate: 16,
+          });
+
+          this.anims.create({
+            key: `${pants_type}_idleMirror`,
+            frames: [
+              {
+                key: `${pants_type}_pants`,
+                frame: `${pants_type}_IdleMirror.png`,
+              },
+            ],
+          });
+        } else {
+          isMirror = false;
+        }
+      }
+
+      if (this.playerChangedSkin.pet) {
+        let petChosen = this.playerChangedSkin.pet.texture.key ?? "nothing";
+        switch (petChosen) {
+          case "pet0":
+            if (pet) {
+              pet.destroy();
+            }
+            pet = null;
+            pet_type = null;
+            break;
+          case "pet1":
+            if (pet) {
+              pet.destroy();
+            }
+            pet = this.physics.add.sprite(
+              player.x + 50,
+              player.y + 10,
+              STICKMIN,
+              "stickmin_idle1.png"
+            );
+            pet_type = STICKMIN;
+            break;
+          case "pet2":
+            if (pet) {
+              pet.destroy();
+            }
+            pet = this.physics.add.sprite(
+              player.x + 50,
+              player.y + 10,
+              ELLIE,
+              "ellie_idle1.png"
+            );
+            pet_type = ELLIE;
+            break;
+          case "pet3":
+            if (pet) {
+              pet.destroy();
+            }
+            pet = this.physics.add.sprite(
+              player.x + 50,
+              player.y + 10,
+              CREWMIN,
+              "crewmin_idle1.png"
+            );
+            pet_type = CREWMIN;
+            break;
+          case "pet4":
+            if (pet) {
+              pet.destroy();
+            }
+            pet = this.physics.add.sprite(
+              player.x + 50,
+              player.y + 10,
+              DOG,
+              "dog_idle1.png"
+            );
+            pet_type = DOG;
+            break;
+          case "pet5":
+            if (pet) {
+              pet.destroy();
+            }
+            pet = this.physics.add.sprite(
+              player.x + 50,
+              player.y + 10,
+              BEDCRAB,
+              "bedcrab_idle1.png"
+            );
+            pet_type = BEDCRAB;
+            break;
+          case "pet6":
+            if (pet) {
+              pet.destroy();
+            }
+            pet = this.physics.add.sprite(
+              player.x + 50,
+              player.y + 10,
+              ROBIT,
+              "robit_idle1.png"
+            );
+            pet_type = ROBIT;
+            break;
+          case "pet7":
+            if (pet) {
+              pet.destroy();
+            }
+            pet = this.physics.add.sprite(
+              player.x + 50,
+              player.y + 10,
+              BSLUG,
+              "bslug_idle1.png"
+            );
+            pet_type = BSLUG;
+            break;
+          case "pet8":
+            if (pet) {
+              pet.destroy();
+            }
+            pet = this.physics.add.sprite(
+              player.x + 50,
+              player.y + 10,
+              HAMPSTER,
+              "hampster_idle1.png"
+            );
+            pet_type = HAMPSTER;
+            break;
+          case "pet9":
+            if (pet) {
+              pet.destroy();
+            }
+            pet = this.physics.add.sprite(
+              player.x + 50,
+              player.y + 10,
+              SQUIG,
+              "squig_idle1.png"
+            );
+            pet_type = SQUIG;
+            break;
+          case "pet10":
+            if (pet) {
+              pet.destroy();
+            }
+            pet = this.physics.add.sprite(
+              player.x + 50,
+              player.y + 10,
+              UFO,
+              "ufo_idle1.png"
+            );
+            pet_type = UFO;
+            break;
+          case "pet11":
+            if (pet) {
+              pet.destroy();
+            }
+            pet = this.physics.add.sprite(
+              player.x + 50,
+              player.y + 10,
+              TWITCH,
+              "twitch_idle1.png"
+            );
+            pet_type = TWITCH;
+            break;
+        }
+        player_container.add(pet);
+      }
 
       //send color player change
       console.log(color + " " + this.socket.id);
@@ -651,7 +1272,7 @@ export default class waitingRoom extends Phaser.Scene {
     });
 
     this.socket.on("moveW", ({ x, y, playerId, color }) => {
-      // console.log({ x, y, playerId });
+      console.log({ x, y, playerId });
 
       let index = otherPlayerId.findIndex((Element) => Element == playerId);
       //id = index;
@@ -789,8 +1410,8 @@ export default class waitingRoom extends Phaser.Scene {
 
     if (playerMoved) {
       this.socket.emit("moveW", {
-        x: player.x,
-        y: player.y,
+        x: player_container.x,
+        y: player_container.y,
         roomId: this.state.roomKey,
       });
       player.movedLastFrame = true;
