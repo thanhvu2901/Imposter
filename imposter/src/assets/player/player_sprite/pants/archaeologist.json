@@ -1,0 +1,4172 @@
+{"frames": [
+
+{
+	"filename": "archaeologist_Idle.png",
+	"frame": {"x":138,"y":160,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_IdleMirror.png",
+	"frame": {"x":133,"y":230,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor1.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor2.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor3.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor4.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor5.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor6.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor7.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor8.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor9.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor10.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor11.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor12.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor13.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor14.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor15.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor16.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor17.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor18.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor19.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor20.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor21.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor22.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor23.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor24.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor25.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor26.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor27.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor28.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor29.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor30.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor31.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor32.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor33.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor34.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor35.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor36.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor37.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor38.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor39.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor40.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor41.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor42.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor43.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor44.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor45.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor46.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor47.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Impostor48.png",
+	"frame": {"x":139,"y":129,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim1.png",
+	"frame": {"x":142,"y":98,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim2.png",
+	"frame": {"x":142,"y":98,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim3.png",
+	"frame": {"x":142,"y":98,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim4.png",
+	"frame": {"x":142,"y":98,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim5.png",
+	"frame": {"x":142,"y":98,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim6.png",
+	"frame": {"x":142,"y":98,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim7.png",
+	"frame": {"x":142,"y":98,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim8.png",
+	"frame": {"x":142,"y":98,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim9.png",
+	"frame": {"x":142,"y":98,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim10.png",
+	"frame": {"x":142,"y":98,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim11.png",
+	"frame": {"x":49,"y":214,"w":39,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":33},
+	"sourceSize": {"w":39,"h":33}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim12.png",
+	"frame": {"x":49,"y":214,"w":39,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":33},
+	"sourceSize": {"w":39,"h":33}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim13.png",
+	"frame": {"x":131,"y":191,"w":35,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":37},
+	"sourceSize": {"w":35,"h":37}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim14.png",
+	"frame": {"x":131,"y":191,"w":35,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":37},
+	"sourceSize": {"w":35,"h":37}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim15.png",
+	"frame": {"x":131,"y":191,"w":35,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":37},
+	"sourceSize": {"w":35,"h":37}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim16.png",
+	"frame": {"x":180,"y":67,"w":37,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":36},
+	"sourceSize": {"w":37,"h":36}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim17.png",
+	"frame": {"x":180,"y":67,"w":37,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":36},
+	"sourceSize": {"w":37,"h":36}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim18.png",
+	"frame": {"x":48,"y":249,"w":35,"h":39},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":39},
+	"sourceSize": {"w":35,"h":39}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim19.png",
+	"frame": {"x":48,"y":249,"w":35,"h":39},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":39},
+	"sourceSize": {"w":35,"h":39}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim20.png",
+	"frame": {"x":48,"y":249,"w":35,"h":39},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":39},
+	"sourceSize": {"w":35,"h":39}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim21.png",
+	"frame": {"x":49,"y":214,"w":39,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":33},
+	"sourceSize": {"w":39,"h":33}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim22.png",
+	"frame": {"x":49,"y":214,"w":39,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":33},
+	"sourceSize": {"w":39,"h":33}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim23.png",
+	"frame": {"x":131,"y":191,"w":35,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":37},
+	"sourceSize": {"w":35,"h":37}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim24.png",
+	"frame": {"x":131,"y":191,"w":35,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":37},
+	"sourceSize": {"w":35,"h":37}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim25.png",
+	"frame": {"x":131,"y":191,"w":35,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":37},
+	"sourceSize": {"w":35,"h":37}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim26.png",
+	"frame": {"x":180,"y":67,"w":37,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":36},
+	"sourceSize": {"w":37,"h":36}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim27.png",
+	"frame": {"x":180,"y":67,"w":37,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":36},
+	"sourceSize": {"w":37,"h":36}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim28.png",
+	"frame": {"x":48,"y":249,"w":35,"h":39},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":39},
+	"sourceSize": {"w":35,"h":39}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim29.png",
+	"frame": {"x":48,"y":249,"w":35,"h":39},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":39},
+	"sourceSize": {"w":35,"h":39}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim30.png",
+	"frame": {"x":48,"y":249,"w":35,"h":39},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":39},
+	"sourceSize": {"w":35,"h":39}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim31.png",
+	"frame": {"x":292,"y":35,"w":41,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":33},
+	"sourceSize": {"w":41,"h":33}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim32.png",
+	"frame": {"x":292,"y":35,"w":41,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":33},
+	"sourceSize": {"w":41,"h":33}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim33.png",
+	"frame": {"x":168,"y":238,"w":36,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":37},
+	"sourceSize": {"w":36,"h":37}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim34.png",
+	"frame": {"x":168,"y":198,"w":37,"h":38},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":38},
+	"sourceSize": {"w":37,"h":38}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim35.png",
+	"frame": {"x":168,"y":198,"w":37,"h":38},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":38},
+	"sourceSize": {"w":37,"h":38}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim36.png",
+	"frame": {"x":168,"y":198,"w":37,"h":38},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":38},
+	"sourceSize": {"w":37,"h":38}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim37.png",
+	"frame": {"x":168,"y":198,"w":37,"h":38},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":38},
+	"sourceSize": {"w":37,"h":38}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim38.png",
+	"frame": {"x":90,"y":191,"w":39,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":37},
+	"sourceSize": {"w":39,"h":37}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim39.png",
+	"frame": {"x":334,"y":186,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim40.png",
+	"frame": {"x":334,"y":186,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim41.png",
+	"frame": {"x":146,"y":73,"w":32,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":23},
+	"sourceSize": {"w":32,"h":23}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim42.png",
+	"frame": {"x":480,"y":51,"w":31,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":23},
+	"sourceSize": {"w":31,"h":23}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim43.png",
+	"frame": {"x":480,"y":51,"w":31,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":23},
+	"sourceSize": {"w":31,"h":23}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim44.png",
+	"frame": {"x":480,"y":51,"w":31,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":23},
+	"sourceSize": {"w":31,"h":23}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim45.png",
+	"frame": {"x":480,"y":51,"w":31,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":23},
+	"sourceSize": {"w":31,"h":23}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim46.png",
+	"frame": {"x":480,"y":51,"w":31,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":23},
+	"sourceSize": {"w":31,"h":23}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim47.png",
+	"frame": {"x":480,"y":51,"w":31,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":23},
+	"sourceSize": {"w":31,"h":23}
+},
+{
+	"filename": "archaeologist_Kill_stab_Victim48.png",
+	"frame": {"x":480,"y":51,"w":31,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":23},
+	"sourceSize": {"w":31,"h":23}
+},
+{
+	"filename": "archaeologist_killAlien_imposter1.png",
+	"frame": {"x":334,"y":154,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killAlien_imposter2.png",
+	"frame": {"x":334,"y":154,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killAlien_imposter3.png",
+	"frame": {"x":334,"y":154,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killAlien_imposter4.png",
+	"frame": {"x":334,"y":154,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killAlien_imposter5.png",
+	"frame": {"x":474,"y":251,"w":32,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":22},
+	"sourceSize": {"w":32,"h":22}
+},
+{
+	"filename": "archaeologist_killAlien_imposter6.png",
+	"frame": {"x":474,"y":251,"w":32,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":22},
+	"sourceSize": {"w":32,"h":22}
+},
+{
+	"filename": "archaeologist_killAlien_imposter7.png",
+	"frame": {"x":474,"y":251,"w":32,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":22},
+	"sourceSize": {"w":32,"h":22}
+},
+{
+	"filename": "archaeologist_killAlien_imposter8.png",
+	"frame": {"x":474,"y":251,"w":32,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":22},
+	"sourceSize": {"w":32,"h":22}
+},
+{
+	"filename": "archaeologist_killAlien_imposter9.png",
+	"frame": {"x":474,"y":251,"w":32,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":22},
+	"sourceSize": {"w":32,"h":22}
+},
+{
+	"filename": "archaeologist_killAlien_imposter10.png",
+	"frame": {"x":474,"y":251,"w":32,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":22},
+	"sourceSize": {"w":32,"h":22}
+},
+{
+	"filename": "archaeologist_killAlien_imposter11.png",
+	"frame": {"x":474,"y":251,"w":32,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":22},
+	"sourceSize": {"w":32,"h":22}
+},
+{
+	"filename": "archaeologist_killAlien_imposter12.png",
+	"frame": {"x":474,"y":251,"w":32,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":22},
+	"sourceSize": {"w":32,"h":22}
+},
+{
+	"filename": "archaeologist_killAlien_imposter13.png",
+	"frame": {"x":474,"y":251,"w":32,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":22},
+	"sourceSize": {"w":32,"h":22}
+},
+{
+	"filename": "archaeologist_killAlien_imposter14.png",
+	"frame": {"x":474,"y":251,"w":32,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":22},
+	"sourceSize": {"w":32,"h":22}
+},
+{
+	"filename": "archaeologist_killAlien_imposter15.png",
+	"frame": {"x":474,"y":251,"w":32,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":22},
+	"sourceSize": {"w":32,"h":22}
+},
+{
+	"filename": "archaeologist_killAlien_imposter16.png",
+	"frame": {"x":474,"y":251,"w":32,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":22},
+	"sourceSize": {"w":32,"h":22}
+},
+{
+	"filename": "archaeologist_killAlien_imposter17.png",
+	"frame": {"x":474,"y":251,"w":32,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":22},
+	"sourceSize": {"w":32,"h":22}
+},
+{
+	"filename": "archaeologist_killAlien_imposter18.png",
+	"frame": {"x":474,"y":251,"w":32,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":22},
+	"sourceSize": {"w":32,"h":22}
+},
+{
+	"filename": "archaeologist_killAlien_imposter19.png",
+	"frame": {"x":474,"y":251,"w":32,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":22},
+	"sourceSize": {"w":32,"h":22}
+},
+{
+	"filename": "archaeologist_killAlien_imposter20.png",
+	"frame": {"x":474,"y":251,"w":32,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":22},
+	"sourceSize": {"w":32,"h":22}
+},
+{
+	"filename": "archaeologist_killAlien_imposter21.png",
+	"frame": {"x":474,"y":251,"w":32,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":22},
+	"sourceSize": {"w":32,"h":22}
+},
+{
+	"filename": "archaeologist_killAlien_imposter22.png",
+	"frame": {"x":474,"y":251,"w":32,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":22},
+	"sourceSize": {"w":32,"h":22}
+},
+{
+	"filename": "archaeologist_killAlien_imposter23.png",
+	"frame": {"x":474,"y":251,"w":32,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":22},
+	"sourceSize": {"w":32,"h":22}
+},
+{
+	"filename": "archaeologist_killAlien_imposter24.png",
+	"frame": {"x":474,"y":251,"w":32,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":22},
+	"sourceSize": {"w":32,"h":22}
+},
+{
+	"filename": "archaeologist_killAlien_imposter25.png",
+	"frame": {"x":474,"y":251,"w":32,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":22},
+	"sourceSize": {"w":32,"h":22}
+},
+{
+	"filename": "archaeologist_killAlien_imposter26.png",
+	"frame": {"x":474,"y":251,"w":32,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":22},
+	"sourceSize": {"w":32,"h":22}
+},
+{
+	"filename": "archaeologist_killAlien_imposter27.png",
+	"frame": {"x":474,"y":251,"w":32,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":22},
+	"sourceSize": {"w":32,"h":22}
+},
+{
+	"filename": "archaeologist_killAlien_imposter28.png",
+	"frame": {"x":474,"y":251,"w":32,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":22},
+	"sourceSize": {"w":32,"h":22}
+},
+{
+	"filename": "archaeologist_killAlien_imposter29.png",
+	"frame": {"x":370,"y":105,"w":37,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":26},
+	"sourceSize": {"w":37,"h":26}
+},
+{
+	"filename": "archaeologist_killAlien_imposter30.png",
+	"frame": {"x":370,"y":105,"w":37,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":26},
+	"sourceSize": {"w":37,"h":26}
+},
+{
+	"filename": "archaeologist_killAlien_imposter31.png",
+	"frame": {"x":367,"y":226,"w":34,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":28},
+	"sourceSize": {"w":34,"h":28}
+},
+{
+	"filename": "archaeologist_killAlien_imposter32.png",
+	"frame": {"x":334,"y":154,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killAlien_imposter33.png",
+	"frame": {"x":334,"y":154,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killAlien_imposter34.png",
+	"frame": {"x":334,"y":154,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killAlien_imposter35.png",
+	"frame": {"x":334,"y":154,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killAlien_imposter36.png",
+	"frame": {"x":334,"y":154,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killAlien_imposter37.png",
+	"frame": {"x":334,"y":154,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killAlien_imposter38.png",
+	"frame": {"x":334,"y":154,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killAlien_imposter39.png",
+	"frame": {"x":334,"y":154,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killAlien_imposter40.png",
+	"frame": {"x":334,"y":154,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killAlien_imposter41.png",
+	"frame": {"x":334,"y":154,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killAlien_imposter42.png",
+	"frame": {"x":334,"y":154,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killAlien_imposter43.png",
+	"frame": {"x":334,"y":154,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killAlien_imposter44.png",
+	"frame": {"x":334,"y":154,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killAlien_imposter45.png",
+	"frame": {"x":334,"y":154,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killAlien_imposter46.png",
+	"frame": {"x":334,"y":154,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killAlien_imposter47.png",
+	"frame": {"x":334,"y":154,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killAlien_imposter48.png",
+	"frame": {"x":334,"y":154,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killAlien_victim1.png",
+	"frame": {"x":331,"y":210,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killAlien_victim2.png",
+	"frame": {"x":331,"y":210,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killAlien_victim3.png",
+	"frame": {"x":331,"y":210,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killAlien_victim4.png",
+	"frame": {"x":331,"y":210,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killAlien_victim5.png",
+	"frame": {"x":331,"y":210,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killAlien_victim6.png",
+	"frame": {"x":331,"y":210,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killAlien_victim7.png",
+	"frame": {"x":331,"y":210,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killAlien_victim8.png",
+	"frame": {"x":331,"y":210,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killAlien_victim9.png",
+	"frame": {"x":331,"y":210,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killAlien_victim10.png",
+	"frame": {"x":331,"y":210,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killAlien_victim11.png",
+	"frame": {"x":247,"y":190,"w":40,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":33},
+	"sourceSize": {"w":40,"h":33}
+},
+{
+	"filename": "archaeologist_killAlien_victim12.png",
+	"frame": {"x":85,"y":261,"w":41,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":25},
+	"sourceSize": {"w":41,"h":25}
+},
+{
+	"filename": "archaeologist_killAlien_victim13.png",
+	"frame": {"x":85,"y":261,"w":41,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":25},
+	"sourceSize": {"w":41,"h":25}
+},
+{
+	"filename": "archaeologist_killAlien_victim14.png",
+	"frame": {"x":404,"y":133,"w":29,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":31},
+	"sourceSize": {"w":29,"h":31}
+},
+{
+	"filename": "archaeologist_killAlien_victim15.png",
+	"frame": {"x":404,"y":133,"w":29,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":31},
+	"sourceSize": {"w":29,"h":31}
+},
+{
+	"filename": "archaeologist_killAlien_victim16.png",
+	"frame": {"x":402,"y":289,"w":29,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":31},
+	"sourceSize": {"w":29,"h":31}
+},
+{
+	"filename": "archaeologist_killAlien_victim17.png",
+	"frame": {"x":402,"y":289,"w":29,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":31},
+	"sourceSize": {"w":29,"h":31}
+},
+{
+	"filename": "archaeologist_killAlien_victim18.png",
+	"frame": {"x":402,"y":289,"w":29,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":31},
+	"sourceSize": {"w":29,"h":31}
+},
+{
+	"filename": "archaeologist_killAlien_victim19.png",
+	"frame": {"x":402,"y":289,"w":29,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":31},
+	"sourceSize": {"w":29,"h":31}
+},
+{
+	"filename": "archaeologist_killAlien_victim20.png",
+	"frame": {"x":402,"y":289,"w":29,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":31},
+	"sourceSize": {"w":29,"h":31}
+},
+{
+	"filename": "archaeologist_killAlien_victim21.png",
+	"frame": {"x":291,"y":163,"w":41,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":25},
+	"sourceSize": {"w":41,"h":25}
+},
+{
+	"filename": "archaeologist_killAlien_victim22.png",
+	"frame": {"x":291,"y":163,"w":41,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":25},
+	"sourceSize": {"w":41,"h":25}
+},
+{
+	"filename": "archaeologist_killAlien_victim23.png",
+	"frame": {"x":252,"y":255,"w":40,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":26},
+	"sourceSize": {"w":40,"h":26}
+},
+{
+	"filename": "archaeologist_killAlien_victim24.png",
+	"frame": {"x":252,"y":255,"w":40,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":26},
+	"sourceSize": {"w":40,"h":26}
+},
+{
+	"filename": "archaeologist_killAlien_victim25.png",
+	"frame": {"x":219,"y":65,"w":27,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":24},
+	"sourceSize": {"w":27,"h":24}
+},
+{
+	"filename": "archaeologist_killAlien_victim26.png",
+	"frame": {"x":219,"y":65,"w":27,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":24},
+	"sourceSize": {"w":27,"h":24}
+},
+{
+	"filename": "archaeologist_killAlien_victim27.png",
+	"frame": {"x":219,"y":91,"w":27,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":24},
+	"sourceSize": {"w":27,"h":24}
+},
+{
+	"filename": "archaeologist_killAlien_victim28.png",
+	"frame": {"x":219,"y":91,"w":27,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":24},
+	"sourceSize": {"w":27,"h":24}
+},
+{
+	"filename": "archaeologist_killAlien_victim29.png",
+	"frame": {"x":219,"y":117,"w":27,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":24},
+	"sourceSize": {"w":27,"h":24}
+},
+{
+	"filename": "archaeologist_killAlien_victim30.png",
+	"frame": {"x":219,"y":117,"w":27,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":24},
+	"sourceSize": {"w":27,"h":24}
+},
+{
+	"filename": "archaeologist_killAlien_victim31.png",
+	"frame": {"x":219,"y":117,"w":27,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":24},
+	"sourceSize": {"w":27,"h":24}
+},
+{
+	"filename": "archaeologist_killAlien_victim32.png",
+	"frame": {"x":219,"y":117,"w":27,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":24},
+	"sourceSize": {"w":27,"h":24}
+},
+{
+	"filename": "archaeologist_killAlien_victim33.png",
+	"frame": {"x":219,"y":117,"w":27,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":24},
+	"sourceSize": {"w":27,"h":24}
+},
+{
+	"filename": "archaeologist_killAlien_victim34.png",
+	"frame": {"x":219,"y":117,"w":27,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":24},
+	"sourceSize": {"w":27,"h":24}
+},
+{
+	"filename": "archaeologist_killAlien_victim35.png",
+	"frame": {"x":219,"y":117,"w":27,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":24},
+	"sourceSize": {"w":27,"h":24}
+},
+{
+	"filename": "archaeologist_killAlien_victim36.png",
+	"frame": {"x":219,"y":117,"w":27,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":24},
+	"sourceSize": {"w":27,"h":24}
+},
+{
+	"filename": "archaeologist_killAlien_victim37.png",
+	"frame": {"x":219,"y":117,"w":27,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":24},
+	"sourceSize": {"w":27,"h":24}
+},
+{
+	"filename": "archaeologist_killAlien_victim38.png",
+	"frame": {"x":219,"y":117,"w":27,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":24},
+	"sourceSize": {"w":27,"h":24}
+},
+{
+	"filename": "archaeologist_killAlien_victim39.png",
+	"frame": {"x":219,"y":117,"w":27,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":24},
+	"sourceSize": {"w":27,"h":24}
+},
+{
+	"filename": "archaeologist_killAlien_victim40.png",
+	"frame": {"x":219,"y":117,"w":27,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":24},
+	"sourceSize": {"w":27,"h":24}
+},
+{
+	"filename": "archaeologist_killAlien_victim41.png",
+	"frame": {"x":219,"y":117,"w":27,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":24},
+	"sourceSize": {"w":27,"h":24}
+},
+{
+	"filename": "archaeologist_killAlien_victim42.png",
+	"frame": {"x":219,"y":117,"w":27,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":24},
+	"sourceSize": {"w":27,"h":24}
+},
+{
+	"filename": "archaeologist_killAlien_victim43.png",
+	"frame": {"x":219,"y":117,"w":27,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":24},
+	"sourceSize": {"w":27,"h":24}
+},
+{
+	"filename": "archaeologist_killAlien_victim44.png",
+	"frame": {"x":219,"y":117,"w":27,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":24},
+	"sourceSize": {"w":27,"h":24}
+},
+{
+	"filename": "archaeologist_killAlien_victim45.png",
+	"frame": {"x":219,"y":117,"w":27,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":24},
+	"sourceSize": {"w":27,"h":24}
+},
+{
+	"filename": "archaeologist_killAlien_victim46.png",
+	"frame": {"x":219,"y":117,"w":27,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":24},
+	"sourceSize": {"w":27,"h":24}
+},
+{
+	"filename": "archaeologist_killAlien_victim47.png",
+	"frame": {"x":219,"y":117,"w":27,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":24},
+	"sourceSize": {"w":27,"h":24}
+},
+{
+	"filename": "archaeologist_killAlien_victim48.png",
+	"frame": {"x":219,"y":117,"w":27,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":24},
+	"sourceSize": {"w":27,"h":24}
+},
+{
+	"filename": "archaeologist_killGun_imposter1.png",
+	"frame": {"x":333,"y":242,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killGun_imposter2.png",
+	"frame": {"x":333,"y":242,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killGun_imposter3.png",
+	"frame": {"x":333,"y":242,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killGun_imposter4.png",
+	"frame": {"x":131,"y":286,"w":37,"h":34},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":34},
+	"sourceSize": {"w":37,"h":34}
+},
+{
+	"filename": "archaeologist_killGun_imposter5.png",
+	"frame": {"x":170,"y":277,"w":38,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":35},
+	"sourceSize": {"w":38,"h":35}
+},
+{
+	"filename": "archaeologist_killGun_imposter6.png",
+	"frame": {"x":170,"y":277,"w":38,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":35},
+	"sourceSize": {"w":38,"h":35}
+},
+{
+	"filename": "archaeologist_killGun_imposter7.png",
+	"frame": {"x":170,"y":277,"w":38,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":35},
+	"sourceSize": {"w":38,"h":35}
+},
+{
+	"filename": "archaeologist_killGun_imposter8.png",
+	"frame": {"x":203,"y":1,"w":47,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":47,"h":31},
+	"sourceSize": {"w":47,"h":31}
+},
+{
+	"filename": "archaeologist_killGun_imposter9.png",
+	"frame": {"x":343,"y":1,"w":44,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":31},
+	"sourceSize": {"w":44,"h":31}
+},
+{
+	"filename": "archaeologist_killGun_imposter10.png",
+	"frame": {"x":343,"y":1,"w":44,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":31},
+	"sourceSize": {"w":44,"h":31}
+},
+{
+	"filename": "archaeologist_killGun_imposter11.png",
+	"frame": {"x":343,"y":1,"w":44,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":31},
+	"sourceSize": {"w":44,"h":31}
+},
+{
+	"filename": "archaeologist_killGun_imposter12.png",
+	"frame": {"x":210,"y":268,"w":40,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":31},
+	"sourceSize": {"w":40,"h":31}
+},
+{
+	"filename": "archaeologist_killGun_imposter13.png",
+	"frame": {"x":367,"y":256,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "archaeologist_killGun_imposter14.png",
+	"frame": {"x":404,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killGun_imposter15.png",
+	"frame": {"x":404,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killGun_imposter16.png",
+	"frame": {"x":404,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killGun_imposter17.png",
+	"frame": {"x":404,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killGun_imposter18.png",
+	"frame": {"x":404,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killGun_imposter19.png",
+	"frame": {"x":404,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killGun_imposter20.png",
+	"frame": {"x":404,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killGun_imposter21.png",
+	"frame": {"x":404,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killGun_imposter22.png",
+	"frame": {"x":404,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killGun_imposter23.png",
+	"frame": {"x":404,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killGun_imposter24.png",
+	"frame": {"x":404,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killGun_imposter25.png",
+	"frame": {"x":404,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killGun_imposter26.png",
+	"frame": {"x":404,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killGun_imposter27.png",
+	"frame": {"x":404,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killGun_imposter28.png",
+	"frame": {"x":404,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killGun_imposter29.png",
+	"frame": {"x":404,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killGun_imposter30.png",
+	"frame": {"x":404,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killGun_imposter31.png",
+	"frame": {"x":404,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killGun_imposter32.png",
+	"frame": {"x":404,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killGun_imposter33.png",
+	"frame": {"x":404,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killGun_imposter34.png",
+	"frame": {"x":404,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killGun_imposter35.png",
+	"frame": {"x":404,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killGun_imposter36.png",
+	"frame": {"x":404,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killGun_imposter37.png",
+	"frame": {"x":404,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killGun_imposter38.png",
+	"frame": {"x":404,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killGun_imposter39.png",
+	"frame": {"x":404,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killGun_imposter40.png",
+	"frame": {"x":404,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killGun_imposter41.png",
+	"frame": {"x":404,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killGun_imposter42.png",
+	"frame": {"x":404,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killGun_imposter43.png",
+	"frame": {"x":404,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killGun_imposter44.png",
+	"frame": {"x":404,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killGun_imposter45.png",
+	"frame": {"x":404,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killGun_imposter46.png",
+	"frame": {"x":404,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killGun_imposter47.png",
+	"frame": {"x":404,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killGun_imposter48.png",
+	"frame": {"x":404,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killGun_victim1.png",
+	"frame": {"x":369,"y":133,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killGun_victim2.png",
+	"frame": {"x":369,"y":133,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killGun_victim3.png",
+	"frame": {"x":369,"y":133,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killGun_victim4.png",
+	"frame": {"x":369,"y":133,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killGun_victim5.png",
+	"frame": {"x":369,"y":133,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killGun_victim6.png",
+	"frame": {"x":369,"y":133,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killGun_victim7.png",
+	"frame": {"x":369,"y":133,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killGun_victim8.png",
+	"frame": {"x":203,"y":34,"w":43,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":29},
+	"sourceSize": {"w":43,"h":29}
+},
+{
+	"filename": "archaeologist_killGun_victim9.png",
+	"frame": {"x":207,"y":200,"w":38,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":35},
+	"sourceSize": {"w":38,"h":35}
+},
+{
+	"filename": "archaeologist_killGun_victim10.png",
+	"frame": {"x":49,"y":174,"w":39,"h":38},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":38},
+	"sourceSize": {"w":39,"h":38}
+},
+{
+	"filename": "archaeologist_killGun_victim11.png",
+	"frame": {"x":435,"y":143,"w":33,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":21},
+	"sourceSize": {"w":33,"h":21}
+},
+{
+	"filename": "archaeologist_killGun_victim12.png",
+	"frame": {"x":474,"y":224,"w":29,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":25},
+	"sourceSize": {"w":29,"h":25}
+},
+{
+	"filename": "archaeologist_killGun_victim13.png",
+	"frame": {"x":409,"y":105,"w":29,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":26},
+	"sourceSize": {"w":29,"h":26}
+},
+{
+	"filename": "archaeologist_killGun_victim14.png",
+	"frame": {"x":471,"y":275,"w":28,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":25},
+	"sourceSize": {"w":28,"h":25}
+},
+{
+	"filename": "archaeologist_killGun_victim15.png",
+	"frame": {"x":474,"y":196,"w":28,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":26},
+	"sourceSize": {"w":28,"h":26}
+},
+{
+	"filename": "archaeologist_killGun_victim16.png",
+	"frame": {"x":474,"y":196,"w":28,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":26},
+	"sourceSize": {"w":28,"h":26}
+},
+{
+	"filename": "archaeologist_killGun_victim17.png",
+	"frame": {"x":474,"y":196,"w":28,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":26},
+	"sourceSize": {"w":28,"h":26}
+},
+{
+	"filename": "archaeologist_killGun_victim18.png",
+	"frame": {"x":474,"y":196,"w":28,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":26},
+	"sourceSize": {"w":28,"h":26}
+},
+{
+	"filename": "archaeologist_killGun_victim19.png",
+	"frame": {"x":474,"y":196,"w":28,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":26},
+	"sourceSize": {"w":28,"h":26}
+},
+{
+	"filename": "archaeologist_killGun_victim20.png",
+	"frame": {"x":474,"y":196,"w":28,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":26},
+	"sourceSize": {"w":28,"h":26}
+},
+{
+	"filename": "archaeologist_killGun_victim21.png",
+	"frame": {"x":474,"y":196,"w":28,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":26},
+	"sourceSize": {"w":28,"h":26}
+},
+{
+	"filename": "archaeologist_killGun_victim22.png",
+	"frame": {"x":215,"y":174,"w":30,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":24},
+	"sourceSize": {"w":30,"h":24}
+},
+{
+	"filename": "archaeologist_killGun_victim23.png",
+	"frame": {"x":215,"y":174,"w":30,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":24},
+	"sourceSize": {"w":30,"h":24}
+},
+{
+	"filename": "archaeologist_killGun_victim24.png",
+	"frame": {"x":389,"y":1,"w":53,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":53,"h":22},
+	"sourceSize": {"w":53,"h":22}
+},
+{
+	"filename": "archaeologist_killGun_victim25.png",
+	"frame": {"x":389,"y":1,"w":53,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":53,"h":22},
+	"sourceSize": {"w":53,"h":22}
+},
+{
+	"filename": "archaeologist_killGun_victim26.png",
+	"frame": {"x":444,"y":1,"w":53,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":53,"h":21},
+	"sourceSize": {"w":53,"h":21}
+},
+{
+	"filename": "archaeologist_killGun_victim27.png",
+	"frame": {"x":389,"y":25,"w":53,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":53,"h":21},
+	"sourceSize": {"w":53,"h":21}
+},
+{
+	"filename": "archaeologist_killGun_victim28.png",
+	"frame": {"x":389,"y":25,"w":53,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":53,"h":21},
+	"sourceSize": {"w":53,"h":21}
+},
+{
+	"filename": "archaeologist_killGun_victim29.png",
+	"frame": {"x":389,"y":25,"w":53,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":53,"h":21},
+	"sourceSize": {"w":53,"h":21}
+},
+{
+	"filename": "archaeologist_killGun_victim30.png",
+	"frame": {"x":389,"y":25,"w":53,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":53,"h":21},
+	"sourceSize": {"w":53,"h":21}
+},
+{
+	"filename": "archaeologist_killGun_victim31.png",
+	"frame": {"x":389,"y":25,"w":53,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":53,"h":21},
+	"sourceSize": {"w":53,"h":21}
+},
+{
+	"filename": "archaeologist_killGun_victim32.png",
+	"frame": {"x":389,"y":25,"w":53,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":53,"h":21},
+	"sourceSize": {"w":53,"h":21}
+},
+{
+	"filename": "archaeologist_killGun_victim33.png",
+	"frame": {"x":290,"y":283,"w":41,"h":17},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":17},
+	"sourceSize": {"w":41,"h":17}
+},
+{
+	"filename": "archaeologist_killGun_victim34.png",
+	"frame": {"x":210,"y":301,"w":37,"h":19},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":19},
+	"sourceSize": {"w":37,"h":19}
+},
+{
+	"filename": "archaeologist_killGun_victim35.png",
+	"frame": {"x":210,"y":301,"w":37,"h":19},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":19},
+	"sourceSize": {"w":37,"h":19}
+},
+{
+	"filename": "archaeologist_killGun_victim36.png",
+	"frame": {"x":210,"y":301,"w":37,"h":19},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":19},
+	"sourceSize": {"w":37,"h":19}
+},
+{
+	"filename": "archaeologist_killGun_victim37.png",
+	"frame": {"x":210,"y":301,"w":37,"h":19},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":19},
+	"sourceSize": {"w":37,"h":19}
+},
+{
+	"filename": "archaeologist_killGun_victim38.png",
+	"frame": {"x":210,"y":301,"w":37,"h":19},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":19},
+	"sourceSize": {"w":37,"h":19}
+},
+{
+	"filename": "archaeologist_killGun_victim39.png",
+	"frame": {"x":210,"y":301,"w":37,"h":19},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":19},
+	"sourceSize": {"w":37,"h":19}
+},
+{
+	"filename": "archaeologist_killGun_victim40.png",
+	"frame": {"x":210,"y":301,"w":37,"h":19},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":19},
+	"sourceSize": {"w":37,"h":19}
+},
+{
+	"filename": "archaeologist_killGun_victim41.png",
+	"frame": {"x":210,"y":301,"w":37,"h":19},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":19},
+	"sourceSize": {"w":37,"h":19}
+},
+{
+	"filename": "archaeologist_killGun_victim42.png",
+	"frame": {"x":210,"y":301,"w":37,"h":19},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":19},
+	"sourceSize": {"w":37,"h":19}
+},
+{
+	"filename": "archaeologist_killGun_victim43.png",
+	"frame": {"x":210,"y":301,"w":37,"h":19},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":19},
+	"sourceSize": {"w":37,"h":19}
+},
+{
+	"filename": "archaeologist_killGun_victim44.png",
+	"frame": {"x":210,"y":301,"w":37,"h":19},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":19},
+	"sourceSize": {"w":37,"h":19}
+},
+{
+	"filename": "archaeologist_killGun_victim45.png",
+	"frame": {"x":210,"y":301,"w":37,"h":19},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":19},
+	"sourceSize": {"w":37,"h":19}
+},
+{
+	"filename": "archaeologist_killGun_victim46.png",
+	"frame": {"x":210,"y":301,"w":37,"h":19},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":19},
+	"sourceSize": {"w":37,"h":19}
+},
+{
+	"filename": "archaeologist_killGun_victim47.png",
+	"frame": {"x":210,"y":301,"w":37,"h":19},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":19},
+	"sourceSize": {"w":37,"h":19}
+},
+{
+	"filename": "archaeologist_killGun_victim48.png",
+	"frame": {"x":210,"y":301,"w":37,"h":19},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":19},
+	"sourceSize": {"w":37,"h":19}
+},
+{
+	"filename": "archaeologist_killNeck_imposter1.png",
+	"frame": {"x":402,"y":257,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killNeck_imposter2.png",
+	"frame": {"x":402,"y":257,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killNeck_imposter3.png",
+	"frame": {"x":440,"y":84,"w":34,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":28},
+	"sourceSize": {"w":34,"h":28}
+},
+{
+	"filename": "archaeologist_killNeck_imposter4.png",
+	"frame": {"x":440,"y":84,"w":34,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":28},
+	"sourceSize": {"w":34,"h":28}
+},
+{
+	"filename": "archaeologist_killNeck_imposter5.png",
+	"frame": {"x":480,"y":76,"w":30,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":31},
+	"sourceSize": {"w":30,"h":31}
+},
+{
+	"filename": "archaeologist_killNeck_imposter6.png",
+	"frame": {"x":480,"y":76,"w":30,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":31},
+	"sourceSize": {"w":30,"h":31}
+},
+{
+	"filename": "archaeologist_killNeck_imposter7.png",
+	"frame": {"x":433,"y":289,"w":29,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":31},
+	"sourceSize": {"w":29,"h":31}
+},
+{
+	"filename": "archaeologist_killNeck_imposter8.png",
+	"frame": {"x":433,"y":289,"w":29,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":31},
+	"sourceSize": {"w":29,"h":31}
+},
+{
+	"filename": "archaeologist_killNeck_imposter9.png",
+	"frame": {"x":433,"y":289,"w":29,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":31},
+	"sourceSize": {"w":29,"h":31}
+},
+{
+	"filename": "archaeologist_killNeck_imposter10.png",
+	"frame": {"x":403,"y":227,"w":34,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":28},
+	"sourceSize": {"w":34,"h":28}
+},
+{
+	"filename": "archaeologist_killNeck_imposter11.png",
+	"frame": {"x":403,"y":227,"w":34,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":28},
+	"sourceSize": {"w":34,"h":28}
+},
+{
+	"filename": "archaeologist_killNeck_imposter12.png",
+	"frame": {"x":402,"y":257,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killNeck_imposter13.png",
+	"frame": {"x":402,"y":257,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killNeck_imposter14.png",
+	"frame": {"x":402,"y":257,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killNeck_imposter15.png",
+	"frame": {"x":402,"y":257,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killNeck_imposter16.png",
+	"frame": {"x":402,"y":257,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killNeck_imposter17.png",
+	"frame": {"x":402,"y":257,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killNeck_imposter18.png",
+	"frame": {"x":402,"y":257,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killNeck_imposter19.png",
+	"frame": {"x":402,"y":257,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killNeck_imposter20.png",
+	"frame": {"x":402,"y":257,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killNeck_imposter21.png",
+	"frame": {"x":402,"y":257,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killNeck_imposter22.png",
+	"frame": {"x":402,"y":257,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killNeck_imposter23.png",
+	"frame": {"x":402,"y":257,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killNeck_imposter24.png",
+	"frame": {"x":402,"y":257,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killNeck_imposter25.png",
+	"frame": {"x":402,"y":257,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killNeck_imposter26.png",
+	"frame": {"x":402,"y":257,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killNeck_imposter27.png",
+	"frame": {"x":402,"y":257,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killNeck_imposter28.png",
+	"frame": {"x":402,"y":257,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killNeck_imposter29.png",
+	"frame": {"x":402,"y":257,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killNeck_imposter30.png",
+	"frame": {"x":402,"y":257,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killNeck_imposter31.png",
+	"frame": {"x":402,"y":257,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killNeck_imposter32.png",
+	"frame": {"x":402,"y":257,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killNeck_imposter33.png",
+	"frame": {"x":402,"y":257,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killNeck_imposter34.png",
+	"frame": {"x":402,"y":257,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killNeck_imposter35.png",
+	"frame": {"x":402,"y":257,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killNeck_imposter36.png",
+	"frame": {"x":402,"y":257,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killNeck_imposter37.png",
+	"frame": {"x":402,"y":257,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killNeck_imposter38.png",
+	"frame": {"x":402,"y":257,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killNeck_imposter39.png",
+	"frame": {"x":402,"y":257,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killNeck_imposter40.png",
+	"frame": {"x":402,"y":257,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killNeck_imposter41.png",
+	"frame": {"x":402,"y":257,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killNeck_imposter42.png",
+	"frame": {"x":402,"y":257,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killNeck_imposter43.png",
+	"frame": {"x":402,"y":257,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killNeck_imposter44.png",
+	"frame": {"x":402,"y":257,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killNeck_imposter45.png",
+	"frame": {"x":402,"y":257,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killNeck_imposter46.png",
+	"frame": {"x":402,"y":257,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killNeck_imposter47.png",
+	"frame": {"x":402,"y":257,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killNeck_imposter48.png",
+	"frame": {"x":402,"y":257,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30}
+},
+{
+	"filename": "archaeologist_killNeck_victim1.png",
+	"frame": {"x":438,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killNeck_victim2.png",
+	"frame": {"x":438,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killNeck_victim3.png",
+	"frame": {"x":438,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killNeck_victim4.png",
+	"frame": {"x":438,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killNeck_victim5.png",
+	"frame": {"x":438,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killNeck_victim6.png",
+	"frame": {"x":438,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killNeck_victim7.png",
+	"frame": {"x":438,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killNeck_victim8.png",
+	"frame": {"x":438,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killNeck_victim9.png",
+	"frame": {"x":438,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killNeck_victim10.png",
+	"frame": {"x":472,"y":163,"w":28,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":31},
+	"sourceSize": {"w":28,"h":31}
+},
+{
+	"filename": "archaeologist_killNeck_victim11.png",
+	"frame": {"x":472,"y":163,"w":28,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":31},
+	"sourceSize": {"w":28,"h":31}
+},
+{
+	"filename": "archaeologist_killNeck_victim12.png",
+	"frame": {"x":438,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killNeck_victim13.png",
+	"frame": {"x":438,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killNeck_victim14.png",
+	"frame": {"x":438,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killNeck_victim15.png",
+	"frame": {"x":438,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killNeck_victim16.png",
+	"frame": {"x":438,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killNeck_victim17.png",
+	"frame": {"x":438,"y":166,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killNeck_victim18.png",
+	"frame": {"x":207,"y":237,"w":38,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":29},
+	"sourceSize": {"w":38,"h":29}
+},
+{
+	"filename": "archaeologist_killNeck_victim19.png",
+	"frame": {"x":207,"y":237,"w":38,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":29},
+	"sourceSize": {"w":38,"h":29}
+},
+{
+	"filename": "archaeologist_killNeck_victim20.png",
+	"frame": {"x":440,"y":197,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_killNeck_victim21.png",
+	"frame": {"x":439,"y":228,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "archaeologist_killNeck_victim22.png",
+	"frame": {"x":439,"y":228,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "archaeologist_killNeck_victim23.png",
+	"frame": {"x":439,"y":228,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "archaeologist_killNeck_victim24.png",
+	"frame": {"x":439,"y":228,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "archaeologist_killNeck_victim25.png",
+	"frame": {"x":439,"y":228,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "archaeologist_killNeck_victim26.png",
+	"frame": {"x":439,"y":228,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "archaeologist_killNeck_victim27.png",
+	"frame": {"x":476,"y":132,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "archaeologist_killNeck_victim28.png",
+	"frame": {"x":476,"y":132,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29}
+},
+{
+	"filename": "archaeologist_killNeck_victim29.png",
+	"frame": {"x":440,"y":114,"w":34,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":27},
+	"sourceSize": {"w":34,"h":27}
+},
+{
+	"filename": "archaeologist_killNeck_victim30.png",
+	"frame": {"x":440,"y":114,"w":34,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":27},
+	"sourceSize": {"w":34,"h":27}
+},
+{
+	"filename": "archaeologist_killNeck_victim31.png",
+	"frame": {"x":101,"y":73,"w":43,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":23},
+	"sourceSize": {"w":43,"h":23}
+},
+{
+	"filename": "archaeologist_killNeck_victim32.png",
+	"frame": {"x":249,"y":301,"w":37,"h":19},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":19},
+	"sourceSize": {"w":37,"h":19}
+},
+{
+	"filename": "archaeologist_killNeck_victim33.png",
+	"frame": {"x":249,"y":301,"w":37,"h":19},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":19},
+	"sourceSize": {"w":37,"h":19}
+},
+{
+	"filename": "archaeologist_killNeck_victim34.png",
+	"frame": {"x":476,"y":109,"w":35,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":21},
+	"sourceSize": {"w":35,"h":21}
+},
+{
+	"filename": "archaeologist_killNeck_victim35.png",
+	"frame": {"x":436,"y":259,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "archaeologist_killNeck_victim36.png",
+	"frame": {"x":436,"y":259,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "archaeologist_killNeck_victim37.png",
+	"frame": {"x":436,"y":259,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "archaeologist_killNeck_victim38.png",
+	"frame": {"x":436,"y":259,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "archaeologist_killNeck_victim39.png",
+	"frame": {"x":436,"y":259,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "archaeologist_killNeck_victim40.png",
+	"frame": {"x":436,"y":259,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "archaeologist_killNeck_victim41.png",
+	"frame": {"x":436,"y":259,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "archaeologist_killNeck_victim42.png",
+	"frame": {"x":436,"y":259,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "archaeologist_killNeck_victim43.png",
+	"frame": {"x":436,"y":259,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "archaeologist_killNeck_victim44.png",
+	"frame": {"x":436,"y":259,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "archaeologist_killNeck_victim45.png",
+	"frame": {"x":436,"y":259,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "archaeologist_killNeck_victim46.png",
+	"frame": {"x":436,"y":259,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "archaeologist_killNeck_victim47.png",
+	"frame": {"x":436,"y":259,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "archaeologist_killNeck_victim48.png",
+	"frame": {"x":436,"y":259,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22}
+},
+{
+	"filename": "archaeologist_killRHM_victim1.png",
+	"frame": {"x":369,"y":165,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killRHM_victim2.png",
+	"frame": {"x":369,"y":165,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killRHM_victim3.png",
+	"frame": {"x":369,"y":165,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killRHM_victim4.png",
+	"frame": {"x":369,"y":165,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killRHM_victim5.png",
+	"frame": {"x":369,"y":165,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killRHM_victim6.png",
+	"frame": {"x":369,"y":165,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killRHM_victim7.png",
+	"frame": {"x":369,"y":165,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killRHM_victim8.png",
+	"frame": {"x":369,"y":165,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killRHM_victim9.png",
+	"frame": {"x":369,"y":165,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killRHM_victim10.png",
+	"frame": {"x":369,"y":165,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_killRHM_victim11.png",
+	"frame": {"x":128,"y":262,"w":38,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":22},
+	"sourceSize": {"w":38,"h":22}
+},
+{
+	"filename": "archaeologist_killRHM_victim12.png",
+	"frame": {"x":128,"y":262,"w":38,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":22},
+	"sourceSize": {"w":38,"h":22}
+},
+{
+	"filename": "archaeologist_killRHM_victim13.png",
+	"frame": {"x":128,"y":262,"w":38,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":22},
+	"sourceSize": {"w":38,"h":22}
+},
+{
+	"filename": "archaeologist_killRHM_victim14.png",
+	"frame": {"x":128,"y":262,"w":38,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":22},
+	"sourceSize": {"w":38,"h":22}
+},
+{
+	"filename": "archaeologist_killRHM_victim15.png",
+	"frame": {"x":128,"y":262,"w":38,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":22},
+	"sourceSize": {"w":38,"h":22}
+},
+{
+	"filename": "archaeologist_killRHM_victim16.png",
+	"frame": {"x":128,"y":262,"w":38,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":22},
+	"sourceSize": {"w":38,"h":22}
+},
+{
+	"filename": "archaeologist_killRHM_victim17.png",
+	"frame": {"x":128,"y":262,"w":38,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":22},
+	"sourceSize": {"w":38,"h":22}
+},
+{
+	"filename": "archaeologist_killRHM_victim18.png",
+	"frame": {"x":128,"y":262,"w":38,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":22},
+	"sourceSize": {"w":38,"h":22}
+},
+{
+	"filename": "archaeologist_killRHM_victim19.png",
+	"frame": {"x":128,"y":262,"w":38,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":22},
+	"sourceSize": {"w":38,"h":22}
+},
+{
+	"filename": "archaeologist_killRHM_victim20.png",
+	"frame": {"x":128,"y":262,"w":38,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":22},
+	"sourceSize": {"w":38,"h":22}
+},
+{
+	"filename": "archaeologist_killRHM_victim21.png",
+	"frame": {"x":128,"y":262,"w":38,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":22},
+	"sourceSize": {"w":38,"h":22}
+},
+{
+	"filename": "archaeologist_killRHM_victim22.png",
+	"frame": {"x":128,"y":262,"w":38,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":22},
+	"sourceSize": {"w":38,"h":22}
+},
+{
+	"filename": "archaeologist_killRHM_victim23.png",
+	"frame": {"x":128,"y":262,"w":38,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":22},
+	"sourceSize": {"w":38,"h":22}
+},
+{
+	"filename": "archaeologist_killRHM_victim24.png",
+	"frame": {"x":128,"y":262,"w":38,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":22},
+	"sourceSize": {"w":38,"h":22}
+},
+{
+	"filename": "archaeologist_killRHM_victim25.png",
+	"frame": {"x":128,"y":262,"w":38,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":22},
+	"sourceSize": {"w":38,"h":22}
+},
+{
+	"filename": "archaeologist_killRHM_victim26.png",
+	"frame": {"x":128,"y":262,"w":38,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":22},
+	"sourceSize": {"w":38,"h":22}
+},
+{
+	"filename": "archaeologist_killRHM_victim27.png",
+	"frame": {"x":128,"y":262,"w":38,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":22},
+	"sourceSize": {"w":38,"h":22}
+},
+{
+	"filename": "archaeologist_killRHM_victim28.png",
+	"frame": {"x":128,"y":262,"w":38,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":22},
+	"sourceSize": {"w":38,"h":22}
+},
+{
+	"filename": "archaeologist_killRHM_victim29.png",
+	"frame": {"x":128,"y":262,"w":38,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":22},
+	"sourceSize": {"w":38,"h":22}
+},
+{
+	"filename": "archaeologist_killRHM_victim30.png",
+	"frame": {"x":128,"y":262,"w":38,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":22},
+	"sourceSize": {"w":38,"h":22}
+},
+{
+	"filename": "archaeologist_killRHM_victim31.png",
+	"frame": {"x":128,"y":262,"w":38,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":22},
+	"sourceSize": {"w":38,"h":22}
+},
+{
+	"filename": "archaeologist_killRHM_victim32.png",
+	"frame": {"x":128,"y":262,"w":38,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":22},
+	"sourceSize": {"w":38,"h":22}
+},
+{
+	"filename": "archaeologist_killRHM_victim33.png",
+	"frame": {"x":128,"y":262,"w":38,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":22},
+	"sourceSize": {"w":38,"h":22}
+},
+{
+	"filename": "archaeologist_killRHM_victim34.png",
+	"frame": {"x":128,"y":262,"w":38,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":22},
+	"sourceSize": {"w":38,"h":22}
+},
+{
+	"filename": "archaeologist_killRHM_victim35.png",
+	"frame": {"x":128,"y":262,"w":38,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":22},
+	"sourceSize": {"w":38,"h":22}
+},
+{
+	"filename": "archaeologist_killRHM_victim36.png",
+	"frame": {"x":128,"y":262,"w":38,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":22},
+	"sourceSize": {"w":38,"h":22}
+},
+{
+	"filename": "archaeologist_killRHM_victim37.png",
+	"frame": {"x":128,"y":262,"w":38,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":22},
+	"sourceSize": {"w":38,"h":22}
+},
+{
+	"filename": "archaeologist_killRHM_victim38.png",
+	"frame": {"x":128,"y":262,"w":38,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":22},
+	"sourceSize": {"w":38,"h":22}
+},
+{
+	"filename": "archaeologist_killRHM_victim39.png",
+	"frame": {"x":128,"y":262,"w":38,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":22},
+	"sourceSize": {"w":38,"h":22}
+},
+{
+	"filename": "archaeologist_killRHM_victim40.png",
+	"frame": {"x":128,"y":262,"w":38,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":22},
+	"sourceSize": {"w":38,"h":22}
+},
+{
+	"filename": "archaeologist_killRHM_victim41.png",
+	"frame": {"x":128,"y":262,"w":38,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":22},
+	"sourceSize": {"w":38,"h":22}
+},
+{
+	"filename": "archaeologist_killRHM_victim42.png",
+	"frame": {"x":128,"y":262,"w":38,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":22},
+	"sourceSize": {"w":38,"h":22}
+},
+{
+	"filename": "archaeologist_killRHM_victim43.png",
+	"frame": {"x":128,"y":262,"w":38,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":22},
+	"sourceSize": {"w":38,"h":22}
+},
+{
+	"filename": "archaeologist_killRHM_victim44.png",
+	"frame": {"x":128,"y":262,"w":38,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":22},
+	"sourceSize": {"w":38,"h":22}
+},
+{
+	"filename": "archaeologist_killRHM_victim45.png",
+	"frame": {"x":128,"y":262,"w":38,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":22},
+	"sourceSize": {"w":38,"h":22}
+},
+{
+	"filename": "archaeologist_killRHM_victim46.png",
+	"frame": {"x":128,"y":262,"w":38,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":22},
+	"sourceSize": {"w":38,"h":22}
+},
+{
+	"filename": "archaeologist_killRHM_victim47.png",
+	"frame": {"x":128,"y":262,"w":38,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":22},
+	"sourceSize": {"w":38,"h":22}
+},
+{
+	"filename": "archaeologist_killRHM_victim48.png",
+	"frame": {"x":128,"y":262,"w":38,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":22},
+	"sourceSize": {"w":38,"h":22}
+},
+{
+	"filename": "archaeologist_Spawn1.png",
+	"frame": {"x":1,"y":1,"w":48,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":48,"h":36},
+	"sourceSize": {"w":48,"h":36}
+},
+{
+	"filename": "archaeologist_Spawn2.png",
+	"frame": {"x":90,"y":174,"w":3,"h":3},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":3,"h":3},
+	"sourceSize": {"w":1,"h":1}
+},
+{
+	"filename": "archaeologist_Spawn3.png",
+	"frame": {"x":1,"y":1,"w":48,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":48,"h":36},
+	"sourceSize": {"w":48,"h":36}
+},
+{
+	"filename": "archaeologist_Spawn4.png",
+	"frame": {"x":90,"y":174,"w":3,"h":3},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":3,"h":3},
+	"sourceSize": {"w":1,"h":1}
+},
+{
+	"filename": "archaeologist_Spawn5.png",
+	"frame": {"x":90,"y":174,"w":3,"h":3},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":3,"h":3},
+	"sourceSize": {"w":1,"h":1}
+},
+{
+	"filename": "archaeologist_Spawn6.png",
+	"frame": {"x":1,"y":39,"w":48,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":48,"h":36},
+	"sourceSize": {"w":48,"h":36}
+},
+{
+	"filename": "archaeologist_Spawn7.png",
+	"frame": {"x":51,"y":1,"w":48,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":48,"h":35},
+	"sourceSize": {"w":48,"h":35}
+},
+{
+	"filename": "archaeologist_Spawn8.png",
+	"frame": {"x":1,"y":113,"w":47,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":47,"h":35},
+	"sourceSize": {"w":47,"h":35}
+},
+{
+	"filename": "archaeologist_Spawn9.png",
+	"frame": {"x":101,"y":36,"w":47,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":47,"h":35},
+	"sourceSize": {"w":47,"h":35}
+},
+{
+	"filename": "archaeologist_Spawn10.png",
+	"frame": {"x":51,"y":74,"w":46,"h":34},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":46,"h":34},
+	"sourceSize": {"w":46,"h":34}
+},
+{
+	"filename": "archaeologist_Spawn11.png",
+	"frame": {"x":1,"y":150,"w":46,"h":34},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":46,"h":34},
+	"sourceSize": {"w":46,"h":34}
+},
+{
+	"filename": "archaeologist_Spawn12.png",
+	"frame": {"x":1,"y":186,"w":46,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":46,"h":33},
+	"sourceSize": {"w":46,"h":33}
+},
+{
+	"filename": "archaeologist_Spawn13.png",
+	"frame": {"x":1,"y":221,"w":45,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":45,"h":33},
+	"sourceSize": {"w":45,"h":33}
+},
+{
+	"filename": "archaeologist_Spawn14.png",
+	"frame": {"x":1,"y":256,"w":45,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":45,"h":32},
+	"sourceSize": {"w":45,"h":32}
+},
+{
+	"filename": "archaeologist_Spawn15.png",
+	"frame": {"x":252,"y":1,"w":44,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":32},
+	"sourceSize": {"w":44,"h":32}
+},
+{
+	"filename": "archaeologist_Spawn16.png",
+	"frame": {"x":298,"y":1,"w":43,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":32},
+	"sourceSize": {"w":43,"h":32}
+},
+{
+	"filename": "archaeologist_Spawn17.png",
+	"frame": {"x":435,"y":51,"w":43,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":31},
+	"sourceSize": {"w":43,"h":31}
+},
+{
+	"filename": "archaeologist_Spawn18.png",
+	"frame": {"x":51,"y":110,"w":43,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":31},
+	"sourceSize": {"w":43,"h":31}
+},
+{
+	"filename": "archaeologist_Spawn19.png",
+	"frame": {"x":1,"y":290,"w":42,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":30},
+	"sourceSize": {"w":42,"h":30}
+},
+{
+	"filename": "archaeologist_Spawn20.png",
+	"frame": {"x":45,"y":290,"w":42,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":30},
+	"sourceSize": {"w":42,"h":30}
+},
+{
+	"filename": "archaeologist_Spawn21.png",
+	"frame": {"x":99,"y":98,"w":41,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":29},
+	"sourceSize": {"w":41,"h":29}
+},
+{
+	"filename": "archaeologist_Spawn22.png",
+	"frame": {"x":96,"y":129,"w":41,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":29},
+	"sourceSize": {"w":41,"h":29}
+},
+{
+	"filename": "archaeologist_Spawn23.png",
+	"frame": {"x":95,"y":160,"w":41,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":29},
+	"sourceSize": {"w":41,"h":29}
+},
+{
+	"filename": "archaeologist_Spawn24.png",
+	"frame": {"x":90,"y":230,"w":41,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":29},
+	"sourceSize": {"w":41,"h":29}
+},
+{
+	"filename": "archaeologist_Spawn25.png",
+	"frame": {"x":176,"y":105,"w":41,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":29},
+	"sourceSize": {"w":41,"h":29}
+},
+{
+	"filename": "archaeologist_Spawn26.png",
+	"frame": {"x":173,"y":136,"w":41,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":29},
+	"sourceSize": {"w":41,"h":29}
+},
+{
+	"filename": "archaeologist_Spawn27.png",
+	"frame": {"x":172,"y":167,"w":41,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":29},
+	"sourceSize": {"w":41,"h":29}
+},
+{
+	"filename": "archaeologist_Spawn28.png",
+	"frame": {"x":248,"y":66,"w":41,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":29},
+	"sourceSize": {"w":41,"h":29}
+},
+{
+	"filename": "archaeologist_Spawn29.png",
+	"frame": {"x":291,"y":70,"w":41,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":29},
+	"sourceSize": {"w":41,"h":29}
+},
+{
+	"filename": "archaeologist_Spawn30.png",
+	"frame": {"x":248,"y":97,"w":41,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":29},
+	"sourceSize": {"w":41,"h":29}
+},
+{
+	"filename": "archaeologist_Spawn31.png",
+	"frame": {"x":291,"y":101,"w":41,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":29},
+	"sourceSize": {"w":41,"h":29}
+},
+{
+	"filename": "archaeologist_Spawn32.png",
+	"frame": {"x":248,"y":128,"w":41,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":29},
+	"sourceSize": {"w":41,"h":29}
+},
+{
+	"filename": "archaeologist_Spawn33.png",
+	"frame": {"x":291,"y":132,"w":41,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":29},
+	"sourceSize": {"w":41,"h":29}
+},
+{
+	"filename": "archaeologist_Spawn34.png",
+	"frame": {"x":248,"y":159,"w":41,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":29},
+	"sourceSize": {"w":41,"h":29}
+},
+{
+	"filename": "archaeologist_Spawn35.png",
+	"frame": {"x":248,"y":159,"w":41,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":29},
+	"sourceSize": {"w":41,"h":29}
+},
+{
+	"filename": "archaeologist_Spawn36.png",
+	"frame": {"x":247,"y":225,"w":40,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":28},
+	"sourceSize": {"w":40,"h":28}
+},
+{
+	"filename": "archaeologist_Spawn37.png",
+	"frame": {"x":50,"y":143,"w":43,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":29},
+	"sourceSize": {"w":43,"h":29}
+},
+{
+	"filename": "archaeologist_Spawn38.png",
+	"frame": {"x":50,"y":143,"w":43,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":29},
+	"sourceSize": {"w":43,"h":29}
+},
+{
+	"filename": "archaeologist_Spawn39.png",
+	"frame": {"x":248,"y":35,"w":42,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":29},
+	"sourceSize": {"w":42,"h":29}
+},
+{
+	"filename": "archaeologist_Spawn40.png",
+	"frame": {"x":248,"y":35,"w":42,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":29},
+	"sourceSize": {"w":42,"h":29}
+},
+{
+	"filename": "archaeologist_Spawn41.png",
+	"frame": {"x":444,"y":24,"w":44,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":25},
+	"sourceSize": {"w":44,"h":25}
+},
+{
+	"filename": "archaeologist_Spawn42.png",
+	"frame": {"x":444,"y":24,"w":44,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":25},
+	"sourceSize": {"w":44,"h":25}
+},
+{
+	"filename": "archaeologist_Spawn43.png",
+	"frame": {"x":1,"y":77,"w":48,"h":34},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":48,"h":34},
+	"sourceSize": {"w":48,"h":34}
+},
+{
+	"filename": "archaeologist_Spawn44.png",
+	"frame": {"x":101,"y":1,"w":49,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":49,"h":33},
+	"sourceSize": {"w":49,"h":33}
+},
+{
+	"filename": "archaeologist_Spawn45.png",
+	"frame": {"x":101,"y":1,"w":49,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":49,"h":33},
+	"sourceSize": {"w":49,"h":33}
+},
+{
+	"filename": "archaeologist_Spawn46.png",
+	"frame": {"x":152,"y":1,"w":49,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":49,"h":32},
+	"sourceSize": {"w":49,"h":32}
+},
+{
+	"filename": "archaeologist_Spawn47.png",
+	"frame": {"x":152,"y":1,"w":49,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":49,"h":32},
+	"sourceSize": {"w":49,"h":32}
+},
+{
+	"filename": "archaeologist_Spawn48.png",
+	"frame": {"x":51,"y":38,"w":48,"h":34},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":48,"h":34},
+	"sourceSize": {"w":48,"h":34}
+},
+{
+	"filename": "archaeologist_Spawn49.png",
+	"frame": {"x":294,"y":255,"w":37,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":26},
+	"sourceSize": {"w":37,"h":26}
+},
+{
+	"filename": "archaeologist_Spawn50.png",
+	"frame": {"x":294,"y":255,"w":37,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":26},
+	"sourceSize": {"w":37,"h":26}
+},
+{
+	"filename": "archaeologist_Spawn51.png",
+	"frame": {"x":334,"y":91,"w":34,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":29},
+	"sourceSize": {"w":34,"h":29}
+},
+{
+	"filename": "archaeologist_Spawn52.png",
+	"frame": {"x":333,"y":274,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Spawn53.png",
+	"frame": {"x":333,"y":274,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Spawn54.png",
+	"frame": {"x":333,"y":274,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Spawn55.png",
+	"frame": {"x":333,"y":274,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29}
+},
+{
+	"filename": "archaeologist_Vententer1.png",
+	"frame": {"x":216,"y":143,"w":30,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":29},
+	"sourceSize": {"w":30,"h":29}
+},
+{
+	"filename": "archaeologist_Vententer2.png",
+	"frame": {"x":369,"y":197,"w":34,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":27},
+	"sourceSize": {"w":34,"h":27}
+},
+{
+	"filename": "archaeologist_Vententer3.png",
+	"frame": {"x":335,"y":63,"w":37,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":26},
+	"sourceSize": {"w":37,"h":26}
+},
+{
+	"filename": "archaeologist_Vententer4.png",
+	"frame": {"x":335,"y":63,"w":37,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":26},
+	"sourceSize": {"w":37,"h":26}
+},
+{
+	"filename": "archaeologist_Vententer5.png",
+	"frame": {"x":335,"y":63,"w":37,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":26},
+	"sourceSize": {"w":37,"h":26}
+},
+{
+	"filename": "archaeologist_Vententer6.png",
+	"frame": {"x":374,"y":77,"w":37,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":26},
+	"sourceSize": {"w":37,"h":26}
+},
+{
+	"filename": "archaeologist_Vententer7.png",
+	"frame": {"x":252,"y":283,"w":36,"h":16},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":16},
+	"sourceSize": {"w":36,"h":16}
+},
+{
+	"filename": "archaeologist_Walk1.png",
+	"frame": {"x":343,"y":34,"w":44,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":27},
+	"sourceSize": {"w":44,"h":27}
+},
+{
+	"filename": "archaeologist_Walk2.png",
+	"frame": {"x":343,"y":34,"w":44,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":27},
+	"sourceSize": {"w":44,"h":27}
+},
+{
+	"filename": "archaeologist_Walk3.png",
+	"frame": {"x":343,"y":34,"w":44,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":27},
+	"sourceSize": {"w":44,"h":27}
+},
+{
+	"filename": "archaeologist_Walk4.png",
+	"frame": {"x":343,"y":34,"w":44,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":27},
+	"sourceSize": {"w":44,"h":27}
+},
+{
+	"filename": "archaeologist_Walk5.png",
+	"frame": {"x":367,"y":287,"w":33,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":28},
+	"sourceSize": {"w":33,"h":28}
+},
+{
+	"filename": "archaeologist_Walk6.png",
+	"frame": {"x":367,"y":287,"w":33,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":28},
+	"sourceSize": {"w":33,"h":28}
+},
+{
+	"filename": "archaeologist_Walk7.png",
+	"frame": {"x":289,"y":223,"w":40,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":30},
+	"sourceSize": {"w":40,"h":30}
+},
+{
+	"filename": "archaeologist_Walk8.png",
+	"frame": {"x":289,"y":223,"w":40,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":30},
+	"sourceSize": {"w":40,"h":30}
+},
+{
+	"filename": "archaeologist_Walk9.png",
+	"frame": {"x":289,"y":223,"w":40,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":30},
+	"sourceSize": {"w":40,"h":30}
+},
+{
+	"filename": "archaeologist_Walk10.png",
+	"frame": {"x":289,"y":223,"w":40,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":30},
+	"sourceSize": {"w":40,"h":30}
+},
+{
+	"filename": "archaeologist_Walk11.png",
+	"frame": {"x":168,"y":35,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_Walk12.png",
+	"frame": {"x":168,"y":35,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_WalkMirror1.png",
+	"frame": {"x":389,"y":48,"w":44,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":27},
+	"sourceSize": {"w":44,"h":27}
+},
+{
+	"filename": "archaeologist_WalkMirror2.png",
+	"frame": {"x":389,"y":48,"w":44,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":27},
+	"sourceSize": {"w":44,"h":27}
+},
+{
+	"filename": "archaeologist_WalkMirror3.png",
+	"frame": {"x":389,"y":48,"w":44,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":27},
+	"sourceSize": {"w":44,"h":27}
+},
+{
+	"filename": "archaeologist_WalkMirror4.png",
+	"frame": {"x":389,"y":48,"w":44,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":27},
+	"sourceSize": {"w":44,"h":27}
+},
+{
+	"filename": "archaeologist_WalkMirror5.png",
+	"frame": {"x":405,"y":197,"w":33,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":28},
+	"sourceSize": {"w":33,"h":28}
+},
+{
+	"filename": "archaeologist_WalkMirror6.png",
+	"frame": {"x":405,"y":197,"w":33,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":28},
+	"sourceSize": {"w":33,"h":28}
+},
+{
+	"filename": "archaeologist_WalkMirror7.png",
+	"frame": {"x":289,"y":190,"w":40,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":31},
+	"sourceSize": {"w":40,"h":31}
+},
+{
+	"filename": "archaeologist_WalkMirror8.png",
+	"frame": {"x":289,"y":190,"w":40,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":31},
+	"sourceSize": {"w":40,"h":31}
+},
+{
+	"filename": "archaeologist_WalkMirror9.png",
+	"frame": {"x":289,"y":190,"w":40,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":31},
+	"sourceSize": {"w":40,"h":31}
+},
+{
+	"filename": "archaeologist_WalkMirror10.png",
+	"frame": {"x":89,"y":288,"w":40,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":31},
+	"sourceSize": {"w":40,"h":31}
+},
+{
+	"filename": "archaeologist_WalkMirror11.png",
+	"frame": {"x":334,"y":122,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+},
+{
+	"filename": "archaeologist_WalkMirror12.png",
+	"frame": {"x":334,"y":122,"w":33,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":30},
+	"sourceSize": {"w":33,"h":30}
+}],
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "archaeologist.png",
+	"format": "RGBA8888",
+	"size": {"w":512,"h":321},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:4f8c14bf6b4fc3a6a344875a49a44ac5:1af6dabc3259fae071915c561386b168:a39c919449638c78e00ec1e1f331964c$"
+}
+}

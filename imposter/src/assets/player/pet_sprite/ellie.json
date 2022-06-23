@@ -2,395 +2,395 @@
 
 {
 	"filename": "ellie_idle1.png",
-	"frame": {"x":323,"y":1,"w":56,"h":127},
+	"frame": {"x":45,"y":1,"w":15,"h":32},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":56,"h":127},
-	"sourceSize": {"w":58,"h":129}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":32},
+	"sourceSize": {"w":15,"h":32}
 },
 {
 	"filename": "ellie_idle2.png",
-	"frame": {"x":323,"y":1,"w":56,"h":127},
+	"frame": {"x":45,"y":1,"w":15,"h":32},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":56,"h":127},
-	"sourceSize": {"w":58,"h":129}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":32},
+	"sourceSize": {"w":15,"h":32}
 },
 {
 	"filename": "ellie_idle3.png",
-	"frame": {"x":323,"y":1,"w":56,"h":127},
+	"frame": {"x":45,"y":1,"w":15,"h":32},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":56,"h":127},
-	"sourceSize": {"w":58,"h":129}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":32},
+	"sourceSize": {"w":15,"h":32}
 },
 {
 	"filename": "ellie_idle4.png",
-	"frame": {"x":323,"y":1,"w":56,"h":127},
+	"frame": {"x":45,"y":1,"w":15,"h":32},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":56,"h":127},
-	"sourceSize": {"w":58,"h":129}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":32},
+	"sourceSize": {"w":15,"h":32}
 },
 {
 	"filename": "ellie_idle5.png",
-	"frame": {"x":323,"y":1,"w":56,"h":127},
+	"frame": {"x":45,"y":1,"w":15,"h":32},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":56,"h":127},
-	"sourceSize": {"w":58,"h":129}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":32},
+	"sourceSize": {"w":15,"h":32}
 },
 {
 	"filename": "ellie_idle6.png",
-	"frame": {"x":323,"y":1,"w":56,"h":127},
+	"frame": {"x":45,"y":1,"w":15,"h":32},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":56,"h":127},
-	"sourceSize": {"w":58,"h":129}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":32},
+	"sourceSize": {"w":15,"h":32}
 },
 {
 	"filename": "ellie_idle7.png",
-	"frame": {"x":323,"y":1,"w":56,"h":127},
+	"frame": {"x":45,"y":1,"w":15,"h":32},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":56,"h":127},
-	"sourceSize": {"w":58,"h":129}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":32},
+	"sourceSize": {"w":15,"h":32}
 },
 {
 	"filename": "ellie_idle8.png",
-	"frame": {"x":439,"y":1,"w":61,"h":126},
+	"frame": {"x":24,"y":36,"w":16,"h":32},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":61,"h":126},
-	"sourceSize": {"w":63,"h":128}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":32},
+	"sourceSize": {"w":16,"h":32}
 },
 {
 	"filename": "ellie_idle9.png",
-	"frame": {"x":145,"y":132,"w":74,"h":118},
+	"frame": {"x":24,"y":70,"w":19,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":74,"h":118},
-	"sourceSize": {"w":75,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":30},
+	"sourceSize": {"w":19,"h":30}
 },
 {
 	"filename": "ellie_idle10.png",
-	"frame": {"x":145,"y":132,"w":74,"h":118},
+	"frame": {"x":24,"y":70,"w":19,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":74,"h":118},
-	"sourceSize": {"w":75,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":30},
+	"sourceSize": {"w":19,"h":30}
 },
 {
 	"filename": "ellie_idle11.png",
-	"frame": {"x":221,"y":132,"w":74,"h":118},
+	"frame": {"x":42,"y":36,"w":19,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":74,"h":118},
-	"sourceSize": {"w":75,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":30},
+	"sourceSize": {"w":19,"h":30}
 },
 {
 	"filename": "ellie_idle12.png",
-	"frame": {"x":221,"y":132,"w":74,"h":118},
+	"frame": {"x":42,"y":36,"w":19,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":74,"h":118},
-	"sourceSize": {"w":75,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":30},
+	"sourceSize": {"w":19,"h":30}
 },
 {
 	"filename": "ellie_idle13.png",
-	"frame": {"x":297,"y":132,"w":74,"h":118},
+	"frame": {"x":1,"y":127,"w":19,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":74,"h":118},
-	"sourceSize": {"w":75,"h":120}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":30},
+	"sourceSize": {"w":19,"h":30}
 },
 {
 	"filename": "ellie_idle14.png",
-	"frame": {"x":297,"y":132,"w":74,"h":118},
+	"frame": {"x":1,"y":127,"w":19,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":74,"h":118},
-	"sourceSize": {"w":75,"h":120}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":30},
+	"sourceSize": {"w":19,"h":30}
 },
 {
 	"filename": "ellie_idle15.png",
-	"frame": {"x":221,"y":132,"w":74,"h":118},
+	"frame": {"x":42,"y":36,"w":19,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":74,"h":118},
-	"sourceSize": {"w":75,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":30},
+	"sourceSize": {"w":19,"h":30}
 },
 {
 	"filename": "ellie_idle16.png",
-	"frame": {"x":221,"y":132,"w":74,"h":118},
+	"frame": {"x":42,"y":36,"w":19,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":74,"h":118},
-	"sourceSize": {"w":75,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":30},
+	"sourceSize": {"w":19,"h":30}
 },
 {
 	"filename": "ellie_idle17.png",
-	"frame": {"x":145,"y":132,"w":74,"h":118},
+	"frame": {"x":24,"y":70,"w":19,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":74,"h":118},
-	"sourceSize": {"w":75,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":30},
+	"sourceSize": {"w":19,"h":30}
 },
 {
 	"filename": "ellie_idle18.png",
-	"frame": {"x":145,"y":132,"w":74,"h":118},
+	"frame": {"x":24,"y":70,"w":19,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":74,"h":118},
-	"sourceSize": {"w":75,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":30},
+	"sourceSize": {"w":19,"h":30}
 },
 {
 	"filename": "ellie_idle19.png",
-	"frame": {"x":221,"y":132,"w":74,"h":118},
+	"frame": {"x":42,"y":36,"w":19,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":74,"h":118},
-	"sourceSize": {"w":75,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":30},
+	"sourceSize": {"w":19,"h":30}
 },
 {
 	"filename": "ellie_idle20.png",
-	"frame": {"x":221,"y":132,"w":74,"h":118},
+	"frame": {"x":42,"y":36,"w":19,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":74,"h":118},
-	"sourceSize": {"w":75,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":30},
+	"sourceSize": {"w":19,"h":30}
 },
 {
 	"filename": "ellie_idle21.png",
-	"frame": {"x":297,"y":132,"w":74,"h":118},
+	"frame": {"x":1,"y":127,"w":19,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":74,"h":118},
-	"sourceSize": {"w":75,"h":120}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":30},
+	"sourceSize": {"w":19,"h":30}
 },
 {
 	"filename": "ellie_idle22.png",
-	"frame": {"x":297,"y":132,"w":74,"h":118},
+	"frame": {"x":1,"y":127,"w":19,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":74,"h":118},
-	"sourceSize": {"w":75,"h":120}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":30},
+	"sourceSize": {"w":19,"h":30}
 },
 {
 	"filename": "ellie_idle23.png",
-	"frame": {"x":221,"y":132,"w":74,"h":118},
+	"frame": {"x":42,"y":36,"w":19,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":74,"h":118},
-	"sourceSize": {"w":75,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":30},
+	"sourceSize": {"w":19,"h":30}
 },
 {
 	"filename": "ellie_idle24.png",
-	"frame": {"x":221,"y":132,"w":74,"h":118},
+	"frame": {"x":42,"y":36,"w":19,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":74,"h":118},
-	"sourceSize": {"w":75,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":30},
+	"sourceSize": {"w":19,"h":30}
 },
 {
 	"filename": "ellie_idle25.png",
-	"frame": {"x":145,"y":132,"w":74,"h":118},
+	"frame": {"x":24,"y":70,"w":19,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":74,"h":118},
-	"sourceSize": {"w":75,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":30},
+	"sourceSize": {"w":19,"h":30}
 },
 {
 	"filename": "ellie_idle26.png",
-	"frame": {"x":145,"y":132,"w":74,"h":118},
+	"frame": {"x":24,"y":70,"w":19,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":74,"h":118},
-	"sourceSize": {"w":75,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":30},
+	"sourceSize": {"w":19,"h":30}
 },
 {
 	"filename": "ellie_idle27.png",
-	"frame": {"x":221,"y":132,"w":74,"h":118},
+	"frame": {"x":42,"y":36,"w":19,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":74,"h":118},
-	"sourceSize": {"w":75,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":30},
+	"sourceSize": {"w":19,"h":30}
 },
 {
 	"filename": "ellie_idle28.png",
-	"frame": {"x":221,"y":132,"w":74,"h":118},
+	"frame": {"x":42,"y":36,"w":19,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":74,"h":118},
-	"sourceSize": {"w":75,"h":119}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":30},
+	"sourceSize": {"w":19,"h":30}
 },
 {
 	"filename": "ellie_idle29.png",
-	"frame": {"x":297,"y":132,"w":74,"h":118},
+	"frame": {"x":1,"y":127,"w":19,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":74,"h":118},
-	"sourceSize": {"w":75,"h":120}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":30},
+	"sourceSize": {"w":19,"h":30}
 },
 {
 	"filename": "ellie_idle30.png",
-	"frame": {"x":297,"y":132,"w":74,"h":118},
+	"frame": {"x":1,"y":127,"w":19,"h":30},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":74,"h":118},
-	"sourceSize": {"w":75,"h":120}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":30},
+	"sourceSize": {"w":19,"h":30}
 },
 {
 	"filename": "ellie_idle31.png",
-	"frame": {"x":439,"y":1,"w":61,"h":126},
+	"frame": {"x":24,"y":36,"w":16,"h":32},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":61,"h":126},
-	"sourceSize": {"w":63,"h":128}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":32},
+	"sourceSize": {"w":16,"h":32}
 },
 {
 	"filename": "ellie_idle32.png",
-	"frame": {"x":323,"y":1,"w":56,"h":127},
+	"frame": {"x":45,"y":1,"w":15,"h":32},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":56,"h":127},
-	"sourceSize": {"w":58,"h":129}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":32},
+	"sourceSize": {"w":15,"h":32}
 },
 {
 	"filename": "ellie_idle33.png",
-	"frame": {"x":323,"y":1,"w":56,"h":127},
+	"frame": {"x":45,"y":1,"w":15,"h":32},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":56,"h":127},
-	"sourceSize": {"w":58,"h":129}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":32},
+	"sourceSize": {"w":15,"h":32}
 },
 {
 	"filename": "ellie_idle34.png",
-	"frame": {"x":323,"y":1,"w":56,"h":127},
+	"frame": {"x":45,"y":1,"w":15,"h":32},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":56,"h":127},
-	"sourceSize": {"w":58,"h":129}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":32},
+	"sourceSize": {"w":15,"h":32}
 },
 {
 	"filename": "ellie_sad.png",
-	"frame": {"x":431,"y":130,"w":121,"h":64},
+	"frame": {"x":1,"y":108,"w":31,"h":17},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":121,"h":64},
-	"sourceSize": {"w":123,"h":66}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":17},
+	"sourceSize": {"w":31,"h":17}
 },
 {
 	"filename": "ellie_scared1.png",
-	"frame": {"x":77,"y":1,"w":80,"h":129},
+	"frame": {"x":1,"y":38,"w":21,"h":33},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":80,"h":129},
-	"sourceSize": {"w":82,"h":130}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":21,"h":33},
+	"sourceSize": {"w":21,"h":33}
 },
 {
 	"filename": "ellie_scared2.png",
-	"frame": {"x":159,"y":1,"w":80,"h":129},
+	"frame": {"x":22,"y":1,"w":21,"h":33},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":80,"h":129},
-	"sourceSize": {"w":82,"h":130}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":21,"h":33},
+	"sourceSize": {"w":21,"h":33}
 },
 {
 	"filename": "ellie_scared3.png",
-	"frame": {"x":77,"y":1,"w":80,"h":129},
+	"frame": {"x":1,"y":38,"w":21,"h":33},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":80,"h":129},
-	"sourceSize": {"w":82,"h":130}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":21,"h":33},
+	"sourceSize": {"w":21,"h":33}
 },
 {
 	"filename": "ellie_scared4.png",
-	"frame": {"x":241,"y":1,"w":80,"h":129},
+	"frame": {"x":1,"y":73,"w":21,"h":33},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":80,"h":129},
-	"sourceSize": {"w":82,"h":131}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":21,"h":33},
+	"sourceSize": {"w":21,"h":33}
 },
 {
 	"filename": "ellie_walk1.png",
-	"frame": {"x":75,"y":140,"w":68,"h":109},
+	"frame": {"x":43,"y":136,"w":17,"h":28},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":68,"h":109},
-	"sourceSize": {"w":69,"h":111}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":17,"h":28},
+	"sourceSize": {"w":17,"h":28}
 },
 {
 	"filename": "ellie_walk2.png",
-	"frame": {"x":75,"y":140,"w":68,"h":109},
+	"frame": {"x":43,"y":136,"w":17,"h":28},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":68,"h":109},
-	"sourceSize": {"w":69,"h":111}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":17,"h":28},
+	"sourceSize": {"w":17,"h":28}
 },
 {
 	"filename": "ellie_walk3.png",
-	"frame": {"x":1,"y":140,"w":72,"h":111},
+	"frame": {"x":22,"y":136,"w":19,"h":28},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":72,"h":111},
-	"sourceSize": {"w":74,"h":113}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":28},
+	"sourceSize": {"w":19,"h":28}
 },
 {
 	"filename": "ellie_walk4.png",
-	"frame": {"x":1,"y":140,"w":72,"h":111},
+	"frame": {"x":22,"y":136,"w":19,"h":28},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":72,"h":111},
-	"sourceSize": {"w":74,"h":113}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":28},
+	"sourceSize": {"w":19,"h":28}
 },
 {
 	"filename": "ellie_walk5.png",
-	"frame": {"x":1,"y":140,"w":72,"h":111},
+	"frame": {"x":22,"y":136,"w":19,"h":28},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":72,"h":111},
-	"sourceSize": {"w":74,"h":113}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":28},
+	"sourceSize": {"w":19,"h":28}
 },
 {
 	"filename": "ellie_walk6.png",
-	"frame": {"x":1,"y":1,"w":74,"h":137},
+	"frame": {"x":1,"y":1,"w":19,"h":35},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":74,"h":137},
-	"sourceSize": {"w":76,"h":139}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":35},
+	"sourceSize": {"w":19,"h":35}
 },
 {
 	"filename": "ellie_walk7.png",
-	"frame": {"x":381,"y":1,"w":56,"h":127},
+	"frame": {"x":34,"y":102,"w":15,"h":32},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":56,"h":127},
-	"sourceSize": {"w":58,"h":129}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":32},
+	"sourceSize": {"w":15,"h":32}
 },
 {
 	"filename": "ellie_walk8.png",
-	"frame": {"x":373,"y":130,"w":56,"h":122},
+	"frame": {"x":45,"y":68,"w":15,"h":31},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":56,"h":122},
-	"sourceSize": {"w":58,"h":124}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":31},
+	"sourceSize": {"w":15,"h":31}
 },
 {
 	"filename": "ellie_walk9.png",
-	"frame": {"x":373,"y":130,"w":56,"h":122},
+	"frame": {"x":45,"y":68,"w":15,"h":31},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":56,"h":122},
-	"sourceSize": {"w":58,"h":124}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":31},
+	"sourceSize": {"w":15,"h":31}
 }],
 "meta": {
 	"app": "https://www.codeandweb.com/texturepacker",
 	"version": "1.0",
 	"image": "ellie.png",
 	"format": "RGBA8888",
-	"size": {"w":553,"h":253},
+	"size": {"w":62,"h":165},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:7e24191ee68ea046fac5109fc2fdf58f:34016c0ec8873475409955c9e0a8bca9:29f61915e130873c42867027cc7d692b$"
+	"smartupdate": "$TexturePacker:SmartUpdate:035dd30a3feec1718c1e48eec8c35297:8cfb2c3ba991b64444acadbae2175c94:29f61915e130873c42867027cc7d692b$"
 }
 }

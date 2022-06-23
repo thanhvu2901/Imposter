@@ -9,6 +9,8 @@ export const SHIP_WIDTH = 4320;
 export const SHIP_HEIGHT = 2502;
 
 //Player colors
+export const PLAYER_GHOST = "player_ghost"
+export const PLAYER_BASE = "player_base";
 export const PLAYER_BLUE = "player_base_blue";
 export const PLAYER_RED = "player_base_red";
 export const PLAYER_BLUE_DARK = "player_base_blue_dark";
@@ -22,6 +24,36 @@ export const PLAYER_PURPLE = "player_base_purple";
 export const PLAYER_YELLOW = "player_base_yellow";
 export const PLAYER_PINK = "player_base_pink";
 
+//Pants skins
+//With Mirror
+export const POLICE = "police";
+export const ARCHAEOLOGIST = "archaeologist";
+export const SECGUARD = "secguard";
+export const WALL = "wall";
+export const CCC = "ccc";
+
+//Without Mirror
+export const HAZMAT = "hazmat";
+export const WINTERJACKET = "winterjacket";
+export const TARMAC = "tarmac";
+export const MILITARY = "military";
+export const SUITBLACK = "suitblack";
+export const ASTRONAUT = "astronaut";
+export const CAPTAIN = "captain";
+export const SCIENTIST = "scientist";
+export const MECHANIC = "mechanic";
+export const SUITWHITE = "suitwhite";
+
 //Pets
+export const BEDCRAB = "bedcrab"
 export const BSLUG = "bslug";
+export const CREWMIN = "crewmin"
+export const DOG = "dog"
+export const ELLIE = "ellie"
+export const HAMPSTER = "hampster"
+export const ROBIT = "robit"
+export const SQUIG = "squig"
+export const STICKMIN = "stickmin";
+export const TWITCH = "twitch";
+export const UFO = "ufo";
  

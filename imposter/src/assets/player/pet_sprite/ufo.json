@@ -1,156 +1,780 @@
 {"frames": [
 
 {
-	"filename": "ufo_walk1.png",
-	"frame": {"x":741,"y":1,"w":146,"h":82},
+	"filename": "ufo_idle1.png",
+	"frame": {"x":1,"y":1,"w":37,"h":21},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":146,"h":82},
-	"sourceSize": {"w":147,"h":84}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle2.png",
+	"frame": {"x":1,"y":1,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle3.png",
+	"frame": {"x":430,"y":1,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle4.png",
+	"frame": {"x":157,"y":24,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle5.png",
+	"frame": {"x":118,"y":1,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle6.png",
+	"frame": {"x":118,"y":1,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle7.png",
+	"frame": {"x":235,"y":24,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle8.png",
+	"frame": {"x":235,"y":24,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle9.png",
+	"frame": {"x":274,"y":24,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle10.png",
+	"frame": {"x":40,"y":1,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle11.png",
+	"frame": {"x":79,"y":1,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle12.png",
+	"frame": {"x":1,"y":1,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle13.png",
+	"frame": {"x":118,"y":1,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle14.png",
+	"frame": {"x":157,"y":1,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle15.png",
+	"frame": {"x":196,"y":1,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle16.png",
+	"frame": {"x":235,"y":1,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle17.png",
+	"frame": {"x":235,"y":1,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle18.png",
+	"frame": {"x":235,"y":1,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle19.png",
+	"frame": {"x":274,"y":1,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle20.png",
+	"frame": {"x":313,"y":1,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle21.png",
+	"frame": {"x":274,"y":1,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle22.png",
+	"frame": {"x":352,"y":1,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle23.png",
+	"frame": {"x":352,"y":1,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle24.png",
+	"frame": {"x":352,"y":1,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle25.png",
+	"frame": {"x":235,"y":1,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle26.png",
+	"frame": {"x":391,"y":1,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle27.png",
+	"frame": {"x":235,"y":1,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle28.png",
+	"frame": {"x":274,"y":1,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle29.png",
+	"frame": {"x":274,"y":1,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle30.png",
+	"frame": {"x":274,"y":1,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle31.png",
+	"frame": {"x":196,"y":1,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle32.png",
+	"frame": {"x":157,"y":1,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle33.png",
+	"frame": {"x":118,"y":1,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle34.png",
+	"frame": {"x":469,"y":1,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle35.png",
+	"frame": {"x":1,"y":24,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle36.png",
+	"frame": {"x":40,"y":24,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle37.png",
+	"frame": {"x":79,"y":24,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle38.png",
+	"frame": {"x":118,"y":24,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle39.png",
+	"frame": {"x":118,"y":24,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle40.png",
+	"frame": {"x":118,"y":1,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle41.png",
+	"frame": {"x":118,"y":1,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle42.png",
+	"frame": {"x":157,"y":24,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle43.png",
+	"frame": {"x":196,"y":24,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle44.png",
+	"frame": {"x":469,"y":1,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_idle45.png",
+	"frame": {"x":469,"y":1,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_sad1.png",
+	"frame": {"x":313,"y":24,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_sad2.png",
+	"frame": {"x":157,"y":47,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_sad3.png",
+	"frame": {"x":352,"y":47,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_sad4.png",
+	"frame": {"x":391,"y":47,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_sad5.png",
+	"frame": {"x":430,"y":47,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_sad6.png",
+	"frame": {"x":469,"y":47,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_sad7.png",
+	"frame": {"x":1,"y":70,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_sad8.png",
+	"frame": {"x":40,"y":70,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_sad9.png",
+	"frame": {"x":79,"y":70,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_sad10.png",
+	"frame": {"x":352,"y":24,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_sad11.png",
+	"frame": {"x":391,"y":24,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_sad12.png",
+	"frame": {"x":430,"y":24,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_sad13.png",
+	"frame": {"x":469,"y":24,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_sad14.png",
+	"frame": {"x":1,"y":47,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_sad15.png",
+	"frame": {"x":40,"y":47,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_sad16.png",
+	"frame": {"x":79,"y":47,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_sad17.png",
+	"frame": {"x":118,"y":47,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_sad18.png",
+	"frame": {"x":118,"y":47,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_sad19.png",
+	"frame": {"x":118,"y":47,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_sad20.png",
+	"frame": {"x":118,"y":47,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_sad21.png",
+	"frame": {"x":196,"y":47,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_sad22.png",
+	"frame": {"x":235,"y":47,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_sad23.png",
+	"frame": {"x":274,"y":47,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_sad24.png",
+	"frame": {"x":313,"y":47,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_sad25.png",
+	"frame": {"x":313,"y":24,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
+},
+{
+	"filename": "ufo_scared1.png",
+	"frame": {"x":313,"y":70,"w":35,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":24},
+	"sourceSize": {"w":35,"h":24}
+},
+{
+	"filename": "ufo_scared2.png",
+	"frame": {"x":313,"y":70,"w":35,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":24},
+	"sourceSize": {"w":35,"h":24}
+},
+{
+	"filename": "ufo_scared3.png",
+	"frame": {"x":350,"y":70,"w":35,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":24},
+	"sourceSize": {"w":35,"h":24}
+},
+{
+	"filename": "ufo_scared4.png",
+	"frame": {"x":350,"y":70,"w":35,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":24},
+	"sourceSize": {"w":35,"h":24}
+},
+{
+	"filename": "ufo_scared5.png",
+	"frame": {"x":313,"y":70,"w":35,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":24},
+	"sourceSize": {"w":35,"h":24}
+},
+{
+	"filename": "ufo_scared6.png",
+	"frame": {"x":387,"y":70,"w":35,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":24},
+	"sourceSize": {"w":35,"h":24}
+},
+{
+	"filename": "ufo_scared7.png",
+	"frame": {"x":424,"y":70,"w":35,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":24},
+	"sourceSize": {"w":35,"h":24}
+},
+{
+	"filename": "ufo_scared8.png",
+	"frame": {"x":461,"y":70,"w":35,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":24},
+	"sourceSize": {"w":35,"h":24}
+},
+{
+	"filename": "ufo_walk1.png",
+	"frame": {"x":1,"y":1,"w":37,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
 },
 {
 	"filename": "ufo_walk2.png",
-	"frame": {"x":1185,"y":1,"w":146,"h":82},
+	"frame": {"x":79,"y":24,"w":37,"h":21},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":146,"h":82},
-	"sourceSize": {"w":147,"h":84}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
 },
 {
 	"filename": "ufo_walk3.png",
-	"frame": {"x":1333,"y":1,"w":146,"h":82},
+	"frame": {"x":235,"y":70,"w":37,"h":21},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":146,"h":82},
-	"sourceSize": {"w":147,"h":84}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
 },
 {
 	"filename": "ufo_walk4.png",
-	"frame": {"x":445,"y":1,"w":146,"h":83},
+	"frame": {"x":157,"y":70,"w":37,"h":21},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":1,"w":146,"h":83},
-	"sourceSize": {"w":146,"h":85}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
 },
 {
 	"filename": "ufo_walk5.png",
-	"frame": {"x":1481,"y":1,"w":146,"h":82},
+	"frame": {"x":157,"y":24,"w":37,"h":21},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":146,"h":82},
-	"sourceSize": {"w":147,"h":84}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
 },
 {
 	"filename": "ufo_walk6.png",
-	"frame": {"x":149,"y":1,"w":146,"h":83},
+	"frame": {"x":118,"y":70,"w":37,"h":21},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":1,"w":146,"h":83},
-	"sourceSize": {"w":146,"h":85}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
 },
 {
 	"filename": "ufo_walk7.png",
-	"frame": {"x":1629,"y":1,"w":146,"h":82},
+	"frame": {"x":274,"y":70,"w":37,"h":21},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":146,"h":82},
-	"sourceSize": {"w":147,"h":84}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
 },
 {
 	"filename": "ufo_walk8.png",
-	"frame": {"x":1629,"y":1,"w":146,"h":82},
+	"frame": {"x":274,"y":70,"w":37,"h":21},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":146,"h":82},
-	"sourceSize": {"w":147,"h":84}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
 },
 {
 	"filename": "ufo_walk9.png",
-	"frame": {"x":1777,"y":1,"w":146,"h":82},
+	"frame": {"x":391,"y":1,"w":37,"h":21},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":146,"h":82},
-	"sourceSize": {"w":147,"h":84}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
 },
 {
 	"filename": "ufo_walk10.png",
-	"frame": {"x":1,"y":1,"w":146,"h":83},
+	"frame": {"x":274,"y":1,"w":37,"h":21},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":1,"w":146,"h":83},
-	"sourceSize": {"w":146,"h":85}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
 },
 {
 	"filename": "ufo_walk11.png",
-	"frame": {"x":889,"y":1,"w":146,"h":82},
+	"frame": {"x":313,"y":1,"w":37,"h":21},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":146,"h":82},
-	"sourceSize": {"w":147,"h":84}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
 },
 {
 	"filename": "ufo_walk12.png",
-	"frame": {"x":1,"y":1,"w":146,"h":83},
+	"frame": {"x":274,"y":1,"w":37,"h":21},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":1,"w":146,"h":83},
-	"sourceSize": {"w":146,"h":85}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
 },
 {
 	"filename": "ufo_walk13.png",
-	"frame": {"x":149,"y":1,"w":146,"h":83},
+	"frame": {"x":118,"y":70,"w":37,"h":21},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":1,"w":146,"h":83},
-	"sourceSize": {"w":146,"h":85}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
 },
 {
 	"filename": "ufo_walk14.png",
-	"frame": {"x":297,"y":1,"w":146,"h":83},
+	"frame": {"x":118,"y":1,"w":37,"h":21},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":1,"w":146,"h":83},
-	"sourceSize": {"w":146,"h":85}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
 },
 {
 	"filename": "ufo_walk15.png",
-	"frame": {"x":445,"y":1,"w":146,"h":83},
+	"frame": {"x":157,"y":70,"w":37,"h":21},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":1,"w":146,"h":83},
-	"sourceSize": {"w":146,"h":85}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
 },
 {
 	"filename": "ufo_walk16.png",
-	"frame": {"x":1037,"y":1,"w":146,"h":82},
+	"frame": {"x":196,"y":70,"w":37,"h":21},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":146,"h":82},
-	"sourceSize": {"w":147,"h":84}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
 },
 {
 	"filename": "ufo_walk17.png",
-	"frame": {"x":593,"y":1,"w":146,"h":83},
+	"frame": {"x":196,"y":24,"w":37,"h":21},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":1,"w":146,"h":83},
-	"sourceSize": {"w":146,"h":85}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
 },
 {
 	"filename": "ufo_walk18.png",
-	"frame": {"x":741,"y":1,"w":146,"h":82},
+	"frame": {"x":1,"y":1,"w":37,"h":21},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":146,"h":82},
-	"sourceSize": {"w":147,"h":84}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":21},
+	"sourceSize": {"w":37,"h":21}
 }],
 "meta": {
 	"app": "https://www.codeandweb.com/texturepacker",
 	"version": "1.0",
 	"image": "ufo.png",
 	"format": "RGBA8888",
-	"size": {"w":1924,"h":85},
+	"size": {"w":507,"h":95},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:d43f01c54e2c152612981167e18c3a52:2f752fbb408abe64efc5d56631f5f564:9a4865e58023cfbd5f985c000455d470$"
+	"smartupdate": "$TexturePacker:SmartUpdate:96167a6f014a7ba55c9951fac4d22d38:04afde0e078739acff3baadeb3d37c5f:9a4865e58023cfbd5f985c000455d470$"
 }
 }

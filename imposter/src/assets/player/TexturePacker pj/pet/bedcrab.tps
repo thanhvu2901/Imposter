@@ -173,7 +173,11 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_Scared1.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_Scared1.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_Scared2.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_Scared3.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_Scared4.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_Scared5.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -182,13 +186,15 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>22,23,43,45</rect>
+                <rect>6,6,11,11</rect>
                 <key>scale9Paddings</key>
-                <rect>22,23,43,45</rect>
+                <rect>6,6,11,11</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_Scared2.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_Walk1.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_Walk2.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_Walk3.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -197,13 +203,15 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>22,22,44,43</rect>
+                <rect>6,5,11,10</rect>
                 <key>scale9Paddings</key>
-                <rect>22,22,44,43</rect>
+                <rect>6,5,11,10</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_Scared3.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_Walk10.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_Walk11.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_Walk12.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -212,13 +220,15 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>23,22,45,44</rect>
+                <rect>6,5,11,11</rect>
                 <key>scale9Paddings</key>
-                <rect>23,22,45,44</rect>
+                <rect>6,5,11,11</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_Scared4.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_Walk4.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_Walk5.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_Walk6.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -227,13 +237,15 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>22,23,44,46</rect>
+                <rect>6,5,11,9</rect>
                 <key>scale9Paddings</key>
-                <rect>22,23,44,46</rect>
+                <rect>6,5,11,9</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_Scared5.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_Walk7.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_Walk8.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_Walk9.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -242,15 +254,25 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>22,22,43,44</rect>
+                <rect>6,5,12,10</rect>
                 <key>scale9Paddings</key>
-                <rect>22,22,43,44</rect>
+                <rect>6,5,12,10</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_Walk1.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_Walk2.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_Walk3.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_idle1.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_idle2.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_idle23.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_idle24.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_idle25.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_idle26.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_idle27.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_idle3.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_idle4.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_idle5.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_idle6.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_idle7.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_idle8.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -259,15 +281,20 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>23,20,47,40</rect>
+                <rect>7,5,13,10</rect>
                 <key>scale9Paddings</key>
-                <rect>23,20,47,40</rect>
+                <rect>7,5,13,10</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_Walk10.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_Walk11.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_Walk12.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_idle10.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_idle11.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_idle12.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_idle13.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_idle14.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_idle15.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_idle16.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_idle9.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -276,15 +303,18 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>23,21,45,41</rect>
+                <rect>7,5,14,10</rect>
                 <key>scale9Paddings</key>
-                <rect>23,21,45,41</rect>
+                <rect>7,5,14,10</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_Walk4.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_Walk5.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_Walk6.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_idle17.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_idle18.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_idle19.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_idle20.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_idle21.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_idle22.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -293,15 +323,61 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>23,19,47,39</rect>
+                <rect>7,5,13,9</rect>
                 <key>scale9Paddings</key>
-                <rect>23,19,47,39</rect>
+                <rect>7,5,13,9</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_Walk7.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_Walk8.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_Walk9.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad1.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad10.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad11.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad12.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad13.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad14.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad15.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad16.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad17.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad18.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad19.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad2.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad20.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad21.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad22.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad23.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad24.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad3.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad4.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad48.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad49.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad5.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad50.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad51.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad52.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad53.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad54.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad55.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad56.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad57.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad58.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad59.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad6.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad60.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad61.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad62.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad63.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad64.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad65.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad66.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad67.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad68.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad69.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad7.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad70.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad71.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad72.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad8.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad9.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -310,19 +386,35 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>24,20,47,41</rect>
+                <rect>9,4,17,7</rect>
                 <key>scale9Paddings</key>
-                <rect>24,20,47,41</rect>
+                <rect>9,4,17,7</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_idle1.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_idle2.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_idle23.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_idle24.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_idle25.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_idle26.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_idle27.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad25.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad26.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad27.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad28.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad29.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad30.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad31.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad32.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad33.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad34.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad35.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad36.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad37.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad38.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad39.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad40.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad41.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad42.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad43.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad44.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad45.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad46.png</key>
+            <key type="filename">../../preload_assets/pet/bedcrab/bedcrab_sad47.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -331,419 +423,131 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>26,20,52,39</rect>
+                <rect>9,3,17,7</rect>
                 <key>scale9Paddings</key>
-                <rect>26,20,52,39</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_idle10.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_idle11.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_idle12.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_idle13.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_idle14.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_idle9.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>28,20,56,39</rect>
-                <key>scale9Paddings</key>
-                <rect>28,20,56,39</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_idle15.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_idle16.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>28,20,55,39</rect>
-                <key>scale9Paddings</key>
-                <rect>28,20,55,39</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_idle17.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_idle18.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>27,19,54,39</rect>
-                <key>scale9Paddings</key>
-                <rect>27,19,54,39</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_idle19.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_idle20.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>27,19,53,39</rect>
-                <key>scale9Paddings</key>
-                <rect>27,19,53,39</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_idle21.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_idle22.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>26,19,53,39</rect>
-                <key>scale9Paddings</key>
-                <rect>26,19,53,39</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_idle3.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_idle4.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>26,20,53,39</rect>
-                <key>scale9Paddings</key>
-                <rect>26,20,53,39</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_idle5.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_idle6.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>27,20,53,39</rect>
-                <key>scale9Paddings</key>
-                <rect>27,20,53,39</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_idle7.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_idle8.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>27,20,55,39</rect>
-                <key>scale9Paddings</key>
-                <rect>27,20,55,39</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad1.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad10.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad11.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad2.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad3.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad4.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad5.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad6.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad61.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad62.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad63.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad64.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad65.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad66.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad67.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad68.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad69.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad7.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad70.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad71.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad72.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad8.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad9.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>34,15,67,29</rect>
-                <key>scale9Paddings</key>
-                <rect>34,15,67,29</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad12.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad13.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad14.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad58.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad59.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad60.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>34,14,67,29</rect>
-                <key>scale9Paddings</key>
-                <rect>34,14,67,29</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad15.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad16.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad17.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad18.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad54.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad55.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad56.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad57.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>34,14,67,28</rect>
-                <key>scale9Paddings</key>
-                <rect>34,14,67,28</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad19.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad20.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad21.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad22.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad23.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad24.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad48.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad49.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad50.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad51.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad52.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad53.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>34,14,67,27</rect>
-                <key>scale9Paddings</key>
-                <rect>34,14,67,27</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad25.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad26.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad27.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad28.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad29.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad43.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad44.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad45.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad46.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad47.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>34,13,67,27</rect>
-                <key>scale9Paddings</key>
-                <rect>34,13,67,27</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad30.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad31.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad32.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad33.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad34.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad35.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad36.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad37.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad38.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad39.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad40.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad41.png</key>
-            <key type="filename">../../../skin/Pets/pet05/bedcrab_sad42.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>34,13,67,26</rect>
-                <key>scale9Paddings</key>
-                <rect>34,13,67,26</rect>
+                <rect>9,3,17,7</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
         </map>
         <key>fileList</key>
         <array>
-            <filename>../../../skin/Pets/pet05/bedcrab_Scared1.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_Scared2.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_Scared3.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_Scared4.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_Scared5.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_Walk1.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_Walk10.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_Walk11.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_Walk12.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_Walk2.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_Walk3.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_Walk4.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_Walk5.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_Walk6.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_Walk7.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_Walk8.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_Walk9.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_idle1.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_idle10.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_idle11.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_idle12.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_idle13.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_idle14.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_idle15.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_idle16.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_idle17.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_idle18.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_idle19.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_idle2.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_idle20.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_idle21.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_idle22.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_idle23.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_idle24.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_idle25.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_idle26.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_idle27.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_idle3.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_idle4.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_idle5.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_idle6.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_idle7.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_idle8.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_idle9.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad1.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad10.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad11.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad12.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad13.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad14.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad15.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad16.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad17.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad18.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad19.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad2.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad20.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad21.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad22.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad23.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad24.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad25.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad26.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad27.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad28.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad29.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad3.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad30.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad31.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad32.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad33.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad34.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad35.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad36.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad37.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad38.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad39.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad4.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad40.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad41.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad42.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad43.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad44.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad45.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad46.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad47.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad48.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad49.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad5.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad50.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad51.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad52.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad53.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad54.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad55.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad56.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad57.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad58.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad59.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad6.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad60.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad61.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad62.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad63.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad64.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad65.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad66.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad67.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad68.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad69.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad7.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad70.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad71.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad72.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad8.png</filename>
-            <filename>../../../skin/Pets/pet05/bedcrab_sad9.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_Scared1.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_Scared2.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_Scared3.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_Scared4.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_Scared5.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_Walk1.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_Walk10.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_Walk11.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_Walk12.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_Walk2.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_Walk3.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_Walk4.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_Walk5.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_Walk6.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_Walk7.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_Walk8.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_Walk9.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_idle1.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_idle10.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_idle11.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_idle12.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_idle13.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_idle14.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_idle15.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_idle16.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_idle17.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_idle18.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_idle19.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_idle2.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_idle20.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_idle21.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_idle22.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_idle23.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_idle24.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_idle25.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_idle26.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_idle27.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_idle3.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_idle4.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_idle5.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_idle6.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_idle7.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_idle8.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_idle9.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad1.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad10.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad11.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad12.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad13.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad14.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad15.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad16.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad17.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad18.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad19.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad2.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad20.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad21.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad22.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad23.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad24.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad25.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad26.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad27.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad28.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad29.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad3.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad30.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad31.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad32.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad33.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad34.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad35.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad36.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad37.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad38.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad39.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad4.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad40.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad41.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad42.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad43.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad44.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad45.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad46.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad47.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad48.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad49.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad5.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad50.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad51.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad52.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad53.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad54.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad55.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad56.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad57.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad58.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad59.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad6.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad60.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad61.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad62.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad63.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad64.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad65.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad66.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad67.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad68.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad69.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad7.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad70.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad71.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad72.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad8.png</filename>
+            <filename>../../preload_assets/pet/bedcrab/bedcrab_sad9.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

@@ -173,16 +173,18 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../../../skin/Pets/pet01/stickmin_idle1.png</key>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_idle2.png</key>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_idle3.png</key>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_idle32.png</key>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_idle33.png</key>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_idle34.png</key>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_idle4.png</key>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_idle5.png</key>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_idle6.png</key>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_idle7.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_idle1.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_idle2.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_idle3.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_idle31.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_idle32.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_idle33.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_idle34.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_idle4.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_idle5.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_idle6.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_idle7.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_idle8.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -191,34 +193,34 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>13,31,25,63</rect>
+                <rect>3,8,7,15</rect>
                 <key>scale9Paddings</key>
-                <rect>13,31,25,63</rect>
+                <rect>3,8,7,15</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_idle10.png</key>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_idle11.png</key>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_idle12.png</key>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_idle13.png</key>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_idle14.png</key>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_idle15.png</key>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_idle16.png</key>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_idle17.png</key>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_idle18.png</key>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_idle19.png</key>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_idle20.png</key>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_idle21.png</key>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_idle22.png</key>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_idle23.png</key>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_idle24.png</key>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_idle25.png</key>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_idle26.png</key>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_idle27.png</key>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_idle28.png</key>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_idle29.png</key>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_idle30.png</key>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_idle9.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_idle10.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_idle11.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_idle12.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_idle13.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_idle14.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_idle15.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_idle16.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_idle17.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_idle18.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_idle19.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_idle20.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_idle21.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_idle22.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_idle23.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_idle24.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_idle25.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_idle26.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_idle27.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_idle28.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_idle29.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_idle30.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_idle9.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -227,13 +229,16 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>17,29,34,59</rect>
+                <rect>4,7,9,15</rect>
                 <key>scale9Paddings</key>
-                <rect>17,29,34,59</rect>
+                <rect>4,7,9,15</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_idle31.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_sad1.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_sad2.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_sad3.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_sad8.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -242,13 +247,16 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>13,31,25,61</rect>
+                <rect>4,6,8,13</rect>
                 <key>scale9Paddings</key>
-                <rect>13,31,25,61</rect>
+                <rect>4,6,8,13</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_idle8.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_sad4.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_sad5.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_sad6.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_sad7.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -257,15 +265,16 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>13,31,27,63</rect>
+                <rect>4,6,8,12</rect>
                 <key>scale9Paddings</key>
-                <rect>13,31,27,63</rect>
+                <rect>4,6,8,12</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_sad1.png</key>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_sad2.png</key>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_sad8.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_scared1.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_scared2.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_scared3.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_scared4.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -274,13 +283,17 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>16,25,31,50</rect>
+                <rect>4,8,7,15</rect>
                 <key>scale9Paddings</key>
-                <rect>16,25,31,50</rect>
+                <rect>4,8,7,15</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_sad3.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_walk1.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_walk2.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_walk3.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_walk4.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_walk5.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -289,16 +302,13 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>16,25,31,49</rect>
+                <rect>5,7,9,13</rect>
                 <key>scale9Paddings</key>
-                <rect>16,25,31,49</rect>
+                <rect>5,7,9,13</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_sad4.png</key>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_sad5.png</key>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_sad6.png</key>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_sad7.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_walk6.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -307,14 +317,13 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>16,24,31,49</rect>
+                <rect>5,8,9,17</rect>
                 <key>scale9Paddings</key>
-                <rect>16,24,31,49</rect>
+                <rect>5,8,9,17</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_scared1.png</key>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_scared3.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_walk7.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -323,13 +332,14 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>14,30,29,60</rect>
+                <rect>3,8,5,16</rect>
                 <key>scale9Paddings</key>
-                <rect>14,30,29,60</rect>
+                <rect>3,8,5,16</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_scared2.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_walk8.png</key>
+            <key type="filename">../../preload_assets/pet/stickmin/stickmin_walk9.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -338,164 +348,70 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>14,30,27,61</rect>
+                <rect>3,8,6,15</rect>
                 <key>scale9Paddings</key>
-                <rect>14,30,27,61</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_scared4.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>15,30,30,60</rect>
-                <key>scale9Paddings</key>
-                <rect>15,30,30,60</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_walk1.png</key>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_walk2.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>18,27,35,53</rect>
-                <key>scale9Paddings</key>
-                <rect>18,27,35,53</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_walk3.png</key>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_walk4.png</key>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_walk5.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>19,26,37,53</rect>
-                <key>scale9Paddings</key>
-                <rect>19,26,37,53</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_walk6.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>19,33,38,65</rect>
-                <key>scale9Paddings</key>
-                <rect>19,33,38,65</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_walk7.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>11,32,23,63</rect>
-                <key>scale9Paddings</key>
-                <rect>11,32,23,63</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_walk8.png</key>
-            <key type="filename">../../../skin/Pets/pet01/stickmin_walk9.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>12,31,23,63</rect>
-                <key>scale9Paddings</key>
-                <rect>12,31,23,63</rect>
+                <rect>3,8,6,15</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
         </map>
         <key>fileList</key>
         <array>
-            <filename>../../../skin/Pets/pet01/stickmin_idle1.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_idle10.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_idle11.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_idle12.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_idle13.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_idle14.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_idle15.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_idle16.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_idle17.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_idle18.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_idle19.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_idle2.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_idle20.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_idle21.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_idle22.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_idle23.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_idle24.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_idle25.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_idle26.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_idle27.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_idle28.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_idle29.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_idle3.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_idle30.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_idle31.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_idle32.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_idle33.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_idle34.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_idle4.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_idle5.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_idle6.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_idle7.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_idle8.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_idle9.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_sad1.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_sad2.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_sad3.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_sad4.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_sad5.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_sad6.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_sad7.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_sad8.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_scared1.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_scared2.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_scared3.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_scared4.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_walk1.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_walk2.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_walk3.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_walk4.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_walk5.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_walk6.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_walk7.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_walk8.png</filename>
-            <filename>../../../skin/Pets/pet01/stickmin_walk9.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_idle1.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_idle10.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_idle11.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_idle12.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_idle13.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_idle14.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_idle15.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_idle16.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_idle17.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_idle18.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_idle19.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_idle2.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_idle20.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_idle21.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_idle22.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_idle23.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_idle24.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_idle25.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_idle26.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_idle27.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_idle28.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_idle29.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_idle3.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_idle30.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_idle31.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_idle32.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_idle33.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_idle34.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_idle4.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_idle5.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_idle6.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_idle7.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_idle8.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_idle9.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_sad1.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_sad2.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_sad3.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_sad4.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_sad5.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_sad6.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_sad7.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_sad8.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_scared1.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_scared2.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_scared3.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_scared4.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_walk1.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_walk2.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_walk3.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_walk4.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_walk5.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_walk6.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_walk7.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_walk8.png</filename>
+            <filename>../../preload_assets/pet/stickmin/stickmin_walk9.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
