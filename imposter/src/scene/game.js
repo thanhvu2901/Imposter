@@ -646,7 +646,7 @@ class Game extends Phaser.Scene {
             suffix: ".png",
           }),
           repeat: -1,
-          frameRate: 16,
+          frameRate: 24,
         });
 
         this.anims.create({
@@ -1752,8 +1752,8 @@ class Game extends Phaser.Scene {
 
       if (playerMoved) {
         this.socket.emit("move", {
-          x: player.x,
-          y: player.y,
+          x: player_container.x,
+          y: player_container.y,
           roomId: this.state.roomKey,
         });
         player.movedLastFrame = true;
@@ -1772,7 +1772,7 @@ class Game extends Phaser.Scene {
         player.y
       );
       const check_mission = mission.check_mission();
-      console.log("check_mission", check_mission);
+      // console.log("check_mission", check_mission);
       if (check_mission) {
         //blink blink marker
         useButton.alpha = 1;
