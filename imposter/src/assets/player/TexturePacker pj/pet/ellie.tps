@@ -173,17 +173,17 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../../../skin/Pets/pet02/ellie_idle1.png</key>
-            <key type="filename">../../../skin/Pets/pet02/ellie_idle2.png</key>
-            <key type="filename">../../../skin/Pets/pet02/ellie_idle3.png</key>
-            <key type="filename">../../../skin/Pets/pet02/ellie_idle32.png</key>
-            <key type="filename">../../../skin/Pets/pet02/ellie_idle33.png</key>
-            <key type="filename">../../../skin/Pets/pet02/ellie_idle34.png</key>
-            <key type="filename">../../../skin/Pets/pet02/ellie_idle4.png</key>
-            <key type="filename">../../../skin/Pets/pet02/ellie_idle5.png</key>
-            <key type="filename">../../../skin/Pets/pet02/ellie_idle6.png</key>
-            <key type="filename">../../../skin/Pets/pet02/ellie_idle7.png</key>
-            <key type="filename">../../../skin/Pets/pet02/ellie_walk7.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_idle1.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_idle2.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_idle3.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_idle32.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_idle33.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_idle34.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_idle4.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_idle5.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_idle6.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_idle7.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_walk7.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -192,28 +192,34 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>15,32,29,65</rect>
+                <rect>4,8,7,16</rect>
                 <key>scale9Paddings</key>
-                <rect>15,32,29,65</rect>
+                <rect>4,8,7,16</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet02/ellie_idle10.png</key>
-            <key type="filename">../../../skin/Pets/pet02/ellie_idle11.png</key>
-            <key type="filename">../../../skin/Pets/pet02/ellie_idle12.png</key>
-            <key type="filename">../../../skin/Pets/pet02/ellie_idle15.png</key>
-            <key type="filename">../../../skin/Pets/pet02/ellie_idle16.png</key>
-            <key type="filename">../../../skin/Pets/pet02/ellie_idle17.png</key>
-            <key type="filename">../../../skin/Pets/pet02/ellie_idle18.png</key>
-            <key type="filename">../../../skin/Pets/pet02/ellie_idle19.png</key>
-            <key type="filename">../../../skin/Pets/pet02/ellie_idle20.png</key>
-            <key type="filename">../../../skin/Pets/pet02/ellie_idle23.png</key>
-            <key type="filename">../../../skin/Pets/pet02/ellie_idle24.png</key>
-            <key type="filename">../../../skin/Pets/pet02/ellie_idle25.png</key>
-            <key type="filename">../../../skin/Pets/pet02/ellie_idle26.png</key>
-            <key type="filename">../../../skin/Pets/pet02/ellie_idle27.png</key>
-            <key type="filename">../../../skin/Pets/pet02/ellie_idle28.png</key>
-            <key type="filename">../../../skin/Pets/pet02/ellie_idle9.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_idle10.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_idle11.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_idle12.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_idle13.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_idle14.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_idle15.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_idle16.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_idle17.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_idle18.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_idle19.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_idle20.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_idle21.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_idle22.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_idle23.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_idle24.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_idle25.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_idle26.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_idle27.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_idle28.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_idle29.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_idle30.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_idle9.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -222,18 +228,14 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>19,30,37,59</rect>
+                <rect>5,8,9,15</rect>
                 <key>scale9Paddings</key>
-                <rect>19,30,37,59</rect>
+                <rect>5,8,9,15</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet02/ellie_idle13.png</key>
-            <key type="filename">../../../skin/Pets/pet02/ellie_idle14.png</key>
-            <key type="filename">../../../skin/Pets/pet02/ellie_idle21.png</key>
-            <key type="filename">../../../skin/Pets/pet02/ellie_idle22.png</key>
-            <key type="filename">../../../skin/Pets/pet02/ellie_idle29.png</key>
-            <key type="filename">../../../skin/Pets/pet02/ellie_idle30.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_idle31.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_idle8.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -242,14 +244,13 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>19,30,37,60</rect>
+                <rect>4,8,8,16</rect>
                 <key>scale9Paddings</key>
-                <rect>19,30,37,60</rect>
+                <rect>4,8,8,16</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet02/ellie_idle31.png</key>
-            <key type="filename">../../../skin/Pets/pet02/ellie_idle8.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_sad.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -258,13 +259,16 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>16,32,31,64</rect>
+                <rect>8,4,15,9</rect>
                 <key>scale9Paddings</key>
-                <rect>16,32,31,64</rect>
+                <rect>8,4,15,9</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet02/ellie_sad.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_scared1.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_scared2.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_scared3.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_scared4.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -273,16 +277,14 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>31,17,61,33</rect>
+                <rect>5,8,11,17</rect>
                 <key>scale9Paddings</key>
-                <rect>31,17,61,33</rect>
+                <rect>5,8,11,17</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet02/ellie_scared1.png</key>
-            <key type="filename">../../../skin/Pets/pet02/ellie_scared2.png</key>
-            <key type="filename">../../../skin/Pets/pet02/ellie_scared3.png</key>
-            <key type="filename">../../../skin/Pets/pet02/ellie_scared4.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_walk1.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_walk2.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -291,14 +293,15 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>21,33,41,65</rect>
+                <rect>4,7,9,14</rect>
                 <key>scale9Paddings</key>
-                <rect>21,33,41,65</rect>
+                <rect>4,7,9,14</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet02/ellie_walk1.png</key>
-            <key type="filename">../../../skin/Pets/pet02/ellie_walk2.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_walk3.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_walk4.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_walk5.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -307,15 +310,13 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>17,28,35,55</rect>
+                <rect>5,7,9,14</rect>
                 <key>scale9Paddings</key>
-                <rect>17,28,35,55</rect>
+                <rect>5,7,9,14</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet02/ellie_walk3.png</key>
-            <key type="filename">../../../skin/Pets/pet02/ellie_walk4.png</key>
-            <key type="filename">../../../skin/Pets/pet02/ellie_walk5.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_walk6.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -324,13 +325,14 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>19,28,37,57</rect>
+                <rect>5,9,9,17</rect>
                 <key>scale9Paddings</key>
-                <rect>19,28,37,57</rect>
+                <rect>5,9,9,17</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet02/ellie_walk6.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_walk8.png</key>
+            <key type="filename">../../preload_assets/pet/ellie/ellie_walk9.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -339,79 +341,63 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>19,35,38,69</rect>
+                <rect>4,8,7,15</rect>
                 <key>scale9Paddings</key>
-                <rect>19,35,38,69</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet02/ellie_walk8.png</key>
-            <key type="filename">../../../skin/Pets/pet02/ellie_walk9.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>15,31,29,62</rect>
-                <key>scale9Paddings</key>
-                <rect>15,31,29,62</rect>
+                <rect>4,8,7,15</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
         </map>
         <key>fileList</key>
         <array>
-            <filename>../../../skin/Pets/pet02/ellie_idle1.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_idle10.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_idle11.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_idle12.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_idle13.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_idle14.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_idle15.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_idle16.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_idle17.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_idle18.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_idle19.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_idle2.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_idle20.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_idle21.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_idle22.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_idle23.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_idle24.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_idle25.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_idle26.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_idle27.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_idle28.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_idle29.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_idle3.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_idle30.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_idle31.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_idle32.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_idle33.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_idle34.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_idle4.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_idle5.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_idle6.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_idle7.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_idle8.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_idle9.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_sad.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_scared1.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_scared2.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_scared3.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_scared4.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_walk1.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_walk2.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_walk3.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_walk4.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_walk5.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_walk6.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_walk7.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_walk8.png</filename>
-            <filename>../../../skin/Pets/pet02/ellie_walk9.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_idle1.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_idle10.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_idle11.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_idle12.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_idle13.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_idle14.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_idle15.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_idle16.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_idle17.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_idle18.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_idle19.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_idle2.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_idle20.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_idle21.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_idle22.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_idle23.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_idle24.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_idle25.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_idle26.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_idle27.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_idle28.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_idle29.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_idle3.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_idle30.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_idle31.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_idle32.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_idle33.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_idle34.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_idle4.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_idle5.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_idle6.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_idle7.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_idle8.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_idle9.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_sad.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_scared1.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_scared2.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_scared3.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_scared4.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_walk1.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_walk2.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_walk3.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_walk4.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_walk5.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_walk6.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_walk7.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_walk8.png</filename>
+            <filename>../../preload_assets/pet/ellie/ellie_walk9.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

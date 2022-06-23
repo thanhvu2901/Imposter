@@ -30,6 +30,9 @@ import UploadData from "./scene/state/ingame/uploaddata.js";
 import CalibratorDistributor from "./scene/state/minigame/calibrate_distributor.js";
 import FuelEngine from "./scene/state/ingame/fuelengine.js"
 import Vote_status from "./scene/state/ingame/vote_status.js";
+import FuelEngine_1 from "./scene/state/ingame/fuelengine_1.js";
+import UnlockManifolds from "./scene/state/ingame/unlockmanifolds.js"
+
 var preloader = new Preloader();
 
 const config = {
@@ -43,7 +46,7 @@ const config = {
   physics: {
     default: "arcade",
     arcade: {
-      debug: true
+      debug: false
     }
   },
   scale: {
@@ -105,7 +108,10 @@ game.scene.add("divert_power", DivertPower);
 game.scene.add("SwipeCard", SwipeCard);
 game.scene.add("Upload", UploadData);
 game.scene.add("CalibratorDistributor", CalibratorDistributor);
-game.scene.add("Fuel", FuelEngine)
+game.scene.add("Fuel", FuelEngine);
+game.scene.add("Unlock", UnlockManifolds)
+
+// game.scene.add("Fuel_1", FuelEngine_1)
 
 // start title
 //game.scene.start("joinGame");
@@ -134,6 +140,8 @@ game.scene.start('preloader');
 // game.scene.start('SwipeCard')
 // game.scene.start("CalibratorDistributor")
 // game.scene.start("Fuel")
+// game.scene.start("Fuel_1");
+// game.scene.start("Unlock");
 
 //game.scene.start('preloader');
 //game.scene.start("align_engine_output")

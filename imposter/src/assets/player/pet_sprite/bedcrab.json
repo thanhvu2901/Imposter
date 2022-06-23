@@ -2,939 +2,939 @@
 
 {
 	"filename": "bedcrab_idle1.png",
-	"frame": {"x":406,"y":232,"w":103,"h":76},
+	"frame": {"x":1,"y":191,"w":26,"h":20},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":103,"h":76},
-	"sourceSize": {"w":104,"h":78}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":20},
+	"sourceSize": {"w":26,"h":20}
 },
 {
 	"filename": "bedcrab_idle2.png",
-	"frame": {"x":406,"y":232,"w":103,"h":76},
+	"frame": {"x":1,"y":191,"w":26,"h":20},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":103,"h":76},
-	"sourceSize": {"w":104,"h":78}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":20},
+	"sourceSize": {"w":26,"h":20}
 },
 {
 	"filename": "bedcrab_idle3.png",
-	"frame": {"x":407,"y":310,"w":103,"h":76},
+	"frame": {"x":217,"y":108,"w":26,"h":20},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":103,"h":76},
-	"sourceSize": {"w":105,"h":78}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":20},
+	"sourceSize": {"w":26,"h":20}
 },
 {
 	"filename": "bedcrab_idle4.png",
-	"frame": {"x":407,"y":310,"w":103,"h":76},
+	"frame": {"x":217,"y":108,"w":26,"h":20},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":103,"h":76},
-	"sourceSize": {"w":105,"h":78}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":20},
+	"sourceSize": {"w":26,"h":20}
 },
 {
 	"filename": "bedcrab_idle5.png",
-	"frame": {"x":406,"y":388,"w":105,"h":76},
+	"frame": {"x":217,"y":1,"w":27,"h":20},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":105,"h":76},
-	"sourceSize": {"w":107,"h":78}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":20},
+	"sourceSize": {"w":27,"h":20}
 },
 {
 	"filename": "bedcrab_idle6.png",
-	"frame": {"x":406,"y":388,"w":105,"h":76},
+	"frame": {"x":217,"y":1,"w":27,"h":20},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":105,"h":76},
-	"sourceSize": {"w":107,"h":78}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":20},
+	"sourceSize": {"w":27,"h":20}
 },
 {
 	"filename": "bedcrab_idle7.png",
-	"frame": {"x":332,"y":1359,"w":107,"h":77},
+	"frame": {"x":217,"y":23,"w":27,"h":20},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":107,"h":77},
-	"sourceSize": {"w":109,"h":78}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":20},
+	"sourceSize": {"w":27,"h":20}
 },
 {
 	"filename": "bedcrab_idle8.png",
-	"frame": {"x":332,"y":1359,"w":107,"h":77},
+	"frame": {"x":217,"y":23,"w":27,"h":20},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":107,"h":77},
-	"sourceSize": {"w":109,"h":78}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":20},
+	"sourceSize": {"w":27,"h":20}
 },
 {
 	"filename": "bedcrab_idle9.png",
-	"frame": {"x":271,"y":1281,"w":110,"h":76},
+	"frame": {"x":1,"y":103,"w":28,"h":20},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":110,"h":76},
-	"sourceSize": {"w":112,"h":78}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":20},
+	"sourceSize": {"w":28,"h":20}
 },
 {
 	"filename": "bedcrab_idle10.png",
-	"frame": {"x":271,"y":1281,"w":110,"h":76},
+	"frame": {"x":1,"y":103,"w":28,"h":20},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":110,"h":76},
-	"sourceSize": {"w":112,"h":78}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":20},
+	"sourceSize": {"w":28,"h":20}
 },
 {
 	"filename": "bedcrab_idle11.png",
-	"frame": {"x":383,"y":1281,"w":110,"h":76},
+	"frame": {"x":1,"y":125,"w":28,"h":20},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":110,"h":76},
-	"sourceSize": {"w":112,"h":78}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":20},
+	"sourceSize": {"w":28,"h":20}
 },
 {
 	"filename": "bedcrab_idle12.png",
-	"frame": {"x":383,"y":1281,"w":110,"h":76},
+	"frame": {"x":1,"y":125,"w":28,"h":20},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":110,"h":76},
-	"sourceSize": {"w":112,"h":78}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":20},
+	"sourceSize": {"w":28,"h":20}
 },
 {
 	"filename": "bedcrab_idle13.png",
-	"frame": {"x":1,"y":1336,"w":110,"h":76},
+	"frame": {"x":1,"y":147,"w":28,"h":20},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":110,"h":76},
-	"sourceSize": {"w":112,"h":78}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":20},
+	"sourceSize": {"w":28,"h":20}
 },
 {
 	"filename": "bedcrab_idle14.png",
-	"frame": {"x":1,"y":1336,"w":110,"h":76},
+	"frame": {"x":1,"y":147,"w":28,"h":20},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":110,"h":76},
-	"sourceSize": {"w":112,"h":78}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":20},
+	"sourceSize": {"w":28,"h":20}
 },
 {
 	"filename": "bedcrab_idle15.png",
-	"frame": {"x":113,"y":1338,"w":109,"h":76},
+	"frame": {"x":1,"y":169,"w":28,"h":20},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":109,"h":76},
-	"sourceSize": {"w":111,"h":78}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":20},
+	"sourceSize": {"w":28,"h":20}
 },
 {
 	"filename": "bedcrab_idle16.png",
-	"frame": {"x":113,"y":1338,"w":109,"h":76},
+	"frame": {"x":1,"y":169,"w":28,"h":20},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":109,"h":76},
-	"sourceSize": {"w":111,"h":78}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":20},
+	"sourceSize": {"w":28,"h":20}
 },
 {
 	"filename": "bedcrab_idle17.png",
-	"frame": {"x":224,"y":1359,"w":106,"h":76},
+	"frame": {"x":217,"y":45,"w":27,"h":19},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":106,"h":76},
-	"sourceSize": {"w":108,"h":77}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":19},
+	"sourceSize": {"w":27,"h":19}
 },
 {
 	"filename": "bedcrab_idle18.png",
-	"frame": {"x":224,"y":1359,"w":106,"h":76},
+	"frame": {"x":217,"y":45,"w":27,"h":19},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":106,"h":76},
-	"sourceSize": {"w":108,"h":77}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":19},
+	"sourceSize": {"w":27,"h":19}
 },
 {
 	"filename": "bedcrab_idle19.png",
-	"frame": {"x":406,"y":78,"w":105,"h":75},
+	"frame": {"x":217,"y":66,"w":27,"h":19},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":105,"h":75},
-	"sourceSize": {"w":107,"h":77}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":19},
+	"sourceSize": {"w":27,"h":19}
 },
 {
 	"filename": "bedcrab_idle20.png",
-	"frame": {"x":406,"y":78,"w":105,"h":75},
+	"frame": {"x":217,"y":66,"w":27,"h":19},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":105,"h":75},
-	"sourceSize": {"w":107,"h":77}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":19},
+	"sourceSize": {"w":27,"h":19}
 },
 {
 	"filename": "bedcrab_idle21.png",
-	"frame": {"x":408,"y":155,"w":103,"h":75},
+	"frame": {"x":217,"y":87,"w":26,"h":19},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":103,"h":75},
-	"sourceSize": {"w":105,"h":77}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":19},
+	"sourceSize": {"w":26,"h":19}
 },
 {
 	"filename": "bedcrab_idle22.png",
-	"frame": {"x":408,"y":155,"w":103,"h":75},
+	"frame": {"x":217,"y":87,"w":26,"h":19},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":103,"h":75},
-	"sourceSize": {"w":105,"h":77}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":19},
+	"sourceSize": {"w":26,"h":19}
 },
 {
 	"filename": "bedcrab_idle23.png",
-	"frame": {"x":406,"y":232,"w":103,"h":76},
+	"frame": {"x":1,"y":191,"w":26,"h":20},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":103,"h":76},
-	"sourceSize": {"w":104,"h":78}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":20},
+	"sourceSize": {"w":26,"h":20}
 },
 {
 	"filename": "bedcrab_idle24.png",
-	"frame": {"x":406,"y":232,"w":103,"h":76},
+	"frame": {"x":1,"y":191,"w":26,"h":20},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":103,"h":76},
-	"sourceSize": {"w":104,"h":78}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":20},
+	"sourceSize": {"w":26,"h":20}
 },
 {
 	"filename": "bedcrab_idle25.png",
-	"frame": {"x":406,"y":232,"w":103,"h":76},
+	"frame": {"x":1,"y":191,"w":26,"h":20},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":103,"h":76},
-	"sourceSize": {"w":104,"h":78}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":20},
+	"sourceSize": {"w":26,"h":20}
 },
 {
 	"filename": "bedcrab_idle26.png",
-	"frame": {"x":406,"y":232,"w":103,"h":76},
+	"frame": {"x":1,"y":191,"w":26,"h":20},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":103,"h":76},
-	"sourceSize": {"w":104,"h":78}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":20},
+	"sourceSize": {"w":26,"h":20}
 },
 {
 	"filename": "bedcrab_idle27.png",
-	"frame": {"x":406,"y":232,"w":103,"h":76},
+	"frame": {"x":1,"y":191,"w":26,"h":20},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":103,"h":76},
-	"sourceSize": {"w":104,"h":78}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":20},
+	"sourceSize": {"w":26,"h":20}
 },
 {
 	"filename": "bedcrab_sad1.png",
-	"frame": {"x":136,"y":1042,"w":133,"h":57},
+	"frame": {"x":1,"y":1,"w":34,"h":15},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":1,"w":133,"h":57},
-	"sourceSize": {"w":134,"h":59}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":15},
+	"sourceSize": {"w":34,"h":15}
 },
 {
 	"filename": "bedcrab_sad2.png",
-	"frame": {"x":271,"y":1221,"w":133,"h":58},
+	"frame": {"x":1,"y":35,"w":34,"h":15},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":58},
-	"sourceSize": {"w":135,"h":59}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":15},
+	"sourceSize": {"w":34,"h":15}
 },
 {
 	"filename": "bedcrab_sad3.png",
-	"frame": {"x":271,"y":1044,"w":133,"h":57},
+	"frame": {"x":37,"y":18,"w":34,"h":15},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":57},
-	"sourceSize": {"w":135,"h":59}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":15},
+	"sourceSize": {"w":34,"h":15}
 },
 {
 	"filename": "bedcrab_sad4.png",
-	"frame": {"x":1,"y":1099,"w":133,"h":57},
+	"frame": {"x":73,"y":1,"w":34,"h":15},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":57},
-	"sourceSize": {"w":135,"h":59}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":15},
+	"sourceSize": {"w":34,"h":15}
 },
 {
 	"filename": "bedcrab_sad5.png",
-	"frame": {"x":136,"y":1101,"w":133,"h":57},
+	"frame": {"x":1,"y":52,"w":34,"h":15},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":57},
-	"sourceSize": {"w":135,"h":59}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":15},
+	"sourceSize": {"w":34,"h":15}
 },
 {
 	"filename": "bedcrab_sad6.png",
-	"frame": {"x":1,"y":1276,"w":133,"h":58},
+	"frame": {"x":37,"y":35,"w":34,"h":15},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":1,"w":133,"h":58},
-	"sourceSize": {"w":134,"h":59}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":15},
+	"sourceSize": {"w":34,"h":15}
 },
 {
 	"filename": "bedcrab_sad7.png",
-	"frame": {"x":271,"y":986,"w":133,"h":56},
+	"frame": {"x":73,"y":52,"w":34,"h":15},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":56},
-	"sourceSize": {"w":134,"h":58}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":15},
+	"sourceSize": {"w":34,"h":15}
 },
 {
 	"filename": "bedcrab_sad8.png",
-	"frame": {"x":1,"y":1041,"w":133,"h":56},
+	"frame": {"x":181,"y":1,"w":34,"h":15},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":56},
-	"sourceSize": {"w":134,"h":58}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":15},
+	"sourceSize": {"w":34,"h":15}
 },
 {
 	"filename": "bedcrab_sad9.png",
-	"frame": {"x":136,"y":1219,"w":133,"h":57},
+	"frame": {"x":181,"y":18,"w":34,"h":15},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":57},
-	"sourceSize": {"w":134,"h":58}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":15},
+	"sourceSize": {"w":34,"h":15}
 },
 {
 	"filename": "bedcrab_sad10.png",
-	"frame": {"x":271,"y":812,"w":133,"h":56},
+	"frame": {"x":1,"y":18,"w":34,"h":15},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":1,"w":133,"h":56},
-	"sourceSize": {"w":134,"h":58}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":15},
+	"sourceSize": {"w":34,"h":15}
 },
 {
 	"filename": "bedcrab_sad11.png",
-	"frame": {"x":1,"y":867,"w":133,"h":56},
+	"frame": {"x":37,"y":1,"w":34,"h":15},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":1,"w":133,"h":56},
-	"sourceSize": {"w":134,"h":58}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":15},
+	"sourceSize": {"w":34,"h":15}
 },
 {
 	"filename": "bedcrab_sad12.png",
-	"frame": {"x":1,"y":753,"w":133,"h":55},
+	"frame": {"x":37,"y":86,"w":34,"h":14},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":55},
-	"sourceSize": {"w":134,"h":57}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":14},
+	"sourceSize": {"w":34,"h":14}
 },
 {
 	"filename": "bedcrab_sad13.png",
-	"frame": {"x":136,"y":754,"w":133,"h":55},
+	"frame": {"x":73,"y":69,"w":34,"h":14},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":55},
-	"sourceSize": {"w":134,"h":57}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":14},
+	"sourceSize": {"w":34,"h":14}
 },
 {
 	"filename": "bedcrab_sad14.png",
-	"frame": {"x":271,"y":755,"w":133,"h":55},
+	"frame": {"x":109,"y":52,"w":34,"h":14},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":55},
-	"sourceSize": {"w":134,"h":57}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":14},
+	"sourceSize": {"w":34,"h":14}
 },
 {
 	"filename": "bedcrab_sad15.png",
-	"frame": {"x":1,"y":585,"w":133,"h":54},
+	"frame": {"x":145,"y":35,"w":34,"h":14},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":54},
-	"sourceSize": {"w":134,"h":56}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":14},
+	"sourceSize": {"w":34,"h":14}
 },
 {
 	"filename": "bedcrab_sad16.png",
-	"frame": {"x":1,"y":810,"w":133,"h":55},
+	"frame": {"x":181,"y":35,"w":34,"h":14},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":55},
-	"sourceSize": {"w":134,"h":56}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":14},
+	"sourceSize": {"w":34,"h":14}
 },
 {
 	"filename": "bedcrab_sad17.png",
-	"frame": {"x":136,"y":586,"w":133,"h":54},
+	"frame": {"x":73,"y":85,"w":34,"h":14},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":54},
-	"sourceSize": {"w":134,"h":56}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":14},
+	"sourceSize": {"w":34,"h":14}
 },
 {
 	"filename": "bedcrab_sad18.png",
-	"frame": {"x":271,"y":587,"w":133,"h":54},
+	"frame": {"x":109,"y":68,"w":34,"h":14},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":1,"w":133,"h":54},
-	"sourceSize": {"w":134,"h":56}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":14},
+	"sourceSize": {"w":34,"h":14}
 },
 {
 	"filename": "bedcrab_sad19.png",
-	"frame": {"x":271,"y":477,"w":134,"h":53},
+	"frame": {"x":145,"y":51,"w":34,"h":14},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":1,"w":134,"h":53},
-	"sourceSize": {"w":134,"h":55}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":14},
+	"sourceSize": {"w":34,"h":14}
 },
 {
 	"filename": "bedcrab_sad20.png",
-	"frame": {"x":1,"y":475,"w":133,"h":53},
+	"frame": {"x":181,"y":51,"w":34,"h":14},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":53},
-	"sourceSize": {"w":134,"h":55}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":14},
+	"sourceSize": {"w":34,"h":14}
 },
 {
 	"filename": "bedcrab_sad21.png",
-	"frame": {"x":136,"y":476,"w":133,"h":53},
+	"frame": {"x":109,"y":84,"w":34,"h":14},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":1,"w":133,"h":53},
-	"sourceSize": {"w":134,"h":55}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":14},
+	"sourceSize": {"w":34,"h":14}
 },
 {
 	"filename": "bedcrab_sad22.png",
-	"frame": {"x":272,"y":315,"w":133,"h":52},
+	"frame": {"x":145,"y":67,"w":34,"h":14},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":52},
-	"sourceSize": {"w":134,"h":54}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":14},
+	"sourceSize": {"w":34,"h":14}
 },
 {
 	"filename": "bedcrab_sad23.png",
-	"frame": {"x":1,"y":367,"w":133,"h":52},
+	"frame": {"x":145,"y":83,"w":34,"h":14},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":52},
-	"sourceSize": {"w":134,"h":54}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":14},
+	"sourceSize": {"w":34,"h":14}
 },
 {
 	"filename": "bedcrab_sad24.png",
-	"frame": {"x":136,"y":368,"w":133,"h":52},
+	"frame": {"x":181,"y":67,"w":34,"h":14},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":52},
-	"sourceSize": {"w":134,"h":54}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":14},
+	"sourceSize": {"w":34,"h":14}
 },
 {
 	"filename": "bedcrab_sad25.png",
-	"frame": {"x":271,"y":369,"w":133,"h":52},
+	"frame": {"x":37,"y":102,"w":34,"h":13},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":52},
-	"sourceSize": {"w":134,"h":53}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":13},
+	"sourceSize": {"w":34,"h":13}
 },
 {
 	"filename": "bedcrab_sad26.png",
-	"frame": {"x":1,"y":530,"w":133,"h":53},
+	"frame": {"x":31,"y":181,"w":34,"h":13},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":133,"h":53},
-	"sourceSize": {"w":134,"h":53}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":13},
+	"sourceSize": {"w":34,"h":13}
 },
 {
 	"filename": "bedcrab_sad27.png",
-	"frame": {"x":136,"y":209,"w":133,"h":51},
+	"frame": {"x":67,"y":181,"w":34,"h":13},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":51},
-	"sourceSize": {"w":134,"h":53}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":13},
+	"sourceSize": {"w":34,"h":13}
 },
 {
 	"filename": "bedcrab_sad28.png",
-	"frame": {"x":271,"y":209,"w":133,"h":51},
+	"frame": {"x":29,"y":196,"w":34,"h":13},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":51},
-	"sourceSize": {"w":134,"h":53}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":13},
+	"sourceSize": {"w":34,"h":13}
 },
 {
 	"filename": "bedcrab_sad29.png",
-	"frame": {"x":1,"y":261,"w":133,"h":51},
+	"frame": {"x":65,"y":196,"w":34,"h":13},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":51},
-	"sourceSize": {"w":134,"h":53}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":13},
+	"sourceSize": {"w":34,"h":13}
 },
 {
 	"filename": "bedcrab_sad30.png",
-	"frame": {"x":1,"y":1,"w":133,"h":50},
+	"frame": {"x":29,"y":211,"w":34,"h":13},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":50},
-	"sourceSize": {"w":134,"h":52}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":13},
+	"sourceSize": {"w":34,"h":13}
 },
 {
 	"filename": "bedcrab_sad31.png",
-	"frame": {"x":136,"y":1,"w":133,"h":50},
+	"frame": {"x":65,"y":211,"w":34,"h":13},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":50},
-	"sourceSize": {"w":134,"h":52}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":13},
+	"sourceSize": {"w":34,"h":13}
 },
 {
 	"filename": "bedcrab_sad32.png",
-	"frame": {"x":271,"y":1,"w":133,"h":50},
+	"frame": {"x":109,"y":116,"w":34,"h":13},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":50},
-	"sourceSize": {"w":134,"h":52}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":13},
+	"sourceSize": {"w":34,"h":13}
 },
 {
 	"filename": "bedcrab_sad33.png",
-	"frame": {"x":1,"y":53,"w":133,"h":50},
+	"frame": {"x":145,"y":115,"w":34,"h":13},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":50},
-	"sourceSize": {"w":134,"h":52}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":13},
+	"sourceSize": {"w":34,"h":13}
 },
 {
 	"filename": "bedcrab_sad34.png",
-	"frame": {"x":136,"y":53,"w":133,"h":50},
+	"frame": {"x":181,"y":115,"w":34,"h":13},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":50},
-	"sourceSize": {"w":134,"h":52}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":13},
+	"sourceSize": {"w":34,"h":13}
 },
 {
 	"filename": "bedcrab_sad35.png",
-	"frame": {"x":271,"y":53,"w":133,"h":50},
+	"frame": {"x":103,"y":131,"w":34,"h":13},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":50},
-	"sourceSize": {"w":134,"h":52}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":13},
+	"sourceSize": {"w":34,"h":13}
 },
 {
 	"filename": "bedcrab_sad36.png",
-	"frame": {"x":1,"y":105,"w":133,"h":50},
+	"frame": {"x":103,"y":146,"w":34,"h":13},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":50},
-	"sourceSize": {"w":134,"h":52}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":13},
+	"sourceSize": {"w":34,"h":13}
 },
 {
 	"filename": "bedcrab_sad37.png",
-	"frame": {"x":136,"y":105,"w":133,"h":50},
+	"frame": {"x":103,"y":161,"w":34,"h":13},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":50},
-	"sourceSize": {"w":134,"h":52}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":13},
+	"sourceSize": {"w":34,"h":13}
 },
 {
 	"filename": "bedcrab_sad38.png",
-	"frame": {"x":1,"y":157,"w":134,"h":50},
+	"frame": {"x":103,"y":176,"w":34,"h":13},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":1,"w":134,"h":50},
-	"sourceSize": {"w":134,"h":52}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":13},
+	"sourceSize": {"w":34,"h":13}
 },
 {
 	"filename": "bedcrab_sad39.png",
-	"frame": {"x":137,"y":157,"w":134,"h":50},
+	"frame": {"x":103,"y":191,"w":34,"h":13},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":1,"w":134,"h":50},
-	"sourceSize": {"w":134,"h":52}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":13},
+	"sourceSize": {"w":34,"h":13}
 },
 {
 	"filename": "bedcrab_sad40.png",
-	"frame": {"x":271,"y":105,"w":133,"h":50},
+	"frame": {"x":145,"y":130,"w":34,"h":13},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":50},
-	"sourceSize": {"w":134,"h":52}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":13},
+	"sourceSize": {"w":34,"h":13}
 },
 {
 	"filename": "bedcrab_sad41.png",
-	"frame": {"x":273,"y":157,"w":133,"h":50},
+	"frame": {"x":181,"y":130,"w":34,"h":13},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":50},
-	"sourceSize": {"w":134,"h":52}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":13},
+	"sourceSize": {"w":34,"h":13}
 },
 {
 	"filename": "bedcrab_sad42.png",
-	"frame": {"x":1,"y":209,"w":133,"h":50},
+	"frame": {"x":139,"y":145,"w":34,"h":13},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":50},
-	"sourceSize": {"w":134,"h":52}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":13},
+	"sourceSize": {"w":34,"h":13}
 },
 {
 	"filename": "bedcrab_sad43.png",
-	"frame": {"x":1,"y":421,"w":133,"h":52},
+	"frame": {"x":139,"y":160,"w":34,"h":13},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":52},
-	"sourceSize": {"w":134,"h":53}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":13},
+	"sourceSize": {"w":34,"h":13}
 },
 {
 	"filename": "bedcrab_sad44.png",
-	"frame": {"x":136,"y":262,"w":133,"h":51},
+	"frame": {"x":175,"y":145,"w":34,"h":13},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":51},
-	"sourceSize": {"w":134,"h":53}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":13},
+	"sourceSize": {"w":34,"h":13}
 },
 {
 	"filename": "bedcrab_sad45.png",
-	"frame": {"x":271,"y":262,"w":133,"h":51},
+	"frame": {"x":139,"y":175,"w":34,"h":13},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":51},
-	"sourceSize": {"w":134,"h":53}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":13},
+	"sourceSize": {"w":34,"h":13}
 },
 {
 	"filename": "bedcrab_sad46.png",
-	"frame": {"x":136,"y":315,"w":134,"h":51},
+	"frame": {"x":175,"y":160,"w":34,"h":13},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":1,"w":134,"h":51},
-	"sourceSize": {"w":134,"h":53}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":13},
+	"sourceSize": {"w":34,"h":13}
 },
 {
 	"filename": "bedcrab_sad47.png",
-	"frame": {"x":1,"y":314,"w":133,"h":51},
+	"frame": {"x":139,"y":190,"w":34,"h":13},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":51},
-	"sourceSize": {"w":134,"h":53}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":13},
+	"sourceSize": {"w":34,"h":13}
 },
 {
 	"filename": "bedcrab_sad48.png",
-	"frame": {"x":136,"y":422,"w":133,"h":52},
+	"frame": {"x":181,"y":83,"w":34,"h":14},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":52},
-	"sourceSize": {"w":134,"h":54}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":14},
+	"sourceSize": {"w":34,"h":14}
 },
 {
 	"filename": "bedcrab_sad49.png",
-	"frame": {"x":271,"y":423,"w":133,"h":52},
+	"frame": {"x":73,"y":101,"w":34,"h":14},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":52},
-	"sourceSize": {"w":134,"h":54}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":14},
+	"sourceSize": {"w":34,"h":14}
 },
 {
 	"filename": "bedcrab_sad50.png",
-	"frame": {"x":136,"y":531,"w":133,"h":53},
+	"frame": {"x":109,"y":100,"w":34,"h":14},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":133,"h":53},
-	"sourceSize": {"w":134,"h":54}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":14},
+	"sourceSize": {"w":34,"h":14}
 },
 {
 	"filename": "bedcrab_sad51.png",
-	"frame": {"x":1,"y":641,"w":133,"h":54},
+	"frame": {"x":145,"y":99,"w":34,"h":14},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":1,"w":133,"h":54},
-	"sourceSize": {"w":134,"h":55}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":14},
+	"sourceSize": {"w":34,"h":14}
 },
 {
 	"filename": "bedcrab_sad52.png",
-	"frame": {"x":271,"y":532,"w":133,"h":53},
+	"frame": {"x":181,"y":99,"w":34,"h":14},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":53},
-	"sourceSize": {"w":134,"h":55}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":14},
+	"sourceSize": {"w":34,"h":14}
 },
 {
 	"filename": "bedcrab_sad53.png",
-	"frame": {"x":136,"y":643,"w":134,"h":53},
+	"frame": {"x":31,"y":117,"w":34,"h":14},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":1,"w":134,"h":53},
-	"sourceSize": {"w":134,"h":55}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":14},
+	"sourceSize": {"w":34,"h":14}
 },
 {
 	"filename": "bedcrab_sad54.png",
-	"frame": {"x":272,"y":643,"w":133,"h":54},
+	"frame": {"x":31,"y":133,"w":34,"h":14},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":1,"w":133,"h":54},
-	"sourceSize": {"w":134,"h":56}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":14},
+	"sourceSize": {"w":34,"h":14}
 },
 {
 	"filename": "bedcrab_sad55.png",
-	"frame": {"x":1,"y":697,"w":133,"h":54},
+	"frame": {"x":67,"y":117,"w":34,"h":14},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":54},
-	"sourceSize": {"w":134,"h":56}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":14},
+	"sourceSize": {"w":34,"h":14}
 },
 {
 	"filename": "bedcrab_sad56.png",
-	"frame": {"x":136,"y":698,"w":133,"h":54},
+	"frame": {"x":31,"y":149,"w":34,"h":14},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":54},
-	"sourceSize": {"w":134,"h":56}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":14},
+	"sourceSize": {"w":34,"h":14}
 },
 {
 	"filename": "bedcrab_sad57.png",
-	"frame": {"x":271,"y":699,"w":133,"h":54},
+	"frame": {"x":67,"y":133,"w":34,"h":14},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":54},
-	"sourceSize": {"w":134,"h":56}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":14},
+	"sourceSize": {"w":34,"h":14}
 },
 {
 	"filename": "bedcrab_sad58.png",
-	"frame": {"x":136,"y":868,"w":133,"h":56},
+	"frame": {"x":31,"y":165,"w":34,"h":14},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":1,"w":133,"h":56},
-	"sourceSize": {"w":134,"h":57}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":14},
+	"sourceSize": {"w":34,"h":14}
 },
 {
 	"filename": "bedcrab_sad59.png",
-	"frame": {"x":136,"y":811,"w":133,"h":55},
+	"frame": {"x":67,"y":149,"w":34,"h":14},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":1,"w":133,"h":55},
-	"sourceSize": {"w":134,"h":57}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":14},
+	"sourceSize": {"w":34,"h":14}
 },
 {
 	"filename": "bedcrab_sad60.png",
-	"frame": {"x":271,"y":870,"w":133,"h":56},
+	"frame": {"x":67,"y":165,"w":34,"h":14},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":56},
-	"sourceSize": {"w":134,"h":57}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":14},
+	"sourceSize": {"w":34,"h":14}
 },
 {
 	"filename": "bedcrab_sad61.png",
-	"frame": {"x":1,"y":925,"w":133,"h":56},
+	"frame": {"x":73,"y":18,"w":34,"h":15},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":1,"w":133,"h":56},
-	"sourceSize": {"w":134,"h":58}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":15},
+	"sourceSize": {"w":34,"h":15}
 },
 {
 	"filename": "bedcrab_sad62.png",
-	"frame": {"x":136,"y":926,"w":133,"h":56},
+	"frame": {"x":109,"y":1,"w":34,"h":15},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":1,"w":133,"h":56},
-	"sourceSize": {"w":134,"h":58}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":15},
+	"sourceSize": {"w":34,"h":15}
 },
 {
 	"filename": "bedcrab_sad63.png",
-	"frame": {"x":271,"y":928,"w":133,"h":56},
+	"frame": {"x":1,"y":69,"w":34,"h":15},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":1,"w":133,"h":56},
-	"sourceSize": {"w":134,"h":58}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":15},
+	"sourceSize": {"w":34,"h":15}
 },
 {
 	"filename": "bedcrab_sad64.png",
-	"frame": {"x":1,"y":983,"w":133,"h":56},
+	"frame": {"x":37,"y":52,"w":34,"h":15},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":56},
-	"sourceSize": {"w":134,"h":58}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":15},
+	"sourceSize": {"w":34,"h":15}
 },
 {
 	"filename": "bedcrab_sad65.png",
-	"frame": {"x":136,"y":984,"w":133,"h":56},
+	"frame": {"x":73,"y":35,"w":34,"h":15},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":56},
-	"sourceSize": {"w":134,"h":58}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":15},
+	"sourceSize": {"w":34,"h":15}
 },
 {
 	"filename": "bedcrab_sad66.png",
-	"frame": {"x":271,"y":1103,"w":133,"h":57},
+	"frame": {"x":109,"y":18,"w":34,"h":15},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":1,"w":133,"h":57},
-	"sourceSize": {"w":134,"h":59}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":15},
+	"sourceSize": {"w":34,"h":15}
 },
 {
 	"filename": "bedcrab_sad67.png",
-	"frame": {"x":1,"y":1158,"w":133,"h":57},
+	"frame": {"x":145,"y":1,"w":34,"h":15},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":1,"w":133,"h":57},
-	"sourceSize": {"w":134,"h":59}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":15},
+	"sourceSize": {"w":34,"h":15}
 },
 {
 	"filename": "bedcrab_sad68.png",
-	"frame": {"x":136,"y":1160,"w":133,"h":57},
+	"frame": {"x":1,"y":86,"w":34,"h":15},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":57},
-	"sourceSize": {"w":135,"h":59}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":15},
+	"sourceSize": {"w":34,"h":15}
 },
 {
 	"filename": "bedcrab_sad69.png",
-	"frame": {"x":271,"y":1162,"w":133,"h":57},
+	"frame": {"x":37,"y":69,"w":34,"h":15},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":57},
-	"sourceSize": {"w":135,"h":59}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":15},
+	"sourceSize": {"w":34,"h":15}
 },
 {
 	"filename": "bedcrab_sad70.png",
-	"frame": {"x":1,"y":1217,"w":133,"h":57},
+	"frame": {"x":109,"y":35,"w":34,"h":15},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":1,"w":133,"h":57},
-	"sourceSize": {"w":134,"h":59}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":15},
+	"sourceSize": {"w":34,"h":15}
 },
 {
 	"filename": "bedcrab_sad71.png",
-	"frame": {"x":271,"y":1221,"w":133,"h":58},
+	"frame": {"x":1,"y":35,"w":34,"h":15},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":58},
-	"sourceSize": {"w":135,"h":59}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":15},
+	"sourceSize": {"w":34,"h":15}
 },
 {
 	"filename": "bedcrab_sad72.png",
-	"frame": {"x":136,"y":1278,"w":133,"h":58},
+	"frame": {"x":145,"y":18,"w":34,"h":15},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":133,"h":58},
-	"sourceSize": {"w":135,"h":59}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":15},
+	"sourceSize": {"w":34,"h":15}
 },
 {
 	"filename": "bedcrab_Scared1.png",
-	"frame": {"x":406,"y":973,"w":85,"h":88},
+	"frame": {"x":175,"y":175,"w":22,"h":23},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":85,"h":88},
-	"sourceSize": {"w":87,"h":90}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":22,"h":23},
+	"sourceSize": {"w":22,"h":23}
 },
 {
 	"filename": "bedcrab_Scared2.png",
-	"frame": {"x":406,"y":709,"w":86,"h":86},
+	"frame": {"x":199,"y":177,"w":22,"h":22},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":86,"h":86},
-	"sourceSize": {"w":88,"h":86}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":22,"h":22},
+	"sourceSize": {"w":22,"h":22}
 },
 {
 	"filename": "bedcrab_Scared3.png",
-	"frame": {"x":406,"y":797,"w":88,"h":86},
+	"frame": {"x":217,"y":130,"w":23,"h":22},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":88,"h":86},
-	"sourceSize": {"w":90,"h":88}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":23,"h":22},
+	"sourceSize": {"w":23,"h":22}
 },
 {
 	"filename": "bedcrab_Scared4.png",
-	"frame": {"x":406,"y":1063,"w":86,"h":90},
+	"frame": {"x":190,"y":201,"w":22,"h":23},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":86,"h":90},
-	"sourceSize": {"w":88,"h":92}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":22,"h":23},
+	"sourceSize": {"w":22,"h":23}
 },
 {
 	"filename": "bedcrab_Scared5.png",
-	"frame": {"x":406,"y":885,"w":85,"h":86},
+	"frame": {"x":214,"y":201,"w":22,"h":22},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":85,"h":86},
-	"sourceSize": {"w":87,"h":88}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":22,"h":22},
+	"sourceSize": {"w":22,"h":22}
 },
 {
 	"filename": "bedcrab_Walk1.png",
-	"frame": {"x":407,"y":466,"w":93,"h":78},
+	"frame": {"x":165,"y":205,"w":23,"h":20},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":1,"w":93,"h":78},
-	"sourceSize": {"w":93,"h":80}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":23,"h":20},
+	"sourceSize": {"w":23,"h":20}
 },
 {
 	"filename": "bedcrab_Walk2.png",
-	"frame": {"x":407,"y":466,"w":93,"h":78},
+	"frame": {"x":165,"y":205,"w":23,"h":20},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":1,"w":93,"h":78},
-	"sourceSize": {"w":93,"h":80}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":23,"h":20},
+	"sourceSize": {"w":23,"h":20}
 },
 {
 	"filename": "bedcrab_Walk3.png",
-	"frame": {"x":407,"y":466,"w":93,"h":78},
+	"frame": {"x":165,"y":205,"w":23,"h":20},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":1,"w":93,"h":78},
-	"sourceSize": {"w":93,"h":80}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":23,"h":20},
+	"sourceSize": {"w":23,"h":20}
 },
 {
 	"filename": "bedcrab_Walk4.png",
-	"frame": {"x":406,"y":1,"w":92,"h":75},
+	"frame": {"x":101,"y":206,"w":23,"h":19},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":92,"h":75},
-	"sourceSize": {"w":93,"h":77}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":23,"h":19},
+	"sourceSize": {"w":23,"h":19}
 },
 {
 	"filename": "bedcrab_Walk5.png",
-	"frame": {"x":406,"y":1,"w":92,"h":75},
+	"frame": {"x":101,"y":206,"w":23,"h":19},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":92,"h":75},
-	"sourceSize": {"w":93,"h":77}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":23,"h":19},
+	"sourceSize": {"w":23,"h":19}
 },
 {
 	"filename": "bedcrab_Walk6.png",
-	"frame": {"x":406,"y":1,"w":92,"h":75},
+	"frame": {"x":101,"y":206,"w":23,"h":19},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":92,"h":75},
-	"sourceSize": {"w":93,"h":77}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":23,"h":19},
+	"sourceSize": {"w":23,"h":19}
 },
 {
 	"filename": "bedcrab_Walk7.png",
-	"frame": {"x":406,"y":546,"w":92,"h":79},
+	"frame": {"x":139,"y":205,"w":24,"h":20},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":92,"h":79},
-	"sourceSize": {"w":94,"h":81}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":24,"h":20},
+	"sourceSize": {"w":24,"h":20}
 },
 {
 	"filename": "bedcrab_Walk8.png",
-	"frame": {"x":406,"y":546,"w":92,"h":79},
+	"frame": {"x":139,"y":205,"w":24,"h":20},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":92,"h":79},
-	"sourceSize": {"w":94,"h":81}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":24,"h":20},
+	"sourceSize": {"w":24,"h":20}
 },
 {
 	"filename": "bedcrab_Walk9.png",
-	"frame": {"x":406,"y":546,"w":92,"h":79},
+	"frame": {"x":139,"y":205,"w":24,"h":20},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":92,"h":79},
-	"sourceSize": {"w":94,"h":81}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":24,"h":20},
+	"sourceSize": {"w":24,"h":20}
 },
 {
 	"filename": "bedcrab_Walk10.png",
-	"frame": {"x":407,"y":627,"w":89,"h":80},
+	"frame": {"x":211,"y":154,"w":23,"h":21},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":89,"h":80},
-	"sourceSize": {"w":90,"h":82}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":23,"h":21},
+	"sourceSize": {"w":23,"h":21}
 },
 {
 	"filename": "bedcrab_Walk11.png",
-	"frame": {"x":407,"y":627,"w":89,"h":80},
+	"frame": {"x":211,"y":154,"w":23,"h":21},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":89,"h":80},
-	"sourceSize": {"w":90,"h":82}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":23,"h":21},
+	"sourceSize": {"w":23,"h":21}
 },
 {
 	"filename": "bedcrab_Walk12.png",
-	"frame": {"x":407,"y":627,"w":89,"h":80},
+	"frame": {"x":211,"y":154,"w":23,"h":21},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":89,"h":80},
-	"sourceSize": {"w":90,"h":82}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":23,"h":21},
+	"sourceSize": {"w":23,"h":21}
 }],
 "meta": {
 	"app": "https://www.codeandweb.com/texturepacker",
 	"version": "1.0",
 	"image": "bedcrab.png",
 	"format": "RGBA8888",
-	"size": {"w":512,"h":1437},
+	"size": {"w":245,"h":226},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:2fcab815b6c9ae8143e02ae85584a26b:b4b495695ce375b80aad0f813265c915:eb627b4390611a0248144def707f8653$"
+	"smartupdate": "$TexturePacker:SmartUpdate:24c2370b6578fe7b3ea6b810a58f2c99:c891dafe231c52b9691d3ff7decf293d:eb627b4390611a0248144def707f8653$"
 }
 }

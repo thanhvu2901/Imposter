@@ -173,7 +173,7 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../../../skin/Pets/pet03/crewmin_idle.png</key>
+            <key type="filename">../../preload_assets/pet/crewmin/crewmin_idle1.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -182,13 +182,13 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>23,28,45,55</rect>
+                <rect>6,7,11,14</rect>
                 <key>scale9Paddings</key>
-                <rect>23,28,45,55</rect>
+                <rect>6,7,11,14</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet03/crewmin_sad.png</key>
+            <key type="filename">../../preload_assets/pet/crewmin/crewmin_sad.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -197,14 +197,16 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>24,27,47,53</rect>
+                <rect>6,7,12,13</rect>
                 <key>scale9Paddings</key>
-                <rect>24,27,47,53</rect>
+                <rect>6,7,12,13</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet03/crewmin_scared1.png</key>
-            <key type="filename">../../../skin/Pets/pet03/crewmin_scared2.png</key>
+            <key type="filename">../../preload_assets/pet/crewmin/crewmin_scared1.png</key>
+            <key type="filename">../../preload_assets/pet/crewmin/crewmin_scared2.png</key>
+            <key type="filename">../../preload_assets/pet/crewmin/crewmin_scared3.png</key>
+            <key type="filename">../../preload_assets/pet/crewmin/crewmin_scared4.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -213,13 +215,20 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>24,28,48,57</rect>
+                <rect>6,7,12,14</rect>
                 <key>scale9Paddings</key>
-                <rect>24,28,48,57</rect>
+                <rect>6,7,12,14</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet03/crewmin_scared3.png</key>
+            <key type="filename">../../preload_assets/pet/crewmin/crewmin_walk1.png</key>
+            <key type="filename">../../preload_assets/pet/crewmin/crewmin_walk11.png</key>
+            <key type="filename">../../preload_assets/pet/crewmin/crewmin_walk12.png</key>
+            <key type="filename">../../preload_assets/pet/crewmin/crewmin_walk13.png</key>
+            <key type="filename">../../preload_assets/pet/crewmin/crewmin_walk14.png</key>
+            <key type="filename">../../preload_assets/pet/crewmin/crewmin_walk15.png</key>
+            <key type="filename">../../preload_assets/pet/crewmin/crewmin_walk16.png</key>
+            <key type="filename">../../preload_assets/pet/crewmin/crewmin_walk2.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -228,13 +237,14 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>24,28,49,57</rect>
+                <rect>6,7,11,13</rect>
                 <key>scale9Paddings</key>
-                <rect>24,28,49,57</rect>
+                <rect>6,7,11,13</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet03/crewmin_scared4.png</key>
+            <key type="filename">../../preload_assets/pet/crewmin/crewmin_walk10.png</key>
+            <key type="filename">../../preload_assets/pet/crewmin/crewmin_walk9.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -243,14 +253,18 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>24,28,47,57</rect>
+                <rect>6,6,11,13</rect>
                 <key>scale9Paddings</key>
-                <rect>24,28,47,57</rect>
+                <rect>6,6,11,13</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet03/crewmin_walk1.png</key>
-            <key type="filename">../../../skin/Pets/pet03/crewmin_walk2.png</key>
+            <key type="filename">../../preload_assets/pet/crewmin/crewmin_walk3.png</key>
+            <key type="filename">../../preload_assets/pet/crewmin/crewmin_walk4.png</key>
+            <key type="filename">../../preload_assets/pet/crewmin/crewmin_walk5.png</key>
+            <key type="filename">../../preload_assets/pet/crewmin/crewmin_walk6.png</key>
+            <key type="filename">../../preload_assets/pet/crewmin/crewmin_walk7.png</key>
+            <key type="filename">../../preload_assets/pet/crewmin/crewmin_walk8.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -259,107 +273,37 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>22,26,45,51</rect>
+                <rect>6,6,13,12</rect>
                 <key>scale9Paddings</key>
-                <rect>22,26,45,51</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet03/crewmin_walk10.png</key>
-            <key type="filename">../../../skin/Pets/pet03/crewmin_walk9.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>22,25,44,51</rect>
-                <key>scale9Paddings</key>
-                <rect>22,25,44,51</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet03/crewmin_walk11.png</key>
-            <key type="filename">../../../skin/Pets/pet03/crewmin_walk12.png</key>
-            <key type="filename">../../../skin/Pets/pet03/crewmin_walk13.png</key>
-            <key type="filename">../../../skin/Pets/pet03/crewmin_walk14.png</key>
-            <key type="filename">../../../skin/Pets/pet03/crewmin_walk15.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>22,27,45,53</rect>
-                <key>scale9Paddings</key>
-                <rect>22,27,45,53</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet03/crewmin_walk16.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>22,26,45,53</rect>
-                <key>scale9Paddings</key>
-                <rect>22,26,45,53</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet03/crewmin_walk3.png</key>
-            <key type="filename">../../../skin/Pets/pet03/crewmin_walk4.png</key>
-            <key type="filename">../../../skin/Pets/pet03/crewmin_walk5.png</key>
-            <key type="filename">../../../skin/Pets/pet03/crewmin_walk6.png</key>
-            <key type="filename">../../../skin/Pets/pet03/crewmin_walk7.png</key>
-            <key type="filename">../../../skin/Pets/pet03/crewmin_walk8.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>25,24,49,49</rect>
-                <key>scale9Paddings</key>
-                <rect>25,24,49,49</rect>
+                <rect>6,6,13,12</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
         </map>
         <key>fileList</key>
         <array>
-            <filename>../../../skin/Pets/pet03/crewmin_idle.png</filename>
-            <filename>../../../skin/Pets/pet03/crewmin_sad.png</filename>
-            <filename>../../../skin/Pets/pet03/crewmin_scared1.png</filename>
-            <filename>../../../skin/Pets/pet03/crewmin_scared2.png</filename>
-            <filename>../../../skin/Pets/pet03/crewmin_scared3.png</filename>
-            <filename>../../../skin/Pets/pet03/crewmin_scared4.png</filename>
-            <filename>../../../skin/Pets/pet03/crewmin_walk1.png</filename>
-            <filename>../../../skin/Pets/pet03/crewmin_walk10.png</filename>
-            <filename>../../../skin/Pets/pet03/crewmin_walk11.png</filename>
-            <filename>../../../skin/Pets/pet03/crewmin_walk12.png</filename>
-            <filename>../../../skin/Pets/pet03/crewmin_walk13.png</filename>
-            <filename>../../../skin/Pets/pet03/crewmin_walk14.png</filename>
-            <filename>../../../skin/Pets/pet03/crewmin_walk15.png</filename>
-            <filename>../../../skin/Pets/pet03/crewmin_walk16.png</filename>
-            <filename>../../../skin/Pets/pet03/crewmin_walk2.png</filename>
-            <filename>../../../skin/Pets/pet03/crewmin_walk3.png</filename>
-            <filename>../../../skin/Pets/pet03/crewmin_walk4.png</filename>
-            <filename>../../../skin/Pets/pet03/crewmin_walk5.png</filename>
-            <filename>../../../skin/Pets/pet03/crewmin_walk6.png</filename>
-            <filename>../../../skin/Pets/pet03/crewmin_walk7.png</filename>
-            <filename>../../../skin/Pets/pet03/crewmin_walk8.png</filename>
-            <filename>../../../skin/Pets/pet03/crewmin_walk9.png</filename>
+            <filename>../../preload_assets/pet/crewmin/crewmin_idle1.png</filename>
+            <filename>../../preload_assets/pet/crewmin/crewmin_sad.png</filename>
+            <filename>../../preload_assets/pet/crewmin/crewmin_scared1.png</filename>
+            <filename>../../preload_assets/pet/crewmin/crewmin_scared2.png</filename>
+            <filename>../../preload_assets/pet/crewmin/crewmin_scared3.png</filename>
+            <filename>../../preload_assets/pet/crewmin/crewmin_scared4.png</filename>
+            <filename>../../preload_assets/pet/crewmin/crewmin_walk1.png</filename>
+            <filename>../../preload_assets/pet/crewmin/crewmin_walk10.png</filename>
+            <filename>../../preload_assets/pet/crewmin/crewmin_walk11.png</filename>
+            <filename>../../preload_assets/pet/crewmin/crewmin_walk12.png</filename>
+            <filename>../../preload_assets/pet/crewmin/crewmin_walk13.png</filename>
+            <filename>../../preload_assets/pet/crewmin/crewmin_walk14.png</filename>
+            <filename>../../preload_assets/pet/crewmin/crewmin_walk15.png</filename>
+            <filename>../../preload_assets/pet/crewmin/crewmin_walk16.png</filename>
+            <filename>../../preload_assets/pet/crewmin/crewmin_walk2.png</filename>
+            <filename>../../preload_assets/pet/crewmin/crewmin_walk3.png</filename>
+            <filename>../../preload_assets/pet/crewmin/crewmin_walk4.png</filename>
+            <filename>../../preload_assets/pet/crewmin/crewmin_walk5.png</filename>
+            <filename>../../preload_assets/pet/crewmin/crewmin_walk6.png</filename>
+            <filename>../../preload_assets/pet/crewmin/crewmin_walk7.png</filename>
+            <filename>../../preload_assets/pet/crewmin/crewmin_walk8.png</filename>
+            <filename>../../preload_assets/pet/crewmin/crewmin_walk9.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

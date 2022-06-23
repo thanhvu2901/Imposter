@@ -173,8 +173,10 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../../../skin/Pets/pet04/dog_idle10.png</key>
-            <key type="filename">../../../skin/Pets/pet04/dog_idle5.png</key>
+            <key type="filename">../../preload_assets/pet/dog/dog_idle1.png</key>
+            <key type="filename">../../preload_assets/pet/dog/dog_idle4.png</key>
+            <key type="filename">../../preload_assets/pet/dog/dog_idle6.png</key>
+            <key type="filename">../../preload_assets/pet/dog/dog_scared2.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -183,14 +185,14 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>33,26,65,51</rect>
+                <rect>8,7,15,13</rect>
                 <key>scale9Paddings</key>
-                <rect>33,26,65,51</rect>
+                <rect>8,7,15,13</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet04/dog_idle3.png</key>
-            <key type="filename">../../../skin/Pets/pet04/dog_idle8.png</key>
+            <key type="filename">../../preload_assets/pet/dog/dog_idle2.png</key>
+            <key type="filename">../../preload_assets/pet/dog/dog_idle7.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -199,14 +201,14 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>30,26,61,51</rect>
+                <rect>8,6,15,13</rect>
                 <key>scale9Paddings</key>
-                <rect>30,26,61,51</rect>
+                <rect>8,6,15,13</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet04/dog_idle4.png</key>
-            <key type="filename">../../../skin/Pets/pet04/dog_idle9.png</key>
+            <key type="filename">../../preload_assets/pet/dog/dog_idle3.png</key>
+            <key type="filename">../../preload_assets/pet/dog/dog_idle8.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -215,13 +217,16 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>31,25,63,51</rect>
+                <rect>8,7,17,13</rect>
                 <key>scale9Paddings</key>
-                <rect>31,25,63,51</rect>
+                <rect>8,7,17,13</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet04/dog_idle6.png</key>
+            <key type="filename">../../preload_assets/pet/dog/dog_idle5.png</key>
+            <key type="filename">../../preload_assets/pet/dog/dog_scared1.png</key>
+            <key type="filename">../../preload_assets/pet/dog/dog_scared3.png</key>
+            <key type="filename">../../preload_assets/pet/dog/dog_scared4.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -230,16 +235,13 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>31,26,63,51</rect>
+                <rect>8,7,16,13</rect>
                 <key>scale9Paddings</key>
-                <rect>31,26,63,51</rect>
+                <rect>8,7,16,13</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet04/dog_idle7.png</key>
-            <key type="filename">../../../skin/Pets/pet04/dog_scared1.png</key>
-            <key type="filename">../../../skin/Pets/pet04/dog_scared3.png</key>
-            <key type="filename">../../../skin/Pets/pet04/dog_scared4.png</key>
+            <key type="filename">../../preload_assets/pet/dog/dog_sad.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -248,13 +250,14 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>32,26,63,51</rect>
+                <rect>11,5,21,9</rect>
                 <key>scale9Paddings</key>
-                <rect>32,26,63,51</rect>
+                <rect>11,5,21,9</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet04/dog_sad.png</key>
+            <key type="filename">../../preload_assets/pet/dog/dog_walk1.png</key>
+            <key type="filename">../../preload_assets/pet/dog/dog_walk2.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -263,13 +266,16 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>43,18,86,35</rect>
+                <rect>8,6,17,12</rect>
                 <key>scale9Paddings</key>
-                <rect>43,18,86,35</rect>
+                <rect>8,6,17,12</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet04/dog_scared2.png</key>
+            <key type="filename">../../preload_assets/pet/dog/dog_walk3.png</key>
+            <key type="filename">../../preload_assets/pet/dog/dog_walk4.png</key>
+            <key type="filename">../../preload_assets/pet/dog/dog_walk5.png</key>
+            <key type="filename">../../preload_assets/pet/dog/dog_walk6.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -278,14 +284,13 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>31,26,62,51</rect>
+                <rect>8,6,16,11</rect>
                 <key>scale9Paddings</key>
-                <rect>31,26,62,51</rect>
+                <rect>8,6,16,11</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet04/dog_walk1.png</key>
-            <key type="filename">../../../skin/Pets/pet04/dog_walk2.png</key>
+            <key type="filename">../../preload_assets/pet/dog/dog_walk7.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -294,16 +299,13 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>33,24,65,47</rect>
+                <rect>8,6,16,12</rect>
                 <key>scale9Paddings</key>
-                <rect>33,24,65,47</rect>
+                <rect>8,6,16,12</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../skin/Pets/pet04/dog_walk3.png</key>
-            <key type="filename">../../../skin/Pets/pet04/dog_walk4.png</key>
-            <key type="filename">../../../skin/Pets/pet04/dog_walk5.png</key>
-            <key type="filename">../../../skin/Pets/pet04/dog_walk6.png</key>
+            <key type="filename">../../preload_assets/pet/dog/dog_walk8.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -312,66 +314,36 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>32,23,64,46</rect>
+                <rect>8,6,15,11</rect>
                 <key>scale9Paddings</key>
-                <rect>32,23,64,46</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet04/dog_walk7.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>32,24,63,47</rect>
-                <key>scale9Paddings</key>
-                <rect>32,24,63,47</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../skin/Pets/pet04/dog_walk8.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>31,23,63,46</rect>
-                <key>scale9Paddings</key>
-                <rect>31,23,63,46</rect>
+                <rect>8,6,15,11</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
         </map>
         <key>fileList</key>
         <array>
-            <filename>../../../skin/Pets/pet04/dog_idle10.png</filename>
-            <filename>../../../skin/Pets/pet04/dog_idle3.png</filename>
-            <filename>../../../skin/Pets/pet04/dog_idle4.png</filename>
-            <filename>../../../skin/Pets/pet04/dog_idle5.png</filename>
-            <filename>../../../skin/Pets/pet04/dog_idle6.png</filename>
-            <filename>../../../skin/Pets/pet04/dog_idle7.png</filename>
-            <filename>../../../skin/Pets/pet04/dog_idle8.png</filename>
-            <filename>../../../skin/Pets/pet04/dog_idle9.png</filename>
-            <filename>../../../skin/Pets/pet04/dog_sad.png</filename>
-            <filename>../../../skin/Pets/pet04/dog_scared1.png</filename>
-            <filename>../../../skin/Pets/pet04/dog_scared2.png</filename>
-            <filename>../../../skin/Pets/pet04/dog_scared3.png</filename>
-            <filename>../../../skin/Pets/pet04/dog_scared4.png</filename>
-            <filename>../../../skin/Pets/pet04/dog_walk1.png</filename>
-            <filename>../../../skin/Pets/pet04/dog_walk2.png</filename>
-            <filename>../../../skin/Pets/pet04/dog_walk3.png</filename>
-            <filename>../../../skin/Pets/pet04/dog_walk4.png</filename>
-            <filename>../../../skin/Pets/pet04/dog_walk5.png</filename>
-            <filename>../../../skin/Pets/pet04/dog_walk6.png</filename>
-            <filename>../../../skin/Pets/pet04/dog_walk7.png</filename>
-            <filename>../../../skin/Pets/pet04/dog_walk8.png</filename>
+            <filename>../../preload_assets/pet/dog/dog_idle1.png</filename>
+            <filename>../../preload_assets/pet/dog/dog_idle2.png</filename>
+            <filename>../../preload_assets/pet/dog/dog_idle3.png</filename>
+            <filename>../../preload_assets/pet/dog/dog_idle4.png</filename>
+            <filename>../../preload_assets/pet/dog/dog_idle5.png</filename>
+            <filename>../../preload_assets/pet/dog/dog_idle6.png</filename>
+            <filename>../../preload_assets/pet/dog/dog_idle7.png</filename>
+            <filename>../../preload_assets/pet/dog/dog_idle8.png</filename>
+            <filename>../../preload_assets/pet/dog/dog_sad.png</filename>
+            <filename>../../preload_assets/pet/dog/dog_scared1.png</filename>
+            <filename>../../preload_assets/pet/dog/dog_scared2.png</filename>
+            <filename>../../preload_assets/pet/dog/dog_scared3.png</filename>
+            <filename>../../preload_assets/pet/dog/dog_scared4.png</filename>
+            <filename>../../preload_assets/pet/dog/dog_walk1.png</filename>
+            <filename>../../preload_assets/pet/dog/dog_walk2.png</filename>
+            <filename>../../preload_assets/pet/dog/dog_walk3.png</filename>
+            <filename>../../preload_assets/pet/dog/dog_walk4.png</filename>
+            <filename>../../preload_assets/pet/dog/dog_walk5.png</filename>
+            <filename>../../preload_assets/pet/dog/dog_walk6.png</filename>
+            <filename>../../preload_assets/pet/dog/dog_walk7.png</filename>
+            <filename>../../preload_assets/pet/dog/dog_walk8.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

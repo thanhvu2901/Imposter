@@ -2,515 +2,515 @@
 
 {
 	"filename": "squig_idle1.png",
-	"frame": {"x":859,"y":139,"w":105,"h":141},
+	"frame": {"x":34,"y":221,"w":27,"h":36},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":105,"h":141},
-	"sourceSize": {"w":107,"h":143}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":36},
+	"sourceSize": {"w":27,"h":36}
 },
 {
 	"filename": "squig_idle2.png",
-	"frame": {"x":215,"y":275,"w":105,"h":142},
+	"frame": {"x":30,"y":668,"w":27,"h":36},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":105,"h":142},
-	"sourceSize": {"w":107,"h":144}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":36},
+	"sourceSize": {"w":27,"h":36}
 },
 {
 	"filename": "squig_idle3.png",
-	"frame": {"x":644,"y":278,"w":106,"h":142},
+	"frame": {"x":30,"y":858,"w":27,"h":36},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":106,"h":142},
-	"sourceSize": {"w":107,"h":144}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":36},
+	"sourceSize": {"w":27,"h":36}
 },
 {
 	"filename": "squig_idle4.png",
-	"frame": {"x":861,"y":571,"w":105,"h":143},
+	"frame": {"x":1,"y":1070,"w":27,"h":36},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":0,"w":105,"h":143},
-	"sourceSize": {"w":106,"h":144}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":36},
+	"sourceSize": {"w":27,"h":36}
 },
 {
 	"filename": "squig_idle5.png",
-	"frame": {"x":1,"y":665,"w":105,"h":143},
+	"frame": {"x":30,"y":1086,"w":27,"h":36},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":0,"w":105,"h":143},
-	"sourceSize": {"w":106,"h":144}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":36},
+	"sourceSize": {"w":27,"h":36}
 },
 {
 	"filename": "squig_idle6.png",
-	"frame": {"x":108,"y":707,"w":105,"h":143},
+	"frame": {"x":1,"y":1108,"w":27,"h":36},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":105,"h":143},
-	"sourceSize": {"w":107,"h":145}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":36},
+	"sourceSize": {"w":27,"h":36}
 },
 {
 	"filename": "squig_idle7.png",
-	"frame": {"x":751,"y":716,"w":105,"h":144},
+	"frame": {"x":34,"y":143,"w":27,"h":37},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":1,"w":105,"h":144},
-	"sourceSize": {"w":106,"h":146}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":37},
+	"sourceSize": {"w":27,"h":37}
 },
 {
 	"filename": "squig_idle8.png",
-	"frame": {"x":858,"y":716,"w":105,"h":144},
+	"frame": {"x":34,"y":182,"w":27,"h":37},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":105,"h":144},
-	"sourceSize": {"w":107,"h":146}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":37},
+	"sourceSize": {"w":27,"h":37}
 },
 {
 	"filename": "squig_idle9.png",
-	"frame": {"x":1,"y":810,"w":105,"h":144},
+	"frame": {"x":30,"y":1124,"w":27,"h":36},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":0,"w":105,"h":144},
-	"sourceSize": {"w":106,"h":145}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":36},
+	"sourceSize": {"w":27,"h":36}
 },
 {
 	"filename": "squig_idle10.png",
-	"frame": {"x":215,"y":709,"w":105,"h":144},
+	"frame": {"x":34,"y":26,"w":27,"h":37},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":105,"h":144},
-	"sourceSize": {"w":107,"h":146}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":37},
+	"sourceSize": {"w":27,"h":37}
 },
 {
 	"filename": "squig_idle11.png",
-	"frame": {"x":322,"y":710,"w":105,"h":144},
+	"frame": {"x":34,"y":259,"w":27,"h":36},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":0,"w":105,"h":144},
-	"sourceSize": {"w":106,"h":145}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":36},
+	"sourceSize": {"w":27,"h":36}
 },
 {
 	"filename": "squig_idle12.png",
-	"frame": {"x":429,"y":711,"w":106,"h":144},
+	"frame": {"x":34,"y":65,"w":27,"h":37},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":106,"h":144},
-	"sourceSize": {"w":108,"h":146}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":37},
+	"sourceSize": {"w":27,"h":37}
 },
 {
 	"filename": "squig_idle13.png",
-	"frame": {"x":537,"y":712,"w":105,"h":144},
+	"frame": {"x":34,"y":104,"w":27,"h":37},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":1,"w":105,"h":144},
-	"sourceSize": {"w":106,"h":146}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":37},
+	"sourceSize": {"w":27,"h":37}
 },
 {
 	"filename": "squig_idle14.png",
-	"frame": {"x":108,"y":417,"w":105,"h":143},
+	"frame": {"x":34,"y":297,"w":27,"h":36},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":105,"h":143},
-	"sourceSize": {"w":107,"h":145}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":36},
+	"sourceSize": {"w":27,"h":36}
 },
 {
 	"filename": "squig_idle15.png",
-	"frame": {"x":644,"y":712,"w":105,"h":144},
+	"frame": {"x":34,"y":335,"w":27,"h":36},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":105,"h":144},
-	"sourceSize": {"w":107,"h":145}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":36},
+	"sourceSize": {"w":27,"h":36}
 },
 {
 	"filename": "squig_idle16.png",
-	"frame": {"x":215,"y":419,"w":105,"h":143},
+	"frame": {"x":34,"y":373,"w":27,"h":36},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":105,"h":143},
-	"sourceSize": {"w":107,"h":145}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":36},
+	"sourceSize": {"w":27,"h":36}
 },
 {
 	"filename": "squig_idle17.png",
-	"frame": {"x":536,"y":421,"w":106,"h":143},
+	"frame": {"x":34,"y":411,"w":27,"h":36},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":106,"h":143},
-	"sourceSize": {"w":108,"h":145}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":36},
+	"sourceSize": {"w":27,"h":36}
 },
 {
 	"filename": "squig_idle18.png",
-	"frame": {"x":1,"y":232,"w":105,"h":142},
+	"frame": {"x":34,"y":449,"w":27,"h":36},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":105,"h":142},
-	"sourceSize": {"w":107,"h":144}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":36},
+	"sourceSize": {"w":27,"h":36}
 },
 {
 	"filename": "squig_idle19.png",
-	"frame": {"x":108,"y":273,"w":105,"h":142},
+	"frame": {"x":1,"y":652,"w":27,"h":36},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":105,"h":142},
-	"sourceSize": {"w":107,"h":144}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":36},
+	"sourceSize": {"w":27,"h":36}
 },
 {
 	"filename": "squig_idle20.png",
-	"frame": {"x":859,"y":139,"w":105,"h":141},
+	"frame": {"x":34,"y":221,"w":27,"h":36},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":105,"h":141},
-	"sourceSize": {"w":107,"h":143}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":36},
+	"sourceSize": {"w":27,"h":36}
 },
 {
 	"filename": "squig_idle21.png",
-	"frame": {"x":322,"y":275,"w":105,"h":142},
+	"frame": {"x":1,"y":690,"w":27,"h":36},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":105,"h":142},
-	"sourceSize": {"w":107,"h":144}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":36},
+	"sourceSize": {"w":27,"h":36}
 },
 {
 	"filename": "squig_idle22.png",
-	"frame": {"x":429,"y":276,"w":105,"h":142},
+	"frame": {"x":30,"y":706,"w":27,"h":36},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":105,"h":142},
-	"sourceSize": {"w":107,"h":144}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":36},
+	"sourceSize": {"w":27,"h":36}
 },
 {
 	"filename": "squig_idle23.png",
-	"frame": {"x":536,"y":277,"w":106,"h":142},
+	"frame": {"x":1,"y":728,"w":27,"h":36},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":106,"h":142},
-	"sourceSize": {"w":108,"h":144}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":36},
+	"sourceSize": {"w":27,"h":36}
 },
 {
 	"filename": "squig_idle24.png",
-	"frame": {"x":322,"y":419,"w":105,"h":143},
+	"frame": {"x":30,"y":744,"w":27,"h":36},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":105,"h":143},
-	"sourceSize": {"w":107,"h":145}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":36},
+	"sourceSize": {"w":27,"h":36}
 },
 {
 	"filename": "squig_idle25.png",
-	"frame": {"x":644,"y":422,"w":106,"h":143},
+	"frame": {"x":1,"y":766,"w":27,"h":36},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":106,"h":143},
-	"sourceSize": {"w":108,"h":145}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":36},
+	"sourceSize": {"w":27,"h":36}
 },
 {
 	"filename": "squig_idle26.png",
-	"frame": {"x":859,"y":426,"w":106,"h":143},
+	"frame": {"x":30,"y":782,"w":27,"h":36},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":106,"h":143},
-	"sourceSize": {"w":108,"h":145}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":36},
+	"sourceSize": {"w":27,"h":36}
 },
 {
 	"filename": "squig_idle27.png",
-	"frame": {"x":429,"y":420,"w":105,"h":143},
+	"frame": {"x":1,"y":804,"w":27,"h":36},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":105,"h":143},
-	"sourceSize": {"w":107,"h":145}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":36},
+	"sourceSize": {"w":27,"h":36}
 },
 {
 	"filename": "squig_idle28.png",
-	"frame": {"x":752,"y":422,"w":105,"h":143},
+	"frame": {"x":30,"y":820,"w":27,"h":36},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":105,"h":143},
-	"sourceSize": {"w":107,"h":145}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":36},
+	"sourceSize": {"w":27,"h":36}
 },
 {
 	"filename": "squig_idle29.png",
-	"frame": {"x":215,"y":564,"w":106,"h":143},
+	"frame": {"x":1,"y":842,"w":27,"h":36},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":106,"h":143},
-	"sourceSize": {"w":108,"h":145}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":36},
+	"sourceSize": {"w":27,"h":36}
 },
 {
 	"filename": "squig_idle30.png",
-	"frame": {"x":1,"y":520,"w":105,"h":143},
+	"frame": {"x":1,"y":880,"w":27,"h":36},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":105,"h":143},
-	"sourceSize": {"w":107,"h":145}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":36},
+	"sourceSize": {"w":27,"h":36}
 },
 {
 	"filename": "squig_idle31.png",
-	"frame": {"x":323,"y":565,"w":106,"h":143},
+	"frame": {"x":30,"y":896,"w":27,"h":36},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":106,"h":143},
-	"sourceSize": {"w":108,"h":145}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":36},
+	"sourceSize": {"w":27,"h":36}
 },
 {
 	"filename": "squig_idle32.png",
-	"frame": {"x":108,"y":562,"w":105,"h":143},
+	"frame": {"x":1,"y":918,"w":27,"h":36},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":105,"h":143},
-	"sourceSize": {"w":107,"h":145}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":36},
+	"sourceSize": {"w":27,"h":36}
 },
 {
 	"filename": "squig_idle33.png",
-	"frame": {"x":431,"y":566,"w":105,"h":143},
+	"frame": {"x":30,"y":934,"w":27,"h":36},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":105,"h":143},
-	"sourceSize": {"w":107,"h":145}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":36},
+	"sourceSize": {"w":27,"h":36}
 },
 {
 	"filename": "squig_idle34.png",
-	"frame": {"x":538,"y":567,"w":106,"h":143},
+	"frame": {"x":1,"y":956,"w":27,"h":36},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":106,"h":143},
-	"sourceSize": {"w":108,"h":145}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":36},
+	"sourceSize": {"w":27,"h":36}
 },
 {
 	"filename": "squig_idle35.png",
-	"frame": {"x":646,"y":567,"w":106,"h":143},
+	"frame": {"x":30,"y":972,"w":27,"h":36},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":106,"h":143},
-	"sourceSize": {"w":108,"h":145}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":36},
+	"sourceSize": {"w":27,"h":36}
 },
 {
 	"filename": "squig_idle36.png",
-	"frame": {"x":754,"y":571,"w":105,"h":143},
+	"frame": {"x":1,"y":994,"w":27,"h":36},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":105,"h":143},
-	"sourceSize": {"w":107,"h":145}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":36},
+	"sourceSize": {"w":27,"h":36}
 },
 {
 	"filename": "squig_idle37.png",
-	"frame": {"x":859,"y":282,"w":106,"h":142},
+	"frame": {"x":30,"y":1010,"w":27,"h":36},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":106,"h":142},
-	"sourceSize": {"w":108,"h":144}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":36},
+	"sourceSize": {"w":27,"h":36}
 },
 {
 	"filename": "squig_idle38.png",
-	"frame": {"x":752,"y":278,"w":105,"h":142},
+	"frame": {"x":1,"y":1032,"w":27,"h":36},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":105,"h":142},
-	"sourceSize": {"w":107,"h":144}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":36},
+	"sourceSize": {"w":27,"h":36}
 },
 {
 	"filename": "squig_idle39.png",
-	"frame": {"x":1,"y":376,"w":105,"h":142},
+	"frame": {"x":30,"y":1048,"w":27,"h":36},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":105,"h":142},
-	"sourceSize": {"w":107,"h":144}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":36},
+	"sourceSize": {"w":27,"h":36}
 },
 {
 	"filename": "squig_idle40.png",
-	"frame": {"x":859,"y":139,"w":105,"h":141},
+	"frame": {"x":34,"y":221,"w":27,"h":36},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":105,"h":141},
-	"sourceSize": {"w":107,"h":143}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":36},
+	"sourceSize": {"w":27,"h":36}
 },
 {
 	"filename": "squig_sad.png",
-	"frame": {"x":1,"y":1,"w":141,"h":91},
+	"frame": {"x":1,"y":1,"w":36,"h":23},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":1,"w":141,"h":91},
-	"sourceSize": {"w":142,"h":93}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":23},
+	"sourceSize": {"w":36,"h":23}
 },
 {
 	"filename": "squig_scared1.png",
-	"frame": {"x":482,"y":858,"w":122,"h":187},
+	"frame": {"x":1,"y":126,"w":31,"h":47},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":122,"h":187},
-	"sourceSize": {"w":124,"h":189}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":47},
+	"sourceSize": {"w":31,"h":47}
 },
 {
 	"filename": "squig_scared2.png",
-	"frame": {"x":606,"y":858,"w":122,"h":188},
+	"frame": {"x":1,"y":26,"w":31,"h":48},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":122,"h":188},
-	"sourceSize": {"w":123,"h":190}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":48},
+	"sourceSize": {"w":31,"h":48}
 },
 {
 	"filename": "squig_scared3.png",
-	"frame": {"x":108,"y":855,"w":123,"h":186},
+	"frame": {"x":1,"y":175,"w":31,"h":47},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":123,"h":186},
-	"sourceSize": {"w":125,"h":188}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":47},
+	"sourceSize": {"w":31,"h":47}
 },
 {
 	"filename": "squig_scared4.png",
-	"frame": {"x":730,"y":862,"w":123,"h":188},
+	"frame": {"x":1,"y":76,"w":31,"h":48},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":123,"h":188},
-	"sourceSize": {"w":125,"h":190}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":48},
+	"sourceSize": {"w":31,"h":48}
 },
 {
 	"filename": "squig_scared5.png",
-	"frame": {"x":233,"y":856,"w":122,"h":186},
+	"frame": {"x":1,"y":224,"w":31,"h":47},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":122,"h":186},
-	"sourceSize": {"w":124,"h":188}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":47},
+	"sourceSize": {"w":31,"h":47}
 },
 {
 	"filename": "squig_scared6.png",
-	"frame": {"x":357,"y":857,"w":123,"h":186},
+	"frame": {"x":1,"y":273,"w":31,"h":47},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":123,"h":186},
-	"sourceSize": {"w":125,"h":188}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":47},
+	"sourceSize": {"w":31,"h":47}
 },
 {
 	"filename": "squig_walk1.png",
-	"frame": {"x":611,"y":137,"w":122,"h":138},
+	"frame": {"x":1,"y":322,"w":31,"h":35},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":122,"h":138},
-	"sourceSize": {"w":124,"h":139}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":35},
+	"sourceSize": {"w":31,"h":35}
 },
 {
 	"filename": "squig_walk2.png",
-	"frame": {"x":488,"y":137,"w":121,"h":137},
+	"frame": {"x":1,"y":396,"w":31,"h":35},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":121,"h":137},
-	"sourceSize": {"w":122,"h":138}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":35},
+	"sourceSize": {"w":31,"h":35}
 },
 {
 	"filename": "squig_walk3.png",
-	"frame": {"x":1,"y":94,"w":119,"h":136},
+	"frame": {"x":1,"y":507,"w":30,"h":35},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":119,"h":136},
-	"sourceSize": {"w":121,"h":138}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":35},
+	"sourceSize": {"w":30,"h":35}
 },
 {
 	"filename": "squig_walk4.png",
-	"frame": {"x":627,"y":1,"w":118,"h":134},
+	"frame": {"x":33,"y":597,"w":30,"h":34},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":118,"h":134},
-	"sourceSize": {"w":120,"h":136}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":34},
+	"sourceSize": {"w":30,"h":34}
 },
 {
 	"filename": "squig_walk5.png",
-	"frame": {"x":144,"y":1,"w":119,"h":132},
+	"frame": {"x":33,"y":633,"w":30,"h":33},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":119,"h":132},
-	"sourceSize": {"w":120,"h":133}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":33},
+	"sourceSize": {"w":30,"h":33}
 },
 {
 	"filename": "squig_walk6.png",
-	"frame": {"x":386,"y":1,"w":119,"h":133},
+	"frame": {"x":1,"y":616,"w":30,"h":34},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":119,"h":133},
-	"sourceSize": {"w":121,"h":135}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":34},
+	"sourceSize": {"w":30,"h":34}
 },
 {
 	"filename": "squig_walk7.png",
-	"frame": {"x":122,"y":135,"w":119,"h":136},
+	"frame": {"x":33,"y":524,"w":30,"h":35},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":119,"h":136},
-	"sourceSize": {"w":121,"h":138}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":35},
+	"sourceSize": {"w":30,"h":35}
 },
 {
 	"filename": "squig_walk8.png",
-	"frame": {"x":366,"y":136,"w":120,"h":137},
+	"frame": {"x":33,"y":487,"w":30,"h":35},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":120,"h":137},
-	"sourceSize": {"w":121,"h":139}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":35},
+	"sourceSize": {"w":30,"h":35}
 },
 {
 	"filename": "squig_walk9.png",
-	"frame": {"x":735,"y":138,"w":122,"h":138},
+	"frame": {"x":1,"y":433,"w":31,"h":35},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":122,"h":138},
-	"sourceSize": {"w":124,"h":139}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":35},
+	"sourceSize": {"w":31,"h":35}
 },
 {
 	"filename": "squig_walk10.png",
-	"frame": {"x":243,"y":136,"w":121,"h":137},
+	"frame": {"x":1,"y":359,"w":31,"h":35},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":121,"h":137},
-	"sourceSize": {"w":122,"h":138}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":35},
+	"sourceSize": {"w":31,"h":35}
 },
 {
 	"filename": "squig_walk11.png",
-	"frame": {"x":868,"y":1,"w":119,"h":136},
+	"frame": {"x":1,"y":470,"w":30,"h":35},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":119,"h":136},
-	"sourceSize": {"w":121,"h":138}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":35},
+	"sourceSize": {"w":30,"h":35}
 },
 {
 	"filename": "squig_walk12.png",
-	"frame": {"x":507,"y":1,"w":118,"h":134},
+	"frame": {"x":1,"y":544,"w":30,"h":34},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":118,"h":134},
-	"sourceSize": {"w":120,"h":136}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":34},
+	"sourceSize": {"w":30,"h":34}
 },
 {
 	"filename": "squig_walk13.png",
-	"frame": {"x":144,"y":1,"w":119,"h":132},
+	"frame": {"x":33,"y":633,"w":30,"h":33},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":0,"w":119,"h":132},
-	"sourceSize": {"w":120,"h":133}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":33},
+	"sourceSize": {"w":30,"h":33}
 },
 {
 	"filename": "squig_walk14.png",
-	"frame": {"x":265,"y":1,"w":119,"h":133},
+	"frame": {"x":33,"y":561,"w":30,"h":34},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":119,"h":133},
-	"sourceSize": {"w":120,"h":135}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":34},
+	"sourceSize": {"w":30,"h":34}
 },
 {
 	"filename": "squig_walk15.png",
-	"frame": {"x":747,"y":1,"w":119,"h":135},
+	"frame": {"x":1,"y":580,"w":30,"h":34},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":119,"h":135},
-	"sourceSize": {"w":121,"h":137}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":34},
+	"sourceSize": {"w":30,"h":34}
 },
 {
 	"filename": "squig_walk16.png",
-	"frame": {"x":366,"y":136,"w":120,"h":137},
+	"frame": {"x":33,"y":487,"w":30,"h":35},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":1,"w":120,"h":137},
-	"sourceSize": {"w":121,"h":139}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":35},
+	"sourceSize": {"w":30,"h":35}
 }],
 "meta": {
 	"app": "https://www.codeandweb.com/texturepacker",
 	"version": "1.0",
 	"image": "squig.png",
 	"format": "RGBA8888",
-	"size": {"w":988,"h":1051},
+	"size": {"w":64,"h":1161},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:0fa2011a248079553a94f3b425409042:520a9b636f7c37411c40fba5f5bbf391:3791b403f069c681e1ceb5a623fe590b$"
+	"smartupdate": "$TexturePacker:SmartUpdate:9eae144b3572b978f49ffa8f5add7d15:7b92d6ad0b07a0023dab194974786357:3791b403f069c681e1ceb5a623fe590b$"
 }
 }

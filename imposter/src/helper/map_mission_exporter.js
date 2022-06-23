@@ -10,12 +10,14 @@ import CalibratorDistributor from "../services/missions/calibrator_distributor";
 import ChartCourse from "../services/missions/chart_course";
 import FuelEngine from "../services/missions/fuel_engine";
 import PrimeShields from "../services/missions/prime_shields";
+import InspectSample from "../services/missions/inspect_sample";
+import UnlockManifolds from "../services/missions/unlock_manifolds";
 
 class MapMissionsExporter {
     constructor(map) {
         this.map = map;
         this.missions = this.missions();
-        this.map_missions_number = 11;
+        this.map_missions_number = 5;
         this.total_missions_completed = 0;
         this.list_missions_completed = [];
     }
@@ -50,7 +52,9 @@ class MapMissionsExporter {
                 "CalibratorDistributor": CalibratorDistributor,
                 "ChartCourse": ChartCourse,
                 "FuelEngine": FuelEngine,
-                "PrimeShields": PrimeShields
+                "PrimeShields": PrimeShields,
+                "InspectSample": InspectSample,
+                "UnlockManifolds": UnlockManifolds,
             }
         }
     }
