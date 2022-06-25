@@ -1669,8 +1669,8 @@ class Game extends Phaser.Scene {
       }
       if (playerMoved) {
         this.socket.emit("move", {
-          x: player.x,
-          y: player.y,
+          x: player_container.x,
+          y: player_container.y,
           roomId: this.state.roomKey,
         });
         player.movedLastFrame = true;
