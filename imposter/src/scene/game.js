@@ -1771,8 +1771,8 @@ class Game extends Phaser.Scene {
         map_missions,
         export_missions,
         this.scene,
-        player.x,
-        player.y
+        player_container.x,
+        player_container.y
       );
       const check_mission = mission.check_mission();
       // console.log("mission", check_mission);
