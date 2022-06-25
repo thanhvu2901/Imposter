@@ -29,9 +29,18 @@ let light_,light_1
 let button=[]
 let cords
 let check=[]
-let ischeck=false
+let ischeck=false;
+let current_scene;
+let eventsCenter;
+let sprite;
 class UnlockManifolds extends Phaser.Scene {
-  
+  init(data) {
+    x = data.x;
+    y = data.y;
+    sprite = data.sprite;
+    eventsCenter = data.eventsCenter;
+  }
+
   constructor() {
     super({ key: "Unlock" });
    
@@ -54,6 +63,7 @@ class UnlockManifolds extends Phaser.Scene {
   }
 
   create() {
+    current_scene = this.scene
     x =   this.game.renderer.width / 2
     y =   this.game.renderer.height / 2
     cords=[[x-170,y-40],[x-85,y-40],[x,y-40],[x+85,y-40],[x+170,y-40],[x-170,y+45],[x-85,y+45],[x,y+45],[x+85,y+45],[x+170,y+45]]
@@ -135,8 +145,9 @@ console.log(button)
         button[i][0].removeInteractive()
         
       }
-      console.log('success')
-      this.scene.stop()
+      sprite.tint = 0;
+      eventsCenter.emit("continue_scene_game", {x: x, y: y, mission: "UnlockManifolds"});
+      current_scene.stop("Unlock");
     }
   }
    

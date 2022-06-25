@@ -9,7 +9,6 @@ import calibratorGaugeBorder from "../../../assets/tasks/Calibrate Distributor/c
 import calibratorSpin1 from "../../../assets/tasks/Calibrate Distributor/calibratorSpin1.png";
 import calibratorSpin2 from "../../../assets/tasks/Calibrate Distributor/calibratorSpin2.png";
 import calibratorSpin3 from "../../../assets/tasks/Calibrate Distributor/calibratorSpin3.png";
-import Event_Center from "../../../helper/event_center";
 
 var spin1,
   gauge1,
@@ -36,12 +35,14 @@ let r1,step = false;
 
 let x, y;
 let sprite, current_scene;
+let eventsCenter;
 
 class CalibratorDistributor extends Phaser.Scene {
   init(data) {
     x = data.x;
     y = data.y;
     sprite = data.sprite;
+    eventsCenter = data.eventsCenter;
   }
   
   preload() {
@@ -169,7 +170,7 @@ class CalibratorDistributor extends Phaser.Scene {
     if (checkSpin3) {
       spin3.angle = 0;
       sprite.tint = 0;
-      Event_Center.emit("continue_scene_game", {x: x, y: y, mission: "CalibratorDistributor"});
+      eventsCenter.emit("continue_scene_game", {x: x, y: y, mission: "CalibratorDistributor"});
       current_scene.scene.stop("CalibratorDistributor");
       // this.add.text(390, 250, "Mission Completed");
     }

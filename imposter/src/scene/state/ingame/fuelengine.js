@@ -4,7 +4,6 @@ import base from "../../../assets/img/Fuel Engines/base.png";
 import button from "../../../assets/img//Fuel Engines/button.png";
 import wire from "../../../assets/img//Fuel Engines/wire.png";
 import light from "../../../assets/img//Fuel Engines/light.png";
-import Event_Center from "../../../helper/event_center";
 
 let ring1,ring2,ring3,ring4
 let dot1,dot2,dot3,dot4
@@ -20,12 +19,14 @@ let r2
 let step = 0
 let light_,light_1;
 let sprite, current_scene;
+let eventsCenter;
 
 class FuelEngine extends Phaser.Scene {
   init(data) {
     x = data.x;
     y = data.y;
     sprite = data.sprite;
+    eventsCenter = data.eventsCenter;
   }
 
   constructor() {
@@ -89,7 +90,7 @@ class FuelEngine extends Phaser.Scene {
     light_.setTint('0x04FF00');
 
     sprite.tint = 0;
-    Event_Center.emit("continue_scene_game", {x: x, y: y, mission: "Fuel"});
+    eventsCenter.emit("continue_scene_game", {x: x, y: y, mission: "Fuel"});
     current_scene.stop("Fuel");
   }
    }

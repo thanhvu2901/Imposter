@@ -2,17 +2,18 @@ import Phaser from "Phaser";
 import Align_Base from "../../../assets/img/align_egine_output/base.png";
 import Align_Slider from "../../../assets/img/align_egine_output/engineAlign_slider.png";
 import Align_Engine from "../../../assets/img/align_egine_output/engineAlign_engine.png";
-import Event_Center from "../../../helper/event_center";
 
 
 let x;
 let y;
 let sprite; 
+let eventsCenter;
 class AlignEngineOutput extends Phaser.Scene {
     init(data) {
         x = data.x;
         y = data.y;
         sprite = data.sprite;
+        eventsCenter = data.eventsCenter;
     }
 
     preload() {
@@ -59,7 +60,7 @@ class AlignEngineOutput extends Phaser.Scene {
                 if (Math.floor(check_y) == 414) {
                     current_object.add.text(390, 250, "Mission Completed");
                     sprite.tint = 0;
-                    Event_Center.emit("continue_scene_game", {x: x, y: y, mission: "AlignEngineOutput"});
+                    eventsCenter.emit("continue_scene_game", {x: x, y: y, mission: "AlignEngineOutput"});
                     current_scene.stop("align_engine_output");
                 }
                 gameObject.x = 660;
