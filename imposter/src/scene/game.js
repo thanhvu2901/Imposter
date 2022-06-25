@@ -222,13 +222,10 @@ class Game extends Phaser.Scene {
 
     player_container = this.add.container(115, -700);
 
+    console.log(this.playerChangedSkin.player.texture.key);
     let colorPlayerChanged =
       this.playerChangedSkin.player.texture.key ?? "nothing";
     switch (colorPlayerChanged) {
-      case "player0":
-        color = PLAYER_BLUE;
-        player = this.physics.add.sprite(0, 0, color, "idle.png");
-        break;
       case "player1":
         color = PLAYER_YELLOW;
         player = this.physics.add.sprite(0, 0, color, "idle.png");
@@ -293,8 +290,7 @@ class Game extends Phaser.Scene {
 
     this.input.keyboard.enabled;
 
-    console.log(player.body);
-    console.log(player_container);
+
 
     if (this.playerChangedSkin.hat) {
       let hatChosen = this.playerChangedSkin.hat.texture.key ?? "nothing";
@@ -847,16 +843,19 @@ class Game extends Phaser.Scene {
     });
 
     // tạo theo số lượng other player vào
-    for (let i = 0; i < this.numPlayers - 1; i++) {
-      let colorOther = Object.values(this.Info.players)[i].color;
-      console.log(colorOther);
-      otherPlayer[i] = this.physics.add.sprite(
-        120 + 50 * i,
-        -745 + 50 * i,
-        colorOther,
-        "idle.png"
-      );
-    }
+    this.idPlayers.forEach((element) => {
+      if (element != this.socket.id) {
+        let colorOther = Object(this.Info.players)[element].color;
+        console.log(colorOther);
+        otherPlayer.push(this.physics.add.sprite(
+          120 + 50,
+          -745 + 50,
+          colorOther,
+          "idle.png"
+        ));
+      }
+    })
+
     this.idPlayers.forEach((element) => {
       if (element != this.socket.id) {
         otherPlayerId.push(element);
@@ -1444,7 +1443,6 @@ class Game extends Phaser.Scene {
       let index = otherPlayerId.findIndex((Element) => Element == playerId);
       //id = index;
       // console.log(index);
-
       if (otherPlayer[index].x > x) {
         otherPlayer[index].flipX = true;
       } else if (otherPlayer[index].x < x) {
@@ -1508,7 +1506,7 @@ class Game extends Phaser.Scene {
     });
   }
   update() {
-    console.log(near_btn)
+    //console.log(near_btn)
     var wasTouching = !player_container.body.wasTouching.none;
     // If you want 'touching or embedded' then use:
     var touching = !player_container.body.touching.none || player_container.body.embedded;
@@ -1777,7 +1775,7 @@ class Game extends Phaser.Scene {
         player.y
       );
       const check_mission = mission.check_mission();
-      console.log("mission", check_mission);
+      // console.log("mission", check_mission);
       if (check_mission) {
         //blink blink marker
         useButton.alpha = 1;
@@ -1792,7 +1790,7 @@ class Game extends Phaser.Scene {
 
       if (launch_scene && check_mission != undefined) {
         //this.scene.pause("game");
-        console.log("scene", check_mission.scene);
+        //  console.log("scene", check_mission.scene);
 
         this.scene.launch(check_mission.scene, {
           x: check_mission.x,
