@@ -12,18 +12,17 @@ import asteroid4 from "../../../assets/tasks/Clear Asteroids/weapons_asteroid4.p
 import asteroid4X from "../../../assets/tasks/Clear Asteroids/weapons_asteroid4X.png";
 import asteroid5 from "../../../assets/tasks/Clear Asteroids/weapons_asteroid5.png";
 import asteroid5X from "../../../assets/tasks/Clear Asteroids/weapons_asteroid5X.png";
-import Event_Center from "../../../helper/event_center";
-
 
 let asteroid_1, asteroid_2, asteroid_3;
 const listItem = [];
-const TOTAL_DESTROY = 2;
+const TOTAL_DESTROY = 5;
 let destroyed = 0;
 let text;
 
 let x;
 let y;
 let sprite;
+let eventsCenter;
 
 class CleanAsteroids extends Phaser.Scene {
 
@@ -31,6 +30,7 @@ class CleanAsteroids extends Phaser.Scene {
     x = data.x;
     y = data.y;
     sprite = data.sprite;
+    eventsCenter = data.eventsCenter;
   }
 
   constructor() {
@@ -145,7 +145,7 @@ class CleanAsteroids extends Phaser.Scene {
         current_object.asteroid3.destroy();
         current_object.add.text(250, 300, "Task Complete");
         sprite.tint = 0;
-        Event_Center.emit("continue_scene_game", {x: x, y: y, mission: "CleanAsteroids"});
+        eventsCenter.emit("continue_scene_game", {x: x, y: y, mission: "CleanAsteroids"});
         current_scene.stop("CleanAsteroids"); 
       }
     });

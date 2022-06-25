@@ -3,7 +3,6 @@ import shieldGauge from "../../../assets/tasks/Prime Shields/shield_Gauge100.png
 import shieldPanel from "../../../assets/tasks/Prime Shields/shield_Panel.png";
 import shieldScreen from "../../../assets/tasks/Prime Shields/shield_screen.png";
 import shieldMiraBase from "../../../assets/tasks/Prime Shields/shields_MiraBase.png";
-import Event_Center from "../../../helper/event_center";
 
 let shieldPanel_1,
   shieldPanel_2,
@@ -16,12 +15,14 @@ const TOTAL_DESTROY = 4;
 let destroyed = 0;
 let x, y;
 let sprite, current_scene;
+let eventsCenter;
 
 class PrimeShields extends Phaser.Scene {
   init(data) {
     x = data.x;
     y = data.y;
     sprite = data.sprite;
+    eventsCenter = data.eventsCenter;
   }
 
   constructor() {
@@ -35,7 +36,7 @@ class PrimeShields extends Phaser.Scene {
   }
 
   create() {
-    let current_scene = this.scene;
+    current_scene = this.scene;
     const shieldMiraBase = this.add.image(300, 300, "shieldMiraBase");
     const shieldGauge = this.add.image(300, 300, "shieldGauge");
     shieldPanel_1 = this.add.sprite(300, 300, "shieldPanel");
@@ -72,7 +73,7 @@ class PrimeShields extends Phaser.Scene {
       }
       if(destroyed===TOTAL_DESTROY){
         sprite.tint = 0;
-        Event_Center.emit("continue_scene_game", {x: x, y: y, mission: "PrimeShields"});
+        eventsCenter.emit("continue_scene_game", {x: x, y: y, mission: "PrimeShields"});
         current_scene.stop("PrimeShields"); 
       }
     });

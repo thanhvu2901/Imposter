@@ -190,6 +190,8 @@ class Game extends Phaser.Scene {
     this.load.image("ChartCourse", ChartCourse);
     this.load.image("FuelEngine", FuelEngine);
     this.load.image("PrimeSheilds", PrimeShields);
+    this.load.image("InspectSample", InspectSample);
+    this.load.image("UnlockManifolds", UnlockManifolds)
 
     this.load.image("InspectSample", InspectSample);
     this.load.image("UnlockManifolds", UnlockManifolds);
@@ -1416,7 +1418,7 @@ class Game extends Phaser.Scene {
       if (near_btn) {
         this.scene.launch("vote", {
           socket: this.socket, numPlayers: this.numPlayers,
-          idPlayers: this.idPlayers, roomId: this.state.roomKey, deadlist: deadplayer,role:this.isRole
+          idPlayers: this.idPlayers, roomId: this.state.roomKey, deadlist: deadplayer, role: this.isRole
         })
         this.socket.emit("open_vote")
 
@@ -1424,14 +1426,14 @@ class Game extends Phaser.Scene {
     });
     // this.socket.on("move", ({ x, y, playerId }) => {
     //   //console.log({ x, y, playerId });
-      this.socket.on("vote_final",(num,id)=>{
-    console.log("ppppp")
-    this.scene.launch("vote_state",{num:num,name:id})
-  })
+    this.socket.on("vote_final", (num, id) => {
+      console.log("ppppp")
+      this.scene.launch("vote_state", { num: num, name: id })
+    })
     this.socket.on("open_othervote", () => {
       this.scene.launch("vote", {
         socket: this.socket, numPlayers: this.numPlayers,
-        idPlayers: this.idPlayers, roomId: this.state.roomKey, deadlist: deadplayer,role:this.isRole
+        idPlayers: this.idPlayers, roomId: this.state.roomKey, deadlist: deadplayer, role: this.isRole
       })
 
 
@@ -1773,7 +1775,7 @@ class Game extends Phaser.Scene {
         player.y
       );
       const check_mission = mission.check_mission();
-      // console.log("check_mission", check_mission);
+      console.log("mission", check_mission);
       if (check_mission) {
         //blink blink marker
         useButton.alpha = 1;
@@ -1788,10 +1790,13 @@ class Game extends Phaser.Scene {
 
       if (launch_scene && check_mission != undefined) {
         //this.scene.pause("game");
+        console.log("scene", check_mission.scene);
+
         this.scene.launch(check_mission.scene, {
           x: check_mission.x,
           y: check_mission.y,
           sprite: check_mission.sprite,
+          eventsCenter: eventsCenter
         });
         launch_scene = false;
       }
