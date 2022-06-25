@@ -222,63 +222,12 @@ class Game extends Phaser.Scene {
 
     player_container = this.add.container(115, -700);
 
-    console.log(this.playerChangedSkin.player.texture.key);
+    console.log(this.playerChangedSkin.color);
     let colorPlayerChanged =
-      this.playerChangedSkin.player.texture.key ?? "nothing";
-    switch (colorPlayerChanged) {
-      case "player1":
-        color = PLAYER_YELLOW;
-        player = this.physics.add.sprite(0, 0, color, "idle.png");
-        break;
-      case "player2":
-        color = PLAYER_PINK;
-        player = this.physics.add.sprite(0, 0, color, "idle.png");
-        break;
-      case "player3":
-        color = PLAYER_ORANGE;
-        player = this.physics.add.sprite(0, 0, color, "idle.png");
-        break;
-      case "player4":
-        color = PLAYER_GRAY_DARK;
-        player = this.physics.add.sprite(0, 0, color, "idle.png");
-        break;
-      case "player5":
-        color = PLAYER_GRAY_LIGHT;
-        player = this.physics.add.sprite(0, 0, color, "idle.png");
-        break;
-      case "player6":
-        color = PLAYER_PURPLE;
-        player = this.physics.add.sprite(0, 0, color, "idle.png");
-        break;
-      case "player7":
-        color = PLAYER_BLUE_LIGHT;
-        player = this.physics.add.sprite(0, 0, color, "idle.png");
+      this.playerChangedSkin.color ?? PLAYER_BLUE;
+    color = colorPlayerChanged
+    player = this.physics.add.sprite(0, 0, colorPlayerChanged, "idle.png");
 
-        break;
-      case "player8":
-        color = PLAYER_BLUE_DARK;
-        player = this.physics.add.sprite(0, 0, color, "idle.png");
-
-        break;
-      case "player9":
-        color = PLAYER_RED;
-        player = this.physics.add.sprite(0, 0, color, "idle.png");
-
-        break;
-      case "player10":
-        color = PLAYER_GREEN_LIGHT;
-        player = this.physics.add.sprite(0, 0, color, "idle.png");
-        break;
-      case "player11":
-        color = PLAYER_GREEN_DARK;
-        player = this.physics.add.sprite(0, 0, color, "idle.png");
-        break;
-      default: {
-        color = PLAYER_BLUE;
-        player = this.physics.add.sprite(0, 0, color, "idle.png");
-        break;
-      }
-    }
     player_container.setSize(player.width, player.height);
     player_container.add(player);
 
