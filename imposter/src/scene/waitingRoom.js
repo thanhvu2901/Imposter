@@ -463,6 +463,7 @@ export default class waitingRoom extends Phaser.Scene {
 
       // this.cameras.main.startFollow(player, true);
 
+      this.playerChangedSkin.color = color
       this.state.roomKey = states.roomKey;
       this.state.host = Object.keys(states.players)[0];
 
@@ -482,10 +483,7 @@ export default class waitingRoom extends Phaser.Scene {
           let roomId = this.textInput;
           this.socket.emit("letgo", { roomId, imposter, player });
           console.log("after click");
-          // console.log("changedskin: ", this.playerChangedSkin);
-          // console.log("number imposter: ", imposter);
-          // console.log("number player: ", player);
-          //this.scene.launch('game', { socket: this.socket, textInput: this.textInput, numPlayers: numPlayers })
+
         });
       }
     });
