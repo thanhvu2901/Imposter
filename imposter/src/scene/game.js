@@ -222,7 +222,7 @@ class Game extends Phaser.Scene {
 
     player_container = this.add.container(115, -700);
 
-    console.log(this.playerChangedSkin.color);
+
     let colorPlayerChanged =
       this.playerChangedSkin.color ?? PLAYER_BLUE;
     color = colorPlayerChanged
@@ -784,7 +784,7 @@ class Game extends Phaser.Scene {
           prefix: "Dead",
           suffix: ".png",
         }),
-        repeat: -1,
+        repeat: 0,
         frameRate: 24,
       });
 
@@ -795,7 +795,7 @@ class Game extends Phaser.Scene {
     this.idPlayers.forEach((element) => {
       if (element != this.socket.id) {
         let colorOther = Object(this.Info.players)[element].color;
-        console.log(colorOther);
+
         otherPlayer.push(this.physics.add.sprite(
           120 + 50,
           -745 + 50,
@@ -1301,7 +1301,7 @@ class Game extends Phaser.Scene {
     //bắt sự kiện khi player overlap với 1 object khác
     player_container.on("overlapstart", function () {
       //hiện nút nhảy vent với điều kiện là player overlap với vent
-      console.log(" overlap")
+      // console.log(" overlap")
       if (is_vent && player_role == 1) {
         vent_butt.alpha = 1;
         sabotage.alpha = 0;
@@ -1377,7 +1377,7 @@ class Game extends Phaser.Scene {
     // this.socket.on("move", ({ x, y, playerId }) => {
     //   //console.log({ x, y, playerId });
     this.socket.on("vote_final", (num, id) => {
-      console.log("ppppp")
+      // console.log("ppppp")
       this.scene.launch("vote_state", { num: num, name: id })
     })
     this.socket.on("open_othervote", () => {
@@ -1442,7 +1442,7 @@ class Game extends Phaser.Scene {
         player.anims.play("player-ghost", true);
       } else {
         let index = otherPlayerId.findIndex((Element) => Element == playerId);
-        otherPlayer[index].anims.play(`${color}-'dead'`, true);
+        otherPlayer[index].anims.play(`${colorKill}-dead`, true);
         let temp = this.add.rectangle(
           otherPlayer[index].x,
           otherPlayer[index].y,
@@ -1481,7 +1481,7 @@ class Game extends Phaser.Scene {
           let killId = otherPlayerId[indexKill];
           deadplayer.push(killId);
           let colorKill = Object(this.Info.players[killId]).color;
-          playerKilled.anims.play(`${color}-'dead'`, true);
+          playerKilled.anims.play(`${colorKill}-dead`, true);
           let temp = this.add.rectangle(
             playerKilled.x,
             playerKilled.y,
@@ -1627,8 +1627,8 @@ class Game extends Phaser.Scene {
 
         for (let other of otherPlayer) {
           if (
-            Math.abs(Math.floor(player.x) - Math.floor(other.x)) <= 100 &&
-            Math.abs(Math.floor(player.y) - Math.floor(other.y)) <= 100
+            Math.abs(Math.floor(player_container.x) - Math.floor(other.x)) <= 100 &&
+            Math.abs(Math.floor(player_container.y) - Math.floor(other.y)) <= 100
           ) {
             playerKilled = other; //lấy player đứng gần
             indexKill = index;
@@ -1720,8 +1720,8 @@ class Game extends Phaser.Scene {
         map_missions,
         export_missions,
         this.scene,
-        player.x,
-        player.y
+        player_container.x,
+        player_container.y
       );
       const check_mission = mission.check_mission();
       // console.log("mission", check_mission);
@@ -1759,7 +1759,8 @@ class Game extends Phaser.Scene {
         !cursors.up.isDown &&
         !cursors.down.isDown
       ) {
-        pet.anims.play(`${BSLUG}-idle`);
+        // pet.anims.play(`${BSLUG}-idle`);
+        player.anims.play("player-ghost", true);
       }
 
       if (cursors.left.isDown) {

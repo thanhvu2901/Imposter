@@ -54,8 +54,8 @@ import SubMenu from "./submenu";
 
 import playerpng from "../assets/player/player_sprite/player_color/player_base.png";
 import playerjson from "../assets/player/player_sprite/player_color/player_base.json";
-import player_ghost from "../assets/player/Base/ghost/ghost.png";
-import player_ghost_json from "../assets/player/Base/ghost/ghost.json";
+import player_ghost from "../assets/player/Base/ghost/ghost1.png";
+import player_ghost_json from "../assets/player/Base/ghost/ghost1.json";
 
 // Player color
 import playerpng_red from "../assets/player/player_sprite/player_color/player_base_red.png";

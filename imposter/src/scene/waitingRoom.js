@@ -632,6 +632,7 @@ export default class waitingRoom extends Phaser.Scene {
           player = this.physics.add.sprite(0, 0, color, "idle.png");
           break;
       }
+      this.playerChangedSkin.color = color
       player_container.add(player);
 
       /* RECREATE ANIMATION OF PLAYER DUE TO COLOR CHANGED */
