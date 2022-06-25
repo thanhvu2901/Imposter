@@ -805,7 +805,7 @@ class Game extends Phaser.Scene {
     export_missions = map_missions.create();
     map_missions.show_mission(this);
 
-    // tạo theo số lượng other player vào
+
 
     this.state.roomKey = this.textInput;
 
@@ -845,6 +845,8 @@ class Game extends Phaser.Scene {
 
 
     });
+
+    // tạo theo số lượng other player vào
     for (let i = 0; i < this.numPlayers - 1; i++) {
       let colorOther = Object.values(this.Info.players)[i].color;
       console.log(colorOther);
