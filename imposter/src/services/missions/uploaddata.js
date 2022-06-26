@@ -1,7 +1,7 @@
 import Base from "./base";
 
-const UPLOAD_DATA_MARKER_X = 1140
-const UPLOAD_DATA_MARKER_Y = -820
+const UPLOAD_DATA_MARKER_X = 1130
+const UPLOAD_DATA_MARKER_Y = -890
 
 class UploadData extends Base {
     constructor(scene, x, y) {
@@ -15,8 +15,8 @@ class UploadData extends Base {
             this.x,
             this.y);
         if (check_mission) {
-            let sprite = this.scene.scene.add.image(1140, -800, "UploadData_mission_marked");
-            sprite.tint =  Math.random() * 0xffff00;
+            let sprite = this.scene.scene.add.sprite(UPLOAD_DATA_MARKER_X, UPLOAD_DATA_MARKER_Y, "UploadData_mission_marked");
+            sprite.tint = Math.random() * 0xffff00;
             return { scene: "Upload", x: this.x, y: this.y, sprite: sprite }
 
         }

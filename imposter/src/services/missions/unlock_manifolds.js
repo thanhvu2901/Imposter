@@ -1,6 +1,6 @@
 import Base from "./base";
 
-const UNLOCK_MANIFOLDS_MARKED_X = -1680
+const UNLOCK_MANIFOLDS_MARKED_X = -1684
 const UNLOCK_MANIFOLDS_MARKED_Y = -311
 
 class UnlockManifolds extends Base {

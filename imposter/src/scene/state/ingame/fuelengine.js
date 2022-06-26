@@ -90,7 +90,7 @@ class FuelEngine extends Phaser.Scene {
     light_.setTint('0x04FF00');
 
     sprite.tint = 0;
-    eventsCenter.emit("continue_scene_game", {x: x, y: y, mission: "Fuel"});
+    eventsCenter.emit("continue_scene_game", {x: x, y: y, mission: "FuelEngine"});
     current_scene.stop("Fuel");
   }
    }

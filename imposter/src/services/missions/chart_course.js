@@ -1,7 +1,7 @@
 import Base from "./base";
 
-const CHART_COURSE_MARKED_X = 1970
-const CHART_COURSE_MARKED_y = -240
+const CHART_COURSE_MARKED_X = 1973
+const CHART_COURSE_MARKED_y = -235
 
 class ChartCourse extends Base {
     constructor(scene, x, y) {

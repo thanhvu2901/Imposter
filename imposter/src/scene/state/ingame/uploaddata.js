@@ -9,13 +9,13 @@ import File from "../../../assets/img/Upload Data/fileFill.png";
 import player from "../../../assets/img/Upload Data/player.png";
 import Bar from "../../../assets/img/Upload Data/progressBar.png";
 import upButton from "../../../assets/img/Upload Data/uploadbutton.png"
-import Event_Center from  "../../../helper/event_center";
 
 
 let x,y,file1,folder1,folder,player1,bar,rect,upload_button,is_trans=false,text
 let move=0
 let sprite
-let current_scene
+let current_scene;
+let eventsCenter;
 // hãy nhét đoạn code này vào khi hoàn thành nhiệm vụ
 
 // sprite.tint = 0;
@@ -29,6 +29,7 @@ class UploadData extends Phaser.Scene {
     x = data.x;
     y = data.y;
     sprite = data.sprite;
+    eventsCenter = data.eventsCenter;
 }
 
 
@@ -156,8 +157,8 @@ class UploadData extends Phaser.Scene {
        //mini game finished 
        if(rect.width==375){
         sprite.tint = 0;
-      Event_Center.emit("continue_scene_game", {x: x, y: y, mission: "Upload"});
-      current_scene.stop("Upload")
+        eventsCenter.emit("continue_scene_game", {x: x, y: y, mission: "Upload"});
+        current_scene.stop("Upload")
        }
        }
       }

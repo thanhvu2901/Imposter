@@ -1,7 +1,7 @@
 import Base from "./base";
 
 const STABLE_STEERING_MARKED_X = 2033;
-const STABLE_STEERING_MARKED_Y = -118;
+const STABLE_STEERING_MARKED_Y = -110;
 
 class StabilizeSteering extends Base {
     constructor(scene, x, y) {
