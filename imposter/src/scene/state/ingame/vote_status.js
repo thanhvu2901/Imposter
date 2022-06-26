@@ -12,6 +12,8 @@ class Vote_status extends Phaser.Scene {
 init(data){
   this.num=data.num
   this.name=data.name
+  this.socket=data.socket
+  this.roomKey=data.roomKey
 }
   preload() {
     this.load.image('star_background', background);
@@ -59,7 +61,8 @@ if(count_1<sample.length+1){
 ejected.rotation+=0.03
 ejected.x+=2
 
-if(count==350){
+if(count==300){
+  this.socket.emit("check_",this.roomKey)
     this.scene.stop()
 }
   }

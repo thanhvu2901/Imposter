@@ -196,6 +196,29 @@ class Game extends Phaser.Scene {
   }
 
   create() {
+    
+    this.socket.emit("send_role",this.socket.id,this.isRole,this.textInput)
+    this.socket.on("end_game",(winner)=>{
+      console.log(winner,"pppp")
+   switch (winner) {
+    case 1:
+      if(this.isRole==1){
+        this.scene.launch("end_game",{num:1})
+      }else{
+        this.scene.launch("end_game",{num:2})
+      }
+      break;
+      case 2:
+        if(this.isRole!=1){
+          this.scene.launch("end_game",{num:1})
+        }else{
+          this.scene.launch("end_game",{num:2})
+        }
+        break;
+    default:
+      break;
+   }
+    })
     light = new Light(this);
     const ship = this.make.tilemap({ key: "theSkeld_tilemap" });
     const tileset = ship.addTilesetImage("theSkeld", "theSkeldpng");
@@ -213,12 +236,12 @@ class Game extends Phaser.Scene {
         total_missions_completed += 1;
         map_missions.count_missions_completed(total_missions_completed);
         map_missions.update_list_missions_completed(list_missions_completed);
-        player.x = current_x + 2;
-        player.y = current_y + 2;
+        player_container.x = current_x + 2;
+        player_container.y = current_y + 2;
       }
     });
 
-    player_container = this.add.container(115, -700);
+    player_container = this.add.container(115, -750);
 
     let colorPlayerChanged =
       this.playerChangedSkin.player.texture.key ?? "nothing";
@@ -1327,7 +1350,7 @@ class Game extends Phaser.Scene {
           break;
         case "Button":
           let temp1 = this.add
-            .rectangle(object.x, object.y, object.width, object.height)
+            .rectangle(object.x, object.y, object.width-25, object.height-25)
             .setOrigin(0, 0);
           emergency_btn = this.add
             .image(object.x, object.y, "emergency")
@@ -1349,7 +1372,7 @@ class Game extends Phaser.Scene {
     //bắt sự kiện khi player overlap với 1 object khác
     player_container.on("overlapstart", function () {
       //hiện nút nhảy vent với điều kiện là player overlap với vent
-      console.log(" overlap")
+      console.log("start")
       if (is_vent && player_role == 1) {
         vent_butt.alpha = 1;
         sabotage.alpha = 0;
@@ -1361,6 +1384,7 @@ class Game extends Phaser.Scene {
     });
     //bắt sự kiện khi player đi ra khỏi vùng overlap
     player_container.on("overlapend", function () {
+      console.log("end")
       is_vent = false
       if (player_role == 1) {
         vent_butt.alpha = 0
@@ -1425,8 +1449,7 @@ class Game extends Phaser.Scene {
     // this.socket.on("move", ({ x, y, playerId }) => {
     //   //console.log({ x, y, playerId });
       this.socket.on("vote_final",(num,id)=>{
-    console.log("ppppp")
-    this.scene.launch("vote_state",{num:num,name:id})
+    this.scene.launch("vote_state",{num:num,name:id,roomKey:this.textInput,socket:this.socket})
   })
     this.socket.on("open_othervote", () => {
       this.scene.launch("vote", {
@@ -1526,6 +1549,7 @@ class Game extends Phaser.Scene {
       kill.on("pointerdown", () => {
         //console.log();
         if (canKill) {
+         
           this.sound.play("killAudio", false);
           let killId = otherPlayerId[indexKill];
           deadplayer.push(killId);
@@ -1538,11 +1562,12 @@ class Game extends Phaser.Scene {
             200
           );
           this.physics.add.existing(temp);
-          this.physics.add.overlap(player, temp, report);
+          this.physics.add.overlap(player_container, temp, report);
           this.socket.emit("killed", {
             playerId: otherPlayerId[indexKill],
             roomId: this.state.roomKey,
           });
+          this.socket.emit("check_",this.textInput)
           otherPlayer = otherPlayer.filter((player) => {
             return player !== playerKilled;
           });
@@ -1667,8 +1692,8 @@ class Game extends Phaser.Scene {
       }
       if (playerMoved) {
         this.socket.emit("move", {
-          x: player.x,
-          y: player.y,
+          x: player_container.x,
+          y: player_container.y,
           roomId: this.state.roomKey,
         });
         player.movedLastFrame = true;
@@ -1676,8 +1701,8 @@ class Game extends Phaser.Scene {
 
         for (let other of otherPlayer) {
           if (
-            Math.abs(Math.floor(player.x) - Math.floor(other.x)) <= 100 &&
-            Math.abs(Math.floor(player.y) - Math.floor(other.y)) <= 100
+            Math.abs(Math.floor(player_container.x) - Math.floor(other.x)) <= 100 &&
+            Math.abs(Math.floor(player_container.y) - Math.floor(other.y)) <= 100
           ) {
             playerKilled = other; //lấy player đứng gần
             indexKill = index;
@@ -1769,8 +1794,8 @@ class Game extends Phaser.Scene {
         map_missions,
         export_missions,
         this.scene,
-        player.x,
-        player.y
+        player_container.x,
+        player_container.y
       );
       const check_mission = mission.check_mission();
       // console.log("check_mission", check_mission);
@@ -1805,7 +1830,7 @@ class Game extends Phaser.Scene {
         !cursors.up.isDown &&
         !cursors.down.isDown
       ) {
-        pet.anims.play(`${BSLUG}-idle`);
+       // pet.anims.play(`${BSLUG}-idle`);
       }
 
       if (cursors.left.isDown) {

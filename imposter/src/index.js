@@ -32,7 +32,7 @@ import FuelEngine from "./scene/state/ingame/fuelengine.js"
 import Vote_status from "./scene/state/ingame/vote_status.js";
 import FuelEngine_1 from "./scene/state/ingame/fuelengine_1.js";
 import UnlockManifolds from "./scene/state/ingame/unlockmanifolds.js"
-
+import End_game from "./scene/state/ingame/end_game.js";
 var preloader = new Preloader();
 
 const config = {
@@ -85,7 +85,7 @@ game.scene.add('submenu', SubMenu)
 game.scene.add('guidemap', guidemap)
 game.scene.add('vote_state',Vote_status)
 game.scene.add('Course', ChartCourse)
-
+game.scene.add('end_game',End_game)
 game.scene.add('fixWiring', fixWiring)
 
 game.scene.add("align_engine_output", AlignEngineOutput)

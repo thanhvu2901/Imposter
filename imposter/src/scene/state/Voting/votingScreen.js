@@ -113,8 +113,10 @@ async  create() {
         this.socket.emit("vote_end",3,0)
       }else if([...mapSort1][0][0]==this.socket.id){
         if(this.role==1){
+          this.socket.emit("remove",this.roomKey,this.socket.id,1)
           this.socket.emit("vote_end",1,this.socket.id)
         }else{
+          this.socket.emit("remove",this.roomKey,this.socket.id,2)
           this.socket.emit("vote_end",2,this.socket.id)
         }
       }}
