@@ -1,7 +1,7 @@
 import Base from "./base";
 
 const SWIPE_CARD_MARKED_X = 854;
-const SWIPE_CARD_MARKED_Y = 245;
+const SWIPE_CARD_MARKED_Y = 240;
 
 class SwipeCard extends Base {
     constructor(scene, x, y) {

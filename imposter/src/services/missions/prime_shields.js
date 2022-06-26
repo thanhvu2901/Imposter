@@ -1,7 +1,7 @@
 import Base from "./base";
 
-const PRIME_SHIELDS_MARKED_X = 1030
-const PRIME_SHIELDS_MARKED_Y = 717
+const PRIME_SHIELDS_MARKED_X = 1025
+const PRIME_SHIELDS_MARKED_Y = 725
 
 class PrimeShields extends Base {
     constructor(scene, x, y) {

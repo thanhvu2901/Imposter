@@ -1,6 +1,6 @@
 import Base from "./base";
 
-const UNLOCK_MANIFOLDS_MARKED_X = -1680
+const UNLOCK_MANIFOLDS_MARKED_X = -1684
 const UNLOCK_MANIFOLDS_MARKED_Y = -311
 
 class UnlockManifolds extends Base {
@@ -16,13 +16,12 @@ class UnlockManifolds extends Base {
             this.y);
         if (check_mission) {
             let sprite = this.scene.scene.add.sprite(UNLOCK_MANIFOLDS_MARKED_X, UNLOCK_MANIFOLDS_MARKED_Y, "UnlockManifolds");
-            sprite.tint =  Math.random() * 0xffff00;
+            sprite.tint = Math.random() * 0xffff00;
             return { scene: "Unlock", x: this.x, y: this.y, sprite: sprite }
 
         }
         return;
-    }   
+    }
 }
 
 export default UnlockManifolds;
-

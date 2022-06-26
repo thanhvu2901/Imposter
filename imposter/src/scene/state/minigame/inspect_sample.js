@@ -9,19 +9,19 @@ import medBay_panelbottom from '../../../assets/tasks/Inspect Sample/medbay_pane
 import medBay_panelcenter from '../../../assets/tasks/Inspect Sample/medbay_panelcenter.png'
 import medBay_paneltop from '../../../assets/tasks/Inspect Sample/medbay_paneltop.png'
 import medBay_sampleButton from '../../../assets/tasks/Inspect Sample/medbay_sampleButton.png'
-import Event_Center from "../../../helper/event_center";
 
 let text, text2, text3, countdown, timedEvent
 let sampleBtn, btnConfirm;
-
 let x, y;
 let sprite, current_scene;
+let eventsCenter;
 
 class InspectSample extends Phaser.Scene {
     init(data) {
         x = data.x;
         y = data.y;
         sprite = data.sprite;
+        eventsCenter = data.eventsCenter;
     }
 
     constructor() {
@@ -46,7 +46,7 @@ class InspectSample extends Phaser.Scene {
 
     }
     create() {
-        current_scene = this.scene;
+        current_scene = this.scene
         text = this.add.text(10, 10, 'Cursors to move', { font: '16px Courier', fill: '#00ff00' }).setScrollFactor(0);
 
 
@@ -121,9 +121,9 @@ class InspectSample extends Phaser.Scene {
         sampleBtn.on('pointerdown', () => {
             //  console.log('samplebtn');
             // this.destrtoy();
-            // this.scene.remove();
+            // this.scene.remove()
             sprite.tint = 0;
-            Event_Center.emit("continue_scene_game", {x: x, y: y, mission: "InspectSample"});
+            eventsCenter.emit("continue_scene_game", { x: x, y: y, mission: "InspectSample" });
             current_scene.stop("inspectSample");
         })
 

@@ -1,7 +1,7 @@
 import Base from "./base";
 
 const CLEAN_ASTEROIDS_MARKED_X = 1185;
-const CLEAN_ASTEROIDS_MARKED_Y = -740;
+const CLEAN_ASTEROIDS_MARKED_Y = -735;
 
 class CleanAsteroids extends Base {
     constructor(scene, x, y)

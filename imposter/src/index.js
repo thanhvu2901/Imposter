@@ -28,11 +28,13 @@ import guidemap from "./scene/state/guidemap/guidemap.js";
 import votingScreen from "./scene/state/Voting/votingScreen.js"
 import UploadData from "./scene/state/ingame/uploaddata.js";
 import CalibratorDistributor from "./scene/state/minigame/calibrate_distributor.js";
-import FuelEngine from "./scene/state/ingame/fuelengine.js"
+
 import Vote_status from "./scene/state/ingame/vote_status.js";
 import FuelEngine_1 from "./scene/state/ingame/fuelengine_1.js";
-import UnlockManifolds from "./scene/state/ingame/unlockmanifolds.js"
 import End_game from "./scene/state/ingame/end_game.js";
+import FuelEngine from "./scene/state/ingame/fuelengine.js";
+import UnlockManifolds from "./scene/state/ingame/unlockmanifolds.js";
+
 var preloader = new Preloader();
 
 const config = {
@@ -83,7 +85,7 @@ game.scene.add('options', Options);
 game.scene.add('login', Login);
 game.scene.add('submenu', SubMenu)
 game.scene.add('guidemap', guidemap)
-game.scene.add('vote_state',Vote_status)
+game.scene.add('vote_state', Vote_status)
 game.scene.add('Course', ChartCourse)
 game.scene.add('end_game',End_game)
 game.scene.add('fixWiring', fixWiring)
@@ -110,8 +112,6 @@ game.scene.add("Upload", UploadData);
 game.scene.add("CalibratorDistributor", CalibratorDistributor);
 game.scene.add("Fuel", FuelEngine);
 game.scene.add("Unlock", UnlockManifolds)
-
-// game.scene.add("Fuel_1", FuelEngine_1)
 
 // start title
 //game.scene.start("joinGame");

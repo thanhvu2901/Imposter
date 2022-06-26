@@ -15,11 +15,11 @@ export default class JoinGame extends Phaser.Scene {
 
     preload() {
 
-    socket = io.connect('192.168.2.9:3000')
+        socket = io.connect('localhost:3000')
 
- 
-       
-       
+
+
+
     }
 
     create() {
