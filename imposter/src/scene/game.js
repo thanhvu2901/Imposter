@@ -243,13 +243,13 @@ class Game extends Phaser.Scene {
       }
     });
 
-    player_container = this.add.container(115, -750);
+    player_container = this.add.container(115, -750).setDepth(0.6);
 
 
     let colorPlayerChanged =
       this.playerChangedSkin.color ?? PLAYER_BLUE;
     color = colorPlayerChanged
-    player = this.physics.add.sprite(0, 0, colorPlayerChanged, "idle.png");
+    player = this.physics.add.sprite(0, 0, colorPlayerChanged, "idle.png").setDepth(0.6);
 
     player_container.setSize(player.width, player.height);
     player_container.add(player);

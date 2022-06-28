@@ -34,7 +34,6 @@ import FuelEngine_1 from "./scene/state/ingame/fuelengine_1.js";
 import End_game from "./scene/state/ingame/end_game.js";
 import FuelEngine from "./scene/state/ingame/fuelengine.js";
 import UnlockManifolds from "./scene/state/ingame/unlockmanifolds.js";
-
 var preloader = new Preloader();
 
 const config = {
@@ -42,6 +41,10 @@ const config = {
   type: [Phaser.AUTO, Phaser.CANVAS],
   width: 1080,
   height: 768,
+  parent:"phaser-expample",
+  dom: {
+    createContainer: true
+},
   fps: {
     smoothStep: false
   },

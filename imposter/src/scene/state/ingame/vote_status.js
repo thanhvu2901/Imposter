@@ -39,7 +39,7 @@ init(data){
         default:
             break;
     }
-    this.add.image(0, 0, 'star_background').setDepth(0).setOrigin(0);
+    this.add.image(0, 10, 'star_background').setDepth(0).setOrigin(0).setScale(1.5);
     ejected=  this.add.image(100, 350, 'eject').setDepth(1);
     text = this.add.text(250,350,"",{
         fontSize: "40px",

@@ -1,7 +1,7 @@
 import Phaser from "phaser";
 import { io, Socket } from 'socket.io-client';
 import Game from "./game";
-
+import test from "../assets/test.html"
 
 let textInput = ''
 let socket;
@@ -23,23 +23,24 @@ export default class JoinGame extends Phaser.Scene {
     }
 
     create() {
+     let ele=   this.add.dom(this.game.renderer.width * 0.45+50, this.game.renderer.height * 0.35 + 100).createFromHTML(test)
         this.add.image(this.game.renderer.width * 0.5, this.game.renderer.height * 0.2, 'createRoom').setScale(0.4).setInteractive({ cursor: 'pointer' })
         let createPublic = this.add.image(this.game.renderer.width * 0.5, this.game.renderer.height * 0.25, 'public').setScale(0.4).setInteractive({ cursor: 'pointer' })
         let createPrivate = this.add.image(this.game.renderer.width * 0.5, this.game.renderer.height * 0.30, 'private').setScale(0.4).setInteractive({ cursor: 'pointer' })
 
         let check = this.add.image(this.game.renderer.width * 0.5, this.game.renderer.height * 0.35 + 60, 'enterRoom').setScale(0.4)
-        var textEntry = this.add.text(this.game.renderer.width * 0.45, this.game.renderer.height * 0.35 + 88, '', { font: '32px Courier', fill: '#000000' })
-        textEntry.setDepth(1)
-        this.input.keyboard.on('keydown', function (event) {
-            if (event.keyCode === 8 && textEntry.text.length > 0) {
-                textEntry.text = textEntry.text.substr(0, textEntry.text.length - 1);
-            }
-            else if (event.keyCode === 32 || (event.keyCode >= 48 && event.keyCode <= 90)) {
-                textEntry.text += event.key;
-                textInput = textEntry.text;
-            }
+        // var textEntry = this.add.text(this.game.renderer.width * 0.45, this.game.renderer.height * 0.35 + 88, '', { font: '32px Courier', fill: '#000000' })
+        // textEntry.setDepth(1)
+        // this.input.keyboard.on('keydown', function (event) {
+        //     if (event.keyCode === 8 && textEntry.text.length > 0) {
+        //         textEntry.text = textEntry.text.substr(0, textEntry.text.length - 1);
+        //     }
+        //     else if (event.keyCode === 32 || (event.keyCode >= 48 && event.keyCode <= 90)) {
+        //         textEntry.text += event.key;
+        //         textInput = textEntry.text;
+        //     }
 
-        });
+        // });
         let reg = this.add.rectangle(this.game.renderer.width * 0.5, this.game.renderer.height * 0.35 + 100, 180, 34, 0xFFFFFF).setDepth(0)
 
         let joinRoombtn = this.add.image(this.game.renderer.width * 0.5, this.game.renderer.height * 0.35 + 160, 'joinRoom').setScale(0.4).setInteractive({ cursor: 'pointer' })
@@ -56,7 +57,10 @@ export default class JoinGame extends Phaser.Scene {
         });
 
         joinRoombtn.on('pointerdown', () => {
-            socket.emit("isKeyValid", textInput);
+            
+            var inputText = ele.getChildByName('nameField');
+            textInput=inputText.value
+            socket.emit("isKeyValid",textInput);
         })
 
         randomRoom.on('pointerdown', () => {
