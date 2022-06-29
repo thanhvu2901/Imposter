@@ -38,10 +38,13 @@ import UnlockManifolds from "./scene/state/ingame/unlockmanifolds.js";
 var preloader = new Preloader();
 
 const config = {
-
+  parent: 'phaser-example',
   type: [Phaser.AUTO, Phaser.CANVAS],
   width: 1080,
   height: 768,
+  dom: {
+    createContainer: true
+  },
   fps: {
     smoothStep: false
   },

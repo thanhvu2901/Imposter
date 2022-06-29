@@ -4,6 +4,7 @@ import Game from './game.js';
 
 import JoinGame from './joinGame.js';
 import Options from './state/inmenu/options.js'
+import name from './file/name.html'
 export default class MainMenuScene extends Phaser.Scene {
     constructor() {
         super({
@@ -23,7 +24,11 @@ export default class MainMenuScene extends Phaser.Scene {
 
         this.add.image(0, 0, 'background').setOrigin(0.01).setDepth(0);
 
+        this.nameInput = this.add.dom(this.game.renderer.width / 2, this.game.renderer.height / 2 - 100).createFromHTML(name)
+        this.returnKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ENTER);
 
+        let name = this.nameInput.getChildByName("name");
+        //  localStorage.setItem('name', name)
 
         let playButton = this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 2, 'play').setDepth(1);
 
