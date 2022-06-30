@@ -1,7 +1,7 @@
 import Phaser from "phaser";
 import dropShip from "../assets/img/Dropship.png";
 import lobby from "../assets/tilemaps/lobby.json";
-
+let name = window.localStorage.getItem('namePlayer')
 import {
   PLAYER_SPEED,
   PLAYER_BASE,
@@ -441,7 +441,7 @@ export default class waitingRoom extends Phaser.Scene {
 
 
     //tải lại mới khi có player mới vào có các player đã ở trong đó
-    this.socket.emit("joinRoom", this.textInput);
+    this.socket.emit("joinRoom", ({ roomkey: this.textInput, name: name }));
 
     this.socket.on("setState", (states) => {
       // this.physics.resume();

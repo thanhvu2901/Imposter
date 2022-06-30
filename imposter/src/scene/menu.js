@@ -4,6 +4,8 @@ import Game from './game.js';
 
 import JoinGame from './joinGame.js';
 import Options from './state/inmenu/options.js'
+import name from '../assets/name.html'
+let nameStr = '';
 export default class MainMenuScene extends Phaser.Scene {
     constructor() {
         super({
@@ -23,6 +25,16 @@ export default class MainMenuScene extends Phaser.Scene {
 
         this.add.image(0, 0, 'background').setOrigin(0.01).setDepth(0);
 
+
+        let ele = this.add.dom(this.game.renderer.width * 0.5, this.game.renderer.height * 0.5 - 100).createFromHTML(name)
+        this.returnKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ENTER);
+        // this.returnKey.on("down", event => {
+        //     name = ele.getChildByName("name");
+        //     if (name.value != "") {
+        //         window.localStorage.setItem('namePlayer', name.value)
+        //         name.value = "";
+        //     }
+        // });
 
 
         let playButton = this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 2, 'play').setDepth(1);
@@ -66,6 +78,11 @@ export default class MainMenuScene extends Phaser.Scene {
         playButton.on("pointerdown", () => {
             console.log('start game');
             //this.scene.start('game', Game);
+            nameStr = ele.getChildByName("name");
+            if (nameStr.value != "") {
+                window.localStorage.setItem('namePlayer', nameStr.value)
+                nameStr.value = "";
+            }
             this.scene.start('joinGame', JoinGame);
         })
         playButton.on("pointerout", () => {

@@ -23,7 +23,7 @@ export default class JoinGame extends Phaser.Scene {
     }
 
     create() {
-     let ele=   this.add.dom(this.game.renderer.width * 0.45+50, this.game.renderer.height * 0.35 + 100).createFromHTML(test)
+        let ele = this.add.dom(this.game.renderer.width * 0.45 + 50, this.game.renderer.height * 0.35 + 100).createFromHTML(test)
         this.add.image(this.game.renderer.width * 0.5, this.game.renderer.height * 0.2, 'createRoom').setScale(0.4).setInteractive({ cursor: 'pointer' })
         let createPublic = this.add.image(this.game.renderer.width * 0.5, this.game.renderer.height * 0.25, 'public').setScale(0.4).setInteractive({ cursor: 'pointer' })
         let createPrivate = this.add.image(this.game.renderer.width * 0.5, this.game.renderer.height * 0.30, 'private').setScale(0.4).setInteractive({ cursor: 'pointer' })
@@ -57,10 +57,10 @@ export default class JoinGame extends Phaser.Scene {
         });
 
         joinRoombtn.on('pointerdown', () => {
-            
+
             var inputText = ele.getChildByName('nameField');
-            textInput=inputText.value
-            socket.emit("isKeyValid",textInput);
+            textInput = inputText.value
+            socket.emit("isKeyValid", textInput);
         })
 
         randomRoom.on('pointerdown', () => {
@@ -76,7 +76,8 @@ export default class JoinGame extends Phaser.Scene {
             this.roomKey = roomKey;
             console.log(roomKey);
             textInput = roomKey
-            socket.emit('ok', roomKey)
+            let name = window.localStorage.getItem('namePlayer')
+            socket.emit('ok', { roomKey: roomKey, name: name })
 
         });
         socket.on('join', () => {
