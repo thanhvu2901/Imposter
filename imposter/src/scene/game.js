@@ -152,6 +152,7 @@ class Game extends Phaser.Scene {
     this.textInput = data.textInput;
     this.numPlayers = data.numPlayers;
     this.idPlayers = data.idPlayers;
+    this.namePlayers=data.namePlayers
     this.isRole = data.isRole;
     this.playerChangedSkin = data.playerChangedSkin;
     this.Info = data.Info;
@@ -1391,7 +1392,7 @@ class Game extends Phaser.Scene {
       if (near_btn) {
         this.scene.launch("vote", {
           socket: this.socket, numPlayers: this.numPlayers,
-          idPlayers: this.idPlayers, roomId: this.state.roomKey, deadlist: deadplayer, role: this.isRole
+          idPlayers: this.idPlayers, namePlayers:this.namePlayers, roomId: this.state.roomKey, deadlist: deadplayer, role: this.isRole
         })
         this.socket.emit("open_vote")
 
@@ -1400,12 +1401,12 @@ class Game extends Phaser.Scene {
     // this.socket.on("move", ({ x, y, playerId }) => {
     //   //console.log({ x, y, playerId });
       this.socket.on("vote_final",(num,id)=>{
-    this.scene.launch("vote_state",{num:num,name:id,roomKey:this.textInput,socket:this.socket})
+    this.scene.launch("vote_state",{num:num,name:this.namePlayers[this.idPlayers.indexOf(id)],roomKey:this.textInput,socket:this.socket})
   })
     this.socket.on("open_othervote", () => {
       this.scene.launch("vote", {
         socket: this.socket, numPlayers: this.numPlayers,
-        idPlayers: this.idPlayers, roomId: this.state.roomKey, deadlist: deadplayer, role: this.isRole
+        idPlayers: this.idPlayers,namePlayers:this.namePlayers, roomId: this.state.roomKey, deadlist: deadplayer, role: this.isRole
       })
 
 

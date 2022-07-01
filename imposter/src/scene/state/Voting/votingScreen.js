@@ -34,6 +34,7 @@ class VotingScreen extends Phaser.Scene {
     this.socket = data.socket;
     this.numPlayers = data.numPlayers;
     this.idPlayers = data.idPlayers;
+    this.namePlayers=data.namePlayers
     this.roomKey=data.roomId
     this.dead=data.deadlist
     this.role=data.role
@@ -142,7 +143,7 @@ voting_count.setText("Voting Ends In: "+((timer-timedEvent.getElapsed())/1000).t
     // this.add.circle(x, y, 5, 0xff0000, 0.5);
     
     var avatar = this.add.image(x - 135, y, "player_avatar_big");
-    var name = this.add.text(x - 100, y - 30, this.idPlayers[num-1], {
+    var name = this.add.text(x - 100, y - 30, this.namePlayers[num-1], {
       fontSize: "25px",
     //  color: "#ffffff",
       fontFamily: "Arial",

@@ -15,7 +15,7 @@ export default class JoinGame extends Phaser.Scene {
 
     preload() {
 
-        socket = io.connect('localhost:3000')
+        socket = io.connect('192.168.2.9:3000')
 
 
 
@@ -77,6 +77,7 @@ export default class JoinGame extends Phaser.Scene {
             console.log(roomKey);
             textInput = roomKey
             let name = window.localStorage.getItem('namePlayer')
+            console.log(name,"join game name")
             socket.emit('ok', { roomKey: roomKey, name: name })
 
         });

@@ -15,6 +15,7 @@ class introCrew extends Phaser.Scene {
         this.textInput = data.textInput;
         this.numPlayers = data.numPlayers;
         this.idPlayers = data.idPlayers;
+        this.namePlayers=data.namePlayers
         this.numberImposter = data.numberImposter
         this.playerChangedSkin = data.playerChangedSkin;
         this.Info = data.Info
@@ -92,7 +93,7 @@ class introCrew extends Phaser.Scene {
 
 }
 function Run(game) {
-    game.scene.launch('game', { socket: game.socket, textInput: game.textInput, numPlayers: game.numPlayers, idPlayers: game.idPlayers, isRole: isRole, playerChangedSkin: game.playerChangedSkin, Info: game.Info })
+    game.scene.launch('game', { socket: game.socket, textInput: game.textInput, numPlayers: game.numPlayers, idPlayers: game.idPlayers,namePlayers:game.namePlayers, isRole: isRole, playerChangedSkin: game.playerChangedSkin, Info: game.Info })
     game.scene.stop('introCrew');
     // console.log(game.scene);
 }
