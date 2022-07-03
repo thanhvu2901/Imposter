@@ -1390,11 +1390,11 @@ class Game extends Phaser.Scene {
     });
     report_btn.on("pointerdown", () => {
       if (near_btn) {
-        this.scene.launch("vote", {
-          socket: this.socket, numPlayers: this.numPlayers,
-          idPlayers: this.idPlayers, namePlayers:this.namePlayers, roomId: this.state.roomKey, deadlist: deadplayer, role: this.isRole
-        })
-        this.socket.emit("open_vote")
+        // this.scene.launch("vote", {
+        //   socket: this.socket, numPlayers: this.numPlayers,
+        //   idPlayers: this.idPlayers, namePlayers:this.namePlayers, roomId: this.state.roomKey, deadlist: deadplayer, role: this.isRole
+        // })
+        this.socket.emit("open_vote",this.state.roomKey)
 
       }
     });
@@ -1496,7 +1496,7 @@ class Game extends Phaser.Scene {
     this.events.emit("moving", [player_container.x, player_container.y]);
     light.update(player_container);
 
-    if (this.isRole == 1) {
+    if (this.isRole == 1&&alive==true) {
       kill.on("pointerdown", () => {
         //console.log();
         if (canKill) {
@@ -1774,7 +1774,7 @@ class Game extends Phaser.Scene {
         });
         launch_scene = false;
       }
-    } else if (alive == false && this.isRole != 1) {
+    } else if (alive == false) {
       let playerDieMoved = false;
       player.setVelocity(0);
 
