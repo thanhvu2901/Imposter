@@ -5,6 +5,7 @@ import test from "../assets/test.html"
 
 let textInput = ''
 let socket;
+let name = window.localStorage.getItem('namePlayer')
 export default class JoinGame extends Phaser.Scene {
 
     constructor() {
@@ -76,7 +77,7 @@ export default class JoinGame extends Phaser.Scene {
             this.roomKey = roomKey;
             console.log(roomKey);
             textInput = roomKey
-            let name = window.localStorage.getItem('namePlayer')
+           
             socket.emit('ok', { roomKey: roomKey, name: name })
 
         });
