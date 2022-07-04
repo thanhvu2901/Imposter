@@ -2,7 +2,7 @@ import Phaser from "phaser";
 import win from "../../../assets/img/end/win.jpg";
 import lose from  "../../../assets/img/end/lose.jpg";
 import chat from "../../../assets/chat.html"
-import input from "../../../assets/test.html"
+import input from "../../../assets/chatinput.html"
 let ejected,text,sample,count=0,count_1=0
 let temp = chat
 class Demo extends Phaser.Scene {
@@ -34,22 +34,20 @@ temp+=`	<ul id="chat">
     <h2>Vincent</h2>
     <span class="status blue"></span>
 </div>
-<div class="triangle"></div>
 <div class="message">
     chat open
 </div>
 </li>
 </ul>`
 let temp3=``
-let temp1 = this.add.dom(500,300).createFromHTML(temp)
-console.log(temp1)
-let temp2= this.add.dom(500,600).createFromHTML(input)
+let temp1 = this.add.dom(500,360).createFromHTML(temp)
+let temp2= this.add.dom(500,644).createFromHTML(input)
 let temp6 = temp1.getChildByID("chat")
-let closeBtn = this.add.image(860, 180, 'closeBtn').setScale(0.8)
+let closeBtn = this.add.image(920, 120, 'closeBtn').setScale(0.8)
 closeBtn.setInteractive({ useHandCursor: true });
 closeBtn.on('pointerdown', () => {
-temp1=this.add.dom(500,300).createFromHTML(temp)
-temp2=this.add.dom(500,600).createFromHTML(input)
+temp1=this.add.dom(500,350).createFromHTML(temp)
+temp2=this.add.dom(500,640).createFromHTML(input)
 //temp6 = temp1.getChildByID("chat")
 temp=chat
 this.socket.removeListener("send")
@@ -68,8 +66,8 @@ this.socket.on("send",(id,name,message)=>{
   temp3+=`
 <li class="you">
 <div class="entete">
-    <h3>10:12AM, Today</h3>
-    <h2>${name}</h2>
+<h3>${name}</h3>
+<h2>sent</h2>
     <span class="status blue"></span>
 </div>
 <div class="message">
@@ -87,8 +85,8 @@ else{
   temp3+=`
 <li class="me">
 <div class="entete">
-    <h3>10:12AM, Today</h3>
-    <h2>${name}</h2>
+    <h3>${name}</h3>
+    <h2>sent</h2>
     <span class="status blue"></span>
 </div>
 <div class="message">
