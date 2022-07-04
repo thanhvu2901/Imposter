@@ -34,9 +34,11 @@ class VotingScreen extends Phaser.Scene {
     this.socket = data.socket;
     this.numPlayers = data.numPlayers;
     this.idPlayers = data.idPlayers;
+    this.namePlayers=data.namePlayers
     this.roomKey=data.roomId
     this.dead=data.deadlist
     this.role=data.role
+    
   }
  async preload() {
     this.load.image("screen1", screen1);
@@ -61,6 +63,10 @@ async  create() {
       main_screen.height - 412,
       "chat_icon"
     );
+    chat_icon_img.setInteractive().on('pointerdown', () => {
+    
+      this.scene.launch('demo',{socket:this.socket,name:this.namePlayers[this.idPlayers.indexOf(this.socket.id)],roomKey:this.roomKey})
+    })
     title = this.add.text(
       main_screen.width / 2 - 175,
       main_screen.height / 2 - 150,
@@ -110,14 +116,14 @@ async  create() {
      const mapSort1 = new Map([...player_count.entries()].sort((a, b) => b[1] - a[1]));
       if([...mapSort1][0][1]==[...mapSort1][1][1]){
         console.log("draw")
-        this.socket.emit("vote_end",3,0)
+        this.socket.emit("vote_end",3,0,this.roomKey)
       }else if([...mapSort1][0][0]==this.socket.id){
         if(this.role==1){
           this.socket.emit("remove",this.roomKey,this.socket.id,1)
-          this.socket.emit("vote_end",1,this.socket.id)
+          this.socket.emit("vote_end",1,this.socket.id,this.roomKey)
         }else{
           this.socket.emit("remove",this.roomKey,this.socket.id,2)
-          this.socket.emit("vote_end",2,this.socket.id)
+          this.socket.emit("vote_end",2,this.socket.id,this.roomKey)
         }
       }}
     //  this.socket.emit("vote_end")
@@ -142,7 +148,7 @@ voting_count.setText("Voting Ends In: "+((timer-timedEvent.getElapsed())/1000).t
     // this.add.circle(x, y, 5, 0xff0000, 0.5);
     
     var avatar = this.add.image(x - 135, y, "player_avatar_big");
-    var name = this.add.text(x - 100, y - 30, this.idPlayers[num-1], {
+    var name = this.add.text(x - 100, y - 30, this.namePlayers[num-1], {
       fontSize: "25px",
     //  color: "#ffffff",
       fontFamily: "Arial",
@@ -171,7 +177,7 @@ voting_count.setText("Voting Ends In: "+((timer-timedEvent.getElapsed())/1000).t
 speaker.on('pointerdown',()=>{
 if(this.socket.id!=id && can_vote==true&&  !this.dead.includes(id) ){
 
-this.socket.emit("vote",this.socket.id,id)
+this.socket.emit("vote",this.socket.id,id,this.roomKey)
 
 speaker_group.setAlpha(0.5)
 can_vote=false

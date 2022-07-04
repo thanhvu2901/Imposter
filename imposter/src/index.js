@@ -34,6 +34,7 @@ import FuelEngine_1 from "./scene/state/ingame/fuelengine_1.js";
 import End_game from "./scene/state/ingame/end_game.js";
 import FuelEngine from "./scene/state/ingame/fuelengine.js";
 import UnlockManifolds from "./scene/state/ingame/unlockmanifolds.js";
+import Demo from "./scene/state/ingame/chat.js";
 var preloader = new Preloader();
 
 const config = {
@@ -115,7 +116,7 @@ game.scene.add("Upload", UploadData);
 game.scene.add("CalibratorDistributor", CalibratorDistributor);
 game.scene.add("Fuel", FuelEngine);
 game.scene.add("Unlock", UnlockManifolds)
-
+game.scene.add("demo",Demo)
 // start title
 //game.scene.start("joinGame");
 //game.scene.start("mini-map");

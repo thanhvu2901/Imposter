@@ -1,7 +1,8 @@
 import Phaser from "phaser";
 import dropShip from "../assets/img/Dropship.png";
 import lobby from "../assets/tilemaps/lobby.json";
-let name = window.localStorage.getItem('namePlayer')
+
+
 import {
   PLAYER_SPEED,
   PLAYER_BASE,
@@ -439,7 +440,7 @@ export default class waitingRoom extends Phaser.Scene {
       pressedKeys = pressedKeys.filter((key) => key !== e.code);
     });
 
-
+    let name = window.localStorage.getItem('namePlayer')
     //tải lại mới khi có player mới vào có các player đã ở trong đó
     this.socket.emit("joinRoom", ({ roomkey: this.textInput, name: name }));
 
@@ -539,7 +540,7 @@ export default class waitingRoom extends Phaser.Scene {
       this.scene.bringToTop("ChangeSkin");
     });
 
-    this.socket.on("gogame", ({ numPlayers, idPlayers, Info }) => {
+    this.socket.on("gogame", ({ numPlayers, idPlayers, namePlayers, Info }) => {
       //console.log(numPlayers);
       // this.scene.stop('waitingRoom')
 
@@ -552,6 +553,7 @@ export default class waitingRoom extends Phaser.Scene {
         textInput: this.textInput,
         numPlayers: numPlayers,
         idPlayers: idPlayers,
+        namePlayers:namePlayers,
         numberImposter: this.numberImposter ?? 1,
         playerChangedSkin: this.playerChangedSkin,
         Info: Info

@@ -152,6 +152,7 @@ class Game extends Phaser.Scene {
     this.textInput = data.textInput;
     this.numPlayers = data.numPlayers;
     this.idPlayers = data.idPlayers;
+    this.namePlayers=data.namePlayers
     this.isRole = data.isRole;
     this.playerChangedSkin = data.playerChangedSkin;
     this.Info = data.Info;
@@ -1389,23 +1390,23 @@ class Game extends Phaser.Scene {
     });
     report_btn.on("pointerdown", () => {
       if (near_btn) {
-        this.scene.launch("vote", {
-          socket: this.socket, numPlayers: this.numPlayers,
-          idPlayers: this.idPlayers, roomId: this.state.roomKey, deadlist: deadplayer, role: this.isRole
-        })
-        this.socket.emit("open_vote")
+        // this.scene.launch("vote", {
+        //   socket: this.socket, numPlayers: this.numPlayers,
+        //   idPlayers: this.idPlayers, namePlayers:this.namePlayers, roomId: this.state.roomKey, deadlist: deadplayer, role: this.isRole
+        // })
+        this.socket.emit("open_vote",this.state.roomKey)
 
       }
     });
     // this.socket.on("move", ({ x, y, playerId }) => {
     //   //console.log({ x, y, playerId });
       this.socket.on("vote_final",(num,id)=>{
-    this.scene.launch("vote_state",{num:num,name:id,roomKey:this.textInput,socket:this.socket})
+    this.scene.launch("vote_state",{num:num,name:this.namePlayers[this.idPlayers.indexOf(id)],roomKey:this.textInput,socket:this.socket})
   })
     this.socket.on("open_othervote", () => {
       this.scene.launch("vote", {
         socket: this.socket, numPlayers: this.numPlayers,
-        idPlayers: this.idPlayers, roomId: this.state.roomKey, deadlist: deadplayer, role: this.isRole
+        idPlayers: this.idPlayers,namePlayers:this.namePlayers, roomId: this.state.roomKey, deadlist: deadplayer, role: this.isRole
       })
 
 
@@ -1495,7 +1496,7 @@ class Game extends Phaser.Scene {
     this.events.emit("moving", [player_container.x, player_container.y]);
     light.update(player_container);
 
-    if (this.isRole == 1) {
+    if (this.isRole == 1&&alive==true) {
       kill.on("pointerdown", () => {
         //console.log();
         if (canKill) {
@@ -1773,7 +1774,7 @@ class Game extends Phaser.Scene {
         });
         launch_scene = false;
       }
-    } else if (alive == false && this.isRole != 1) {
+    } else if (alive == false) {
       let playerDieMoved = false;
       player.setVelocity(0);
 
