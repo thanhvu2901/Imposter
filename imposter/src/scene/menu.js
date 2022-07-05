@@ -84,6 +84,8 @@ export default class MainMenuScene extends Phaser.Scene {
                 window.localStorage.removeItem('namePlayer')
                 window.localStorage.setItem('namePlayer', value)
                 nameStr.value = "";
+            }else{
+                window.localStorage.setItem('namePlayer', (Math.random() + 1).toString(36).substring(7))
             }
             this.scene.start('joinGame', JoinGame);
         })
