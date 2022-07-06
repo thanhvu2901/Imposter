@@ -79,6 +79,7 @@ import {
 let player, pet_type;
 let otherPlayer = new Array();
 let otherPlayerId = new Array();
+let otherNames = new Array()
 let cursors;
 let pressedKeys = [];
 let stt = 0;
@@ -826,12 +827,24 @@ class Game extends Phaser.Scene {
           colorOther,
           "idle.png"
         ));
+        let temp = this.add.text( 120 + 20,
+          -745 ,this.namePlayers[this.idPlayers.indexOf(element)],{
+            fontSize: "25px",
+          //  color: "#ffffff",
+            fontFamily: "Arial",
+            stroke: "#000000",
+            align: 'center',
+            strokeThickness: 3,
+          })
+      
+          otherNames.push(temp)
       }
     })
 
     this.idPlayers.forEach((element) => {
       if (element != this.socket.id) {
         otherPlayerId.push(element);
+       
       }
     });
     // console.log(otherPlayerId);
@@ -1411,8 +1424,11 @@ class Game extends Phaser.Scene {
 
 
     })
+    let _this=this
     this.socket.on("move", ({ x, y, playerId, color }) => {
       let index = otherPlayerId.findIndex((Element) => Element == playerId);
+      console.log( otherNames[index].text,"moving")
+     
       //id = index;
       // console.log(index);
       if (otherPlayer[index].x > x) {
@@ -1422,6 +1438,8 @@ class Game extends Phaser.Scene {
       }
       otherPlayer[index].x = x;
       otherPlayer[index].y = y;
+      otherNames[index].x =  otherPlayer[index].x-30
+      otherNames[index].y = otherPlayer[index].y-50
       otherPlayer[index].moving = true;
 
       if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
