@@ -545,6 +545,7 @@ export default class waitingRoom extends Phaser.Scene {
 
           let temp_hat = Object.values(players)[i].hat
           let temp_pet = Object.values(players)[i].pet
+          let temp_pants = Object.values(players)[i].pants
           if (temp_hat) {
             let otherPlayer_hat_skin = this.physics.add.sprite(
               otherPlayer[stt].x,
@@ -563,6 +564,72 @@ export default class waitingRoom extends Phaser.Scene {
             otherPlayer_container[stt].add(otherPlayer_pet);
 
           }
+          if (temp_pants) {
+            let otherPlayer_pants = this.physics.add.sprite(
+              otherPlayer[stt].x + 0.75,
+              otherPlayer[stt].y + 10,
+              `${temp_pants}_pants`,
+              `${temp_pants}_Idle.png`
+            );
+            otherPlayer_container[stt].add(otherPlayer_pants);
+          }
+
+          this.anims.create({
+            key: `${temp_pants}_walk`,
+            frames: this.anims.generateFrameNames(`${temp_pants}_pants`, {
+              start: 1,
+              end: 12,
+              prefix: `${temp_pants}_Walk`,
+              suffix: ".png",
+            }),
+            repeat: -1,
+            frameRate: 16,
+          });
+
+          this.anims.create({
+            key: `${temp_pants}_idle`,
+            frames: [
+              {
+                key: `${temp_pants}_pants`,
+                frame: `${temp_pants}_Idle.png`,
+              },
+            ],
+          });
+          //For skins that have mirror animations
+          if (
+            temp_pants == POLICE ||
+            temp_pants == ARCHAEOLOGIST ||
+            temp_pants == SECGUARD ||
+            temp_pants == WALL ||
+            temp_pants == CCC
+          ) {
+            isMirror = true;
+            this.anims.create({
+              key: `${temp_pants}_walkMirror`,
+              frames: this.anims.generateFrameNames(`${temp_pants}_pants`, {
+                start: 1,
+                end: 12,
+                prefix: `${temp_pants}_WalkMirror`,
+                suffix: ".png",
+              }),
+              repeat: -1,
+              frameRate: 16,
+            });
+
+            this.anims.create({
+              key: `${temp_pants}_idleMirror`,
+              frames: [
+                {
+                  key: `${temp_pants}_pants`,
+                  frame: `${temp_pants}_IdleMirror.png`,
+                },
+              ],
+            });
+          } else {
+            isMirror = false;
+          }
+
+
 
 
           console.log(otherPlayer_container[stt]);
@@ -1331,11 +1398,12 @@ export default class waitingRoom extends Phaser.Scene {
 
       //send color player change
       // console.log(color + " " + this.socket.id);
+      console.log(pants_type);
       this.socket.emit("changeSkin", {
         color: color,
         hat: hat,
         // pants_skin: pants_skin,
-        // pants_type: pants_type,
+        pants: pants_type,
         pet: pet_type,
         id: this.socket.id,
         room: this.state.roomKey,

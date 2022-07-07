@@ -50,8 +50,8 @@ class InspectSample extends Phaser.Scene {
         text = this.add.text(10, 10, 'Cursors to move', { font: '16px Courier', fill: '#00ff00' }).setScrollFactor(0);
 
 
-        text2 = this.add.text(387, 590, 'PRESS TO START!!       -->', { font: '16px Courier', fill: '#00ff00' }).setDepth(1);
-        countdown = this.add.text(413, 158, 'fill all liquid ', { font: '16px Courier', fill: '#00ff00' }).setDepth(1);
+        text2 = this.add.text(415, 590, 'PRESS TO START!!       -->', { font: '16px Courier', fill: '#00ff00' }).setDepth(1);
+        countdown = this.add.text(440, 158, 'fill all liquid ', { font: '16px Courier', fill: '#00ff00' }).setDepth(1);
 
         this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 2, 'back')
         this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 2 + 193, 'panelBottom')
@@ -61,21 +61,21 @@ class InspectSample extends Phaser.Scene {
         this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 2 + 3, 'glassBack')
         this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 2 - 28, 'glassFront')
 
-        let dispase = this.add.image(385, 210, 'dispenser')
+        let dispase = this.add.image(415, 210, 'dispenser')
 
-        let li1 = this.add.image(387, 362, 'liquid')
-        let li2 = this.add.image(387 + 63, 362, 'liquid')
-        let li3 = this.add.image(387 + 63 * 2, 362, 'liquid')
-        let li4 = this.add.image(387 + 63 * 3, 362, 'liquid')
-        let li5 = this.add.image(387 + 63 * 4, 362, 'liquid')
+        let li1 = this.add.image(415, 365, 'liquid')
+        let li2 = this.add.image(415 + 63, 365, 'liquid')
+        let li3 = this.add.image(415 + 63 * 2, 365, 'liquid')
+        let li4 = this.add.image(415 + 63 * 3, 365, 'liquid')
+        let li5 = this.add.image(415 + 63 * 4, 365, 'liquid')
 
-        this.add.image(386, 548, 'sampleButton')
-        sampleBtn = this.add.image(386 + 63, 548, 'sampleButton');
-        this.add.image(386 + 63 * 2, 548, 'sampleButton')
-        this.add.image(386 + 63 * 3, 548, 'sampleButton')
-        this.add.image(386 + 63 * 4, 548, 'sampleButton')
+        this.add.image(415, 548, 'sampleButton')
+        sampleBtn = this.add.image(415 + 63, 548, 'sampleButton');
+        this.add.image(415 + 63 * 2, 548, 'sampleButton')
+        this.add.image(415 + 63 * 3, 548, 'sampleButton')
+        this.add.image(415 + 63 * 4, 548, 'sampleButton')
 
-        btnConfirm = this.add.image(680, 597, 'btnConfirm').setInteractive();
+        btnConfirm = this.add.image(710, 597, 'btnConfirm').setInteractive();
 
         btnConfirm.on('pointerdown', () => {
             //fill liquid
@@ -84,25 +84,25 @@ class InspectSample extends Phaser.Scene {
             li1.setTint('0x00ff00')
 
             setTimeout(() => {
-                dispase.setPosition(387 + 63, 210);
+                dispase.setPosition(415 + 63, 210);
                 li2.setTint('0x00ff00')
 
             }, 1000)
 
             setTimeout(() => {
                 li3.setTint('0x00ff00')
-                dispase.setPosition(387 + 63 * 2, 210)
+                dispase.setPosition(415 + 63 * 2, 210)
             }, 2000)
 
             setTimeout(() => {
                 li4.setTint('0x00ff00')
-                dispase.setPosition(387 + 63 * 3, 210)
+                dispase.setPosition(415 + 63 * 3, 210)
             }, 3000)
 
             setTimeout(() => {
-                dispase.setPosition(387 + 63 * 4, 210)
+                dispase.setPosition(415 + 63 * 4, 210)
                 li5.setTint('0x00ff00')
-                this.initialTime = 6;
+                this.initialTime = 10;
                 //    countdown.setText('time remaining: ' + formatTime(this.initialTime))
                 timedEvent = this.time.addEvent({ delay: 1000, callback: onEvent, callbackScope: this, loop: true });
             }, 4000)
@@ -131,10 +131,7 @@ class InspectSample extends Phaser.Scene {
 
 
     update() {
-        text.setText([
-            'screen x: ' + this.input.x,
-            'screen y: ' + this.input.y,
-        ])
+
 
         //countdown.setText('time remaining: ' + formatTime(this.initialTime))
     }

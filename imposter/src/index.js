@@ -136,7 +136,7 @@ game.scene.start('preloader');
 // game.scene.start('PrimeShields');
 
 // game.scene.start('fixWiring')
-// game.scene.start('inspectSample');
+//game.scene.start('inspectSample');
 
 // game.scene.start("Upload")
 // game.scene.start('stabilizeSteering');
