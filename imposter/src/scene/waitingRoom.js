@@ -492,7 +492,7 @@ export default class waitingRoom extends Phaser.Scene {
       }
     });
     //update skin current in room
-    this.socket.on('changeSkin', ({ color, hat, pet, id }) => {
+    this.socket.on('changeSkin', ({ color, hat, pet, pants, id }) => {
       let index = otherPlayerId.findIndex((Element) => Element == id)
       otherPlayer[index].destroy();
       otherPlayer_container[index].destroy();
@@ -505,6 +505,7 @@ export default class waitingRoom extends Phaser.Scene {
 
       let temp_hat = hat
       let temp_pet = pet
+      let temp_pants = pants
       if (temp_hat) {
         let otherPlayer_hat_skin = this.physics.add.sprite(
           otherPlayer[index].x,
@@ -521,8 +522,18 @@ export default class waitingRoom extends Phaser.Scene {
           String(temp_pet),
         );
         otherPlayer_container[index].add(otherPlayer_pet);
-
       }
+      if (temp_pants) {
+        let otherPlayer_pants = this.physics.add.sprite(
+          otherPlayer[index].x + 0.75,
+          otherPlayer[index].y + 10,
+          `${temp_pants}_pants`,
+          `${temp_pants}_Idle.png`
+        );
+        otherPlayer_container[index].add(otherPlayer_pants);
+      }
+
+
     })
     this.socket.on("currentPlayers", ({ players, numPlayers, roomInfo }) => {
 
@@ -603,7 +614,7 @@ export default class waitingRoom extends Phaser.Scene {
             temp_pants == WALL ||
             temp_pants == CCC
           ) {
-            isMirror = true;
+
             this.anims.create({
               key: `${temp_pants}_walkMirror`,
               frames: this.anims.generateFrameNames(`${temp_pants}_pants`, {
@@ -625,11 +636,7 @@ export default class waitingRoom extends Phaser.Scene {
                 },
               ],
             });
-          } else {
-            isMirror = false;
           }
-
-
 
 
           console.log(otherPlayer_container[stt]);
@@ -1414,14 +1421,15 @@ export default class waitingRoom extends Phaser.Scene {
 
 
       let index = otherPlayerId.findIndex((Element) => Element == playerId);
-      //id = index;
-      // console.log(index);
 
+      //FLIP MIRROR
       if (otherPlayer[index].x > x) {
         otherPlayer.flipX = true;
       } else if (otherPlayer[index].x < x) {
         otherPlayer.flipX = false;
       }
+
+      //UPDATE POSITION
       otherPlayer_container[index].x = x;
       otherPlayer_container[index].y = y;
       otherPlayer[index].moving = true;
@@ -1466,10 +1474,10 @@ export default class waitingRoom extends Phaser.Scene {
       !cursors.up.isDown &&
       !cursors.down.isDown
     ) {
+      player.anims.play(`${color}-idle`);
       if (pet) {
         pet.anims.play(`${pet_type}-idle`);
       }
-      player.anims.play(`${color}-idle`);
       if (pants_type) {
         if (isMirror) {
           isLeft == true
