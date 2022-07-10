@@ -1424,9 +1424,9 @@ export default class waitingRoom extends Phaser.Scene {
 
       //FLIP MIRROR
       if (otherPlayer[index].x > x) {
-        otherPlayer.flipX = true;
+        otherPlayer[index].flipX = true;
       } else if (otherPlayer[index].x < x) {
-        otherPlayer.flipX = false;
+        otherPlayer[index].flipX = false;
       }
 
       //UPDATE POSITION
@@ -1434,10 +1434,11 @@ export default class waitingRoom extends Phaser.Scene {
       otherPlayer_container[index].y = y;
       otherPlayer[index].moving = true;
 
-      if (otherPlayer[index].moving) {
+      if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
         otherPlayer[index].play(`${color}-walk`);
       } else if (
-        !otherPlayer[index].moving
+        !otherPlayer[index].moving &&
+        otherPlayer[index].anims.isPlaying
       ) {
         otherPlayer[index].stop(`${color}-walk`);
       }
@@ -1446,7 +1447,7 @@ export default class waitingRoom extends Phaser.Scene {
     this.socket.on("moveEndW", ({ playerId, color }) => {
       let index = otherPlayerId.findIndex((Element) => Element == playerId);
       otherPlayer[index].moving = false;
-      otherPlayer[index].anims.play(`${color}-idle`);
+      otherPlayer[index].play(`${color}-idle`);
       if (otherPlayer[index].moving) {
         otherPlayer[index].play(`${color}-walk`);
       } else if (
