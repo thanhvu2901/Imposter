@@ -1423,9 +1423,9 @@ export default class waitingRoom extends Phaser.Scene {
       let index = otherPlayerId.findIndex((Element) => Element == playerId);
 
       //FLIP MIRROR
-      if (otherPlayer[index].x > x) {
+      if ( otherPlayer_container[index].x > x) {
         otherPlayer[index].flipX = true;
-      } else if (otherPlayer[index].x < x) {
+      } else if ( otherPlayer_container[index].x < x) {
         otherPlayer[index].flipX = false;
       }
 
