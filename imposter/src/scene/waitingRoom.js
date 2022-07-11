@@ -1421,14 +1421,28 @@ export default class waitingRoom extends Phaser.Scene {
 
 
       let index = otherPlayerId.findIndex((Element) => Element == playerId);
-
+//console.log(otherPlayer_container[index].list[1].texture.key)
       //FLIP MIRROR
       if ( otherPlayer_container[index].x > x) {
         otherPlayer[index].flipX = true;
       } else if ( otherPlayer_container[index].x < x) {
         otherPlayer[index].flipX = false;
       }
+      let pet_name =undefined
+      if(otherPlayer_container[index].list[1]!=undefined){
+    pet_name = otherPlayer_container[index].list[1].texture.key
+    }
 
+      if(pet_name!=undefined){
+        if(otherPlayer[index].flipX ==true){
+          otherPlayer_container[index].list[1].scaleX=-1
+        }else{
+          otherPlayer_container[index].list[1].scaleX=1
+        }
+        otherPlayer_container[index].list[1].play(`${pet_name}-walk`, true)
+      
+      }
+    
       //UPDATE POSITION
       otherPlayer_container[index].x = x;
       otherPlayer_container[index].y = y;
@@ -1448,6 +1462,15 @@ export default class waitingRoom extends Phaser.Scene {
       let index = otherPlayerId.findIndex((Element) => Element == playerId);
       otherPlayer[index].moving = false;
       otherPlayer[index].play(`${color}-idle`);
+      let pet_name =undefined
+      if(otherPlayer_container[index].list[1]!=undefined){
+    pet_name = otherPlayer_container[index].list[1].texture.key
+    }
+
+      if(pet_name!=undefined){
+        otherPlayer_container[index].list[1].play(`${pet_name}-idle`)
+      }
+
       if (otherPlayer[index].moving) {
         otherPlayer[index].play(`${color}-walk`);
       } else if (
