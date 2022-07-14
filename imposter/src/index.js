@@ -42,10 +42,10 @@ const config = {
   type: [Phaser.AUTO, Phaser.CANVAS],
   width: 1080,
   height: 768,
-  parent:"phaser-expample",
+  parent: "phaser-expample",
   dom: {
     createContainer: true
-},
+  },
   fps: {
     smoothStep: false
   },
@@ -91,7 +91,7 @@ game.scene.add('submenu', SubMenu)
 game.scene.add('guidemap', guidemap)
 game.scene.add('vote_state', Vote_status)
 game.scene.add('Course', ChartCourse)
-game.scene.add('end_game',End_game)
+game.scene.add('end_game', End_game)
 game.scene.add('fixWiring', fixWiring)
 
 game.scene.add("align_engine_output", AlignEngineOutput)
@@ -116,7 +116,7 @@ game.scene.add("Upload", UploadData);
 game.scene.add("CalibratorDistributor", CalibratorDistributor);
 game.scene.add("Fuel", FuelEngine);
 game.scene.add("Unlock", UnlockManifolds)
-game.scene.add("demo",Demo)
+game.scene.add("demo", Demo)
 // start title
 //game.scene.start("joinGame");
 //game.scene.start("mini-map");
@@ -136,7 +136,7 @@ game.scene.start('preloader');
 // game.scene.start('PrimeShields');
 
 // game.scene.start('fixWiring')
-// game.scene.start('inspectSample');
+//game.scene.start('inspectSample');
 
 // game.scene.start("Upload")
 // game.scene.start('stabilizeSteering');

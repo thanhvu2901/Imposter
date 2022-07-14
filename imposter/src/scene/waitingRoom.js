@@ -51,11 +51,13 @@ import eventsCenter from "./eventsCenter";
 let cursors;
 let otherPlayer = new Array();
 let otherPlayerId = new Array();
+let otherPlayer_container = new Array();
 let pressedKeys = [];
 let defaultPlayer = {};
 let stt = 0;
 
 let player, pants_skin, hat_skin = null;
+let hat = null;
 var color = "";
 let pet = null;
 var pet_type, pants_type = null;
@@ -134,6 +136,7 @@ export default class waitingRoom extends Phaser.Scene {
     this.physics.add.collider(player_container, lobby_tileset);
 
     this.cameras.main.startFollow(player_container, true);
+
 
     /* *********************CREATING ANIMATIONS FOR PLAYER********************* */
 
@@ -489,10 +492,48 @@ export default class waitingRoom extends Phaser.Scene {
       }
     });
     //update skin current in room
-    this.socket.on('changeSkin', ({ color, id }) => {
+    this.socket.on('changeSkin', ({ color, hat, pet, pants, id }) => {
       let index = otherPlayerId.findIndex((Element) => Element == id)
       otherPlayer[index].destroy();
+      otherPlayer_container[index].destroy();
       otherPlayer[index] = this.physics.add.sprite(-45, 26, color, "idle.png");
+
+      otherPlayer_container[index] = this.add.container(-45, 26);
+      this.physics.add.existing(otherPlayer_container[index]);
+      otherPlayer_container[index].add(otherPlayer[index])
+      otherPlayer_container[index].body.setVelocity(0)
+
+      let temp_hat = hat
+      let temp_pet = pet
+      let temp_pants = pants
+      if (temp_hat) {
+        let otherPlayer_hat_skin = this.physics.add.sprite(
+          otherPlayer[index].x,
+          otherPlayer[index].y - 25,
+          String(temp_hat),
+          0
+        );
+        otherPlayer_container[index].add(otherPlayer_hat_skin);
+      }
+      if (temp_pet) {
+        let otherPlayer_pet = this.physics.add.sprite(
+          otherPlayer[index].x + 50,
+          otherPlayer[index].y + 10,
+          String(temp_pet),
+        );
+        otherPlayer_container[index].add(otherPlayer_pet);
+      }
+      if (temp_pants) {
+        let otherPlayer_pants = this.physics.add.sprite(
+          otherPlayer[index].x + 0.75,
+          otherPlayer[index].y + 10,
+          `${temp_pants}_pants`,
+          `${temp_pants}_Idle.png`
+        );
+        otherPlayer_container[index].add(otherPlayer_pants);
+      }
+
+
     })
     this.socket.on("currentPlayers", ({ players, numPlayers, roomInfo }) => {
 
@@ -500,6 +541,8 @@ export default class waitingRoom extends Phaser.Scene {
         if (this.socket.id !== Object.keys(players)[i]) {
 
           otherPlayerId.push(Object.keys(players)[i]);
+          otherPlayer_container[stt] = this.add.container(-45, 26);
+          this.physics.add.existing(otherPlayer_container[stt]);
 
           otherPlayer[stt] = this.physics.add.sprite(
             Object.values(players)[i].x,
@@ -507,6 +550,96 @@ export default class waitingRoom extends Phaser.Scene {
             Object.values(roomInfo.players)[i].color,
             "idle.png"
           );
+          otherPlayer_container[stt].setSize(otherPlayer[stt].width, otherPlayer[stt].height);
+          otherPlayer_container[stt].add(otherPlayer[stt]);
+          otherPlayer_container[stt].body.setVelocity(0)
+
+          let temp_hat = Object.values(players)[i].hat
+          let temp_pet = Object.values(players)[i].pet
+          let temp_pants = Object.values(players)[i].pants
+          if (temp_hat) {
+            let otherPlayer_hat_skin = this.physics.add.sprite(
+              otherPlayer[stt].x,
+              otherPlayer[stt].y - 25,
+              String(temp_hat),
+              0
+            );
+            otherPlayer_container[stt].add(otherPlayer_hat_skin);
+          }
+          if (temp_pet) {
+            let otherPlayer_pet = this.physics.add.sprite(
+              otherPlayer[stt].x + 50,
+              otherPlayer[stt].y + 10,
+              String(temp_pet),
+            );
+            otherPlayer_container[stt].add(otherPlayer_pet);
+
+          }
+          if (temp_pants) {
+            let otherPlayer_pants = this.physics.add.sprite(
+              otherPlayer[stt].x + 0.75,
+              otherPlayer[stt].y + 10,
+              `${temp_pants}_pants`,
+              `${temp_pants}_Idle.png`
+            );
+            otherPlayer_container[stt].add(otherPlayer_pants);
+          }
+
+          this.anims.create({
+            key: `${temp_pants}_walk`,
+            frames: this.anims.generateFrameNames(`${temp_pants}_pants`, {
+              start: 1,
+              end: 12,
+              prefix: `${temp_pants}_Walk`,
+              suffix: ".png",
+            }),
+            repeat: -1,
+            frameRate: 16,
+          });
+
+          this.anims.create({
+            key: `${temp_pants}_idle`,
+            frames: [
+              {
+                key: `${temp_pants}_pants`,
+                frame: `${temp_pants}_Idle.png`,
+              },
+            ],
+          });
+          //For skins that have mirror animations
+          if (
+            temp_pants == POLICE ||
+            temp_pants == ARCHAEOLOGIST ||
+            temp_pants == SECGUARD ||
+            temp_pants == WALL ||
+            temp_pants == CCC
+          ) {
+
+            this.anims.create({
+              key: `${temp_pants}_walkMirror`,
+              frames: this.anims.generateFrameNames(`${temp_pants}_pants`, {
+                start: 1,
+                end: 12,
+                prefix: `${temp_pants}_WalkMirror`,
+                suffix: ".png",
+              }),
+              repeat: -1,
+              frameRate: 16,
+            });
+
+            this.anims.create({
+              key: `${temp_pants}_idleMirror`,
+              frames: [
+                {
+                  key: `${temp_pants}_pants`,
+                  frame: `${temp_pants}_IdleMirror.png`,
+                },
+              ],
+            });
+          }
+
+
+          console.log(otherPlayer_container[stt]);
           stt = stt + 1;
         }
       }
@@ -516,13 +649,19 @@ export default class waitingRoom extends Phaser.Scene {
     this.socket.on("newPlayer", ({ playerInfo, numPlayers }) => {
       // listplyer socket có khác với tại local khong
       otherPlayerId.push(playerInfo.playerId);
-      console.log(otherPlayerId);
+      otherPlayer_container[stt] = this.add.container(-45, 26);
+      this.physics.add.existing(otherPlayer_container[stt]);
+
       otherPlayer[stt] = this.physics.add.sprite(
         -40 + 10 * stt,
         30 + 10 * stt,
         playerInfo.color,
         "idle.png"
       );
+      otherPlayer_container[stt].setSize(otherPlayer[stt].width, otherPlayer[stt].height);
+      otherPlayer_container[stt].add(otherPlayer[stt]);
+      otherPlayer_container[stt].body.setVelocity(0)
+
       console.log("stt" + stt);
       stt += 1;
       console.log("new players " + otherPlayer[stt]);
@@ -553,7 +692,7 @@ export default class waitingRoom extends Phaser.Scene {
         textInput: this.textInput,
         numPlayers: numPlayers,
         idPlayers: idPlayers,
-        namePlayers:namePlayers,
+        namePlayers: namePlayers,
         numberImposter: this.numberImposter ?? 1,
         playerChangedSkin: this.playerChangedSkin,
         Info: Info
@@ -649,7 +788,7 @@ export default class waitingRoom extends Phaser.Scene {
             hat_skin = this.physics.add.sprite(
               player.x,
               player.y - 25,
-              "hat00",
+              "hat0",
               0
             );
             break;
@@ -660,7 +799,7 @@ export default class waitingRoom extends Phaser.Scene {
             hat_skin = this.physics.add.sprite(
               player.x,
               player.y - 25,
-              "hat01",
+              "hat1",
               0
             );
             break;
@@ -671,7 +810,7 @@ export default class waitingRoom extends Phaser.Scene {
             hat_skin = this.physics.add.sprite(
               player.x,
               player.y - 25,
-              "hat02",
+              "hat2",
               0
             );
             break;
@@ -682,7 +821,7 @@ export default class waitingRoom extends Phaser.Scene {
             hat_skin = this.physics.add.sprite(
               player.x,
               player.y - 25,
-              "hat03",
+              "hat3",
               0
             );
             break;
@@ -693,7 +832,7 @@ export default class waitingRoom extends Phaser.Scene {
             hat_skin = this.physics.add.sprite(
               player.x,
               player.y - 25,
-              "hat04",
+              "hat4",
               0
             );
             break;
@@ -704,7 +843,7 @@ export default class waitingRoom extends Phaser.Scene {
             hat_skin = this.physics.add.sprite(
               player.x,
               player.y - 25,
-              "hat05",
+              "hat5",
               0
             );
             break;
@@ -715,7 +854,7 @@ export default class waitingRoom extends Phaser.Scene {
             hat_skin = this.physics.add.sprite(
               player.x,
               player.y - 25,
-              "hat06",
+              "hat6",
               0
             );
             break;
@@ -726,7 +865,7 @@ export default class waitingRoom extends Phaser.Scene {
             hat_skin = this.physics.add.sprite(
               player.x,
               player.y - 25,
-              "hat07",
+              "hat7",
               0
             );
             break;
@@ -737,7 +876,7 @@ export default class waitingRoom extends Phaser.Scene {
             hat_skin = this.physics.add.sprite(
               player.x,
               player.y - 25,
-              "hat08",
+              "hat8",
               0
             );
             break;
@@ -748,7 +887,7 @@ export default class waitingRoom extends Phaser.Scene {
             hat_skin = this.physics.add.sprite(
               player.x,
               player.y - 25,
-              "hat09",
+              "hat9",
               0
             );
             break;
@@ -759,7 +898,7 @@ export default class waitingRoom extends Phaser.Scene {
             hat_skin = this.physics.add.sprite(
               player.x,
               player.y - 25,
-              "hat010",
+              "hat10",
               0
             );
             break;
@@ -770,7 +909,7 @@ export default class waitingRoom extends Phaser.Scene {
             hat_skin = this.physics.add.sprite(
               player.x,
               player.y - 25,
-              "hat011",
+              "hat11",
               0
             );
             break;
@@ -781,7 +920,7 @@ export default class waitingRoom extends Phaser.Scene {
             hat_skin = this.physics.add.sprite(
               player.x,
               player.y - 25,
-              "hat012",
+              "hat12",
               0
             );
             break;
@@ -792,7 +931,7 @@ export default class waitingRoom extends Phaser.Scene {
             hat_skin = this.physics.add.sprite(
               player.x,
               player.y - 25,
-              "hat013",
+              "hat13",
               0
             );
             break;
@@ -803,7 +942,7 @@ export default class waitingRoom extends Phaser.Scene {
             hat_skin = this.physics.add.sprite(
               player.x,
               player.y - 25,
-              "hat014",
+              "hat14",
               0
             );
             break;
@@ -814,7 +953,7 @@ export default class waitingRoom extends Phaser.Scene {
             hat_skin = this.physics.add.sprite(
               player.x,
               player.y - 25,
-              "hat015",
+              "hat15",
               0
             );
             break;
@@ -825,7 +964,7 @@ export default class waitingRoom extends Phaser.Scene {
             hat_skin = this.physics.add.sprite(
               player.x,
               player.y - 25,
-              "hat016",
+              "hat16",
               0
             );
             break;
@@ -836,7 +975,7 @@ export default class waitingRoom extends Phaser.Scene {
             hat_skin = this.physics.add.sprite(
               player.x,
               player.y - 25,
-              "hat017",
+              "hat17",
               0
             );
             break;
@@ -847,7 +986,7 @@ export default class waitingRoom extends Phaser.Scene {
             hat_skin = this.physics.add.sprite(
               player.x,
               player.y - 25,
-              "hat018",
+              "hat18",
               0
             );
             break;
@@ -858,11 +997,12 @@ export default class waitingRoom extends Phaser.Scene {
             hat_skin = this.physics.add.sprite(
               player.x,
               player.y - 25,
-              "hat019",
+              "hat19",
               0
             );
             break;
         }
+        hat = hatChosen
         player_container.add(hat_skin);
       }
 
@@ -1265,8 +1405,13 @@ export default class waitingRoom extends Phaser.Scene {
 
       //send color player change
       // console.log(color + " " + this.socket.id);
+      console.log(pants_type);
       this.socket.emit("changeSkin", {
         color: color,
+        hat: hat,
+        // pants_skin: pants_skin,
+        pants: pants_type,
+        pet: pet_type,
         id: this.socket.id,
         room: this.state.roomKey,
       });
@@ -1276,16 +1421,31 @@ export default class waitingRoom extends Phaser.Scene {
 
 
       let index = otherPlayerId.findIndex((Element) => Element == playerId);
-      //id = index;
-      // console.log(index);
-
-      if (otherPlayer[index].x > x) {
+//console.log(otherPlayer_container[index].list[1].texture.key)
+      //FLIP MIRROR
+      if ( otherPlayer_container[index].x > x) {
         otherPlayer[index].flipX = true;
-      } else if (otherPlayer[index].x < x) {
+      } else if ( otherPlayer_container[index].x < x) {
         otherPlayer[index].flipX = false;
       }
-      otherPlayer[index].x = x;
-      otherPlayer[index].y = y;
+      let pet_name =undefined
+      if(otherPlayer_container[index].list[1]!=undefined){
+    pet_name = otherPlayer_container[index].list[1].texture.key
+    }
+
+      if(pet_name!=undefined){
+        if(otherPlayer[index].flipX ==true){
+          otherPlayer_container[index].list[1].scaleX=-1
+        }else{
+          otherPlayer_container[index].list[1].scaleX=1
+        }
+        otherPlayer_container[index].list[1].play(`${pet_name}-walk`, true)
+      
+      }
+    
+      //UPDATE POSITION
+      otherPlayer_container[index].x = x;
+      otherPlayer_container[index].y = y;
       otherPlayer[index].moving = true;
 
       if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
@@ -1301,12 +1461,20 @@ export default class waitingRoom extends Phaser.Scene {
     this.socket.on("moveEndW", ({ playerId, color }) => {
       let index = otherPlayerId.findIndex((Element) => Element == playerId);
       otherPlayer[index].moving = false;
-      otherPlayer[index].anims.play(`${color}-idle`);
-      if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
+      otherPlayer[index].play(`${color}-idle`);
+      let pet_name =undefined
+      if(otherPlayer_container[index].list[1]!=undefined){
+    pet_name = otherPlayer_container[index].list[1].texture.key
+    }
+
+      if(pet_name!=undefined){
+        otherPlayer_container[index].list[1].play(`${pet_name}-idle`)
+      }
+
+      if (otherPlayer[index].moving) {
         otherPlayer[index].play(`${color}-walk`);
       } else if (
-        !otherPlayer[index].moving &&
-        otherPlayer[index].anims.isPlaying
+        !otherPlayer[index].moving
       ) {
         otherPlayer[index].stop(`${color}-walk`);
       }
@@ -1330,10 +1498,10 @@ export default class waitingRoom extends Phaser.Scene {
       !cursors.up.isDown &&
       !cursors.down.isDown
     ) {
+      player.anims.play(`${color}-idle`);
       if (pet) {
         pet.anims.play(`${pet_type}-idle`);
       }
-      player.anims.play(`${color}-idle`);
       if (pants_type) {
         if (isMirror) {
           isLeft == true
