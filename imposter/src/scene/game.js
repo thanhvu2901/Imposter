@@ -29,6 +29,8 @@ import FuelEngine from "../assets/tasks/Fuel Engines/marked.png";
 import PrimeShields from "../assets/tasks/Prime Shields/marked.png";
 import InspectSample from "../assets/tasks/Inspect Sample/marked.png";
 import UnlockManifolds from "../assets/tasks/Unlock Manifolds/marked.png";
+import DivertPower from "../assets/img/divert_power/marked.png";
+
 
 //Constants
 import {
@@ -197,10 +199,10 @@ class Game extends Phaser.Scene {
 
     this.load.image("InspectSample", InspectSample);
     this.load.image("UnlockManifolds", UnlockManifolds);
+    this.load.image("DivertPower", DivertPower)
   }
 
   create() {
-    
     this.socket.emit("send_role",this.socket.id,this.isRole,this.textInput)
     this.socket.on("end_game",(winner)=>{
       console.log(winner,"pppp")
@@ -1511,6 +1513,8 @@ class Game extends Phaser.Scene {
       pet.setPosition(player.x + 50, player.y + 10);
     }
 
+    console.log("x", player_container.x);
+    console.log("y", player_container.y);
     this.events.emit("moving", [player_container.x, player_container.y]);
     light.update(player_container);
 
