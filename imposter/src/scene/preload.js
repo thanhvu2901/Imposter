@@ -371,27 +371,26 @@ class Preloader extends Phaser.Scene {
     this.load.atlas(`${SUITWHITE}_pants`, suitwhitepng, suitwhitejson);
 
     //hats
-    this.load.image("hat0", hat0);
-    this.load.image("hat1", hat1);
-    this.load.image("hat2", hat2);
-    this.load.image("hat3", hat3);
-    this.load.image("hat4", hat4);
-    this.load.image("hat5", hat5);
-    this.load.image("hat6", hat6);
-    this.load.image("hat7", hat7);
-    this.load.image("hat8", hat8);
-    this.load.image("hat9", hat9);
-    this.load.image("hat10", hat10);
-    this.load.image("hat11", hat11);
-    this.load.image("hat12", hat12);
-    this.load.image("hat13", hat13);
-    this.load.image("hat14", hat14);
-    this.load.image("hat15", hat15);
-    this.load.image("hat16", hat16);
-    this.load.image("hat17", hat17);
-    this.load.image("hat18", hat18);
-    this.load.image("hat19", hat19);
-
+    this.load.image("hat00", hat0);
+    this.load.image("hat01", hat1);
+    this.load.image("hat02", hat2);
+    this.load.image("hat03", hat3);
+    this.load.image("hat04", hat4);
+    this.load.image("hat05", hat5);
+    this.load.image("hat06", hat6);
+    this.load.image("hat07", hat7);
+    this.load.image("hat08", hat8);
+    this.load.image("hat09", hat9);
+    this.load.image("hat010", hat10);
+    this.load.image("hat011", hat11);
+    this.load.image("hat012", hat12);
+    this.load.image("hat013", hat13);
+    this.load.image("hat014", hat14);
+    this.load.image("hat015", hat15);
+    this.load.image("hat016", hat16);
+    this.load.image("hat017", hat17);
+    this.load.image("hat018", hat18);
+    this.load.image("hat019", hat19);
     //Pets
     this.load.atlas(BSLUG, bslugpng, bslugjson);
     this.load.atlas(BEDCRAB, bedcrabpng, bedcrabjson);

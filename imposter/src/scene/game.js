@@ -144,6 +144,7 @@ let colorArr = [
   PLAYER_PURPLE,
   PLAYER_YELLOW,
   PLAYER_PINK]
+  let otherPlayer_container = new Array();
 class Game extends Phaser.Scene {
   constructor() {
     super({ key: "game" });
@@ -159,6 +160,7 @@ class Game extends Phaser.Scene {
     this.isRole = data.isRole;
     this.playerChangedSkin = data.playerChangedSkin;
     this.Info = data.Info;
+    this.container=data.container
   }
 
   preload() {
@@ -819,29 +821,7 @@ class Game extends Phaser.Scene {
     });
 
     // tạo theo số lượng other player vào
-    this.idPlayers.forEach((element) => {
-      if (element != this.socket.id) {
-        let colorOther = Object(this.Info.players)[element].color;
-
-        otherPlayer.push(this.physics.add.sprite(
-          120 + 50,
-          -745 + 50,
-          colorOther,
-          "idle.png"
-        ));
-        let temp = this.add.text( 120 + 20,
-          -745 ,this.namePlayers[this.idPlayers.indexOf(element)],{
-            fontSize: "25px",
-          //  color: "#ffffff",
-            fontFamily: "Arial",
-            stroke: "#000000",
-            align: 'center',
-            strokeThickness: 3,
-          })
-      
-          otherNames.push(temp)
-      }
-    })
+   
 
     this.idPlayers.forEach((element) => {
       if (element != this.socket.id) {
@@ -849,7 +829,62 @@ class Game extends Phaser.Scene {
        
       }
     });
-    // console.log(otherPlayerId);
+let count=0
+    this.idPlayers.forEach((element) => {
+      if (element != this.socket.id) {
+        let index = otherPlayerId.findIndex((Element) => Element == element);
+        let colorOther = Object(this.Info.players)[element].color;
+        otherPlayer_container[index] = this.add.container(-45, 26);
+        this.physics.add.existing(otherPlayer_container[index]);
+
+       otherPlayer[index] = this.physics.add.sprite(
+        -45, 26, colorOther,
+          "idle.png"
+        );
+       
+     //   let index = otherPlayerId.findIndex((Element) => Element == element)
+     ///   let otherPlayer[index] =this.physics.add.sprite(-45, 26, colorOther, "idle.png");
+      //  console.log(index)
+      //  otherPlayer_container[count] = this.add.container(-45, 26);
+    //    this.physics.add.existing(otherPlayer_container[count]);
+        otherPlayer_container[index].setSize(otherPlayer[index].width, otherPlayer[index].height);
+        otherPlayer_container[index].add(otherPlayer[index]);
+        otherPlayer_container[index].body.setVelocity(0)
+
+        let temp_hat = Object(this.Info.players)[element].hat
+        let temp_pet = Object(this.Info.players)[element].pet
+        let temp_pants = Object(this.Info.players)[element].pants
+        console.log(temp_hat,temp_pet,temp_pants)
+        if (temp_hat) {
+          let otherPlayer_hat_skin = this.physics.add.sprite(
+            otherPlayer[index].x,
+            otherPlayer[index].y - 25,
+            String(temp_hat),
+            0
+          );
+          otherPlayer_container[stt].add(otherPlayer_hat_skin);
+        }
+        if (temp_pet) {
+          let otherPlayer_pet = this.physics.add.sprite(
+            otherPlayer[index].x + 50,
+            otherPlayer[index].y + 10,
+            String(temp_pet),
+          );
+          otherPlayer_container[stt].add(otherPlayer_pet);
+        }
+        if (temp_pants) {
+          let otherPlayer_pants = this.physics.add.sprite(
+            otherPlayer[index].x + 0.75,
+            otherPlayer[index].y + 10,
+            `${temp_pants}_pants`,
+            `${temp_pants}_Idle.png`
+          );
+          otherPlayer_container[stt].add(otherPlayer_pants);
+        }
+        count++
+      }
+    })
+    console.log(otherPlayer_container);
 
     // stt = otherPlayer.length;
     //****************** */
@@ -1428,20 +1463,35 @@ class Game extends Phaser.Scene {
     })
     let _this=this
     this.socket.on("move", ({ x, y, playerId, color }) => {
+
+
       let index = otherPlayerId.findIndex((Element) => Element == playerId);
-      console.log( otherNames[index].text,"moving")
-     
-      //id = index;
-      // console.log(index);
-      if (otherPlayer[index].x > x) {
+      
+//console.log(otherPlayer_container[index].list[1].texture.key)
+      //FLIP MIRROR
+      if ( otherPlayer_container[index].x > x) {
         otherPlayer[index].flipX = true;
-      } else if (otherPlayer[index].x < x) {
+      } else if ( otherPlayer_container[index].x < x) {
         otherPlayer[index].flipX = false;
       }
-      otherPlayer[index].x = x;
-      otherPlayer[index].y = y;
-      otherNames[index].x =  otherPlayer[index].x-30
-      otherNames[index].y = otherPlayer[index].y-50
+      let pet_name =undefined
+      if(otherPlayer_container[index].list[1]!=undefined){
+    pet_name = otherPlayer_container[index].list[1].texture.key
+    }
+
+      if(pet_name!=undefined){
+        if(otherPlayer[index].flipX ==true){
+          otherPlayer_container[index].list[1].scaleX=-1
+        }else{
+          otherPlayer_container[index].list[1].scaleX=1
+        }
+        otherPlayer_container[index].list[1].play(`${pet_name}-walk`, true)
+      
+      }
+    
+      //UPDATE POSITION
+      otherPlayer_container[index].x = x;
+      otherPlayer_container[index].y = y;
       otherPlayer[index].moving = true;
 
       if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
@@ -1454,17 +1504,23 @@ class Game extends Phaser.Scene {
       }
     });
 
-    // console.log(objectsLayer);
-
     this.socket.on("moveEnd", ({ playerId, color }) => {
       let index = otherPlayerId.findIndex((Element) => Element == playerId);
       otherPlayer[index].moving = false;
-      otherPlayer[index].anims.play(`${color}-idle`);
-      if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
+      otherPlayer[index].play(`${color}-idle`);
+      let pet_name =undefined
+      if(otherPlayer_container[index].list[1]!=undefined){
+    pet_name = otherPlayer_container[index].list[1].texture.key
+    }
+
+      if(pet_name!=undefined){
+        otherPlayer_container[index].list[1].play(`${pet_name}-idle`)
+      }
+
+      if (otherPlayer[index].moving) {
         otherPlayer[index].play(`${color}-walk`);
       } else if (
-        !otherPlayer[index].moving &&
-        otherPlayer[index].anims.isPlaying
+        !otherPlayer[index].moving
       ) {
         otherPlayer[index].stop(`${color}-walk`);
       }
@@ -1487,8 +1543,8 @@ class Game extends Phaser.Scene {
         let index = otherPlayerId.findIndex((Element) => Element == playerId);
         otherPlayer[index].anims.play(`${colorKill}-dead`, true);
         let temp = this.add.rectangle(
-          otherPlayer[index].x,
-          otherPlayer[index].y,
+          otherPlayer_container[index].x,
+          otherPlayer_container[index].y,
           200,
           200
         );
@@ -1529,8 +1585,8 @@ class Game extends Phaser.Scene {
           let colorKill = Object(this.Info.players[killId]).color;
           playerKilled.anims.play(`${colorKill}-dead`, true);
           let temp = this.add.rectangle(
-            playerKilled.x,
-            playerKilled.y,
+            otherPlayer_container[indexKill].x,
+            otherPlayer_container[indexKill].y,
             200,
             200
           );
@@ -1672,12 +1728,12 @@ class Game extends Phaser.Scene {
         player.movedLastFrame = true;
         let index = 0;
 
-        for (let other of otherPlayer) {
+        for (let other of otherPlayer_container) {
           if (
             Math.abs(Math.floor(player_container.x) - Math.floor(other.x)) <= 100 &&
             Math.abs(Math.floor(player_container.y) - Math.floor(other.y)) <= 100
           ) {
-            playerKilled = other; //lấy player đứng gần
+            playerKilled = otherPlayer[index]; //lấy player đứng gần
             indexKill = index;
             kill.alpha = 1;
             canKill = true;
@@ -1701,7 +1757,7 @@ class Game extends Phaser.Scene {
     if (alive == true && this.isRole != 1) {
       let playerMoved = false;
       player_container.body.setVelocity(0);
-      if (
+       if (
         !cursors.left.isDown &&
         !cursors.right.isDown &&
         !cursors.up.isDown &&
@@ -1710,27 +1766,55 @@ class Game extends Phaser.Scene {
         if (pet) {
           pet.anims.play(`${pet_type}-idle`);
         }
-        player.anims.play(`${color}-idle`);
-      }
-
-      if (cursors.left.isDown) {
-        if (pet) {
-          pet.anims.play(`${pet_type}-walk`, true);
-          pet.scaleX = -1;
+        if (pants_type) {
+          if (isMirror) {
+            isLeft == true
+              ? pants_skin.anims.play(`${pants_type}_idleMirror`)
+              : pants_skin.anims.play(`${pants_type}_idle`);
+          } else {
+            pants_skin.anims.play(`${pants_type}_idle`);
+          }
         }
+      }
+      //nếu is_hidden bằng true có nghĩa là player đang trốn vent nên sẽ ko di chuyển bằng input được
+      if (cursors.left.isDown) {
         player.anims.play(`${color}-walk`, true);
         player_container.body.setVelocityX(-PLAYER_SPEED);
         player.scaleX = -1;
         player_container.body.offset.x = 0;
+        if (hat_skin) {
+          hat_skin.scaleX = -1;
+        }
         playerMoved = true;
+        if (pet) {
+          pet.anims.play(`${pet_type}-walk`, true);
+          pet.scaleX = -1;
+        }
+        isLeft = true;
+        if (pants_type) {
+          if (isMirror) {
+            pants_skin.anims.play(`${pants_type}_walkMirror`, true);
+          } else {
+            pants_skin.anims.play(`${pants_type}_walk`, true);
+            pants_skin.scaleX = -1;
+          }
+        }
       } else if (cursors.right.isDown) {
         if (pet) {
           pet.anims.play(`${pet_type}-walk`, true);
           pet.scaleX = 1;
         }
+        isLeft = false;
         player.anims.play(`${color}-walk`, true);
+        if (pants_type) {
+          pants_skin.anims.play(`${pants_type}_walk`, true);
+          isMirror == false ? (pants_skin.scaleX = 1) : null;
+        }
         player_container.body.setVelocityX(PLAYER_SPEED);
         player.scaleX = 1;
+        if (hat_skin) {
+          hat_skin.scaleX = 1;
+        }
         playerMoved = true;
       }
       if (cursors.up.isDown) {
@@ -1738,6 +1822,11 @@ class Game extends Phaser.Scene {
           pet.anims.play(`${pet_type}-walk`, true);
         }
         player.anims.play(`${color}-walk`, true);
+        if (pants_type) {
+          isLeft == true && isMirror == true
+            ? pants_skin.anims.play(`${pants_type}_walkMirror`, true)
+            : pants_skin.anims.play(`${pants_type}_walk`, true);
+        }
         player_container.body.setVelocityY(-PLAYER_SPEED);
         playerMoved = true;
       } else if (cursors.down.isDown) {
@@ -1745,6 +1834,11 @@ class Game extends Phaser.Scene {
           pet.anims.play(`${pet_type}-walk`, true);
         }
         player.anims.play(`${color}-walk`, true);
+        if (pants_type) {
+          isLeft == true && isMirror == true
+            ? pants_skin.anims.play(`${pants_type}_walkMirror`, true)
+            : pants_skin.anims.play(`${pants_type}_walk`, true);
+        }
         player_container.body.setVelocityY(PLAYER_SPEED);
         playerMoved = true;
       }

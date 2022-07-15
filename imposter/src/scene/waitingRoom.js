@@ -547,7 +547,7 @@ export default class waitingRoom extends Phaser.Scene {
           otherPlayer[stt] = this.physics.add.sprite(
             Object.values(players)[i].x,
             Object.values(players)[i].y,
-            Object.values(roomInfo.players)[i].color,
+            Object.values(players)[i].color,
             "idle.png"
           );
           otherPlayer_container[stt].setSize(otherPlayer[stt].width, otherPlayer[stt].height);
@@ -557,6 +557,7 @@ export default class waitingRoom extends Phaser.Scene {
           let temp_hat = Object.values(players)[i].hat
           let temp_pet = Object.values(players)[i].pet
           let temp_pants = Object.values(players)[i].pants
+          console.log(temp_hat,temp_pet,temp_pants)
           if (temp_hat) {
             let otherPlayer_hat_skin = this.physics.add.sprite(
               otherPlayer[stt].x,
@@ -686,6 +687,7 @@ export default class waitingRoom extends Phaser.Scene {
       // ********anouning ROLE****//
 
       //*****start game */
+      console.log(otherPlayer_container)
       // this.scene.launch('game', { socket: this.socket, textInput: this.textInput, numPlayers: numPlayers, idPlayers: idPlayers })
       this.scene.launch("introCrew", {
         socket: this.socket,
@@ -788,9 +790,10 @@ export default class waitingRoom extends Phaser.Scene {
             hat_skin = this.physics.add.sprite(
               player.x,
               player.y - 25,
-              "hat0",
+              "hat00",
               0
             );
+            hat="hat00"
             break;
           case "hat1":
             if (hat_skin) {
@@ -799,9 +802,10 @@ export default class waitingRoom extends Phaser.Scene {
             hat_skin = this.physics.add.sprite(
               player.x,
               player.y - 25,
-              "hat1",
+              "hat01",
               0
             );
+            hat="hat01"
             break;
           case "hat2":
             if (hat_skin) {
@@ -810,9 +814,10 @@ export default class waitingRoom extends Phaser.Scene {
             hat_skin = this.physics.add.sprite(
               player.x,
               player.y - 25,
-              "hat2",
+              "hat02",
               0
             );
+            hat="hat02"
             break;
           case "hat3":
             if (hat_skin) {
@@ -821,9 +826,10 @@ export default class waitingRoom extends Phaser.Scene {
             hat_skin = this.physics.add.sprite(
               player.x,
               player.y - 25,
-              "hat3",
+              "hat03",
               0
             );
+            hat="hat03"
             break;
           case "hat4":
             if (hat_skin) {
@@ -832,9 +838,10 @@ export default class waitingRoom extends Phaser.Scene {
             hat_skin = this.physics.add.sprite(
               player.x,
               player.y - 25,
-              "hat4",
+              "hat04",
               0
             );
+            hat="hat04"
             break;
           case "hat5":
             if (hat_skin) {
@@ -843,9 +850,10 @@ export default class waitingRoom extends Phaser.Scene {
             hat_skin = this.physics.add.sprite(
               player.x,
               player.y - 25,
-              "hat5",
+              "hat05",
               0
             );
+            hat="hat05"
             break;
           case "hat6":
             if (hat_skin) {
@@ -854,9 +862,10 @@ export default class waitingRoom extends Phaser.Scene {
             hat_skin = this.physics.add.sprite(
               player.x,
               player.y - 25,
-              "hat6",
+              "hat06",
               0
             );
+            hat="hat06"
             break;
           case "hat7":
             if (hat_skin) {
@@ -865,9 +874,10 @@ export default class waitingRoom extends Phaser.Scene {
             hat_skin = this.physics.add.sprite(
               player.x,
               player.y - 25,
-              "hat7",
+              "hat07",
               0
             );
+            hat="hat07"
             break;
           case "hat8":
             if (hat_skin) {
@@ -876,9 +886,10 @@ export default class waitingRoom extends Phaser.Scene {
             hat_skin = this.physics.add.sprite(
               player.x,
               player.y - 25,
-              "hat8",
+              "hat08",
               0
             );
+            hat="hat08"
             break;
           case "hat9":
             if (hat_skin) {
@@ -887,9 +898,10 @@ export default class waitingRoom extends Phaser.Scene {
             hat_skin = this.physics.add.sprite(
               player.x,
               player.y - 25,
-              "hat9",
+              "hat09",
               0
             );
+            hat="hat09"
             break;
           case "hat10":
             if (hat_skin) {
@@ -898,9 +910,10 @@ export default class waitingRoom extends Phaser.Scene {
             hat_skin = this.physics.add.sprite(
               player.x,
               player.y - 25,
-              "hat10",
+              "hat010",
               0
             );
+            hat="hat010"
             break;
           case "hat11":
             if (hat_skin) {
@@ -909,9 +922,10 @@ export default class waitingRoom extends Phaser.Scene {
             hat_skin = this.physics.add.sprite(
               player.x,
               player.y - 25,
-              "hat11",
+              "hat011",
               0
             );
+            hat="hat011"
             break;
           case "hat12":
             if (hat_skin) {
@@ -920,20 +934,22 @@ export default class waitingRoom extends Phaser.Scene {
             hat_skin = this.physics.add.sprite(
               player.x,
               player.y - 25,
-              "hat12",
+              "hat012",
               0
             );
+            hat="hat012"
             break;
-          case "hat13":
+          case "hat013":
             if (hat_skin) {
               hat_skin.destroy();
             }
             hat_skin = this.physics.add.sprite(
               player.x,
               player.y - 25,
-              "hat13",
+              "hat013",
               0
             );
+            hat="hat013"
             break;
           case "hat14":
             if (hat_skin) {
@@ -942,9 +958,10 @@ export default class waitingRoom extends Phaser.Scene {
             hat_skin = this.physics.add.sprite(
               player.x,
               player.y - 25,
-              "hat14",
+              "hat014",
               0
             );
+            hat="hat014"
             break;
           case "hat15":
             if (hat_skin) {
@@ -953,9 +970,10 @@ export default class waitingRoom extends Phaser.Scene {
             hat_skin = this.physics.add.sprite(
               player.x,
               player.y - 25,
-              "hat15",
+              "hat015",
               0
-            );
+            );   
+            hat="hat015"
             break;
           case "hat16":
             if (hat_skin) {
@@ -964,9 +982,10 @@ export default class waitingRoom extends Phaser.Scene {
             hat_skin = this.physics.add.sprite(
               player.x,
               player.y - 25,
-              "hat16",
+              "hat016",
               0
-            );
+            );   
+            hat="hat016"
             break;
           case "hat17":
             if (hat_skin) {
@@ -975,9 +994,10 @@ export default class waitingRoom extends Phaser.Scene {
             hat_skin = this.physics.add.sprite(
               player.x,
               player.y - 25,
-              "hat17",
+              "hat017",
               0
             );
+            hat="hat017"
             break;
           case "hat18":
             if (hat_skin) {
@@ -986,9 +1006,10 @@ export default class waitingRoom extends Phaser.Scene {
             hat_skin = this.physics.add.sprite(
               player.x,
               player.y - 25,
-              "hat18",
+              "hat018",
               0
             );
+            hat="hat018"
             break;
           case "hat19":
             if (hat_skin) {
@@ -997,12 +1018,13 @@ export default class waitingRoom extends Phaser.Scene {
             hat_skin = this.physics.add.sprite(
               player.x,
               player.y - 25,
-              "hat19",
+              "hat019",
               0
             );
+            hat="hat019"
             break;
         }
-        hat = hatChosen
+        
         player_container.add(hat_skin);
       }
 
@@ -1482,6 +1504,7 @@ export default class waitingRoom extends Phaser.Scene {
   }
 
   update() {
+    
     if (pants_type) {
       isLeft == true && isMirror == true
         ? pants_skin.setPosition(player.x, player.y + 10)
