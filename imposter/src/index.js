@@ -129,9 +129,9 @@ game.scene.add("demo", Demo)
 /***intro */
 //game.scene.start("introCrew");
 //game.scene.start("introImposter");
-game.scene.start('preloader');
-// game.scene.start('Course');
-// game.scene.start('CleanO2Filter');
+//game.scene.start('preloader');
+//game.scene.start('Course');
+//game.scene.start('CleanO2Filter');
 // game.scene.start('CleanAsteroids');
 // game.scene.start('PrimeShields');
 
@@ -142,11 +142,11 @@ game.scene.start('preloader');
 // game.scene.start('stabilizeSteering');
 // game.scene.start('startReactor') // game nay hien dang bị loi
 // game.scene.start('SwipeCard')
-// game.scene.start("CalibratorDistributor")
+//game.scene.start("CalibratorDistributor")
 // game.scene.start("Fuel")
 // game.scene.start("Fuel_1");
 // game.scene.start("Unlock");
 
-//game.scene.start('preloader');
+game.scene.start('preloader');
 //game.scene.start("align_engine_output")
 //game.scene.start('guidemap')

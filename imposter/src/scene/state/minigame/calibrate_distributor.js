@@ -31,7 +31,7 @@ var spin3,
 var pointer;
 var table;
 
-let r1,step = false;
+let r1, step = false;
 
 let x, y;
 let sprite, current_scene;
@@ -44,7 +44,7 @@ class CalibratorDistributor extends Phaser.Scene {
     sprite = data.sprite;
     eventsCenter = data.eventsCenter;
   }
-  
+
   preload() {
     this.load.image("CalibratorBaseWWires", CalibratorBaseWWires);
     this.load.image("calibratorButton", calibratorButton);
@@ -125,6 +125,11 @@ class CalibratorDistributor extends Phaser.Scene {
       button3.clearTint();
     });
 
+    let closeBtn = this.add.image(830, 135, 'closeBtn').setInteractive({ useHandCursor: true })
+
+    closeBtn.on('pointerdown', () => {
+      this.scene.stop('CalibratorDistributor')
+    })
     // r1 = this.add.rectangle(605, 210, 15, 25, 0xf8ff00);
   }
 
@@ -170,7 +175,7 @@ class CalibratorDistributor extends Phaser.Scene {
     if (checkSpin3) {
       spin3.angle = 0;
       sprite.tint = 0;
-      eventsCenter.emit("continue_scene_game", {x: x, y: y, mission: "CalibratorDistributor"});
+      eventsCenter.emit("continue_scene_game", { x: x, y: y, mission: "CalibratorDistributor" });
       current_scene.scene.stop("CalibratorDistributor");
       // this.add.text(390, 250, "Mission Completed");
     }

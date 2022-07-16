@@ -6,7 +6,7 @@ import Align_Engine from "../../../assets/img/align_egine_output/engineAlign_eng
 
 let x;
 let y;
-let sprite; 
+let sprite;
 let eventsCenter;
 class AlignEngineOutput extends Phaser.Scene {
     init(data) {
@@ -22,8 +22,7 @@ class AlignEngineOutput extends Phaser.Scene {
         this.load.image("Align_Engine", Align_Engine);
     }
 
-    create() 
-    {
+    create() {
         // this.events.on('resume', (data) => {
         //     x = data.x;
         //     y = data.y;
@@ -52,6 +51,11 @@ class AlignEngineOutput extends Phaser.Scene {
             slider.clearTint();
 
         });
+        let closeBtn = this.add.image(830, 135, 'closeBtn').setInteractive({ useHandCursor: true })
+
+        closeBtn.on('pointerdown', () => {
+            this.scene.stop('align_engine_output')
+        })
 
         this.input.on('drag', function (pointer, gameObject, dragX, dragY) {
             if (dragY >= 344 && dragY <= 464) {
@@ -60,7 +64,7 @@ class AlignEngineOutput extends Phaser.Scene {
                 if (Math.floor(check_y) == 414) {
                     current_object.add.text(390, 250, "Mission Completed");
                     sprite.tint = 0;
-                    eventsCenter.emit("continue_scene_game", {x: x, y: y, mission: "AlignEngineOutput"});
+                    eventsCenter.emit("continue_scene_game", { x: x, y: y, mission: "AlignEngineOutput" });
                     current_scene.stop("align_engine_output");
                 }
                 gameObject.x = 660;

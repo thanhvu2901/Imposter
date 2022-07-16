@@ -144,7 +144,7 @@ let colorArr = [
   PLAYER_PURPLE,
   PLAYER_YELLOW,
   PLAYER_PINK]
-  let otherPlayer_container = new Array();
+let otherPlayer_container = new Array();
 class Game extends Phaser.Scene {
   constructor() {
     super({ key: "game" });
@@ -156,11 +156,11 @@ class Game extends Phaser.Scene {
     this.textInput = data.textInput;
     this.numPlayers = data.numPlayers;
     this.idPlayers = data.idPlayers;
-    this.namePlayers=data.namePlayers
+    this.namePlayers = data.namePlayers
     this.isRole = data.isRole;
     this.playerChangedSkin = data.playerChangedSkin;
     this.Info = data.Info;
-    this.container=data.container
+    this.container = data.container
   }
 
   preload() {
@@ -205,27 +205,27 @@ class Game extends Phaser.Scene {
   }
 
   create() {
-    this.socket.emit("send_role",this.socket.id,this.isRole,this.textInput)
-    this.socket.on("end_game",(winner)=>{
-      console.log(winner,"pppp")
-   switch (winner) {
-    case 1:
-      if(this.isRole==1){
-        this.scene.launch("end_game",{num:1})
-      }else{
-        this.scene.launch("end_game",{num:2})
+    this.socket.emit("send_role", this.socket.id, this.isRole, this.textInput)
+    this.socket.on("end_game", (winner) => {
+      console.log(winner, "pppp")
+      switch (winner) {
+        case 1:
+          if (this.isRole == 1) {
+            this.scene.launch("end_game", { num: 1 })
+          } else {
+            this.scene.launch("end_game", { num: 2 })
+          }
+          break;
+        case 2:
+          if (this.isRole != 1) {
+            this.scene.launch("end_game", { num: 1 })
+          } else {
+            this.scene.launch("end_game", { num: 2 })
+          }
+          break;
+        default:
+          break;
       }
-      break;
-      case 2:
-        if(this.isRole!=1){
-          this.scene.launch("end_game",{num:1})
-        }else{
-          this.scene.launch("end_game",{num:2})
-        }
-        break;
-    default:
-      break;
-   }
     })
     light = new Light(this);
     const ship = this.make.tilemap({ key: "theSkeld_tilemap" });
@@ -821,15 +821,15 @@ class Game extends Phaser.Scene {
     });
 
     // tạo theo số lượng other player vào
-   
+
 
     this.idPlayers.forEach((element) => {
       if (element != this.socket.id) {
         otherPlayerId.push(element);
-       
+
       }
     });
-let count=0
+    let count = 0
     this.idPlayers.forEach((element) => {
       if (element != this.socket.id) {
         let index = otherPlayerId.findIndex((Element) => Element == element);
@@ -837,16 +837,16 @@ let count=0
         otherPlayer_container[index] = this.add.container(-45, 26);
         this.physics.add.existing(otherPlayer_container[index]);
 
-       otherPlayer[index] = this.physics.add.sprite(
-        -45, 26, colorOther,
+        otherPlayer[index] = this.physics.add.sprite(
+          -45, 26, colorOther,
           "idle.png"
         );
-       
-     //   let index = otherPlayerId.findIndex((Element) => Element == element)
-     ///   let otherPlayer[index] =this.physics.add.sprite(-45, 26, colorOther, "idle.png");
-      //  console.log(index)
-      //  otherPlayer_container[count] = this.add.container(-45, 26);
-    //    this.physics.add.existing(otherPlayer_container[count]);
+
+        //   let index = otherPlayerId.findIndex((Element) => Element == element)
+        ///   let otherPlayer[index] =this.physics.add.sprite(-45, 26, colorOther, "idle.png");
+        //  console.log(index)
+        //  otherPlayer_container[count] = this.add.container(-45, 26);
+        //    this.physics.add.existing(otherPlayer_container[count]);
         otherPlayer_container[index].setSize(otherPlayer[index].width, otherPlayer[index].height);
         otherPlayer_container[index].add(otherPlayer[index]);
         otherPlayer_container[index].body.setVelocity(0)
@@ -854,7 +854,7 @@ let count=0
         let temp_hat = Object(this.Info.players)[element].hat
         let temp_pet = Object(this.Info.players)[element].pet
         let temp_pants = Object(this.Info.players)[element].pants
-        console.log(temp_hat,temp_pet,temp_pants)
+        console.log(temp_hat, temp_pet, temp_pants)
         if (temp_hat) {
           let otherPlayer_hat_skin = this.physics.add.sprite(
             otherPlayer[index].x,
@@ -1353,7 +1353,7 @@ let count=0
           break;
         case "Button":
           let temp1 = this.add
-            .rectangle(object.x, object.y, object.width-25, object.height-25)
+            .rectangle(object.x, object.y, object.width - 25, object.height - 25)
             .setOrigin(0, 0);
           emergency_btn = this.add
             .image(object.x, object.y, "emergency")
@@ -1444,51 +1444,51 @@ let count=0
         //   socket: this.socket, numPlayers: this.numPlayers,
         //   idPlayers: this.idPlayers, namePlayers:this.namePlayers, roomId: this.state.roomKey, deadlist: deadplayer, role: this.isRole
         // })
-        this.socket.emit("open_vote",this.state.roomKey)
+        this.socket.emit("open_vote", this.state.roomKey)
 
       }
     });
     // this.socket.on("move", ({ x, y, playerId }) => {
     //   //console.log({ x, y, playerId });
-      this.socket.on("vote_final",(num,id)=>{
-    this.scene.launch("vote_state",{num:num,name:this.namePlayers[this.idPlayers.indexOf(id)],roomKey:this.textInput,socket:this.socket})
-  })
+    this.socket.on("vote_final", (num, id) => {
+      this.scene.launch("vote_state", { num: num, name: this.namePlayers[this.idPlayers.indexOf(id)], roomKey: this.textInput, socket: this.socket })
+    })
     this.socket.on("open_othervote", () => {
       this.scene.launch("vote", {
         socket: this.socket, numPlayers: this.numPlayers,
-        idPlayers: this.idPlayers,namePlayers:this.namePlayers, roomId: this.state.roomKey, deadlist: deadplayer, role: this.isRole
+        idPlayers: this.idPlayers, namePlayers: this.namePlayers, roomId: this.state.roomKey, deadlist: deadplayer, role: this.isRole
       })
 
 
     })
-    let _this=this
+    let _this = this
     this.socket.on("move", ({ x, y, playerId, color }) => {
 
 
       let index = otherPlayerId.findIndex((Element) => Element == playerId);
-      
-//console.log(otherPlayer_container[index].list[1].texture.key)
+
+      //console.log(otherPlayer_container[index].list[1].texture.key)
       //FLIP MIRROR
-      if ( otherPlayer_container[index].x > x) {
+      if (otherPlayer_container[index].x > x) {
         otherPlayer[index].flipX = true;
-      } else if ( otherPlayer_container[index].x < x) {
+      } else if (otherPlayer_container[index].x < x) {
         otherPlayer[index].flipX = false;
       }
-      let pet_name =undefined
-      if(otherPlayer_container[index].list[1]!=undefined){
-    pet_name = otherPlayer_container[index].list[1].texture.key
-    }
+      let pet_name = undefined
+      if (otherPlayer_container[index].list[1] != undefined) {
+        pet_name = otherPlayer_container[index].list[1].texture.key
+      }
 
-      if(pet_name!=undefined){
-        if(otherPlayer[index].flipX ==true){
-          otherPlayer_container[index].list[1].scaleX=-1
-        }else{
-          otherPlayer_container[index].list[1].scaleX=1
+      if (pet_name != undefined) {
+        if (otherPlayer[index].flipX == true) {
+          otherPlayer_container[index].list[1].scaleX = -1
+        } else {
+          otherPlayer_container[index].list[1].scaleX = 1
         }
         otherPlayer_container[index].list[1].play(`${pet_name}-walk`, true)
-      
+
       }
-    
+
       //UPDATE POSITION
       otherPlayer_container[index].x = x;
       otherPlayer_container[index].y = y;
@@ -1508,12 +1508,12 @@ let count=0
       let index = otherPlayerId.findIndex((Element) => Element == playerId);
       otherPlayer[index].moving = false;
       otherPlayer[index].play(`${color}-idle`);
-      let pet_name =undefined
-      if(otherPlayer_container[index].list[1]!=undefined){
-    pet_name = otherPlayer_container[index].list[1].texture.key
-    }
+      let pet_name = undefined
+      if (otherPlayer_container[index].list[1] != undefined) {
+        pet_name = otherPlayer_container[index].list[1].texture.key
+      }
 
-      if(pet_name!=undefined){
+      if (pet_name != undefined) {
         otherPlayer_container[index].list[1].play(`${pet_name}-idle`)
       }
 
@@ -1568,17 +1568,14 @@ let count=0
     if (pet) {
       pet.setPosition(player.x + 50, player.y + 10);
     }
-
-    console.log("x", player_container.x);
-    console.log("y", player_container.y);
     this.events.emit("moving", [player_container.x, player_container.y]);
     light.update(player_container);
 
-    if (this.isRole == 1&&alive==true) {
+    if (this.isRole == 1 && alive == true) {
       kill.on("pointerdown", () => {
         //console.log();
         if (canKill) {
-         
+
           this.sound.play("killAudio", false);
           let killId = otherPlayerId[indexKill];
           deadplayer.push(killId);
@@ -1596,7 +1593,7 @@ let count=0
             playerId: otherPlayerId[indexKill],
             roomId: this.state.roomKey,
           });
-          this.socket.emit("check_",this.textInput)
+          this.socket.emit("check_", this.textInput)
           otherPlayer = otherPlayer.filter((player) => {
             return player !== playerKilled;
           });
@@ -1757,7 +1754,7 @@ let count=0
     if (alive == true && this.isRole != 1) {
       let playerMoved = false;
       player_container.body.setVelocity(0);
-       if (
+      if (
         !cursors.left.isDown &&
         !cursors.right.isDown &&
         !cursors.up.isDown &&

@@ -79,6 +79,12 @@ class CleanO2Filter extends Phaser.Scene {
     leaf_7.setInteractive();
     this.input.setDraggable(leaf_7);
 
+    let closeBtn = this.add.image(830, 135, 'closeBtn').setInteractive({ useHandCursor: true })
+
+    closeBtn.on('pointerdown', () => {
+      this.scene.stop('CleanO2Filter')
+    })
+
     this.input.on("drag", function (pointer, gameObject, dragX, dragY) {
       gameObject.x = dragX;
       gameObject.y = dragY;
@@ -90,8 +96,8 @@ class CleanO2Filter extends Phaser.Scene {
           current_object.add.image(140, 303, "rightComplete");
           current_object.add.text(290, 250, "Task Completed");
           sprite.tint = 0;
-          eventsCenter.emit("continue_scene_game", {x: x, y: y, mission: "CleanO2Filter"}); 
-          current_scene.stop("CleanO2Filter"); 
+          eventsCenter.emit("continue_scene_game", { x: x, y: y, mission: "CleanO2Filter" });
+          current_scene.stop("CleanO2Filter");
         }
       }
       if (number_leaf !== TOTAL_LEAF) {
