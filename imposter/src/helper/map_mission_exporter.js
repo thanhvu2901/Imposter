@@ -13,12 +13,13 @@ import PrimeShields from "../services/missions/prime_shields";
 import InspectSample from "../services/missions/inspect_sample";
 import UnlockManifolds from "../services/missions/unlock_manifolds";
 import DiverPower from "../services/missions/divert_power";
+import StartReactor from "../services/missions/start_reactor";
 
 class MapMissionsExporter {
     constructor(map) {
         this.map = map;
         this.missions = this.missions();
-        this.map_missions_number = 13;
+        this.map_missions_number = 15;
         this.total_missions_completed = 0;
         this.list_missions_completed = [];
     }
@@ -56,7 +57,8 @@ class MapMissionsExporter {
                 "PrimeShields": PrimeShields,
                 "InspectSample": InspectSample,
                 "UnlockManifolds": UnlockManifolds,
-                "DiverPower": DiverPower
+                "DiverPower": DiverPower,
+                "StartReactor": StartReactor
             }
         }
     }

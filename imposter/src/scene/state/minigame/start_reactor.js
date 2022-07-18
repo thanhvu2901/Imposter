@@ -37,7 +37,17 @@ let count = 0;
 let isgameover = false
 
 let ob;
+let x, y, sprite;
+let eventsCenter;
+
 class StartReactor extends Phaser.Scene {
+    init(data) {
+        x = data.x;
+        y = data.y;
+        sprite = data.sprite;
+        eventsCenter = data.eventsCenter;
+    }
+
     constructor() {
         super({
             key: 'startReactor'
@@ -64,6 +74,7 @@ class StartReactor extends Phaser.Scene {
 
     }
     async create() {
+        const current_scene = this.scene;
         let check = [0, 1, 2, 3, 4, 5, 6, 7, 8]
         let x = this.game.renderer.width
         let y = this.game.renderer.height
@@ -182,6 +193,9 @@ class StartReactor extends Phaser.Scene {
                     }
                     else {
                         this.add.text(317, 327, 'TASK COMPLETE!!', { font: '50px Courier', fill: '#FFFFFF' }).setDepth(2);
+                        sprite.tint = 0;
+                        eventsCenter.emit("continue_scene_game", { x: x, y: y, mission: "startReactor" });
+                        current_scene.stop("startReactor");
                     }
 
                 }
