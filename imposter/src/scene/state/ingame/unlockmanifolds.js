@@ -73,6 +73,11 @@ class UnlockManifolds extends Phaser.Scene {
     cords.sort(function () {
       return 0.5 - Math.random();
     });
+    let closeBtn = this.add.image(830, 135, 'closeBtn').setInteractive({ useHandCursor: true })
+
+    closeBtn.on('pointerdown', () => {
+      this.scene.stop('Unlock')
+    })
     // button01 = this.add.image(x-170,y-40,"Button01")
     // button02 = this.add.image(x-85,y-40,"Button02")
     // button03 = this.add.image(x,y-40,"Button03")

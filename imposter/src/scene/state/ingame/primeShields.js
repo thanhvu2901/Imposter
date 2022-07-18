@@ -30,22 +30,22 @@ class PrimeShields extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image("shieldMiraBase", shieldMiraBase, 300, 600);
+    this.load.image("shieldMiraBase", shieldMiraBase, 300 + 200, 600 + 50);
     this.load.image("shieldGauge", shieldGauge);
     this.load.image("shieldPanel", shieldPanel);
   }
 
   create() {
     current_scene = this.scene;
-    const shieldMiraBase = this.add.image(300, 300, "shieldMiraBase");
-    const shieldGauge = this.add.image(300, 300, "shieldGauge");
-    shieldPanel_1 = this.add.sprite(300, 300, "shieldPanel");
-    shieldPanel_2 = this.add.sprite(300, 160, "shieldPanel");
-    shieldPanel_3 = this.add.sprite(300, 440, "shieldPanel");
-    shieldPanel_4 = this.add.sprite(180, 230, "shieldPanel");
-    shieldPanel_5 = this.add.sprite(180, 370, "shieldPanel");
-    shieldPanel_6 = this.add.sprite(420, 230, "shieldPanel");
-    shieldPanel_7 = this.add.sprite(420, 370, "shieldPanel");
+    const shieldMiraBase = this.add.image(300 + 200, 300 + 50, "shieldMiraBase");
+    const shieldGauge = this.add.image(300 + 200, 300 + 50, "shieldGauge");
+    shieldPanel_1 = this.add.sprite(300 + 200, 300 + 50, "shieldPanel");
+    shieldPanel_2 = this.add.sprite(300 + 200, 160 + 50, "shieldPanel");
+    shieldPanel_3 = this.add.sprite(300 + 200, 440 + 50, "shieldPanel");
+    shieldPanel_4 = this.add.sprite(180 + 200, 230 + 50, "shieldPanel");
+    shieldPanel_5 = this.add.sprite(180 + 200, 370 + 50, "shieldPanel");
+    shieldPanel_6 = this.add.sprite(420 + 200, 230 + 50, "shieldPanel");
+    shieldPanel_7 = this.add.sprite(420 + 200, 370 + 50, "shieldPanel");
     shieldGauge.tint = 0xf23e83;
     shieldPanel_2.tint = 0xf70a15;
     shieldPanel_3.tint = 0xf70a15;
@@ -71,15 +71,20 @@ class PrimeShields extends Phaser.Scene {
         shieldPanel_5.tint = 0xffffff;
         destroyed++
       }
-      if(destroyed===TOTAL_DESTROY){
+      if (destroyed === TOTAL_DESTROY) {
         sprite.tint = 0;
-        eventsCenter.emit("continue_scene_game", {x: x, y: y, mission: "PrimeShields"});
-        current_scene.stop("PrimeShields"); 
+        eventsCenter.emit("continue_scene_game", { x: x, y: y, mission: "PrimeShields" });
+        current_scene.stop("PrimeShields");
       }
     });
+    let closeBtn = this.add.image(830, 135, 'closeBtn').setInteractive({ useHandCursor: true })
+
+    closeBtn.on('pointerdown', () => {
+      this.scene.stop('PrimeShields')
+    })
   }
 
-  update() {}
+  update() { }
 }
 
 export default PrimeShields;

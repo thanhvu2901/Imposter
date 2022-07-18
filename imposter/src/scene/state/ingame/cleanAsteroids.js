@@ -67,6 +67,11 @@ class CleanAsteroids extends Phaser.Scene {
     asteroid_1.setInteractive();
     asteroid_2.setInteractive();
     asteroid_3.setInteractive();
+    let closeBtn = this.add.image(830, 135, 'closeBtn').setInteractive({ useHandCursor: true })
+
+    closeBtn.on('pointerdown', () => {
+      this.scene.stop('CleanAsteroids')
+    })
 
     this.input.on("gameobjectdown", function (pointer, gameObject) {
       if (gameObject == asteroid_1) {
@@ -145,8 +150,8 @@ class CleanAsteroids extends Phaser.Scene {
         current_object.asteroid3.destroy();
         current_object.add.text(250, 300, "Task Complete");
         sprite.tint = 0;
-        eventsCenter.emit("continue_scene_game", {x: x, y: y, mission: "CleanAsteroids"});
-        current_scene.stop("CleanAsteroids"); 
+        eventsCenter.emit("continue_scene_game", { x: x, y: y, mission: "CleanAsteroids" });
+        current_scene.stop("CleanAsteroids");
       }
     });
   }

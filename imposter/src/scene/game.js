@@ -854,7 +854,7 @@ class Game extends Phaser.Scene {
         let temp_hat = Object(this.Info.players)[element].hat
         let temp_pet = Object(this.Info.players)[element].pet
         let temp_pants = Object(this.Info.players)[element].pants
-        console.log(temp_hat, temp_pet, temp_pants)
+       // console.log(temp_hat, temp_pet, temp_pants)
         if (temp_hat) {
           let otherPlayer_hat_skin = this.physics.add.sprite(
             otherPlayer[index].x,
@@ -884,7 +884,7 @@ class Game extends Phaser.Scene {
         count++
       }
     })
-    console.log(otherPlayer_container);
+    //console.log(otherPlayer_container);
 
     // stt = otherPlayer.length;
     //****************** */
@@ -1386,7 +1386,7 @@ class Game extends Phaser.Scene {
     });
     //bắt sự kiện khi player đi ra khỏi vùng overlap
     player_container.on("overlapend", function () {
-      console.log("end")
+      //console.log("end")
       is_vent = false
       if (player_role == 1) {
         vent_butt.alpha = 0

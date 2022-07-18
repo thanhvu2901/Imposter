@@ -47,12 +47,15 @@ class InspectSample extends Phaser.Scene {
     }
     create() {
         current_scene = this.scene
-        text = this.add.text(10, 10, 'Cursors to move', { font: '16px Courier', fill: '#00ff00' }).setScrollFactor(0);
-
 
         text2 = this.add.text(415, 590, 'PRESS TO START!!       -->', { font: '16px Courier', fill: '#00ff00' }).setDepth(1);
         countdown = this.add.text(440, 158, 'fill all liquid ', { font: '16px Courier', fill: '#00ff00' }).setDepth(1);
 
+        let closeBtn = this.add.image(830, 135, 'closeBtn').setInteractive({ useHandCursor: true })
+
+        closeBtn.on('pointerdown', () => {
+            this.scene.stop('inspectSample')
+        })
         this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 2, 'back')
         this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 2 + 193, 'panelBottom')
         this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 2 + 50, 'panelCenter')

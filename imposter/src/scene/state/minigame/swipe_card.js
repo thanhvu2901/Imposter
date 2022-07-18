@@ -37,7 +37,7 @@ class SwipeCard extends Phaser.Scene {
     x = data.x;
     y = data.y;
     sprite = data.sprite;
-    eventsCenter = data.eventsCenter; 
+    eventsCenter = data.eventsCenter;
   }
 
   preload() {
@@ -105,6 +105,11 @@ class SwipeCard extends Phaser.Scene {
     this.input.on("drag", function (pointer, gameObject, dragX, dragY) {
       gameObject.x = dragX;
     });
+    let closeBtn = this.add.image(830, 135, 'closeBtn').setInteractive({ useHandCursor: true })
+
+    closeBtn.on('pointerdown', () => {
+      this.scene.stop('SwipeCard')
+    })
   }
 
   update() {
@@ -149,7 +154,7 @@ class SwipeCard extends Phaser.Scene {
       textType = 4;
 
       sprite.tint = 0;
-      eventsCenter.emit("continue_scene_game", {x: x, y: y, mission: "SwipeCard"});
+      eventsCenter.emit("continue_scene_game", { x: x, y: y, mission: "SwipeCard" });
       current_scene.stop("SwipeCard");
     }
 

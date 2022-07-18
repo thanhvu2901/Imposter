@@ -16,7 +16,7 @@ class StabilizeSteering extends Phaser.Scene {
         x = data.x;
         y = data.y;
         sprite = data.sprite;
-        eventsCenter= data.eventsCenter;
+        eventsCenter = data.eventsCenter;
     }
 
     constructor() {
@@ -38,7 +38,11 @@ class StabilizeSteering extends Phaser.Scene {
         igraph = this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 2, 'graph')
         itarget = this.add.image(this.game.renderer.width / 2 + this.getRndInteger(-50, 50), this.game.renderer.height / 2 + this.getRndInteger(-50, 50), 'target').setInteractive()
         current_scene = this.scene;
+        let closeBtn = this.add.image(830, 135, 'closeBtn').setInteractive({ useHandCursor: true })
 
+        closeBtn.on('pointerdown', () => {
+            this.scene.stop('stabilizeSteering')
+        })
         this.input.setDraggable(itarget)
         this.input.on('dragstart', function (pointer, gameObject) {
 
@@ -71,8 +75,8 @@ class StabilizeSteering extends Phaser.Scene {
         if (done === true) {
             text = this.add.text(317, 327, 'TASK COMPLETE!!', { font: '50px Courier', fill: '#FFFFFF' }).setDepth(1);
             sprite.tint = 0;
-            eventsCenter.emit("continue_scene_game", {x: x, y: y, mission: "StabilizeSteering"});
-            current_scene.stop("stabilizeSteering");   
+            eventsCenter.emit("continue_scene_game", { x: x, y: y, mission: "StabilizeSteering" });
+            current_scene.stop("stabilizeSteering");
         }
     }
     getRndInteger(min, max) {
