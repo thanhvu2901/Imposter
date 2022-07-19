@@ -52,7 +52,7 @@ init(data){
 
   update() {
     count++
-    if(count%3===0&&count>40){
+    if(count%2===0&&count>40){
         count_1++
     }
 if(count_1<sample.length+1){
@@ -61,7 +61,7 @@ if(count_1<sample.length+1){
 ejected.rotation+=0.03
 ejected.x+=2
 
-if(count==300){
+if(count==200){
   this.socket.emit("check_",this.roomKey)
     this.scene.stop()
 }

@@ -44,7 +44,7 @@ init(data){
     count++
 if(count==200){
   
-    this.scene.stop()
+  window.location.reload();
 }
   }
 
