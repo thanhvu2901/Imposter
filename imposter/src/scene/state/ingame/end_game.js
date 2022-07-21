@@ -12,7 +12,7 @@ class End_game extends Phaser.Scene {
 init(data){
   this.num=data.num
  // this.name=data.name
-//  this.socket=data.socket
+  this.socket=data.socket
   //this.roomKey=data.roomKey
 }
   preload() {
@@ -42,8 +42,8 @@ init(data){
 
   update() {
     count++
-if(count==200){
-  
+if(count==100){
+  this.socket.emit("delete_room")
   window.location.reload();
 }
   }

@@ -210,21 +210,23 @@ class Game extends Phaser.Scene {
 
     this.socket.emit("send_role", this.socket.id, this.isRole, this.textInput)
     this.socket.on("end_game", (winner) => {
-      console.log(winner, "pppp")
+   //   console.log(winner, "pppp")
       switch (winner) {
         case 1:
           if (this.isRole == 1) {
-            this.scene.launch("end_game", { num: 1 })
+            this.scene.launch("end_game", { num: 1 ,socket:this.socket})
           } else {
-            this.scene.launch("end_game", { num: 2 })
+            this.scene.launch("end_game", { num: 2 ,socket:this.socket})
           }
+        
           break;
         case 2:
           if (this.isRole != 1) {
-            this.scene.launch("end_game", { num: 1 })
+            this.scene.launch("end_game", { num: 1 ,socket:this.socket})
           } else {
-            this.scene.launch("end_game", { num: 2 })
+            this.scene.launch("end_game", { num: 2 ,socket:this.socket})
           }
+      
           break;
         default:
           break;
@@ -1335,6 +1337,7 @@ class Game extends Phaser.Scene {
             .on("pointerdown", () => {
               //trước khi di chuyển player sang vent mới thì sẽ ẩn đi các arrow ở vent cũ
               arrow_group.setVisible(false);
+       
               // ở đây ta split object name của vent thành mảng 2 phần tử do cấu trúc name của object là (vent "cần tới"- vent"hiện tại") và 2 vent này được ngăn cách bởi dấu cách
               // như đã nói trên thì vent_cord là hash map lưu vị trí các vent dựa trên key value là name của vent, nên ta lấy vị trí [0] là vent "cần tới" dể gán tọa độ x y
               // cho player
@@ -1373,7 +1376,7 @@ class Game extends Phaser.Scene {
     light.draw();
 
     //ẩn hết các arrow của vent sau khi khởi tạo
-    arrow_group.setVisible(false).setDepth(1);
+    arrow_group.setVisible(false).setDepth(-5);
     let player_role = this.isRole
     //bắt sự kiện khi player overlap với 1 object khác
     player_container.on("overlapstart", function () {
@@ -1538,7 +1541,7 @@ class Game extends Phaser.Scene {
       deadplayer.push(playerId);
       if (this.socket.id == playerId) {
         //run noitice died
-        console.log("this player killed");
+      //  console.log("this player killed");
         //player.stop("player-idle")
         alive = false;
         player.anims.play("player-ghost", true);
@@ -1571,8 +1574,8 @@ class Game extends Phaser.Scene {
     if (pet) {
       pet.setPosition(player.x + 50, player.y + 10);
     }
-    console.log("x", player_container.x);
-    console.log("y", player_container.y);
+    //console.log("x", player_container.x);
+    //console.log("y", player_container.y);
 
     this.events.emit("moving", [player_container.x, player_container.y]);
     light.update(player_container);
@@ -1603,14 +1606,14 @@ class Game extends Phaser.Scene {
           otherPlayer = otherPlayer.filter((player) => {
             return player !== playerKilled;
           });
-          console.log(otherPlayerId[indexKill]); // emit socket id player killed
+    //      console.log(otherPlayerId[indexKill]); // emit socket id player killed
           otherPlayerId = otherPlayerId.filter((player) => {
             return player !== otherPlayerId[indexKill];
           });
-          console.log("emitted");
+     //"emitted");
           canKill = false;
         } else {
-          console.log("no kill");
+ //         console.log("no kill");
         }
       });
 
@@ -1946,6 +1949,7 @@ class Game extends Phaser.Scene {
 function playercur() {
   vent_des.get(key).forEach((element) => {
     element.setVisible(true);
+    element.setDepth(1)
   });
 }
 function circleOverlap(player, vent) {

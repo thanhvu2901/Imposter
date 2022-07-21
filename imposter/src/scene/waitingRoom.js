@@ -557,7 +557,7 @@ export default class waitingRoom extends Phaser.Scene {
           let temp_hat = Object.values(players)[i].hat
           let temp_pet = Object.values(players)[i].pet
           let temp_pants = Object.values(players)[i].pants
-          console.log(temp_hat,temp_pet,temp_pants)
+    //      console.log(temp_hat,temp_pet,temp_pants)
           if (temp_hat) {
             let otherPlayer_hat_skin = this.physics.add.sprite(
               otherPlayer[stt].x,
@@ -640,7 +640,7 @@ export default class waitingRoom extends Phaser.Scene {
           }
 
 
-          console.log(otherPlayer_container[stt]);
+      //    console.log(otherPlayer_container[stt]);
           stt = stt + 1;
         }
       }
