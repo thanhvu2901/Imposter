@@ -434,7 +434,7 @@ class ChangeSkin extends Phaser.Scene {
           backgroundSkinText.setFillStyle("0xa1b1ae");
           backgroundPetText.setFillStyle("0xa1b1ae");
           backgroundGameText.setFillStyle("0x505655");
-          console.log("game customs");
+
           basePlayer.visible = false;
           player.visible = false;
           if (hatChosen) {

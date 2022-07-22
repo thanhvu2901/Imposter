@@ -115,7 +115,7 @@ async  create() {
   if(this.numPlayers>1){
      const mapSort1 = new Map([...player_count.entries()].sort((a, b) => b[1] - a[1]));
       if([...mapSort1][0][1]==[...mapSort1][1][1]){
-        console.log("draw")
+
         this.socket.emit("vote_end",3,0,this.roomKey)
       }else if([...mapSort1][0][0]==this.socket.id){
         if(this.role==1){

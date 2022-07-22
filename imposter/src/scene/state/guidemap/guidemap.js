@@ -25,7 +25,6 @@ class guidemap extends Phaser.Scene {
         closeBtn.setInteractive({ useHandCursor: true });
 
 
-        console.log(icon.x + "  " + icon.y);
         // closeBtn.on("pointerdown", () => {
         //     this.scene.stop('guidemap')
         // })

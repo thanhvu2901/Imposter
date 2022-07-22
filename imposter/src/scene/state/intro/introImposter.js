@@ -32,7 +32,7 @@ class introImposter extends Phaser.Scene {
             alphaTopLeft: { value: 1, duration: 5000, ease: 'Power1' },
             alphaBottomRight: { value: 1, duration: 5000, ease: 'Power1' },
             // onComplete: function () {
-            //     console.log('menu');
+         
             //     // this.run();
             //     this.load.sc
             // }

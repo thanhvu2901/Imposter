@@ -454,7 +454,7 @@ export default class waitingRoom extends Phaser.Scene {
       //set player color AGAIN
 
       let colorPlayer = states.players[this.socket.id].color;
-      // console.log("color" + colorPlayer);
+
       player.destroy()
       // // let playercolor = (Object(states).players)[this.socket].color
       color = colorPlayer;
@@ -486,7 +486,7 @@ export default class waitingRoom extends Phaser.Scene {
           // let player= this.numberPlayer;
           let roomId = this.textInput;
           this.socket.emit("letgo", { roomId, imposter, player });
-          console.log("after click");
+      
 
         });
       }
@@ -557,7 +557,7 @@ export default class waitingRoom extends Phaser.Scene {
           let temp_hat = Object.values(players)[i].hat
           let temp_pet = Object.values(players)[i].pet
           let temp_pants = Object.values(players)[i].pants
-    //      console.log(temp_hat,temp_pet,temp_pants)
+
           if (temp_hat) {
             let otherPlayer_hat_skin = this.physics.add.sprite(
               otherPlayer[stt].x,
@@ -640,11 +640,11 @@ export default class waitingRoom extends Phaser.Scene {
           }
 
 
-      //    console.log(otherPlayer_container[stt]);
+
           stt = stt + 1;
         }
       }
-      // console.log(otherPlayerId);
+
     });
 
     this.socket.on("newPlayer", ({ playerInfo, numPlayers }) => {
@@ -663,10 +663,9 @@ export default class waitingRoom extends Phaser.Scene {
       otherPlayer_container[stt].add(otherPlayer[stt]);
       otherPlayer_container[stt].body.setVelocity(0)
 
-      console.log("stt" + stt);
+
       stt += 1;
-      console.log("new players " + otherPlayer[stt]);
-      console.log("stt" + stt);
+  
     });
 
 
@@ -681,13 +680,13 @@ export default class waitingRoom extends Phaser.Scene {
     });
 
     this.socket.on("gogame", ({ numPlayers, idPlayers, namePlayers, Info }) => {
-      //console.log(numPlayers);
+
       // this.scene.stop('waitingRoom')
 
       // ********anouning ROLE****//
 
       //*****start game */
-      console.log(otherPlayer_container)
+ 
       // this.scene.launch('game', { socket: this.socket, textInput: this.textInput, numPlayers: numPlayers, idPlayers: idPlayers })
       this.scene.launch("introCrew", {
         socket: this.socket,
@@ -1426,8 +1425,8 @@ export default class waitingRoom extends Phaser.Scene {
       }
 
       //send color player change
-      // console.log(color + " " + this.socket.id);
-      console.log(pants_type);
+
+
       this.socket.emit("changeSkin", {
         color: color,
         hat: hat,

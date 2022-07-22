@@ -210,7 +210,7 @@ class Game extends Phaser.Scene {
 
     this.socket.emit("send_role", this.socket.id, this.isRole, this.textInput)
     this.socket.on("end_game", (winner) => {
-   //   console.log(winner, "pppp")
+  
       switch (winner) {
         case 1:
           if (this.isRole == 1) {
@@ -849,7 +849,7 @@ class Game extends Phaser.Scene {
 
         //   let index = otherPlayerId.findIndex((Element) => Element == element)
         ///   let otherPlayer[index] =this.physics.add.sprite(-45, 26, colorOther, "idle.png");
-        //  console.log(index)
+  
         //  otherPlayer_container[count] = this.add.container(-45, 26);
         //    this.physics.add.existing(otherPlayer_container[count]);
         otherPlayer_container[index].setSize(otherPlayer[index].width, otherPlayer[index].height);
@@ -859,7 +859,7 @@ class Game extends Phaser.Scene {
         let temp_hat = Object(this.Info.players)[element].hat
         let temp_pet = Object(this.Info.players)[element].pet
         let temp_pants = Object(this.Info.players)[element].pants
-       // console.log(temp_hat, temp_pet, temp_pants)
+    
         if (temp_hat) {
           let otherPlayer_hat_skin = this.physics.add.sprite(
             otherPlayer[index].x,
@@ -889,7 +889,7 @@ class Game extends Phaser.Scene {
         count++
       }
     })
-    //console.log(otherPlayer_container);
+
 
     // stt = otherPlayer.length;
     //****************** */
@@ -1325,7 +1325,7 @@ class Game extends Phaser.Scene {
           i++;
           break;
         case "arrow":
-          // console.log(object.name.split(" ")[1])
+        
           //gán vị trí cho từng phần tử con của group arrow// set angle với mục đích là xoay mũi tên tới vent gần nhất dựa vào propeties rotation của object trong Tiled
           // sau đó gán interactive cho arrow để thực hiện di chuyển player tới vent gần nhất
           children_1[j]
@@ -1392,7 +1392,7 @@ class Game extends Phaser.Scene {
     });
     //bắt sự kiện khi player đi ra khỏi vùng overlap
     player_container.on("overlapend", function () {
-      //console.log("end")
+
       is_vent = false
       if (player_role == 1) {
         vent_butt.alpha = 0
@@ -1455,7 +1455,7 @@ class Game extends Phaser.Scene {
       }
     });
     // this.socket.on("move", ({ x, y, playerId }) => {
-    //   //console.log({ x, y, playerId });
+ 
     this.socket.on("vote_final", (num, id) => {
       this.scene.launch("vote_state", { num: num, name: this.namePlayers[this.idPlayers.indexOf(id)], roomKey: this.textInput, socket: this.socket })
     })
@@ -1473,7 +1473,7 @@ class Game extends Phaser.Scene {
 
       let index = otherPlayerId.findIndex((Element) => Element == playerId);
 
-      //console.log(otherPlayer_container[index].list[1].texture.key)
+
       //FLIP MIRROR
       if (otherPlayer_container[index].x > x) {
         otherPlayer[index].flipX = true;
@@ -1534,14 +1534,13 @@ class Game extends Phaser.Scene {
 
     //update if killed ==>> ************************TO GHOST*******************
     this.socket.on("updateOtherPlayer", ({ playerId, colorKill }) => {
-      // console.log(this.socket.id);
-      // console.log(playerId);
+    
       // let colorDead = (Object((this.Info.players)[String(playerId)]).color)
-      // console.log(colorDead);
+     
       deadplayer.push(playerId);
       if (this.socket.id == playerId) {
         //run noitice died
-      //  console.log("this player killed");
+      
         //player.stop("player-idle")
         alive = false;
         player.anims.play("player-ghost", true);
@@ -1560,7 +1559,7 @@ class Game extends Phaser.Scene {
     });
   }
   update() {
-    //console.log(near_btn)
+ 
     var wasTouching = !player_container.body.wasTouching.none;
     // If you want 'touching or embedded' then use:
     var touching = !player_container.body.touching.none || player_container.body.embedded;
@@ -1574,15 +1573,12 @@ class Game extends Phaser.Scene {
     if (pet) {
       pet.setPosition(player.x + 50, player.y + 10);
     }
-    //console.log("x", player_container.x);
-    //console.log("y", player_container.y);
-
     this.events.emit("moving", [player_container.x, player_container.y]);
     light.update(player_container);
 
     if (this.isRole == 1 && alive == true) {
       kill.on("pointerdown", () => {
-        //console.log();
+  
         if (canKill) {
 
           this.sound.play("killAudio", false);
@@ -1606,14 +1602,14 @@ class Game extends Phaser.Scene {
           otherPlayer = otherPlayer.filter((player) => {
             return player !== playerKilled;
           });
-    //      console.log(otherPlayerId[indexKill]); // emit socket id player killed
+     // emit socket id player killed
           otherPlayerId = otherPlayerId.filter((player) => {
             return player !== otherPlayerId[indexKill];
           });
      //"emitted");
           canKill = false;
         } else {
- //         console.log("no kill");
+
         }
       });
 
@@ -1871,7 +1867,6 @@ class Game extends Phaser.Scene {
         player_container.y
       );
       const check_mission = mission.check_mission();
-      // console.log("mission", check_mission);
       if (check_mission) {
         //blink blink marker
         useButton.alpha = 1;
@@ -1886,7 +1881,7 @@ class Game extends Phaser.Scene {
 
       if (launch_scene && check_mission != undefined) {
         //this.scene.pause("game");
-        //  console.log("scene", check_mission.scene);
+      
 
         this.scene.launch(check_mission.scene, {
           x: check_mission.x,
@@ -1957,9 +1952,6 @@ function circleOverlap(player, vent) {
   is_vent = true;
   //lấy key string của vent hiện tại dựa trên x y của sprite vent
   key = getKey([vent.x, vent.y + 10])[0];
-}
-function deadreport(player, otherplayer) {
-  console.log("player status", otherplayer.status);
 }
 function report(player, button) {
   near_btn = true;

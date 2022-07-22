@@ -133,7 +133,7 @@ class UploadData extends Phaser.Scene {
       file1.x += 3
       player1.x += 3
       text.setText((rect.width / 376 * 100).toFixed(0) + "%")
-      console.log()
+
       if (file1.x >= x + 60) {
 
         folder1.play('open')

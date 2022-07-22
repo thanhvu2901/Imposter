@@ -76,7 +76,7 @@ export default class MainMenuScene extends Phaser.Scene {
             playButton.setTintFill('#00FF00')
         })
         playButton.on("pointerdown", () => {
-            console.log('start game');
+ 
             //this.scene.start('game', Game);
             nameStr = element.getChildByName("name");
             let value = nameStr.value
@@ -107,7 +107,7 @@ export default class MainMenuScene extends Phaser.Scene {
         })
 
         optionsButton.on("pointerdown", () => {
-            console.log('options in pointer down');
+
             this.scene.start('options', Options.create);
         })
 

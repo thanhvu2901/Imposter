@@ -55,7 +55,6 @@ class Login extends Phaser.Scene {
             var emailVerified = user.emailVerified;
             var uid = user.uid;
         }
-        console.log(user);
 
     }
 

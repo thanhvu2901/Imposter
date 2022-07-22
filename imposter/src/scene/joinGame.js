@@ -88,7 +88,7 @@ export default class JoinGame extends Phaser.Scene {
 
         socket.on("keyNotValid", function () {
             // scene.notValidText.setText("Invalid Room Key");
-            console.log("Invalid Room Key");
+
             alert('can not find the room!')
         });
 
