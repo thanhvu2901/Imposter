@@ -831,7 +831,17 @@ class Game extends Phaser.Scene {
     this.idPlayers.forEach((element) => {
       if (element != this.socket.id) {
         otherPlayerId.push(element);
-
+        let temp = this.add.text( 120 + 20,
+          -745 ,this.namePlayers[this.idPlayers.indexOf(element)],{
+            fontSize: "25px",
+          //  color: "#ffffff",
+            fontFamily: "Arial",
+            stroke: "#000000",
+            align: 'center',
+            strokeThickness: 3,
+          }).setDepth(2)
+      
+          otherNames.push(temp)
       }
     });
     let count = 0
@@ -845,7 +855,7 @@ class Game extends Phaser.Scene {
         otherPlayer[index] = this.physics.add.sprite(
           -45, 26, colorOther,
           "idle.png"
-        );
+        ).setDepth(0.6);
 
         //   let index = otherPlayerId.findIndex((Element) => Element == element)
         ///   let otherPlayer[index] =this.physics.add.sprite(-45, 26, colorOther, "idle.png");
@@ -886,6 +896,7 @@ class Game extends Phaser.Scene {
           );
           otherPlayer_container[stt].add(otherPlayer_pants);
         }
+        this.physics.add.existing(otherPlayer_container[index]);
         count++
       }
     })
@@ -1498,6 +1509,8 @@ class Game extends Phaser.Scene {
       //UPDATE POSITION
       otherPlayer_container[index].x = x;
       otherPlayer_container[index].y = y;
+      otherNames[index].x =   x-80
+      otherNames[index].y =  y-20
       otherPlayer[index].moving = true;
 
       if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
