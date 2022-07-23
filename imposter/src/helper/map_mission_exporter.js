@@ -12,7 +12,7 @@ import FuelEngine from "../services/missions/fuel_engine";
 import PrimeShields from "../services/missions/prime_shields";
 import InspectSample from "../services/missions/inspect_sample";
 import UnlockManifolds from "../services/missions/unlock_manifolds";
-import DiverPower from "../services/missions/divert_power";
+import DivertPower from "../services/missions/divert_power";
 import StartReactor from "../services/missions/start_reactor";
 
 class MapMissionsExporter {
@@ -22,6 +22,7 @@ class MapMissionsExporter {
         this.map_missions_number = 5;
         this.total_missions_completed = 0;
         this.list_missions_completed = [];
+        this.nested_divert_power_picked = null;
     }
 
     create() {
@@ -33,6 +34,10 @@ class MapMissionsExporter {
         for (const [index, [key, value]] of Object.entries(Object.entries(this.missions[this.map]))) {
             if (missions_random.includes(+index)) {
                 mission_picked[key] = value;
+                if(key == "DivertPower")
+                {
+                    this.nested_divert_power_picked = Math.floor(Math.random() * 8);
+                }
             }
         }
 
@@ -40,6 +45,10 @@ class MapMissionsExporter {
         return mission_picked;
     }
 
+    nested_divert_power_mission_picked()
+    {
+        return this.nested_divert_power_picked
+    }
     //all mission we have defined
     missions() {
         return {
@@ -57,7 +66,7 @@ class MapMissionsExporter {
                 "PrimeShields": PrimeShields,
                 "InspectSample": InspectSample,
                 "UnlockManifolds": UnlockManifolds,
-                "DiverPower": DiverPower,
+                "DivertPower": DivertPower,
                 "StartReactor": StartReactor
             }
         }
@@ -91,10 +100,27 @@ class MapMissionsExporter {
         }
         for (let mission_name in this.missions_picked) {
             if (!this.list_missions_completed.includes(mission_name)) {
-                this.scence.add.text(22, y, mission_name).setScrollFactor(0, 0);
+                if(mission_name == "DivertPower")
+                {
+                    let nested_divert_power = this.nested_divert_power(); 
+                    this.scence.add.text(22, y, mission_name + ": " + nested_divert_power[this.nested_divert_power_picked]).setScrollFactor(0, 0);
+                }
+                else
+                {
+                    this.scence.add.text(22, y, mission_name).setScrollFactor(0, 0);
+                }
             }
             else {
-                this.scence.add.text(22, y, mission_name, { fill: '#ffff00' }).setScrollFactor(0, 0);
+                if(mission_name == "DivertPower")
+                {
+                    let nested_divert_power = this.nested_divert_power(); 
+                    this.scence.add.text(22, y,  mission_name + ": " + nested_divert_power[this.nested_divert_power_picked], { fill: '#ffff00' }).setScrollFactor(0, 0);                    
+                }
+                else
+                {
+                    this.scence.add.text(22, y, mission_name, { fill: '#ffff00' }).setScrollFactor(0, 0);                    
+
+                }
             }
             y += 20;
         }
@@ -125,10 +151,28 @@ class MapMissionsExporter {
 
         for (let mission_name in this.missions_picked) {
             if (!this.list_missions_completed.includes(mission_name)) {
-                scence.add.text(22, y, mission_name).setScrollFactor(0, 0);
+                if(mission_name == "DivertPower")
+                {
+                    let nested_divert_power = this.nested_divert_power(); 
+                    scence.add.text(22, y, mission_name + ": " + nested_divert_power[this.nested_divert_power_picked]).setScrollFactor(0, 0);
+                }
+                else
+                { 
+                    scence.add.text(22, y, mission_name).setScrollFactor(0, 0);
+
+                }
             }
-            else {
-                scence.add.text(22, y, mission_name, { fill: '#ffff00' }).setScrollFactor(0, 0);
+            else 
+            {
+                if(mission_name == "DivertPower")
+                {
+                    let nested_divert_power = this.nested_divert_power();
+                    scence.add.text(22, y, mission_name + ":" + nested_divert_power[this.nested_divert_power_picked], { fill: '#ffff00' }).setScrollFactor(0, 0);
+                }
+                else
+                {
+                    scence.add.text(22, y, mission_name, { fill: '#ffff00' }).setScrollFactor(0, 0);
+                }
             }
             y += 20;
         }
@@ -155,6 +199,11 @@ class MapMissionsExporter {
             rectangle = this.scence.add.rectangle(x, y, 70, 30, 0x07667a).setScrollFactor(0, 0);
         }
         rectangle.setStrokeStyle(2, 0Xe9f2f2);
+    }
+
+    nested_divert_power()
+    {
+        return ["right_engine", "left_engine", "weapons", "shields", "nav", "communications", "oxi", "security"]
     }
 }
 

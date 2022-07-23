@@ -146,6 +146,9 @@ let colorArr = [
   PLAYER_YELLOW,
   PLAYER_PINK]
 let otherPlayer_container = new Array();
+let nested_divert_power_mission_picked;
+
+
 class Game extends Phaser.Scene {
   constructor() {
     super({ key: "game" });
@@ -782,9 +785,10 @@ class Game extends Phaser.Scene {
     //initialize missions of this map
     map_missions = new MapMissionsExporter("theSkeld");
     export_missions = map_missions.create();
+
     map_missions.show_mission(this);
 
-
+    nested_divert_power_mission_picked = map_missions.nested_divert_power_mission_picked();
 
     this.state.roomKey = this.textInput;
 
@@ -1422,6 +1426,8 @@ class Game extends Phaser.Scene {
       //nếu tới gần vent thì sẽ đi vào vòng if
       this.sound.play("vent", false);
       if (is_vent) {
+        console.log("im vent")
+
         temp.play("hole");
         player.anims.play("jump");
         player.on(
@@ -1895,13 +1901,28 @@ class Game extends Phaser.Scene {
       if (launch_scene && check_mission != undefined) {
         //this.scene.pause("game");
       
+        if(check_mission.scene == "divert_power")
+        {
+          useButton.alpha = 0.5;
+          this.scene.launch(check_mission.scene, {
+            nested_divert_power_mission_picked: nested_divert_power_mission_picked,
+            x: check_mission.x,
+            y: check_mission.y,
+            sprite: check_mission.sprite,
+            eventsCenter: eventsCenter
+          });
+        }
+        else
+        {
+          useButton.alpha = 0.5;
+          this.scene.launch(check_mission.scene, {
+            x: check_mission.x,
+            y: check_mission.y,
+            sprite: check_mission.sprite,
+            eventsCenter: eventsCenter
+          });
+        }
 
-        this.scene.launch(check_mission.scene, {
-          x: check_mission.x,
-          y: check_mission.y,
-          sprite: check_mission.sprite,
-          eventsCenter: eventsCenter
-        });
         launch_scene = false;
       }
     } else if (alive == false) {
