@@ -9,7 +9,7 @@ import speaker from "../../../assets/img/Voting Screen/icons/speaker.png";
 import x_symbol from "../../../assets/img/Voting Screen/icons/x_symbol.png";
 import voted_mark from "../../../assets/img/Voting Screen/icons/voted_mark.png";
 
-var main_screen, chat_icon_img, title, skip_vote_button, voting_count,timedEvent,timer=7000,can_vote=true,speaker_group,dead;
+var main_screen, chat_icon_img, title, skip_vote_button, voting_count,timedEvent,timer=30000,can_vote=true,speaker_group,dead;
 let player_list =new Map()
 let player_count = new Map()
 let player_vote = new Map()
