@@ -213,23 +213,23 @@ class Game extends Phaser.Scene {
 
     this.socket.emit("send_role", this.socket.id, this.isRole, this.textInput)
     this.socket.on("end_game", (winner) => {
-  
+
       switch (winner) {
         case 1:
           if (this.isRole == 1) {
-            this.scene.launch("end_game", { num: 1 ,socket:this.socket})
+            this.scene.launch("end_game", { num: 1, socket: this.socket })
           } else {
-            this.scene.launch("end_game", { num: 2 ,socket:this.socket})
+            this.scene.launch("end_game", { num: 2, socket: this.socket })
           }
-        
+
           break;
         case 2:
           if (this.isRole != 1) {
-            this.scene.launch("end_game", { num: 1 ,socket:this.socket})
+            this.scene.launch("end_game", { num: 1, socket: this.socket })
           } else {
-            this.scene.launch("end_game", { num: 2 ,socket:this.socket})
+            this.scene.launch("end_game", { num: 2, socket: this.socket })
           }
-      
+
           break;
         default:
           break;
@@ -835,17 +835,17 @@ class Game extends Phaser.Scene {
     this.idPlayers.forEach((element) => {
       if (element != this.socket.id) {
         otherPlayerId.push(element);
-        let temp = this.add.text( 120 + 20,
-          -745 ,this.namePlayers[this.idPlayers.indexOf(element)],{
-            fontSize: "25px",
+        let temp = this.add.text(120 + 20,
+          -745, this.namePlayers[this.idPlayers.indexOf(element)], {
+          fontSize: "25px",
           //  color: "#ffffff",
-            fontFamily: "Arial",
-            stroke: "#000000",
-            align: 'center',
-            strokeThickness: 3,
-          }).setDepth(2)
-      
-          otherNames.push(temp)
+          fontFamily: "Arial",
+          stroke: "#000000",
+          align: 'center',
+          strokeThickness: 3,
+        }).setDepth(2)
+
+        otherNames.push(temp)
       }
     });
     let count = 0
@@ -863,7 +863,7 @@ class Game extends Phaser.Scene {
 
         //   let index = otherPlayerId.findIndex((Element) => Element == element)
         ///   let otherPlayer[index] =this.physics.add.sprite(-45, 26, colorOther, "idle.png");
-  
+
         //  otherPlayer_container[count] = this.add.container(-45, 26);
         //    this.physics.add.existing(otherPlayer_container[count]);
         otherPlayer_container[index].setSize(otherPlayer[index].width, otherPlayer[index].height);
@@ -873,7 +873,7 @@ class Game extends Phaser.Scene {
         let temp_hat = Object(this.Info.players)[element].hat
         let temp_pet = Object(this.Info.players)[element].pet
         let temp_pants = Object(this.Info.players)[element].pants
-    
+
         if (temp_hat) {
           let otherPlayer_hat_skin = this.physics.add.sprite(
             otherPlayer[index].x,
@@ -1340,7 +1340,7 @@ class Game extends Phaser.Scene {
           i++;
           break;
         case "arrow":
-        
+
           //gán vị trí cho từng phần tử con của group arrow// set angle với mục đích là xoay mũi tên tới vent gần nhất dựa vào propeties rotation của object trong Tiled
           // sau đó gán interactive cho arrow để thực hiện di chuyển player tới vent gần nhất
           children_1[j]
@@ -1352,7 +1352,7 @@ class Game extends Phaser.Scene {
             .on("pointerdown", () => {
               //trước khi di chuyển player sang vent mới thì sẽ ẩn đi các arrow ở vent cũ
               arrow_group.setVisible(false);
-       
+
               // ở đây ta split object name của vent thành mảng 2 phần tử do cấu trúc name của object là (vent "cần tới"- vent"hiện tại") và 2 vent này được ngăn cách bởi dấu cách
               // như đã nói trên thì vent_cord là hash map lưu vị trí các vent dựa trên key value là name của vent, nên ta lấy vị trí [0] là vent "cần tới" dể gán tọa độ x y
               // cho player
@@ -1472,7 +1472,7 @@ class Game extends Phaser.Scene {
       }
     });
     // this.socket.on("move", ({ x, y, playerId }) => {
- 
+
     this.socket.on("vote_final", (num, id) => {
       this.scene.launch("vote_state", { num: num, name: this.namePlayers[this.idPlayers.indexOf(id)], roomKey: this.textInput, socket: this.socket })
     })
@@ -1515,8 +1515,8 @@ class Game extends Phaser.Scene {
       //UPDATE POSITION
       otherPlayer_container[index].x = x;
       otherPlayer_container[index].y = y;
-      otherNames[index].x =   x-80
-      otherNames[index].y =  y-20
+      otherNames[index].x = x - 80
+      otherNames[index].y = y - 20
       otherPlayer[index].moving = true;
 
       if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
@@ -1553,19 +1553,19 @@ class Game extends Phaser.Scene {
 
     //update if killed ==>> ************************TO GHOST*******************
     this.socket.on("updateOtherPlayer", ({ playerId, colorKill }) => {
-    
+
       // let colorDead = (Object((this.Info.players)[String(playerId)]).color)
-     
+
       deadplayer.push(playerId);
       if (this.socket.id == playerId) {
         //run noitice died
-      
+
         //player.stop("player-idle")
         alive = false;
         player.anims.play("player-ghost", true);
       } else {
         let index = otherPlayerId.findIndex((Element) => Element == playerId);
-        otherPlayer[index].anims.play(`${colorKill}-dead`, true);
+        otherPlayer[index].anims.play(`${colorKill}-dead`, false);
         let temp = this.add.rectangle(
           otherPlayer_container[index].x,
           otherPlayer_container[index].y,
@@ -1578,7 +1578,7 @@ class Game extends Phaser.Scene {
     });
   }
   update() {
- 
+
     var wasTouching = !player_container.body.wasTouching.none;
     // If you want 'touching or embedded' then use:
     var touching = !player_container.body.touching.none || player_container.body.embedded;
@@ -1597,14 +1597,14 @@ class Game extends Phaser.Scene {
 
     if (this.isRole == 1 && alive == true) {
       kill.on("pointerdown", () => {
-  
+
         if (canKill) {
 
           this.sound.play("killAudio", false);
           let killId = otherPlayerId[indexKill];
           deadplayer.push(killId);
           let colorKill = Object(this.Info.players[killId]).color;
-          playerKilled.anims.play(`${colorKill}-dead`, true);
+          playerKilled.anims.play(`${colorKill}-dead`, false);
           let temp = this.add.rectangle(
             otherPlayer_container[indexKill].x,
             otherPlayer_container[indexKill].y,
@@ -1621,11 +1621,11 @@ class Game extends Phaser.Scene {
           otherPlayer = otherPlayer.filter((player) => {
             return player !== playerKilled;
           });
-     // emit socket id player killed
+          // emit socket id player killed
           otherPlayerId = otherPlayerId.filter((player) => {
             return player !== otherPlayerId[indexKill];
           });
-     //"emitted");
+          //"emitted");
           canKill = false;
         } else {
 
@@ -1900,9 +1900,8 @@ class Game extends Phaser.Scene {
 
       if (launch_scene && check_mission != undefined) {
         //this.scene.pause("game");
-      
-        if(check_mission.scene == "divert_power")
-        {
+
+        if (check_mission.scene == "divert_power") {
           useButton.alpha = 0.5;
           this.scene.launch(check_mission.scene, {
             nested_divert_power_mission_picked: nested_divert_power_mission_picked,
@@ -1912,8 +1911,7 @@ class Game extends Phaser.Scene {
             eventsCenter: eventsCenter
           });
         }
-        else
-        {
+        else {
           useButton.alpha = 0.5;
           this.scene.launch(check_mission.scene, {
             x: check_mission.x,
