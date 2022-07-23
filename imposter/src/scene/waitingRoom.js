@@ -492,6 +492,12 @@ export default class waitingRoom extends Phaser.Scene {
       }
     });
     //update skin current in room
+    this.socket.on('leave_room',(id)=>{
+      let index = otherPlayerId.findIndex((Element) => Element == id)
+      otherPlayer[index].destroy();
+      otherPlayer_container[index].destroy();
+      
+    })
     this.socket.on('changeSkin', ({ color, hat, pet, pants, id }) => {
       let index = otherPlayerId.findIndex((Element) => Element == id)
       otherPlayer[index].destroy();
