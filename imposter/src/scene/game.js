@@ -250,7 +250,6 @@ class Game extends Phaser.Scene {
         map_missions.completed(mission_name);
         list_missions_completed.push(mission_name);
         total_missions_completed += 1;
-        console.log("total mission completed: " + total_missions_completed)
         map_missions.count_missions_completed(total_missions_completed);
         map_missions.update_list_missions_completed(list_missions_completed);
         player_container.x = current_x + 2;
