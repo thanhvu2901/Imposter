@@ -11,7 +11,23 @@ import Communications from "../../../assets/img/divert_power/communications.jpg"
 import Oxi from "../../../assets/img/divert_power/oxi.jpg";
 import Security from "../../../assets/img/divert_power/security.jpg";
 
+
+let x;
+let y;
+let current_scene;
+let sprite;
+let eventsCenter;
+let nested_divert_power_mission_picked = nested_divert_power_mission_picked;
+
 class DiverPower extends Phaser.Scene {
+    init(data) {
+        x = data.x;
+        y = data.y;
+        sprite = data.sprite;
+        eventsCenter = data.eventsCenter,
+        nested_divert_power_mission_picked = data.nested_divert_power_mission_picked
+    }
+
     preload() {
         this.load.image("Base", Base);
         this.load.image("Control", Control);
@@ -27,8 +43,9 @@ class DiverPower extends Phaser.Scene {
     }
 
     create() {
+        current_scene = this.scene
         this.add.image(512, 384, "Base");
-        const slider = ["left_engine", "right_engine", "weapons", "shields", "nav", "communications", "oxi", "security"]
+        const slider = ["right_engine", "left_engine", "weapons", "shields", "nav", "communications", "oxi", "security"]
         for (let i = 0; i < slider.length; i++) {
             let slider = new Switch(this, 315 + (56 * i), 525);
             slider.perform();
@@ -65,29 +82,77 @@ class Switch {
                 if(dragY < 465) {
                     const x = Math.floor(pointer.downX);
                     if (x >= 0 && x < 371) {
-                        current.add.image(512, 240, "LeftEngine")
+                        current.add.image(512, 240, "RighEngine");
+                        if(nested_divert_power_mission_picked == 0)
+                        {
+                            sprite.tint = 0;
+                            eventsCenter.emit("continue_scene_game", {x: x, y: y, mission: "DivertPower"});
+                            current_scene.stop("divert_power");
+                        }
                     }
                     if (x > 371 && x < 427) {
-                        current.add.image(512, 240, "RighEngine")
+                        current.add.image(512, 240, "LeftEngine")
+                        if(nested_divert_power_mission_picked == 1)
+                        {
+                            sprite.tint = 0;
+                            eventsCenter.emit("continue_scene_game", {x: x, y: y, mission: "DivertPower"});
+                            current_scene.stop("divert_power");
+                        }
                     }
                     if (x >= 427 && x < 483) {
-                        current.add.image(512, 240, "Weapons")
+                        current.add.image(512, 240, "Weapons");
+                        if(nested_divert_power_mission_picked == 2)
+                        {
+                            sprite.tint = 0;
+                            eventsCenter.emit("continue_scene_game", {x: x, y: y, mission: "DivertPower"});
+                            current_scene.stop("divert_power");
+                        }
                     }
                     if (x >= 483 && x < 539) {
-                        current.add.image(512, 240, "Sheilds")                    
+                        current.add.image(512, 240, "Sheilds");
+                        if(nested_divert_power_mission_picked == 3)
+                        {
+                            sprite.tint = 0;
+                            eventsCenter.emit("continue_scene_game", {x: x, y: y, mission: "DivertPower"});
+                            current_scene.stop("divert_power");
+                        }                    
                     }
                     if (x >= 539 && x < 595) {
-                        current.add.image(512, 240, "Nav")                    
+                        current.add.image(512, 240, "Nav");
+                        if(nested_divert_power_mission_picked == 4)
+                        {
+                            sprite.tint = 0;
+                            eventsCenter.emit("continue_scene_game", {x: x, y: y, mission: "DivertPower"});
+                            current_scene.stop("divert_power");
+                        }                   
                     }
                     if (x >= 595 && x < 651) {
-                        current.add.image(512, 240, "Communications")                                            
+                        current.add.image(512, 240, "Communications");
+                        if(nested_divert_power_mission_picked == 5)
+                        {
+                            sprite.tint = 0;
+                            eventsCenter.emit("continue_scene_game", {x: x, y: y, mission: "DivertPower"});
+                            current_scene.stop("divert_power");
+                        }                                            
                     }
                     if (x >= 651 && x < 707) {
-                        current.add.image(512, 240, "Oxi")                                                                    
+                        current.add.image(512, 240, "Oxi");
+                        if(nested_divert_power_mission_picked == 6)
+                        {
+                            sprite.tint = 0;
+                            eventsCenter.emit("continue_scene_game", {x: x, y: y, mission: "DivertPower"});
+                            current_scene.stop("divert_power");
+                        }                                                                   
                     }
                     if (x >=707 && x < 763)
                     {
-                        current.add.image(512, 240, "Security")                                                                                            
+                        current.add.image(512, 240, "Security");
+                        if(nested_divert_power_mission_picked == 7)
+                        {
+                            sprite.tint = 0;
+                            eventsCenter.emit("continue_scene_game", {x: x, y: y, mission: "DivertPower"});
+                            current_scene.stop("divert_power");
+                        }                                                                                           
                     }                
                 }
                  else

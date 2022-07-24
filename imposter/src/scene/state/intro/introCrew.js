@@ -36,7 +36,7 @@ class introCrew extends Phaser.Scene {
         });
     }
     create() {
-        console.log(this.numberImposter);
+       
         if (isRole == 1) {
             var sprite = this.add.image(530, 350, 'imposter').setScale(0.6).setAlpha(0);
             let text = this.add.text(350, 230, 'YOU are Impostor!', { fontSize: '40px' }).setAlpha(0)

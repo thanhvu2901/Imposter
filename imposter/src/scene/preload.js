@@ -429,7 +429,7 @@ class Preloader extends Phaser.Scene {
       alphaTopLeft: { value: 1, duration: 5000, ease: "Power1" },
       alphaBottomRight: { value: 1, duration: 5000, ease: "Power1" },
       // onComplete: function () {
-      //     console.log('menu');
+
       //     // this.run();
       //     this.load.sc
       // }
@@ -446,7 +446,7 @@ class Preloader extends Phaser.Scene {
     });
 
     this.load.on("complete", function () {
-      console.log("complete");
+
       progressBar.destroy();
       progressBox.destroy();
       percentText.destroy();

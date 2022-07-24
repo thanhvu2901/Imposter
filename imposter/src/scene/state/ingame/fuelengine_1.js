@@ -91,7 +91,7 @@ class FuelEngine_1 extends Phaser.Scene {
     r1.height-=5;
     r2.width-=0.96
     
-    console.log(y,r1.height)
+
   }
   if(r1.height*-197/310==197){
     console.log("ok")

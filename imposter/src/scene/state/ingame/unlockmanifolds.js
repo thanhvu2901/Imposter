@@ -110,10 +110,10 @@ class UnlockManifolds extends Phaser.Scene {
           temp[2] = false
           check = check.filter((value) => value != temp[1])
 
-          //  console.log(check.indexOf(temp[1]))
+
 
         }
-        console.log(check)
+
         //   console.log(check.length)
       })
 
@@ -122,7 +122,7 @@ class UnlockManifolds extends Phaser.Scene {
     wire = this.add.image(x - 210, y + 130, "Wire")
 
 
-    console.log(button)
+
   }
 
   update() {

@@ -9,7 +9,7 @@ import speaker from "../../../assets/img/Voting Screen/icons/speaker.png";
 import x_symbol from "../../../assets/img/Voting Screen/icons/x_symbol.png";
 import voted_mark from "../../../assets/img/Voting Screen/icons/voted_mark.png";
 
-var main_screen, chat_icon_img, title, skip_vote_button, voting_count,timedEvent,timer=7000,can_vote=true,speaker_group,dead;
+var main_screen, chat_icon_img, title, skip_vote_button, voting_count,timedEvent,timer=30000,can_vote=true,speaker_group,dead;
 let player_list =new Map()
 let player_count = new Map()
 let player_vote = new Map()
@@ -115,7 +115,7 @@ async  create() {
   if(this.numPlayers>1){
      const mapSort1 = new Map([...player_count.entries()].sort((a, b) => b[1] - a[1]));
       if([...mapSort1][0][1]==[...mapSort1][1][1]){
-        console.log("draw")
+
         this.socket.emit("vote_end",3,0,this.roomKey)
       }else if([...mapSort1][0][0]==this.socket.id){
         if(this.role==1){

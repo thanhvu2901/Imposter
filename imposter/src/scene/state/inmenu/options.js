@@ -9,7 +9,7 @@ class Options extends Phaser.Scene {
 
     }
     create() {
-        console.log('in options');
+    
 
         this.add.image(this.game.renderer.width / 2, this.game.renderer.height * 0.20, 'setting').setDepth(1);
         this.add.image(0, 0, 'background').setOrigin(0.01).setDepth(0);
@@ -22,23 +22,23 @@ class Options extends Phaser.Scene {
 
         playSound.setInteractive({ useHandCursor: true });
         back.setInteractive({ useHandCursor: true })
-        console.log(this.sound.mute);
+    
 
 
         //  ********on/off sound**********
         playSound.on('pointerdown', () => {
             isMute = !isMute;
-            console.log(isMute);
+
             //this.game.sound.mute = isMute; // ==> true
             if (isMute === true) {
                 playSound.setText("SOUND OFF");
                 this.game.sound.mute = true;
-                console.log('y' + this.game.sound.mute);
+               
             } else {
                 playSound.setText("SOUND ON");
                 this.game.sound.mute = false;
             }
-            // console.log(this.game.sound.mute);
+       
 
         })
 
