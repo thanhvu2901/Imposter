@@ -15,7 +15,7 @@ class introCrew extends Phaser.Scene {
         this.textInput = data.textInput;
         this.numPlayers = data.numPlayers;
         this.idPlayers = data.idPlayers;
-        this.namePlayers=data.namePlayers
+        this.namePlayers = data.namePlayers
         this.numberImposter = data.numberImposter
         this.playerChangedSkin = data.playerChangedSkin;
         this.Info = data.Info
@@ -36,10 +36,10 @@ class introCrew extends Phaser.Scene {
         });
     }
     create() {
-       
+
         if (isRole == 1) {
             var sprite = this.add.image(530, 350, 'imposter').setScale(0.6).setAlpha(0);
-            let text = this.add.text(350, 230, 'YOU are Impostor!', { fontSize: '40px' }).setAlpha(0)
+            let text = this.add.text(150, 230, 'YOU are Impostor!', { fontSize: '40px' }).setAlpha(0)
             //chạy intro logo
             let audio = this.sound.add('intro', {})
             setTimeout(audio.play(), 1000)
@@ -66,7 +66,7 @@ class introCrew extends Phaser.Scene {
 
         else {
             var sprite = this.add.image(530, 350, 'crew').setScale(0.6).setAlpha(0);
-            let text = this.add.text(350, 230, `There is ${this.numberImposter} Imposter among us!`, { fontSize: '40px' }).setAlpha(0)
+            let text = this.add.text(150, 230, `There is ${this.numberImposter} Imposter among us!`, { fontSize: '40px' }).setAlpha(0)
             //chạy intro logo
             let audio = this.sound.add('intro', {})
             setTimeout(audio.play(), 1000)
@@ -93,7 +93,7 @@ class introCrew extends Phaser.Scene {
 
 }
 function Run(game) {
-    game.scene.launch('game', { socket: game.socket, textInput: game.textInput, numPlayers: game.numPlayers, idPlayers: game.idPlayers,namePlayers:game.namePlayers, isRole: isRole, playerChangedSkin: game.playerChangedSkin, Info: game.Info })
+    game.scene.launch('game', { socket: game.socket, textInput: game.textInput, numPlayers: game.numPlayers, idPlayers: game.idPlayers, namePlayers: game.namePlayers, isRole: isRole, playerChangedSkin: game.playerChangedSkin, Info: game.Info })
     game.scene.stop('introCrew');
     // console.log(game.scene);
 }
