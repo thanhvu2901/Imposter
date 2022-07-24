@@ -111,7 +111,7 @@ game.scene.add('waitingRoom', waitingRoom)
 
 game.scene.add("divert_power", DivertPower);
 
-game.scene.add("SwipeCard", SwipeCard);
+game.scene.add("swipeCard", SwipeCard);
 game.scene.add("Upload", UploadData);
 game.scene.add("CalibratorDistributor", CalibratorDistributor);
 game.scene.add("Fuel", FuelEngine);
@@ -139,14 +139,14 @@ game.scene.add("demo", Demo)
 //game.scene.start('inspectSample');
 
 // game.scene.start("Upload")
-//game.scene.start('stabilizeSteering');
+// game.scene.start('stabilizeSteering');
 // game.scene.start('startReactor') // game nay hien dang bị loi
-// game.scene.start('SwipeCard')
+game.scene.start('swipeCard')
 //game.scene.start("CalibratorDistributor")
 //game.scene.start("Fuel")
 //game.scene.start("Fuel_1");
 // game.scene.start("Unlock");
 
-game.scene.start('preloader');
+// game.scene.start('preloader');
 //game.scene.start("align_engine_output")
 //game.scene.start('guidemap')

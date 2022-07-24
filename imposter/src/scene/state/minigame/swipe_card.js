@@ -12,18 +12,16 @@ let text,
   textToDisplayed = [
     "PLEASE INSERT CARD",
     "PLEASE SWIPE CARD",
-    "TOO FAST. TRY AGAIN",
-    "TOO SLOW. TRY AGAIN",
+    "FAIL! TRY AGAIN",
     "ACCEPTED. THANK YOU",
   ];
 var board, mini_card, card_holder, wallet, textBar, slider_bot, slider_top;
 var target1 = new Phaser.Math.Vector2();
 var target2 = new Phaser.Math.Vector2();
 var start = new Phaser.Math.Vector2();
-var distance1, distance2;
+var startToCard, cardToWallet;
 let leave = false;
-let move;
-let step = 0;
+let failed = false;
 let scale = 0.75;
 let finished = 0;
 let x;
@@ -33,12 +31,17 @@ let current_scene;
 let eventsCenter;
 
 class SwipeCard extends Phaser.Scene {
-  init(data) {
-    x = data.x;
-    y = data.y;
-    sprite = data.sprite;
-    eventsCenter = data.eventsCenter;
+  constructor() {
+    super({
+      key: "swipeCard",
+    });
   }
+  // init(data) {
+  //   x = data.x;
+  //   y = data.y;
+  //   sprite = data.sprite;
+  //   eventsCenter = data.eventsCenter;
+  // }
 
   preload() {
     this.load.image("admin_BG", admin_BG);
@@ -50,26 +53,28 @@ class SwipeCard extends Phaser.Scene {
     this.load.image("admin_walletFront", admin_walletFront);
   }
   create() {
-    current_scene = this.scene
+    current_scene = this.scene;
     board = this.add.image(512, 384, "admin_BG");
     textBar = this.add.image(512, 165, "admin_textBar");
     textBar.setDepth(3);
     mini_card = this.physics.add.image(400, 570, "admin_Card");
     mini_card.setScale(0.75, 0.75);
     mini_card.setDepth(1);
-    mini_card.setInteractive();
     start.x = mini_card.x;
     start.y = mini_card.y;
     wallet = this.add.image(512, 550, "admin_Wallet");
-    card_holder = this.add.image(405, 588, "admin_walletFront");
-    card_holder.setDepth(2);
+    card_holder = this.add
+      .image(405, 588, "admin_walletFront")
+      .setDepth(2)
+      .setInteractive({ useHandCursor: true });
     slider_top = this.add.image(512, 220, "admin_sliderTop");
     slider_top.setDepth(2);
     slider_bot = this.add.image(512, 325, "admin_sliderBottom");
 
-    this.input.on(
+    card_holder.on(
       "pointerdown",
       function () {
+        console.log("card holder");
         if (mini_card.x != 800 && mini_card.y != 312 && leave == false) {
           target1.x = 280;
           target1.y = 312;
@@ -77,19 +82,49 @@ class SwipeCard extends Phaser.Scene {
           target2.y = 312;
           leave = true;
           // Move at 300 px/s:
-          move = this.physics.moveToObject(mini_card, target1, 300);
-
-          this.input.setDraggable(mini_card);
+          this.physics.moveToObject(mini_card, target1, 300);
+          mini_card.setInteractive({ draggable: true });
           textType = 1;
         }
       },
       this
     );
-    this.input.on(
+
+    // Make the card holder not interactable to prevent user from selecting
+    mini_card.on("pointerdown", function () {
+      card_holder.removeInteractive();
+    });
+
+    mini_card.on(
       "pointerup",
       function () {
-        if (mini_card.x == target2.x && mini_card.y == target2.y) {
+        console.log("Mouse released");
+        if (mini_card.x >= target2.x - 10 && mini_card.y == target2.y) {
+          mini_card.x <= target2.x
+            ? mini_card.setPosition(target2.x, target2.y)
+            : null;
+          console.log("game is finished");
           finished = 1;
+        }
+        if (
+          mini_card.x >= target2.x - 10 &&
+          mini_card.y == target2.y &&
+          !finished
+        ) {
+          failed = true;
+          console.log("Type: " + textType);
+          mini_card.setPosition(target1.x, target1.y);
+        }
+        if (finished) {
+          leave = false;
+          this.physics.moveToObject(mini_card, start, 300);
+
+          // Make the card not interactable to prevent user from selecting
+          mini_card.removeInteractive();
+        } else {
+          failed = true;
+          console.log("Type: " + textType);
+          mini_card.setPosition(target1.x, target1.y);
         }
       },
       this
@@ -105,66 +140,75 @@ class SwipeCard extends Phaser.Scene {
     this.input.on("drag", function (pointer, gameObject, dragX, dragY) {
       gameObject.x = dragX;
     });
-    let closeBtn = this.add.image(830, 135, 'closeBtn').setInteractive({ useHandCursor: true })
 
-    closeBtn.on('pointerdown', () => {
-      this.scene.stop('SwipeCard')
-    })
+    let closeBtn = this.add
+      .image(830, 135, "closeBtn")
+      .setInteractive({ useHandCursor: true });
+
+    closeBtn.on("pointerdown", () => {
+      this.scene.stop("SwipeCard");
+    });
   }
 
   update() {
-    step += 1;
-    // Update the scale of card when it is selected from wallet
-    if (leave === true && scale <= 1) {
-      mini_card.setScale(scale);
-      scale += 0.0075;
-    }
-    // Update the scale of card when game is finished and it is returned to wallet
-    if (finished == -1 && scale >= 0.75) {
-      scale -= 0.0075;
-      mini_card.setScale(scale);
-    }
-    distance1 = Phaser.Math.Distance.Between(
+    startToCard = Phaser.Math.Distance.Between(
       mini_card.x,
       mini_card.y,
       target1.x,
       target1.y
     );
-    distance2 = Phaser.Math.Distance.Between(
+    cardToWallet = Phaser.Math.Distance.Between(
       mini_card.x,
       mini_card.y,
       start.x,
       start.y
     );
 
-    // Check the boundary of the slider for dragging
-    if (mini_card.x >= target2.x && leave) {
-      mini_card.x = target2.x;
-    }
-    if (mini_card.x <= target1.x && leave) {
-      mini_card.x = target1.x;
-    }
+    if (leave) {
+      !failed ? (textType = 1) : (textType = 2);
+      // Resize the scale of card when it is selected from wallet
+      if (scale <= 1) {
+        mini_card.setScale(scale);
+        scale += 0.0075;
+      }
 
-    // Return card to wallet when game is finished
-    if (finished == 1) {
-
-      move = this.physics.moveToObject(mini_card, start, 300);
-      finished = -1;
-      leave = false;
-      textType = 4;
-
-      sprite.tint = 0;
-      eventsCenter.emit("continue_scene_game", { x: x, y: y, mission: "SwipeCard" });
-      current_scene.stop("SwipeCard");
-    }
-
-    // Check if card is in the right place
-    if (mini_card.body.speed > 0) {
-      if (distance1 < 4 && leave === true) {
+      // Reset the card's position to the correct position when use function moveToObject
+      if (startToCard < 4) {
         mini_card.body.reset(target1.x, target1.y);
       }
-      if (distance2 < 4 && leave === false) {
-        mini_card.body.reset(start.x, start.y);
+
+      // Check the boundary of the slider when dragging
+      if (mini_card.x >= target2.x) {
+        mini_card.x = target2.x;
+      }
+      if (mini_card.x <= target1.x) {
+        mini_card.x = target1.x;
+      }
+    } else {
+      // Reset the card's position to the correct position when use function moveToObject
+      if (cardToWallet < 4) {
+        if (cardToWallet < 4 && leave === false) {
+          mini_card.body.reset(start.x, start.y);
+        }
+      }
+      if (finished) {
+        textType = 3;
+
+        // Resize the card to the starting scale when game is finished and it returns to the wallet
+        if (scale >= 0.75) {
+          scale -= 0.0075;
+          mini_card.setScale(scale);
+        }
+
+        // sprite.tint = 0;
+        // eventsCenter.emit("continue_scene_game", {
+        //   x: x,
+        //   y: y,
+        //   mission: "SwipeCard",
+        // });
+        // current_scene.stop("SwipeCard");
+      } else {
+        textType = 0;
       }
     }
 
@@ -180,9 +224,6 @@ class SwipeCard extends Phaser.Scene {
         break;
       case 3:
         text.setText(textToDisplayed[3]);
-        break;
-      case 4:
-        text.setText(textToDisplayed[4]);
         break;
       default:
         break;
