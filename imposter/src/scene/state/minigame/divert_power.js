@@ -23,6 +23,15 @@ let eventsCenter;
 let nested_divert_power_mission_picked;
 let completed_mission_picked;
 
+let right_engine;
+let left_engine;
+let weapons;
+let shields;
+let nav;
+let communications;
+let oxi;
+let security;
+let current_object;
 class DiverPower extends Phaser.Scene {
     init(data) {
         current_x = data.x;
@@ -47,25 +56,234 @@ class DiverPower extends Phaser.Scene {
     }
 
     create() {
-        current_scene = this.scene
+        current_scene = this.scene;
+        current_object = this ;
         this.add.image(512, 384, "Base");
-        const slider = ["right_engine", "left_engine", "weapons", "shields", "nav", "communications", "oxi", "security"]
-        for (let i = 0; i < slider.length; i++) {
-            let slider = new Switch(this, 315 + (56 * i), 525);
-            slider.perform();
-        }
-        if(nested_divert_power_mission_picked == completed_mission_picked)
-        {
-            console.log("complted")
-        }
+
+        right_engine = this.add.sprite(315, 525, "Control").setInteractive();
+        this.input.setDraggable(right_engine);
+
+        left_engine = this.add.sprite(371, 525, "Control").setInteractive();
+        this.input.setDraggable(left_engine);
+
+        weapons = this.add.sprite(427, 525, "Control").setInteractive();
+        this.input.setDraggable(weapons);
+
+        shields = this.add.sprite(483, 525, "Control").setInteractive();
+        this.input.setDraggable(shields);
+
+        nav = this.add.sprite(539, 525, "Control").setInteractive();
+        this.input.setDraggable(nav);
+
+        communications = this.add.sprite(595, 525, "Control").setInteractive();
+        this.input.setDraggable(communications);
+
+        oxi = this.add.sprite(651, 525, "Control").setInteractive();
+        this.input.setDraggable(oxi);
+
+        security = this.add.sprite(707, 525, "Control").setInteractive();
+        this.input.setDraggable(security);
     }
  
     update() {
+        right_engine.on('dragstart', function (pointer) {
+            this.setTint(0xff0000);
+        });
+
+        right_engine.on("drag", function (pointer, dragX, dragY) {
+            if(dragY <= 587 && dragY >= 465)
+            {
+                this.y = dragY;
+            }
+            else
+            {
+                if(dragY < 460)
+                {
+                    completed_mission_picked = 0;
+                    current_object.add.image(512, 240, "RighEngine");
+                }
+            }
+        })
+    
+        right_engine.on('dragend', function (pointer) {
+            this.clearTint();
+        });
+
+        left_engine.on('dragstart', function (pointer) {
+            this.setTint(0xff0000);
+        });
+
+        left_engine.on("drag", function (pointer, dragX, dragY) {
+            if(dragY <= 587 && dragY >= 465)
+            {
+                this.y = dragY;
+            }
+            else
+            {
+                if(dragY < 460)
+                {
+                    completed_mission_picked = 1;
+                    current_object.add.image(512, 240, "LeftEngine");
+                }
+            }
+        })
+    
+        left_engine.on('dragend', function (pointer) {
+            this.clearTint();
+        });
+        
+        weapons.on('dragstart', function (pointer) {
+            this.setTint(0xff0000);
+        });
+
+        weapons.on("drag", function (pointer, dragX, dragY) {
+            if(dragY <= 587 && dragY >= 465)
+            {
+                this.y = dragY;
+            }
+            else
+            {
+                if(dragY < 460)
+                {
+                    completed_mission_picked = 2;
+                    current_object.add.image(512, 240, "Weapons");
+                }
+            }
+        })
+    
+        weapons.on('dragend', function (pointer) {
+            this.clearTint();
+        });
+        
+        shields.on('dragstart', function (pointer) {
+            this.setTint(0xff0000);
+        });
+
+        shields.on("drag", function (pointer, dragX, dragY) {
+            if(dragY <= 587 && dragY >= 465)
+            {
+                this.y = dragY;
+            }
+            else
+            {
+                if(dragY < 460)
+                {
+                    completed_mission_picked = 3;
+                    current_object.add.image(512, 240, "Sheilds");
+                }
+            }
+        })
+    
+        shields.on('dragend', function (pointer) {
+            this.clearTint();
+        });
+
+        nav.on('dragstart', function (pointer) {
+            this.setTint(0xff0000);
+        });
+
+        nav.on("drag", function (pointer, dragX, dragY) {
+            if(dragY <= 587 && dragY >= 465)
+            {
+                this.y = dragY;
+            }
+            else
+            {
+                if(dragY < 460)
+                {
+                    completed_mission_picked = 4;
+                    current_object.add.image(512, 240, "Nav");
+                }
+            }
+        })
+    
+        nav.on('dragend', function (pointer) {
+            this.clearTint();
+        });
+
+        communications.on('dragstart', function (pointer) {
+            this.setTint(0xff0000);
+        });
+
+        communications.on("drag", function (pointer, dragX, dragY) {
+            if(dragY <= 587 && dragY >= 465)
+            {
+                this.y = dragY;
+            }
+            else
+            {
+                if(dragY < 460)
+                {
+                    completed_mission_picked = 5;
+                    current_object.add.image(512, 240, "Communications");
+                }
+            }
+        })
+    
+        communications.on('dragend', function (pointer) {
+            this.clearTint();
+        });
+
+        oxi.on('dragstart', function (pointer) {
+            this.setTint(0xff0000);
+        });
+
+        oxi.on("drag", function (pointer, dragX, dragY) {
+            if(dragY <= 587 && dragY >= 465)
+            {
+                this.y = dragY;
+            }
+            else
+            {
+                if(dragY < 460)
+                {
+                    completed_mission_picked = 6;
+                    current_object.add.image(512, 240, "Oxi");
+                }
+            }
+        })
+    
+        oxi.on('dragend', function (pointer) {
+            this.clearTint();
+        });
+
+        security.on('dragstart', function (pointer) {
+            this.setTint(0xff0000);
+        });
+
+        security.on("drag", function (pointer, dragX, dragY) {
+            if(dragY <= 587 && dragY >= 465)
+            {
+                this.y = dragY;
+            }
+            else
+            {
+                if(dragY < 460)
+                {
+                    completed_mission_picked = 6;
+                    current_object.add.image(512, 240, "Security");
+                }
+            }
+        })
+    
+        security.on('dragend', function (pointer) {
+            this.clearTint();
+        });
+
+        if(completed_mission_picked == nested_divert_power_mission_picked)
+        {
+            sprite.tint = 0;
+            eventsCenter.emit("continue_scene_game", { x: current_x, y: current_y, mission: "DivertPower" });
+            current_scene.stop("divert_power");
+        }
     }
 }
 
-eventsCenter.emit("continue_scene_game", {x: current_x, y: current_y, mission: "DivertPower"});
-                            current_scene.stop("divert_power");
+// eventsCenter.emit("continue_scene_game", {x: current_x, y: current_y, mission: "DivertPower"});
+//                             current_scene.stop("divert_power");
+
+
+
 
 
 class Switch {
@@ -90,46 +308,48 @@ class Switch {
                 this.y = dragY;
             }
             else {
-                if(dragY < 465) {
+                if(dragY < 460) {
                     const x = Math.floor(pointer.downX);
                     if (x >= 0 && x < 371) {
-                        current.add.image(512, 240, "RighEngine");
                         completed_mission_picked = 0;
+                        current.add.image(512, 240, "RighEngine");
                     }
                     if (x >= 371 && x < 427) {
-                        current.add.image(512, 240, "LeftEngine");
                         completed_mission_picked = 1;
+                        current.add.image(512, 240, "LeftEngine");
                     }
                     if (x >= 427 && x < 483) {
-                        current.add.image(512, 240, "Weapons");
                         completed_mission_picked = 2;
+                        current.add.image(512, 240, "Weapons");
                     }
                     if (x >= 483 && x < 539) {
-                        current.add.image(512, 240, "Sheilds");
                         completed_mission_picked = 3;
+                        current.add.image(512, 240, "Sheilds");
                     }
                     if (x >= 539 && x < 595) {
-                        current.add.image(512, 240, "Nav");
                         completed_mission_picked = 4;
+                        current.add.image(512, 240, "Nav");
                     }
                     if (x >= 595 && x < 651) {
-                        current.add.image(512, 240, "Communications");
                         completed_mission_picked = 5;
+                        current.add.image(512, 240, "Communications");
                     }
                     if (x >= 651 && x < 707) {
-                        current.add.image(512, 240, "Oxi");
                         completed_mission_picked = 6;
+                        current.add.image(512, 240, "Oxi");
                     }
                     if (x >=707 && x < 763)
                     {
-                        current.add.image(512, 240, "Security");
                         completed_mission_picked = 7;
+                        current.add.image(512, 240, "Security");
                     }                
                 }
                  else
                 {
                     current.add.image(512, 240, "Wire")
                 }
+
+                console.log("completed_mission_picked", completed_mission_picked);
             }
         });
 
