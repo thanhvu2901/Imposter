@@ -141,12 +141,12 @@ game.scene.add("demo", Demo)
 // game.scene.start("Upload")
 // game.scene.start('stabilizeSteering');
 // game.scene.start('startReactor') // game nay hien dang bị loi
-game.scene.start('swipeCard')
+// game.scene.start('swipeCard')
 //game.scene.start("CalibratorDistributor")
 //game.scene.start("Fuel")
 //game.scene.start("Fuel_1");
 // game.scene.start("Unlock");
 
-// game.scene.start('preloader');
+game.scene.start('preloader');
 //game.scene.start("align_engine_output")
 //game.scene.start('guidemap')

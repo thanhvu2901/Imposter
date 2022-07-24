@@ -36,12 +36,13 @@ class SwipeCard extends Phaser.Scene {
       key: "swipeCard",
     });
   }
-  // init(data) {
-  //   x = data.x;
-  //   y = data.y;
-  //   sprite = data.sprite;
-  //   eventsCenter = data.eventsCenter;
-  // }
+  
+  init(data) {
+    x = data.x;
+    y = data.y;
+    sprite = data.sprite;
+    eventsCenter = data.eventsCenter;
+  }
 
   preload() {
     this.load.image("admin_BG", admin_BG);
@@ -200,13 +201,13 @@ class SwipeCard extends Phaser.Scene {
           mini_card.setScale(scale);
         }
 
-        // sprite.tint = 0;
-        // eventsCenter.emit("continue_scene_game", {
-        //   x: x,
-        //   y: y,
-        //   mission: "SwipeCard",
-        // });
-        // current_scene.stop("SwipeCard");
+        sprite.tint = 0;
+        eventsCenter.emit("continue_scene_game", {
+          x: x,
+          y: y,
+          mission: "SwipeCard",
+        });
+        current_scene.stop("SwipeCard");
       } else {
         textType = 0;
       }
