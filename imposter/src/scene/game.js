@@ -786,7 +786,7 @@ class Game extends Phaser.Scene {
     map_missions = new MapMissionsExporter("theSkeld");
     export_missions = map_missions.create();
 
-    map_missions.show_mission(this);
+    map_missions.show_mission(this, this.isRole);
 
     nested_divert_power_mission_picked = map_missions.nested_divert_power_mission_picked();
 
@@ -1426,8 +1426,6 @@ class Game extends Phaser.Scene {
       //nếu tới gần vent thì sẽ đi vào vòng if
       this.sound.play("vent", false);
       if (is_vent) {
-        console.log("im vent")
-
         temp.play("hole");
         player.anims.play("jump");
         player.on(

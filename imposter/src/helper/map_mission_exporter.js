@@ -143,7 +143,7 @@ class MapMissionsExporter {
         return mission_picked
     }
 
-    show_mission(scence) {
+    show_mission(scence, isRole) {
         let y = 50;
         if (!this.scence) {
             this.scence = scence;
@@ -177,11 +177,15 @@ class MapMissionsExporter {
             y += 20;
         }
 
-        for (let i = 0; i < this.map_missions_number; i++) {
-            this.draw_rectangle(60 + (i * 70), 25, false)
+        if(isRole != 1)
+        {
+            for (let i = 0; i < this.map_missions_number; i++) {
+                this.draw_rectangle(60 + (i * 70), 25, false)
+            }
+
+            scence.add.text(100, 19, "TOTAL TASK COMPLETED").setScrollFactor(0, 0);
         }
 
-        scence.add.text(100, 19, "TOTAL TASK COMPLETED").setScrollFactor(0, 0);
     }
 
     update_total_mission_complete() {

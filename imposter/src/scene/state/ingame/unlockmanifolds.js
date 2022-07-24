@@ -35,10 +35,13 @@ let ischeck = false;
 let current_scene;
 let eventsCenter;
 let sprite;
+let current_x;
+let current_y;
+
 class UnlockManifolds extends Phaser.Scene {
   init(data) {
-    x = data.x;
-    y = data.y;
+    current_x = data.x;
+    current_y = data.y;
     sprite = data.sprite;
     eventsCenter = data.eventsCenter;
   }
@@ -153,7 +156,7 @@ class UnlockManifolds extends Phaser.Scene {
 
       }
       sprite.tint = 0;
-      eventsCenter.emit("continue_scene_game", { x: x, y: y, mission: "UnlockManifolds" });
+      eventsCenter.emit("continue_scene_game", { x: current_x, y: current_y, mission: "UnlockManifolds" });
       current_scene.stop("Unlock");
     }
   }
