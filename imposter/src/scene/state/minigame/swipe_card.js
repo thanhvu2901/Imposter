@@ -75,7 +75,6 @@ class SwipeCard extends Phaser.Scene {
     card_holder.on(
       "pointerdown",
       function () {
-        console.log("card holder");
         if (mini_card.x != 800 && mini_card.y != 312 && leave == false) {
           target1.x = 280;
           target1.y = 312;
@@ -99,12 +98,10 @@ class SwipeCard extends Phaser.Scene {
     mini_card.on(
       "pointerup",
       function () {
-        console.log("Mouse released");
         if (mini_card.x >= target2.x - 10 && mini_card.y == target2.y) {
           mini_card.x <= target2.x
             ? mini_card.setPosition(target2.x, target2.y)
             : null;
-          console.log("game is finished");
           finished = 1;
         }
         if (
@@ -113,7 +110,6 @@ class SwipeCard extends Phaser.Scene {
           !finished
         ) {
           failed = true;
-          console.log("Type: " + textType);
           mini_card.setPosition(target1.x, target1.y);
         }
         if (finished) {
@@ -207,7 +203,7 @@ class SwipeCard extends Phaser.Scene {
           y: y,
           mission: "SwipeCard",
         });
-        current_scene.stop("SwipeCard");
+        current_scene.stop("swipeCard");
       } else {
         textType = 0;
       }

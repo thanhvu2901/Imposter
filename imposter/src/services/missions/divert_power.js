@@ -1,6 +1,6 @@
 import Base from "./base";
 
-const DIVERT_POWER_OUTPUT_MARKED_X = -468
+const DIVERT_POWER_OUTPUT_MARKED_X = -466
 const DIVERT_POWER_OUTPUT_MARKED_Y = 120
 
 class DivertPower extends Base {

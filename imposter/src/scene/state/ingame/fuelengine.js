@@ -20,11 +20,12 @@ let step = 0
 let light_, light_1;
 let sprite, current_scene;
 let eventsCenter;
+let current_x, current_y;
 
 class FuelEngine extends Phaser.Scene {
   init(data) {
-    x = data.x;
-    y = data.y;
+    current_x = data.x;
+    current_y = data.y;
     sprite = data.sprite;
     eventsCenter = data.eventsCenter;
   }
@@ -37,7 +38,7 @@ class FuelEngine extends Phaser.Scene {
   preload() {
     this.load.image("gas_can", gas_can);
     this.load.image("fuel-button", button);
-    this.load.image("base", base);
+    this.load.image("fuelbase", base);
     this.load.image("wire", wire);
     this.load.image("light", light);
   }
@@ -50,7 +51,7 @@ class FuelEngine extends Phaser.Scene {
     text = this.add.text(10, 10, 'Cursors to move', { font: '16px Courier', fill: '#00ff00' }).setScrollFactor(0);
     r1 = this.add.rectangle(x, y + 150, 300, 0, 0xFFBB35);
     const gas = this.add.image(x, y, "gas_can")
-    const base_ = this.add.image(x + 280, y + 188, "base");
+    const base_ = this.add.image(x + 280, y + 188, "fuelbase");
     button_ = this.add.image(x + 280, y + 188, "fuel-button");
     const wire_ = this.add.image(x + 200, y + 188, "wire");
     light_ = this.add.image(x + 310, y + 120, "light");
@@ -95,7 +96,7 @@ class FuelEngine extends Phaser.Scene {
       light_.setTint('0x04FF00');
 
       sprite.tint = 0;
-      eventsCenter.emit("continue_scene_game", { x: x, y: y, mission: "FuelEngine" });
+      eventsCenter.emit("continue_scene_game", { x: current_x, y: current_y, mission: "FuelEngine" });
       current_scene.stop("Fuel");
     }
   }

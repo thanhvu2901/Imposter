@@ -22,12 +22,12 @@ let eventsCenter;
 // Event_Center.emit("continue_scene_game", {x: x, y: y, mission: "Upload"});
 // current_scene.stop("Upload")
 
-
+let current_x, current_y;
 
 class UploadData extends Phaser.Scene {
   init(data) {
-    x = data.x;
-    y = data.y;
+    current_x = data.x;
+    current_y = data.y;
     sprite = data.sprite;
     eventsCenter = data.eventsCenter;
   }
@@ -162,7 +162,7 @@ class UploadData extends Phaser.Scene {
       //mini game finished 
       if (rect.width == 375) {
         sprite.tint = 0;
-        eventsCenter.emit("continue_scene_game", { x: x, y: y, mission: "Upload" });
+        eventsCenter.emit("continue_scene_game", { x: current_x, y: current_y, mission: "Upload" });
         current_scene.stop("Upload")
       }
     }
