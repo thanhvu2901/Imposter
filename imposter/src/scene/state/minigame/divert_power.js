@@ -42,7 +42,7 @@ class DiverPower extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image("Base", Base);
+        this.load.image("DivertPw_Base", Base);
         this.load.image("Control", Control);
         this.load.image("LeftEngine", LeftEngine);
         this.load.image("RighEngine", RighEngine);
@@ -58,7 +58,7 @@ class DiverPower extends Phaser.Scene {
     create() {
         current_scene = this.scene;
         current_object = this ;
-        this.add.image(512, 384, "Base");
+        this.add.image(512, 384, "DivertPw_Base");
 
         right_engine = this.add.sprite(315, 525, "Control").setInteractive();
         this.input.setDraggable(right_engine);
@@ -260,7 +260,7 @@ class DiverPower extends Phaser.Scene {
             {
                 if(dragY < 460)
                 {
-                    completed_mission_picked = 6;
+                    completed_mission_picked = 7;
                     current_object.add.image(512, 240, "Security");
                 }
             }
@@ -278,93 +278,4 @@ class DiverPower extends Phaser.Scene {
         }
     }
 }
-
-// eventsCenter.emit("continue_scene_game", {x: current_x, y: current_y, mission: "DivertPower"});
-//                             current_scene.stop("divert_power");
-
-
-
-
-
-class Switch {
-    constructor(gameObject, x, y) {
-        this.gameObject = gameObject;
-        this.x = x;
-        this.y = y;
-    }
-
-    perform() {
-        let image = this.gameObject.add.sprite(this.x, this.y, "Control").setInteractive();
-        this.gameObject.input.setDraggable(image);
-        const current = this.gameObject;
-
-        image.on('dragstart', function (pointer) {
-            this.setTint(0xff0000);
-        });
-
-        image.on('drag', function (pointer, dragX, dragY) {
-            if(dragY <= 587 && dragY >= 465)
-            {
-                this.y = dragY;
-            }
-            else {
-                if(dragY < 460) {
-                    const x = Math.floor(pointer.downX);
-                    if (x >= 0 && x < 371) {
-                        completed_mission_picked = 0;
-                        current.add.image(512, 240, "RighEngine");
-                    }
-                    if (x >= 371 && x < 427) {
-                        completed_mission_picked = 1;
-                        current.add.image(512, 240, "LeftEngine");
-                    }
-                    if (x >= 427 && x < 483) {
-                        completed_mission_picked = 2;
-                        current.add.image(512, 240, "Weapons");
-                    }
-                    if (x >= 483 && x < 539) {
-                        completed_mission_picked = 3;
-                        current.add.image(512, 240, "Sheilds");
-                    }
-                    if (x >= 539 && x < 595) {
-                        completed_mission_picked = 4;
-                        current.add.image(512, 240, "Nav");
-                    }
-                    if (x >= 595 && x < 651) {
-                        completed_mission_picked = 5;
-                        current.add.image(512, 240, "Communications");
-                    }
-                    if (x >= 651 && x < 707) {
-                        completed_mission_picked = 6;
-                        current.add.image(512, 240, "Oxi");
-                    }
-                    if (x >=707 && x < 763)
-                    {
-                        completed_mission_picked = 7;
-                        current.add.image(512, 240, "Security");
-                    }                
-                }
-                 else
-                {
-                    current.add.image(512, 240, "Wire")
-                }
-
-                console.log("completed_mission_picked", completed_mission_picked);
-            }
-        });
-
-        image.on('dragend', function (pointer) {
-            this.clearTint();
-        });
-    }
-
-    getY() {
-        return this.y
-    }
-
-    draw_line(x, y,) {
-        this.add.line(0, 384, 450, 0, 770, 0,  0xffff00);
-    }
-}
-
 export default DiverPower
