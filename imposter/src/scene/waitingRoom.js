@@ -1225,7 +1225,9 @@ export default class waitingRoom extends Phaser.Scene {
             );
             break;
         }
-        player_container.add(pants_skin);
+        if(pants_skin){
+          player_container.add(pants_skin);
+        }
         /* *********************CREATING ANIMATIONS FOR SKINS********************* */
         //For skis that don't have mirror animations
         this.anims.create({
@@ -1291,7 +1293,7 @@ export default class waitingRoom extends Phaser.Scene {
             if (pet) {
               pet.destroy();
             }
-            pet = null;
+            pet = null
             pet_type = null;
             break;
           case "pet1":
@@ -1427,7 +1429,9 @@ export default class waitingRoom extends Phaser.Scene {
             pet_type = TWITCH;
             break;
         }
-        player_container.add(pet);
+        if(pet){
+          player_container.add(pet);
+        }
       }
 
       //send color player change
