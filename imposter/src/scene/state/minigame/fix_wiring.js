@@ -140,11 +140,6 @@ class FixWiring extends Phaser.Scene {
     }
     update() {
 
-        text.setText([
-            'screen x: ' + this.input.x,
-            'screen y: ' + this.input.y,
-
-        ])
 
         // console.log(graphics[0]);
         //console.log(endreg[0].color);
@@ -163,7 +158,7 @@ class FixWiring extends Phaser.Scene {
             // console.log('done');
             // text3 = this.add.text(317, 327, 'TASK COMPLETE!!', { font: '50px Courier', fill: '#FFFFFF' }).setDepth(1);
             sprite.tint = 0;
-            eventsCenter.emit("continue_scene_game", {x: x, y: y, mission: "FixWiring"});
+            eventsCenter.emit("continue_scene_game", { x: x, y: y, mission: "FixWiring" });
             current_scene.stop("fixWiring");
 
         }

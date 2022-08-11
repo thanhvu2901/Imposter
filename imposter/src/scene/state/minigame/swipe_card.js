@@ -36,7 +36,7 @@ class SwipeCard extends Phaser.Scene {
       key: "swipeCard",
     });
   }
-  
+
   init(data) {
     x = data.x;
     y = data.y;
@@ -143,7 +143,7 @@ class SwipeCard extends Phaser.Scene {
       .setInteractive({ useHandCursor: true });
 
     closeBtn.on("pointerdown", () => {
-      this.scene.stop("SwipeCard");
+      this.scene.stop("swipeCard");
     });
   }
 
