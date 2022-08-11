@@ -19,7 +19,7 @@ class MapMissionsExporter {
     constructor(map) {
         this.map = map;
         this.missions = this.missions();
-        this.map_missions_number = 5;
+        this.map_missions_number = 1;
         this.total_missions_completed = 0;
         this.list_missions_completed = [];
         this.nested_divert_power_picked = null;

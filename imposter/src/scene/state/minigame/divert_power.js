@@ -60,6 +60,12 @@ class DiverPower extends Phaser.Scene {
         current_object = this ;
         this.add.image(512, 384, "DivertPw_Base");
 
+        let closeBtn = this.add.image(830, 135, 'closeBtn').setInteractive({ useHandCursor: true })
+
+        closeBtn.on('pointerdown', () => {
+            this.scene.stop('divert_power')
+        })
+
         right_engine = this.add.sprite(315, 525, "Control").setInteractive();
         this.input.setDraggable(right_engine);
 

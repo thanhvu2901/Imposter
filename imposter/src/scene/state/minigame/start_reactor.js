@@ -75,6 +75,12 @@ class StartReactor extends Phaser.Scene {
 
     }
     async create() {
+        let closeBtn = this.add.image(830, 135, 'closeBtn').setInteractive({ useHandCursor: true })
+
+        closeBtn.on('pointerdown', () => {
+            this.scene.stop('startReactor')
+        })
+
         const current_scene = this.scene;
         let check = [0, 1, 2, 3, 4, 5, 6, 7, 8]
         let x = this.game.renderer.width

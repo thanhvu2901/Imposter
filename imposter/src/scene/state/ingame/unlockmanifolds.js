@@ -64,7 +64,7 @@ class UnlockManifolds extends Phaser.Scene {
     this.load.image("Button9", Button09);
     this.load.image("Button10", Button10);
     this.load.image("Glass", Glass);
-    this.load.image("Wire", Wire);
+    this.load.image("unlock-Wire", Wire);
   }
 
   create() {
@@ -122,7 +122,7 @@ class UnlockManifolds extends Phaser.Scene {
 
     }
     glass = this.add.image(x, y, "Glass")
-    wire = this.add.image(x - 210, y + 130, "Wire")
+    wire = this.add.image(x - 210, y + 130, "unlock-Wire")
 
 
 
