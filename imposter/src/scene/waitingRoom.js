@@ -944,7 +944,7 @@ export default class waitingRoom extends Phaser.Scene {
             );
             hat="hat012"
             break;
-          case "hat013":
+          case "hat13":
             if (hat_skin) {
               hat_skin.destroy();
             }
@@ -1029,8 +1029,9 @@ export default class waitingRoom extends Phaser.Scene {
             hat="hat019"
             break;
         }
-        
-        player_container.add(hat_skin);
+        if(hat_skin){
+          player_container.add(hat_skin);
+        }
       }
 
       if (this.playerChangedSkin.trouser) {
@@ -1152,7 +1153,7 @@ export default class waitingRoom extends Phaser.Scene {
               `${pants_type}_Idle.png`
             );
             break;
-          case "trouser10 ":
+          case "trouser10":
             if (pants_type) {
               pants_skin.destroy();
             }
