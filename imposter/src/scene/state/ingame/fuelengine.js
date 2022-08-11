@@ -81,12 +81,6 @@ class FuelEngine extends Phaser.Scene {
   }
 
   update() {
-    text.setText([
-      'screen x: ' + this.input.x,
-      'screen y: ' + this.input.y,
-
-
-    ]);
     if (ispressed == true && isfull == false) {
       r1.height -= 5;
     }

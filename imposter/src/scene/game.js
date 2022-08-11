@@ -147,7 +147,8 @@ let colorArr = [
   PLAYER_PINK]
 let otherPlayer_container = new Array();
 let nested_divert_power_mission_picked;
-
+let total_mission_number;
+let total_number_of_player_mission_completed = 0;
 
 class Game extends Phaser.Scene {
   constructor() {
@@ -210,7 +211,6 @@ class Game extends Phaser.Scene {
   }
 
   create() {
-
     this.socket.emit("send_role", this.socket.id, this.isRole, this.textInput)
     this.socket.on("end_game", (winner) => {
 
@@ -254,9 +254,20 @@ class Game extends Phaser.Scene {
         map_missions.update_list_missions_completed(list_missions_completed);
         player_container.x = current_x + 2;
         player_container.y = current_y + 2;
+        if(total_missions_completed == total_mission_number) {
+          this.socket.emit("finish_task")
+        }
       }
     });
 
+    this.socket.on("current_player_finish_task", (total_player_complete) => {
+      total_number_of_player_mission_completed = total_player_complete;
+      if(total_number_of_player_mission_completed == otherPlayerId.length) {
+        this.socket.emit("all_player_finish_task");
+        this.scene.launch("end_game", { num: 2, socket: this.socket })
+      }
+    })
+  
     player_container = this.add.container(115, -750).setDepth(0.6);
 
 
@@ -783,12 +794,13 @@ class Game extends Phaser.Scene {
       });
     }
     //initialize missions of this map
-    map_missions = new MapMissionsExporter("theSkeld");
-    export_missions = map_missions.create();
-
-    map_missions.show_mission(this, this.isRole);
-
-    nested_divert_power_mission_picked = map_missions.nested_divert_power_mission_picked();
+    if(this.isRole != 1) { 
+      map_missions = new MapMissionsExporter("theSkeld");
+      total_mission_number = map_missions.map_missions_number;
+      export_missions = map_missions.create();
+      map_missions.show_mission(this, this.isRole);
+      nested_divert_power_mission_picked = map_missions.nested_divert_power_mission_picked();
+    }
 
     this.state.roomKey = this.textInput;
 
@@ -845,7 +857,8 @@ class Game extends Phaser.Scene {
           strokeThickness: 3,
         }).setDepth(2)
 
-        otherNames.push(temp)
+        otherNames.push(temp);
+        // console.log("number of players", otherPlayerId.length)
       }
     });
     let count = 0
