@@ -25,10 +25,10 @@ init(data){
     count=0
     switch (this.num) {
         case 1:
-        this.add.image(-50,10,'win').setDepth(0).setOrigin(0,0).setScale(1.05)
+        this.add.image(-250,2.5,'win').setDepth(0).setOrigin(0,0).setScale(1.25)
             break;
         case 2:
-            this.add.image(-50,10,'lose').setDepth(0).setOrigin(0,0).setScale(1.05)
+            this.add.image(-150,2.5,'lose').setDepth(0).setOrigin(0,0).setScale(1.1)
             break;
         case 3:
            

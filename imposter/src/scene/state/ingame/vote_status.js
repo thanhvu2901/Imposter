@@ -52,16 +52,17 @@ init(data){
 
   update() {
     count++
-    if(count%2===0&&count>40){
+    if(count%1===0&&count>40){
         count_1++
     }
+    
 if(count_1<sample.length+1){
     text.setText(sample.slice(0,count_1))
 }
 ejected.rotation+=0.03
 ejected.x+=2
 
-if(count==200){
+if(count==150){
   this.socket.emit("check_",this.roomKey)
     this.scene.stop()
 }

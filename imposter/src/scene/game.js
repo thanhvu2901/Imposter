@@ -1533,7 +1533,7 @@ class Game extends Phaser.Scene {
       otherPlayer_container[index].x = x;
       otherPlayer_container[index].y = y;
       otherNames[index].x = x - 80
-      otherNames[index].y = y - 20
+      otherNames[index].y = y + 50
       otherPlayer[index].moving = true;
 
       if (otherPlayer[index].moving && !otherPlayer[index].anims.isPlaying) {
