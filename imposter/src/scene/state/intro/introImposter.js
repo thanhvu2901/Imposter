@@ -15,7 +15,7 @@ class introImposter extends Phaser.Scene {
     }
     create() {
         var sprite = this.add.rectangle(530, 350, 1090, 180, 0x00FFFF).setAlpha(0)
-        let text = this.add.text(350, 230, 'YOU ARE ImposterMATE!', { fontSize: '40px' }).setAlpha(0)
+        let text = this.add.text(450, 230, 'YOU ARE ImposterMATE!', { fontSize: '40px' }).setAlpha(0)
         //chạy intro logo
         let audio = this.sound.add('intro', {})
         setTimeout(audio.play(), 1000)
@@ -32,7 +32,7 @@ class introImposter extends Phaser.Scene {
             alphaTopLeft: { value: 1, duration: 5000, ease: 'Power1' },
             alphaBottomRight: { value: 1, duration: 5000, ease: 'Power1' },
             // onComplete: function () {
-         
+
             //     // this.run();
             //     this.load.sc
             // }

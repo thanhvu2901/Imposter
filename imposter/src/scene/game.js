@@ -254,20 +254,26 @@ class Game extends Phaser.Scene {
         map_missions.update_list_missions_completed(list_missions_completed);
         player_container.x = current_x + 2;
         player_container.y = current_y + 2;
-        if(total_missions_completed == total_mission_number) {
-          this.socket.emit("finish_task")
+        if (total_missions_completed == total_mission_number) {
+          this.socket.emit("finish_task", this.state.roomKey)
         }
       }
     });
 
     this.socket.on("current_player_finish_task", (total_player_complete) => {
       total_number_of_player_mission_completed = total_player_complete;
-      if(total_number_of_player_mission_completed == otherPlayerId.length) {
+      if (total_number_of_player_mission_completed == otherPlayerId.length) {
+        console.log('endgame')
         this.socket.emit("all_player_finish_task");
-        this.scene.launch("end_game", { num: 2, socket: this.socket })
+        if (this.isRole == 1) {
+          this.scene.launch("end_game", { num: 2, socket: this.socket })
+        } else {
+          this.scene.launch("end_game", { num: 1, socket: this.socket })
+        }
+
       }
     })
-  
+
     player_container = this.add.container(115, -750).setDepth(0.6);
 
 
@@ -794,7 +800,7 @@ class Game extends Phaser.Scene {
       });
     }
     //initialize missions of this map
-    if(this.isRole != 1) { 
+    if (this.isRole != 1) {
       map_missions = new MapMissionsExporter("theSkeld");
       total_mission_number = map_missions.map_missions_number;
       export_missions = map_missions.create();
