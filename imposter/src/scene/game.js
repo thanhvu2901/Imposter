@@ -550,7 +550,7 @@ class Game extends Phaser.Scene {
             `${pants_type}_Idle.png`
           );
           break;
-        case "trouser10 ":
+        case "trouser10":
           pants_type = SECGUARD;
           pants_skin = this.physics.add.sprite(
             player.x + 0.75,
