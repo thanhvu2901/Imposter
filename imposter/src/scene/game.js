@@ -1635,13 +1635,13 @@ class Game extends Phaser.Scene {
             roomId: this.state.roomKey,
           });
           this.socket.emit("check_", this.textInput)
-          // otherPlayer = otherPlayer.filter((player) => {
-          //   return player !== playerKilled;
-          // });
+          otherPlayer = otherPlayer.filter((player) => {
+            return player !== playerKilled;
+          });
           // emit socket id player killed
-          // otherPlayerId = otherPlayerId.filter((player) => {
-          //   return player !== otherPlayerId[indexKill];
-          // });
+          otherPlayerId = otherPlayerId.filter((player) => {
+            return player !== otherPlayerId[indexKill];
+          });
           //"emitted");
           canKill = false;
         } else {
