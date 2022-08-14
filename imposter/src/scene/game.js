@@ -1546,9 +1546,19 @@ class Game extends Phaser.Scene {
 
         //player.stop("player-idle")
         alive = false;
+
+        player.setPosition(  player_container.x
+          , player_container.y)
+    
         player_container.removeAll();
-        pants_skin.destroy();
-        hat_skin.destroy();
+       
+        !pants_skin ??  pants_skin.destroy();
+        
+        
+         !hat_skin ?? hat_skin.destroy();
+        
+
+      
         this.cameras.main.startFollow(player, true);
         player.anims.play("player-ghost", true);
       } else {
@@ -1566,7 +1576,6 @@ class Game extends Phaser.Scene {
     });
   }
   update() {
-
     var wasTouching = !player_container.body.wasTouching.none;
     // If you want 'touching or embedded' then use:
     var touching = !player_container.body.touching.none || player_container.body.embedded;
