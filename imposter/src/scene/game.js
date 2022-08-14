@@ -149,7 +149,6 @@ let otherPlayer_container = new Array();
 let nested_divert_power_mission_picked;
 let total_mission_number;
 let total_number_of_player_mission_completed = 0;
-
 class Game extends Phaser.Scene {
   constructor() {
     super({ key: "game" });
@@ -605,7 +604,9 @@ class Game extends Phaser.Scene {
           );
           break;
       }
+      console.log(pants_skin)
       player_container.add(pants_skin);
+     
       /* *********************CREATING ANIMATIONS FOR SKINS********************* */
       //For skis that don't have mirror animations
       this.anims.create({
@@ -868,7 +869,7 @@ class Game extends Phaser.Scene {
             String(temp_hat),
             0
           );
-          otherPlayer_container[stt].add(otherPlayer_hat_skin);
+          otherPlayer_container[index].add(otherPlayer_hat_skin);
         }
         if (temp_pet) {
           let otherPlayer_pet = this.physics.add.sprite(
@@ -876,7 +877,7 @@ class Game extends Phaser.Scene {
             otherPlayer[index].y + 10,
             String(temp_pet),
           );
-          otherPlayer_container[stt].add(otherPlayer_pet);
+          otherPlayer_container[index].add(otherPlayer_pet);
         }
         if (temp_pants) {
           let otherPlayer_pants = this.physics.add.sprite(
@@ -885,8 +886,62 @@ class Game extends Phaser.Scene {
             `${temp_pants}_pants`,
             `${temp_pants}_Idle.png`
           );
-          otherPlayer_container[stt].add(otherPlayer_pants);
+          otherPlayer_container[index].add(otherPlayer_pants);
+
+          this.anims.create({
+            key: `${temp_pants}_walk`,
+            frames: this.anims.generateFrameNames(`${temp_pants}_pants`, {
+              start: 1,
+              end: 12,
+              prefix: `${temp_pants}_Walk`,
+              suffix: ".png",
+            }),
+            repeat: -1,
+            frameRate: 24,
+          });
+    
+          this.anims.create({
+            key: `${temp_pants}_idle`,
+            frames: [
+              {
+                key: `${temp_pants}_pants`,
+                frame: `${temp_pants}_Idle.png`,
+              },
+            ],
+          });
+              if (
+                temp_pants == POLICE ||
+                temp_pants == ARCHAEOLOGIST ||
+                temp_pants == SECGUARD ||
+                temp_pants == WALL ||
+                temp_pants == CCC
+              ) {
+    
+                this.anims.create({
+                  key: `${temp_pants}_walkMirror`,
+                  frames: this.anims.generateFrameNames(`${temp_pants}_pants`, {
+                    start: 1,
+                    end: 12,
+                    prefix: `${temp_pants}_WalkMirror`,
+                    suffix: ".png",
+                  }),
+                  repeat: -1,
+                  frameRate: 24,
+                });
+    
+                this.anims.create({
+                  key: `${temp_pants}_idleMirror`,
+                  frames: [
+                    {
+                      key: `${temp_pants}_pants`,
+                      frame: `${temp_pants}_IdleMirror.png`,
+                    },
+                  ],
+                });
+              }
         }
+
+
         this.physics.add.existing(otherPlayer_container[index]);
         count++
       }
@@ -1469,32 +1524,59 @@ class Game extends Phaser.Scene {
 
     })
     let _this = this
-    this.socket.on("move", ({ x, y, playerId, color }) => {
+    this.socket.on("move", ({ x, y, playerId, color ,hat,pet,pants}) => {
 
 
       let index = otherPlayerId.findIndex((Element) => Element == playerId);
 
-
+console.log(hat,pet,pants)
       //FLIP MIRROR
       if (otherPlayer_container[index].x > x) {
         otherPlayer[index].flipX = true;
       } else if (otherPlayer_container[index].x < x) {
         otherPlayer[index].flipX = false;
       }
-      let pet_name = undefined
-      if (otherPlayer_container[index].list[1] != undefined) {
-        pet_name = otherPlayer_container[index].list[1].texture.key
-      }
+      otherPlayer_container[index].list.forEach(element => {
+  
+        if(element.texture.key.includes("hat")){
+          if(otherPlayer[index].flipX ==true){
+            element.scaleX=-1
+          }else{
+            element.scaleX=1
+          }
+        //  element.play(`${hat}-walk`, true)
+        }else if(element.texture.key.includes("pants")){
 
-      if (pet_name != undefined) {
-        if (otherPlayer[index].flipX == true) {
-          otherPlayer_container[index].list[1].scaleX = -1
-        } else {
-          otherPlayer_container[index].list[1].scaleX = 1
+          if(otherPlayer[index].flipX ==true){
+
+            if (
+              pants == POLICE ||
+              pants == ARCHAEOLOGIST ||
+              pants == SECGUARD ||
+              pants == WALL ||
+              pants == CCC
+            ){
+             element.play(`${pants}_walkMirror`, true)
+            }else{
+              element.scaleX=-1
+              element.play(`${pants}_walk`, true)
+            }
+
+          }else{
+
+            element.play(`${pants}_walk`, true)
+            element.scaleX=1
+          }
+        }else if(!element.texture.key.includes("player")){
+          if(otherPlayer[index].flipX ==true){
+            element.scaleX=-1
+          }else{
+            element.scaleX=1
+          }
+          element.play(`${pet}-walk`, true)
         }
-        otherPlayer_container[index].list[1].play(`${pet_name}-walk`, true)
 
-      }
+      });
 
       //UPDATE POSITION
       otherPlayer_container[index].x = x;
@@ -1513,18 +1595,57 @@ class Game extends Phaser.Scene {
       }
     });
 
-    this.socket.on("moveEnd", ({ playerId, color }) => {
+    this.socket.on("moveEnd", ({ playerId, color,x,y,hat,pet,pants }) => {
       let index = otherPlayerId.findIndex((Element) => Element == playerId);
       otherPlayer[index].moving = false;
       otherPlayer[index].play(`${color}-idle`);
-      let pet_name = undefined
-      if (otherPlayer_container[index].list[1] != undefined) {
-        pet_name = otherPlayer_container[index].list[1].texture.key
+      let isLeft=true
+     if ( otherPlayer_container[index].x > x) {
+      isLeft = true;
+    } else if ( otherPlayer_container[index].x < x) {
+      isLeft = false;
+    }
+
+    otherPlayer_container[index].list.forEach(element => {
+  
+      if(element.texture.key.includes("hat")){
+        if(otherPlayer[index].flipX ==true){
+          element.scaleX=-1
+        }else{
+          element.scaleX=1
+        }
+     //   element.play(`${hat}-idle`, true)
+      }else if(element.texture.key.includes("pants")){
+        if (otherPlayer[index].flipX ==true) {
+          if (
+            pants == POLICE ||
+            pants == ARCHAEOLOGIST ||
+            pants == SECGUARD ||
+            pants == WALL ||
+            pants == CCC
+          ){
+
+            isLeft == true
+          ?   element.play(`${pants}_idleMirror`)
+          :   element.play(`${pants}_idle`);
+          }else{
+            element.play(`${pants}_idle`);
+          }
+
+        } else {
+
+          element.anims.play(`${pants}_idle`);
+        }
+      }else if(!element.texture.key.includes("player")){
+        if(otherPlayer[index].flipX ==true){
+          element.scaleX=-1
+        }else{
+          element.scaleX=1
+        }
+        element.play(`${pet}-idle`, true)
       }
 
-      if (pet_name != undefined) {
-        otherPlayer_container[index].list[1].play(`${pet_name}-idle`)
-      }
+    });
 
       if (otherPlayer[index].moving) {
         otherPlayer[index].play(`${color}-walk`);
@@ -1550,13 +1671,14 @@ class Game extends Phaser.Scene {
         player.setPosition(  player_container.x
           , player_container.y)
     
-        player_container.removeAll();
+          player_container.removeAll()
        
         !pants_skin ??  pants_skin.destroy();
         
         
          !hat_skin ?? hat_skin.destroy();
-        
+         if(pet!=undefined){ pet.destroy();}
+      console.log("meomeo",hat_skin,pants_skin,pet)
 
       
         this.cameras.main.startFollow(player, true);
@@ -1564,6 +1686,15 @@ class Game extends Phaser.Scene {
       } else {
         let index = otherPlayerId.findIndex((Element) => Element == playerId);
         otherPlayer[index].anims.play(`${colorKill}-dead`, true);
+        otherPlayer_container[index].each((element)=>{
+          if(element.texture.key.includes("pants")){
+            otherPlayer_container[index].remove(element)
+          }
+          if(element.texture.key.includes("hat")){
+            otherPlayer_container[index].remove(element)
+          }
+
+        })
         let temp = this.add.rectangle(
           otherPlayer_container[index].x,
           otherPlayer_container[index].y,
@@ -1574,8 +1705,10 @@ class Game extends Phaser.Scene {
         this.physics.add.overlap(player_container, temp, report);
       }
     });
+  
   }
   update() {
+ 
     var wasTouching = !player_container.body.wasTouching.none;
     // If you want 'touching or embedded' then use:
     var touching = !player_container.body.touching.none || player_container.body.embedded;
@@ -1599,6 +1732,16 @@ class Game extends Phaser.Scene {
 
           this.sound.play("killAudio", false);
           let killId = otherPlayerId[indexKill];
+          otherPlayer_container[indexKill].each((element)=>{
+            console.log(element)
+            if(element.texture.key.includes("pants")){
+              otherPlayer_container[indexKill].remove(element)
+            }
+            if(element.texture.key.includes("hat")){
+              otherPlayer_container[indexKill].remove(element)
+            }
+
+          })
           deadplayer.push(killId);
           let colorKill = Object(this.Info.players[killId]).color;
           playerKilled.anims.play(`${colorKill}-dead`, true);

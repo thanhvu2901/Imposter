@@ -537,8 +537,59 @@ export default class waitingRoom extends Phaser.Scene {
           `${temp_pants}_Idle.png`
         );
         otherPlayer_container[index].add(otherPlayer_pants);
+        this.anims.create({
+          key: `${temp_pants}_walk`,
+          frames: this.anims.generateFrameNames(`${temp_pants}_pants`, {
+            start: 1,
+            end: 12,
+            prefix: `${temp_pants}_Walk`,
+            suffix: ".png",
+          }),
+          repeat: -1,
+          frameRate: 24,
+        });
+  
+        this.anims.create({
+          key: `${temp_pants}_idle`,
+          frames: [
+            {
+              key: `${temp_pants}_pants`,
+              frame: `${temp_pants}_Idle.png`,
+            },
+          ],
+        });
+            if (
+              temp_pants == POLICE ||
+              temp_pants == ARCHAEOLOGIST ||
+              temp_pants == SECGUARD ||
+              temp_pants == WALL ||
+              temp_pants == CCC
+            ) {
+  
+              this.anims.create({
+                key: `${temp_pants}_walkMirror`,
+                frames: this.anims.generateFrameNames(`${temp_pants}_pants`, {
+                  start: 1,
+                  end: 12,
+                  prefix: `${temp_pants}_WalkMirror`,
+                  suffix: ".png",
+                }),
+                repeat: -1,
+                frameRate: 24,
+              });
+  
+              this.anims.create({
+                key: `${temp_pants}_idleMirror`,
+                frames: [
+                  {
+                    key: `${temp_pants}_pants`,
+                    frame: `${temp_pants}_IdleMirror.png`,
+                  },
+                ],
+              });
+            }
       }
-
+    
 
     })
     this.socket.on("currentPlayers", ({ players, numPlayers, roomInfo }) => {
@@ -1449,7 +1500,7 @@ export default class waitingRoom extends Phaser.Scene {
       });
     });
 
-    this.socket.on("moveW", ({ x, y, playerId, color }) => {
+    this.socket.on("moveW", ({ x, y, playerId, color ,hat,pet,pants}) => {
 
 
       let index = otherPlayerId.findIndex((Element) => Element == playerId);
@@ -1460,21 +1511,47 @@ export default class waitingRoom extends Phaser.Scene {
       } else if (otherPlayer_container[index].x < x) {
         otherPlayer[index].flipX = false;
       }
-      let pet_name = undefined
-      if (otherPlayer_container[index].list[1] != undefined) {
-        pet_name = otherPlayer_container[index].list[1].texture.key
-      }
+      otherPlayer_container[index].list.forEach(element => {
+    
+        if(element.texture.key.includes("hat")){
+          if(otherPlayer[index].flipX ==true){
+            element.scaleX=-1
+          }else{
+            element.scaleX=1
+          }
+       //   element.play(`${hat}-walk`, true)
+        }else if(element.texture.key.includes("pants")){
 
-      if (pet_name != undefined) {
-        if (otherPlayer[index].flipX == true) {
-          otherPlayer_container[index].list[1].scaleX = -1
-        } else {
-          otherPlayer_container[index].list[1].scaleX = 1
+          if(otherPlayer[index].flipX ==true){
+
+            if (
+              pants == POLICE ||
+              pants == ARCHAEOLOGIST ||
+              pants == SECGUARD ||
+              pants == WALL ||
+              pants == CCC
+            ){
+              element.play(`${pants}_walkMirror`, true)
+            }else{
+              element.scaleX=-1
+              element.play(`${pants}_walk`, true)
+            }
+
+          }else{
+
+            element.play(`${pants}_walk`, true)
+            element.scaleX=1
+          }
+        }else if(!element.texture.key.includes("player")){
+          if(otherPlayer[index].flipX ==true){
+            element.scaleX=-1
+          }else{
+            element.scaleX=1
+          }
+          element.play(`${pet}-walk`, true)
         }
-        otherPlayer_container[index].list[1].play(`${pet_name}-walk`, true)
 
-      }
-
+      });
       //UPDATE POSITION
       otherPlayer_container[index].x = x;
       otherPlayer_container[index].y = y;
@@ -1490,19 +1567,56 @@ export default class waitingRoom extends Phaser.Scene {
       }
     });
 
-    this.socket.on("moveEndW", ({ playerId, color }) => {
+    this.socket.on("moveEndW", ({ playerId, color ,x,y,hat,pet,pants}) => {
       let index = otherPlayerId.findIndex((Element) => Element == playerId);
       otherPlayer[index].moving = false;
       otherPlayer[index].play(`${color}-idle`);
-      let pet_name = undefined
-      if (otherPlayer_container[index].list[1] != undefined) {
-        pet_name = otherPlayer_container[index].list[1].texture.key
+      let isLeft=true
+     if ( otherPlayer_container[index].x > x) {
+      isLeft = true;
+    } else if ( otherPlayer_container[index].x < x) {
+      isLeft = false;
+    }
+
+    otherPlayer_container[index].list.forEach(element => {
+   
+      if(element.texture.key.includes("hat")){
+        if(otherPlayer[index].flipX ==true){
+          element.scaleX=-1
+        }else{
+          element.scaleX=1
+        }
+      }else if(element.texture.key.includes("pants")){
+        if (otherPlayer[index].flipX ==true) {
+          if (
+            pants == POLICE ||
+            pants == ARCHAEOLOGIST ||
+            pants == SECGUARD ||
+            pants == WALL ||
+            pants == CCC
+          ){
+
+            isLeft == true
+          ?   element.play(`${pants}_idleMirror`)
+          :  element.play(`${pants}_idle`);
+          }else{
+            element.play(`${pants}_idle`);
+          }
+
+        } else {
+
+        element.anims.play(`${pants}_idle`);
+        }
+      }else if(!element.texture.key.includes("player")){
+        if(otherPlayer[index].flipX ==true){
+          element.scaleX=-1
+        }else{
+          element.scaleX=1
+        }
+        element.play(`${pet}-idle`, true)
       }
 
-      if (pet_name != undefined) {
-        otherPlayer_container[index].list[1].play(`${pet_name}-idle`)
-      }
-
+    });
       if (otherPlayer[index].moving) {
         otherPlayer[index].play(`${color}-walk`);
       } else if (
@@ -1619,7 +1733,8 @@ export default class waitingRoom extends Phaser.Scene {
       player.movedLastFrame = true;
     } else {
       if (player.movedLastFrame) {
-        this.socket.emit("moveEndW", { roomId: this.state.roomKey });
+        this.socket.emit("moveEndW", { roomId: this.state.roomKey , x: player_container.x,
+          y: player_container.y});
       }
       player.movedLastFrame = false;
     }
