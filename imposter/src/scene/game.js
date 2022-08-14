@@ -814,38 +814,6 @@ class Game extends Phaser.Scene {
 
 
 
-    colorArr.forEach(element => {
-
-      this.anims.create({
-        key: `${element}-walk`,
-        frames: this.anims.generateFrameNames(element, {
-          start: 1,
-          end: 12,
-          prefix: "Walk",
-          suffix: ".png",
-        }),
-        repeat: -1,
-        frameRate: 24,
-      });
-      this.anims.create({
-        key: `${element}-idle`,
-        frames: [{ key: element, frame: "idle.png" }],
-      });
-
-      this.anims.create({
-        key: `${element}-dead`,
-        frames: this.anims.generateFrameNames(element, {
-          start: 1,
-          end: 42,
-          prefix: "Dead",
-          suffix: ".png",
-        }),
-        repeat: 0,
-        frameRate: 24,
-      });
-
-
-    });
 
     // tạo theo số lượng other player vào
 
@@ -1012,8 +980,7 @@ class Game extends Phaser.Scene {
         prefix: "ghost00",
         suffix: ".png",
       }),
-
-      repeat: 0,
+      repeat: -1,
       frameRate: 12,
     });
 
@@ -1582,7 +1549,7 @@ class Game extends Phaser.Scene {
         player.anims.play("player-ghost", true);
       } else {
         let index = otherPlayerId.findIndex((Element) => Element == playerId);
-        otherPlayer[index].anims.play(`${colorKill}-dead`, false);
+        otherPlayer[index].anims.play(`${colorKill}-dead`, true);
         let temp = this.add.rectangle(
           otherPlayer_container[index].x,
           otherPlayer_container[index].y,
@@ -1621,7 +1588,7 @@ class Game extends Phaser.Scene {
           let killId = otherPlayerId[indexKill];
           deadplayer.push(killId);
           let colorKill = Object(this.Info.players[killId]).color;
-          playerKilled.anims.play(`${colorKill}-dead`, false);
+          playerKilled.anims.play(`${colorKill}-dead`, true);
           let temp = this.add.rectangle(
             otherPlayer_container[indexKill].x,
             otherPlayer_container[indexKill].y,
@@ -1635,14 +1602,7 @@ class Game extends Phaser.Scene {
             roomId: this.state.roomKey,
           });
           this.socket.emit("check_", this.textInput)
-          // otherPlayer = otherPlayer.filter((player) => {
-          //   return player !== playerKilled;
-          // });
-          // // emit socket id player killed
-          // otherPlayerId = otherPlayerId.filter((player) => {
-          //   return player !== otherPlayerId[indexKill];
-          // });
-          //"emitted");
+
           canKill = false;
         } else {
 

@@ -168,7 +168,7 @@ export default class waitingRoom extends Phaser.Scene {
           prefix: "Dead",
           suffix: ".png",
         }),
-        repeat: -1,
+        repeat: 0,
         frameRate: 24,
       });
 
@@ -486,17 +486,17 @@ export default class waitingRoom extends Phaser.Scene {
           // let player= this.numberPlayer;
           let roomId = this.textInput;
           this.socket.emit("letgo", { roomId, imposter, player });
-      
+
 
         });
       }
     });
     //update skin current in room
-    this.socket.on('leave_room',(id)=>{
+    this.socket.on('leave_room', (id) => {
       let index = otherPlayerId.findIndex((Element) => Element == id)
       otherPlayer[index].destroy();
       otherPlayer_container[index].destroy();
-      
+
     })
     this.socket.on('changeSkin', ({ color, hat, pet, pants, id }) => {
       let index = otherPlayerId.findIndex((Element) => Element == id)
@@ -671,7 +671,7 @@ export default class waitingRoom extends Phaser.Scene {
 
 
       stt += 1;
-  
+
     });
 
 
@@ -692,7 +692,7 @@ export default class waitingRoom extends Phaser.Scene {
       // ********anouning ROLE****//
 
       //*****start game */
- 
+
       // this.scene.launch('game', { socket: this.socket, textInput: this.textInput, numPlayers: numPlayers, idPlayers: idPlayers })
       this.scene.launch("introCrew", {
         socket: this.socket,
@@ -798,7 +798,7 @@ export default class waitingRoom extends Phaser.Scene {
               "hat00",
               0
             );
-            hat="hat00"
+            hat = "hat00"
             break;
           case "hat1":
             if (hat_skin) {
@@ -810,7 +810,7 @@ export default class waitingRoom extends Phaser.Scene {
               "hat01",
               0
             );
-            hat="hat01"
+            hat = "hat01"
             break;
           case "hat2":
             if (hat_skin) {
@@ -822,7 +822,7 @@ export default class waitingRoom extends Phaser.Scene {
               "hat02",
               0
             );
-            hat="hat02"
+            hat = "hat02"
             break;
           case "hat3":
             if (hat_skin) {
@@ -834,7 +834,7 @@ export default class waitingRoom extends Phaser.Scene {
               "hat03",
               0
             );
-            hat="hat03"
+            hat = "hat03"
             break;
           case "hat4":
             if (hat_skin) {
@@ -846,7 +846,7 @@ export default class waitingRoom extends Phaser.Scene {
               "hat04",
               0
             );
-            hat="hat04"
+            hat = "hat04"
             break;
           case "hat5":
             if (hat_skin) {
@@ -858,7 +858,7 @@ export default class waitingRoom extends Phaser.Scene {
               "hat05",
               0
             );
-            hat="hat05"
+            hat = "hat05"
             break;
           case "hat6":
             if (hat_skin) {
@@ -870,7 +870,7 @@ export default class waitingRoom extends Phaser.Scene {
               "hat06",
               0
             );
-            hat="hat06"
+            hat = "hat06"
             break;
           case "hat7":
             if (hat_skin) {
@@ -882,7 +882,7 @@ export default class waitingRoom extends Phaser.Scene {
               "hat07",
               0
             );
-            hat="hat07"
+            hat = "hat07"
             break;
           case "hat8":
             if (hat_skin) {
@@ -894,7 +894,7 @@ export default class waitingRoom extends Phaser.Scene {
               "hat08",
               0
             );
-            hat="hat08"
+            hat = "hat08"
             break;
           case "hat9":
             if (hat_skin) {
@@ -906,7 +906,7 @@ export default class waitingRoom extends Phaser.Scene {
               "hat09",
               0
             );
-            hat="hat09"
+            hat = "hat09"
             break;
           case "hat10":
             if (hat_skin) {
@@ -918,7 +918,7 @@ export default class waitingRoom extends Phaser.Scene {
               "hat010",
               0
             );
-            hat="hat010"
+            hat = "hat010"
             break;
           case "hat11":
             if (hat_skin) {
@@ -930,7 +930,7 @@ export default class waitingRoom extends Phaser.Scene {
               "hat011",
               0
             );
-            hat="hat011"
+            hat = "hat011"
             break;
           case "hat12":
             if (hat_skin) {
@@ -942,7 +942,7 @@ export default class waitingRoom extends Phaser.Scene {
               "hat012",
               0
             );
-            hat="hat012"
+            hat = "hat012"
             break;
           case "hat13":
             if (hat_skin) {
@@ -954,7 +954,7 @@ export default class waitingRoom extends Phaser.Scene {
               "hat013",
               0
             );
-            hat="hat013"
+            hat = "hat013"
             break;
           case "hat14":
             if (hat_skin) {
@@ -966,7 +966,7 @@ export default class waitingRoom extends Phaser.Scene {
               "hat014",
               0
             );
-            hat="hat014"
+            hat = "hat014"
             break;
           case "hat15":
             if (hat_skin) {
@@ -977,8 +977,8 @@ export default class waitingRoom extends Phaser.Scene {
               player.y - 25,
               "hat015",
               0
-            );   
-            hat="hat015"
+            );
+            hat = "hat015"
             break;
           case "hat16":
             if (hat_skin) {
@@ -989,8 +989,8 @@ export default class waitingRoom extends Phaser.Scene {
               player.y - 25,
               "hat016",
               0
-            );   
-            hat="hat016"
+            );
+            hat = "hat016"
             break;
           case "hat17":
             if (hat_skin) {
@@ -1002,7 +1002,7 @@ export default class waitingRoom extends Phaser.Scene {
               "hat017",
               0
             );
-            hat="hat017"
+            hat = "hat017"
             break;
           case "hat18":
             if (hat_skin) {
@@ -1014,7 +1014,7 @@ export default class waitingRoom extends Phaser.Scene {
               "hat018",
               0
             );
-            hat="hat018"
+            hat = "hat018"
             break;
           case "hat19":
             if (hat_skin) {
@@ -1026,10 +1026,10 @@ export default class waitingRoom extends Phaser.Scene {
               "hat019",
               0
             );
-            hat="hat019"
+            hat = "hat019"
             break;
         }
-        if(hat_skin){
+        if (hat_skin) {
           player_container.add(hat_skin);
         }
       }
@@ -1226,7 +1226,7 @@ export default class waitingRoom extends Phaser.Scene {
             );
             break;
         }
-        if(pants_skin){
+        if (pants_skin) {
           player_container.add(pants_skin);
         }
         /* *********************CREATING ANIMATIONS FOR SKINS********************* */
@@ -1430,7 +1430,7 @@ export default class waitingRoom extends Phaser.Scene {
             pet_type = TWITCH;
             break;
         }
-        if(pet){
+        if (pet) {
           player_container.add(pet);
         }
       }
@@ -1453,28 +1453,28 @@ export default class waitingRoom extends Phaser.Scene {
 
 
       let index = otherPlayerId.findIndex((Element) => Element == playerId);
-//console.log(otherPlayer_container[index].list[1].texture.key)
+      //console.log(otherPlayer_container[index].list[1].texture.key)
       //FLIP MIRROR
-      if ( otherPlayer_container[index].x > x) {
+      if (otherPlayer_container[index].x > x) {
         otherPlayer[index].flipX = true;
-      } else if ( otherPlayer_container[index].x < x) {
+      } else if (otherPlayer_container[index].x < x) {
         otherPlayer[index].flipX = false;
       }
-      let pet_name =undefined
-      if(otherPlayer_container[index].list[1]!=undefined){
-    pet_name = otherPlayer_container[index].list[1].texture.key
-    }
+      let pet_name = undefined
+      if (otherPlayer_container[index].list[1] != undefined) {
+        pet_name = otherPlayer_container[index].list[1].texture.key
+      }
 
-      if(pet_name!=undefined){
-        if(otherPlayer[index].flipX ==true){
-          otherPlayer_container[index].list[1].scaleX=-1
-        }else{
-          otherPlayer_container[index].list[1].scaleX=1
+      if (pet_name != undefined) {
+        if (otherPlayer[index].flipX == true) {
+          otherPlayer_container[index].list[1].scaleX = -1
+        } else {
+          otherPlayer_container[index].list[1].scaleX = 1
         }
         otherPlayer_container[index].list[1].play(`${pet_name}-walk`, true)
-      
+
       }
-    
+
       //UPDATE POSITION
       otherPlayer_container[index].x = x;
       otherPlayer_container[index].y = y;
@@ -1494,12 +1494,12 @@ export default class waitingRoom extends Phaser.Scene {
       let index = otherPlayerId.findIndex((Element) => Element == playerId);
       otherPlayer[index].moving = false;
       otherPlayer[index].play(`${color}-idle`);
-      let pet_name =undefined
-      if(otherPlayer_container[index].list[1]!=undefined){
-    pet_name = otherPlayer_container[index].list[1].texture.key
-    }
+      let pet_name = undefined
+      if (otherPlayer_container[index].list[1] != undefined) {
+        pet_name = otherPlayer_container[index].list[1].texture.key
+      }
 
-      if(pet_name!=undefined){
+      if (pet_name != undefined) {
         otherPlayer_container[index].list[1].play(`${pet_name}-idle`)
       }
 
@@ -1514,7 +1514,7 @@ export default class waitingRoom extends Phaser.Scene {
   }
 
   update() {
-    
+
     if (pants_type) {
       isLeft == true && isMirror == true
         ? pants_skin.setPosition(player.x, player.y + 10)
