@@ -1546,6 +1546,10 @@ class Game extends Phaser.Scene {
 
         //player.stop("player-idle")
         alive = false;
+        player_container.removeAll();
+        pants_skin.destroy();
+        hat_skin.destroy();
+        this.cameras.main.startFollow(player, true);
         player.anims.play("player-ghost", true);
       } else {
         let index = otherPlayerId.findIndex((Element) => Element == playerId);
