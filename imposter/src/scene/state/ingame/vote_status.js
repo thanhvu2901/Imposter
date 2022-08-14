@@ -33,7 +33,7 @@ init(data){
             sample="player "+`${this.name}` +" is not an imposter"
             break;
         case 3:
-            sample="skipped no one get ejected"
+            sample="skipeed no one get ejected"
             break;
     
         default:
