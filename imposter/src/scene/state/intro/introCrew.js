@@ -39,7 +39,7 @@ class introCrew extends Phaser.Scene {
 
         if (isRole == 1) {
             var sprite = this.add.image(530, 350, 'imposter').setScale(0.6).setAlpha(0);
-            let text = this.add.text(150, 230, 'YOU are Impostor!', { fontSize: '40px' }).setAlpha(0)
+            let text = this.add.text(250, 230, 'YOU are Impostor!', { fontSize: '40px' }).setAlpha(0)
             //chạy intro logo
             let audio = this.sound.add('intro', {})
             setTimeout(audio.play(), 1000)
