@@ -1327,6 +1327,18 @@ class Game extends Phaser.Scene {
       this.sound.stopByKey("walk");
       if (alive == true) {
         player.anims.play(`${color}-idle`);
+        if (pants_type) {
+          if (isMirror) {
+            isLeft == true
+              ? pants_skin.anims.play(`${pants_type}_idleMirror`)
+              : pants_skin.anims.play(`${pants_type}_idle`);
+          } else {
+            pants_skin.anims.play(`${pants_type}_idle`);
+          }}
+
+          if (pet) {
+            pet.anims.play(`${pet_type}-idle`);
+          }
       }
 
       pressedKeys = pressedKeys.filter((key) => key !== e.code);
