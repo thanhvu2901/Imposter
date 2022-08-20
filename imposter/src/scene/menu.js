@@ -23,7 +23,7 @@ export default class MainMenuScene extends Phaser.Scene {
 
         this.add.image(this.game.renderer.width / 2, this.game.renderer.height * 0.20, 'logo').setDepth(1);
 
-        this.add.image(0, 0, 'background').setOrigin(0.01).setDepth(0);
+        this.add.image(0, 200, 'background').setOrigin(0.2).setSize(1080, 769).setDepth(0);
 
 
         let element = this.add.dom(this.game.renderer.width * 0.5, this.game.renderer.height * 0.5 - 100).createFromHTML(name)
@@ -73,10 +73,10 @@ export default class MainMenuScene extends Phaser.Scene {
         playButton.setInteractive({ useHandCursor: true });
         playButton.on("pointerover", () => {
             //đổi màu chữ
-            playButton.setTintFill('#00FF00')
+            playButton.setTintFill(0x3399CC)
         })
         playButton.on("pointerdown", () => {
- 
+
             //this.scene.start('game', Game);
             nameStr = element.getChildByName("name");
             let value = nameStr.value
@@ -84,7 +84,7 @@ export default class MainMenuScene extends Phaser.Scene {
                 window.localStorage.removeItem('namePlayer')
                 window.localStorage.setItem('namePlayer', value)
                 nameStr.value = "";
-            }else{
+            } else {
                 window.localStorage.setItem('namePlayer', (Math.random() + 1).toString(36).substring(7))
             }
             this.scene.start('joinGame', JoinGame);
@@ -100,7 +100,7 @@ export default class MainMenuScene extends Phaser.Scene {
         optionsButton.setInteractive({ useHandCursor: true });
 
         optionsButton.on("pointerover", () => {
-            optionsButton.setTintFill('#00FF00')
+            optionsButton.setTintFill(0x3399CC)
         })
         optionsButton.on("pointerout", () => {
             optionsButton.clearTint();

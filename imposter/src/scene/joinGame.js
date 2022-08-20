@@ -18,30 +18,17 @@ export default class JoinGame extends Phaser.Scene {
 
         socket = io.connect('localhost:3000')
 
-
-
-
     }
 
     create() {
+        this.add.image(0, 200, 'background').setOrigin(0.2).setSize(1080, 769).setDepth(0);
         let ele = this.add.dom(this.game.renderer.width * 0.45 + 50, this.game.renderer.height * 0.35 + 100).createFromHTML(test)
         this.add.image(this.game.renderer.width * 0.5, this.game.renderer.height * 0.2, 'createRoom').setScale(0.4).setInteractive({ cursor: 'pointer' })
         let createPublic = this.add.image(this.game.renderer.width * 0.5, this.game.renderer.height * 0.25, 'public').setScale(0.4).setInteractive({ cursor: 'pointer' })
         let createPrivate = this.add.image(this.game.renderer.width * 0.5, this.game.renderer.height * 0.30, 'private').setScale(0.4).setInteractive({ cursor: 'pointer' })
 
         let check = this.add.image(this.game.renderer.width * 0.5, this.game.renderer.height * 0.35 + 60, 'enterRoom').setScale(0.4)
-        // var textEntry = this.add.text(this.game.renderer.width * 0.45, this.game.renderer.height * 0.35 + 88, '', { font: '32px Courier', fill: '#000000' })
-        // textEntry.setDepth(1)
-        // this.input.keyboard.on('keydown', function (event) {
-        //     if (event.keyCode === 8 && textEntry.text.length > 0) {
-        //         textEntry.text = textEntry.text.substr(0, textEntry.text.length - 1);
-        //     }
-        //     else if (event.keyCode === 32 || (event.keyCode >= 48 && event.keyCode <= 90)) {
-        //         textEntry.text += event.key;
-        //         textInput = textEntry.text;
-        //     }
 
-        // });
         let reg = this.add.rectangle(this.game.renderer.width * 0.5, this.game.renderer.height * 0.35 + 100, 180, 34, 0xFFFFFF).setDepth(0)
 
         let joinRoombtn = this.add.image(this.game.renderer.width * 0.5, this.game.renderer.height * 0.35 + 160, 'joinRoom').setScale(0.4).setInteractive({ cursor: 'pointer' })
@@ -99,7 +86,7 @@ export default class JoinGame extends Phaser.Scene {
         });
         createPublic.on("pointerover", () => {
             //đổi màu chữ
-            createPublic.setTintFill('#00FF00')
+            createPublic.setTintFill(0x3399CC)
         })
         createPublic.on("pointerout", () => {
             // this.scene.start(play);
@@ -107,7 +94,7 @@ export default class JoinGame extends Phaser.Scene {
         })
         createPrivate.on("pointerover", () => {
             //đổi màu chữ
-            createPrivate.setTintFill('#00FF00')
+            createPrivate.setTintFill(0x3399CC)
         })
         createPrivate.on("pointerout", () => {
             // this.scene.start(play);
@@ -116,7 +103,7 @@ export default class JoinGame extends Phaser.Scene {
 
         joinRoombtn.on("pointerover", () => {
             //đổi màu chữ
-            joinRoombtn.setTintFill('#00FF00')
+            joinRoombtn.setTintFill(0x3399CC)
         })
         joinRoombtn.on("pointerout", () => {
             // this.scene.start(play);
@@ -125,7 +112,7 @@ export default class JoinGame extends Phaser.Scene {
 
         randomRoom.on("pointerover", () => {
             //đổi màu chữ
-            randomRoom.setTintFill('#00FF00')
+            randomRoom.setTintFill(0x3399CC)
         })
         randomRoom.on("pointerout", () => {
             // this.scene.start(play);
