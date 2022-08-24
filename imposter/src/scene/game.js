@@ -262,7 +262,6 @@ class Game extends Phaser.Scene {
     this.socket.on("current_player_finish_task", (total_player_complete) => {
       total_number_of_player_mission_completed = total_player_complete;
       if (total_number_of_player_mission_completed == otherPlayerId.length) {
-        console.log('endgame')
         this.socket.emit("all_player_finish_task");
         if (this.isRole == 1) {
           this.scene.launch("end_game", { num: 2, socket: this.socket })
@@ -800,15 +799,6 @@ class Game extends Phaser.Scene {
         this.scene.launch("mini-map");
       });
     }
-    //initialize missions of this map
-    if (this.isRole != 1) {
-      map_missions = new MapMissionsExporter("theSkeld");
-      total_mission_number = map_missions.map_missions_number;
-      export_missions = map_missions.create();
-      map_missions.show_mission(this, this.isRole);
-      nested_divert_power_mission_picked = map_missions.nested_divert_power_mission_picked();
-    }
-
     this.state.roomKey = this.textInput;
 
     /* *********************CREATING ANIMATIONS FOR PLAYER********************* */
@@ -1442,6 +1432,14 @@ class Game extends Phaser.Scene {
     vent_group.refresh();
     light.createFOV();
     light.draw();
+
+    if (this.isRole != 1) {
+      map_missions = new MapMissionsExporter("theSkeld");
+      total_mission_number = map_missions.map_missions_number;
+      export_missions = map_missions.create();
+      map_missions.show_mission(this, this.isRole);
+      nested_divert_power_mission_picked = map_missions.nested_divert_power_mission_picked();
+    }
 
     //ẩn hết các arrow của vent sau khi khởi tạo
     arrow_group.setVisible(false).setDepth(-5);

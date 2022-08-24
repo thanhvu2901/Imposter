@@ -138,7 +138,7 @@ class MapMissionsExporter {
     }
 
     show_mission(scence, isRole) {
-        let y = 50;
+        let y = 120;
         if (!this.scence) {
             this.scence = scence;
         }
@@ -168,11 +168,23 @@ class MapMissionsExporter {
 
         if (isRole != 1) {
             for (let i = 0; i < this.map_missions_number; i++) {
-                this.draw_rectangle(60 + (i * 70), 25, false)
+                this.draw_rectangle(60 + (i * 70), 20, false)
             }
 
-            scence.add.text(100, 19, "TOTAL TASK COMPLETED").setScrollFactor(0, 0);
+            scence.add.text(70, 15, "TOTAL CREWMATE TASK COMPLETED").setScrollFactor(0, 0);
+
         }
+
+        if (isRole != 1) {
+            for (let i = 0; i < this.map_missions_number; i++) {
+                this.draw_rectangle(60 + (i * 70), 80, false)
+            }
+
+            scence.add.text(90, 75, "YOUR TASK COMPLETED").setScrollFactor(0, 0);
+
+        }
+
+
 
     }
 
