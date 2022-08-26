@@ -1539,7 +1539,7 @@ class Game extends Phaser.Scene {
 
       let index = otherPlayerId.findIndex((Element) => Element == playerId);
 
-console.log(hat,pet,pants)
+
       //FLIP MIRROR
       if (otherPlayer_container[index].x > x) {
         otherPlayer[index].flipX = true;
@@ -1688,7 +1688,6 @@ console.log(hat,pet,pants)
         
          !hat_skin ?? hat_skin.destroy();
          if(pet!=undefined){ pet.destroy();}
-      console.log("meomeo",hat_skin,pants_skin,pet)
 
       
         this.cameras.main.startFollow(player, true);
@@ -1743,7 +1742,6 @@ console.log(hat,pet,pants)
           this.sound.play("killAudio", false);
           let killId = otherPlayerId[indexKill];
           otherPlayer_container[indexKill].each((element)=>{
-            console.log(element)
             if(element.texture.key.includes("pants")){
               otherPlayer_container[indexKill].remove(element)
             }

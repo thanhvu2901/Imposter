@@ -27,7 +27,7 @@ init(data){
     this.scene.bringToTop()
     
     this.input.keyboard.clearCaptures()
-temp+=`	<ul id="chat">
+temp+=`	<ul id="chat" style="background-color: rgba(255,255,255,0.7);">
 <li class="me">
 <div class="entete">
     <h3>10:12AM, Today</h3>
@@ -40,8 +40,8 @@ temp+=`	<ul id="chat">
 </li>
 </ul>`
 let temp3=``
-let temp1 = this.add.dom(500,360).createFromHTML(temp)
-let temp2= this.add.dom(500,644).createFromHTML(input)
+let temp1 = this.add.dom(500,340).createFromHTML(temp)
+let temp2= this.add.dom(500,571).createFromHTML(input)
 let temp6 = temp1.getChildByID("chat")
 let closeBtn = this.add.image(920, 120, 'closeBtn').setScale(0.8)
 closeBtn.setInteractive({ useHandCursor: true });
@@ -74,7 +74,7 @@ this.socket.on("send",(id,name,message)=>{
     ${message}
 </div>
 </li>`
-let temp4=`<ul id="chat">
+let temp4=`<ul id="chat" style="background-color: rgba(255,255,255,0.7);">
 ${temp3}
 </ul>`
 temp1.setHTML(chat+temp4)
@@ -93,7 +93,7 @@ else{
     ${message}
 </div>
 </li>`
-let temp4=`<ul id="chat">
+let temp4=`<ul id="chat" style="background-color: rgba(255,255,255,0.7);">
 ${temp3}
 </ul>`
 temp1.setHTML(chat+temp4)

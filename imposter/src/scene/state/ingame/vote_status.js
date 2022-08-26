@@ -33,13 +33,13 @@ init(data){
             sample="player "+`${this.name}` +" is not an imposter"
             break;
         case 3:
-            sample="skipeed no one get ejected"
+            sample="skipped no one get ejected"
             break;
     
         default:
             break;
     }
-    this.add.image(0, 10, 'star_background').setDepth(0).setOrigin(0).setScale(1.5);
+    this.add.image(0, 0, 'star_background').setDepth(0).setOrigin(0).setScale(1.9);
     ejected=  this.add.image(100, 350, 'eject').setDepth(1);
     text = this.add.text(250,350,"",{
         fontSize: "40px",

@@ -3,7 +3,7 @@
 	box-sizing:border-box;
 }
 body{
-	
+	background-color: transparent;
 	font-family:Arial;
 }
 #container{
@@ -14,6 +14,8 @@ body{
 	font-size:0;
 	border-radius:5px;
 	overflow:hidden;
+	background-color: transparent;
+	overflow: overlay;
 }
 aside{
 	width:260px;
@@ -53,8 +55,10 @@ aside input::placeholder{
 }
 aside ul{
 	padding-left:0;
+	background-color: transparent;
 	margin:0;
 	list-style-type:none;
+	overflow: overlay;
 	overflow-y:scroll;
 	height:690px;
 }
@@ -144,11 +148,11 @@ flex-direction:column;
 	margin:0;
 	list-style-type:none;
 	overflow-y:scroll;
-	height:525px;
-	width: 800px;
-	border-top:2px solid #fff;
-	border-bottom:2px solid #fff;
-   background-color: white;
+	overflow: overlay;
+	height:425px;
+	width: 700px;
+	border:3px solid rgb(0, 0, 0);
+  	background-color: white;
 }
 #chat li{
 	padding:10px 30px;
