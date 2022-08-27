@@ -92,7 +92,7 @@ class MapMissionsExporter {
     }
 
     update_show_mission() {
-        let y = 50;
+        let y = 110;
         if (!this.scence) {
             this.scence = scence;
         }
@@ -137,8 +137,8 @@ class MapMissionsExporter {
         return mission_picked
     }
 
-    show_mission(scence, isRole) {
-        let y = 120;
+    show_mission(scence, isRole, number_player) {
+        let y = 110;
         if (!this.scence) {
             this.scence = scence;
         }
@@ -167,21 +167,19 @@ class MapMissionsExporter {
         }
 
         if (isRole != 1) {
-            for (let i = 0; i < this.map_missions_number; i++) {
-                this.draw_rectangle(60 + (i * 70), 20, false)
+            scence.add.text(22, 5, "TOTAL CREWMATE TASK COMPLETED").setScrollFactor(0, 0);
+
+            for (let i = 0; i < number_player; i++) {
+                this.draw_rectangle(60 + (i * 70), 35, false)
             }
-
-            scence.add.text(70, 15, "TOTAL CREWMATE TASK COMPLETED").setScrollFactor(0, 0);
-
         }
 
         if (isRole != 1) {
+            scence.add.text(22, 50, "YOUR TASK COMPLETED").setScrollFactor(0, 0);
+
             for (let i = 0; i < this.map_missions_number; i++) {
                 this.draw_rectangle(60 + (i * 70), 80, false)
             }
-
-            scence.add.text(90, 75, "YOUR TASK COMPLETED").setScrollFactor(0, 0);
-
         }
 
 
@@ -191,20 +189,24 @@ class MapMissionsExporter {
     update_total_mission_complete() {
         if (this.total_missions_completed < this.map_missions_number) {
             for (let i = 0; i < this.total_missions_completed; i++) {
-                this.draw_rectangle(60 + (i * 70), 25, true)
+                this.draw_rectangle(60 + (i * 70), 80, true)
             }
         }
-        this.scence.add.text(100, 19, "TOTAL TASK COMPLETED").setScrollFactor(0, 0);
     }
 
     draw_rectangle(x, y, is_mission_completed) {
-        let rectangle = this.scence.add.rectangle(x, y, 70, 30, 0X203233).setScrollFactor(0, 0);
+        let rectangle = this.scence.add.rectangle(x, y, 70, 20, 0X203233).setScrollFactor(0, 0);
         if (is_mission_completed) {
-            rectangle = this.scence.add.rectangle(x, y, 70, 30, 0x07667a).setScrollFactor(0, 0);
+            rectangle = this.scence.add.rectangle(x, y, 70, 20, 0x07667a).setScrollFactor(0, 0);
         }
         rectangle.setStrokeStyle(2, 0Xe9f2f2);
     }
 
+    update_crewmate_completed_task(number) {
+        for (let i = 0; i < number; i++) {
+            this.draw_rectangle(60 + (i * 70), 35, true)
+        }
+    }
     nested_divert_power() {
         return ["right_engine", "left_engine", "weapons", "shields", "nav", "communications", "oxi", "security"]
     }

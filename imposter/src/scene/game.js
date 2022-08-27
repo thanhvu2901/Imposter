@@ -261,6 +261,7 @@ class Game extends Phaser.Scene {
 
     this.socket.on("current_player_finish_task", (total_player_complete) => {
       total_number_of_player_mission_completed = total_player_complete;
+      map_missions.update_crewmate_completed_task(total_number_of_player_mission_completed);
       if (total_number_of_player_mission_completed == otherPlayerId.length) {
         this.socket.emit("all_player_finish_task");
         if (this.isRole == 1) {
@@ -1437,7 +1438,8 @@ class Game extends Phaser.Scene {
       map_missions = new MapMissionsExporter("theSkeld");
       total_mission_number = map_missions.map_missions_number;
       export_missions = map_missions.create();
-      map_missions.show_mission(this, this.isRole);
+      console.log("number of player", otherPlayerId.length)
+      map_missions.show_mission(this, this.isRole, otherPlayerId.length);
       nested_divert_power_mission_picked = map_missions.nested_divert_power_mission_picked();
     }
 
