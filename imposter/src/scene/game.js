@@ -261,7 +261,10 @@ class Game extends Phaser.Scene {
 
     this.socket.on("current_player_finish_task", (total_player_complete) => {
       total_number_of_player_mission_completed = total_player_complete;
+      console.log(map_missions)
+      if(map_missions!=undefined){
       map_missions.update_crewmate_completed_task(total_number_of_player_mission_completed);
+    }
       if (total_number_of_player_mission_completed == otherPlayerId.length) {
         this.socket.emit("all_player_finish_task");
         if (this.isRole == 1) {
